@@ -1,9 +1,6 @@
 # Search Engine for Universities in the US
 
 
-Course Page : https://www.cs.ucr.edu/~vagelis/classes/CS242/index.htm
-
-
 ###searchmr:
 	mvn clean compile package assembly:single
 	hadoop jar /home/karna/projects/HbaseIndex/searchmr/target/HbaseIndex-1.0.0-jar-with-dependencies.jar edu.ucr.abhi.index.Indexer <hdfs path to files>
