@@ -1,0 +1,252 @@
+<doc>
+<filename>ttuhsc.edu8.html</filename>
+<url>http://announcements.ttuhsc.edu/</url>
+<ip>69.175.158.224</ip>
+<title>TTUHSC Announcements</title>
+<body>
+<script>
+        $(document).ready(function () {
+            $('#closemessage').click(function (e) {
+                $('.messagedivcls').hide();
+            });
+
+            var mn = $(".navbar");
+            mns = " navbar-fixed-top";
+            hdr = $('.logotitle-md-dark').height();
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > hdr) {
+                    mn.addClass(mns);
+                } else {
+                    mn.removeClass(mns);
+                }
+            });
+
+            $.getJSON("https://app4.ttuhsc.edu/DigitalSignageCAPIntegration/handlers/GetCampusesAndMessages.ashx?campus=active", function (data) {
+                if (data.length > 0) {
+                    $("#warningWrap").show();
+                    var loops = 0;
+                    $.each(data, function (index) {
+                        $(".emergencyInfo").append("<span><a href=\"" + data[index].EmergencyURL + "\"><strong>" + data[index].CampusName + "</strong></a></span> -<span> " + data[index].Headline + "</span><br /><hr />")
+                        loops++;
+                    });
+                } else {
+                    $("#warningWrap").hide();
+                }
+            });
+
+        });
+    </script> <a tabindex="0" class="skip" href="#maincontent">Skip to Main Content</a> 
+<div class="logotitle-md-dark"> 
+ <div class="container"> <a href="https://www.ttuhsc.edu/" title="TTUHSC Home"> <img src="App_Images/IT_Gateway_490x70.gif" title="Texas Tech University Health Sciences Center" alt="Texas Tech University Health Sciences Center" width="490"></a> 
+ </div> 
+</div> 
+<nav class="navbar navbar-default"> 
+ <div class="container"> 
+  <div class="navbar-header"> <a href="Default.aspx" class="navbar-brand" title="Announcements">Announcements</a> <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main" title="navbartoggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="sr-only">Toggle Menu</span> </button> 
+  </div> 
+  <div class="collapse navbar-collapse" id="navbar-main"> 
+   <ul class="nav navbar-nav"> 
+    <li id="requestli" class="dropdown"><a href="Secure/AnnouncementRequest.aspx" title="Request">Request</a> </li> 
+    <li id="Li1" class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources<span class="caret"></span></a> 
+     <ul class="dropdown-menu"> 
+      <li> <a href="Resources/HowToSubmit.aspx" id="A1">How to Submit</a> </li> 
+      <li> <a href="Resources/Help.aspx" id="A5">Help</a> </li> 
+      <li> <a href="Resources/FAQ.aspx" id="A8">FAQ</a> </li> 
+      <li> <a href="Resources/PostingPolicy.aspx" id="A9">Posting Policy</a> </li> 
+      <li> <a id="A3" href="https://www.ttuhsc.edu">TTUHSC Home</a> </li> 
+      <li> <a id="A4" href="https://events.ttuhsc.edu">Events</a> </li> 
+     </ul> </li> 
+    <li id="draftsli" class="dropdown"><a href="Secure/myannouncements.aspx" id="A6" title="Drafts">Drafts</a> </li> 
+    <li class="dropdown"><a href="SecureExternalUser/SubscriptionOptions.aspx" id="A7" title="Subscribe">Subscribe</a> </li> 
+   </ul> 
+   <ul id="btnlogindiv" class="nav navbar-nav navbar-right"> 
+    <li><a href="https://tthsclubbock.co1.qualtrics.com/SE/?SID=SV_897X1kuh1OjRIvX" class="btn btn-danger feedback" target="_blank">Tell us what you think</a></li> 
+    <li><a href="Secure/Default.aspx" id="btnlogin" class="loginbtn" title="Click here to Request for New Announcement">Login</a></li> 
+   </ul> 
+  </div> 
+ </div> 
+</nav> 
+<div class="container"> 
+ <noscript> 
+  <p class="javascriptdisabled"> <img src="App_Images/JavascriptError.png" id="Img1" alt="JavaScript Error"> &nbsp;Please enable JavaScript in your browser for best user experience. <br> <br> Internet Explorer: Tools-&gt; Options-&gt; Security-&gt; Scripting-&gt; Enable <br> Mozilla Firefox: Tools-&gt; Options-&gt; Check Enable Javascript <br> Chrome: Settings-&gt; Advanced-&gt; Content Settings-&gt; Javascript-&gt; Allow <br> <br> You can use this website only after having enabled Javascript! </p> 
+ </noscript> 
+ <div id="divNoPermissions" class="warning" style="display: none"> 
+  <p> You do not have permissions. Please ask your admin to give you rights. </p> 
+ </div> 
+ <div> 
+  <div class="messagedivcls"> 
+  </div> 
+ </div> 
+ <input name="ctl00$hdnrolename" type="hidden" id="hdnrolename"> 
+</div> 
+<div class="PageContent"> 
+ <div id="warningWrap" style="display:none"> 
+  <div id="warning" class="clearfix"> <i class="fa fa-exclamation"></i> 
+   <div class="emergencyInfo"> <span class="close">Close <i class="fa fa-angle-double-up"></i></span> 
+   </div> 
+  </div> 
+  <div class="tabWrap clearfix"> 
+   <div class="emergencyTab">
+     View Emergency Notice <i class="fa fa-angle-double-down"></i> 
+   </div> 
+  </div> 
+ </div> 
+ <div class="container" id="maincontent"> 
+  <form method="post" action="/default.aspx" id="frmTemplate" class="form-horizontal"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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"> 
+   </div> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334"> 
+    <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Re9uDyE8o5mrCGfadOuFxBdYcAtrfkWhXRsq7Kv1DRZDn0qRa1n/hshWqQKfTwJ3/QDiavUkmJRIozunPtDSBYeONdmm4efvvAzdkaia4UdW+Lu46D8UeHZ2klWP5vKZ8OrOEM0hD0+aOcKJ2fyDry17HvoPGXBsS3/eiUqNP4Y="> 
+   </div> 
+   <h1> ANNOUNCEMENTS</h1> 
+   <div class="row featurerow"> 
+    <div class="col-md-9 col-sm-12"> 
+     <div class="row"> <span id="FeaturedAnnouncement"></span> 
+      <div id="ContentPlaceHolder1_publicheading" style="margin-bottom: 10px;"> 
+       <h2>Public Announcements <a href="Secure/Default.aspx" id="ContentPlaceHolder1_btnlogintoviewmore" title="Login to view more">(Login to view more)</a></h2> 
+      </div> 
+      <div id="paginator" class="topbottommargin"></div> 
+      <div id="announcements" style="margin-bottom: 10px;"> 
+       <table class="announcementList" id="listAnnouncement" summary="The list shows the announcements for the selected date. You can view previous announcements by changing the date."> 
+        <caption class="screen-reader-text">
+         Announcement list for today.
+        </caption> 
+       </table> 
+      </div> 
+      <div id="announcementinfo"> 
+      </div> 
+      <div id="noAnnouncement">
+        No announcement to display 
+      </div> 
+     </div> 
+     <div class="row"> 
+     </div> 
+    </div> 
+    <div class="col-md-3 sidebar col-sm-12"> 
+     <div id="ContentPlaceHolder1_eventfeed" class="eventfeedstyle"> 
+      <h2 style="display:inline"> Events </h2><a href="//events.ttuhsc.edu" style="float:right;cursor:pointer" target="_blank" aria-label="Click More for TTUHSC events"> More <i class="fa fa-caret-right" aria-hidden="true"></i></a> 
+      <table id="eventListMonth" class="eventList"> 
+       <caption style="display:none">
+        Event list for the month
+       </caption> 
+       <thead style="display:none"> 
+        <tr> 
+         <th scope="col">Date</th> 
+         <th scope="col">Event Details</th> 
+        </tr> 
+       </thead>
+       <tbody>
+        <tr> 
+         <td class="bigdate time"> 
+          <center>
+           <p class="monthname">Mar</p>
+          </center> <span class="fa-stack fa-1x"> <i class="fa fa-calendar-o fa-stack-2x"></i> <span class="fa fa-stack-1x calendar-text2">17</span></span> 
+          <center>
+           <p class="dayname">Wed</p>
+          </center> </td> 
+         <td class="description"> <p class="time">12:00 PM - 01:00 PM</p> <a href="//events.ttuhsc.edu/EventFullInformation.aspx?EventID=3729" target="_blank">REGISTER for The Global Health event: Culture In Music featuring The Vernacular Music Center</a> </td> 
+        </tr>
+        <tr> 
+         <td class="bigdate time"> 
+          <center>
+           <p class="monthname">Mar</p>
+          </center> <span class="fa-stack fa-1x"> <i class="fa fa-calendar-o fa-stack-2x"></i> <span class="fa fa-stack-1x calendar-text2">24</span></span> 
+          <center>
+           <p class="dayname">Wed</p>
+          </center> </td> 
+         <td class="description"> <p class="time">12:00 PM - 01:00 PM</p> <a href="//events.ttuhsc.edu/EventFullInformation.aspx?EventID=3739" target="_blank">Global Health Lecture series: Asset Based Community Development with Community Consultant AJ Fawver</a> </td> 
+        </tr>
+        <tr> 
+         <td class="bigdate time"> 
+          <center>
+           <p class="monthname">Mar</p>
+          </center> <span class="fa-stack fa-1x"> <i class="fa fa-calendar-o fa-stack-2x"></i> <span class="fa fa-stack-1x calendar-text2">24</span></span> 
+          <center>
+           <p class="dayname">Wed</p>
+          </center> </td> 
+         <td class="description"> <p class="time">03:00 PM - 04:00 PM</p> <a href="//events.ttuhsc.edu/EventFullInformation.aspx?EventID=3735" target="_blank">GIA Healthy Aging Lecture Series</a> </td> 
+        </tr>
+        <tr> 
+         <td class="bigdate time"> 
+          <center>
+           <p class="monthname">Mar</p>
+          </center> <span class="fa-stack fa-1x"> <i class="fa fa-calendar-o fa-stack-2x"></i> <span class="fa fa-stack-1x calendar-text2">25</span></span> 
+          <center>
+           <p class="dayname">Thu</p>
+          </center> </td> 
+         <td class="description"> <p class="time">01:00 PM - 02:00 PM</p> <a href="//events.ttuhsc.edu/EventFullInformation.aspx?EventID=3742" target="_blank">Project ECHO: The Burning Bridge to Nowhere: Dying Slowly in the ICU</a> </td> 
+        </tr>
+       </tbody>
+      </table>
+     </div> 
+     <div id="searchbox"> 
+      <h2>Search</h2> 
+      <input type="text" id="txtsearch" class="col-md-8" aria-label="Search text" title="Search Text" placeholder="by Title"> 
+      <input type="button" value="Search" id="btnSearch" class="btnsearch"> 
+      <input type="submit" value="" id="btnHidden" class="btnsearch" style="display:none"> 
+      <br> <a href="AdvancedSearch.aspx" class="required" target="_blank" title="Advanced Search">Advanced Search</a> 
+     </div> 
+     <div> <label aria-label="audience" hidden for="ddlPermissions">audience</label> 
+     </div> 
+     <div id="filter"> 
+      <h2>Filter by Tags</h2> 
+      <div id="TagList"> 
+      </div> 
+     </div> 
+     <div> 
+      <input type="button" value="Apply" class="btn btn-danger" id="btnApply" title="Apply"> 
+      <input type="button" value="Reset" class="btn" style="background-color: #333333; color: white;" id="btnReset" title="Reset"> 
+     </div> 
+     <section id="ContentPlaceHolder1_ExternalUserLogin"> 
+      <h2> Other Login Options</h2> 
+      <input type="image" name="ctl00$ContentPlaceHolder1$btnGoogle" id="ContentPlaceHolder1_btnGoogle" title="Click here to sign in with your Google account" src="App_Images/btn_google_signin_light_normal_web.png" alt="Sign in with Google" style="cursor:pointer"> 
+      <input type="image" name="ctl00$ContentPlaceHolder1$btnFacebook" id="ContentPlaceHolder1_btnFacebook" title="Click here to sign in with your Facebook account" src="App_Images/FaceBookLoginX.png" alt="Sign in with Facebook" style="cursor:pointer"> 
+     </section> 
+    </div> 
+   </div> 
+  </form> 
+ </div> 
+</div> 
+<footer> 
+ <div class="container"> 
+  <div class="col-md-3"> 
+   <img src="App_Images/Your%20life%20our%20purpose%20logo_TTUHSC_DblT-04.png" class="footerlogo" alt="Your Life Our Purpose - Texas Tech University Health Sciences Center"> 
+  </div> 
+  <ul class="col-md-25 footerdiv footerdiv-border"> 
+   <li><a href="//www.state.tx.us/" target="_blank" title="State of Texas Web Site">State of Texas Web Site</a></li> 
+   <li><a href="//www.texashomelandsecurity.com/" target="_blank" title="Texas Homeland Security">Texas Homeland Security</a></li> 
+   <li><a href="//veterans.portal.texas.gov/en/Pages/default.aspx" target="_blank" title="Texas Veterans Portal">Texas Veterans Portal</a></li> 
+   <li><a href="//sao.fraud.state.tx.us/" target="_blank" title="SAO Fraud Reporting">SAO Fraud Reporting</a></li> 
+   <li><a href="/tac/dmca.aspx" target="_blank" title="">DMCA Compliance</a></li> 
+   <li><a href="//secure.ethicspoint.com/domain/en/report_custom.asp?clientid=12414" target="_blank" title="Compliance Hotline">Compliance Hotline</a></li> 
+   <li><a href="//www.fiscal.ttuhsc.edu/reports/Energy/" target="_blank" title="TTUHSC Energy Conservation Report">TTUHSC Energy Conservation Report</a></li> 
+  </ul> 
+  <ul class="col-md-25 footerdiv footerdiv-border"> 
+   <li><a href="//www.thecb.state.tx.us/apps/resumes/" target="_blank" title="Online Institutional Resumes">Online Institutional Resumes</a></li> 
+   <li><a href="//www.ttuhsc.edu/it/contacts.aspx" target="_blank" title="Campus Webmasters">Campus Webmasters</a></li> 
+   <li><a href="//www.ttuhsc.edu/tac/" target="_blank" title="General Policy Information">General Policy Information</a></li> 
+   <li><a href="//www.ttuhsc.edu" target="_blank" title="TTUHSC Home">TTUHSC Home</a></li> 
+   <li><a href="//www.texastech.edu/" target="_blank" title="Texas Tech University System">Texas Tech University System</a></li> 
+   <li><a href="//www.ttu.edu/" target="_blank" title="Texas Tech University">Texas Tech University</a></li> 
+   <li><a href="//www.angelo.edu" target="_blank" title="Angelo State University">Angelo State University</a></li> 
+  </ul> 
+  <div class="col-md-22 footerdiv"> 
+   <ul class="sociallinks"> 
+    <li><a href="//www.facebook.com/ttuhsc" target="_blank" title="Link to facebook">Facebook</a></li> 
+    <li><a href="//www.twitter.com/ttuhsc/" target="_blank" title="Link to twitter">Twitter</a></li> 
+    <li><a href="//www.youtube.com/user/ttuhsctv/" target="_blank" title="Link to YouTube">Youtube</a></li> 
+    <li><a href="//www.pinterest.com/TTUHSC/" target="_blank" title="Link to Pinterest">Pinterest</a></li> 
+    <li><a href="//instagram.me/ttuhsc" target="_blank" title="Link to Instagram">Instagram</a></li> 
+    <li></li> 
+   </ul> 
+   <div class="copright"> 
+    <p>© 2017 Texas Tech University Health Sciences Center</p> 
+   </div> 
+  </div> 
+ </div> 
+</footer>
+</body>
+</doc>

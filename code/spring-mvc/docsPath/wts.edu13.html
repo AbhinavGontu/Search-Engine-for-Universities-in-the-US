@@ -1,0 +1,1440 @@
+<doc>
+<filename>wts.edu13.html</filename>
+<url>http://wtsbooks.com</url>
+<ip>104.21.46.157</ip>
+<title>Westminster Bookstore | Biblically-Faithful Books (K-MDiv)</title>
+<body>
+<style>
+  #browserSupportNotice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 20px;
+    text-align: center;
+    color: #761813;
+    background-color: #fff;
+    z-index: 10000;
+  }
+
+  #browserSupportNotice p + p {
+    margin-bottom: 0;
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #browserSupportNotice {
+      display: block !important;
+    }
+  }
+</style> <!--[if lte IE 9]>
+<style>
+  #browserSupportNotice {
+    display: block !important;
+  }
+</style>
+<![endif]--> 
+<div id="browserSupportNotice"> 
+ <p><strong>Please use a different, updated web browser to use wtsbooks.com</strong></p> 
+ <p>To ensure the speed and security of your experience on our website, we use the latest technology<br> supported by the most up-to-date web browsers (Chrome, Safari, Firefox, Edge).</p> 
+</div> 
+<div id="sitePreloader" data-site-preloader></div> 
+<div id="app" :class="{'loading': isLoading}"> 
+ <div class="overlay site-overlay" :class="{'show': isOverlayVisible}" data-site-overlay></div> <vue-snotify></vue-snotify> 
+ <div id="shopify-section-header" class="shopify-section"> 
+  <header class="site-header  fixed-top" id="header" data-site-header data-section-id="header" data-cart-type="cart_drawer" data-fixed-header="true" data-transparent-header="false">
+   <div class="hello--bar py-2 pr-4 bg-dark text-center text-white" style="backgound-color:#393a3e !important;"> 
+    <div class="container"> 
+     <p class="m-0 font-size-sm"><strong>Due to unprecedented order volume, shipping may be delayed by a few days from&nbsp;</strong><a href="https://www.wtsbooks.com/pages/shipping-rates-faq"><strong>our normal shipping schedule.</strong></a></p> <a href="#" @click.prevent="_closeAnnousement($event)" class="close_annoucement"><i class="ion ion-ios-close"></i></a> 
+    </div> 
+   </div>
+   <div id="main-header" class="py-lg-2 bg-primary text-white"> 
+    <div class="d-flex align-items-center container"> <a href="/" class="navbar-brand logo w-100 mr-md-5 mr-0" title="Westminster Bookstore" v-cloak> <img src="https://cdn.shopify.com/s/files/1/0021/5210/3983/files/logo.svg" alt="Westminster Bookstore" class="img-fluid" style="max-width: 200px"> </a> 
+     <nav class="navbar navbar-expand-md navbar-dark p-0 align-items-center flex-grow-1"> <button class="btn dropdown-toggle btn-outline-light browse-btn px-3" type="button" data-toggle="collapse" data-target="#navigation">browse</button> 
+      <div class="collapse navbar-collapse pl-3 p-2 border-left" id="navbarsExample03"> 
+       <form class="my-2 my-md-0 w-50 d-none d-lg-block header-search" action="/collections/search-result" method="get" role="search"> 
+        <div class="input-group bg-white"> 
+         <input type="hidden" name="type" value="product"> 
+         <input type="search" name="q" id="Search" class="form-control border-white" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search our store"> 
+         <div class="input-group-prepend"> <button type="submit" class="btn btn-secondary p-2 search-icon"><img src="//cdn.shopify.com/s/files/1/0021/5210/3983/t/5/assets/search-icon.svg?v=14014698053682292834"></button> 
+         </div> 
+        </div> 
+       </form> 
+       <ul class="navbar-nav mr-auto w-50 pl-4 px-md-4 justify-content-between secondary-nav"> 
+        <li class="nav-item"> <a class="nav-link font-family-secondary font-italic" href="/pages/contact-us">Help</a> </li> 
+        <li class="nav-item"> <a class="nav-link font-family-secondary font-italic" href="/pages/make-a-donation">Donate</a> </li> 
+        <li class="nav-item"> <a class="nav-link font-family-secondary font-italic" href="/blogs/2021-enews">eNews</a> </li> 
+        <li class="nav-item account-item d-none d-ex-lg-block"> <a class="nav-link dropdown-toggle font-family-secondary font-italic" href="javascript:void(0)">Log In</a> 
+         <div class="dropdown-menu"> <a href="/account" class="dropdown-item font-family-secondary font-italic">Log in</a> <a href="/pages/wishlist" class="dropdown-item font-family-secondary font-italic">Wishlists</a> <a href="/account/register" class="dropdown-item font-family-secondary font-italic">Create account</a> 
+         </div> </li> 
+        <li class="nav-item dropdown d-ex-lg-none"> <a class="nav-link dropdown-toggle font-family-secondary font-italic" href="" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a> 
+         <div class="dropdown-menu" aria-labelledby="dropdown03"> <a href="/account" class="dropdown-item font-family-secondary font-italic">Log in</a> <a href="/pages/wishlist" class="dropdown-item font-family-secondary font-italic">Wishlists</a> <a href="/account/register" class="dropdown-item font-family-secondary font-italic">Create account</a> 
+         </div> </li> 
+       </ul> 
+      </div> 
+     </nav> 
+     <ul class="list-unstyled d-flex align-items-center m-0"> 
+      <li class="search-icon-toggle p-2 d-lg-none"> <a href="#" @click.prevent="_toggleSearch()" rel="nofollow" aria-label="Search" title="Search"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/t/5/assets/search-icon.svg?v=14014698053682292834"> </a> </li> 
+      <li class="cart-icon p-2"> <a href="#" @click.prevent="_toggleCartDrawer" rel="nofollow" aria-label="Cart" title="Cart"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/t/5/assets/cart.svg?v=10980044898216918426"> <span v-if="cart.item_count > 0" v-text="cart.item_count" class="badge text-white"></span> </a> </li> 
+      <li class="navbar navbar-expand-ex-lg navbar-dark p-0"> <button class="navbar-toggler border-0 p-1" type="button"> <span class="navbar-toggler-icon"></span> </button> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="navigation"> 
+    <div class="container"> 
+     <nav id="main-nav" class="position-relative d-none d-ex-lg-block"> 
+      <ul class="list-unstyled imgHoverItem"> 
+       <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/bibles_700x.jpg?v=1540192847" class="mega-menu"> <a href="/pages/bibles">Bibles</a> 
+        <ul class="menu_dropdown list-unstyled"> 
+         <div class="row m-0 d-flex"> 
+          <div class="col-12 "> 
+           <div class="row m-0 d-flex"> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/study_bibles_fea24e11-7562-4715-a8c5-a00d61b0120b_700x.jpg?v=1546598649" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-study-bible" class="text-primary">Study</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433502415_700x.jpg?v=1563981583"><a href="/collections/esv-study-bible">ESV Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/Gospel_Transformation_Study_Bible.563591-Studio-Cover2_700x.jpg?v=1552315306"><a href="/collections/gospel-transformation-study-bible">Gospel Transformation Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/esv_archaeology_700x.jpg?v=1546598858"><a href="/collections/w3-bible-esv-archaeology-study-bible">Archaeology Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/st_study_bible_5210f5cd-7498-4cd0-8830-4f63803be22e_700x.jpg?v=1546598854"><a href="/collections/w3-bible-esv-systematic-theology-study-bible">Systematic Theology Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/ScreenShot2020-08-20at9.08.33AM_700x.png?v=1597929089"><a href="/collections/esv-womens-study-bible">Women's Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/story_of_redemption_700x.jpg?v=1546598855"><a href="/collections/w3-bible-esv-story-of-redemption-bible">Story of Redemption Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/esv_macarthur_700x.jpg?v=1546598860"><a href="/collections/w3-bible-esv-macarthur-study-bible">MacArthur Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/reformation_study_bible_6433e497-0bcb-4538-8842-fe783b36717c_700x.jpg?v=1546598804"><a href="/collections/bible-esv-reformation-study-bible">Reformation Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433562105_700x.jpg?v=1561657857"><a href="/collections/esv-global-study-bibl">Global Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/niv_study_700x.jpg?v=1546598856"><a href="/collections/w3-bible-niv-biblical-theology-study-bible">NIV Biblical Theology Study Bible</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/compact_83fa806d-9768-429e-91d6-6b55ee4a6fa8_700x.jpg?v=1546598648" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-text" class="text-primary">Text</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433568831_700x.jpg?v=1593187902"><a href="/collections/esv-compact-bibles">Compact</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/thinline_ab27e9a5-0c6f-47d7-8f5c-341e1d750db1_700x.jpg?v=1546598889"><a href="/collections/esv-thinline-bible">Thinline</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/large_print_700x.jpg?v=1539948606"><a href="/collections/bible-large-print">Large Print</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/big_picture_story_bible_8241cc7a-bb17-4b8e-9784-8823de438bfd_700x.jpg?v=1546598769" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-children-youth" class="text-primary">Children &amp; Youth</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/student_study_bible_e75173d4-be9b-4205-97a3-0b41f39aa670_700x.jpg?v=1546598652"><a href="/collections/bible-student-study">Student Study Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433543111_700x.jpg?v=1562958570"><a href="/collections/bible-kids">Kid's Bibles</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/journaling_e7a0bd1f-3754-4b52-bb0a-4b3f4eed9d57_700x.jpg?v=1546598799" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-scripture-journal" class="text-primary">Scripture Journals</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/esvdigitalscripturejournal_700x.png?v=1576617109"><a href="/collections/esv-scripture-journals">ESV Scripture Journals</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/illuminated_journal_700x.jpg?v=1546598801"><a href="/collections/w3-bible-esv-illuminated-scripture-journal">ESV Illuminated Scripture Journals</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4"> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/esv_church_outreach_700x.jpg?v=1546598643" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-church-outreach" class="text-primary">Church &amp; Outreach</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/journaling_700x.jpg?v=1539948527" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-journaling" class="text-primary">Journaling</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/premium_700x.jpg?v=1539948511" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-premium" class="text-primary">Premium</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/premium_readers_700x.jpg?v=1546598536" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-readers" class="text-primary">Reader's</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/reference_851e3e86-195a-485c-8262-e4d3edaec288_700x.jpg?v=1546598897" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-reference" class="text-primary">Reference</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/devotional_700x.jpg?v=1539948509" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-devotional" class="text-primary">Devotional</a></h6> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4"> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/original_language_fb3ec418-f7e7-4ed4-a579-3d5c463a5399_700x.jpg?v=1546598647" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/bible-language" class="text-primary">Language</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/bibles_other_700x.jpg?v=1546598534" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/other" class="text-primary">Other</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551444_700x.jpg?v=1563390284" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/last-chance-bibles" class="text-primary">Last Chance Bibles</a></h6> </li>
+           </div> 
+          </div> 
+         </div> 
+        </ul> </li> 
+       <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_700x.jpg?v=1539948440" class="mega-menu"> <a href="/pages/children">Children</a> 
+        <ul class="menu_dropdown list-unstyled"> 
+         <div class="row m-0 d-flex"> 
+          <div class="col-12 col-ex-lg-9"> 
+           <div class="row m-0 d-flex"> 
+            <li class="col-12 col-ex-lg-3 pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_genre_700x.jpg?v=1539948494" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-childrengenre" class="text-primary">Genre</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_bible_stories_700x.jpg?v=1539948497"><a href="/collections/w3-genrebible-stories">Bible Stories</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_bibles_700x.jpg?v=1539948498"><a href="/collections/w3-childrengenrebibles">Bibles</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_christian_life_700x.jpg?v=1539948503"><a href="/collections/w3-genrechristian-life">Christian Life</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_church_history_700x.jpg?v=1539948500"><a href="/collections/w3-genrechurch-history">Church History</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/fiction_700x.jpg?v=1539948501"><a href="/collections/w3-genrefiction">Fiction</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_theology_700x.jpg?v=1539948502"><a href="/collections/w3-genretheology">Theology </a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg-3 pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/by_age_700x.jpg?v=1539948495" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-childrenage" class="text-primary">By Age</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_0_3_700x.jpg?v=1539948504"><a href="/collections/0-3">0-3</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_4_7_700x.jpg?v=1539948505"><a href="/collections/4-7">4-7</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_8_12_700x.jpg?v=1539948506"><a href="/collections/8-12">8-12</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_13_700x.jpg?v=1539948507"><a href="/collections/w3-13">13+</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg-3 pb-ex-lg-4"> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/catechisms_700x.jpg?v=1539948496" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-childrencatechisms" class="text-primary">Catechisms</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_youth_7ad0b9b2-ca0b-4cac-86bf-3e9cb7f4046e_700x.jpg?v=1539948493" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-childrencurriculum" class="text-primary">Curriculum</a></h6> </li>
+           </div> 
+          </div> 
+          <div class="col-ex-lg-3 col-12"> <a href="javascript:void(0);" class="h-100 d-ex-lg-block d-none pb-4 img-hover"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/bibles-img_1000x.jpg?v=18369441121420926055" class="object-fit"> </a> 
+          </div> 
+         </div> 
+        </ul> </li> 
+       <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/christian_life_700x.jpg?v=1539948438" class="mega-menu"> <a href="/pages/christian-life">Christian Life</a> 
+        <ul class="menu_dropdown list-unstyled"> 
+         <div class="row m-0 d-flex"> 
+          <div class="col-12 "> 
+           <div class="row m-0 d-flex"> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781784984762_700x.jpg?v=1601927372" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/tools-guides" class="text-primary">Tools and Guides</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/5400b44c6e77f827596341256fa0b098_700x.jpg?v=1578923925"><a href="/collections/devotionals">Devotionals</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/bible_studies_700x.jpg?v=1539948482"><a href="/collections/bible-studies">Bible Studies</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433564369_700x.jpg?v=1563037879"><a href="/collections/outreach-evangelism">Outreach &amp; Evangelism</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/7ed4018f523208e6825a1ce0d1d6cc9c_700x.jpg?v=1584222796" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/doctrine-for-life" class="text-primary">Doctrine for Life</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/7ed4018f523208e6825a1ce0d1d6cc9c_700x.jpg?v=1584222796"><a href="/collections/foundational-theology">Foundational Theology</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/apologetics_700x.jpg?v=1539948461"><a href="/collections/apologetics">Apologetics</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/f1a9c280c3cf1305b90e295c40ee7f94_700x.jpg?v=1610999909"><a href="/collections/money">Money</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/marriage_700x.jpg?v=1539948521"><a href="/collections/marriage">Marriage</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/sexuality_700x.jpg?v=1539948523"><a href="/collections/sexuality">Sexuality</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/parenting_700x.jpg?v=1539948520"><a href="/collections/parenting">Parenting</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_700x.jpg?v=1549463741"><a href="/collections/work">Work</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/1df9bc8e6cca6934f167600287cdedd1_700x.jpg?v=1571335635"><a href="/collections/missions">Missions</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/91NvkmOiaFL_700x.jpg?v=1614259753"><a href="/collections/race-diversity">Race &amp; Diversity</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/5400b44c6e77f827596341256fa0b098_700x.jpg?v=1578923925" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/spiritual-disciplines" class="text-primary">Spiritual Disciplines</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433559679_700x.jpg?v=1563037969"><a href="/collections/holiness">Holiness</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/5400b44c6e77f827596341256fa0b098_700x.jpg?v=1578923925"><a href="/collections/prayer">Prayer</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/worship_700x.jpg?v=1539948488"><a href="/collections/worship">Worship</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547119_700x.jpg?v=1562889385"><a href="/collections/church">Church</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/884aa5263d52a1d88302d126cc2eb841_700x.jpg?v=1582229922"><a href="/collections/bible-reading">Bible Reading</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/e3a7f1467f6c23d00bcf30b94dc911c7_700x.jpg?v=1579015481"><a href="/collections/sacraments">Sacraments</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/family_worship_700x.jpg?v=1539948522"><a href="/collections/family-worship">Family Worship</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/counseling_700x.jpg?v=1539948486" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/counseling" class="text-primary">Counseling</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/85e1a0c9977df3cae050b029ae1f10f6_700x.jpg?v=1596630079"><a href="/collections/suffering">Suffering</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/92237a5492c2de8b4c4494da839ddd22_700x.jpg?v=1596223693"><a href="/collections/anger">Anger</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/61o3InV-h-L_700x.jpg?v=1570553776"><a href="/collections/anxiety">Anxiety</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781629953632_700x.jpg?v=1546974170"><a href="/collections/pornography-addiction">Pornography Addiction</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/85e1a0c9977df3cae050b029ae1f10f6_700x.jpg?v=1596630079"><a href="/collections/abuse">Abuse</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9780875526829_700x.jpg?v=1546973603"><a href="/collections/depression">Depression</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/7e292f2087424dadecb0aab19bee48f7_700x.jpg?v=1568158343"><a href="/collections/death-dying">Death &amp; Dying</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433512766_700x.jpg?v=1562352796"><a href="/collections/assurance">Assurance</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4"> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/crosswayshortclassics_700x.png?v=1601394774" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/classics" class="text-primary">Classics</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/c51cd661b461032fdc22c2a6028cc3b4_700x.jpg?v=1610374383" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/biographies" class="text-primary">Biographies</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/men_700x.jpg?v=1539948513" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/men" class="text-primary">For Men</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/women_700x.jpg?v=1539948515" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/women" class="text-primary">For Women</a></h6> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/57c8e5614677ed0a5d6d8a33f6299fb5_700x.jpg?v=1596025417" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/teens-and-young-adults" class="text-primary">Teens and Young Adults</a></h6> </li>
+           </div> 
+          </div> 
+         </div> 
+        </ul> </li> 
+       <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/ministry_700x.jpg?v=1539948433" class="mega-menu"> <a href="/collections/ministry">Ministry</a> 
+        <ul class="menu_dropdown list-unstyled"> 
+         <div class="row m-0 d-flex"> 
+          <div class="col-12 col-ex-lg-9"> 
+           <div class="row m-0 d-flex"> 
+            <li class="col-12 col-ex-lg-3 pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/small_groups_curriculum_700x.jpg?v=1539948454" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-small-groups-curriculum" class="text-primary">Small Groups Curriculum</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/bible_studies_700x.jpg?v=1539948482"><a href="/collections/bible-studies">Bible Studies</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/group_study_700x.jpg?v=1539948483"><a href="/collections/w3-small-groups-curriculumbooks-for-group-study">Books for Group Study</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_youth_7ad0b9b2-ca0b-4cac-86bf-3e9cb7f4046e_700x.jpg?v=1539948493"><a href="/collections/w3-childrencurriculum">Curriculum</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/leading_group_study_700x.jpg?v=1539948485"><a href="/collections/w3-small-groups-curriculumleading-group-studies">Leading Group Studies</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg-3 pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/leadership1_700x.jpg?v=1539948455" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/leadership" class="text-primary"> Leadership</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_700x.jpg?v=1596814460"><a href="/collections/pastoral-resources">Pastoral Resources</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/preaching_700x.jpg?v=1539948460"><a href="/collections/w3-preaching">Preaching</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/structure_700x.jpg?v=1539948457"><a href="/collections/w3-leadershipstructure">Structure</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/teaching_700x.jpg?v=1539948458"><a href="/collections/w3-teaching">Teaching</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg-3 pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/church_ministries_700x.jpg?v=1539948456" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-church-ministries" class="text-primary">Church Ministries</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/children_youth_700x.jpg?v=1539948492"><a href="/collections/w3-children-youth">Children &amp; Youth</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/counseling_700x.jpg?v=1539948486"><a href="/collections/counseling">Counseling</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9780875526768_700x.jpg?v=1546973606"><a href="/collections/ccef-minibooks">CCEF Minibooks</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/discipling_700x.jpg?v=1539948487"><a href="/collections/w3-discipling">Discipling</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/growth_extention_700x.jpg?v=1539948489"><a href="/collections/w3-growthextension">Growth/Extension</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/mercy_700x.jpg?v=1539948491"><a href="/collections/w3-mercy">Mercy</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/worship_700x.jpg?v=1539948488"><a href="/collections/worship">Worship</a></li> 
+             </ul> </li> 
+           </div> 
+          </div> 
+          <div class="col-ex-lg-3 col-12"> <a href="javascript:void(0);" class="h-100 d-ex-lg-block d-none pb-4 img-hover"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/bibles-img_1000x.jpg?v=18369441121420926055" class="object-fit"> </a> 
+          </div> 
+         </div> 
+        </ul> </li> 
+       <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/commentaries_700x.jpg?v=1539948432" class="mega-menu"> <a href="/pages/commentaries">Commentaries</a> 
+        <ul class="menu_dropdown list-unstyled"> 
+         <div class="row m-0 d-flex"> 
+          <div class="col-12 "> 
+           <div class="row m-0 d-flex"> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/ot_commentaries_700x.jpg?v=1539948434" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-commentary-otcommentaries" class="text-primary">OT Commentaries</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/general_introduction_700x.jpg?v=1539948447"><a href="/collections/w3-commentary-ot-generalintro">General Introduction</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/pentateuch_700x.jpg?v=1539948443"><a href="/collections/w3-commentary-pentateuch">Pentateuch</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/historical_books_700x.jpg?v=1539948444"><a href="/collections/w3-commentary-historical-books">Historical Books</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/poets_wisdom_700x.jpg?v=1539948445"><a href="/collections/w3-commentary-poets-and-wisdom">Poets and Wisdom</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/prophets_700x.jpg?v=1539948446"><a href="/collections/w3-commentary-prophets">Prophets</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/nt_commentaries_700x.jpg?v=1539948435" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-commentary-nt-commentaries" class="text-primary">NT Commentaries</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/general_introduction_6b4c555c-b69c-4b47-8225-3699487d8e5e_700x.jpg?v=1539948448"><a href="/collections/w3-commentary-nt-generalintroduction">General Introduction</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/gospels_700x.jpg?v=1539948436"><a href="/collections/w3-commentary-gospels-commentaries">Gospels</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/acts_700x.jpg?v=1539948449"><a href="/collections/w3-commentary-acts">Acts</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/pauline_epistles_700x.jpg?v=1539948450"><a href="/collections/w3-commentary-pauline-epistles">Pauline Epistles</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/hebrews_700x.jpg?v=1539948451"><a href="/collections/w3-commentary-hebrews">Hebrews</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/general_epistles_700x.jpg?v=1539948452"><a href="/collections/w3-commentary-general-epistles">General Epistles</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/revelation_700x.jpg?v=1539948453"><a href="/collections/w3-commentary-revelation">Revelation</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/commentary_sets_700x.jpg?v=1539948605" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/commentary-full-sets" class="text-primary">Commentary Sets</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/expository-commentary-7_700x.jpg?v=1596656871"><a href="/collections/esv-expository-commentary">ESV Expository Commentary</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/nivac_700x.jpg?v=1539948426"><a href="/collections/w3-series-niv-application">NIV Application Commentary</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/Screen_Shot_2020-07-29_at_9.48.35_AM_700x.png?v=1596031489"><a href="/collections/god-word-for-you">God's Word For You</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/rcs_700x.jpg?v=1539948431"><a href="/collections/w3-series-reformation-commentary-on-scripture-series">Reformation Commentary on Scripture</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/rec_700x.jpg?v=1539948429"><a href="/collections/w3-series-reformed-expository-commentary">Reformed Expository Commentary</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/gaot_700x.jpg?v=1539948430"><a href="/collections/w3-series-gospel-according-to-the-old-testament">The Gospel According to the Old Testament</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/Screen_Shot_2021-02-11_at_8.38.25_AM_700x.png?v=1613050794"><a href="/collections/focus-on-the-bible">Focus on the Bible</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/tyndale_700x.jpg?v=1539948428"><a href="/collections/w3-series-tyndale-commentaries">Tyndale Commentaries</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/baker_700x.jpg?v=1539948425"><a href="/collections/w3-series-becnt">Baker Exegetical Commentaries</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/ptw_700x.jpg?v=1539948427"><a href="/collections/w3-series-preaching-the-word">Preaching the Word</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/NSBT26_grande_9dee5c7b-0cea-4c6b-a3a2-526402d71090_700x.png?v=1584975662"><a href="/collections/new-studies-in-biblical-theology">New Studies in Biblical Theology</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9780877849254_700x.jpg?v=1589889870"><a href="/collections/the-bible-speaks-today">The Bible Speaks Today</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/pages/1-66-collections" class="text-primary">1:66 Collections</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/3007b04e2a04dccae90ef4c136084b16_700x.jpg?v=1562613244"><a href="/collections/1-66-genesis">Genesis</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433546495_700x.jpg?v=1563831470"><a href="/collections/1-66-psalms">Psalms</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/47b03ea620919616e29085a1d900aaa2_700x.jpg?v=1562993048"><a href="/collections/w3-commentary-song-of-songs">Song of Songs</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/2310f5e9ac421ff417a154a562b721f4_700x.jpg?v=1564747294"><a href="/collections/1-66-ephesians">Ephesians</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9ad43bd71d1395b839058d3b958f9167_700x.jpg?v=1564767807"><a href="/collections/1-66-colossians-and-philemon">Colossians and Philemon</a></li> 
+             </ul> </li> 
+           </div> 
+          </div> 
+          <div class="col-ex-lg-3 col-12"> <a href="javascript:void(0);" class="h-100 d-ex-lg-block d-none pb-4 img-hover"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/bibles-img_1000x.jpg?v=18369441121420926055" class="object-fit"> </a> 
+          </div> 
+         </div> 
+        </ul> </li> 
+       <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/academic_700x.jpg?v=1539950917" class="mega-menu"> <a href="/collections/academic">Academic</a> 
+        <ul class="menu_dropdown list-unstyled"> 
+         <div class="row m-0 d-flex"> 
+          <div class="col-12 "> 
+           <div class="row m-0 d-flex"> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/apologetics_700x.jpg?v=1539948461" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/apologetics" class="text-primary">Apologetics</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9780875525730_700x.jpg?v=1549375208"><a href="/collections/philosophy">Philosophy</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/81-6FX4YNQL_700x.jpg?v=1603299224"><a href="/collections/culture">Culture</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/c9270fdb5c9a7657789a412f9c85abc6_700x.jpg?v=1601042288"><a href="/collections/proofs-defenses">Proofs &amp; Defenses</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/biblical_theology_700x.jpg?v=1539948471" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/w3-academicbiblical-theology" class="text-primary">Biblical Theology</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9780830826384_700x.jpg?v=1579813851"><a href="/collections/old-testament-biblical-theology">Old Testament</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_700x.jpg?v=1582046093"><a href="/collections/new-testament-biblical-theology">New Testament</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/unfoldinggracebundle_700x.png?v=1603129140"><a href="/collections/monographs">Monographs</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/church_history_700x.jpg?v=1539948462" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/historical-theology" class="text-primary">Historical Theology</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/biography_700x.jpg?v=1539948591"><a href="/collections/historical-theology-biography">Biography</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/epic_dvd_cover_700x.jpg?v=1579808017"><a href="/collections/general-history">General History</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/puritan-bundle_700x.png?v=1607544509"><a href="/collections/the-puritans">The Puritans</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/7f1c7c5c26fb2836106f5a0f2ec6bfd2_700x.jpg?v=1569857865"><a href="/collections/historical-theology-modern">Modern</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/e09834d156fe0d316ba7d3e8bc859ae8_700x.jpg?v=1568831713"><a href="/collections/historical-theology-reformation">Reformation</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/dd278a0c06ff6bd4988cd17eeb39413c_700x.jpg?v=1591038606"><a href="/collections/patristic">Patristic</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/theology_700x.jpg?v=1539948473" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/systematic-theology-main" class="text-primary">Systematic Theology</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/systematic_theology_700x.jpg?v=1539948464"><a href="/collections/systematic-theologies">Systematic Theologies</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/foundations_700x.jpg?v=1539948481"><a href="/collections/foundations">Foundations</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/god_700x.jpg?v=1539948480"><a href="/collections/theology-proper">God (Theology Proper)</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/christology_700x.jpg?v=1539948479"><a href="/collections/christology">Christology</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/soteriology_700x.jpg?v=1539948478"><a href="/collections/soteriology">Soteriology</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/anthropology_700x.jpg?v=1539948476"><a href="/collections/anthropology">Anthropology</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/church_700x.jpg?v=1539948475"><a href="/collections/ecclesiology">Ecclesiology</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/eschatology_700x.jpg?v=1539948474"><a href="/collections/eschatology">Eschatology</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/ethics_700x.jpg?v=1539948462"><a href="/collections/ethics">Ethics</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4 "> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433570810_700x.jpg?v=1591727905" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/original-languages" class="text-primary">Original Languages</a></h6> 
+             <ul class="list-unstyled imgHoverItem"> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/greekscripturejournal_700x.png?v=1608315275"><a href="/collections/greek-language-resources">Greek</a></li> 
+              <li data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/products/bce0deaf4b739293d9fd6620f631ae3d_700x.jpg?v=1585055738"><a href="/collections/hebrew-language-resources">Hebrew</a></li> 
+             </ul> </li> 
+            <li class="col-12 col-ex-lg pb-ex-lg-4"> <h6 data-imghover="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/Screen_Shot_2019-09-02_at_5.54.39_PM_700x.png?v=1567461413" class="text-base font-weight-medium text-primary text-uppercase font-size-sm"><a href="/collections/wts-textbooks" class="text-primary">WTS Textbooks</a></h6> </li>
+           </div> 
+          </div> 
+         </div> 
+        </ul> </li> 
+       <li class=""> <a href="/pages/current-specials?utm_source=nav-bar&amp;utm_medium=on-sale-button">On Sale</a> </li> 
+       <div class="d-block d-md-none"> 
+        <li class="nav-item"> <a class="nav-link" href="/pages/contact-us">Help</a> </li> 
+        <li class="nav-item"> <a class="nav-link" href="/pages/make-a-donation">Donate</a> </li> 
+        <li class="nav-item"> <a class="nav-link" href="/blogs/2021-enews">eNews</a> </li> 
+        <li class="nav-item"> <a class="nav-link hiii" href="/account">Login</a> 
+         <ul> 
+          <li><a href="/account" class="dropdown-item">Log in</a></li> 
+          <li><a href="/pages/wishlist" class="dropdown-item">Wishlists</a></li> 
+          <li><a href="/account/register" class="dropdown-item">Create account</a></li> 
+         </ul> </li> 
+       </div> 
+      </ul> 
+     </nav> 
+    </div> 
+   </div> 
+   <div id="mobile-search"> 
+    <div class="container py-3 bg-light"> 
+     <form class="m-0" action="/collections/search-result" method="get" role="search"> 
+      <input type="hidden" name="type" value="product"> 
+      <div class="input-group"> 
+       <input type="search" name="q" class="form-control" value="" placeholder="Search our store"> 
+       <div class="input-group-prepend"> <button type="submit" class="btn btn-secondary px-3 search-icon"><img src="//cdn.shopify.com/s/files/1/0021/5210/3983/t/5/assets/search-icon.svg?v=14014698053682292834"></button> 
+       </div> 
+      </div> 
+     </form> 
+    </div> 
+   </div> 
+  </header> 
+  <div id="mobile-navigation"> 
+   <div class="drawer-header d-flex justify-content-between align-items-center pl-3 pr-2 py-3"> <a href="/" class="navbar-brand w-75"><img src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/logo-dark.svg?v=11680461286001425219" style="max-width: 120px;"></a> 
+    <div class="menu-close"></div> 
+   </div> 
+  </div> 
+ </div> 
+ <div class="main-content"> 
+  <div id="shopify-section-index-header-slider" class="shopify-section"> 
+   <div id="banner-slider" data-section-id="index-header-slider" data-header-slider class=""> 
+    <div class="slider-inner header-slider" data-slick="{&quot;slidesToShow&quot;: 1,&quot;autoplay&quot;: true, &quot;autoplaySpeed&quot;: 6000, &quot;slidesToScroll&quot;: 1, &quot;arrows&quot;: false  ,&quot;dots&quot;: true}"> 
+     <div class="slick-item  active"> 
+      <img data-sizes="auto" src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2021-02-16_at_12.06.07_PM_small.png?v=1613495227" data-srcset="
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2021-02-16_at_12.06.07_PM_1024x.png?v=1613495227 576w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2021-02-16_at_12.06.07_PM_1280x.png?v=1613495227 768w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2021-02-16_at_12.06.07_PM_1440x.png?v=1613495227 992w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2021-02-16_at_12.06.07_PM_1920x.png?v=1613495227 1200w
+                          " class="lazyload d-block" alt="50% Off John Piper's Providence"> 
+      <div class="absolute-center text-center text-white py-2"> 
+       <div class="container"> 
+        <div class="mx-auto col-md-8 col-12"> 
+         <h3 class="font-italic h1" style="font-size: 2rem; font-weight: 600; letter-spacing: 0px; color: ;"> 50% Off John Piper's Providence </h3> 
+         <div class="line mx-auto my-3 bg-secondary w-75"></div> 
+         <p class="font-size-lg font-weight-light" style="font-size: 1rem; font-weight: 400; color: ;"> Order John Piper's 700 page magnum opus–a book 20 years in the making–and we'll send you the eBook for free.</p> <a href="https://www.wtsbooks.com/products/providence-9781433568343?variant=32407646634046" class="btn btn-white btn-outline-light mt-5">Order Now</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="overlay" style="background-color: #000000!important; opacity: 0.5!important;  "></div> 
+     </div> 
+     <div class="slick-item "> 
+      <img data-sizes="auto" src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_3757_small.jpg?v=1611630724" data-srcset="
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_3757_1024x.jpg?v=1611630724 576w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_3757_1280x.jpg?v=1611630724 768w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_3757_1440x.jpg?v=1611630724 992w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_3757_1920x.jpg?v=1611630724 1200w
+                          " class="lazyload d-block" alt="Saints, Sufferers &amp; Sinners"> 
+      <div class="absolute-center text-center text-white py-2"> 
+       <div class="container"> 
+        <div class="mx-auto col-md-8 col-12"> 
+         <h3 class="font-italic h1" style="font-size: 2rem; font-weight: 600; letter-spacing: 0px; color: ;"> Saints, Sufferers &amp; Sinners </h3> 
+         <div class="line mx-auto my-3 bg-secondary w-75"></div> 
+         <p class="font-size-lg font-weight-light" style="font-size: 1rem; font-weight: 900; color: ;"> New from CCEF's Mike Emlet: “This must become a foundational book for biblical counselors of every type for generations to come.” –Alasdair Groves</p> <a href="https://www.wtsbooks.com/collections/ccef-counseling-discipleship-resources/products/saints-sufferers-and-sinners-loving-others-as-god-loves-us-9781645070511?variant=37928316403912" class="btn btn-white btn-outline-light mt-5">Learn More</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="overlay" style="background-color: #000000!important; opacity: 1!important;  "></div> 
+     </div> 
+     <div class="slick-item "> 
+      <img data-sizes="auto" src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-10-09_at_8.43.48_AM_small.png?v=1602247485" data-srcset="
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-10-09_at_8.43.48_AM_1024x.png?v=1602247485 576w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-10-09_at_8.43.48_AM_1280x.png?v=1602247485 768w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-10-09_at_8.43.48_AM_1440x.png?v=1602247485 992w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-10-09_at_8.43.48_AM_1920x.png?v=1602247485 1200w
+                          " class="lazyload d-block" alt="The Most Important Book"> 
+      <div class="absolute-center text-center text-white py-2"> 
+       <div class="container"> 
+        <div class="mx-auto col-md-8 col-12"> 
+         <h3 class="font-italic h1" style="font-size: 2rem; font-weight: 600; letter-spacing: 1px; color: #ffffff;"> The Most Important Book </h3> 
+         <div class="line mx-auto my-3 bg-secondary w-75"></div> 
+         <p class="font-size-lg font-weight-light" style="font-size: 1.2rem; font-weight: 400; color: #ffffff;"> The English Standard Version (ESV) is the fruit of more than 100 of the world’s leading Bible scholars, and is our first recommendation for personal reading and study, for private and family devotions, and for teaching, preaching, and worship.</p> <a href="https://www.wtsbooks.com/pages/bibles" class="btn btn-white btn-outline-light mt-5">Browse Bibles</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="overlay" style="background-color: #000000!important; opacity: 1!important; background-image: url(//cdn.shopify.com/s/files/1/0021/5210/3983/t/5/assets/overlay-pattern-1.png?v=7632317628033788713) "></div> 
+     </div> 
+     <div class="slick-item "> 
+      <img data-sizes="auto" src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2019-01-28_at_1.45.47_PM_small.png?v=1548701164" data-srcset="
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2019-01-28_at_1.45.47_PM_1024x.png?v=1548701164 576w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2019-01-28_at_1.45.47_PM_1280x.png?v=1548701164 768w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2019-01-28_at_1.45.47_PM_1440x.png?v=1548701164 992w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2019-01-28_at_1.45.47_PM_1920x.png?v=1548701164 1200w
+                          " class="lazyload d-block" alt="Kindergarten through MDiv"> 
+      <div class="absolute-center text-center text-white py-2"> 
+       <div class="container"> 
+        <div class="mx-auto col-md-8 col-12"> 
+         <h3 class="font-italic h1" style="font-size: 2rem; font-weight: 600; letter-spacing: 1px; color: #ffffff;"> Kindergarten through MDiv </h3> 
+         <div class="line mx-auto my-3 bg-secondary w-75"></div> 
+         <p class="font-size-lg font-weight-light" style="font-size: 1.2rem; font-weight: 300; color: #ffffff;"> Our mission is to serve the church through curating the best biblically faithful books for readers at every level.</p> <a href="/pages/make-a-donation" class="btn btn-white btn-outline-light mt-5">Watch Our Mission Video</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="slick-item "> 
+      <img data-sizes="auto" src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-05-19_at_8.23.40_AM_small.png?v=1589891047" data-srcset="
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-05-19_at_8.23.40_AM_1024x.png?v=1589891047 576w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-05-19_at_8.23.40_AM_1280x.png?v=1589891047 768w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-05-19_at_8.23.40_AM_1440x.png?v=1589891047 992w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-05-19_at_8.23.40_AM_1920x.png?v=1589891047 1200w
+                          " class="lazyload d-block" alt="The Afterword Podcast"> 
+      <div class="absolute-center text-center text-white py-2"> 
+       <div class="container"> 
+        <div class="mx-auto col-md-8 col-12"> 
+         <h3 class="font-italic h1" style="font-size: 2rem; font-weight: 600; letter-spacing: 0px; color: ;"> The Afterword Podcast </h3> 
+         <div class="line mx-auto my-3 bg-secondary w-75"></div> 
+         <p class="font-size-lg font-weight-light" style="font-size: 1rem; font-weight: 400; color: ;"> Join host Jonny Gibson and some of our favorite authors for hour-long conversations on books, reading, and the church.</p> <a href="/afterword" class="btn btn-white btn-outline-light mt-5">Watch Episodes 1-10</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="overlay" style="background-color: #000000!important; opacity: 1!important;  "></div> 
+     </div> 
+     <div class="slick-item "> 
+      <img data-sizes="auto" src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_7580_486b776f-05a9-4961-b86f-a29fd7d7706a_small.JPG?v=1552578007" data-srcset="
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_7580_486b776f-05a9-4961-b86f-a29fd7d7706a_1024x.JPG?v=1552578007 576w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_7580_486b776f-05a9-4961-b86f-a29fd7d7706a_1280x.JPG?v=1552578007 768w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_7580_486b776f-05a9-4961-b86f-a29fd7d7706a_1440x.JPG?v=1552578007 992w,
+                          //cdn.shopify.com/s/files/1/0021/5210/3983/files/DSC_7580_486b776f-05a9-4961-b86f-a29fd7d7706a_1920x.JPG?v=1552578007 1200w
+                          " class="lazyload d-block" alt="An Encouragement to Read Slow"> 
+      <div class="absolute-center text-center text-white py-2"> 
+       <div class="container"> 
+        <div class="mx-auto col-md-8 col-12"> 
+         <h3 class="font-italic h1" style="font-size: 2rem; font-weight: 600; letter-spacing: 0px; color: ;"> An Encouragement to Read Slow </h3> 
+         <div class="line mx-auto my-3 bg-secondary w-75"></div> 
+         <p class="font-size-lg font-weight-light" style="font-size: 1rem; font-weight: 400; color: ;"> We’ve collected 15 readings that help us slow down and understand ourselves and our God in the midst of scary and uncertain times. These readings are available to download for free. Please read, share and be encouraged.</p> <a href="/collections/read-slow" class="btn btn-white btn-outline-light mt-5">Download Free Readings</a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="overlay" style="background-color: #000000!important; opacity: 1!important;  "></div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="shopify-section-1531134022618" class="shopify-section index-featured-collectiion"> 
+   <section id="current_special" class="py-xl-9 py-md-7 py-5 shadow position-relative" data-section-id="1531134022618" data-grid-type="grid" style="background-color: #f8f9fa; color: #343a40"> 
+    <div class="container"> 
+     <div class="product-list"> 
+      <div class="d-flex justify-content-start align-items-baseline pb-3"> 
+       <h3 class="mb-0 mr-3">Current Specials</h3> <a href="/pages/current-specials" class="text-secondary text-uppercase font-weight-normal font-size-sm">View All</a> 
+      </div> 
+      <div class="row justify-content-center"> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/money-debt-and-finances-critical-questions-and-answers-9781629954370" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/f1a9c280c3cf1305b90e295c40ee7f94_pico.jpg?v=1610999909" alt="Money, Debt, and Finances: Critical Questions and Answers" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/f1a9c280c3cf1305b90e295c40ee7f94_large.jpg?v=1610999909 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/f1a9c280c3cf1305b90e295c40ee7f94_600x.jpg?v=1610999909 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/f1a9c280c3cf1305b90e295c40ee7f94_600x.jpg?v=1610999909 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/f1a9c280c3cf1305b90e295c40ee7f94_600x.jpg?v=1610999909 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/money-debt-and-finances-critical-questions-and-answers-9781629954370" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Money, Debt, and Finances: Critical Questions and Answers</a> 
+         <p class="text-light-gray m-0 font-weight-normal">Newheiser, Jim</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $11.99 <span class="percent-off"> 40% OFF </span> </p> 
+        </div> 
+       </div> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/hope-in-times-of-fear-the-resurrection-and-the-meaning-of-easter-9780525560791" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/d5cbac0bf9d8a8ede6802aa62d3a1b54_pico.jpg?v=1613052503" alt="Hope in Times of Fear: The Resurrection and the Meaning of Easter" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/d5cbac0bf9d8a8ede6802aa62d3a1b54_large.jpg?v=1613052503 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/d5cbac0bf9d8a8ede6802aa62d3a1b54_600x.jpg?v=1613052503 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/d5cbac0bf9d8a8ede6802aa62d3a1b54_600x.jpg?v=1613052503 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/d5cbac0bf9d8a8ede6802aa62d3a1b54_600x.jpg?v=1613052503 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/hope-in-times-of-fear-the-resurrection-and-the-meaning-of-easter-9780525560791" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Hope in Times of Fear: The Resurrection and the Meaning of Easter</a> 
+         <p class="text-light-gray m-0 font-weight-normal">Keller, Timothy</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $22.00 <span class="percent-off"> 19% OFF </span> </p> 
+        </div> 
+       </div> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/providence-9781433568343" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/61498f16becba10a7485b9c4ab0468e2_pico.jpg?v=1614742234" alt="Providence" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/61498f16becba10a7485b9c4ab0468e2_large.jpg?v=1614742234 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/61498f16becba10a7485b9c4ab0468e2_600x.jpg?v=1614742234 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/61498f16becba10a7485b9c4ab0468e2_600x.jpg?v=1614742234 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/61498f16becba10a7485b9c4ab0468e2_600x.jpg?v=1614742234 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/providence-9781433568343" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Providence</a> 
+         <p class="text-light-gray m-0 font-weight-normal">Piper, John</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $19.99 <span class="percent-off"> 50% OFF </span> </p> 
+        </div> 
+       </div> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/easter-the-greatest-news-9781913896041" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/216a159ff34769715f8689ee0f50cbc6_pico.jpg?v=1614608741" alt="Easter: The Greatest News" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/216a159ff34769715f8689ee0f50cbc6_large.jpg?v=1614608741 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/216a159ff34769715f8689ee0f50cbc6_600x.jpg?v=1614608741 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/216a159ff34769715f8689ee0f50cbc6_600x.jpg?v=1614608741 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/216a159ff34769715f8689ee0f50cbc6_600x.jpg?v=1614608741 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/easter-the-greatest-news-9781913896041" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Easter: The Greatest News</a> 
+         <p class="text-light-gray m-0 font-weight-normal">Paul Williams</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $3.50 <span class="percent-off"> 30% OFF </span> </p> 
+        </div> 
+       </div> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/your-vedict-val-grieve-9781783971893" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781783971893_pico.jpg?v=1564498274" alt="Your Verdict On The Empty Tomb" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781783971893_large.jpg?v=1564498274 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781783971893_600x.jpg?v=1564498274 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781783971893_600x.jpg?v=1564498274 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781783971893_600x.jpg?v=1564498274 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/your-vedict-val-grieve-9781783971893" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Your Verdict On The Empty Tomb</a> 
+         <p class="text-light-gray m-0 font-weight-normal">Grieve, Val</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $2.50 <span class="percent-off"> 50% OFF </span> </p> 
+        </div> 
+       </div> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/god-cares-for-me-helping-children-trust-god-and-love-others-when-sick-god-made-me-9781645071921" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/81eNP0euh7L_pico.jpg?v=1613406073" alt="God Cares for Me: Helping Children Trust God and Love Others When Sick (God Made Me)" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/81eNP0euh7L_large.jpg?v=1613406073 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/81eNP0euh7L_600x.jpg?v=1613406073 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/81eNP0euh7L_600x.jpg?v=1613406073 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/81eNP0euh7L_600x.jpg?v=1613406073 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/god-cares-for-me-helping-children-trust-god-and-love-others-when-sick-god-made-me-9781645071921" class="card-title d-block text-darker mb-1 font-weight-medium product-title">God Cares for Me: Helping Children Trust God and Love Others When Sick (God Made Me)</a> 
+         <p class="text-light-gray m-0 font-weight-normal">James, Scott</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $7.99 <span class="percent-off"> 50% OFF </span> </p> 
+        </div> 
+       </div> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/r-c-sproul-a-life-9781433544774" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433544774_pico.jpg?v=1611673908" alt="R. C. Sproul: A Life" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433544774_large.jpg?v=1611673908 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433544774_600x.jpg?v=1611673908 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433544774_600x.jpg?v=1611673908 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433544774_600x.jpg?v=1611673908 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/r-c-sproul-a-life-9781433544774" class="card-title d-block text-darker mb-1 font-weight-medium product-title">R. C. Sproul: A Life</a> 
+         <p class="text-light-gray m-0 font-weight-normal">Nichols, Stephen J</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $17.49 <span class="percent-off"> 50% OFF </span> </p> 
+        </div> 
+       </div> 
+       <div class="col-12 d-flex flex-column"> <a href="/collections/current-specials/products/five-things-to-pray-in-a-global-crisis-9781784985707" class="card-img d-block bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/1dbe0587f95ac6d971a09330591d3c63_pico.jpg?v=1586263578" alt="5 Things to Pray in a Global Crisis" class="lazyload d-block shadow-small " sizes="100vw" srcset="
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/1dbe0587f95ac6d971a09330591d3c63_large.jpg?v=1586263578 576w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/1dbe0587f95ac6d971a09330591d3c63_600x.jpg?v=1586263578 768w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/1dbe0587f95ac6d971a09330591d3c63_600x.jpg?v=1586263578 992w,
+      //cdn.shopify.com/s/files/1/0021/5210/3983/products/1dbe0587f95ac6d971a09330591d3c63_600x.jpg?v=1586263578 1200w"> </a> 
+        <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/current-specials/products/five-things-to-pray-in-a-global-crisis-9781784985707" class="card-title d-block text-darker mb-1 font-weight-medium product-title">5 Things to Pray in a Global Crisis</a> 
+         <p class="text-light-gray m-0 font-weight-normal">Jones, Rachel</p> 
+         <p class="card-price mt-2 m-0 font-weight-medium"> $4.90 <span class="percent-off"> 18% OFF </span> </p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+  </div>
+  <div id="shopify-section-1531138945002" class="shopify-section"> 
+   <div id="features_collections"> 
+    <div class="container"> 
+     <div class="row d-md-flex d-block"> 
+      <div class="col-md-8 col-12 py-7 py-xl-9 py-md-8 pr-lg-5 overflow-hidden"> 
+       <div class="product-list border-bottom pb-7 mb-xl-9 mb-md-8 mb-6"> 
+        <div class="d-flex justify-content-start align-items-baseline pb-3"> 
+         <h3 class="mb-0 mr-3">Pastoral Resources</h3> <a href="/collections/pastoral-resources" class="text-secondary text-uppercase font-weight-normal font-size-sm">View All</a> 
+        </div> 
+        <div class="row"> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/pastoral-resources/products/pastors-and-their-critics-9781629957524" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_100x.jpg?v=1596814460" alt="Pastors and Their Critics: A Guide to Coping with Criticism in the Ministry" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_100x.jpg?v=1596814460" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_100x.jpg?v=1596814460 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_480x.jpg?v=1596814460 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_765x.jpg?v=1596814460 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_900x.jpg?v=1596814460 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_1000x.jpg?v=1596814460 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_1100x.jpg?v=1596814460 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_1300x.jpg?v=1596814460 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_1500x.jpg?v=1596814460 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_1700x.jpg?v=1596814460 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_1900x.jpg?v=1596814460 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/7881e87bf30c90ca6770f375a29a45ae_2000x.jpg?v=1596814460 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/pastoral-resources/products/pastors-and-their-critics-9781629957524" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Pastors and Their Critics: A Guide to Coping with Criticism in the Ministry</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Beeke, Joel R; Thompson, Nicholas J</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $12.21 <span class="percent-off"> 24% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/pastoral-resources/products/lead-12-gospel-principles-for-leadership-in-the-church-9781433567636" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_100x.jpg?v=1598980287" alt="Lead: 12 Gospel Principles for Leadership in the Church" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_100x.jpg?v=1598980287" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_100x.jpg?v=1598980287 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_480x.jpg?v=1598980287 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_765x.jpg?v=1598980287 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_900x.jpg?v=1598980287 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_1000x.jpg?v=1598980287 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_1100x.jpg?v=1598980287 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_1300x.jpg?v=1598980287 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_1500x.jpg?v=1598980287 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_1700x.jpg?v=1598980287 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_1900x.jpg?v=1598980287 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433567636cover_2000x.jpg?v=1598980287 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/pastoral-resources/products/lead-12-gospel-principles-for-leadership-in-the-church-9781433567636" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Lead: 12 Gospel Principles for Leadership in the Church</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Tripp, Paul David</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $19.63 <span class="percent-off"> 27% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/pastoral-resources/products/the-shepherd-leader-timothy-witmer-9781596381315" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_100x.jpg?v=1549377459" alt="The Shepherd Leader: Achieving Effective Shepherding in Your Church" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_100x.jpg?v=1549377459" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_100x.jpg?v=1549377459 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_480x.jpg?v=1549377459 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_765x.jpg?v=1549377459 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_900x.jpg?v=1549377459 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_1000x.jpg?v=1549377459 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_1100x.jpg?v=1549377459 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_1300x.jpg?v=1549377459 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_1500x.jpg?v=1549377459 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_1700x.jpg?v=1549377459 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_1900x.jpg?v=1549377459 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781596381315_2000x.jpg?v=1549377459 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/pastoral-resources/products/the-shepherd-leader-timothy-witmer-9781596381315" class="card-title d-block text-darker mb-1 font-weight-medium product-title">The Shepherd Leader: Achieving Effective Shepherding in Your Church</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Witmer, Timothy Z.</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $13.74 <span class="percent-off"> 24% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/pastoral-resources/products/the-care-of-souls-cultivating-a-pastors-heart-9781683593010" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_100x.jpg?v=1565959144" alt="The Care of Souls: Cultivating a Pastor's Heart" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_100x.jpg?v=1565959144" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_100x.jpg?v=1565959144 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_480x.jpg?v=1565959144 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_765x.jpg?v=1565959144 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_900x.jpg?v=1565959144 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_1000x.jpg?v=1565959144 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_1100x.jpg?v=1565959144 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_1300x.jpg?v=1565959144 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_1500x.jpg?v=1565959144 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_1700x.jpg?v=1565959144 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_1900x.jpg?v=1565959144 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/412fb7bc96c3f6429f001ff69ab75272_2000x.jpg?v=1565959144 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/pastoral-resources/products/the-care-of-souls-cultivating-a-pastors-heart-9781683593010" class="card-title d-block text-darker mb-1 font-weight-medium product-title">The Care of Souls: Cultivating a Pastor's Heart</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Senkbeil, Harold L</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $17.99 <span class="percent-off"> 18% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/pastoral-resources/products/saint-peters-principles-leadership-for-those-who-already-know-their-incompetence" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_100x.jpg?v=1549463741" alt="Saint Peter's Principles: Leadership for Those Who Already Know Their Incompetence" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_100x.jpg?v=1549463741" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_100x.jpg?v=1549463741 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_480x.jpg?v=1549463741 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_765x.jpg?v=1549463741 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_900x.jpg?v=1549463741 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_1000x.jpg?v=1549463741 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_1100x.jpg?v=1549463741 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_1300x.jpg?v=1549463741 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_1500x.jpg?v=1549463741 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_1700x.jpg?v=1549463741 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_1900x.jpg?v=1549463741 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/2c76e100deca253588dc8075c9ba24cb_2000x.jpg?v=1549463741 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/pastoral-resources/products/saint-peters-principles-leadership-for-those-who-already-know-their-incompetence" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Saint Peter's Principles: Leadership for Those Who Already Know Their Incompetence</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Lillback, Peter A.</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $20.00 <span class="percent-off"> 50% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/pastoral-resources/products/reset-david-murray-9781433555183" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_100x.jpg?v=1562860410" alt="Reset: Living a Grace-Paced Life in a Burnout Culture" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_100x.jpg?v=1562860410" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_100x.jpg?v=1562860410 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_480x.jpg?v=1562860410 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_765x.jpg?v=1562860410 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_900x.jpg?v=1562860410 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_1000x.jpg?v=1562860410 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_1100x.jpg?v=1562860410 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_1300x.jpg?v=1562860410 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_1500x.jpg?v=1562860410 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_1700x.jpg?v=1562860410 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_1900x.jpg?v=1562860410 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433555183_2000x.jpg?v=1562860410 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/pastoral-resources/products/reset-david-murray-9781433555183" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Reset: Living a Grace-Paced Life in a Burnout Culture</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Murray, David</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $10.90 <span class="percent-off"> 27% OFF </span> </p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="product-list border-bottom pb-7 "> 
+        <div class="d-flex justify-content-start align-items-baseline pb-3"> 
+         <h3 class="mb-0 mr-3">Parenting</h3> <a href="/collections/parenting" class="text-secondary text-uppercase font-weight-normal font-size-sm">View All</a> 
+        </div> 
+        <div class="row"> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/parenting/products/family-discipleship-leading-your-home-through-time-moments-and-milestones-9781433566295" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_100x.jpg?v=1596211144" alt="Family Discipleship: Leading Your Home Through Time, Moments, and Milestones" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_100x.jpg?v=1596211144" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_100x.jpg?v=1596211144 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_480x.jpg?v=1596211144 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_765x.jpg?v=1596211144 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_900x.jpg?v=1596211144 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_1000x.jpg?v=1596211144 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_1100x.jpg?v=1596211144 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_1300x.jpg?v=1596211144 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_1500x.jpg?v=1596211144 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_1700x.jpg?v=1596211144 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_1900x.jpg?v=1596211144 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/62b86bce35b1eaff1973406d5804f474_2000x.jpg?v=1596211144 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/parenting/products/family-discipleship-leading-your-home-through-time-moments-and-milestones-9781433566295" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Family Discipleship: Leading Your Home Through Time, Moments, and Milestones</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Chandler, Matt; Griffin, Adam</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $18.17 <span class="percent-off"> 27% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/parenting/products/caring-for-the-souls-of-children-9781645070634" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_100x.jpg?v=1596224253" alt="Caring for the Souls of Children" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_100x.jpg?v=1596224253" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_100x.jpg?v=1596224253 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_480x.jpg?v=1596224253 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_765x.jpg?v=1596224253 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_900x.jpg?v=1596224253 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_1000x.jpg?v=1596224253 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_1100x.jpg?v=1596224253 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_1300x.jpg?v=1596224253 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_1500x.jpg?v=1596224253 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_1700x.jpg?v=1596224253 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_1900x.jpg?v=1596224253 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/5702b2824c12940b5baaddb56fa0c3b2_2000x.jpg?v=1596224253 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/parenting/products/caring-for-the-souls-of-children-9781645070634" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Caring for the Souls of Children</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Baker, Amy (editor)</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $24.54 <span class="percent-off"> 18% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/parenting/products/the-pop-culture-parent-helping-kids-engage-their-world-for-christ-9781645070665" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_100x.jpg?v=1597238181" alt="The Pop Culture Parent: Helping Kids Engage Their World for Christ" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_100x.jpg?v=1597238181" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_100x.jpg?v=1597238181 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_480x.jpg?v=1597238181 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_765x.jpg?v=1597238181 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_900x.jpg?v=1597238181 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_1000x.jpg?v=1597238181 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_1100x.jpg?v=1597238181 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_1300x.jpg?v=1597238181 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_1500x.jpg?v=1597238181 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_1700x.jpg?v=1597238181 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_1900x.jpg?v=1597238181 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/f98890f199e05c7a35c17f4054522f1a_2000x.jpg?v=1597238181 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/parenting/products/the-pop-culture-parent-helping-kids-engage-their-world-for-christ-9781645070665" class="card-title d-block text-darker mb-1 font-weight-medium product-title">The Pop Culture Parent: Helping Kids Engage Their World for Christ</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Turnau III Theodore a; Burnett, E Stephen; Moore, Jared</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $14.72 <span class="percent-off"> 18% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/parenting/products/building-bridges-biblical-counseling-activities-for-children-and-teens-9781645070504" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_100x.jpg?v=1596224112" alt="Building Bridges: Biblical Counseling Activities for Children and Teens" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_100x.jpg?v=1596224112" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_100x.jpg?v=1596224112 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_480x.jpg?v=1596224112 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_765x.jpg?v=1596224112 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_900x.jpg?v=1596224112 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_1000x.jpg?v=1596224112 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_1100x.jpg?v=1596224112 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_1300x.jpg?v=1596224112 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_1500x.jpg?v=1596224112 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_1700x.jpg?v=1596224112 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_1900x.jpg?v=1596224112 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/1be735dbdc46f9ee7bde8d6f17bd2815_2000x.jpg?v=1596224112 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/parenting/products/building-bridges-biblical-counseling-activities-for-children-and-teens-9781645070504" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Building Bridges: Biblical Counseling Activities for Children and Teens</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Lowe, Julie</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $24.54 <span class="percent-off"> 18% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/parenting/products/parenting-paul-david-tripp-9781433551932" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_100x.jpg?v=1546974034" alt="Parenting: The 14 Gospel Principles That Can Radically Change Your Family" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_100x.jpg?v=1546974034" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_100x.jpg?v=1546974034 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_480x.jpg?v=1546974034 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_765x.jpg?v=1546974034 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_900x.jpg?v=1546974034 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_1000x.jpg?v=1546974034 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_1100x.jpg?v=1546974034 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_1300x.jpg?v=1546974034 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_1500x.jpg?v=1546974034 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_1700x.jpg?v=1546974034 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_1900x.jpg?v=1546974034 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433551932_2000x.jpg?v=1546974034 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/parenting/products/parenting-paul-david-tripp-9781433551932" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Parenting: The 14 Gospel Principles That Can Radically Change Your Family</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Tripp, Paul David</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $16.72 <span class="percent-off"> 27% OFF </span> </p> 
+          </div> 
+         </div> 
+         <div class="col-12 d-flex flex-column"> <a href="/collections/parenting/products/family-worship-revised" class="card-img bottom-img"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_100x.jpg?v=1580239381" alt="Family Worship (Revised)" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_100x.jpg?v=1580239381" srcset="
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_100x.jpg?v=1580239381 100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_480x.jpg?v=1580239381 480w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_765x.jpg?v=1580239381 765w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_900x.jpg?v=1580239381 900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_1000x.jpg?v=1580239381 1000w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_1100x.jpg?v=1580239381 1100w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_1300x.jpg?v=1580239381 1300w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_1500x.jpg?v=1580239381 1500w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_1700x.jpg?v=1580239381 1700w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_1900x.jpg?v=1580239381 1900w,
+												//cdn.shopify.com/s/files/1/0021/5210/3983/products/9781433547805_39bd991e-34f2-4a25-aa13-7c10f8e41c33_2000x.jpg?v=1580239381 2000w"> </a> 
+          <div class="card-body p-0 pt-3 font-size-sm"> <a href="/collections/parenting/products/family-worship-revised" class="card-title d-block text-darker mb-1 font-weight-medium product-title">Family Worship (Revised)</a> 
+           <p class="text-light-gray m-0 font-weight-normal">Whitney, Donald S.</p> 
+           <p class="card-price mt-2 m-0 font-weight-medium"> $6.54 <span class="percent-off"> 27% OFF </span> </p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-4 col-12 py-7 py-xl-9 py-md-8 pl-lg-4 d-flex flex-wrap bg-light"> 
+       <div class="product-new border-bottom pb-7  mb-xl-9 mb-md-8 mb-6"> 
+        <div class="d-flex flex-wrap justify-content-start align-items-baseline pb-3"> 
+         <h3 class="mb-0 mr-1 mr-lg-3">New Releases</h3> <a href="/collections/new-releases" class="text-secondary text-uppercase font-weight-normal font-size-sm">View All</a> 
+        </div> 
+        <div class="new-product-list row mb-3"> 
+         <div class="col-4"> <a href="/collections/new-releases/products/let-slavery-die-the-life-of-henry-highland-garnet-and-his-1865-discourse-before-the-house-of-representatives-9781948102360" class="card-img d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_100x.jpg?v=1613587036" alt="Let Slavery Die: The Life of Henry Highland Garnet and His 1865 Discourse Before the House of Representatives" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_100x.jpg?v=1613587036" srcset="
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_100x.jpg?v=1613587036 100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_480x.jpg?v=1613587036 480w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_765x.jpg?v=1613587036 765w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_900x.jpg?v=1613587036 900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_1000x.jpg?v=1613587036 1000w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_1100x.jpg?v=1613587036 1100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_1300x.jpg?v=1613587036 1300w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_1500x.jpg?v=1613587036 1500w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_1700x.jpg?v=1613587036 1700w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_1900x.jpg?v=1613587036 1900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/096863bb47d20db37e47048aed2a35f2_2000x.jpg?v=1613587036 2000w"> </a> 
+         </div> 
+         <div class="col-8 font-size-sm"> <a href="/collections/new-releases/products/let-slavery-die-the-life-of-henry-highland-garnet-and-his-1865-discourse-before-the-house-of-representatives-9781948102360" class="card-title d-block text-darker mb-1 font-weight-medium product-title" tabindex="0">Let Slavery Die: The Life of Henry Highland Garnet and His 1865 Discourse Before the House of Representatives</a> 
+          <p class="text-light-gray m-0 font-weight-normal">Garnet, Henry Highland</p> 
+          <p class="card-price mt-2 m-0 font-weight-medium"> $10.90 <span class="percent-off"> 9% OFF </span> </p> 
+         </div> 
+        </div> 
+        <div class="new-product-list row mb-3"> 
+         <div class="col-4"> <a href="/collections/new-releases/products/the-path-of-faith-a-biblical-theology-of-covenant-and-law-essential-studies-in-biblical-theology-9780830855377" class="card-img d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_100x.jpg?v=1613586527" alt="The Path of Faith: A Biblical Theology of Covenant and Law (Essential Studies in Biblical Theology)" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_100x.jpg?v=1613586527" srcset="
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_100x.jpg?v=1613586527 100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_480x.jpg?v=1613586527 480w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_765x.jpg?v=1613586527 765w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_900x.jpg?v=1613586527 900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_1000x.jpg?v=1613586527 1000w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_1100x.jpg?v=1613586527 1100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_1300x.jpg?v=1613586527 1300w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_1500x.jpg?v=1613586527 1500w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_1700x.jpg?v=1613586527 1700w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_1900x.jpg?v=1613586527 1900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/862431de8c0dd29e444375342a8d244c_2000x.jpg?v=1613586527 2000w"> </a> 
+         </div> 
+         <div class="col-8 font-size-sm"> <a href="/collections/new-releases/products/the-path-of-faith-a-biblical-theology-of-covenant-and-law-essential-studies-in-biblical-theology-9780830855377" class="card-title d-block text-darker mb-1 font-weight-medium product-title" tabindex="0">The Path of Faith: A Biblical Theology of Covenant and Law (Essential Studies in Biblical Theology)</a> 
+          <p class="text-light-gray m-0 font-weight-normal">Crowe, Brandon D</p> 
+          <p class="card-price mt-2 m-0 font-weight-medium"> $20.00 <span class="percent-off"> 9% OFF </span> </p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="product-new border-bottom pb-7 "> 
+        <div class="d-flex flex-wrap justify-content-start align-items-baseline pb-3"> 
+         <h3 class="mb-0 mr-1 mr-lg-3">Clearance Titles</h3> <a href="/collections/clearance-menu" class="text-secondary text-uppercase font-weight-normal font-size-sm">View All</a> 
+        </div> 
+        <div class="new-product-list row mb-3"> 
+         <div class="col-4"> <a href="/collections/clearance-menu/products/created-to-draw-near-9781433566387" class="card-img d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_100x.jpg?v=1579785782" alt="Created to Draw Near: Our Life as God's Royal Priests" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_100x.jpg?v=1579785782" srcset="
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_100x.jpg?v=1579785782 100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_480x.jpg?v=1579785782 480w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_765x.jpg?v=1579785782 765w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_900x.jpg?v=1579785782 900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_1000x.jpg?v=1579785782 1000w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_1100x.jpg?v=1579785782 1100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_1300x.jpg?v=1579785782 1300w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_1500x.jpg?v=1579785782 1500w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_1700x.jpg?v=1579785782 1700w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_1900x.jpg?v=1579785782 1900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/40f0ca1ef253cb717a36c83922c6aa56_2000x.jpg?v=1579785782 2000w"> </a> 
+         </div> 
+         <div class="col-8 font-size-sm"> <a href="/collections/clearance-menu/products/created-to-draw-near-9781433566387" class="card-title d-block text-darker mb-1 font-weight-medium product-title" tabindex="0">Created to Draw Near: Our Life as God's Royal Priests</a> 
+          <p class="text-light-gray m-0 font-weight-normal">Welch, Edward T</p> 
+          <p class="card-price mt-2 m-0 font-weight-medium"> $9.00 <span class="percent-off"> 50% OFF </span> </p> 
+         </div> 
+        </div> 
+        <div class="new-product-list row mb-3"> 
+         <div class="col-4"> <a href="/collections/clearance-menu/products/the-story-retold-a-biblical-theological-introduction-to-the-new-testament-9780830852666" class="card-img d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_100x.jpg?v=1582046093" alt="The Story Retold: A Biblical-Theological Introduction to the New Testament" class="lazyload d-block shadow-small " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_100x.jpg?v=1582046093" srcset="
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_100x.jpg?v=1582046093 100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_480x.jpg?v=1582046093 480w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_765x.jpg?v=1582046093 765w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_900x.jpg?v=1582046093 900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_1000x.jpg?v=1582046093 1000w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_1100x.jpg?v=1582046093 1100w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_1300x.jpg?v=1582046093 1300w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_1500x.jpg?v=1582046093 1500w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_1700x.jpg?v=1582046093 1700w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_1900x.jpg?v=1582046093 1900w,
+																	//cdn.shopify.com/s/files/1/0021/5210/3983/products/007c207673646975d3e9a03afcafc919_2000x.jpg?v=1582046093 2000w"> </a> 
+         </div> 
+         <div class="col-8 font-size-sm"> <a href="/collections/clearance-menu/products/the-story-retold-a-biblical-theological-introduction-to-the-new-testament-9780830852666" class="card-title d-block text-darker mb-1 font-weight-medium product-title" tabindex="0">The Story Retold: A Biblical-Theological Introduction to the New Testament</a> 
+          <p class="text-light-gray m-0 font-weight-normal">Beale, G K; Gladd, Benjamin L</p> 
+          <p class="card-price mt-2 m-0 font-weight-medium"> $27.50 <span class="percent-off"> 50% OFF </span> </p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>
+  <div id="shopify-section-1531139749897" class="shopify-section"> 
+   <div id="featured_authors" class="bg-primary" style="background-color:#761813 !important;"> 
+    <div class="container"> 
+     <div class="d-flex justify-content-start align-items-baseline pb-xl-8 pb-lg-6 pb-4"> 
+      <h3 class="mb-0 mr-3  text-white">Featured Authors</h3> <a href="/pages/authors" class="text-white text-uppercase font-weight-normal font-size-sm">View All</a> 
+     </div> 
+     <div class="authors-list"> 
+      <div class="row"> 
+       <div class="col-12"> 
+        <div class="row"> 
+         <div class="col-4"> <a href="/collections/poythress-vern-s" class="d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/Poythress_medium.png?v=1555443044"> </a> 
+         </div> 
+         <div class="col-8 text-white"> 
+          <h3 class="mt-0 text-base"><a href="/collections/poythress-vern-s" class="d-block text-white text-base">Vern S. Poythress</a></h3> 
+          <div class="m-0">
+           <p>Vern S. Poythress&nbsp;
+            <meta charset="utf-8"><span data-mce-fragment="1">(PhD, Harvard; DTh, Stellenbosch)</span> is Di...</p>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-12"> 
+        <div class="row"> 
+         <div class="col-4"> <a href="/collections/w3-authors-welch-edward-t" class="d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/author_welch_medium.png?v=1555424368"> </a> 
+         </div> 
+         <div class="col-8 text-white"> 
+          <h3 class="mt-0 text-base"><a href="/collections/w3-authors-welch-edward-t" class="d-block text-white text-base">Edward T. Welch</a></h3> 
+          <div class="m-0">
+           Edward T. Welch is a counselor and faculty member at CCEF. He has a PhD from the University of Utah and an MDiv from ...
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-12"> 
+        <div class="row"> 
+         <div class="col-4"> <a href="/collections/julie-lowe" class="d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/author_lowe_medium.png?v=1570121479"> </a> 
+         </div> 
+         <div class="col-8 text-white"> 
+          <h3 class="mt-0 text-base"><a href="/collections/julie-lowe" class="d-block text-white text-base">Julie Lowe</a></h3> 
+          <div class="m-0">
+           <meta charset="utf-8"><span>Julie Lowe is a faculty member at CCEF. She holds an MA in counseling from Biblical Theol...</span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-12"> 
+        <div class="row"> 
+         <div class="col-4"> <a href="/collections/w3-authors-miller-paul-e" class="d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/Miller_medium.png?v=1555616039"> </a> 
+         </div> 
+         <div class="col-8 text-white"> 
+          <h3 class="mt-0 text-base"><a href="/collections/w3-authors-miller-paul-e" class="d-block text-white text-base">Paul E. Miller</a></h3> 
+          <div class="m-0">
+           <meta charset="utf-8"><span>Paul E. Miller (MDiv, Biblical Seminary) is executive director of seeJesus, a global disc...</span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-12"> 
+        <div class="row"> 
+         <div class="col-4"> <a href="/collections/mark-vroegop" class="d-block"> <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/collections/author_vroegop_medium.png?v=1593629285"> </a> 
+         </div> 
+         <div class="col-8 text-white"> 
+          <h3 class="mt-0 text-base"><a href="/collections/mark-vroegop" class="d-block text-white text-base">Mark Vroegop</a></h3> 
+          <div class="m-0">
+           <meta charset="utf-8"><strong>Mark Vroegop</strong><span>&nbsp;is the lead pastor of College Park Church in Indianapolis a...</span>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>
+  <div id="shopify-section-1531140627658" class="shopify-section"> 
+   <div id="promo_banner" class="position-relative bg-black"> 
+    <div class="overlay-banner absolute-center" style="background-color: #000000!important; opacity: 0.5!important;"></div> 
+    <img src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_100x.progressive.jpg?v=1530513253" alt="We believe books play a profound role in the life &amp; health of the church." class="lazyload object-fit " sizes="100vw" data-src="//cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_100x.progressive.jpg?v=1530513253" srcset="
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_100x.progressive.jpg?v=1530513253 100w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_480x.progressive.jpg?v=1530513253 480w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_765x.progressive.jpg?v=1530513253 765w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_900x.progressive.jpg?v=1530513253 900w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_1000x.progressive.jpg?v=1530513253 1000w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_1100x.progressive.jpg?v=1530513253 1100w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_1300x.progressive.jpg?v=1530513253 1300w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_1500x.progressive.jpg?v=1530513253 1500w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_1700x.progressive.jpg?v=1530513253 1700w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_1900x.progressive.jpg?v=1530513253 1900w,
+              //cdn.shopify.com/s/files/1/0021/5210/3983/files/promo-banner_2000x.progressive.jpg?v=1530513253 2000w"> 
+    <div class="absolute-center text-center text-white py-2"> 
+     <div class="container"> 
+      <div class=" mx-auto col-xl-11 col-lg-12"> 
+       <h2 class="font-italic mb-3 display-4">We believe books play a profound role in the life &amp; health of the church.</h2> 
+       <div class="font-size-lg learn_book">
+        <p>Our mission is to serve the church through curating and distributing high quality, biblically-faithful books and resources.</p>
+       </div> <a href="/pages/about-us" class="btn btn-white btn-outline-light mt-4 mt-lg-6">LEARN ABOUT WTSBOOKS</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="shopify-section-index-recently-viewed-products" class="shopify-section section-recently-viewed-products"> 
+  <section id="recently_viewed" v-if="recentlyViewed.length > 0" data-section-id="index-recently-viewed-products" class="pt-7 pb-7 section-recently-viewed-products " style="background-color: #f9f9f5; color: "> 
+   <div class="container"> 
+    <div class="row "> 
+     <div class="col"> 
+      <div class="pb-3"> 
+       <h3 class="mb-0 mr-3">Recently Viewed</h3> 
+      </div> 
+      <div v-if="recentlyViewed.length > 0" class="row recently-slider"> 
+       <div v-for="product in recentlyViewed.slice(0, 6)" v-if="product.featured_image &amp;&amp; product.product_handle != 'donation'" class="col-12 col-sm-12"> 
+        <div class="card-product border-0 text-left"> 
+         <div class="card-img text-center" :class="{'bg-gray-300': !product.featured_image}"> <a v-if="product.featured_image" class="card-img bottom-img d-block" :href="_getvariantUrl(product.product_handle, product.id)"> <img :src="_getSizedImageUrl(product.featured_image, '400x')" :data-flickity-lazyload-src="_getSizedImageUrl(product.featured_image, 'pico')" :data-flickity-lazyload-srcset="_getSizedImageUrl(product.featured_image, '600x')" :alt="product.name" class="d-block"> </a> <span v-else> 
+           <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 525.5 525.5">
+            <path d="M375.5 345.2c0-.1 0-.1 0 0 0-.1 0-.1 0 0-1.1-2.9-2.3-5.5-3.4-7.8-1.4-4.7-2.4-13.8-.5-19.8 3.4-10.6 3.6-40.6 1.2-54.5-2.3-14-12.3-29.8-18.5-36.9-5.3-6.2-12.8-14.9-15.4-17.9 8.6-5.6 13.3-13.3 14-23 0-.3 0-.6.1-.8.4-4.1-.6-9.9-3.9-13.5-2.1-2.3-4.8-3.5-8-3.5h-54.9c-.8-7.1-3-13-5.2-17.5-6.8-13.9-12.5-16.5-21.2-16.5h-.7c-8.7 0-14.4 2.5-21.2 16.5-2.2 4.5-4.4 10.4-5.2 17.5h-48.5c-3.2 0-5.9 1.2-8 3.5-3.2 3.6-4.3 9.3-3.9 13.5 0 .2 0 .5.1.8.7 9.8 5.4 17.4 14 23-2.6 3.1-10.1 11.7-15.4 17.9-6.1 7.2-16.1 22.9-18.5 36.9-2.2 13.3-1.2 47.4 1 54.9 1.1 3.8 1.4 14.5-.2 19.4-1.2 2.4-2.3 5-3.4 7.9-4.4 11.6-6.2 26.3-5 32.6 1.8 9.9 16.5 14.4 29.4 14.4h176.8c12.9 0 27.6-4.5 29.4-14.4 1.2-6.5-.5-21.1-5-32.7zm-97.7-178c.3-3.2.8-10.6-.2-18 2.4 4.3 5 10.5 5.9 18h-5.7zm-36.3-17.9c-1 7.4-.5 14.8-.2 18h-5.7c.9-7.5 3.5-13.7 5.9-18zm4.5-6.9c0-.1.1-.2.1-.4 4.4-5.3 8.4-5.8 13.1-5.8h.7c4.7 0 8.7.6 13.1 5.8 0 .1 0 .2.1.4 3.2 8.9 2.2 21.2 1.8 25h-30.7c-.4-3.8-1.3-16.1 1.8-25zm-70.7 42.5c0-.3 0-.6-.1-.9-.3-3.4.5-8.4 3.1-11.3 1-1.1 2.1-1.7 3.4-2.1l-.6.6c-2.8 3.1-3.7 8.1-3.3 11.6 0 .2 0 .5.1.8.3 3.5.9 11.7 10.6 18.8.3.2.8.2 1-.2.2-.3.2-.8-.2-1-9.2-6.7-9.8-14.4-10-17.7 0-.3 0-.6-.1-.8-.3-3.2.5-7.7 3-10.5.8-.8 1.7-1.5 2.6-1.9h155.7c1 .4 1.9 1.1 2.6 1.9 2.5 2.8 3.3 7.3 3 10.5 0 .2 0 .5-.1.8-.3 3.6-1 13.1-13.8 20.1-.3.2-.5.6-.3 1 .1.2.4.4.6.4.1 0 .2 0 .3-.1 13.5-7.5 14.3-17.5 14.6-21.3 0-.3 0-.5.1-.8.4-3.5-.5-8.5-3.3-11.6l-.6-.6c1.3.4 2.5 1.1 3.4 2.1 2.6 2.9 3.5 7.9 3.1 11.3 0 .3 0 .6-.1.9-1.5 20.9-23.6 31.4-65.5 31.4h-43.8c-41.8 0-63.9-10.5-65.4-31.4zm91 89.1h-7c0-1.5 0-3-.1-4.2-.2-12.5-2.2-31.1-2.7-35.1h3.6c.8 0 1.4-.6 1.4-1.4v-14.1h2.4v14.1c0 .8.6 1.4 1.4 1.4h3.7c-.4 3.9-2.4 22.6-2.7 35.1v4.2zm65.3 11.9h-16.8c-.4 0-.7.3-.7.7 0 .4.3.7.7.7h16.8v2.8h-62.2c0-.9-.1-1.9-.1-2.8h33.9c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-33.9c-.1-3.2-.1-6.3-.1-9h62.5v9zm-12.5 24.4h-6.3l.2-1.6h5.9l.2 1.6zm-5.8-4.5l1.6-12.3h2l1.6 12.3h-5.2zm-57-19.9h-62.4v-9h62.5c0 2.7 0 5.8-.1 9zm-62.4 1.4h62.4c0 .9-.1 1.8-.1 2.8H194v-2.8zm65.2 0h7.3c0 .9.1 1.8.1 2.8H259c.1-.9.1-1.8.1-2.8zm7.2-1.4h-7.2c.1-3.2.1-6.3.1-9h7c0 2.7 0 5.8.1 9zm-7.7-66.7v6.8h-9v-6.8h9zm-8.9 8.3h9v.7h-9v-.7zm0 2.1h9v2.3h-9v-2.3zm26-1.4h-9v-.7h9v.7zm-9 3.7v-2.3h9v2.3h-9zm9-5.9h-9v-6.8h9v6.8zm-119.3 91.1c-2.1-7.1-3-40.9-.9-53.6 2.2-13.5 11.9-28.6 17.8-35.6 5.6-6.5 13.5-15.7 15.7-18.3 11.4 6.4 28.7 9.6 51.8 9.6h6v14.1c0 .8.6 1.4 1.4 1.4h5.4c.3 3.1 2.4 22.4 2.7 35.1 0 1.2.1 2.6.1 4.2h-63.9c-.8 0-1.4.6-1.4 1.4v16.1c0 .8.6 1.4 1.4 1.4H256c-.8 11.8-2.8 24.7-8 33.3-2.6 4.4-4.9 8.5-6.9 12.2-.4.7-.1 1.6.6 1.9.2.1.4.2.6.2.5 0 1-.3 1.3-.8 1.9-3.7 4.2-7.7 6.8-12.1 5.4-9.1 7.6-22.5 8.4-34.7h7.8c.7 11.2 2.6 23.5 7.1 32.4.2.5.8.8 1.3.8.2 0 .4 0 .6-.2.7-.4 1-1.2.6-1.9-4.3-8.5-6.1-20.3-6.8-31.1H312l-2.4 18.6c-.1.4.1.8.3 1.1.3.3.7.5 1.1.5h9.6c.4 0 .8-.2 1.1-.5.3-.3.4-.7.3-1.1l-2.4-18.6H333c.8 0 1.4-.6 1.4-1.4v-16.1c0-.8-.6-1.4-1.4-1.4h-63.9c0-1.5 0-2.9.1-4.2.2-12.7 2.3-32 2.7-35.1h5.2c.8 0 1.4-.6 1.4-1.4v-14.1h6.2c23.1 0 40.4-3.2 51.8-9.6 2.3 2.6 10.1 11.8 15.7 18.3 5.9 6.9 15.6 22.1 17.8 35.6 2.2 13.4 2 43.2-1.1 53.1-1.2 3.9-1.4 8.7-1 13-1.7-2.8-2.9-4.4-3-4.6-.2-.3-.6-.5-.9-.6h-.5c-.2 0-.4.1-.5.2-.6.5-.8 1.4-.3 2 0 0 .2.3.5.8 1.4 2.1 5.6 8.4 8.9 16.7h-42.9v-43.8c0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4v44.9c0 .1-.1.2-.1.3 0 .1 0 .2.1.3v9c-1.1 2-3.9 3.7-10.5 3.7h-7.5c-.4 0-.7.3-.7.7 0 .4.3.7.7.7h7.5c5 0 8.5-.9 10.5-2.8-.1 3.1-1.5 6.5-10.5 6.5H210.4c-9 0-10.5-3.4-10.5-6.5 2 1.9 5.5 2.8 10.5 2.8h67.4c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-67.4c-6.7 0-9.4-1.7-10.5-3.7v-54.5c0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4v43.8h-43.6c4.2-10.2 9.4-17.4 9.5-17.5.5-.6.3-1.5-.3-2s-1.5-.3-2 .3c-.1.2-1.4 2-3.2 5 .1-4.9-.4-10.2-1.1-12.8zm221.4 60.2c-1.5 8.3-14.9 12-26.6 12H174.4c-11.8 0-25.1-3.8-26.6-12-1-5.7.6-19.3 4.6-30.2H197v9.8c0 6.4 4.5 9.7 13.4 9.7h105.4c8.9 0 13.4-3.3 13.4-9.7v-9.8h44c4 10.9 5.6 24.5 4.6 30.2z" /><path d="M286.1 359.3c0 .4.3.7.7.7h14.7c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-14.7c-.3 0-.7.3-.7.7zm5.3-145.6c13.5-.5 24.7-2.3 33.5-5.3.4-.1.6-.5.4-.9-.1-.4-.5-.6-.9-.4-8.6 3-19.7 4.7-33 5.2-.4 0-.7.3-.7.7 0 .4.3.7.7.7zm-11.3.1c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7H242c-19.9 0-35.3-2.5-45.9-7.4-.4-.2-.8 0-.9.3-.2.4 0 .8.3.9 10.8 5 26.4 7.5 46.5 7.5h38.1zm-7.2 116.9c.4.1.9.1 1.4.1 1.7 0 3.4-.7 4.7-1.9 1.4-1.4 1.9-3.2 1.5-5-.2-.8-.9-1.2-1.7-1.1-.8.2-1.2.9-1.1 1.7.3 1.2-.4 2-.7 2.4-.9.9-2.2 1.3-3.4 1-.8-.2-1.5.3-1.7 1.1s.2 1.5 1 1.7z" /><path d="M275.5 331.6c-.8 0-1.4.6-1.5 1.4 0 .8.6 1.4 1.4 1.5h.3c3.6 0 7-2.8 7.7-6.3.2-.8-.4-1.5-1.1-1.7-.8-.2-1.5.4-1.7 1.1-.4 2.3-2.8 4.2-5.1 4zm5.4 1.6c-.6.5-.6 1.4-.1 2 1.1 1.3 2.5 2.2 4.2 2.8.2.1.3.1.5.1.6 0 1.1-.3 1.3-.9.3-.7-.1-1.6-.8-1.8-1.2-.5-2.2-1.2-3-2.1-.6-.6-1.5-.6-2.1-.1zm-38.2 12.7c.5 0 .9 0 1.4-.1.8-.2 1.3-.9 1.1-1.7-.2-.8-.9-1.3-1.7-1.1-1.2.3-2.5-.1-3.4-1-.4-.4-1-1.2-.8-2.4.2-.8-.3-1.5-1.1-1.7-.8-.2-1.5.3-1.7 1.1-.4 1.8.1 3.7 1.5 5 1.2 1.2 2.9 1.9 4.7 1.9z" /><path d="M241.2 349.6h.3c.8 0 1.4-.7 1.4-1.5s-.7-1.4-1.5-1.4c-2.3.1-4.6-1.7-5.1-4-.2-.8-.9-1.3-1.7-1.1-.8.2-1.3.9-1.1 1.7.7 3.5 4.1 6.3 7.7 6.3zm-9.7 3.6c.2 0 .3 0 .5-.1 1.6-.6 3-1.6 4.2-2.8.5-.6.5-1.5-.1-2s-1.5-.5-2 .1c-.8.9-1.8 1.6-3 2.1-.7.3-1.1 1.1-.8 1.8 0 .6.6.9 1.2.9z" />
+           </svg> </span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </section> 
+ </div> 
+ <div id="shopify-section-newsletter" class="shopify-section newsletter-section">
+  <div id="newsletter" class="newsletter_section position-relative bg-black py-11 
+            newsletter-both-names--false 
+            newsletter-bgr-true
+            text-align--center
+            " style="background-image: url(//cdn.shopify.com/s/files/1/0021/5210/3983/files/newsletter-banner_1600x.jpg?v=1530763780)"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="m-auto col-lg-8 col-sm-12 text-white text-center"> 
+      <h3 class="font-italic mb-2">Sign up for our newsletter for exclusive deals on new releases &amp; classics.</h3> 
+      <div class="text-uppercase font-size-sm mb-4 font-weight-normal">
+       <p><a href="/blogs/2019-enews" title="2019 eNews">See previous deals</a></p>
+      </div> 
+      <div class="my-2 m-auto col-lg-9 col-md-9 col-sm-10 p-0"> 
+       <form id="email_signup" class="contact-form klaviyo_condensed_embed_PsLc3u" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate> 
+        <input type="hidden" name="g" value="PsLc3u"> 
+        <div class="klaviyo_field_group input-group"> 
+         <input class="contact_email form-control border-white" type="email" value="" name="email" id="k_id_email" placeholder="Enter Your Email Address"> 
+         <div class="klaviyo_form_actions input-group-prepend"> <button type="submit" class="klaviyo_submit_button action_button sign_up btn btn-secondary pl-4 pr-4 search-icon">Submit</button> 
+         </div> 
+        </div> 
+        <div class="klaviyo_messages"> 
+         <div class="success_message" style="display:none;"></div> 
+         <div class="error_message" style="display:none;"></div> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="shopify-section-mobile-navigation" class="shopify-section"> 
+  <div data-section-id="mobile-navigation" class="mobile-nav-drawer d-flex flex-column" :class="{'opened': isMobileNavDrawerOpen}" v-touch:swipe.left="_toggleMobileNavDrawer"> 
+   <div class="drawer-header d-flex justify-content-between align-items-center px-4 py-3"> <a href="/" class="navbar-brand" title="Westminster Bookstore"> </a> <a href="#" class="btn-close ml-auto float-right" @click.prevent="_toggleMobileNavDrawer" rel="nofollow" aria-label="Close"><i class="icon ion-md-close"></i></a> 
+   </div> 
+   <div class="drawer-body py-3" data-touch-moveable> 
+    <nav class="navbar-mobile"> 
+     <ul class="navbar-nav"> 
+      <li class="nav-item "> <a class="nav-link submenu-toggle d-flex align-items-center justify-content-between bibles" href="#" role="button" data-toggle="collapse" data-target="#submenu-bibles" aria-expanded="false"> <span>Bibles</span> <i class="icon-toggle"></i> </a> 
+       <div class="submenu collapse" id="submenu-bibles"> <a class="nav-link  church-outreach" href="/collections/bible-church-outreach">Church &amp; Outreach</a> <a class="nav-link  journaling" href="/collections/bible-journaling">Journaling</a> <a class="nav-link  study" href="/collections/bible-study-bible">Study</a> <a class="nav-link  premium" href="/collections/bible-premium">Premium</a> <a class="nav-link  readers" href="/collections/bible-readers">Reader's</a> <a class="nav-link  reference" href="/collections/bible-reference">Reference</a> <a class="nav-link  text" href="/collections/bible-text">Text</a> <a class="nav-link  children-youth" href="/collections/bible-children-youth">Children &amp; Youth</a> <a class="nav-link  scripture-journals" href="/collections/bible-scripture-journal">Scripture Journals</a> <a class="nav-link  devotional" href="/collections/bible-devotional">Devotional</a> <a class="nav-link  language" href="/collections/bible-language">Language</a> <a class="nav-link  other" href="/collections/other">Other</a> <a class="nav-link  last-chance-bibles" href="/collections/last-chance-bibles">Last Chance Bibles</a> 
+       </div> </li> 
+      <li class="nav-item "> <a class="nav-link submenu-toggle d-flex align-items-center justify-content-between children" href="#" role="button" data-toggle="collapse" data-target="#submenu-children" aria-expanded="false"> <span>Children</span> <i class="icon-toggle"></i> </a> 
+       <div class="submenu collapse" id="submenu-children"> <a class="nav-link  genre" href="/collections/w3-childrengenre">Genre</a> <a class="nav-link  by-age" href="/collections/w3-childrenage">By Age</a> <a class="nav-link  catechisms" href="/collections/w3-childrencatechisms">Catechisms</a> <a class="nav-link  curriculum" href="/collections/w3-childrencurriculum">Curriculum</a> 
+       </div> </li> 
+      <li class="nav-item "> <a class="nav-link submenu-toggle d-flex align-items-center justify-content-between christian-life" href="#" role="button" data-toggle="collapse" data-target="#submenu-christian-life" aria-expanded="false"> <span>Christian Life</span> <i class="icon-toggle"></i> </a> 
+       <div class="submenu collapse" id="submenu-christian-life"> <a class="nav-link  tools-and-guides" href="/collections/tools-guides">Tools and Guides</a> <a class="nav-link  classics" href="/collections/classics">Classics</a> <a class="nav-link  biographies" href="/collections/biographies">Biographies</a> <a class="nav-link  for-men" href="/collections/men">For Men</a> <a class="nav-link  for-women" href="/collections/women">For Women</a> <a class="nav-link  teens-and-young-adults" href="/collections/teens-and-young-adults">Teens and Young Adults</a> <a class="nav-link  doctrine-for-life" href="/collections/doctrine-for-life">Doctrine for Life</a> <a class="nav-link  spiritual-disciplines" href="/collections/spiritual-disciplines">Spiritual Disciplines</a> <a class="nav-link  counseling" href="/collections/counseling">Counseling</a> 
+       </div> </li> 
+      <li class="nav-item "> <a class="nav-link submenu-toggle d-flex align-items-center justify-content-between ministry" href="#" role="button" data-toggle="collapse" data-target="#submenu-ministry" aria-expanded="false"> <span>Ministry</span> <i class="icon-toggle"></i> </a> 
+       <div class="submenu collapse" id="submenu-ministry"> <a class="nav-link  small-groups-curriculum" href="/collections/w3-small-groups-curriculum">Small Groups Curriculum</a> <a class="nav-link  leadership" href="/collections/leadership"> Leadership</a> <a class="nav-link  church-ministries" href="/collections/w3-church-ministries">Church Ministries</a> 
+       </div> </li> 
+      <li class="nav-item "> <a class="nav-link submenu-toggle d-flex align-items-center justify-content-between commentaries" href="#" role="button" data-toggle="collapse" data-target="#submenu-commentaries" aria-expanded="false"> <span>Commentaries</span> <i class="icon-toggle"></i> </a> 
+       <div class="submenu collapse" id="submenu-commentaries"> <a class="nav-link  ot-commentaries" href="/collections/w3-commentary-otcommentaries">OT Commentaries</a> <a class="nav-link  nt-commentaries" href="/collections/w3-commentary-nt-commentaries">NT Commentaries</a> <a class="nav-link  commentary-sets" href="/collections/commentary-full-sets">Commentary Sets</a> <a class="nav-link  1-66-collections" href="/pages/1-66-collections">1:66 Collections</a> 
+       </div> </li> 
+      <li class="nav-item "> <a class="nav-link submenu-toggle d-flex align-items-center justify-content-between academic" href="#" role="button" data-toggle="collapse" data-target="#submenu-academic" aria-expanded="false"> <span>Academic</span> <i class="icon-toggle"></i> </a> 
+       <div class="submenu collapse" id="submenu-academic"> <a class="nav-link  apologetics" href="/collections/apologetics">Apologetics</a> <a class="nav-link  biblical-theology" href="/collections/w3-academicbiblical-theology">Biblical Theology</a> <a class="nav-link  historical-theology" href="/collections/historical-theology">Historical Theology</a> <a class="nav-link  systematic-theology" href="/collections/systematic-theology-main">Systematic Theology</a> <a class="nav-link  original-languages" href="/collections/original-languages">Original Languages</a> <a class="nav-link  wts-textbooks" href="/collections/wts-textbooks">WTS Textbooks</a> 
+       </div> </li> 
+      <li class="nav-item "><a class="nav-link" href="/pages/current-specials?utm_source=nav-bar&amp;utm_medium=on-sale-button">On Sale</a></li> 
+     </ul> 
+    </nav> 
+    <nav class="navbar-mobile navbar-mobile-secondary"> 
+     <ul class="navbar-nav"> 
+      <li class="nav-item "><a class="nav-link" href="/search">Search</a></li> 
+     </ul> 
+    </nav> 
+   </div> 
+   <div class="drawer-footer text-center mt-auto px-4 py-3"> 
+    <h6 class="small mb-3"></h6> 
+    <ul class="list-unstyled list-inline social-icons"> 
+     <li class="list-inline-item"> <a href="" title="Facebook"><i class="ion-social-facebook"></i></a> </li> 
+     <li class="list-inline-item"> <a href="" title="Twitter"><i class="ion-social-twitter"></i></a> </li> 
+     <li class="list-inline-item"> <a href="" title="Google+"><i class="ion-social-googleplus"></i></a> </li> 
+     <li class="list-inline-item"> <a href="" title="Instagram"><i class="ion-social-instagram"></i></a> </li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="shopify-section-search-layer" class="shopify-section"> 
+  <div data-search-layer data-search-type="reveal" data-section-id="search-layer"> 
+   <div class="search-reveal" :class="{'opened': isSearchLayerOpen}"> 
+    <div class="clearfix"> 
+     <form id="searchForm" action="/collections/search-result" method="get" role="search"> 
+      <input id="searchInput" class="form-control form-control-lg" name="q" type="search" placeholder="Search our store" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"> 
+     </form> <a href="#" class="btn btn-link btn-close mt-2" @click.prevent="_toggleSearch()" rel="nofollow" aria-label="Close"> <i class="icon ion-md-close"></i> </a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="shopify-section-newsletter-popup" class="shopify-section"> 
+  <div data-section-id="newsletter-popup" data-newsletter-popup data-newsletter-enabled="false" data-popup-delay="3" data-period-until="30" class="newsletter-popup d-block d-sm-flex align-items-stretch" :class="{'opened': isNewsletterPopupOpen}" style="background:  url(//cdn.shopify.com/s/files/1/0021/5210/3983/files/Screen_Shot_2020-02-23_at_8.06.58_PM_1024x.png?v=1582506580); color: #222222;"> 
+   <div class="inner text-center has-image-bg w-100" style="background-color: rgba(0,0,0,0);"> <button data-newsletter-close-btn class="btn btn-link btn-close" @click="_toggleNewsletterPopup()"> <i class="icon ion-md-close"></i> </button> 
+    <h2><span>Read Slow</span></h2> 
+    <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form">
+     <input type="hidden" name="form_type" value="customer">
+     <input type="hidden" name="utf8" value="✓"> 
+     <div class="newsletter-content">
+      <p>We’ve collected 15 of our favorite chapters that help us slow down and understand ourselves and our God in the midst of scary and uncertain times.&nbsp;<a href="https://www.wtsbooks.com/collections/read-slow" title="https://www.wtsbooks.com/collections/read-slow">These readings are available to download for free.&nbsp;</a>We pray they will be a comfort to you</p>
+     </div> 
+     <div class="small-custom mt-3">
+      <p><a href="https://cdn.shopify.com/s/files/1/0021/5210/3983/files/Read_Slow_Collection.pdf?v=1584372212" title="https://cdn.shopify.com/s/files/1/0021/5210/3983/files/Read_Slow_Collection.pdf?v=1584372212"><em><strong>Click Here to Download</strong></em></a></p>
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+ </div> 
+ <div class="cart-drawer d-flex flex-column bg-light" :class="{'opened': isCartDrawerOpen}" v-touch:swipe.right="_toggleCartDrawer"> 
+  <div class="drawer-header px-3 px-md-8 py-5 text-center"> <a href="#" class="btn-close" @click.prevent="_toggleCartDrawer" rel="nofollow" aria-label="Close" title="Close"><i class="icon ion-md-close text-gray-900"></i></a> 
+   <h6 class="h2 my-0">Shopping Cart</h6> 
+  </div> 
+  <div v-show="cart.item_count > 0" class="px-3 px-md-8"> 
+   <div class="py-3 mb-3 border-top border-bottom"> 
+    <div class="d-flex justify-content-between align-items-center"> <span class="text-uppercase font-weight-bold">Subtotal <span v-show="cart.item_count > 0" v-text="'(' + cart.item_count + ' Items)'"></span></span> <span class="text-uppercase font-weight-bold" v-text="_formatMoney(cart.total_price)"></span> 
+    </div> 
+    <p class="mt-2 mb-0 text-muted font-weight-normal">Shipping &amp; taxes calculated at checkout</p> 
+   </div> 
+   <div v-show="cartProgress" class="shipping-progress my-6 text-center" data-shipping-progress="9900"> 
+    <p class="font-weight-medium font-size-sm" v-text="cartProgressLabel"></p> <b-progress :value="cartProgress" show-progress class="progress bg-white shadow-none border p-1"></b-progress> 
+    <p class="mt-2 mb-0 text-muted font-weight-normal">Shipping is discounted for orders over $49 and free for orders over $99 (Contiguous U.S. Only)</p> 
+   </div> 
+  </div> 
+  <div class="drawer-body px-3 px-md-8 py-3 bg-white" data-touch-moveable> 
+   <template v-if="cart.item_count > 0"> 
+    <p class="pb-2 px-3 mt-3 mb-0 h5 font-italic border-bottom">Added to Cart</p> 
+    <div v-for="(item, index, key) in cart.items" :key="item.id" class="cart-item py-3 border-bottom" data-cart-item :class="{'border-bottom-0': index === (cart.items.length - 1)}"> 
+     <div class="row"> 
+      <div class="col-3"> 
+       <div class="item-image"> <a :href="item.url"> <img v-if="item.image != null" :src="_getSizedImageUrl(item.image, 'large')" class="img-fluid" :alt="item.product_title"> <span v-else>
+          <svg class="img-fluid bg-gray-100" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 525.5 525.5">
+           <path d="M375.5 345.2c0-.1 0-.1 0 0 0-.1 0-.1 0 0-1.1-2.9-2.3-5.5-3.4-7.8-1.4-4.7-2.4-13.8-.5-19.8 3.4-10.6 3.6-40.6 1.2-54.5-2.3-14-12.3-29.8-18.5-36.9-5.3-6.2-12.8-14.9-15.4-17.9 8.6-5.6 13.3-13.3 14-23 0-.3 0-.6.1-.8.4-4.1-.6-9.9-3.9-13.5-2.1-2.3-4.8-3.5-8-3.5h-54.9c-.8-7.1-3-13-5.2-17.5-6.8-13.9-12.5-16.5-21.2-16.5h-.7c-8.7 0-14.4 2.5-21.2 16.5-2.2 4.5-4.4 10.4-5.2 17.5h-48.5c-3.2 0-5.9 1.2-8 3.5-3.2 3.6-4.3 9.3-3.9 13.5 0 .2 0 .5.1.8.7 9.8 5.4 17.4 14 23-2.6 3.1-10.1 11.7-15.4 17.9-6.1 7.2-16.1 22.9-18.5 36.9-2.2 13.3-1.2 47.4 1 54.9 1.1 3.8 1.4 14.5-.2 19.4-1.2 2.4-2.3 5-3.4 7.9-4.4 11.6-6.2 26.3-5 32.6 1.8 9.9 16.5 14.4 29.4 14.4h176.8c12.9 0 27.6-4.5 29.4-14.4 1.2-6.5-.5-21.1-5-32.7zm-97.7-178c.3-3.2.8-10.6-.2-18 2.4 4.3 5 10.5 5.9 18h-5.7zm-36.3-17.9c-1 7.4-.5 14.8-.2 18h-5.7c.9-7.5 3.5-13.7 5.9-18zm4.5-6.9c0-.1.1-.2.1-.4 4.4-5.3 8.4-5.8 13.1-5.8h.7c4.7 0 8.7.6 13.1 5.8 0 .1 0 .2.1.4 3.2 8.9 2.2 21.2 1.8 25h-30.7c-.4-3.8-1.3-16.1 1.8-25zm-70.7 42.5c0-.3 0-.6-.1-.9-.3-3.4.5-8.4 3.1-11.3 1-1.1 2.1-1.7 3.4-2.1l-.6.6c-2.8 3.1-3.7 8.1-3.3 11.6 0 .2 0 .5.1.8.3 3.5.9 11.7 10.6 18.8.3.2.8.2 1-.2.2-.3.2-.8-.2-1-9.2-6.7-9.8-14.4-10-17.7 0-.3 0-.6-.1-.8-.3-3.2.5-7.7 3-10.5.8-.8 1.7-1.5 2.6-1.9h155.7c1 .4 1.9 1.1 2.6 1.9 2.5 2.8 3.3 7.3 3 10.5 0 .2 0 .5-.1.8-.3 3.6-1 13.1-13.8 20.1-.3.2-.5.6-.3 1 .1.2.4.4.6.4.1 0 .2 0 .3-.1 13.5-7.5 14.3-17.5 14.6-21.3 0-.3 0-.5.1-.8.4-3.5-.5-8.5-3.3-11.6l-.6-.6c1.3.4 2.5 1.1 3.4 2.1 2.6 2.9 3.5 7.9 3.1 11.3 0 .3 0 .6-.1.9-1.5 20.9-23.6 31.4-65.5 31.4h-43.8c-41.8 0-63.9-10.5-65.4-31.4zm91 89.1h-7c0-1.5 0-3-.1-4.2-.2-12.5-2.2-31.1-2.7-35.1h3.6c.8 0 1.4-.6 1.4-1.4v-14.1h2.4v14.1c0 .8.6 1.4 1.4 1.4h3.7c-.4 3.9-2.4 22.6-2.7 35.1v4.2zm65.3 11.9h-16.8c-.4 0-.7.3-.7.7 0 .4.3.7.7.7h16.8v2.8h-62.2c0-.9-.1-1.9-.1-2.8h33.9c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-33.9c-.1-3.2-.1-6.3-.1-9h62.5v9zm-12.5 24.4h-6.3l.2-1.6h5.9l.2 1.6zm-5.8-4.5l1.6-12.3h2l1.6 12.3h-5.2zm-57-19.9h-62.4v-9h62.5c0 2.7 0 5.8-.1 9zm-62.4 1.4h62.4c0 .9-.1 1.8-.1 2.8H194v-2.8zm65.2 0h7.3c0 .9.1 1.8.1 2.8H259c.1-.9.1-1.8.1-2.8zm7.2-1.4h-7.2c.1-3.2.1-6.3.1-9h7c0 2.7 0 5.8.1 9zm-7.7-66.7v6.8h-9v-6.8h9zm-8.9 8.3h9v.7h-9v-.7zm0 2.1h9v2.3h-9v-2.3zm26-1.4h-9v-.7h9v.7zm-9 3.7v-2.3h9v2.3h-9zm9-5.9h-9v-6.8h9v6.8zm-119.3 91.1c-2.1-7.1-3-40.9-.9-53.6 2.2-13.5 11.9-28.6 17.8-35.6 5.6-6.5 13.5-15.7 15.7-18.3 11.4 6.4 28.7 9.6 51.8 9.6h6v14.1c0 .8.6 1.4 1.4 1.4h5.4c.3 3.1 2.4 22.4 2.7 35.1 0 1.2.1 2.6.1 4.2h-63.9c-.8 0-1.4.6-1.4 1.4v16.1c0 .8.6 1.4 1.4 1.4H256c-.8 11.8-2.8 24.7-8 33.3-2.6 4.4-4.9 8.5-6.9 12.2-.4.7-.1 1.6.6 1.9.2.1.4.2.6.2.5 0 1-.3 1.3-.8 1.9-3.7 4.2-7.7 6.8-12.1 5.4-9.1 7.6-22.5 8.4-34.7h7.8c.7 11.2 2.6 23.5 7.1 32.4.2.5.8.8 1.3.8.2 0 .4 0 .6-.2.7-.4 1-1.2.6-1.9-4.3-8.5-6.1-20.3-6.8-31.1H312l-2.4 18.6c-.1.4.1.8.3 1.1.3.3.7.5 1.1.5h9.6c.4 0 .8-.2 1.1-.5.3-.3.4-.7.3-1.1l-2.4-18.6H333c.8 0 1.4-.6 1.4-1.4v-16.1c0-.8-.6-1.4-1.4-1.4h-63.9c0-1.5 0-2.9.1-4.2.2-12.7 2.3-32 2.7-35.1h5.2c.8 0 1.4-.6 1.4-1.4v-14.1h6.2c23.1 0 40.4-3.2 51.8-9.6 2.3 2.6 10.1 11.8 15.7 18.3 5.9 6.9 15.6 22.1 17.8 35.6 2.2 13.4 2 43.2-1.1 53.1-1.2 3.9-1.4 8.7-1 13-1.7-2.8-2.9-4.4-3-4.6-.2-.3-.6-.5-.9-.6h-.5c-.2 0-.4.1-.5.2-.6.5-.8 1.4-.3 2 0 0 .2.3.5.8 1.4 2.1 5.6 8.4 8.9 16.7h-42.9v-43.8c0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4v44.9c0 .1-.1.2-.1.3 0 .1 0 .2.1.3v9c-1.1 2-3.9 3.7-10.5 3.7h-7.5c-.4 0-.7.3-.7.7 0 .4.3.7.7.7h7.5c5 0 8.5-.9 10.5-2.8-.1 3.1-1.5 6.5-10.5 6.5H210.4c-9 0-10.5-3.4-10.5-6.5 2 1.9 5.5 2.8 10.5 2.8h67.4c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-67.4c-6.7 0-9.4-1.7-10.5-3.7v-54.5c0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4v43.8h-43.6c4.2-10.2 9.4-17.4 9.5-17.5.5-.6.3-1.5-.3-2s-1.5-.3-2 .3c-.1.2-1.4 2-3.2 5 .1-4.9-.4-10.2-1.1-12.8zm221.4 60.2c-1.5 8.3-14.9 12-26.6 12H174.4c-11.8 0-25.1-3.8-26.6-12-1-5.7.6-19.3 4.6-30.2H197v9.8c0 6.4 4.5 9.7 13.4 9.7h105.4c8.9 0 13.4-3.3 13.4-9.7v-9.8h44c4 10.9 5.6 24.5 4.6 30.2z" /><path d="M286.1 359.3c0 .4.3.7.7.7h14.7c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-14.7c-.3 0-.7.3-.7.7zm5.3-145.6c13.5-.5 24.7-2.3 33.5-5.3.4-.1.6-.5.4-.9-.1-.4-.5-.6-.9-.4-8.6 3-19.7 4.7-33 5.2-.4 0-.7.3-.7.7 0 .4.3.7.7.7zm-11.3.1c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7H242c-19.9 0-35.3-2.5-45.9-7.4-.4-.2-.8 0-.9.3-.2.4 0 .8.3.9 10.8 5 26.4 7.5 46.5 7.5h38.1zm-7.2 116.9c.4.1.9.1 1.4.1 1.7 0 3.4-.7 4.7-1.9 1.4-1.4 1.9-3.2 1.5-5-.2-.8-.9-1.2-1.7-1.1-.8.2-1.2.9-1.1 1.7.3 1.2-.4 2-.7 2.4-.9.9-2.2 1.3-3.4 1-.8-.2-1.5.3-1.7 1.1s.2 1.5 1 1.7z" /><path d="M275.5 331.6c-.8 0-1.4.6-1.5 1.4 0 .8.6 1.4 1.4 1.5h.3c3.6 0 7-2.8 7.7-6.3.2-.8-.4-1.5-1.1-1.7-.8-.2-1.5.4-1.7 1.1-.4 2.3-2.8 4.2-5.1 4zm5.4 1.6c-.6.5-.6 1.4-.1 2 1.1 1.3 2.5 2.2 4.2 2.8.2.1.3.1.5.1.6 0 1.1-.3 1.3-.9.3-.7-.1-1.6-.8-1.8-1.2-.5-2.2-1.2-3-2.1-.6-.6-1.5-.6-2.1-.1zm-38.2 12.7c.5 0 .9 0 1.4-.1.8-.2 1.3-.9 1.1-1.7-.2-.8-.9-1.3-1.7-1.1-1.2.3-2.5-.1-3.4-1-.4-.4-1-1.2-.8-2.4.2-.8-.3-1.5-1.1-1.7-.8-.2-1.5.3-1.7 1.1-.4 1.8.1 3.7 1.5 5 1.2 1.2 2.9 1.9 4.7 1.9z" /><path d="M241.2 349.6h.3c.8 0 1.4-.7 1.4-1.5s-.7-1.4-1.5-1.4c-2.3.1-4.6-1.7-5.1-4-.2-.8-.9-1.3-1.7-1.1-.8.2-1.3.9-1.1 1.7.7 3.5 4.1 6.3 7.7 6.3zm-9.7 3.6c.2 0 .3 0 .5-.1 1.6-.6 3-1.6 4.2-2.8.5-.6.5-1.5-.1-2s-1.5-.5-2 .1c-.8.9-1.8 1.6-3 2.1-.7.3-1.1 1.1-.8 1.8 0 .6.6.9 1.2.9z" />
+          </svg></span> </a> 
+       </div> 
+      </div> 
+      <div class="col-9"> 
+       <p class="item-title my-3 text-capitalize"> <a :href="item.url" v-text="item.product_title" :title="item.product_title"></a> </p> 
+       <div class="d-flex align-items-center justify-content-between"> <span class="item-price" v-text="_formatMoney(item.price) + ' ea'"></span> 
+        <div class="quantity-wrapper mx-2" data-qty-container> 
+         <div class="input-group"> <a href="#" class="btn btn-decrease" data-qty-decrease @click.prevent="_updateCart($event, index+1)" aria-label="Decrease" title="Decrease" rel="nofollow"><i class="ion ion-md-remove"></i></a> 
+          <input type="number" name="quantity" :value="item.quantity" step="1" min="1" pattern="[0-9]*" inputmode="numeric" data-qty-input class="quantity form-control" @change.prevent="_updateCart($event, index+1)"> <a href="#" class="btn btn-increase" data-qty-increase @click.prevent="_updateCart($event, index+1)" rel="nofollow" aria-label="Increase" title="Increase"><i class="ion ion-md-add"></i></a> 
+         </div> 
+        </div> <a href="#" @click.prevent="_removeFromCart($event, index+1)" class="btn-remove" rel="nofollow" aria-label="Remove" data-toggle="tooltip" data-trigger="hover" data-placement="left"> <span class="d-none d-md-inline-block">Remove</span> <i class="icon ion-md-remove-circle-outline d-md-none"></i> </a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </template> 
+   <div v-else class="text-center my-5"> 
+    <div class="icon">
+     <i class="icon ion-md-cart"></i>
+    </div> 
+    <p class="mb-3 text-muted">Your cart is currently empty.</p> <button class="btn btn-primary" @click.prevent="_toggleCartDrawer">Continue Browsing</button> 
+   </div> 
+  </div> 
+  <div v-if="cart.item_count > 0" class="drawer-footer px-3 px-md-8 py-3 text-center"> 
+   <div class="d-flex flex-wrap align-items-center justify-content-between"> <button type="button" class="btn btn-outline-primary" style="width: 48%" @click="_toggleCartDrawer">Continue Shopping</button> <a href="/cart" class="btn btn-secondary" style="width: 48%">View Cart</a> 
+   </div> 
+  </div> 
+ </div> 
+ <div data-quickshop class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"> 
+  <div class="modal-dialog modal-lg" role="document"> 
+   <div class="modal-content"> 
+    <div class="modal-header text-dark"> 
+     <h5 class="modal-title"><a :href="quickShop.product.url" v-text="quickShop.product.title"></a></h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="icon ion-md-close"></i></span> </button> 
+    </div> 
+    <div class="modal-body text-dark"> 
+     <div class="row"> 
+      <div class="col-lg-7"> 
+       <div class="product-images-wrapper text-center"> 
+        <template v-if="quickShop.product.featured_image"> 
+         <img v-if="quickShop.images.length == 1" :src="_getSizedImageUrl(quickShop.product.featured_image, 'large')" class="img-fluid" :alt="quickShop.product.title"> 
+         <div v-if="quickShop.product.images.length > 1" class="carousel carousel-main" data-flickity="{
+                           &quot;contain&quot;: true,
+                           &quot;wrapAround&quot;: false,
+                           &quot;freeScroll&quot;: false,
+                           &quot;accessibility&quot;: true,
+                           &quot;prevNextButtons&quot;: true,
+                           &quot;pageDots&quot;: true,
+                           &quot;dragThreshold&quot;: 20,
+                           &quot;arrowShape&quot;: {&quot;x0&quot;: 10, &quot;x1&quot;: 60, &quot;y1&quot;: 50, &quot;x2&quot;: 60, &quot;y2&quot;: 45, &quot;x3&quot;: 15}
+                         }"> 
+          <div v-for="image in quickShop.images" :data-variant-title="image.alt" class="carousel-cell bg-img" :style="'background-image: url(' + _getSizedImageUrl(image.src, 'large') +')'"> 
+          </div> 
+         </div> 
+        </template> 
+        <template v-else> 
+         <svg class="img-fluid bg-gray-100" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 525.5 525.5">
+          <path d="M324.5 212.7H203c-1.6 0-2.8 1.3-2.8 2.8V308c0 1.6 1.3 2.8 2.8 2.8h121.6c1.6 0 2.8-1.3 2.8-2.8v-92.5c0-1.6-1.3-2.8-2.9-2.8zm1.1 95.3c0 .6-.5 1.1-1.1 1.1H203c-.6 0-1.1-.5-1.1-1.1v-92.5c0-.6.5-1.1 1.1-1.1h121.6c.6 0 1.1.5 1.1 1.1V308z" /><path d="M210.4 299.5H240v.1s.1 0 .2-.1h75.2v-76.2h-105v76.2zm1.8-7.2l20-20c1.6-1.6 3.8-2.5 6.1-2.5s4.5.9 6.1 2.5l1.5 1.5 16.8 16.8c-12.9 3.3-20.7 6.3-22.8 7.2h-27.7v-5.5zm101.5-10.1c-20.1 1.7-36.7 4.8-49.1 7.9l-16.9-16.9 26.3-26.3c1.6-1.6 3.8-2.5 6.1-2.5s4.5.9 6.1 2.5l27.5 27.5v7.8zm-68.9 15.5c9.7-3.5 33.9-10.9 68.9-13.8v13.8h-68.9zm68.9-72.7v46.8l-26.2-26.2c-1.9-1.9-4.5-3-7.3-3s-5.4 1.1-7.3 3l-26.3 26.3-.9-.9c-1.9-1.9-4.5-3-7.3-3s-5.4 1.1-7.3 3l-18.8 18.8V225h101.4z" /><path d="M232.8 254c4.6 0 8.3-3.7 8.3-8.3s-3.7-8.3-8.3-8.3-8.3 3.7-8.3 8.3 3.7 8.3 8.3 8.3zm0-14.9c3.6 0 6.6 2.9 6.6 6.6s-2.9 6.6-6.6 6.6-6.6-2.9-6.6-6.6 3-6.6 6.6-6.6z" />
+         </svg> 
+        </template> 
+       </div> 
+      </div> 
+      <div class="col-lg-5"> 
+       <div class="product-details-wrapper mt-lg-0"> 
+        <p class="mt-3 mt-lg-0" v-text="quickShop.product.vendor"></p> 
+        <div class="price-wrapper"> <s v-if="quickShop.product.compare_at_price > quickShop.product.price" v-text="_formatMoney(quickShop.currentVariant.compare_at_price)" class="h6 my-0 text-gray-600"></s> <span v-text="_formatMoney(quickShop.currentVariant.price)" class="h5 my-0"></span> 
+        </div> 
+        <form action="/cart/add" method="post" enctype="multipart/form-data"> 
+         <div class="form-row mt-4"> 
+          <div v-for="(option, index) in quickShop.product.options" v-if="option.name != 'Title'" class="selector-wrapper col mb-2"> <label v-text="option.name"></label> 
+           <ul v-if="colorSwatchesEnabled &amp;&amp; option.name == 'Color'" class="list-unstyled list-inline my-0 py-0"> 
+            <li v-for="value in option.values" class="list-inline-item"> 
+             <div v-for="optionImage in quickShop.optionImages" v-if="optionImage.value == value" class="color-swatch"> <label data-toggle="tooltip" data-trigger="hover" :title="_unhandleize(value)" :style="'background-color:' + value + ';background-image: url(' + optionImage.src + ');'"> <input data-single-option-selector type="radio" name="color" :value="value" v-model="quickShop.product.variants[0].options[index]" :data-index="'option' + option.position" @change="_getVariant"> </label> 
+             </div> </li> 
+           </ul> 
+           <ul v-else-if="sizeSwatchesEnabled &amp;&amp; option.name == 'Size'" class="list-unstyled list-inline my-0 py-0"> 
+            <li v-for="value in option.values" class="list-inline-item"> 
+             <div class="size-swatch"> <label> <input data-single-option-selector type="radio" name="size" :value="value" v-model="quickShop.product.variants[0].options[index]" :data-index="'option' + option.position" @change="_getVariant"> </label> 
+             </div> </li> 
+           </ul> <select v-else data-single-option-selector class="form-control form-control-sm" :data-index="'option' + option.position" v-model="quickShop.product.variants[0].options[index]" @change="_getVariant"> <option v-for="value in option.values" :value="value" v-text="value"> </option> </select> 
+          </div> 
+          <div class="col-4 col-md-5 mb-2 quantity-column"> 
+           <div class="quantity-wrapper" data-qty-container> <label for="Quantity">Quantity:</label> 
+            <div class="input-group input-group-sm"> 
+             <div class="input-group-prepend"> <span class="input-group-text"> <a href="#" class="btn btn-decrease" data-qty-decrease @click.prevent="_updateQty($event)" rel="nofollow" aria-label="Decrease" title="Decrease"><i class="icon ion-md-remove"></i></a> </span> 
+             </div> 
+             <input type="number" name="quantity" value="1" step="1" min="1" pattern="[0-9]*" inputmode="numeric" data-qty-input class="quantity form-control"> 
+             <div class="input-group-append"> <span class="input-group-text"> <a href="#" class="btn btn-increase" data-qty-increase @click.prevent="_updateQty($event)" rel="nofollow" aria-label="Increase" title="Increase"><i class="icon ion-md-add"></i></a> </span> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-12 mb-3"> <button type="submit" name="add" class="btn btn-primary btn-block" :disabled="!quickShop.currentVariant.available" @click.prevent="_addToCart($event, quickShop.currentVariant.id)"> 
+            <template v-if="isLoading &amp;&amp; loadingEvent == 'cartAdding'"> <i class="icon ion-md-refresh spin"></i> Please Wait 
+            </template> 
+            <template v-else> <span v-if="quickShop.currentVariant.available"> Add to Cart </span> <span v-else> Sold Out </span> 
+            </template> </button> 
+          </div> 
+         </div> 
+        </form> 
+        <template v-if="quickShop.product.description"> 
+         <h6 class="mt-3">Description:</h6> 
+         <div class="rte" v-html="_truncate(quickShop.product.description, 40)"></div> <a :href="quickShop.product.url">Read more <i class="icon ion-md-arrow-forward"></i></a> 
+        </template> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div data-modal-wishlist class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"> 
+  <div class="modal-dialog modal-lg" role="document"> 
+   <div class="modal-content"> 
+    <div class="modal-header text-dark"> 
+     <h5 class="modal-title">Wishlist</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="icon ion-md-close"></i></span> </button> 
+    </div> 
+    <div class="modal-body text-dark"> 
+     <div v-if="wishlist.length > 0" class="row no-gutters"> 
+      <div v-for="product in wishlist" class="col-lg-6"> 
+       <div class="bg-gray-100 m-1"> 
+        <div class="row no-gutters"> 
+         <div class="col-3"> 
+          <div v-if="product.featured_image"> 
+           <img v-if="product.option1 == 'Default Title'" :src="_getSizedImageUrl(product.featured_image, '400x')" class="img-fluid" :alt="product.name"> 
+           <img v-else :src="_getSizedImageUrl(product.featured_image.src, '400x')" class="img-fluid" :alt="product.name"> 
+          </div> <span v-else> 
+           <svg class="img-fluid bg-gray-300" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 525.5 525.5">
+            <path d="M375.5 345.2c0-.1 0-.1 0 0 0-.1 0-.1 0 0-1.1-2.9-2.3-5.5-3.4-7.8-1.4-4.7-2.4-13.8-.5-19.8 3.4-10.6 3.6-40.6 1.2-54.5-2.3-14-12.3-29.8-18.5-36.9-5.3-6.2-12.8-14.9-15.4-17.9 8.6-5.6 13.3-13.3 14-23 0-.3 0-.6.1-.8.4-4.1-.6-9.9-3.9-13.5-2.1-2.3-4.8-3.5-8-3.5h-54.9c-.8-7.1-3-13-5.2-17.5-6.8-13.9-12.5-16.5-21.2-16.5h-.7c-8.7 0-14.4 2.5-21.2 16.5-2.2 4.5-4.4 10.4-5.2 17.5h-48.5c-3.2 0-5.9 1.2-8 3.5-3.2 3.6-4.3 9.3-3.9 13.5 0 .2 0 .5.1.8.7 9.8 5.4 17.4 14 23-2.6 3.1-10.1 11.7-15.4 17.9-6.1 7.2-16.1 22.9-18.5 36.9-2.2 13.3-1.2 47.4 1 54.9 1.1 3.8 1.4 14.5-.2 19.4-1.2 2.4-2.3 5-3.4 7.9-4.4 11.6-6.2 26.3-5 32.6 1.8 9.9 16.5 14.4 29.4 14.4h176.8c12.9 0 27.6-4.5 29.4-14.4 1.2-6.5-.5-21.1-5-32.7zm-97.7-178c.3-3.2.8-10.6-.2-18 2.4 4.3 5 10.5 5.9 18h-5.7zm-36.3-17.9c-1 7.4-.5 14.8-.2 18h-5.7c.9-7.5 3.5-13.7 5.9-18zm4.5-6.9c0-.1.1-.2.1-.4 4.4-5.3 8.4-5.8 13.1-5.8h.7c4.7 0 8.7.6 13.1 5.8 0 .1 0 .2.1.4 3.2 8.9 2.2 21.2 1.8 25h-30.7c-.4-3.8-1.3-16.1 1.8-25zm-70.7 42.5c0-.3 0-.6-.1-.9-.3-3.4.5-8.4 3.1-11.3 1-1.1 2.1-1.7 3.4-2.1l-.6.6c-2.8 3.1-3.7 8.1-3.3 11.6 0 .2 0 .5.1.8.3 3.5.9 11.7 10.6 18.8.3.2.8.2 1-.2.2-.3.2-.8-.2-1-9.2-6.7-9.8-14.4-10-17.7 0-.3 0-.6-.1-.8-.3-3.2.5-7.7 3-10.5.8-.8 1.7-1.5 2.6-1.9h155.7c1 .4 1.9 1.1 2.6 1.9 2.5 2.8 3.3 7.3 3 10.5 0 .2 0 .5-.1.8-.3 3.6-1 13.1-13.8 20.1-.3.2-.5.6-.3 1 .1.2.4.4.6.4.1 0 .2 0 .3-.1 13.5-7.5 14.3-17.5 14.6-21.3 0-.3 0-.5.1-.8.4-3.5-.5-8.5-3.3-11.6l-.6-.6c1.3.4 2.5 1.1 3.4 2.1 2.6 2.9 3.5 7.9 3.1 11.3 0 .3 0 .6-.1.9-1.5 20.9-23.6 31.4-65.5 31.4h-43.8c-41.8 0-63.9-10.5-65.4-31.4zm91 89.1h-7c0-1.5 0-3-.1-4.2-.2-12.5-2.2-31.1-2.7-35.1h3.6c.8 0 1.4-.6 1.4-1.4v-14.1h2.4v14.1c0 .8.6 1.4 1.4 1.4h3.7c-.4 3.9-2.4 22.6-2.7 35.1v4.2zm65.3 11.9h-16.8c-.4 0-.7.3-.7.7 0 .4.3.7.7.7h16.8v2.8h-62.2c0-.9-.1-1.9-.1-2.8h33.9c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-33.9c-.1-3.2-.1-6.3-.1-9h62.5v9zm-12.5 24.4h-6.3l.2-1.6h5.9l.2 1.6zm-5.8-4.5l1.6-12.3h2l1.6 12.3h-5.2zm-57-19.9h-62.4v-9h62.5c0 2.7 0 5.8-.1 9zm-62.4 1.4h62.4c0 .9-.1 1.8-.1 2.8H194v-2.8zm65.2 0h7.3c0 .9.1 1.8.1 2.8H259c.1-.9.1-1.8.1-2.8zm7.2-1.4h-7.2c.1-3.2.1-6.3.1-9h7c0 2.7 0 5.8.1 9zm-7.7-66.7v6.8h-9v-6.8h9zm-8.9 8.3h9v.7h-9v-.7zm0 2.1h9v2.3h-9v-2.3zm26-1.4h-9v-.7h9v.7zm-9 3.7v-2.3h9v2.3h-9zm9-5.9h-9v-6.8h9v6.8zm-119.3 91.1c-2.1-7.1-3-40.9-.9-53.6 2.2-13.5 11.9-28.6 17.8-35.6 5.6-6.5 13.5-15.7 15.7-18.3 11.4 6.4 28.7 9.6 51.8 9.6h6v14.1c0 .8.6 1.4 1.4 1.4h5.4c.3 3.1 2.4 22.4 2.7 35.1 0 1.2.1 2.6.1 4.2h-63.9c-.8 0-1.4.6-1.4 1.4v16.1c0 .8.6 1.4 1.4 1.4H256c-.8 11.8-2.8 24.7-8 33.3-2.6 4.4-4.9 8.5-6.9 12.2-.4.7-.1 1.6.6 1.9.2.1.4.2.6.2.5 0 1-.3 1.3-.8 1.9-3.7 4.2-7.7 6.8-12.1 5.4-9.1 7.6-22.5 8.4-34.7h7.8c.7 11.2 2.6 23.5 7.1 32.4.2.5.8.8 1.3.8.2 0 .4 0 .6-.2.7-.4 1-1.2.6-1.9-4.3-8.5-6.1-20.3-6.8-31.1H312l-2.4 18.6c-.1.4.1.8.3 1.1.3.3.7.5 1.1.5h9.6c.4 0 .8-.2 1.1-.5.3-.3.4-.7.3-1.1l-2.4-18.6H333c.8 0 1.4-.6 1.4-1.4v-16.1c0-.8-.6-1.4-1.4-1.4h-63.9c0-1.5 0-2.9.1-4.2.2-12.7 2.3-32 2.7-35.1h5.2c.8 0 1.4-.6 1.4-1.4v-14.1h6.2c23.1 0 40.4-3.2 51.8-9.6 2.3 2.6 10.1 11.8 15.7 18.3 5.9 6.9 15.6 22.1 17.8 35.6 2.2 13.4 2 43.2-1.1 53.1-1.2 3.9-1.4 8.7-1 13-1.7-2.8-2.9-4.4-3-4.6-.2-.3-.6-.5-.9-.6h-.5c-.2 0-.4.1-.5.2-.6.5-.8 1.4-.3 2 0 0 .2.3.5.8 1.4 2.1 5.6 8.4 8.9 16.7h-42.9v-43.8c0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4v44.9c0 .1-.1.2-.1.3 0 .1 0 .2.1.3v9c-1.1 2-3.9 3.7-10.5 3.7h-7.5c-.4 0-.7.3-.7.7 0 .4.3.7.7.7h7.5c5 0 8.5-.9 10.5-2.8-.1 3.1-1.5 6.5-10.5 6.5H210.4c-9 0-10.5-3.4-10.5-6.5 2 1.9 5.5 2.8 10.5 2.8h67.4c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-67.4c-6.7 0-9.4-1.7-10.5-3.7v-54.5c0-.8-.6-1.4-1.4-1.4s-1.4.6-1.4 1.4v43.8h-43.6c4.2-10.2 9.4-17.4 9.5-17.5.5-.6.3-1.5-.3-2s-1.5-.3-2 .3c-.1.2-1.4 2-3.2 5 .1-4.9-.4-10.2-1.1-12.8zm221.4 60.2c-1.5 8.3-14.9 12-26.6 12H174.4c-11.8 0-25.1-3.8-26.6-12-1-5.7.6-19.3 4.6-30.2H197v9.8c0 6.4 4.5 9.7 13.4 9.7h105.4c8.9 0 13.4-3.3 13.4-9.7v-9.8h44c4 10.9 5.6 24.5 4.6 30.2z" /><path d="M286.1 359.3c0 .4.3.7.7.7h14.7c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7h-14.7c-.3 0-.7.3-.7.7zm5.3-145.6c13.5-.5 24.7-2.3 33.5-5.3.4-.1.6-.5.4-.9-.1-.4-.5-.6-.9-.4-8.6 3-19.7 4.7-33 5.2-.4 0-.7.3-.7.7 0 .4.3.7.7.7zm-11.3.1c.4 0 .7-.3.7-.7 0-.4-.3-.7-.7-.7H242c-19.9 0-35.3-2.5-45.9-7.4-.4-.2-.8 0-.9.3-.2.4 0 .8.3.9 10.8 5 26.4 7.5 46.5 7.5h38.1zm-7.2 116.9c.4.1.9.1 1.4.1 1.7 0 3.4-.7 4.7-1.9 1.4-1.4 1.9-3.2 1.5-5-.2-.8-.9-1.2-1.7-1.1-.8.2-1.2.9-1.1 1.7.3 1.2-.4 2-.7 2.4-.9.9-2.2 1.3-3.4 1-.8-.2-1.5.3-1.7 1.1s.2 1.5 1 1.7z" /><path d="M275.5 331.6c-.8 0-1.4.6-1.5 1.4 0 .8.6 1.4 1.4 1.5h.3c3.6 0 7-2.8 7.7-6.3.2-.8-.4-1.5-1.1-1.7-.8-.2-1.5.4-1.7 1.1-.4 2.3-2.8 4.2-5.1 4zm5.4 1.6c-.6.5-.6 1.4-.1 2 1.1 1.3 2.5 2.2 4.2 2.8.2.1.3.1.5.1.6 0 1.1-.3 1.3-.9.3-.7-.1-1.6-.8-1.8-1.2-.5-2.2-1.2-3-2.1-.6-.6-1.5-.6-2.1-.1zm-38.2 12.7c.5 0 .9 0 1.4-.1.8-.2 1.3-.9 1.1-1.7-.2-.8-.9-1.3-1.7-1.1-1.2.3-2.5-.1-3.4-1-.4-.4-1-1.2-.8-2.4.2-.8-.3-1.5-1.1-1.7-.8-.2-1.5.3-1.7 1.1-.4 1.8.1 3.7 1.5 5 1.2 1.2 2.9 1.9 4.7 1.9z" /><path d="M241.2 349.6h.3c.8 0 1.4-.7 1.4-1.5s-.7-1.4-1.5-1.4c-2.3.1-4.6-1.7-5.1-4-.2-.8-.9-1.3-1.7-1.1-.8.2-1.3.9-1.1 1.7.7 3.5 4.1 6.3 7.7 6.3zm-9.7 3.6c.2 0 .3 0 .5-.1 1.6-.6 3-1.6 4.2-2.8.5-.6.5-1.5-.1-2s-1.5-.5-2 .1c-.8.9-1.8 1.6-3 2.1-.7.3-1.1 1.1-.8 1.8 0 .6.6.9 1.2.9z" />
+           </svg> </span> 
+         </div> 
+         <div class="col-9 d-flex align-items-center"> 
+          <div class="py-3 pl-3 pr-5"> <a :href="_getvariantUrl(product.product_handle, product.id)" v-text="product.name" class="clearfix font-weight-bold"></a> <s v-if="product.compare_at_price > product.price" v-text="_formatMoney(product.compare_at_price)" class="price"></s> <span v-text="_formatMoney(product.price)" class="price"></span> 
+          </div> <a @click.prevent="_removeFromWishlist(product.id)" class="btn btn-remove" style="position: absolute; top: 0; right: 0"><i class="icon ion-md-close"></i></a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div v-else class="row my-3"> 
+      <div class="col-12 text-center"> 
+       <p class="lead m-0">Your wishlist is empty</p> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div data-app-help-data></div> 
+<div id="shopify-section-footer" class="shopify-section footer-section">
+ <footer id="footer" data-section-id="footer" style="background-color: #343a40; color: #ffffff;"> 
+  <div id="main-footer" class="bg-dark pt-6 pb-6"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-12 col-sm-6 col-md-3 col-md-4col-md-6"> 
+      <div class="footer_menu text-center text-sm-left "> 
+       <h6 class="text-white mb-3 font-italic">Shopping</h6> 
+       <ul class="list-unstyled"> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/christian-life">Christian Life</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/collections/ministry">Ministry</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/commentaries">Commentaries</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/collections/academic">Academic</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/authors">Authors</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/children">Children</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/products/gift-card">Gift Cards</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="https://shoppe.wts.edu/?utm_source=wtsbooks&amp;utm_medium=wtsbooks" target="_blank">Westminster Shoppe</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-12 col-sm-6 col-md-3 col-md-4col-md-6"> 
+      <div class="footer_menu text-center text-sm-left "> 
+       <h6 class="text-white mb-3 font-italic">Help</h6> 
+       <ul class="list-unstyled"> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/shipping-rates-faq">Shipping</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/policies-returns" target="_blank">Returns</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="https://www.wtsbooks.com/pages/customer-service" target="_blank">FAQ</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/contact-us">Contact Us</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/account" target="_blank">Account</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-12 col-sm-6 col-md-3 col-md-4col-md-6"> 
+      <div class="footer_menu text-center text-sm-left "> 
+       <h6 class="text-white mb-3 font-italic">About Us</h6> 
+       <ul class="list-unstyled"> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/about-us">Westminster Bookstore</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="https://www.wts.edu/history/" target="_blank">Westminster Seminary</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/make-a-donation">Make a Donation</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/jobs">Employment</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/terms-of-service">Terms of Service</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/privacy-policy">Privacy Policy</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="col-12 col-sm-6 col-md-3 col-md-4col-md-6"> 
+      <div class="footer_menu text-center text-sm-left "> 
+       <h6 class="text-white mb-3 font-italic">Community</h6> 
+       <ul class="list-unstyled"> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/afterword" target="_blank">The Afterword</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/blog-partners-main">Blog Partners</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="/pages/referrals">Give $5, Get $5</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="https://www.facebook.com/wtsbooks" target="_blank">Facebook</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="https://www.twitter.com/wtsbooks" target="_blank">Twitter</a> </li> 
+        <li class="mb-2"> <a class="text-uppercase font-size-sm font-weight-normal" style="color: #ffffff;" href="https://www.instagram.com/wts_books/" target="_blank">Instagram</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="sub-footer" class="bg-darker pt-4 pb-4" style="background-color: #212529; color: #ffffff;"> 
+   <div class="container"> 
+    <div class="row d-flex align-items-center text-center"> 
+     <div class="col-12 col-sm-3 text-center text-sm-left"> <a href="/" class="footer-icon mb-3 mb-sm-0 "> <img src="https://cdn.shopify.com/s/files/1/0021/5210/3983/files/westminster-icon.svg?8878345012380729207" alt="" class="footer-logo"> </a> 
+     </div> 
+     <div class="col-12 col-sm-9"> 
+      <p class="m-0 text-center text-sm-right text-white font-size-sm font-weight-normal">© 2021 Westminster Bookstore. All rights reserved.</p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </footer> 
+</div> 
+<script>
+    window.theme = {
+      moneyFormat: "${{amount}}",
+      colorSwatchesEnabled: true,
+      sizeSwatchesEnabled: true,
+      productAddSuccessTitle:'Success!',
+      productAddSuccessDesc:'This item has been successfully added to your wishlist',
+      listEditSuccessTitle:'List Updated',
+      listEditSuccessDesc:'Your list name has been successfully updated'
+    };
+  </script> 
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/0021/5210/3983/t/5/assets/vendors@layout.theme.js?v=11740921372199119198" defer></script>
+<script type="text/javascript" src="//cdn.shopify.com/s/files/1/0021/5210/3983/t/5/assets/layout.theme.js?v=7830868011077163690" defer></script> 
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://www.wtsbooks.com",
+    "name": "Westminster Bookstore",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_200x.gif"
+    },
+    "sameAs": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+</script> 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.wtsbooks.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.wtsbooks.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script> 
+<script type="text/javascript" src="//www.klaviyo.com/media/js/public/klaviyo_subscribe.js"></script> 
+<script type="text/javascript">
+    KlaviyoSubscribe.attachToForms('#email_signup', {
+        hide_form_on_success: false
+    });
+  </script> 
+<script>
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+      var sitePreloader = document.getElementById('sitePreloader');
+      var recentlyViewed = document.getElementById('recently_viewed');
+      $(sitePreloader).remove();
+      if( recentlyViewed != null ){
+        $(recentlyViewed).remove();
+      }
+    }
+  </script> 
+<div class="smile-shopify-init" data-channel-key="channel_PP8BWz765JPTXiQOssqHgBJz"></div>
+</body>
+</doc>

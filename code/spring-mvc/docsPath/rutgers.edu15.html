@@ -1,0 +1,54 @@
+<doc>
+<filename>rutgers.edu15.html</filename>
+<url>http://mail.scarletmail.rutgers.edu</url>
+<ip>172.217.5.211</ip>
+<title>Shibboleth Service - Loading Session Information</title>
+<body>
+<div class="wrapper"> 
+ <div class="container"> 
+  <header> 
+   <h3>Shibboleth Service - Loading Session Information</h3> 
+  </header> 
+  <div class="content">
+    Loading login session information from the browser... 
+  </div> 
+  <noscript> 
+   <div class="content">
+     Since your browser does not support JavaScript, you must press the Continue button once to proceed. 
+   </div> 
+  </noscript> 
+  <form name="form1" action="/idp/profile/SAML2/Redirect/SSO;jsessionid=24F05F4622E542EF051A8E89ED4280A6?execution=e1s1" method="post"> 
+   <input name="shib_idp_ls_exception.shib_idp_session_ss" type="hidden"> 
+   <input name="shib_idp_ls_success.shib_idp_session_ss" type="hidden" value="false"> 
+   <input name="shib_idp_ls_value.shib_idp_session_ss" type="hidden"> 
+   <input name="shib_idp_ls_exception.shib_idp_persistent_ss" type="hidden"> 
+   <input name="shib_idp_ls_success.shib_idp_persistent_ss" type="hidden" value="false"> 
+   <input name="shib_idp_ls_value.shib_idp_persistent_ss" type="hidden"> 
+   <input name="shib_idp_ls_supported" type="hidden"> 
+   <input name="_eventId_proceed" type="hidden"> 
+   <noscript> 
+    <input type="submit" value="Continue"> 
+   </noscript> 
+  </form> 
+  <script>
+<!--
+function doLoad() {
+    var localStorageSupported = isLocalStorageSupported();
+    document.form1["shib_idp_ls_supported"].value = localStorageSupported;
+    if (localStorageSupported) {
+            readLocalStorage("shib_idp_session_ss");
+            readLocalStorage("shib_idp_persistent_ss");
+        }
+    document.form1.submit();
+}
+// -->
+</script> 
+ </div> 
+ <footer> 
+  <div class="container container-footer"> 
+   <p class="footer-text">For help, please contact your Campus Computing Help Desk:<br><br> Camden (856)225-6274 <a href="mailto:help@camden.rutgers.edu" style="color:white;">help@camden.rutgers.edu</a><br> Newark (973)353-5083 <a href="mailto:help@newark.rutgers.edu" style="color:white;">help@newark.rutgers.edu</a><br> New Brunswick/RBHS (848)445-HELP(4357) <a href="mailto:help@oit.rutgers.edu" style="color:white;">help@oit.rutgers.edu</a><br><br> Rutgers, The State University of New Jersey | Office of Information Technology | Shibboleth</p> 
+  </div> 
+ </footer> 
+</div>
+</body>
+</doc>

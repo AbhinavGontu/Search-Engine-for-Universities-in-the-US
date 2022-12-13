@@ -1,0 +1,2066 @@
+<doc>
+<filename>whitman.edu16.html</filename>
+<url>http://bookstore.whitman.edu/MerchList.aspx?ID=10158</url>
+<ip>67.133.85.185</ip>
+<title>Sale | Whitman College Bookstore</title>
+<body>
+<header> 
+ <div data-role="header"> 
+ </div> 
+</header> <a href="#contentSection" tabindex="0" class="hidden_label">Skip to main content</a> 
+<p class="hiddenForm" hidden></p> 
+<div class="reloadPage" hidden>
+ No
+</div> 
+<main id="page_wrapper"> 
+ <div id="topSection"> 
+  <div id="H_Search" class="max_width300"> 
+   <div class="form-group floatl width80p right2p"> <label class="displayb"><span class="hidden_label">Search</span><input type="text" class="searchBox searchBoxHor form-control"></label> 
+    <p class="red displayn errorHorizontal">Please enter search criteria</p> 
+   </div> <button aria-label="Search Button" type="submit" class="searchMerchHor btn btn-default margin0 width18p"> <span class="glyphicon glyphicon-search"></span> </button> 
+  </div> 
+  <script type="text/javascript">
+    $(document).ready(function () {
+        //Search for course by entering ISBN
+        $(".searchMerchHor").click(function () {
+            var search = $(".searchBoxHor").val();
+            if (search == '') {
+                $('.errorHorizontal').show();
+                return;
+            } else {
+                $('.errorHorizontal').hide();
+                var url = 'http://bookstore.whitman.edu/' +  'merchlist?searchtype=all&txtSearch=' + search; // 'Url.Action("CourseMaterials", "SelectTermDept", New With {.Ids = "__id__"})';
+                window.location.href = url; // url.replace('__id__', search);
+                return;
+            }
+        });
+        $(".searchMerchVer").click(function () {
+            var search = $(".searchBoxVer").val();
+            if (search == '') {
+                $('.errorVertical').show();
+                return;
+            } else {
+                $('.errorVertical').hide();
+                var url = 'http://bookstore.whitman.edu/' +  'merchlist?searchtype=all&txtSearch=' + search; // 'Url.Action("CourseMaterials", "SelectTermDept", New With {.Ids = "__id__"})';
+                window.location.href = url; // url.replace('__id__', search);
+                return;
+            }
+        });
+        $(".searchBox").keyup(function (e) {
+            if (e.keyCode == 13) {
+                var search = $(this).val();
+                if (search == '') {
+                    $('#errorMesg').append("<li>Please enter search criteria.</li>");
+                    return;
+                } else {
+                    var url = 'http://bookstore.whitman.edu/' +  'merchlist?searchtype=all&txtSearch=' + search; // 'Url.Action("CourseMaterials", "SelectTermDept", New With {.Ids = "__id__"})';
+                    window.location.href = url; // url.replace('__id__', search);
+                    return;
+                }
+            }
+        });
+    });
+    </script> 
+  <div id="Cart" class="btn btn-default btn-lg clear"> <span class="fa fa-shopping-cart"></span><span id="SpanCart"> <span id="Item-Count">Item Count: </span> <span id="ItemCount" class="Count">0</span></span>
+   <br><span id="Sub-Total">Sub-Total: </span> <span id="SubTotal" class="count">$0.00</span> 
+  </div> 
+  <div id="result" style="display:none;"></div> 
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('#Cart').click(function () {
+             var link = 'http://bookstore.whitman.edu/ShoppingCart';
+            window.location.href = link
+        });
+    $("#result").dialog({
+        autoOpen: false,
+        title: 'Title',
+        width: 500,
+        height: 'auto',
+        modal: true
+    });
+});
+function openPopup() {
+    $("#result").dialog("open");
+}
+ 
+
+</script>
+  <div class="container-fluid wc-header"> 
+   <div class="container wc-container-header"> 
+    <div class="row"> 
+     <div class="col-xs-12" id="wc-header-cart"> <a href="https://www.whitman.edu"> <img class="img-responsive wc-logo-header" alt="Whitman College logo" src="/SiteImages/107-SchoolImages/107-RWD/107-whitman-logo-header.svg"> </a> 
+     </div> <!-- .col-xs-12 --> 
+    </div> <!-- .row --> 
+   </div> <!-- .container --> 
+  </div> <!-- .container-fluid wc-header --> 
+  <nav class="navbar navbar-default wc-navbar"> 
+   <div class="container-fluid wc-nav"> 
+    <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+    </div> <!-- .navbar-header --> <!-- Collect the nav links, forms, and other content for toggling --> 
+    <div class="container wc-nav"> 
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+      <ul class="nav navbar-nav navbar-left" id="wc-nav-inline-block"> 
+       <li><a href="http://bookstore.whitman.edu/home" tabindex="0">HOME</a></li> 
+       <li><a href="http://bookstore.whitman.edu/SiteText?id=82456" tabindex="0">APPAREL</a></li> 
+       <li><a href="http://bookstore.whitman.edu/SiteText?id=82457" tabindex="0">MERCHANDISE</a></li> 
+       <li><a href="http://bookstore.whitman.edu/SiteText?id=83139" tabindex="0">TEXTBOOKS</a></li> 
+       <li><a href="http://bookstore.whitman.edu/SiteText?id=82458" tabindex="0">BUYBACK</a></li> 
+       <li><a href="http://bookstore.whitman.edu/SiteText?id=82459" tabindex="0">LOYALTY PROGRAM</a></li> 
+       <li><a href="http://bookstore.whitman.edu/login" tabindex="0">MY ACCOUNT</a></li> 
+       <li><a href="http://bookstore.whitman.edu/SiteText?id=82460" tabindex="0">STORE INFO</a></li> 
+       <li><a href="http://bookstore.whitman.edu/FacultyAdoptions/DefaultN" tabindex="0">FACULTY ADOPTIONS</a></li> 
+      </ul> 
+      <div id="wc-nav-search" class="pull-right"> 
+      </div> 
+     </div> <!-- .navbar-collapse --> 
+    </div> <!-- .container wc-nav --> 
+   </div> <!-- .container-fluid --> 
+  </nav> 
+  <input name="6716202" type="hidden" value="{ id = Text_Id }">
+  <div id="myCarousel" class="carousel slide carousel-bg-img" data-ride="carousel"> <!-- Indicators --> 
+   <ol class="carousel-indicators"> 
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li> 
+    <li data-target="#myCarousel" data-slide-to="1"></li> 
+    <li data-target="#myCarousel" data-slide-to="2"></li> <!--<li data-target="#myCarousel" data-slide-to="3"></li>--> 
+   </ol> <!-- Wrapper for slides --> 
+   <div class="carousel-inner"> 
+    <div class="item active wc-slide-5"> <a href="http://bookstore.whitman.edu/SiteText?id=83139"></a> 
+     <div class="carousel-caption"> <a href="http://bookstore.whitman.edu/SiteText?id=83139"></a> 
+      <h5><a href="http://bookstore.whitman.edu/SiteText?id=83139">Welcome Back Students</a></h5> <a href="http://bookstore.whitman.edu/SiteText?id=83139"><span>Place your orders online and pick them up at Reid Center</span></a> 
+     </div> 
+    </div> 
+    <div class="item wc-slide-1"> <a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10158"></a> 
+     <div class="carousel-caption"> <a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10158"></a> 
+      <h5 style="color;"><a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10158">We Have Textbooks, Supplies, Clothes and More!</a></h5> <a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10158"><span>SHOP NOW</span></a> 
+     </div> 
+    </div> <!--
+        <div class="item carousel-align-bottom-left wc-slide-4">
+            <a href="http://bookstore.whitman.edu/SiteText?id=83139"></a>
+            <div class="carousel-caption">
+                <a href="http://bookstore.whitman.edu/SiteText?id=83139"></a>
+                <h5><a href="http://bookstore.whitman.edu/SiteText?id=83139">Textbooks On Sale</a></h5>
+                <a href="http://bookstore.whitman.edu/SiteText?id=83139"><span>SHOP NOW</span></a>
+            </div>
+        </div>
+        --> 
+    <div class="item carousel-align-bottom-left wc-slide-2"> <a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10165"></a> 
+     <div class="carousel-caption"> <a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10165"></a> 
+      <h5><a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10165">Whitman Gift Cards</a></h5> <a href="http://bookstore.whitman.edu/MerchList.aspx?ID=10165"><span>SHOP NOW</span></a> 
+     </div> 
+    </div> <!--
+        <div class="item  carousel-align-bottom wc-slide-3">
+            <a href="http://bookstore.whitman.edu/SiteText?id=82459">
+            <div class="carousel-caption">
+                <h5>WhitCoin Loyalty Program</h5>
+                <span>JOIN NOW</span>
+            </div>
+            </a>
+        </div>
+        --> 
+   </div> <!-- .carousel-inner --> <!-- Left and right controls --> <a class="left carousel-control" href="#myCarousel" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a> 
+  </div> <!-- .carousel slide carousel-bg-img --> 
+  <input name="6716203" type="hidden" value="{ id = Text_Id }"> 
+  <div class="clear"></div> 
+ </div> 
+ <div> 
+  <div id="ContainDiv" class="contain container clear"> 
+   <div id="contentSection" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+    <ul class="breadcrumb background_none"> 
+     <li> <a class="small" href="http://bookstore.whitman.edu/merchandise"> Merchandise Categories</a></li> 
+     <li> <a class="small"> Sale</a></li> 
+    </ul> <a class="floatr right15 top-50 pageHelp" href="http://bookstore.whitman.edu/help/MerchandiseBrowse.htm">Help</a> 
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> 
+    <form action="/MerchList.aspx?ID=10158" method="post">
+     <input name="__RequestVerificationToken" type="hidden" value="GN-aGlvzu3Jv9hl5DvAPQ60bQvwN4goearjudYn24bEX2V9thBfVzbPWXTx_AhAapI1hR3juFqMEWGr8FzmxN1Pgo7I1">
+     <input id="hiddenShowResults1" name="showResults1" type="hidden" value="1">
+     <input id="hiddenShowResults2" name="showResults2" type="hidden" value="21">
+     <input id="hiddenShowPerPage" name="showPerPage" type="hidden" value="21">
+     <input id="hiddenID" name="mclID" type="hidden" value="10158">
+     <input id="hiddenType" name="itemType" type="hidden" value="">
+     <input id="hiddenSearchString" name="searchString" type="hidden" value="">
+     <input id="hiddenSearchType" name="searchType" type="hidden" value="All">
+     <input id="hiddenNum" name="num" type="hidden" value="">
+     <input id="hiddenSearchIn" name="searchin" type="hidden" value="">
+     <input id="hiddenSearchMCL" name="searchMCL" type="hidden" value="">
+     <input id="hiddenCatID" name="CatID" type="hidden" value="">
+     <input id="hiddenOriginal" name="originalSearchType" type="hidden" value="">
+     <input id="hiddenStore" name="StoreID" type="hidden" value="144">
+     <input id="hiddenSort" name="sortOrderEnum" type="hidden" value="8">
+     <input id="hiddenCatSearch" name="catSearch" type="hidden" value="">
+     <input id="useRouting" name="useRouting" type="hidden" value="False">
+     <input id="isMerchList" name="isMerchList" type="hidden" value="True">
+     <input id="hiddenLowPrice" name="lowPrice" type="hidden" value="6">
+     <input id="hiddenHighPrice" name="highPrice" type="hidden" value="64">
+     <input id="GiftReload" name="GiftReload" type="hidden" value="False">
+     <input id="fc" name="fc" type="hidden" value="">
+     <input id="fv" name="fv" type="hidden" value=""> 
+     <input type="submit" id="showPerPageSubmit" value="showPerPage" name="submitButton" class="displayn"> 
+     <input type="submit" id="firstSubmit" value="firstSubmit" name="submitButton" class="displayn"> 
+     <input type="submit" id="prevSubmit" value="prevSubmit" name="submitButton" class="displayn"> 
+     <input type="submit" id="nextSubmit" value="nextSubmit" name="submitButton" class="displayn"> 
+     <input type="submit" id="lastSubmit" value="lastSubmit" name="submitButton" class="displayn"> 
+     <input type="submit" id="sortSubmit" value="sortSubmit" name="submitButton" class="displayn"> 
+     <input type="submit" id="searchSubmit" value="searchSubmit" name="submitButton" class="displayn"> 
+     <input type="submit" id="filterSubmit" value="filterSubmit" name="submitButton" class="displayn"> 
+     <div id="scrollPositionIgnore"></div> <a id="goToTop" class="btn btn-default displayn" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></span></a> 
+     <div class="center"> 
+      <h1 class="page_header">Sale</h1> 
+     </div> 
+     <div class="searchCatWrap col-sm-6 col-xs-12 bottom10"> 
+      <div class="col-sm-6 col-xs-8 padding0"> 
+       <input class="form-control searchCat" placeholder="Search Sale" aria-label="Search Sale"> 
+       <p class="searchCatError red displayn">Please enter a search Criteria</p> 
+      </div> 
+      <div class="col-sm-6 col-xs-4"> <a tabindex="0" class="btn btn-default searchCatButton margin0 "><span class="glyphicon glyphicon-search"></span></a> 
+      </div> 
+     </div> 
+     <div class="sortCatWrap col-sm-6 col-xs-12 textr textSmallLeft bottom10"> 
+     </div> <!--Merch Top Buttons--> 
+     <div class="merchTop Buttons top10 col-xs-12 bottom10"> <a tabindex="0" href="http://bookstore.whitman.edu/merchandise" class="backButton btn btn-primary hover_pointer btn-sm">Back</a> <a href="http://bookstore.whitman.edu/shoppingcart" tabindex="0" class="cartButton btn btn-primary hover_pointer btn-sm">Shopping Cart</a> 
+     </div> <!--Merch Buttons--> 
+     <div class="merchButtons top10 col-xs-12 bottom10 textc"> <a tabindex="0" class="firstBackward btn btn-primary btn-xs top5 displayn"><span class="fa fa-fast-backward"></span> First</a> <a tabindex="0" class="prevBackward btn btn-primary btn-xs top5 displayn"><span class="fa fa-backward"></span> Previous</a> <a tabindex="0" class="nextForward btn btn-primary btn-xs top5 displayib">Next <span class="fa fa-forward"></span></a> <a tabindex="0" class="lastForward btn btn-primary btn-xs top5 displayib">Last <span class="fa fa-fast-forward"></span></a> 
+     </div> 
+     <style>
+                 /*.merchColumn {visibility: hidden;}*/
+            </style> 
+     <script>
+            $(document).ready(function () {
+                var startSortValue = $('#hiddenSort').val();
+                if (startSortValue != '8') {
+                $('.merchSortBy').val($('#hiddenSort').val());
+                }
+                var sortValue = $('.merchSortBy').val();
+                var perValue = $('select.merchResultsSelect option:selected').val();
+                var agent = window.navigator.userAgent;
+                if (agent.indexOf("Macintosh") >= 1 || agent.indexOf("Mobile") >= 1) {
+                    $('.merchSortBy').change(function () {
+                        var value = $(this).val();
+                        var value2 = $('.merchResultsSelect').val();
+                        $('#hiddenShowResults1').val('1');
+                        $('#hiddenShowResults2').val(value2);
+                        $('#hiddenSort').val(value);
+                        $('#sortSubmit').click();
+                    });
+                } else {
+                    $('.merchSortBy').change(function () {
+                        var value = $(this).val();
+                        var value2 = $('.merchResultsSelect').val();
+                        $('#hiddenShowResults1').val('1');
+                        $('#hiddenShowResults2').val(value2);
+                        $('#hiddenSort').val(value);
+                    });
+                    $('.merchSortBy').click(function () {
+                        if ($('select.merchSortBy option:selected').val() != sortValue) {
+                            $('#sortSubmit').click();
+                        }
+                    });
+                    $('.merchSortBy').keydown(function (e) {
+                        if (e.keyCode == 13 || e.keyCode == 9) {
+                            if ($('select.merchSortBy option:selected').val() != sortValue) {
+                                $('#sortSubmit').click();
+                            }
+                        }
+                    });
+                }
+                $('.merchResultsSelect').change(function () {
+                    var value = $(this).val();
+                    $('#hiddenShowResults1').val('1');
+                    $('#hiddenShowResults2').val(value);
+                    $('#hiddenShowPerPage').val(value);
+                });
+                $('.merchResultsSelect').click(function () {
+                    if ($('select.merchResultsSelect option:selected').val() != perValue) {
+                        $('#showPerPageSubmit').click();
+                    }
+
+                });
+                $('.merchResultsSelect').keydown(function (e) {
+                    if (e.keyCode == 13 || e.keyCode == 9) {
+                        if ($('select.merchResultsSelect option:selected').val() != perValue) {
+                            $('#showPerPageSubmit').click();
+                        }
+                    }
+                });
+                $('.searchCat').keydown(function (e) {
+
+                    if (e.keyCode == 13) {
+                        e.preventDefault();
+                        $('.searchCatButton').click();
+                    }
+                });
+
+                $('.nextForward').click(function () {
+                    var result1, result2, showPerPage, totalItem = 0;
+                    result1 = parseInt($('#hiddenShowResults1').val());
+                    result2 = parseInt($('#hiddenShowResults2').val());
+                    showPerPage = parseInt($('#hiddenShowPerPage').val());
+                    totalItem = 49;
+                    result1 = result2 + 1;
+                    result2 = result2 + showPerPage;
+                    if (result2 >= totalItem) {
+                        result2 = totalItem;
+                    }
+                    $('#hiddenShowResults1').val(result1);
+                    $('#hiddenShowResults2').val(result2);
+                    $('#nextSubmit').click();
+                });
+                $('.lastForward').click(function () {
+                    var result1, result2, showPerPage, totalItem = 0;
+                    showPerPage = parseInt($('#hiddenShowPerPage').val());
+                    totalItem = 49;
+                    if (totalItem % showPerPage == 0) {
+                        result1 = totalItem + 1 - showPerPage;
+                        result2 = totalItem;
+                    } else {
+                        var totalLeft = totalItem % showPerPage;
+                        var evenTotal = totalItem + (showPerPage -totalLeft);
+                        result1 = evenTotal - (showPerPage -1);
+                        result2 = result1 + totalLeft - 1;
+                    }
+                    $('#hiddenShowResults1').val(result1);
+                    $('#hiddenShowResults2').val(result2);
+                    $('#lastSubmit').click();
+                });
+                $('.firstBackward').click(function () {
+                     var result1, result2, showPerPage, totalItem = 0;
+                    result1 = 1;
+                    showPerPage = parseInt($('#hiddenShowPerPage').val());
+                    totalItem = 49;
+                    if (showPerPage >= totalItem) {
+                        result2 = totalItem;
+                    } else {
+                        result2 = result1 + showPerPage - 1;
+                    }
+                    $('#hiddenShowResults1').val(result1);
+                    $('#hiddenShowResults2').val(result2);
+                    $('#firstSubmit').click();
+                });
+                $('.prevBackward').click(function () {
+                    var result1, result2, showPerPage, totalItem = 0;
+                    result1 = parseInt($('#hiddenShowResults1').val());
+                    showPerPage = parseInt($('#hiddenShowPerPage').val());
+                    result1 = result1 - showPerPage;
+                    result2 = result1 + showPerPage - 1;
+                    $('#hiddenShowResults1').val(result1);
+                    $('#hiddenShowResults2').val(result2);
+                    $('#prevSubmit').click();
+
+                });
+            });
+            </script> 
+     <script>
+                $(document).ready(function () {
+                $('.searchCatButton').click(function () {
+                    var value = $('.searchCat').val();
+                    if (value == "") {
+                        $('.searchCat').focus();
+                        return false;
+                    }
+                    var newUrl = "http://bookstore.whitman.edu/MerchList";
+                    if ($.isNumeric(value)) {
+                        newUrl = newUrl + "?txtSearch=" + value + "&searchtype=ItemNum&drpsearch2=Item%20Number&searchmcl=" + 10158;
+                    } else {
+                        newUrl = newUrl + "?txtSearch=" + value +"&searchtype=Description&drpsearch2=Description&searchmcl=" + 10158;
+                    }
+                    window.location.href = newUrl;
+                    });
+                });
+                </script> 
+     <div class="viewfiltersDiv col-xs-12 bottom10"> <a class="viewFiltersButton left5 floatr hover_pointer displayn ltGrey">Filters</a> 
+     </div> <!--Filter Section--> 
+     <div class="filterColumn col-md-2 col-sm-3 col-xs-12 displayn"> 
+      <p class="filterTitle font20"><strong>FILTER BY:</strong></p> 
+      <p class="closeFilterX floatr hover_pointer filterDisplay"><span class="glyphicon glyphicon-remove"></span></p> 
+      <input type="button" id="filterButton1" class="btn btn-primary top5 wauto filterButton filterButtonDisplay" value="Apply"> 
+      <div class="filterOption top10 filterPriceOption"> 
+       <p class="filterOptionTitle padding5 bottom_border bottom5"><strong>Price</strong><span class="fa fa-minus-square floatr hover_pointer filterCollapse" data-id="filterPriceOption"></span></p> 
+       <div class="filterValueWrapper " data-filterid="filterPriceOption"> 
+        <div class="filterPrice top10 bottom10"> 
+         <div class="col-xs-5 padding0"> 
+          <input aria-label="Minimum Price Filter Input" class="filterMin form-control visibilityHide" id="filterMinInput" max="100000" min="0" name="filterMin" placeholder="Min" type="number" value="6"> 
+         </div> 
+         <div class="col-xs-2"> <span class="filterTO top5 displayb textc">to</span> 
+         </div> 
+         <div class="col-xs-5 padding0"> 
+          <input aria-label="Maximum Price Filter Input" class="filterMin form-control visibilityHide" id="filterMaxInput" max="100000" min="0" name="filterMax" placeholder="Max" type="number" value="64"> 
+         </div> 
+         <div class="clear"></div> 
+        </div> 
+        <div class="filterOption top10 filterSaleOption"> <label class="filterLabel  col-xs-12 hover_pointer filterContainer">On Sale <input class="filterCheck" data-category="filteronsale" data-value="filteronsale" id="merchFilterOnSale" name="merchFilterOnSale" type="checkbox" value="true"><input name="merchFilterOnSale" type="hidden" value="false"><span class="filterCheckmark"></span></label> 
+        </div> 
+       </div> 
+       <div class="clear"> 
+        <p id="priceError" role="alert" class="red"></p> 
+       </div> 
+      </div> 
+     </div> <!--End Filter Section--> <!--MerchList Section--> 
+     <div class="merchColumn col-xs-12"> 
+      <div class="filterSelections col-xs-12 bottom10"> <a class="hover_pointer clearIndPriceFilter bottom10 displayn filterSelection" tabindex="0"><span class="priceFilterOptionText"></span><span class="fa fa-times"></span></a> 
+      </div> <!--One Item--> 
+      <div data-count="1" data-merid="540837" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-540837-1.JPG" alt="Image For NIKE TRUE CAP"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=540837&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="540837">NIKE TRUE CAP</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           NIKE TRUE CAP 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2002565 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$28.00</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">50 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="540837" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="NIKE TRUE CAP" data-id="540837" data-istypeless="True" data-regularprice="28" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="540837"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="2" data-merid="716181" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-716181-1.jpg" alt="Image For RECLAIM T- SHIRT by League"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=716181&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="716181">RECLAIM T- SHIRT by League</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           THIS RECLAIM T- SHIRT IS MADE FROM RECYCLED WATER BOTTLES. 40% REPREVE, 40%POLY/20% COTTON 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003240 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$24.00</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="716181"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="24" value="618889">FASHION / GRAY / SMALL</option> <option data-typeisegiftcard="False" data-points="24" value="618893">FASHION / GRAY / XXLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="716181">Please select option for RECLAIM T- SHIRT by League<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="716181" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="RECLAIM T- SHIRT by League" data-id="716181" data-istypeless="False" data-regularprice="24" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="716181"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="3" data-merid="621731" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-621731-2.jpg" alt="Image For Long sleeve t-shirt by League"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=621731&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="621731">Long sleeve t-shirt by League</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           This vintage washed long sleeve tee is 100% ring -spun cotton that has extraordinary softness. 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2002888 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$30.45</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="621731"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="30.45" value="557359">FASHION / NAVY / XSMALL</option> <option data-typeisegiftcard="False" data-points="30.45" value="557360">FASHION / NAVY / SMALL</option> <option data-typeisegiftcard="False" data-points="30.45" value="557364">FASHION / NAVY / XXLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="621731">Please select option for Long sleeve t-shirt by League<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="621731" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="Long sleeve t-shirt by League" data-id="621731" data-istypeless="False" data-regularprice="30.45" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="621731"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="4" data-merid="540823" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-540823-2.jpg" alt="Image For T-SHIRT by USCAPE"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=540823&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="540823">T-SHIRT by USCAPE</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           LEFT CHEST AND FULL BACK LOGO 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2002604 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$24.45</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="540823"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="24.45" value="413147">FASHION / BLUE / SMALL</option> <option data-typeisegiftcard="False" data-points="24.45" value="413150">FASHION / BLUE / XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="540823">Please select option for T-SHIRT by USCAPE<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="540823" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="T-SHIRT by USCAPE" data-id="540823" data-istypeless="False" data-regularprice="24.45" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="540823"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="5" data-merid="681898" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-681898-1.jpg" alt="Image For DAD T-SHIRT"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=681898&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="681898">DAD T-SHIRT</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           DAD T-SHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003266 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$16.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="681898"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="16.5" value="563224">WC / GRAY / SMALL</option> <option data-typeisegiftcard="False" data-points="16.5" value="563225">WC / GRAY / MEDIUM</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="681898">Please select option for DAD T-SHIRT<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="681898" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="DAD T-SHIRT" data-id="681898" data-istypeless="False" data-regularprice="16.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="681898"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="6" data-merid="681891" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-681891-1.jpg" alt="Image For SOCCER T-SHIRT BY CHAMPION"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=681891&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="681891">SOCCER T-SHIRT BY CHAMPION</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           SOCCER T-SHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003259 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$15.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="681891"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="15.5" value="563191">SPORTS / NAVY / SMALL</option> <option data-typeisegiftcard="False" data-points="15.5" value="563192">SPORTS / NAVY / MEDIUM</option> <option data-typeisegiftcard="False" data-points="15.5" value="563194">SPORTS / NAVY / XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="681891">Please select option for SOCCER T-SHIRT BY CHAMPION<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="681891" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="SOCCER T-SHIRT BY CHAMPION" data-id="681891" data-istypeless="False" data-regularprice="15.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="681891"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="7" data-merid="681900" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-681900-1.jpg" alt="Image For ALUMNI T-SHIRT"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=681900&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="681900">ALUMNI T-SHIRT</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           ALUMNI T-SHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003268 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$16.00</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="681900"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="16" value="563235">WC / NAVY / SMALL</option> <option data-typeisegiftcard="False" data-points="16" value="563239">WC / NAVY / XXLARGE</option> <option data-typeisegiftcard="False" data-points="16" value="563240">WC / NAVY / 3XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="681900">Please select option for ALUMNI T-SHIRT<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="681900" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="ALUMNI T-SHIRT" data-id="681900" data-istypeless="False" data-regularprice="16" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="681900"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="8" data-merid="681894" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-681894-1.jpg" alt="Image For BASEBALL T-SHIRT"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=681894&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="681894">BASEBALL T-SHIRT</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           BASEBALL T-SHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003262 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$16.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="681894"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="16.5" value="563209">SPORTS / NAVY / SMALL</option> <option data-typeisegiftcard="False" data-points="16.5" value="563210">SPORTS / NAVY / MEDIUM</option> <option data-typeisegiftcard="False" data-points="16.5" value="563213">SPORTS / NAVY / XXLARGE</option> <option data-typeisegiftcard="False" data-points="16.5" value="563214">SPORTS / NAVY / 3XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="681894">Please select option for BASEBALL T-SHIRT<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="681894" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="BASEBALL T-SHIRT" data-id="681894" data-istypeless="False" data-regularprice="16.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="681894"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="9" data-merid="681893" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-681893-1.jpg" alt="Image For BASKETBALL T-SHIRT"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=681893&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="681893">BASKETBALL T-SHIRT</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           BASKETBALL T-SHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003261 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$16.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="681893"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="16.5" value="563203">SPORTS / NAVY / SMALL</option> <option data-typeisegiftcard="False" data-points="16.5" value="563204">SPORTS / NAVY / MEDIUM</option> <option data-typeisegiftcard="False" data-points="16.5" value="563205">SPORTS / NAVY / LARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="681893">Please select option for BASKETBALL T-SHIRT<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="681893" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="BASKETBALL T-SHIRT" data-id="681893" data-istypeless="False" data-regularprice="16.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="681893"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="10" data-merid="678367" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-678367-1.jpg" alt="Image For BOMBER SWEATER BY GEAR"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=678367&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="678367">BOMBER SWEATER BY GEAR</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           WOMEN'S FULL ZIP BOMBER SWEATER 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003113 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$56.00</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="678367"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="56" value="621779">WC / WHITE / MEDIUM</option> <option data-typeisegiftcard="False" data-points="56" value="621782">WC / WHITE / XXLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="678367">Please select option for BOMBER SWEATER BY GEAR<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="678367" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="BOMBER SWEATER BY GEAR" data-id="678367" data-istypeless="False" data-regularprice="56" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="678367"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="11" data-merid="673278" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-673278-1.jpg" alt="Image For CAMO CREW"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=673278&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="673278">CAMO CREW</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           Women's CAMO CREW Sweatshirt 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003217 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$47.95</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="673278"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="47.95" value="555038">FASHION / FASHION / MEDIUM</option> <option data-typeisegiftcard="False" data-points="47.95" value="555039">FASHION / FASHION / LARGE</option> <option data-typeisegiftcard="False" data-points="47.95" value="555040">FASHION / FASHION / XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="673278">Please select option for CAMO CREW<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="673278" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="CAMO CREW" data-id="673278" data-istypeless="False" data-regularprice="47.95" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="673278"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="12" data-merid="280477" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-280477-1.JPG" alt="Image For CAR FLAG"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=280477&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="280477">CAR FLAG</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           Show your Whitman pride! This CAR FLAG is 14"x 11 ". It is made of nylon and comes on a sturdy plastic window holder. 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2001317 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$13.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">50 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="280477" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="CAR FLAG" data-id="280477" data-istypeless="True" data-regularprice="13.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="280477"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="13" data-merid="679570" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-679570-1.jpg" alt="Image For CHAMPION CREW SWEATSHIRT"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=679570&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="679570">CHAMPION CREW SWEATSHIRT</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           CHAMPION CREW SWEATSHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003122 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$33.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="679570"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="33.5" value="558808">WC / BLUE / XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="679570">Please select option for CHAMPION CREW SWEATSHIRT<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="679570" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="CHAMPION CREW SWEATSHIRT" data-id="679570" data-istypeless="False" data-regularprice="33.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="679570"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="14" data-merid="673882" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-673882-1.jpg" alt="Image For CHAMPION T-SHIRT"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=673882&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="673882">CHAMPION T-SHIRT</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           CHAMPION T-SHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003226 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$16.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="673882"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="16.5" value="556052">FASHION / WHITE / LARGE</option> <option data-typeisegiftcard="False" data-points="16.5" value="556053">FASHION / WHITE / XLARGE</option> <option data-typeisegiftcard="False" data-points="16.5" value="556055">FASHION / WHITE / 3XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="673882">Please select option for CHAMPION T-SHIRT<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="673882" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="CHAMPION T-SHIRT" data-id="673882" data-istypeless="False" data-regularprice="16.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="673882"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="15" data-merid="722317" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-722317-1.jpg" alt="Image For CLUB FLEECE HOODY BY NIKE"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=722317&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="722317">CLUB FLEECE HOODY BY NIKE</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           CLUB FLEECE HOODY SWEATSHIRT- 81% COTTON/ 19% POLYESTER 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003212 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$59.95</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="722317"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="59.95" value="622262">FASHION / NAVY / MEDIUM</option> <option data-typeisegiftcard="False" data-points="59.95" value="622264">FASHION / NAVY / XLARGE</option> <option data-typeisegiftcard="False" data-points="59.95" value="622265">FASHION / NAVY / XXLARGE</option> <option data-typeisegiftcard="False" data-points="59.95" value="622267">FASHION / YELLOW / MEDIUM</option> <option data-typeisegiftcard="False" data-points="59.95" value="622268">FASHION / YELLOW / LARGE</option> <option data-typeisegiftcard="False" data-points="59.95" value="622269">FASHION / YELLOW / XLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="722317">Please select option for CLUB FLEECE HOODY BY NIKE<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="722317" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="CLUB FLEECE HOODY BY NIKE" data-id="722317" data-istypeless="False" data-regularprice="59.95" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="722317"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="16" data-merid="599278" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-599278-2.jpg" alt="Image For CREW BY GEAR"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=599278&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="599278">CREW BY GEAR</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           COTTON/POLY BRUSHED BACK FLEECE PROVIDES A UNIQUE BROKEN -IN LOOK AND EXCEPTIONALLY SOFT HAND. *THE PROCESS OF THIS WASH PROVIDES A VARIATION IN COLOR FROM GARMENT TO GARMENT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2002558 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$46.95</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="599278"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="46.95" value="556354">FASHION / YELLOW / XLARGE</option> <option data-typeisegiftcard="False" data-points="46.95" value="556355">FASHION / YELLOW / XXLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="599278">Please select option for CREW BY GEAR<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="599278" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="CREW BY GEAR" data-id="599278" data-istypeless="False" data-regularprice="46.95" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="599278"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="17" data-merid="681896" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-681896-1.jpg" alt="Image For CROSSCOUNTRY T-SHIRT"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=681896&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="681896">CROSSCOUNTRY T-SHIRT</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           CROSSCOUNTRY T-SHIRT 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003265 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$16.50</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="681896"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="16.5" value="563215">SPORTS / NAVY / SMALL</option> <option data-typeisegiftcard="False" data-points="16.5" value="563216">SPORTS / NAVY / MEDIUM</option> <option data-typeisegiftcard="False" data-points="16.5" value="563217">SPORTS / NAVY / LARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="681896">Please select option for CROSSCOUNTRY T-SHIRT<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="681896" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="CROSSCOUNTRY T-SHIRT" data-id="681896" data-istypeless="False" data-regularprice="16.5" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="681896"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="18" data-merid="722331" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-722331-1.jpg" alt="Image For DOG COLLAR"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=722331&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="722331">DOG COLLAR</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           DOG COLLAR 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003185 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$11.00</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="722331"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="11" value="622332">SMALL</option> <option data-typeisegiftcard="False" data-points="11" value="622333">MEDIUM</option> <option data-typeisegiftcard="False" data-points="11" value="622334">LARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="722331">Please select option for DOG COLLAR<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="722331" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="DOG COLLAR" data-id="722331" data-istypeless="False" data-regularprice="11" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="722331"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="19" data-merid="722330" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-722330-1.jpg" alt="Image For DOG LEASH 6'"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=722330&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="722330">DOG LEASH 6'</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           DOG LEASH 6' 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003183 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$18.00</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="722330" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="DOG LEASH 6'" data-id="722330" data-istypeless="True" data-regularprice="18" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="722330"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="20" data-merid="358199" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-358199-1.JPG" alt="Image For EASEL TABLET COVER"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=358199&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="358199">EASEL TABLET COVER</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           EASEL TABLET COVER 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2002155 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$22.95</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="358199" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="EASEL TABLET COVER" data-id="358199" data-istypeless="True" data-regularprice="22.95" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="358199"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> <!--One Item--> 
+      <div data-count="21" data-merid="678396" class="merchItem padding0 bottom10 bottom_border col-xs-12"> 
+       <div class="imageWrapper"> 
+        <div class="col-xs-2 merchImageWrapper"> <!--Merch Image--> 
+         <img width="200" class="merchImage margin_auto img-responsive" src="/storeimages/144-678396-1.jpg" alt="Image For FULL ZIP HOODY"> <!--Merch Title--> 
+        </div> 
+       </div> <!--Merch Image--> <!--Merch Info--> 
+       <div class="col-xs-10 merchDetailWrapper"> <a tabindex="0" href="http://bookstore.whitman.edu/MerchDetail?MerchID=678396&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=Sale&amp;CatID=10158&amp;Name=Sale" class="merchLink displayb bottom10"> <!--Merch Title (Short Description)--> <h2 class="merchTitle top0" data-id="678396">FULL ZIP HOODY</h2> </a> 
+        <div class="merchCol1 col-sm-6 col-xs-12 bottom10"> 
+         <div class="merchDescWrap">
+          <strong>Item Description</strong>
+         </div> 
+         <div class="merchDesc">
+           FULL ZIP HOODY 
+         </div> <!--Merch Item Number--> 
+         <p class="merchNumber"><strong>Item: </strong><span class="merchSKU">2003234 </span></p> <!--Merch Price--> 
+         <p class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$55.00</span></p> <!--Merch Discount--> 
+         <p class="merchDiscount red top5">30 Percent Off</p> 
+        </div> 
+        <div class="merchCol2 col-sm-6 col-xs-12 bottom10"> <!--Merch Options--> 
+         <div class="merchOptions"> <label> <span class="hidden_label">Select Merchandise Option Before Adding to Cart</span> <span> <strong>Select:</strong></span> <select class="merchDropdown form-control wauto displayib normal" data-select="678396"> <option selected disabled>Please Select</option> <option data-typeisegiftcard="False" data-points="55" value="558008">FASHION / GRAY / XXLARGE</option> </select> </label> 
+          <p class="merchSelectError red displayn" role="alert" data-selecterror="678396">Please select option for FULL ZIP HOODY<span>.</span></p> 
+         </div> <!--Add to Cart Button--> 
+         <div class="addToCartButton top5"> 
+          <div class="displayib merchQTYLabel"> <strong> QTY : </strong> 
+          </div> 
+          <div class="displayib left15"> 
+           <input type="number" data-qtyid="678396" class="form-control merchListQTY QTY1 max displayib" value="1" maxlength="3" min="1" max="999" aria-label="Quantity"> <a tabindex="0" class="addToCart btn btn-primary top-5" data-name="FULL ZIP HOODY" data-id="678396" data-istypeless="False" data-regularprice="55" data-isloyalty="False" data-formid="0" data-isonsale="False" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0" data-storeid="144" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To Cart</a> 
+          </div> 
+         </div> 
+         <p class="addedToCart displayn" data-addedtocart="678396"><span class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span> This item has been added to your Cart.</p> 
+        </div> 
+       </div> 
+       <div class="clear"></div> 
+      </div> <!--End MerchListSection--> 
+     </div> <!--Merch Buttons--> 
+     <div class="merchButtons top10 col-xs-12 textc"> <a tabindex="0" class="firstBackward btn btn-primary btn-xs top5 displayn"><span class="fa fa-fast-backward"></span> First</a> <a tabindex="0" class="prevBackward btn btn-primary btn-xs top5 displayn"><span class="fa fa-backward"></span> Previous</a> <a tabindex="0" class="nextForward btn btn-primary btn-xs top5 displayib">Next <span class="fa fa-forward"></span></a> <a tabindex="0" class="lastForward btn btn-primary btn-xs top5 displayib">Last <span class="fa fa-fast-forward"></span></a> 
+     </div> 
+     <div class="merchResults col-xs-12 textc top5"> 
+      <p class="merchResultsText displayib right5">Showing Results <span id="showResults1">1</span> - <span id="showResults2">21</span> of 49</p> <label> <span class="hidden_label">Number of Items Per Page</span> <select class="merchResultsSelect form-control wauto displayib right5"> <option selected value="21">21</option> <option value="36">36</option> <option value="45">45</option> <option value="54">54</option> </select> </label> 
+      <p class="merchResultsPer displayib">Items Per Page</p> 
+     </div> 
+     <div class="bottomButtons col-xs-12 top5 bottom10"> <a tabindex="0" href="http://bookstore.whitman.edu/merchandise" class="backButton btn btn-primary hover_pointer btn-sm">Back</a> <a href="http://bookstore.whitman.edu/shoppingcart" tabindex="0" class="cartButton btn btn-primary hover_pointer btn-sm">Shopping Cart</a> 
+     </div> 
+     <div id="itemFormModal" class="modal fade" role="dialog"> 
+      <input type="hidden" value="" id="itemFormButton"> 
+      <input type="hidden" value="" id="itemFormType"> 
+      <div class="modal-dialog"> <!-- Modal content--> 
+       <div class="modal-content itemFormModalContent"></div> 
+      </div> 
+     </div> 
+     <div id="cartType" class="modal fade" role="dialog"> 
+      <div class="modal-dialog"> <!-- Modal content--> 
+       <div class="modal-content"> 
+        <div class="modal-body cartTypeBody"></div> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="quickViewModal" class="modal fade" role="dialog"> 
+      <div class="modal-dialog modal-lg"> <!-- Modal content--> 
+       <div class="modal-content quickViewContent"> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="overlay"> <i id="merchSpinner" class="fa fa-spinner fa-spin" style="font-size:24px"></i> 
+     </div> 
+     <div id="imageLightBox" class="modal fade" role="dialog"> 
+      <div class="modal-dialog modal-lg"> 
+       <div class="modal-content"> 
+        <div class="modal-body"> 
+         <div class="col-xs-12 padding0 bottom10"> 
+          <div class="col-md-1 col-sm-2 col-xs-2 textl"> <a class="imageLightBoxLeft btn btn-default btn-lg" style="display: inline-block;"><span class="glyphicon glyphicon-chevron-left"></span></a> 
+          </div> 
+          <div class="modalDetailImage textc col-md-10 col-sm-8 col-xs-8" data-count="0"> 
+           <img data-id="1" class="imageLightBoxBig img-responsive margin_auto" alt=""> 
+          </div> 
+          <div class="col-md-1 col-sm-2 col-xs-2 textr"> <a class="imageLightBoxRight btn btn-default btn-lg" style="display: inline-block;"><span class="glyphicon glyphicon-chevron-right"></span></a> 
+          </div> 
+         </div> 
+         <div class="modalDetailThumbnail textc"> 
+         </div> 
+        </div> 
+        <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+    <script>
+            var token = $('input[name="__RequestVerificationToken"]').val();
+            $(document).on('click', '.colorOption', function (e) {
+            e.preventDefault();
+            var disabled = $(this).is(":disabled");
+            if (disabled === true) {
+                return false;
+            }
+            $('.colorOption').removeClass('typeSelected');
+            $(this).addClass('typeSelected');
+            var merid = $(this).attr('data-merid');
+            var colorSelected = $(this).attr('data-color');
+            var tgcid = $(this).attr('data-tgcid');
+            $('.individualThumb[data-tgcid="' + tgcid + '"]').click();
+            $('#colorSelected').val(colorSelected);
+            $('.selectedColor').html(colorSelected);
+            var colorCode = $(this).attr('data-value');
+            if (colorCode === "") {
+                colorCode = "0";
+            }
+            $('#colorCodeSelected').val(colorCode);
+            var sizeSelected = $('#sizeSelected').val();
+            var sizeCode = $('#sizeCodeSelected').val();
+            if (sizeCode === "") {
+                sizeCode = "0";
+            }
+            var logoSelected = $('#logoSelected').val();
+            var logoCode = $('#logoCodeSelected').val();
+            if (logoCode === "") {
+                logoCode = "0";
+            }
+            var showHex = $('#showHex').val();
+            var logoOne = $('#logoOne').val();
+            var sizeOne = $('#sizeOne').val();
+            var firstSelected = $('#firstSelected').val();
+            if (firstSelected === undefined || firstSelected.trim() === "" || parseInt(firstSelected) >= 4 || parseInt(firstSelected) <= 0) {
+                $('#firstSelected').val('1');
+                firstSelected = 1;
+            }
+            $.ajax({
+                type: "POST",
+                url: '//bookstore.whitman.edu/MerchDetail/ColorTypeCode',
+                dataType: "json",
+                data: {__RequestVerificationToken: token, "merid": merid, "colorSelected": colorSelected, "colorCode": colorCode, "sizeSelected": sizeSelected, "sizeCode": sizeCode, "logoSelected": logoSelected, "logoCode": logoCode, "firstSelected": firstSelected, "showHex": showHex },
+                error: function (xhr) {
+                    $('#errorModal').modal('show');
+                    $('#errorModal').focus();
+                },
+                success: function (data, jqXHR) {
+                    if (data.typeOnly === undefined) {
+                        data.typeOnly = false;
+                    }
+                    if (data.colorOnly === undefined) {
+                        data.colorOnly = false;
+                    }
+                    if (data.sizeOnly === undefined) {
+                        data.sizeOnly === false;
+                    }
+                    if (data.logoOnly === undefined) {
+                        data.logoOnly = false;
+                    }
+                    if (data.typeError === undefined) {
+                        data.typeError = true;
+                    }
+                    if (data.typeOnly === true) {
+                        $('#typeselected').val(data.typeSelected);
+                    } else if (data.sizeOnly === true) {
+                        if (data.logoHtml === undefined) {
+                            data.logoHtml = ""
+                        }
+                        $('.lcsLogoWrapper').html(data.logoHtml);
+                        $('.lcsSizeWrapper').html(data.html);
+                        if (firstSelected === 1 || firstSelected === "1") {
+                            $('.selectedSize').html('');
+                        if (logoOne.toLowerCase() !== "true") {
+                            $('.selectedLogo').html('');
+                        }
+                        $('#typeselected').val('');
+                        }
+                        if ($('.lcsSizeWrapper').length > 0) {
+                            var count = 0;
+                            $('.sizeOption').each(function () {
+                                var disabled = $(this).is(":disabled");
+                                if (disabled === false) {
+                                    count = count + 1;
+                                }
+                            });
+                            if (count === 1) {
+                                $('.sizeOption').not(":disabled").click();
+                            }
+                        } else if ($('.lcsLogoWrapper').length > 0) {
+                            var count = 0;
+                            $('.logoOption').each(function () {
+                                var disabled = $(this).is(":disabled");
+                                if (disabled === false) {
+                                    count = count + 1;
+                                }
+                            });
+                            if (count === 1) {
+                                $('.logoOption').not(":disabled").click();
+                            }
+                        }
+                    } else if (data.logoOnly === true) {
+                        $('#typeselected').val('');
+                        $('.lcsLogoWrapper').html(data.html);
+                        if (firstSelected === 1 || firstSelected === "1") {
+                            if (sizeOne.toLowerCase() !== "true") {
+                                $('.selectedLogo').html('');
+                            }
+                        }
+                        if ($('.lcsLogoWrapper').length > 0) {
+                            var count = 0;
+                            $('.logoOption').each(function () {
+                                var disabled = $(this).is(":disabled");
+                                if (disabled === false) {
+                                    count = count + 1;
+                                }
+                            });
+                            if (count === 1) {
+                                $('.logoOption').not(":disabled").click();
+                            }
+                        }
+                    } else if (data.typeError === true) {
+                        $('#errorModal').modal('show');
+                        $('#errorModal').focus();
+                    }
+                }
+            });
+        });
+        $(document).on('click', '.sizeOption', function (e) {
+            e.preventDefault();
+            var disabled = $(this).is(":disabled");
+            if (disabled === true) {
+                return false;
+            }
+            $('.sizeOption').removeClass('typeSelected');
+            $(this).addClass('typeSelected');
+            var merid = $(this).attr('data-merid');
+            var sizeSelected = $(this).attr('data-size');
+            $('#sizeSelected').val(sizeSelected);
+            $('.selectedSize').html(sizeSelected);
+            var sizeCode = $(this).attr('data-value');
+            if (sizeCode === "") {
+                sizeCode = "0";
+            }
+            $('#sizeCodeSelected').val(sizeCode);
+            var colorSelected = $('#colorSelected').val();
+            var colorCode = $('#colorCodeSelected').val();
+            if (colorCode === "") {
+                colorCode = "0";
+            }
+            var logoSelected = $('#logoSelected').val();
+            var logoCode = $('#logoCodeSelected').val();
+            if (logoCode === "") {
+                logoCode = "0";
+            }
+            var showHex = $('#showHex').val();
+            var firstSelected = $('#firstSelected').val();
+            if (firstSelected === undefined || firstSelected.trim() === "" || parseInt(firstSelected) >= 4 || parseInt(firstSelected) <= 0) {
+                $('#firstSelected').val('2');
+                firstSelected = 2;
+            }
+            $.ajax({
+                type: "POST",
+                url: '//bookstore.whitman.edu/MerchDetail/SizeTypeCode',
+                dataType: "json",
+                data: {__RequestVerificationToken: token, "merid": merid, "colorSelected": colorSelected, "colorCode": colorCode, "sizeSelected": sizeSelected, "sizeCode": sizeCode, "logoSelected": logoSelected, "logoCode": logoCode, "firstSelected": firstSelected, "showHex": showHex },
+                error: function (xhr) {
+                    $('#errorModal').modal('show');
+                    $('#errorModal').focus();
+                },
+                success: function (data, jqXHR) {
+                    if (data.typeOnly === undefined) {
+                        data.typeOnly = false;
+                    }
+                    if (data.colorOnly === undefined) {
+                        data.colorOnly = false;
+                    }
+                    if (data.sizeOnly === undefined) {
+                        data.sizeOnly === false;
+                    }
+                    if (data.logoOnly === undefined) {
+                        data.logoOnly = false;
+                    }
+                    if (data.typeError === undefined) {
+                        data.typeError = true;
+                    }
+                    if (data.typeOnly === true) {
+                        $('#typeselected').val(data.typeSelected);
+                    } else if (data.colorOnly === true) {
+                        $('#typeselected').val('');
+                        $('.lcsColorWrapper').html(data.html);
+                        if (firstSelected === 2 || firstSelected === "2") {
+                            $('.selectedColor').html('');
+                        }
+                        if ($('.lcsColorWrapper').length > 0) {
+                            var count = 0;
+                            $('.colorOption ').each(function () {
+                                var disabled = $(this).is(":disabled");
+                                if (disabled === false) {
+                                    count = count + 1;
+                                }
+                            });
+                            if (count === 1) {
+                                $('.colorOption ').not(":disabled").click();
+                            }
+                        }
+                    } else if (data.logoOnly === true) {
+                        $('#typeselected').val('');
+                        $('.lcsLogoWrapper').html(data.html);
+                        if (firstSelected === 1 || firstSelected === "1" || firstSelected === 2 || firstSelected === "2") {
+                            $('.selectedLogo').html('');
+                        }
+                        if ($('.lcsLogoWrapper').length > 0) {
+                            var count = 0;
+                            $('.logoOption').each(function () {
+                                var disabled = $(this).is(":disabled");
+                                if (disabled === false) {
+                                    count = count + 1;
+                                }
+                            });
+                            if (count === 1) {
+                                $('.logoOption').not(":disabled").click();
+                            }
+                        }
+                    } else if (data.typeError === true) {
+                        $('#typeselected').val('');
+                        $('#errorModal').modal('show');
+                        $('#errorModal').focus();
+                    }
+                }
+            });
+        });
+        $(document).on('click', '.logoOption', function (e) {
+            e.preventDefault();
+            var disabled = $(this).is(":disabled");
+            if (disabled === true) {
+                return false;
+            }
+            $('.logoOption').removeClass('typeSelected');
+            $(this).addClass('typeSelected');
+            var merid = $(this).attr('data-merid');
+            var logoSelected = $(this).attr('data-logo');
+            $('#logoSelected').val(logoSelected);
+            $('.selectedLogo').html(logoSelected);
+            var logoCode = $(this).attr('data-value');
+            if (logoCode === "") {
+                logoCode = "0";
+            }
+            $('#logoCodeSelected').val(logoCode);
+            var colorSelected = $('#colorSelected').val();
+            var colorCode = $('#colorCodeSelected').val();
+            if (colorCode === "") {
+                colorCode = "0";
+            }
+            var sizeSelected = $('#sizeSelected').val();
+            var sizeCode = $('#sizeCodeSelected').val();
+            if (sizeCode === "") {
+                sizeCode = "0";
+            }
+            var showHex = $('#showHex').val();
+            var firstSelected = $('#firstSelected').val();
+            if (firstSelected === undefined || firstSelected.trim() === "" || parseInt(firstSelected) >= 4 || parseInt(firstSelected) <= 0) {
+                $('#firstSelected').val('3');
+                firstSelected = 3;
+            }
+            $.ajax({
+                type: "POST",
+                url: '//bookstore.whitman.edu/MerchDetail/LogoTypeCode',
+                dataType: "json",
+                data: {__RequestVerificationToken: token, "merid": merid, "colorSelected": colorSelected, "colorCode": colorCode, "sizeSelected": sizeSelected, "sizeCode": sizeCode, "logoSelected": logoSelected, "logoCode": logoCode, "firstSelected": firstSelected, "showHex": showHex },
+                error: function (xhr) {
+                    $('#errorModal').modal('show');
+                    $('#errorModal').focus();
+                },
+                success: function (data, jqXHR) {
+                    if (data.typeOnly === undefined) {
+                        data.typeOnly = false;
+                    }
+                    if (data.colorOnly === undefined) {
+                        data.colorOnly = false;
+                    }
+                    if (data.sizeOnly === undefined) {
+                        data.sizeOnly === false;
+                    }
+                    if (data.logoOnly === undefined) {
+                        data.logoOnly = false;
+                    }
+                    if (data.typeError === undefined) {
+                        data.typeError = true;
+                    }
+                    if (data.typeOnly === true) {
+                        $('#typeselected').val(data.typeSelected);
+                    } else if (data.sizeOnly === true) {
+                        $('#typeselected').val('');
+                        $('.lcsSizeWrapper').html(data.html);
+                        if (firstSelected === 3 || firstSelected === "3") {
+                            $('.selectedSize').html('');
+                        }
+                        if ($('.lcsSizeWrapper').length > 0) {
+                            var count = 0;
+                            $('.sizeOption').each(function () {
+                                var disabled = $(this).is(":disabled");
+                                if (disabled === false) {
+                                    count = count + 1;
+                                }
+                            });
+                            if (count === 1) {
+                                $('.sizeOption').not(":disabled").click();
+                            }
+                        }
+                    } else if (data.colorOnly === true) {
+                        $('#typeselected').val('');
+                        $('.lcsColorWrapper').html(data.html);
+                        if (firstSelected === 3 || firstSelected === "3") {
+                            $('.selectedColor').html('');
+                        }
+                        if ($('.lcsColorWrapper').length > 0) {
+                            var count = 0;
+                            $('.colorOption ').each(function () {
+                                var disabled = $(this).is(":disabled");
+                                if (disabled === false) {
+                                    count = count + 1;
+                                }
+                            });
+                            if (count === 1) {
+                                $('.colorOption ').not(":disabled").click();
+                            }
+                        }
+                    } else if (data.typeError === true) {
+                        $('#typeselected').val('');
+                        $('#errorModal').modal('show');
+                        $('#errorModal').focus();
+                    }
+                }
+            });
+        });
+    window.onscroll = function () { scrollFunction() };
+        $(document).on('click', '.quickView', function () {
+            var merid = $(this).attr('data-quickid');
+            var loyalty = $(this).attr('data-loyalty');
+            var type = $(this).attr('data-type');
+        $.ajax({
+            url: '//bookstore.whitman.edu/MerchList/QuickView',
+            data: {__RequestVerificationToken: token, "merid": merid, "loyalty": loyalty, "type": type },
+            dataType: "json",
+            type: "POST",
+            error: function (xhr) {
+                $('#errorModal').modal('show');
+                $('#errorModal').focus();
+            },
+            success: function (data, jqXHR) {
+                $('.quickViewContent').html(data.modaldata);
+                $('#quickViewModal').modal('show');
+            }
+        });
+    });
+    $(document).ready(function () {
+        /*QuickView*/
+        $(".merchItem").hover(function(){
+            var value = $(this).attr('data-merid');
+            var width = $(window).width();
+            if (width > 768) {
+                $('.quickViewWrapper[data-quick="' + value + '"]').show();
+            }
+        }, function () {
+            var value = $(this).attr('data-merid');
+            $('.quickViewWrapper[data-quick="' + value + '"]').hide();
+        });
+        /*Filter Section */
+        $('.filterButton').click(function () {
+            $('#priceError').html('');
+            var minInput = document.getElementById("filterMinInput");
+            var maxInput = document.getElementById("filterMaxInput");
+            var minValue = $('#filterMinInput').val();
+            var maxValue = $("#filterMaxInput").val();
+            if ((minInput.checkValidity()) && (maxInput.checkValidity())) {
+                var minInt = parseInt(minValue);
+                var maxInt = parseInt(maxValue);
+                if (maxInt < minInt) {
+                    $('#priceError').html('Maximum value must be higher than the minimum value.');
+                    $('#filterMaxInput').focus();
+                } else {
+                    $('#overlay').show();
+                    $('#filterSubmit').click();
+                }
+            } else {
+                $('#filterSubmit').click();
+            }
+        });
+        var numFilters = $('.filterOption').length;
+        if (numFilters >= 7) {
+            $('#filterButton1').removeClass('filterButtonDisplay');
+        }
+        $('.clearIndFilter').click(function () {
+            var category = $(this).attr('data-categoryremove');
+            var value = $(this).attr('data-value');
+            if ($('[data-category="' + category + '"][data-value="' + value + '"]').length > 0) {
+                $('[data-category="' + category + '"][data-value="' + value + '"]').click();
+                if ('False'.toLowerCase() === "true") {
+                    $('#filterMinInput').val('6');
+                    if ('False'.toLowerCase() === "true") {
+                        $('#filterMaxInput').val('');
+                    } else {
+                        $('#filterMaxInput').val('64');
+                    }
+                } else {
+                    $('#filterMinInput').val('');
+                    $('#filterMaxInput').val('');
+                }
+                $('#overlay').show();
+                $('#filterSubmit').click();
+            }
+        });
+        $('.filterCollapse').keyup(function (e) {
+            if (e.keyCode === 13) {
+                $(this).click();
+            }
+        });
+        $('.filterCollapse').click(function () {
+            var dataid = $(this).attr('data-id');
+            $('[data-filterid="' + dataid + '"]').slideToggle();
+            $(this).toggleClass('fa-plus-square');
+            $(this).toggleClass('fa-minus-square');
+        });
+        $('.clearFilters').click(function () {
+            $('#overlay').show();
+            var url = window.location.href;
+            url = removeURLParameter(url, "fc")
+            url = removeURLParameter(url, "fv")
+            window.location.href = url;
+        });
+        function removeURLParameter(url, parameter) {
+            //prefer to use l.search if you have a location/link object
+            var urlparts = url.split('?');
+            if (urlparts.length >= 2) {
+
+                var prefix = encodeURIComponent(parameter) + '=';
+                var pars = urlparts[1].split(/[&;]/g);
+
+                //reverse iteration as may be destructive
+                for (var i = pars.length; i-- > 0;) {
+                    //idiom for string.startsWith
+                    if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+                        pars.splice(i, 1);
+                    }
+                }
+
+                url = urlparts[0] + '?' + pars.join('&');
+                return url;
+            } else {
+                return url;
+            }
+        }
+        $('.viewFiltersButton').click(function () {
+            $('.filterCollapse').each(function () {
+                $(this).removeClass('fa-minus-square');
+                $(this).addClass('fa-plus-square');
+            });
+            $('.filterValueWrapper').each(function () {
+                $(this).slideUp();
+            });
+            $('#filterButton1').addClass('filterDisplay');
+            $('body').addClass('bodyOverflow');
+            $('#filterClose').removeClass('filterDisplay');
+            $('.closeFilterX').removeClass('filterDisplay');
+            $('.filterColumn').addClass('filterOverlay');
+        });
+        $('#filterClose').click(function () {
+            $('#filterButton1').removeClass('filterDisplay');
+            $('body').removeClass('bodyOverflow');
+            $('#filterClose').addClass('filterDisplay');
+            $('.closeFilterX').addClass('filterDisplay');
+            $('.filterColumn').removeClass('filterOverlay');
+        });
+        $('.closeFilterX').click(function () {
+            $('#filterButton1').removeClass('filterDisplay');
+            $('body').removeClass('bodyOverflow');
+            $('#filterClose').addClass('filterDisplay');
+            $('.closeFilterX').addClass('filterDisplay');
+            $('.filterColumn').removeClass('filterOverlay');
+        });
+        $('#filterMinInput').keydown(function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                $('.filterButton').click();
+            }
+        });
+        $('#filterMaxInput').keydown(function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                $('.filterButton').click();
+            }
+        });
+        if ('False'.toLowerCase() === 'false') {
+            $('#filterMinInput').val('');
+            $('#filterMaxInput').val('');
+            $('#filterMinInput').removeClass('visibilityHide');
+            $('#filterMaxInput').removeClass('visibilityHide');
+        }
+        if ('False'.toLowerCase() === 'true') {
+            if ('False'.toLowerCase() === 'true') {
+                $('#filterMaxInput').val('');
+                $('.priceFilterOptionText').text('$6 and Up ');
+            } else {
+                $('.priceFilterOptionText').text('$6 - $64 ');
+            }
+            $('#filterMinInput').removeClass('visibilityHide');
+            $('#filterMaxInput').removeClass('visibilityHide');
+            $('.clearIndPriceFilter').removeClass('displayn');
+            $('.clearIndPriceFilter').addClass('displayib');
+        }
+        $('.clearIndPriceFilter').click(function () {
+            $('#overlay').show();
+            $('#filterMinInput').val('');
+            $('#filterMaxInput').val('');
+            $('#filterSubmit').click();
+        });
+        $('.filterCheck').keydown(function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                $('.filterButton').click();
+            }
+        });
+        $('.layoutList').click(function () {
+            var column, tilePX, listPX;
+            column = $('#oldColumn').val();
+            listPX = $('#oldListPX').val();
+            if (column === "" || column === undefined) {
+                column = '1'
+            }
+            if (listPX === "" || listPX === undefined) {
+                listPX = $('.merchTitle').css('font-size');
+            }
+            listPX = listPX.replace("px", '');
+            newMerchItem(column, '', listPX);
+        });
+        $('.layoutTwo').click(function () {
+            var tilePX;
+            tilePX = $('#hiddenTilePX').val();
+            if (tilePX === "" || tilePX === undefined) {
+                tilePX = "14";
+            }
+            tilePX = tilePX.replace("px", '');
+            newMerchItem("2", tilePX, '');
+        });
+        $('.layoutFour').click(function () {
+            var column, tilePX, listPX;
+            column = $('#hiddenColumn').val();
+            tilePX = $('#hiddenTilePX').val();
+            if (column === "" || column === undefined) {
+                column = "4";
+            }
+            if (tilePX === "" || tilePX === undefined) {
+                tilePX = "14";
+            }
+            if (column === "0" || column === "1" || column === "2") {
+                column = "4"
+            }
+            tilePX = tilePX.replace("px", '');
+            newMerchItem(column, tilePX, '');
+        });
+
+
+
+        $('.merchItem').each(function () {
+            var merID = $(this).attr('data-merID');
+            $(this).find('.merchPriceCurrent').addClass('currentPrice' + merID);
+        });
+        $('.addToCart').click(function () {
+            var istypeless = $(this).attr('data-isTypeless');
+            var merchID = $(this).attr('data-Id');
+            var disclaimer = $(this).attr('data-disclaimer');
+            var isChecked = $('[data-disclaimer="' + merchID + '"]').is(":checked");
+            var typeValue = $('[data-select="' + merchID + '"]').val();
+            var itemGiftCard = $('[data-select="' + merchID + '"]').find("option[value=" + typeValue + "]").attr('data-typeIsEGiftCard');
+            var pricePoint = $(this).attr('data-pricePoint');
+            model = {
+                Name: '',
+                Id: '',
+                LCSId: '', //selected lcs option
+                isTypless: '',
+                classId: '',
+                loyaltyPrice: '',
+                currentPrice: '',
+                regularPrice: '',
+                isLoyalty: '',
+                merch_form_id: '',
+                isOnSale: '',
+                isEGiftCard: '',
+                isNonMerch: '',
+                merch_cs_id: '',
+                merStoreId: '',
+                quantity: '',
+                reload: ''
+            };
+
+            model.Name = $('.merchTitle[data-id="' + merchID + '"]').text();
+            model.Id = $(this).attr('data-Id');
+            model.isTypless = $(this).attr('data-isTypeless');
+            model.classId = $(this).attr('data-classid');
+            model.loyaltyPrice = $('.merchPoints').text();
+            model.currentPrice = $('.currentPrice' + merchID).text();
+            model.currentPrice = model.currentPrice.replace('$', '');
+            model.currentPrice = model.currentPrice.replace(',', '');
+            model.regularPrice = $(this).attr('data-regularPrice');
+            model.isLoyalty = $(this).attr('data-isloyalty');
+            model.merch_form_id = $(this).attr('data-formid');
+            model.isOnSale = $(this).attr('data-isonsale');
+            model.isEGiftCard = $(this).attr('data-egiftcard');
+            model.isNonMerch = $(this).attr('data-nonmerch');
+            model.merch_cs_id = $(this).attr('data-csid');
+            model.merStoreId = $(this).attr('data-storeid');
+            model.quantity = $('[data-qtyid="' + merchID + '"]').val();
+            model.reload = $(this).attr('data-reload');
+            if (istypeless.toLowerCase() == "false") {
+                if (typeValue == null) {
+                    $('[data-selectError="' + merchID + '"]').show();
+                    $('[data-disclaimerError="' + merchID + '"]').hide();
+                    $('[data-select="' + merchID + '"]').focus()
+                    return false;
+                } else {
+                    model.LCSId = typeValue;
+                    if (model.isEGiftCard.toLowerCase() == 'true')
+                    { model.isEGiftCard = itemGiftCard;}
+                    if (pricePoint.toLowerCase() == 'true') {
+                        var selectThis = $('[data-select="' + merchID + '"]');
+                        var lcsText = $(selectThis).find('option:selected').text();
+                        lcsTextPlace = lcsText.lastIndexOf("($");
+                        lcsTextPlace = lcsTextPlace + 2;
+                        lcsText = lcsText.substr(lcsTextPlace);
+                        lcsText = lcsText.replace(')', '');
+                        lcsText = lcsText.replace(',', '');
+                        model.currentPrice = lcsText;
+                        model.regularPrice = lcsText;
+
+                    }
+                }
+            }
+            if (disclaimer.toLowerCase() == 'true') {
+                if (isChecked === false) {
+                    $('[data-disclaimerError="' + merchID + '"]').show();
+                    $('[data-selectError="' + merchID + '"]').hide();
+                    $('[data-disclaimer="' + merchID + '"]').focus()
+                    return false;
+                }
+            }
+            $('.hiddenForm').attr('data-form', merchID);
+            $.ajax({
+                cache: false,
+                type: 'POST',
+                url: '//bookstore.whitman.edu/shoppingCart/AddMerchItemMain',
+                data: (model),
+                dataType: 'json',
+                error: function (xhr) {
+                    $('#errorModal').modal('show');
+                    $('#errorModal').focus();
+                },
+                success: function (data, jqXHR) {
+                    if (data.showModal == true) {
+                        $('.itemFormModalContent').html(data.modaldata);
+                        $('.itemFormTitle').html(model.Name);
+                        $('#itemFormModal').modal();
+                        $('#itemFormButton').val(merchID);
+                        $('#itemFormType').val('multiple');
+                    }
+                    else {
+                        if (data.mesg == true) {
+                            //Here we need to update mini cart with total and count values
+                            var count = data.count
+                            var total = data.total
+                            total = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+                            total = "$" + total;
+                            $("#ItemCount").text(count);
+                            $("#SubTotal").text(total);
+                            $('[data-addedtocart="' + merchID + '"]').css('display', 'inline-block');
+                        }
+                        if (data.showcarttype) {
+                            $('[data-addedtocart="' + merchID + '"]').css('display', 'none');
+                            $('.cartTypeBody').html(data.cartType);
+                            $('#cartType').modal();
+                        }
+                    }
+
+                }
+
+            });
+
+        });
+        $('.giftRegDropdown').change(function () {
+            var value = $(this).val();
+            var merID = $(this).attr('data-merid');
+            $('.addGiftRegButton[data-merid="' + merID + '"]').attr('data-regID', value);
+
+        });
+        $('.merchDropdown').change(function () {
+            var value = $(this).val();
+            var merID = $(this).attr('data-select');
+            $('.addGiftRegButton[data-merid="' + merID + '"]').attr('data-dropdownValue', value);
+            $('.addSingleReg[data-merid="' + merID + '"]').attr('data-dropdownValue', value);
+        });
+        $('.addGiftRegButton').click(function () {
+            var merID = $(this).attr('data-merid');
+            var check = $(this).attr('data-dropDown');
+            var value = $(this).attr('data-regid');
+            var dropdownValue = $(this).attr('data-dropdownvalue');
+            if (value <= 0) {
+                $('.addGiftError[data-addgifterror="' + merID + '"]').show();
+                $('.addGiftErrorLCS[data-addgifterrorLCS="' + merID + '"]').hide();
+
+                $('.giftRegDropdown[data-addgifterror="' + merID + '"]').focus();
+                return false;
+            }
+            model = {
+                itemId: '',
+                Name: '',
+                merStoreId: '',
+                regId: '',
+                LCSId: ''
+            }
+            if (check == "true") {
+                if (dropdownValue <= 0) {
+                    $('.addGiftErrorLCS[data-addgifterrorLCS="' + merID + '"]').show();
+                    $('.addGiftError[data-addgifterror="' + merID + '"]').hide();
+                    $('.merchDropdown[data-select="' + merID + '"]').focus();
+                    return false;
+                }
+                model.LCSId = $(this).attr('data-dropdownvalue');
+            } else {
+                model.LCSId = '';
+            }
+            model.itemId = $(this).attr('data-merid');
+            model.merStoreId = $(this).attr('data-store');
+            model.regId = $(this).attr('data-regid');
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: '//bookstore.whitman.edu/CourseMaterials/AddMerchReg',
+                data: {__RequestVerificationToken: token, "model": model},
+                dataType: "json",
+                error: function (xhr) {
+                    $('#errorModal').modal('show');
+                    $('#errorModal').focus();
+                },
+                success: function (data, jqXHR) {
+                    if (data == 'added') {
+                        $('.giftRegWrapper[data-merid="' + merID + '"]').remove();
+                        $('.addGiftAdded[data-giftadded="' + merID + '"]').show();
+                    }
+                    else {
+
+                    }
+
+                }
+            });
+        });
+        $('.addSingleReg').click(function () {
+            var merID = $(this).attr('data-merid');
+            var check = $(this).attr('data-dropDown');
+            var value = $(this).attr('data-regid');
+            var dropdownValue = $(this).attr('data-dropdownvalue');
+            if (value <= 0) {
+                $('.addGiftError[data-addgifterror="' + merID + '"]').show();
+                $('.addGiftErrorLCS[data-addgifterrorLCS="' + merID + '"]').hide();
+
+                $('.giftRegDropdown ').focus();
+                return false;
+            }
+            model = {
+                itemId: '',
+                Name: '',
+                merStoreId: '',
+                regId: '',
+                LCSId: ''
+            }
+            if (check == "true") {
+                if (dropdownValue <= 0) {
+                    $('.addGiftErrorLCS[data-addgifterrorLCS="' + merID + '"]').show();
+                    $('.addGiftError[data-addgifterror="' + merID + '"]').hide();
+                    $('.merchDropdown[data-addgifterrorLCS="' + merID + '"]').focus();
+                    return false;
+                }
+                model.LCSId = $(this).attr('data-dropdownvalue');
+            } else {
+                model.LCSId = '';
+            }
+            model.itemId = $(this).attr('data-merid');
+            model.merStoreId = $(this).attr('data-store');
+            model.regId = $(this).attr('data-regid');
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: '//bookstore.whitman.edu/CourseMaterials/AddMerchReg',
+                data: {__RequestVerificationToken: token, "model": model},
+                dataType: "json",
+                error: function (xhr) {
+                    $('#errorModal').modal('show');
+                    $('#errorModal').focus();
+                },
+                success: function (data, jqXHR) {
+                    if (data == 'added') {
+                        $('.giftRegWrapper[data-merid="' + merID + '"]').remove();
+                        $('.addGiftAdded[data-giftadded="' + merID + '"]').show();
+                    }
+                    else {
+
+                    }
+
+                }
+            });
+        });
+    });
+
+    </script> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="BottomSection" class="clear"> 
+  <div class="wc-footer"> <a href="https://www.whitman.edu/"> <img class="wc-footer-logo img-responsive" alt="Whitman College logo" src="/SiteImages/107-SchoolImages/107-RWD/107-whitman-logo-footer.svg" style="text-align: center;"> </a> 
+   <p class="wc-social"> <a href="https://www.facebook.com/whitmancollege"> <span class="wc-social-icons"> <em class="fab fa-facebook"></em> </span> </a> <a href="https://twitter.com/whitmancollege"> <span class="wc-social-icons"> <em class="fab fa-twitter"></em> </span> </a> <a href="https://www.instagram.com/whitmancollege"> <span class="wc-social-icons"> <em class="fab fa-instagram"></em> </span> </a> <a href="https://www.youtube.com/whitmancollege"> <span class="wc-social-icons"> <em class="fab fa-youtube"></em> </span> </a> </p> 
+  </div> <!-- .wc-footer --> 
+  <input name="6716205" type="hidden" value="{ id = Text_Id }"> 
+ </div> 
+ <div class="modal fade" id="errorModal" role="dialog"> 
+  <div class="modal-dialog"> <!-- Modal content--> 
+   <div class="modal-content"> 
+    <div class="modal-header"> 
+     <p class="modal-title">Critical Error!</p> 
+    </div> 
+    <div class="modal-body"> 
+     <p>Failed to call the server.</p> 
+    </div> 
+    <div class="modal-footer"> <a type="button" class="btn btn-default hover_pointer" data-dismiss="modal">Close</a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="dynamicModal" class="modal fade" role="dialog"> 
+  <input type="hidden" value="" id="dynamicButton"> 
+  <div class="modal-dialog"> <!-- Modal content--> 
+   <div class="modal-content dynamicModalContent"> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="sessionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static"> 
+  <div class="modal-dialog"> <!-- Modal content--> 
+   <div class="modal-content"> 
+    <div class="modal-header"> 
+     <p class="modal-title">Session Timeout</p> 
+    </div> 
+    <div class="modal-body"> 
+     <p>Your session has timed out and requires a page refresh.</p> 
+    </div> 
+    <div class="modal-footer"> <a class="btn btn-default sessionClose">Refresh Page</a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</main> 
+<footer> 
+</footer> 
+<div id="div_privacy" class="textc">
+ <a href="/Privacy" tabindex="0">Privacy and Disclaimer</a>
+</div> 
+<div id="Server">
+ I.3.B 
+</div> 
+<script>
+$( "#Cart" ).appendTo( "#wc-header-cart" );
+$("#Cart").addClass("pull-right");
+$("#H_Search").appendTo("#wc-nav-search");
+</script> 
+<script type="text/javascript">
+        $(document).ready(function () {
+                //ADA fix keeps .ui-dialog from loading twice on the page
+                $('.ui-dialog').each(function (e) {
+                    if (e != 0) {
+                        $(this).remove();
+                    }
+                });
+            });
+
+    </script> 
+<script type="text/javascript">
+        //allowing maintain scroll position on postbacks for mvc
+        $(document).scroll(function(){
+            localStorage['ControllerPageName'] = document.URL;
+            localStorage['MaintainScrollPosition'] = $(document).scrollTop();
+        });
+        $(document).ready(function () {
+            var postMethod = "GET";
+            var scrollPositionIgnore = $('#scrollPositionIgnore').length;
+            if (postMethod === "POST" && scrollPositionIgnore <= 0) {
+                if (localStorage['ControllerPageName'] == document.URL) {
+                    $(document).scrollTop(localStorage['MaintainScrollPosition']);
+                }
+            }
+            $('.ui-dialog-titlebar-close').html('X');
+            $('.sessionClose').click(function () {
+                window.location.reload();
+            });
+        });
+        window.onload = function () {
+            setTimeout(SessionAlert, 59 * 60000);
+        }
+        function SessionAlert() {
+           $('#sessionModal').modal('show');
+           $('body').css('overflow', 'hidden');
+        }
+    </script>
+</body>
+</doc>

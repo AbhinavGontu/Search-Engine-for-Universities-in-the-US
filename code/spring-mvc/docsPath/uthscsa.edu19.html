@@ -1,0 +1,941 @@
+<doc>
+<filename>uthscsa.edu19.html</filename>
+<url>http://miniorange.com/cyber-security</url>
+<ip>34.203.20.53</ip>
+<title>Cloud Security - Secure your website</title>
+<body>
+<form style="display:none;" id="loginform" action="https://login.xecurify.com/moas/login" target="_blank" method="post"> 
+ <input type="text" name="redirectUrl" value="https://login.xecurify.com/moas/initializepayment"> 
+ <input type="text" name="requestOrigin" id="requestOrigin"> 
+</form> 
+<div class="header"> 
+ <nav class="navbar header-navbar navbar-default navbar-fixed-top"> 
+  <div class="hamburger-icon pull-right"> <a href="javascript:void(0)" id="hamburger-menu" style="color:black"> <i class="fa fa-bars"></i> </a> 
+  </div> 
+  <div class="appended-search"></div> 
+  <div class="navbar-header"> <a href="https://miniorange.com" class="navbar-brand mini-logo logo"></a> 
+  </div> 
+  <div class="container-fluid "> 
+   <div class="row upper-header pull-right"> 
+    <div class="col-sm-12 link-container" style="font-size:14px!important;"> <gcse:search></gcse:search> <a href="contact" type="button" class="btn button-outline-green outer-block-signup-contact-btns">CONTACT US</a> <a href="businessfreetrial" type="button" class="btn button-green outer-block-signup-contact-btns">SIGN UP</a> 
+     <p class="pull-right"><a href="https://login.xecurify.com/moas/login" style="color:#33373e!important;">SIGN IN</a> | <a href="https://idp.miniorange.com/miniorange-idp-partners-program/" target="_blank" style="color:#33373e!important;">PARTNERS</a></p> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+      (function() {
+      var cx = '009065221822862880660:6qux6l7mmqy';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+      })();
+    </script> 
+  <div class="nav header-nav navbar-nav pull-right"> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">SSO Platform <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-3 header-level-2-column"> 
+       <h2 class="text-center">Choose Your Platform</h2> 
+       <div class="header-card" data-link="https://idp.miniorange.com/"> 
+        <h3>Cloud Platform</h3> 
+        <p>Deploy comprehensive miniOrange solutions in the cloud of your choice.</p> 
+       </div> 
+       <div class="header-card" data-link="https://idp.miniorange.com/"> 
+        <h3>On-Premise</h3> 
+        <p>Control access to all data and processes by hosting our solution on your own premises.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-prod"> 
+        <h3><a href="/single-sign-on-sso">Single Sign-On</a></h3> 
+        <p>Enable secure and seamless login into any application of your choice.</p> 
+        <br> 
+        <h3><a href="/directory-services">Directory Services</a></h3> 
+        <p>Support authentication via any external directory like AD, LDAP, AWS Cognito etc.</p> 
+        <br> 
+        <h3><a href="/identity-broker-service">Identity Brokering</a></h3> 
+        <p>Gateway service to connect multiple apps with various external IdPs supporting different protocols.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-prod"> 
+        <h3><a href="/adaptive-multi-factor-authentication-mfa">Adaptive SSO</a></h3> 
+        <p>Restrict access to apps based on IP, Device, Time &amp; location-based restriction.</p> 
+        <br> 
+        <h3><a href="/user-provisioning">User Provisioning</a></h3> 
+        <p>Creation &amp; management of an end user's objects in relation to accessing resource.</p> 
+        <br> 
+        <h3><a href="/oauth2-server">OAuth 2.0 Server</a></h3> 
+        <p>Verify identity of end-users based on authentication performed by an Authorization Server.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <h2>Popular SSO Solutions</h2> 
+       <div class="header-busi-sol"> <span><img src="/images/header/microsoft-icon.webp" class="header-cms-img" alt="Microsoft apps sso"></span> <span><h5><a href="sso-2fa-integration-for-microsoft-applications">&nbsp;Microsoft Office Apps SSO</a></h5></span> 
+       </div>
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img src="/images/header/google-icon.webp" class="header-cms-img" style="width: 37px;margin: 7px 0 0 9px;" alt="google workspace sso"></span> <span><h5><a href="google-apps-single-sign-on-(sso)">&nbsp;&nbsp;G-Suite SSO</a></h5></span> 
+       </div>
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img src="/images/header/oracle-icon.webp" class="header-cms-img" style="margin: 7px 0 0 4px;" alt="Oacle SSO"></span> <span><h5><a href="oracle-single-sign-on-(sso)">&nbsp;Oracle Apps SSO</a></h5></span> 
+       </div>
+       <br>
+       <br> 
+       <div class="header-busi-sol"> 
+        <h5><a href="https://idp.miniorange.com/apps-integration/" target="_blank">More SSO Solutions&nbsp;<i class="fas fa-arrow-right"></i></a></h5> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">2FA <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-3 header-level-2-column"> 
+       <h2 class="text-center">Add Secure Layer</h2> 
+       <div class="header-card" data-link="/two-factor-authentication-(2fa)"> 
+        <h3>Two Factor Authentication</h3> 
+        <p>Secure user identity with an additional layer of authentication.</p> 
+       </div> 
+       <div class="header-card" data-link="https://www.miniorange.com/fraud"> 
+        <h3>Adaptive MFA</h3> 
+        <p>MFA depending on a user’s risk profile and behavior as part of an ongoing process.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-prod"> 
+        <h3><a href="two-factor-authentication-(2fa)">2FA for Web Apps</a></h3> 
+        <p>Login with more security into your web applications.</p> 
+        <br> 
+        <h3><a href="https://developers.miniorange.com/docs/idp/api/multi-factor-authentication" target="_blank">2FA using APIs</a></h3> 
+        <p>Add an extra layer of authentication for secure login using APIs.</p> 
+        <br> 
+        <h3><a href="steps-to-enable-two-factor-authentication-(2fa)-for-linux">2FA for Linux</a></h3> 
+        <p>Secure local or remote login into your Linux system.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-prod"> 
+        <h3><a href="https://idp.miniorange.com/apps-integration/?id=vpn" target="_blank">2FA for VPN</a></h3> 
+        <p>Secure login into VPN with an additional layer of authentication.</p> 
+        <br> 
+        <h3><a href="two-factor-authentication-(2fa)-for-windows-login-and-rdp">2FA for Windows</a></h3> 
+        <p>Logon to Windows and RDP using miniOrange 2FA credential provider.</p> 
+        <br> 
+        <h3><a href="network-single-sign-on">Radius Authentication</a></h3> 
+        <p>Solutions depending upon business scenarios using RADIUS protocol.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column text-center"> 
+       <h2 class="text-center">Popular VPN Solutions</h2> 
+       <div class="header-busi-sol"> <span><img src="/images/header/header-fortinet-logo.png" class="header-cms-img" style="margin-left: -20px;" alt="Two Factor Authentication for Fortinet VPN"></span> <span><h5><a href="two-factor-authentication-for-fortinet">&nbsp;&nbsp;2FA for Fortinet</a></h5></span> 
+       </div>
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img src="/images/header/header-anyconnect-logo.png" class="header-cms-img" style="margin-left: 15px;" alt="Two Factor Authentication for AnyConnect VPN"></span> <span><h5><a href="two-factor-authentication-for-cisco-any-connect">&nbsp;&nbsp;2FA for AnyConnect</a></h5></span> 
+       </div>
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img src="/images/header/header-paloalto-logo.png" class="header-cms-img" alt="Two Factor Authentication for Palo Alto VPN"></span> <span><h5><a href="two-factor-authentication-for-palo-alto">&nbsp;&nbsp;2FA for Palo Alto</a></h5></span> 
+       </div>
+       <br>
+       <br> 
+       <div class="header-busi-sol"> 
+        <h5><a href="https://idp.miniorange.com/apps-integration/?id=vpn" target="_blank">More VPN Solutions&nbsp;<i class="fas fa-arrow-right"></i></a></h5> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Atlassian <i class="fas fa-angle-down pull-right"></i></a> 
+    <div id="atlassian" class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-card" data-link="https://www.miniorange.com/atlassian"> 
+        <h3>Atlassian Top Add-Ons</h3> 
+        <p>Secure Authentication and logon into Atlassian with miniOrange suite of apps.</p> 
+       </div> 
+       <div class="header-card" data-link="https://plugins.miniorange.com/miniorange-partners-program-atlassian"> 
+        <h3>Partners Program</h3> 
+        <p>Exclusive benefits &amp; updates which help you to serve your clients to grow their business.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fab fa-keycdn header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/saml-single-sign-on" target="_blank">SAML Single Sign-On</a></h5> </span> 
+       </div> 
+       <p>Seamless login to <a href="https://plugins.miniorange.com/jira-saml-single-sign-on-sso" target="_blank">JIRA</a>, <a href="https://plugins.miniorange.com/confluence-saml-single-sign-on-sso" target="_blank">Confluence</a>, <a href="https://plugins.miniorange.com/bitbucket-saml-single-sign-on-sso" target="_blank">Bitbucket</a>, <a href="https://plugins.miniorange.com/bamboo-saml-single-sign-on-sso" target="_blank">Bamboo</a>, <a href="https://plugins.miniorange.com/fisheye-saml-single-sign-on-sso" target="_blank">Fisheye</a> and <a href="https://www.miniorange.com/crowd-single-sign-on-(sso)" target="_blank">Crowd</a> using your IdP.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-key header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/rest-api-access" target="_blank">API Token Authentication</a></h5> </span> 
+       </div> 
+       <p>Authenticate <a href="https://plugins.miniorange.com/jira-rest-api-authentication" target="_blank">JIRA</a> &amp; <a href="https://plugins.miniorange.com/confluence-rest-api-authentication" target="_blank">Confluence</a> APIs using any OAuth/OIDC provider or API Tokens.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-sync header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/user-and-group-sync" target="_blank">User and Group Sync</a></h5> </span> 
+       </div> 
+       <p>Manage users and groups in one place and sync to <a href="https://plugins.miniorange.com/jira-user-and-group-sync" target="_blank">JIRA</a> and <a href="https://plugins.miniorange.com/confluence-user-and-group-sync" target="_blank">Confluence</a>.</p> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-user-lock header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/oauth-openid-sso" target="_blank">OAuth/OpenID SSO</a></h5> </span> 
+       </div> 
+       <p>Login in <a href="https://plugins.miniorange.com/jira-oauth-openid-single-sign-on-sso" target="_blank">JIRA</a>, <a href="https://plugins.miniorange.com/confluence-oauth-openid-single-sign-on-sso" target="_blank">Confluence</a>, <a href="https://plugins.miniorange.com/bitbucket-oauth-openid-single-sign-on-sso" target="_blank">Bitbucket</a> and <a href="https://plugins.miniorange.com/bamboo-oauth-openid-single-sign-on-sso" target="_blank">Bamboo</a> accounts using OAuth 2.0 Server.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fab fa-usb header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/crowd-sso-connector" target="_blank">SSO Crowd Connectors</a></h5> </span> 
+       </div> 
+       <p>Manage users &amp; groups in Crowd for SSO in <a href="https://marketplace.atlassian.com/apps/1220053/sso-connector-for-crowd-and-jira?hosting=datacenter&amp;tab=overview" target="_blank">JIRA</a>, <a href="https://marketplace.atlassian.com/apps/1220055/sso-connector-for-crowd-and-confluence?hosting=datacenter&amp;tab=overview" target="_blank">Confluence</a>, <a href="https://marketplace.atlassian.com/apps/1220057/sso-connector-for-crowd-and-bitbucket?hosting=datacenter&amp;tab=overview" target="_blank">Bitbucket</a>, <a href="https://marketplace.atlassian.com/apps/1220056/sso-connector-for-crowd-and-bamboo?hosting=server&amp;tab=overview" target="_blank">Bamboo</a> &amp; <a href="https://marketplace.atlassian.com/apps/1222983/sso-connector-for-crowd-and-fisheye?hosting=server&amp;tab=overview" target="_blank">Fisheye</a>.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-user-check header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/git-authentication" target="_blank">Git Authentication</a></h5> </span> 
+       </div> 
+       <p>Use your Identity Provider credentials to login into <a href="https://marketplace.atlassian.com/apps/1222442/enterprise-git-login-for-bitbucket?hosting=server&amp;tab=overview">Bitbucket</a> from any Git Client.</p> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-unlock-alt header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/kerberos-ntlm-sso" target="_blank">Kerberos/NTLM SSO</a></h5> </span> 
+       </div> 
+       <p>Passwordless login for <a href="https://plugins.miniorange.com/integrate-kerberos-authentication-jira" target="_blank">JIRA</a> and <a href="https://plugins.miniorange.com/integrate-kerberos-authentication-confluence" target="_blank">Confluence</a> using Kerberos Authentication.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-fingerprint header-icons-style"></i></span> <span> <h5><a href="https://developers.miniorange.com/docs/atlassian/two-factor-authentication" target="_blank">Two Factor Authentication</a></h5> </span> 
+       </div> 
+       <p>Add additional layer of authentication for secure login in <a href="https://plugins.miniorange.com/jira-two-factor-authentication-2fa" target="_blank">JIRA</a>, <a href="https://plugins.miniorange.com/confluence-two-factor-authentication-2fa" target="_blank">Confluence</a>, <a href="https://plugins.miniorange.com/bitbucket-two-factor-authentication-2fa" target="_blank">Bitbucket</a> &amp; <a href="https://plugins.miniorange.com/two-factor-authentication-2fa-for-bamboo" target="_blank">Bamboo</a>.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">WordPress <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-card" data-link="https://plugins.miniorange.com/wordpress-single-sign-on-sso"> 
+        <h3>SAML Single Sign-On</h3> 
+        <p>Seamless login to your WordPress site using any Identity Provider.</p> 
+       </div> 
+       <div class="header-card" data-link="https://plugins.miniorange.com/wordpress-oauth-client"> 
+        <h3>OAuth Single Sign-On</h3> 
+        <p>Securly sign in into WordPress site with your choice of OAuth Provider.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-user-lock header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/wordpress-single-sign-on-sso" target="_blank">SAML Service Provider</a></h5></span> 
+       </div> 
+       <p>Securely authenticate the user to the WordPress site with any IdP.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-user-shield header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/wordpress-oauth-client" target="_blank">OAuth Client</a></h5></span> 
+       </div> 
+       <p>Single Sign-On or login with your any OAuth and OpenID Connect servers.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="far fa-address-book header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/wordpress-ldap-login-intranet-sites" target="_blank">LDAP/AD Login For Intranet</a></h5></span> 
+       </div> 
+       <p>Login using credentials stored in your LDAP Server.</p> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-user-cog header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/wordpress-saml-idp/" target="_blank">SAML Identity Provider</a></h5></span> 
+       </div> 
+       <p>Login into any SAML 2.0 compliant Service Provider using your WordPress site.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-server header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/wordpress-oauth-server" target="_blank">OAuth Server</a></h5></span> 
+       </div> 
+       <p>Allows SSO for client apps to use WordPress as OAuth Server and access OAuth API’s.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="far fa-comment-dots header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/wordpress-otp-verification" target="_blank">OTP Verification</a></h5></span> 
+       </div> 
+       <p>Remove possibility of user registering with fake Email Address/Mobile Number.</p> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-key header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/wordpress-rest-api-authentication" target="_blank">REST API Authentication</a></h5></span> 
+       </div> 
+       <p>Secure the unauthorized access using different authentication credentials.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-fingerprint header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/2-factor-authentication-for-wordpress" target="_blank">Two Factor Authentication</a></h5></span> 
+       </div> 
+       <p>Secure login to your website with an additional layer of authentication.</p> 
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fas fa-user-plus header-icons-style"></i></span> <span><h5><a href="https://plugins.miniorange.com/social-login-social-sharing" target="_blank">Social Login Social Sharing</a></h5></span> 
+       </div> 
+       <p>Allow visitors to comment, share, login &amp; register with Social Media applications.</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Connectors <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/atlassian-logo.png" alt="atlassian"></span> <span> <h5><a href="https://plugins.miniorange.com/atlassian" target="_blank">Atlassian</a></h5> <p>Secure Authentication and logon into Atlassian with miniOrange suite of apps.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/wordpress-logo.png" alt="wordpress"></span> <span> <h5><a href="https://plugins.miniorange.com/wordpress" target="_blank">WordPress</a></h5> <p>Wide range of security plugins consisting of SAML/OAuth SSO, OTP Verification, 2FA etc.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/drupal.png" alt="drupal"></span> <span> <h5><a href="https://plugins.miniorange.com/drupal" target="_blank">Drupal</a></h5> <p>Wide range of security extensions consisting of SAML SSO, OTP Verification, 2FA and many more.</p> </span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/joomla.png" alt="joomla"></span> <span> <h5><a href="https://plugins.miniorange.com/joomla" target="_blank">Joomla</a></h5> <p>Modules for Single Sign-On using SAML and OAuth, OTP Verification, 2FA and more.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/magento-logo.png" alt="magento"></span> <span> <h5><a href="https://plugins.miniorange.com/magento" target="_blank">Magento</a></h5> <p>Ready to use solutions such as SAML Single Sign-On, Two Factor Authentication and Social Login.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/moodle-logo.png" alt="moodle"></span> <span> <h5><a href="https://plugins.miniorange.com/moodle" target="_blank">Moodle</a></h5> <p>Login to your moodle account using our Single Sign-On plugin using your IdP.</p> </span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/october-logo.png" alt="october cms"></span> <span> <h5><a href="octobercms-single-sign-on-(sso)">October CMS</a></h5> <p>Eliminate the need to remember passwords using our SAML Single Sign-On plugin.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/dnn-logo.png" alt="DNN"></span> <span> <h5><a href="https://plugins.miniorange.com/dotnetnuke-dnn-saml-single-sign-on-sso" target="_blank">DNN</a></h5> <p>Get easy and seamless access to all resources using SAML Single Sign-On module.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/shopify-logo.png" style="width: 40px;margin-right: 10px;" alt="Shopify Single Sign On SSO"></span> <span> <h5><a href="https://plugins.miniorange.com/shopify-single-sign-on" target="_blank">Shopify</a></h5> <p>Secure access to your Shopify application within minutes with ready to use Single Sign-On Solution.</p> </span> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Security <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-card" data-link="http://apisecurity.miniorange.com/"> 
+        <h3>API Security</h3> 
+        <p>Protects your APIs from unauthorized access without sacrificing user experience.</p> 
+       </div> 
+       <div class="header-card" data-link="https://security.miniorange.com/"> 
+        <h3>Network Security</h3> 
+        <p>Make your website more secure with less efforts and in less time.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-9 header-level-2-column"> 
+       <div class="col-md-3"> 
+        <br> <a href="http://apisecurity.miniorange.com/" target="_blank"><h3>API Security</h3></a> <a href="https://plugins.miniorange.com/wordpress-rest-api-authentication" target="_blank">WordPress</a> <a href="https://plugins.miniorange.com/jira-rest-api-authentication" target="_blank">JIRA</a> <a href="https://plugins.miniorange.com/confluence-rest-api-authentication" target="_blank">Confluence</a> <a href="https://apisecurity.miniorange.com/api-security-with-saml-identity-provider/" target="_blank">API Security With SAML IdP</a> <a href="https://apisecurity.miniorange.com/api-security-with-oauth/" target="_blank">API Security With OAuth</a> <a href="https://apisecurity.miniorange.com/api-security-with-api-key/" target="_blank">API Security With API Key</a> 
+       </div> 
+       <div class="col-md-3"> 
+        <br> <a href="https://security.miniorange.com/reverse-proxy/" target="_blank"><h3>Reverse Proxy</h3></a> <a href="https://security.miniorange.com/traffic-monitoring-analytics/" target="_blank">Traffic Monitoring &amp; Analytics</a> <a href="https://security.miniorange.com/server-need-ssl-tls-offloading-ssl-tls-offloading/" target="_blank">SSL / TLS Encryption Offload</a> <a href="https://security.miniorange.com/http-load-balancer/" target="_blank">Load Balancing</a> <a href="https://security.miniorange.com/rate-limiting-with-miniorange-reverse-proxy/" target="_blank">Rate Limiting</a> 
+       </div> 
+       <div class="col-md-3"> 
+        <br> <a href="https://security.miniorange.com/" target="_blank"><h3>Network Security</h3></a> <a href="https://security.miniorange.com/captive-portal/" target="_blank">Captive Portal</a> <a href="https://security.miniorange.com/malware-scanner/" target="_blank">Malware Scanner</a> <a href="https://security.miniorange.com/web-application-firewall-waf/" target="_blank">Firewall</a> <a href="https://security.miniorange.com/encrypted-backup-recovery/" target="_blank">Encrypted Backup</a> <a href="https://security.miniorange.com/login-security-and-spam-protection/" target="_blank">Login and SPAM Protection</a> 
+       </div> 
+       <div class="col-md-3"> 
+        <br> <a href="https://cyberforensics.miniorange.com/" target="_blank"><h3>Cyber Forensics</h3></a> <a href="https://cyberforensics.miniorange.com/upi-fraud" target="_blank">UPI Fraud</a> <a href="https://cyberforensics.miniorange.com/olx-fraud/" target="_blank">OLX Fraud</a> <a href="https://cyberforensics.miniorange.com/tinder-fraud/" target="_blank">Tinder Fraud</a> <a href="https://cyberforensics.miniorange.com/income-tax-fraud/" target="_blank">Income Tax Fraud</a> <a href="https://cyberforensics.miniorange.com/otp-fraud/" target="_blank">OTP Fraud</a> <a href="https://cyberforensics.miniorange.com/crypto-currency-fraud/" target="_blank">Crypto Currency Fraud</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Solutions <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-3 header-level-2-column"> 
+       <div class="header-card" data-link="https://idp.miniorange.com/apps-integration/"> 
+        <h3>App Integrations</h3> 
+        <p>5000+ pre-integrated app supporting protocols like saml, oauth, jwt, etc.</p> 
+       </div> 
+       <div class="header-card" data-link="https://idp.miniorange.com/idp-setup-guides/"> 
+        <h3>IdP/Directory Integrations</h3> 
+        <p>Connect with any External IdP via SAML, OAuth, CAS or User Directory, DB Connection or APIs.</p> 
+       </div> 
+      </div> 
+      <div class="col-md-6 header-level-2-column"> 
+       <br> 
+       <div class="col-md-4"> 
+        <h3>SSO Solutions</h3> <a href="google-apps-single-sign-on-(sso)">Google Apps</a> <a href="office-365-single-sign-on-(sso)">Office 365</a> <a href="oracle-ebs-single-sign-on-(sso)">Oracle EBS</a> <a href="amazon-web-services-(aws)-single-sign-on-(sso)">AWS</a> <a href="freshdesk-single-sign-on-(sso)">Freshdesk</a> <a href="zoho-single-sign-on-(sso)">Zoho</a> <a href="share-point-single-sign-on-(sso)">Sharepoint</a> 
+        <div class="header-more-link"> 
+         <p><a href="https://idp.miniorange.com/apps-integration/">More SSO Solutions <i class="fas fa-arrow-right"></i></a></p> 
+        </div> 
+       </div> 
+       <div class="col-md-4"> 
+        <h3>2FA Solutions</h3> <a href="two-factor-authentication-for-open-vpn">OpenVPN</a> <a href="two-factor-authentication-for-palo-alto">Palo Alto</a> <a href="two-factor-authentication-for-fortinet">Fortinet</a> <a href="two-factor-authentication-(2fa)-for-aws-workspaces">AWS Workspace</a> <a href="two-factor-authentication-for-windows-vpn-(pptp)">Windows VPN</a> <a href="two-factor-authentication-for-zoom">Zoom</a> <a href="two-factor-authentication-for-cisco-webex">Cisco Webex</a> 
+        <div class="header-more-link"> 
+         <p><a href="https://idp.miniorange.com/apps-integration/?id=vpn">More VPN Solutions <i class="fas fa-arrow-right"></i></a></p> 
+        </div> 
+       </div> 
+       <div class="col-md-4"> 
+        <h3>Mobile Solutions</h3> 
+        <li><a href="react-native-android-adfs-single-sign-on(sso)">React Native - Android</a></li> 
+        <li><a href="node-js-adfs-single-sign-on(sso)">Node.JS</a></li> 
+        <li><a href="angular-js-adfs-single-sign-on(sso)">Angular JS</a></li> 
+        <div class="header-more-link"> 
+         <p><a href="https://idp.miniorange.com/apps-integration/?id=mobile-apps">More Solutions <i class="fas fa-arrow-right"></i></a></p> 
+        </div> 
+        <h3>SSO Connectors</h3> <a href="laravel-single-sign-on-(sso)">Laraval</a> <a href="https://plugins.miniorange.com/asp-dot-net-saml-2-0-single-sign-sso-connector">ASP.Net</a> <a href="https://plugins.miniorange.com/java-single-sign-on-sso-connector">JAVA</a> 
+        <div class="header-more-link"> 
+         <p><a href="https://idp.miniorange.com/apps-integration/?id=connector">More Solutions <i class="fas fa-arrow-right"></i></a></p> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="col-md-3 header-level-2-column"> 
+       <h2 class="text-center">IAM Business Solutions</h2> 
+       <div class="header-busi-sol"> <span><i class="fas fa-briefcase header-icons"></i></span> <span> <h5><a href="https://idp.miniorange.com/b2b-pricing/" target="_blank">B2B Solution</a></h5> <p>For your employees, vendors and contractors.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-hand-holding-usd header-icons"></i></span> <span> <h5><a href="https://idp.miniorange.com/b2c-pricing/" target="_blank">B2C Solution</a></h5> <p>For your consumer-facing web and mobile applications.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-university header-icons"></i></span> <span> <h5><a href="https://docs.miniorange.com/single-sign-on-for-schools-and-universities" target="_blank">B2Edu Solution</a></h5> <p>For educational institutes to manage security environment.</p> </span> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Company <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img src="/images/header/mo-icon.png" height="50" width="50" style="margin: 10px 15px 0 5px;" alt="miniOrange About Us"></span> <span> <h5><a href="/about_us">About Us</a></h5> <p>We secure IT right.</p> <br> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-hand-holding-heart header-icons-style"></i></span> <span> <h5><a href="/charity-towards-covid-19">Charity</a></h5> <p>miniOrange helping hands towards COVID-19.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-chalkboard-teacher header-icons-style"></i></span> <span> <h5><a href="https://training.miniorange.com/" target="_blank">Training</a></h5> <p>Develop technical skills and gain experience dealing with customers.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-user-tie header-icons-style"></i></span> <span> <h5><a href="/career">Careers</a></h5> <p>Join our enthusiastic and fast growing team.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><i class="far fa-newspaper header-icons-style"></i></span> <span> <h5><a href="/newsandevents">News</a></h5> <p>Stay informed on the latest happenings at miniOrange.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="far fa-handshake header-icons-style"></i></span> <span> <h5><a href="https://idp.miniorange.com/miniorange-idp-partners-program/" target="_blank">Partners</a></h5> <p>Join our trusted community to deliver best products.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="far fa-gem header-icons-style"></i></span> <span> <h5><a href="https://idp.miniorange.com/how-we-are-different/" target="_blank">Differentiation</a></h5> <p>Find out what differentiate us from other vendors.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-story"> 
+        <h2>Contact Us</h2> 
+        <p>We are committed to provide world class support.</p>
+        <br> 
+        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;+1 978 658 9387 (US)</p> 
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+91 77966 99612 (India)</p> 
+        <p><a href="mailto:info@xecurify.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;info@xecurify.com</a></p> <a href="contact" type="button" class="btn header-btn text-center">CONTACT US</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Resources <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-4 header-level-2-column"> 
+       <img src="/images/header/resources.png" class="res-img" alt="miniOrange Resources"> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><i class="fas fa-th-large header-icons-style"></i></span> <span> <h5><a href="http://docs.miniorange.com/" target="_blank">Content Library</a></h5> <p>A Catalog of all resources to help you understand our products.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-film header-icons-style"></i></span> <span> <h5><a href="https://docs.miniorange.com/demo" target="_blank">Video Library</a></h5> <p>Learn how easy it is to implement our products with your applications.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="far fa-copy header-icons-style"></i></span> <span> <h5><a href="http://developers.miniorange.com/" target="_blank">API Documentation</a></h5> <p>Search for guides and how-tos for all our software and cloud products and apps.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><i class="far fa-edit header-icons-style"></i></span> <span> <h5><a href="https://blog.miniorange.com/" target="_blank">Blogs</a></h5> <p>Check out the latest from our team of in-house experts.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="far fa-file-alt header-icons-style" style="padding-right: 20px;"></i></span> <span> <h5><a href="http://faq.miniorange.com/" target="_blank">FAQs</a></h5> <p>Find a list of question and answers pertaining to a particular solutions.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="far fa-comments header-icons-style"></i></span> <span> <h5><a href="http://forum.miniorange.com/" target="_blank">Forum</a></h5> <p>Interact with our experts on various topics related to our products.</p> </span> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Pricing <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img src="/images/header/mo-icon.png" height="50" width="50" style="margin: 10px 15px 0 5px;" alt="miniOrange Pricing"></span> <span> <h5><a href="https://idp.miniorange.com/pricing/" target="_blank">IdP Pricing</a></h5> <p>Cloud &amp; On-Premise IDP for all your SSO, MFA &amp; Provisioning usecases for B2B &amp; B2C customers.</p> </span> 
+       </div> 
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/joomla.png" alt="joomla"></span> <span> <h5><a href="https://plugins.miniorange.com/joomla" target="_blank">Joomla Extension Pricing</a></h5> <p>Wholesome security solution within Joomla using our extensions for Joomla site.</p> </span> 
+       </div> 
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/magento-logo.png" alt="magento"></span> <span> <h5><a href="https://plugins.miniorange.com/magento" target="_blank">Magento Plugins Pricing</a></h5> <p>Wholesome security solution within Magento using our extensions for Magento site.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/wordpress-logo.png" alt="WordPress"></span> <span> <h5><a href="wordpress-pricing">WordPress Plugins Pricing</a></h5> <p>Wholesome security solution within WordPress using our plugins for WordPress site.</p> </span> 
+       </div> 
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/drupal.png" alt="drupal"></span> <span> <h5><a href="https://plugins.miniorange.com/drupal" target="_blank">Drupal Modules Pricing</a></h5> <p>Wholesome security solution within Drupal using our modules for Drupal site.</p> </span> 
+       </div> 
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/moodle-logo.png" alt="Moodle"></span> <span> <h5><a href="https://plugins.miniorange.com/moodle" target="_blank">Moodle Plugins Pricing</a></h5> <p>Ensures secure access to your Moodle server within minutes.</p> </span> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><img class="header-cms-img" src="/images/header/atlassian-logo.png" alt="atlassian" style="margin-right: 15px;margin-left: 10px;"></span> <span> <h5><a href="https://marketplace.atlassian.com/vendors/1213308/miniorange" target="_blank">Atlassian Apps Pricing</a></h5> <p>Secure authentication and logon into Atlassian with our apps.</p> </span> 
+       </div> 
+       <br>
+       <br> 
+       <div class="header-busi-sol"> <span><i class="fab fa-usb header-icons-style"></i></span> <span> <h5><a href="sso-connector-pricing">SSO Connectors Pricing</a></h5> <p>Check out pricing for Custom SSO connectors used for any platform.</p> </span> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="header-level-1-dropdown"> <a class="dropbtn">Customers <i class="fas fa-angle-down pull-right"></i></a> 
+    <div class="header-level-2-dropdown-content"> 
+     <div class="row"> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><i class="fas fa-university header-icons-style"></i></span> <span> <h5><a href="customers?id=educational-institutes">Education</a></h5> <p>Check out our trusted customers accross the globe in education sector.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-hotel header-icons-style"></i></span> <span> <h5><a href="/customers?id=government-org">Government / Non-Profit Org</a></h5> <p>Check out our trusted customers accross the globe in government / non-profit org sector.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-hand-holding-usd header-icons-style"></i></span> <span> <h5><a href="/customers?id=finance">Finance And Banks</a></h5> <p>Check out our trusted customers accross the globe in financial sector.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> 
+        <h5><a href="/customers">See All Our Customers <i class="fas fa-arrow-right"></i></a></h5> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-busi-sol"> <span><i class="fas fa-clinic-medical header-icons-style"></i></span> <span> <h5><a href="/customers?id=health">Healthcare And Hospitals</a></h5> <p>Check out our trusted customers accross the globe in healthcare sector.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-film header-icons-style"></i></span> <span> <h5><a href="/customers?id=media">Media And Entertainment</a></h5> <p>Check out our trusted customers accross the globe in media and entertainment sector.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> <span><i class="fas fa-phone header-icons-style"></i></span> <span> <h5><a href="/customers?id=telecom">Telecom And Internet Sector</a></h5> <p>Check out our trusted customers accross the globe in telecom sector.</p> </span> 
+       </div> 
+       <div class="header-busi-sol"> 
+        <h5><a href="https://docs.miniorange.com/customer-review" target="_blank">Customer Reviews <i class="fas fa-arrow-right"></i></a></h5> 
+       </div> 
+      </div> 
+      <div class="col-md-4 header-level-2-column"> 
+       <div class="header-story"> 
+        <h2>Success Stories</h2> <a href="https://docs.miniorange.com/single-sign-sso-nvidia" target="_blank">Single Sign-On for Nvidia</a> <a href="https://docs.miniorange.com/single-sign-on-for-nasa" target="_blank">Single Sign-On for NASA</a> <a href="https://docs.miniorange.com/single-sign-on-sso-for-al-nahdi" target="_blank">Single Sign-On for Al Nahdi</a> <a href="https://docs.miniorange.com/single-sign-sso-starbucks" target="_blank">Single Sign-On for Starbucks</a> 
+        <div class="header-busi-sol"> 
+         <h5><a href="https://docs.miniorange.com/success-stories" target="_blank">All Success Stories <i class="fas fa-arrow-right"></i></a></h5> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </nav> 
+</div> 
+<div class="support-icon"> 
+ <div class="help-container"> <span class="span1"> 
+   <div class="need"> <span class="span2"></span> 
+    <div class="div11"> 
+     <div class="div12"> <span style="font-family:Trebuchet MS, Helvetica, sans-serif;color:#333333;"> Hello there! </span>
+      <br> 
+      <p class="helpline">Need Help? We are right here!</p> 
+     </div> 
+    </div> 
+   </div> </span> 
+ </div> 
+ <div class="service-btn"> 
+  <div class="service-icon"> 
+   <img src="images/mail.png" class="service-img" alt="support"> 
+  </div> 
+ </div> 
+</div> 
+<div class="support-form-container"> <span class="span2"></span> 
+ <div class="widget-header"> 
+  <div class="widget-header-text">
+   miniOrange Email Support
+  </div> 
+  <div class="widget-header-close-icon"> <i class="fa fa-times fa-2x exit3" aria-hidden="true"></i> 
+  </div> 
+ </div> 
+ <div class="loading-inner" style="overflow:hidden;"> 
+  <div class="loading-icon"> 
+   <div class="loading-icon-inner"> <span class="icon-box"> <img class="icon-image" src="images/success.png" alt="success"> </span> 
+    <p class="loading-icon-text"> </p>
+    <p>Thanks for your inquiry.<br><br> If you dont hear from us within 24 hours, please feel free to send a follow up email to <a href="mailto:info@xecurify.com">info@xecurify.com</a></p> 
+    <p></p> 
+   </div> 
+  </div> 
+ </div> 
+ <form role="form" action="" id="support-form" method="post" class="support-form top-label"> 
+  <div class="field-group"> <label class="field-group-label" for="email"> <span class="label-name">Your Contact E-mail</span> </label> 
+   <input type="text" class="field-label-text" name="email" id="person_email" dir="auto" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" required="true" title="Enter a valid email address." placeholder="Enter valid email" onblur="validateEmail(this);"> 
+  </div> 
+  <div class="field-group"> <label class="field-group-label"> <span class="label-name">What are you looking for</span> </label> <select class="what_you_looking_for" required="true"> <option class="Select-placeholder" value="">Select Category</option> <option value="Product Questions">Product Questions</option> <option value="Sales Enquiry">Sales Enquiry</option> <option value="Schedule a Demo">Schedule a Demo</option> <option value="Technical Support">Technical Support</option> <option value="Others">Others</option> </select> 
+  </div> 
+  <div class="field-group"> <label class="field-group-label" for="description"> <span class="label-name">How can we help you?</span> </label> <textarea rows="5" id="person_query" name="description" dir="auto" required="true" class="field-label-textarea" placeholder="You will get reply via email"></textarea> 
+  </div> 
+  <div class="submit_button"> <button id="" type="submit" class="button1 button__appearance-primary submit-button" value="Submit" aria-disabled="false">Submit</button> 
+  </div> 
+ </form> 
+</div> 
+<script type="text/javascript">
+  
+    function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            return false;
+        }else{
+          return true;
+        }
+    }
+</script><!-- /.header --><!-- /header--> <!-- header banner
+    ================================================== --> 
+<div class="header_banner"> 
+ <div class="hero_content"> 
+  <div class="hero_sso"></div> 
+  <dl> 
+   <dt>
+    Cloud Security - Secure your website
+   </dt> 
+   <dd>
+    miniOrange cloud security platform prevents and protects your website against Brute Force attack, Denial of Service (DOS) attack, phishing, malware, damage, unauthorized access and other online security threats.
+   </dd> 
+  </dl> 
+ </div> 
+</div> <!-- /. header banner --> <!-- benefits
+    ================================================== --> 
+<div class="features"> 
+ <div class="padding-left"> 
+  <h4>Overview</h4> 
+  <ul class="authen_sub_bullets"> 
+   <li>miniOrange cloud security platform prevents and protects your website against Brute Force attack, Denial of Service (DOS) attack, phishing, malware, damage, unauthorized access and other online security threats.</li> 
+   <li>We protect information systems from theft or damage to the hardware, the software, and to the information on them, as well as from disruption or misdirection of the services they provide. It includes controlling physical access to your hardware as well as protecting against harm that may come via network access, data and code injection and due to malpractice by operators, whether intentional, accidental, or due to them being tricked into deviating from secure procedures.</li> 
+  </ul> 
+ </div> 
+</div> <!-- /.benefits --> <!-- features
+    ================================================== --> 
+<div class="features"> 
+ <div class="padding-left"> 
+  <h4>Brute Force Protection</h4> This protects your site from attacks which tries to gain access / login to a site with random usernames and passwords. A Brute Force Attack is the simplest kind of method to gain access to a website. Hackers tries with random usernames and passwords, over and over again, until they gets in. Most of the time such attacks are automated allowing the hackers to try millions of time in a short span. 
+  <br>
+  <br> We help you protect your website against brute force login attacks by blocking an IP address of the hacker after a specified limit of failed login attempts within a specified time. 
+  <br>
+  <br> 
+  <h4>Login security and monitoring - Limit login attempts and track user logins</h4> miniOrange login security help you monitor login attempts from your users and hackers. We keep track of user’s login attempts and we send alerts to administrators for unusual activities if someone exceeds allowed failed login attempts. 
+  <br>
+  <br> 
+  <h4>Live Traffic Monitoring</h4> With our platform you can monitor live traffic on your website. We categorize traffic into different categories like all hits, humans, registered users, crawlers, google crawlers etc. And also you can block traffic from particular category you want. 
+  <br>
+  <br> 
+  <h4>IP Blocking</h4> IP address blocking prevents connection between a server or website and certain IP addresses or ranges of addresses. We provide you option for IP blocking which includes both automatic ( based on user behaviour ) and manual IP blocking. It also includes blacklisting and whitelisting of IP addresses. 
+  <br>
+  <br> 
+  <h4>Advanced Blocking</h4> With Advanced Blocking you can use to block users with different criterias like:
+  <br>
+  <br> 
+  <ul class="authen_sub_bullets"> 
+   <li>Block access based on range of IP addresses</li> 
+   <li>Block access based on HostName(DNS)</li> 
+   <li>Block access based on user-agent(browser)</li> 
+   <li>Block access based on referer(user from a particular site)</li> 
+  </ul> 
+  <h4>Country Blocking</h4> The majority of website attacks come from specific countries. If you have a website which gets inundated with SPAM or hacking attempts from visitors or bots originating from certain countries we can help you blocking those attempts. We give you an option to choose list of countries from which you want to block access to all your resources. 
+  <br>
+  <br> 
+  <h4>Comment spam filter and site spam check</h4> We check if your website is generating SPAM to protect you website getting blocked by search engines. Also we help you to filter comments for malware and phishing urls. 
+  <br>
+  <br> 
+  <h4>Enforce Strong Passwords</h4> We check for the passwords of your users against their strength. This helps to enhance security for their accounts as simple passwords can be phished or guessed easily. 
+  <br>
+  <br> 
+  <h4>2 Step Verification (Two Factor)</h4> Rather than relying on a password alone, which can be phished or guessed, Two Factor authentication adds a second layer of security to your accounts. We support QR code, OTP over SMS and Email, Push, Soft token (15+ methods to choose from). 
+  <br>
+  <br> 
+  <img src="images/strong-auth/quick_test.png" class="img_size"> 
+  <br>
+  <br> <b>Features :</b>
+  <br>
+  <br> 
+  <ul class="authen_sub_bullets"> 
+   <li>You can login using only password OR password + two-factor</li> 
+   <li>All types of phones are supported Smart Phones (iPhone, Android, BlackBerry), Basic Phones, Landlines, etc.</li> 
+   <li>If your phone is lost or stolen or discharged, we offer alternate login methods like OTP Over Email and Security Questions (KBA).</li> 
+   <li>If your phone is offline, you can use a one time passcode generated by app to login.</li> 
+   <li>We support multiple authentication methods along with their backup method.</li> 
+   <li>We support Device Identification. If the user select remember device then in the next login from same device, user will not be prompted for Two Factor.</li> 
+   <li>It is very difficult to login into your site from mobile browser with second factor enabled. We provide you option that will convert any authentication method into Security Questions (KBA) on mobile browser.</li> 
+  </ul> 
+  <h4>Notifications</h4> Get email alerts for unusual activities with you user accounts. If we notice any unusual activity like signing in from new location or new device we send email alert to user with device, IP and time information which can help him save access to his account from hackers.
+  <br>
+  <br> We also support customized email templates which you can use for branding. 
+  <br>
+  <br> 
+  <h4>Reporting</h4> Our advanced reporting help you keep track of activities on your website. Also you get the option for filtering reports with various criterias like username, IP address, date. Also you can export reports in csv and pdf. 
+  <br>
+  <br> 
+  <h4>htaccess website security protection</h4> An htaccess file is an optional configuration file for the Apache web server to interpret, for each directory. We can store various settings in that file such as: password protect a directory, block IPs, block a file or folder from public access, etc. 
+  <br>
+  <br> miniOrange platform help you secure your website from unintended user with htaccess website security protection which blocks user request on server(apache) level. 
+  <br>
+  <br> 
+  <h4>Security Log</h4> We keep logs of various activities which help you improve your security, find corrupted pages on your website, increase your performance etc. 
+  <br>
+  <br> Security logs includes :
+  <br>
+  <br> 
+  <ul class="authen_sub_bullets"> 
+   <li>Logging Blocked IPs</li> 
+   <li>Logging Spammers, Bots</li> 
+   <li>Logging HTTP 404,403 and 400 requests.</li> 
+  </ul> 
+  <h4>Denial of Service (DOS) protection</h4> Denial of Service (DoS) attacks against web sites occur when an attacker attempts to make the websites unavailable to serve up to legitimate visitors. These types of attacks are generally used against government sites or large corporations to disrupt their web presence.
+  <br>
+  <br> We help you protect your resources from DOS attacks by slowing down attackers by delaying response and increasing delay in each of his requests and eventually blocking them entirely. 
+  <br>
+  <br> 
+  <h4>Verify Email</h4> miniOrange email verification tool actually connects to the mail server of user registering and checks whether the mailbox exists or not. This decreases bounce rate from your email address and saves your email address getting blacklisted. 
+  <br>
+  <br> 
+  <h4>Block Registrations from Fake users</h4> We helps you to detect suspicious email addresses instantly. Most of the users use disposable,fake or temporary email addresses for registering on online websites. We help you stop accepting registrations from those emails. 
+  <br>
+  <br> 
+  <h4>Honeypot</h4> Honeypot consists of data (for example, in a network site) that appears to be a legitimate part of the site but is actually isolated and monitored, and that seems to contain information or a resource of value to attackers, which are then blocked. Just as honeypots are weapons against spammers, honeypot detection systems are spammer employed counter-weapons.
+  <br>
+  <br> We use honeypot mechanism to keep unintended audience (attackers) away from valuable resources on your website. 
+  <br>
+  <br> 
+  <h4>Risk Based Access</h4> 
+  <ul class="authen_sub_bullets"> 
+   <li>miniOrange Fraud Prevention product dynamically analyzes user requests and apply business security policies to application access which minimizes the risks of unauthorized access.</li> 
+   <li>miniOrange Fraud Prevention complements the existing traditional access controls by using contextual elements (e.g. device, location, time of access and user behavior) to allow for a more dynamic policy decision.</li> 
+  </ul> 
+  <img src="images/fraud-prevention/fraud_basic_flow_dig.png" class="img_size"> 
+  <br>
+  <br> 
+  <h4>Advanced User Verification</h4> OTP Verification plugin verifies Email Address/Mobile Number of users by sending verification code(OTP) during registration. It removes the possibility of a user registering with fake Email Address/Mobile Number. This plugin checks the existence of the Email Address/Mobile Number and the ability of a user to access that Email Address/Mobile Number. 
+  <br>
+  <br> 
+  <img src="images/otp-verification-banner.png" class="img_size"> 
+  <br>
+  <br> 
+  <h4>Social Login Integration</h4> Social Login allows your visitors to choose from their favourite social login apps to login, comment, share and optionally auto-register with your website or blog. One-click login to your website using social login applications like Google, Twitter, Facebook, Vkontakte, LinkedIn, Instagram, Amazon, Salesforce, Windows Live. Easy integration with your website with options to add Social login on login page, registration page and comments section. 
+  <br>
+  <br> 
+ </div> 
+ <br>
+ <br> 
+ <div class="other_prod"> 
+  <div>
+   View our Other featured Products: <a href="strong_auth">Strong Authentication</a> <span>|</span> <a href="single-sign-on-sso">Single Sign-On</a> <span>|</span> <a href="fraud">Fraud Prevention</a>
+  </div> 
+ </div> 
+</div> <!-- footer section--> <!-- Footer
+    ================================================== -->   
+<div class="compare-box"> 
+ <h3 class="subheading-idb">Why Our Customers choose miniOrange Secure Identity Solutions ?</h3> 
+ <br> 
+ <div class="row"> 
+  <div class="col-md-6"> 
+   <div class="compare-sec"> <i class="fas fa-user-clock compare-icon" aria-hidden="true"></i> 
+    <h4 class="compare-heading">24/7 Support</h4> 
+    <p class="compare-text">miniOrange provides 24/7 support for all the Secure Identity Solutions. We ensure high quality support to meet your satisfaction.</p> <a class="btn btn-primary" id="compare-btn" target="_blank" href="businessfreetrial">Try Now</a> 
+   </div> 
+  </div> 
+  <div class="col-md-6"> 
+   <div class="compare-sec" style="border-radius: 50px 8px 50px 8px;"> <i class="fas fa-hand-holding-usd compare-icon" aria-hidden="true"></i> 
+    <h4 class="compare-heading">Affordable Pricing</h4> 
+    <p class="compare-text">miniorange provides most affordable Secure Identity Solutions for all type of use cases and offers different packages based on customer's requirement.</p> <a class="btn" id="compare-btn" target="_blank" href="contact">Request A Quote</a> 
+   </div> 
+  </div> 
+ </div> 
+ <br>
+ <br> 
+ <div class="contact-info-text text-center"> 
+  <p>We offer Secure Identity Solutions for Single Sign-On, Two Factor Authentication, Adaptive MFA, Provisioning, and much more. Please contact us at -</p> 
+  <p><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;+1 978 658 9387 (US) &nbsp;&nbsp;,&nbsp; &nbsp;+91 77966 99612 (India)&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; <a href="mailto:info@xecurify.com" style="color: #000000c9;"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;info@xecurify.com</a></p> 
+ </div> 
+</div> 
+<footer id="footerId" class="footer-main-container"> 
+ <nav class="footer-main"> 
+  <div class="footer-container"> 
+   <div class="row footer-main-items"> 
+    <div class="col-md-12 col-xs-12 col-sm-12"> 
+     <div class="col-md-3 col-xs-12 col-sm-12"> 
+      <img src="/images/footer/mo-logo.png" alt="miniorange logo"> 
+      <div class="left-most-outer-container"> 
+       <div class="footer-outer-phone-details"> 
+        <div class="footer-inner-phone-details"> <span class="fa fa-phone footer-phone-font"></span> 
+        </div> 
+        <div> 
+         <p class="footer-phone-text">+1 978 658 9387 (US)<br>+91 77966 99612 (India)</p> 
+        </div> 
+       </div> 
+       <div> 
+        <div class="footer-email-details"> <span class="fa fa-envelope"></span> 
+        </div> 
+        <div class="footer-email-text"> 
+         <p><a href="mailto:info@xecurify.com">info@xecurify.com</a></p> 
+        </div> 
+       </div> 
+       <div> 
+        <h4 class="footer-stay-connected">STAY CONNECTED</h4> <a href="https://twitter.com/miniOrange_Inc" title="Twitter" target="_blank" class="social-icon-color" style="text-decoration:none;"> <span class="fa-stack social-icon-outer-font"> <i class="fa fa-stack-2x"></i> <i class="fab fa-twitter fa-stack-1x footer-social-icon-font"></i> </span> </a> <a href="https://www.facebook.com/miniorangeinc/" title="Facebook" target="_blank" class="social-icon-color" style="text-decoration:none;"> <span class="fa-stack social-icon-outer-font"> <i class="fa fa-stack-2x"></i> <i class="fab fa-facebook-f fa-stack-1x footer-social-icon-font"></i> </span> </a> <a href="https://www.linkedin.com/company/miniorange-incorporated/" title="Linkedin" target="_blank" class="social-icon-color" style="text-decoration:none;"> <span class="fa-stack social-icon-outer-font"> <i class="fa fa-stack-2x"></i> <i class="fab fa-linkedin-in fa-stack-1x footer-social-icon-font"></i> </span> </a> <a href="https://www.youtube.com/channel/UCxQuL2JNo8HA4baZSIjcgRg" title="YouTube" target="_blank" class="social-icon-color" style="text-decoration:none;"> <span class="fa-stack social-icon-outer-font"> <i class="fa fa-stack-2x"></i> <i class="fab fa-youtube fa-stack-1x footer-social-icon-font"></i> </span> </a> 
+       </div> <button class="btn footer-free-trial-btn1" onclick="location.href='businessfreetrial'">SIGN UP FREE</button> 
+      </div> 
+     </div> 
+     <div class="col-md-9 col-xs-12 col-sm-12 footer-top-padding"> 
+      <div class="col-md-3"> 
+       <ul class="footer-product"> 
+        <li><p class="footer-item-heading">Product</p> 
+         <ul class="footer-main-sub-items"> 
+          <li><a href="single-sign-on-sso">Single Sign On</a></li> 
+          <li><a href="identity-broker-service">Identity Brokering</a></li> 
+          <li><a href="oauth2-server">OAuth / OpenID Connect Server</a></li> 
+          <li><a href="two-factor-authentication-(2fa)">Multi Factor Authentication</a></li> 
+          <li><a href="adaptive-multi-factor-authentication-mfa">Adaptive Authentication</a></li> 
+          <li><a href="user-provisioning">User Provisioning</a></li> 
+          <li><a href="directory-services">Directory Services</a></li> 
+         </ul> </li> 
+       </ul> 
+      </div> 
+      <div class="col-md-3"> 
+       <ul> 
+        <li><p class="footer-item-heading">Solutions</p> 
+         <ul class="footer-main-sub-items"> 
+          <li><a href="https://idp.miniorange.com/apps-integration/?id=saml">SAML Solutions</a></li> 
+          <li><a href="https://idp.miniorange.com/apps-integration/?id=oauth">OAuth Solutions</a></li> 
+          <li><a href="https://idp.miniorange.com/apps-integration/">2FA Solutions</a></li> 
+          <li><a href="https://idp.miniorange.com/apps-integration/?id=mobile-apps">Mobile Solutions</a></li> 
+          <li><a href="https://docs.miniorange.com/directory-integrations">Directory Integrations</a></li> 
+          <li><a href="https://docs.miniorange.com/federation-integrations">Federation Integrations</a></li> 
+          <li><a href="https://idp.miniorange.com/apps-integration/?id=windows">Windows Solutions</a></li> 
+          <li><a href="https://idp.miniorange.com/apps-integration/?id=connector">SSO Connectors</a></li> 
+          <li><a href="https://idp.miniorange.com/apps-integration/?id=secure-browser">Secure Browser SSO</a></li> 
+         </ul> </li> 
+       </ul> 
+      </div> 
+      <div class="col-md-3"> 
+       <ul> 
+        <li><p class="footer-item-heading">Company</p> 
+         <ul class="footer-main-sub-items"> 
+          <li><a href="overview">Overview</a></li> 
+          <li><a href="https://docs.miniorange.com/how-we-are-different">Why miniOrange</a></li> 
+          <li><a href="newsandevents">News</a></li> 
+          <li><a href="career">Careers</a></li> 
+          <li><a href="https://idp.miniorange.com/miniorange-idp-partners-program/">Partners</a></li> 
+          <li><a href="customers">Customers</a></li> 
+          <li><a href="contact">Contact Us</a></li> 
+         </ul> </li> 
+       </ul> 
+      </div> 
+      <div class="col-md-3"> 
+       <ul> 
+        <li><p class="footer-item-heading">Resources</p> 
+         <ul class="footer-main-sub-items"> 
+          <li><a href="https://docs.miniorange.com/demo">Videos</a></li> 
+          <li><a href="https://docs.miniorange.com/success-stories">Our Success Stories</a></li> 
+          <li><a href="https://faq.miniorange.com/">FAQs</a></li> 
+          <li><a href="https://forum.miniorange.com/">Forum</a></li> 
+          <li><a href="https://docs.miniorange.com/securing-vpn-with-multi-factor-authentication">White Paper</a></li> 
+          <li><a href="https://developers.miniorange.com/docs/idp/">API Docs</a></li> 
+         </ul> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </nav> 
+ <nav class="mo-footer-bottom-info"> 
+  <div class="footer-container text text-center"> <span> © Copyright &nbsp;2021&nbsp; miniOrange Inc. All Rights Reserved. <a href="https://docs.miniorange.com/disclaimer" target="_blank" class="social-icon-color disclaimer-text">Disclaimer</a></span><a href="https://docs.miniorange.com/disclaimer" target="_blank" class="social-icon-color disclaimer-text"> </a>
+  </div><a href="https://docs.miniorange.com/disclaimer" target="_blank" class="social-icon-color disclaimer-text"> </a>
+ </nav><a href="https://docs.miniorange.com/disclaimer" target="_blank" class="social-icon-color disclaimer-text"> </a><a href="javascript:" id="return-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a> 
+</footer> <!--  javascript
+    ================================================== --> <!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script> <!-- <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>--> 
+<script type="text/javascript" src="/js/carousel.js"></script> 
+<script type="text/javascript" src="/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="/js/bootstrap-scrollspy.js"></script> 
+<script type="text/javascript" src="/js/image-enlarge.js"></script> 
+<script type="text/javascript" src="/js/header.js?ver=1.4"></script> 
+<script type="text/javascript" src="/js/contact-us-form.js?ver=1.4"></script> 
+<script type="text/javascript" src="/js/business-free-trial.js?ver=1.3"></script> 
+<script type="text/javascript" src="/js/support-form.js?ver=2.0"></script> 
+<script type="text/javascript" src="/js/responsive.js"></script> 
+<script type="text/javascript" src="js/right_nav.js"></script> 
+<script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script> 
+<script type="text/javascript" src="/js/holder.js"></script> 
+<script type="text/javascript" src="/js/intlTelInput.min.js"></script> 
+<script>
+	$(window).scroll(function() {
+		if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+			$('#return-to-top').fadeIn(200);    // Fade in the arrow
+		} else {
+			$('#return-to-top').fadeOut(200);   // Else fade out the arrow
+		}
+	});
+	$('#return-to-top').click(function() {      // When arrow is clicked
+		$('body,html').animate({
+			scrollTop : 0                       // Scroll to top of body
+		}, 500);
+	});
+
+	//End of Back to Top Button Script
+	</script> 
+<script>
+		function openUseCase() {
+
+		//alert("inside");
+		var a = document.forms["myForm"]["entry.428130736"].value;
+		var b = document.forms["myForm"]["entry.1436371876"].value;
+		var c = document.forms["myForm"]["entry.1743623830"].value;
+		var d = document.forms["myForm"]["entry.840812124"].value;
+		if (a==null || a=="") {
+
+			}
+		else if(b==null || b==""){
+
+		}
+		else if(c==null || c==""){
+
+		}
+		else if(d==null || d==""){
+
+		}
+
+		else{
+			
+			window.open('usecases/' + document.getElementById('entry_726395439').value);
+			}
+			
+			}
+	</script> 
+<style id="antiClickjack">
+		body{display:none !important;}
+	</style> 
+<script type="text/javascript">
+		if (self === top) { 
+			var antiClickjack = document.getElementById("antiClickjack");
+			antiClickjack.parentNode.removeChild(antiClickjack);
+		} else {
+			top.location = self.location;
+		}
+	</script> <!-- /.footer -->
+</body>
+</doc>

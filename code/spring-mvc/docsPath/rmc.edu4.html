@@ -1,0 +1,647 @@
+<doc>
+<filename>rmc.edu4.html</filename>
+<url>http://www.campusstore.rmc.edu/</url>
+<ip>104.18.220.143</ip>
+<title>Home | R-MC Campus Store</title>
+<body>
+<header> 
+ <div data-role="header"> 
+ </div> 
+</header> <a href="#contentSection" tabindex="0" class="hidden_label">Skip to main content</a> 
+<p class="hiddenForm" hidden></p> 
+<div class="reloadPage" hidden>
+ No
+</div> 
+<main id="page_wrapper"> 
+ <div id="topSection"> 
+  <div id="Cart" class="btn btn-default btn-lg clear"> <span class="fa fa-shopping-cart"></span><span id="SpanCart"> <span id="Item-Count">Item Count: </span> <span id="ItemCount" class="Count">0</span></span>
+   <br><span id="Sub-Total">Sub-Total: </span> <span id="SubTotal" class="count">$0.00</span> 
+  </div> 
+  <div id="result" style="display:none;"></div> 
+  <script type="746a8115438f685df5745f4e-text/javascript">
+    $(document).ready(function () {
+        $('#Cart').click(function () {
+             var link = 'http://www.campusstore.rmc.edu/ShoppingCart';
+            window.location.href = link
+        });
+    $("#result").dialog({
+        autoOpen: false,
+        title: 'Title',
+        width: 500,
+        height: 'auto',
+        modal: true
+    });
+});
+function openPopup() {
+    $("#result").dialog("open");
+}
+ 
+
+</script> 
+  <div id="H_Search" class="max_width300"> 
+   <div class="form-group floatl width80p right2p"> <label class="displayb"><span class="hidden_label">Search</span><input type="text" class="searchBox searchBoxHor form-control"></label> 
+    <p class="red displayn errorHorizontal">Please enter search criteria</p> 
+   </div> <button aria-label="Search Button" type="submit" class="searchMerchHor btn btn-default margin0 width18p"> <span class="glyphicon glyphicon-search"></span> </button> 
+  </div> 
+  <script type="746a8115438f685df5745f4e-text/javascript">
+    $(document).ready(function () {
+        //Search for course by entering ISBN
+        $(".searchMerchHor").click(function () {
+            var search = $(".searchBoxHor").val();
+            if (search == '') {
+                $('.errorHorizontal').show();
+                return;
+            } else {
+                $('.errorHorizontal').hide();
+                var url = 'http://www.campusstore.rmc.edu/' +  'merchlist?searchtype=all&txtSearch=' + search; // 'Url.Action("CourseMaterials", "SelectTermDept", New With {.Ids = "__id__"})';
+                window.location.href = url; // url.replace('__id__', search);
+                return;
+            }
+        });
+        $(".searchMerchVer").click(function () {
+            var search = $(".searchBoxVer").val();
+            if (search == '') {
+                $('.errorVertical').show();
+                return;
+            } else {
+                $('.errorVertical').hide();
+                var url = 'http://www.campusstore.rmc.edu/' +  'merchlist?searchtype=all&txtSearch=' + search; // 'Url.Action("CourseMaterials", "SelectTermDept", New With {.Ids = "__id__"})';
+                window.location.href = url; // url.replace('__id__', search);
+                return;
+            }
+        });
+        $(".searchBox").keyup(function (e) {
+            if (e.keyCode == 13) {
+                var search = $(this).val();
+                if (search == '') {
+                    $('#errorMesg').append("<li>Please enter search criteria.</li>");
+                    return;
+                } else {
+                    var url = 'http://www.campusstore.rmc.edu/' +  'merchlist?searchtype=all&txtSearch=' + search; // 'Url.Action("CourseMaterials", "SelectTermDept", New With {.Ids = "__id__"})';
+                    window.location.href = url; // url.replace('__id__', search);
+                    return;
+                }
+            }
+        });
+    });
+    </script>
+  <header> 
+   <div class="common-utilities"> 
+    <div class="col-md-3 col-sm-12 col-xs-12 branding"> <a id="hlHome" href="http://www.rmc.edu">Randolph-Macon College - Ashland, Virginia</a> 
+    </div> 
+    <div id="topmenu" class="col-md-9 col-sm-12 col-xs-12"> 
+     <ul class="header-links" id="header-links"> 
+      <li><a href="https://www.rmc.edu/prospective-students/apply">Apply</a></li> 
+      <li><a target="_blank" href="http://rmcathletics.com">Athletics</a></li> 
+      <li><a href="https://www.rmc.edu/alumni/Connect">Refer A Yellow Jacket</a></li> 
+      <li><a href="http://www.rmc.edu/alumni">Alumni</a></li> 
+      <li><a target="_blank" href="http://library.rmc.edu">Library</a></li> 
+      <li><a href="https://secure.rmc.edu/payment/campaign/">Give to R-MC</a> 
+       <div style="display: none;" id="searchappend">
+        &nbsp;
+       </div> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="main-menu"> 
+    <table id="main-menu"> 
+     <tbody> 
+      <tr> 
+       <td class="home"><a class="sfSel" href="/home">Home</a></td> 
+       <td><a class="has-megaflyout" data-megaflyout-url="/prospective-students/mega-flyout" href="http://www.rmc.edu/prospective-students" target="_blank">Admissions &amp; Aid</a></td> 
+       <td><a class="has-megaflyout" data-megaflyout-url="/about/mega-flyout" href="http://www.rmc.edu/about" target="_blank">About R-MC</a></td> 
+       <td><a class="has-megaflyout" data-megaflyout-url="/campus-life/mega-flyout" href="http://www.rmc.edu/campus-life" target="_blank">Campus Life</a></td> 
+       <td><a class="has-megaflyout" data-megaflyout-url="/academics/mega-flyout" href="http://www.rmc.edu/academics" target="_blank">Academics</a></td> 
+       <td><a class="has-megaflyout" data-megaflyout-url="/news-and-calendar/mega-flyout" href="http://www.rmc.edu/news-and-calendar/current-news" target="_blank">News &amp; Calendar</a></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+   </div> 
+  </header> 
+  <input name="6834290" type="hidden" value="{ id = Text_Id }">
+  <div> 
+   <nav class="navbar navbar-default"> 
+    <div class="contain-fluid"> <!-- Brand and toggle get grouped for better mobile display --> 
+     <div class="navbar-header"> <button aria-expanded="false" data-target="#rmc-navbar-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <!--<a href="http://www.campusstore.rmc.edu/Home" class="navbar-brand">RMC</a>--> 
+     </div> <!-- Collect the nav links, forms, and other content for toggling --> 
+     <div id="rmc-navbar-collapse" class="collapse navbar-collapse"> 
+      <ul class="nav navbar-nav"> 
+       <li><a href="https://www.campusstore.rmc.edu/home">Home</a></li> 
+       <li class="dropdown"> <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">General Information <span class="caret"></span></a> 
+        <ul class="dropdown-menu"> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84200">Campus Store Mission Statement</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/contact">Contact Us</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=88283">COVID-19 Policies and Protocols </a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84201">General Store Policies</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/merchandise">Site Map</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/storehours">Store Hours</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84208">Student Employment</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84207">Yellow Jacket Rewards Program</a></li> 
+        </ul> </li> 
+       <li class="dropdown"> <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Textbooks <span class="caret"></span></a> 
+        <ul class="dropdown-menu"> 
+         <li><a href="https://bncvirtual.com/randolph-macon">Order Textbooks</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84205">Textbook Buyback</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=85834">Student Buyback FAQ</a></li> 
+        </ul> </li> 
+       <li class="dropdown"> <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Merchandise<span class="caret"></span></a> 
+        <ul class="dropdown-menu"> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84211">Accessories / Hats</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84209">Adult Clothing</a> </li> 
+         <li><a href="https://www.campusstore.rmc.edu/MerchList?ID=26141">Alumni Collection</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84212">Children's Clothing</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84215">Drinkware</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=7722">Faculty / Alumni Authors</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84216">Gifts</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84214">Graduation</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=88507">Greek</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/MerchList?ID=25899">Health and Wellness</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84210">Spirit Items</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=84213">Stickers / Decals / Magnets</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=85838">Supplies</a></li> 
+         <li><a href="https://www.campusstore.rmc.edu/SiteText?id=85647">Yellow Jacket Sales</a></li> 
+        </ul> </li> 
+       <li id="Store-Search"> </li> 
+      </ul> 
+      <ul class="nav navbar-nav navbar-right"> 
+       <li><a href="https://sso.bncollege.com/bes-sp/bessso/saml/rmcedu/aip/logon%20And%20not%20aip.bncollege.com">Faculty Adoptions</a></li> 
+       <li><a href="https://www.campusstore.rmc.edu/login">Log In</a></li> 
+       <li class="dropdown dropdown-cart"> <a href="#" aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle CartHere">Cart<span class="caret"></span></a> 
+        <ul class="dropdown-menu dropdown-cart-menu"> 
+         <li><a id="Cart-Spot" href="#"></a> </li> 
+        </ul> </li> 
+      </ul> 
+     </div> <!-- /.navbar-collapse --> 
+    </div> <!-- /.contain-fluid --> 
+   </nav> 
+  </div> 
+  <input name="6834324" type="hidden" value="{ id = Text_Id }"><a href="https://www.campusstore.rmc.edu/SiteText?id=84201"><img src="/SiteImages/106-SchoolImages/106-FreeShipOver150v4.png" alt="Free Shipping on orders over $150 before taxes, excludes diploma frames, tents, and captain's chairs" class="img-responsive"></a> 
+  <input name="6834334" type="hidden" value="{ id = Text_Id }">
+  <div class="contain-fluid"> 
+   <div data-example-id="simple-carousel" class="rmc-Carousel"> 
+    <div data-ride="carousel" class="carousel slide" id="rmcCarousel"> <!-- Indicators --> 
+     <ol class="carousel-indicators"> 
+      <li class="active" data-slide-to="0" data-target="#rmcCarousel"> </li> 
+      <li data-slide-to="1" data-target="#rmcCarousel"> </li> 
+      <li data-slide-to="2" data-target="#rmcCarousel"> </li> 
+      <li data-slide-to="3" data-target="#rmcCarousel"> </li> 
+      <li data-slide-to="4" data-target="#rmcCarousel"> </li> 
+      <li data-slide-to="5" data-target="#rmcCarousel"> </li> 
+      <li data-slide-to="6" data-target="#rmcCarousel"> </li> 
+      <li data-slide-to="7" data-target="#rmcCarousel"> </li> <!--<li data-slide-to="8" data-target="#rmcCarousel"> </li>--> <!--<li data-slide-to="9" data-target="#rmcCarousel"> </li>--> 
+     </ol> <!-- Wrapper for slides --> 
+     <div role="listbox" class="carousel-inner"> 
+      <div class="item active"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=25505"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-ODAC%20Champs%20BBal.png" alt="Men's Basketball ODAC Champions 2021"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=16906"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-SPORTSAPPARELSLIDE.png" alt="New Sport Items"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=11468"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-NIKE%20Just%20Do%20It..png" alt="Nike Collection"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=341786&amp;num=0&amp;start=9&amp;end=12&amp;type=1&amp;CategoryName=SPORTS%20BOTTLES&amp;CatID=17699&amp;Name=SPORTS%20BOTTLES#.YBBZTf1KiUk"><img class="img-responsive" src=" /SiteImages/106-SchoolImages/106-slides/106-CamelbackSale2021v3.png" alt="2021 - Ride the wave and stay hydrated"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=17698"><img class="img-responsive" src=" /SiteImages/106-SchoolImages/106-slides/106-Mugnificent.png" alt="R-MC Mugs are Mug-nificent"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=7773"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-AHATFOREVERYYELLOWJACKET.png" alt="A hat for every Yellow Jacket"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=19579"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-WinterPetsv2.png" alt="Don't forget your pets!"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=26141"><img src="/SiteImages/106-SchoolImages/106-slides/106-ALUMNI2020SLIDE.png" alt="SHOP THE ALUMNI COLLECTION" class="img-responsive"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/SiteText?id=85647"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-SaleWinterSlideNonChristmas.png" alt="Yellow Jacket Sales, Clearance on hoods, crews, tees, spirit items and more! Save big!"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=27509"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-GarbSlidev2.png" alt="Shop our Garb collection. For the littlest Yellow Jacket"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/merchlist?ID=6587"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-slides/106-EntertheR-MCFanZone2021.png" alt="RMC Fan Zone"></a> 
+      </div> 
+      <div class="item"> <a href="https://www.campusstore.rmc.edu/MerchList?ID=25899"><img class="img-responsive" src=" /SiteImages/106-SchoolImages/106-slides/106-COVID%20POLICIES%20SLIDE%20v3.png" alt="Get a R-MC Mask Today!"></a> 
+      </div> 
+     </div> <!-- Controls --> <a data-slide="prev" role="button" href="#rmcCarousel" class="left carousel-control"> <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <span class="sr-only">Previous</span> </a> <a data-slide="next" role="button" href="#rmcCarousel" class="right carousel-control"> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span> <span class="sr-only">Next</span> </a> 
+    </div> 
+   </div> 
+  </div> 
+  <input name="6834291" type="hidden" value="{ id = Text_Id }">
+  <br> 
+  <br> 
+  <input name="6834341" type="hidden" value="{ id = Text_Id }">
+  <br> 
+  <div class="contain"> 
+   <div style="background-color: #ffffff;" class="row vendors"> 
+    <div class="col-xs-6 col-md-2 col-md-offset-1">
+     <a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=21979"><img class="img-responsive" src="/SiteImages/106-SchoolImages/106-Columbia Logo - 120 x 120.png" alt="Columbia"></a>
+    </div> 
+    <div class="col-xs-6 col-md-2">
+     <a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=11468"><img alt="Nike" src="/SiteImages/106-SchoolImages/106-nike3.jpg" class="img-responsive"></a>
+    </div> 
+    <div class="col-xs-6 col-md-2">
+     <a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=11495"><img alt="Under Armour" src="/SiteImages/106-SchoolImages/106-Under-Armour3.jpg" class="img-responsive"></a>
+    </div> 
+    <div class="col-xs-6 col-md-2">
+     <a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=10904"><img alt="Blue 84" src="/SiteImages/106-SchoolImages/106-BLUE84.png" class="img-responsive"></a>
+    </div> 
+    <div class="col-xs-6 col-md-2">
+     <a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=14681"><img alt="Tervis" src="/SiteImages/106-SchoolImages/106-tervis2.jpg" class="img-responsive"></a>
+    </div> 
+    <div class="col-xs-6 col-md-6 col-md-offset-3" id="smathers">
+     <a href="https://www.campusstore.rmc.edu/MerchList.aspx?ID=19638"><img alt="Smathers &amp; Branson" src="/SiteImages/106-SchoolImages/106-smathers-and-branson5.png" class="img-responsive"></a>
+    </div> 
+   </div> 
+  </div> 
+  <input name="6834292" type="hidden" value="{ id = Text_Id }"> 
+  <div class="clear"></div> 
+ </div> 
+ <div> 
+  <div id="ContainDiv" class="contain container clear"> 
+   <div id="contentSection" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+    <img alt="" src="/SiteImages/106-SchoolImages/106-decorations/106-AboveContentSnow.png" style="padding-bottom:0px;" class="img-responsive"> 
+    <input name="6834338" type="hidden" value="{ id = Text_Id }"> 
+    <div class="panel panel-info Dynamic_Items"> 
+     <div class="panel-heading textc Dynamic_Items_Title">
+      Winter 2021 Featured Items
+     </div> 
+     <div class="panel-body"> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="798168"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=798168"> <img src="/storeimages/141-798168-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="1/4 ZIP RMC BY CAMP DAVID Image" width="100"> <p class="One_Dynamic_Link small">1/4 ZIP RMC BY CAMP DAVID</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="793397"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=793397"> <img src="/storeimages/141-793397-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="TEE RAGLAN RM BY CAMP DAVID Image" width="100"> <p class="One_Dynamic_Link small">TEE RAGLAN RM BY CAMP DAVID</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="729705"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=729705"> <img src="/storeimages/141-729705-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="CREW R-MC SCHOOL SEAL BY BLUE 84 Image" width="100"> <p class="One_Dynamic_Link small">CREW R-MC SCHOOL SEAL BY BLUE 84</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="789047"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=789047"> <img src="/storeimages/141-789047-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="HOOD RMC TWILL BY BLUE 84 Image" width="100"> <p class="One_Dynamic_Link small">HOOD RMC TWILL BY BLUE 84</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="728160"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=728160"> <img src="/storeimages/141-728160-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="1/4 ZIP R-MC BUTTER BY BLUE 84 Image" width="100"> <p class="One_Dynamic_Link small">1/4 ZIP R-MC BUTTER BY BLUE 84</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="789004"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=789004"> <img src="/storeimages/141-789004-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="PULLOVER SOLID RM BY CHARLES RIVER Image" width="100"> <p class="One_Dynamic_Link small">PULLOVER SOLID RM BY CHARLES RIVER</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="789009"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=789009"> <img src="/storeimages/141-789009-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="JACKET PACK-N-GO PULLOVER RM BY CHARLES RIVER Image" width="100"> <p class="One_Dynamic_Link small">JACKET PACK-N-GO PULLOVER RM BY CHARLES RIVER</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="576461"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=576461"> <img src="/storeimages/141-576461-2_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="PULLOVER CLASSIC STRIPED R-M PACKABLE Image" width="100"> <p class="One_Dynamic_Link small">PULLOVER CLASSIC STRIPED R-M PACKABLE</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="793375"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=793375"> <img src="/storeimages/141-793375-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="TEE WOMEN'S RM BLOSSOM BY CAMP DAVID Image" width="100"> <p class="One_Dynamic_Link small">TEE WOMEN'S RM BLOSSOM BY CAMP DAVID</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="793377"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=793377"> <img src="/storeimages/141-793377-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="TEE WOMEN'S RM DREAMGIRL BY CAMP DAVID Image" width="100"> <p class="One_Dynamic_Link small">TEE WOMEN'S RM DREAMGIRL BY CAMP DAVID</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="729414"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=729414"> <img src="/storeimages/141-729414-1_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="TEE RM CRUISER BY CAMP DAVID Image" width="100"> <p class="One_Dynamic_Link small">TEE RM CRUISER BY CAMP DAVID</p> </a> 
+      </div> 
+      <div class="One_Dynamic col-lg-2 col-md-2 col-sm-3 col-xs-6 textc" data-id="789041"> <a href="https://www.campusstore.rmc.edu/MerchDetail?MerchID=789041"> <img src="/storeimages/141-789041-2_th.jpg" class="img-thumbnail One_Dynamic_Image" alt="TEE JACKETS COMFORT COLORS BY SUMMIT Image" width="100"> <p class="One_Dynamic_Link small">TEE JACKETS COMFORT COLORS BY SUMMIT</p> </a> 
+      </div> 
+     </div> 
+    </div> <!-- Modal --> 
+    <script type="746a8115438f685df5745f4e-text/javascript">
+    $(document).ready(function () {
+        $('.Dynamic_Type_Code').each(function () {
+            $(this).attr('aria-label', 'Select Option From Dropdown');
+        });
+            //assigns individual class names to each element in individual dynamic merch.
+            //$('.One_Dynamic').each(function () {
+            //    var dynamicID = $(this).attr('data-id');
+            //    $(this).find('#isTypeless').addClass('isTypeless' + dynamicID);
+            //    $(this).find('#Price').addClass('Price' + dynamicID);
+            //    $(this).find('#frmId').addClass('frmId' + dynamicID);
+            //    $(this).find('#isOnSale').addClass('isOnSale' + dynamicID);
+            //    $(this).find('#mer_sto_id').addClass('mer_sto_id' + dynamicID);
+            //    $(this).find('#merchType').addClass('merchType' + dynamicID);
+            //    $(this).find('.One_Dynamic_Link').addClass('title' + dynamicID);
+            //    $(this).find('.One_Dynamic_Input').addClass('QTY' + dynamicID);
+            //    $(this).find('.addedtoCart').addClass('addedToCart' + dynamicID);
+            //    $(this).find('#addMerch').addClass('addMerch' + dynamicID);
+            //});
+        //moved to js file
+        //$(".addDynamicMerch").on('click', function () {
+        //    var shoppingCart = $('#shoppingCartPage').val();
+        //    var $dynamicMerch = $(this);
+        //    model = {
+        //        Name: '',
+        //        Id: '',
+        //        LCSId: '', //selected lcs option
+        //        isTypless: '',
+        //        classId: '',
+        //        loyaltyPrice: '',
+        //        currentPrice: '',
+        //        regularPrice: '',
+        //        isLoyalty: '',
+        //        merch_form_id: '',
+        //        regularPrice: '',
+        //        isOnSale: '',
+        //        isEGiftCard: '',
+        //        isNonMerch: '',
+        //        classId: '',
+        //        merch_cs_id: '',
+        //        merStoreId: '',
+        //        quantity: ''
+        //    };
+        //    var id = $(this).attr("data-merId");
+        //    var type = $(this).attr('data-type');
+        //    var currentPrice = $('[data-current="' + id + '"]').text();
+        //    currentPrice = currentPrice.substr(currentPrice.indexOf("$") + 1);
+        //    var dll, lcsText;
+        //    if ($("#meropt-" + id).length >= 1) {
+        //        dll = $("#meropt-" + id).val();
+        //        lcsText = $('#meropt-' + id).find('option:selected').text();
+        //        if (dll == "") {
+        //            $(this).next().removeAttr("hidden");
+        //            return false;
+        //        }
+        //        model.LCSId = dll;
+        //        var typeDollar = lcsText.lastIndexOf("($");
+        //        if (typeDollar != -1) {
+        //            var typeNumber = typeDollar + 2;
+        //            var typePrice = lcsText.substr(typeNumber);
+        //            typePrice = typePrice.replace(')', '');
+        //            currentPrice = typePrice;
+        //        }
+        //    }
+
+        //    model.Name = $(this).attr("data-name");
+        //    model.Id = $(this).attr("data-merId");
+        //    model.isTypless = $(this).attr("data-type");
+        //    model.currentPrice = currentPrice;
+        //    model.regularPrice = $(this).attr("data-price");
+        //    model.merch_form_id = $(this).attr("data-frmId");
+        //    model.isOnSale = $(this).attr("data-sale");
+        //    model.merStoreId = $(this).attr("data-storeId");
+        //    model.quantity = $('[data-qty="' + id + '"]').val();
+        //    model.isLoyalty = false;
+        //    $.ajax({
+        //        cache: false,
+        //        type: "POST",
+        //        url: 'shoppingCart/AddMerchItemDynamic',
+        //        data: (model),
+        //        dataType: "json",
+        //        error: function (xhr) {
+        //            $('#errorModal').modal('show');
+        //        },
+        //        success: function (data, jqXHR) {
+        //            if (data.showModal == true) {
+        //                $('.dynamicModalContent').html(data.modaldata);
+        //                $('#dynamicModal').modal();
+        //                $('#dynamicButton').val(id);
+        //            }
+        //            else {
+        //                if (data.mesg == true) {
+        //                    if (shoppingCart === "ShoppingCart") {
+        //                        location.reload();
+        //                        return;
+        //                    }
+        //                    //Here we need to update mini cart with total and count values
+        //                    var count = data.count
+        //                    var total = data.total
+        //                    total = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+        //                    total = "$" + total;
+        //                    $("#ItemCount").text(count);
+        //                    $("#SubTotal").text(total);
+        //                    $($dynamicMerch).hide();
+        //                    $('[data-add="' + id + '"]').show();
+        //                }
+        //                if (data.showcarttype) {
+        //                    $('.modal_body').html(data.PartialViewHtml);
+        //                    $('#Modal').modal();
+        //                }
+        //            }
+        //        }
+        //    });
+        //});
+           });
+</script>
+    <br> 
+    <input name="6834329" type="hidden" value="{ id = Text_Id }">
+    <div class="container-fluid"> 
+     <div class="row flex"> 
+      <div class="col-md-3 col-sm-12 col-xs-12 trio right-border"> 
+       <div id="latest-news" class="trio-header"> 
+        <h3 style="text-align: center;">Latest News<span style="font-family: 'Lucida Fax', Geneva, sans-serif; font-size: 16px;">&nbsp;</span></h3> 
+       </div> 
+       <div class="trio-content" style="text-align: center; padding: 15px;"> 
+        <p style="text-align: justify;"><span style="font-size: 14px; font-family: 'Lucida Fax';"><strong>The R-MC Campus Store is open for Students, Faculty &amp; Staff.</strong></span></p> 
+        <p style="text-align: justify;"><span style="font-size: 14px; font-family: 'Lucida Fax';"><strong>All off campus shoppers must shop online. Shoppers may select to ship via UPS or curbside pickup during business hours, Mon.- Fri. 8:30 am - 4:30 pm.</strong></span><span style="text-align: center;">&nbsp;</span></p> 
+        <p style="text-align: center;"><span style="font-size: 14px; font-family: 'Lucida Fax';">&nbsp;</span><span style="font-size: 14px; font-family: 'Lucida Fax';">For more information about current health and safety protocols,&nbsp;</span><span style="font-size: 14px; font-family: 'Lucida Fax';">please visit&nbsp;</span><span style="font-size: 14px; font-family: 'Lucida Fax';">the R-MC </span><span style="font-size: 14px; text-decoration-line: underline; font-family: 'Lucida Fax'; color: #0645ad;"><a href="https://www.rmc.edu/campus-life/protect/FAQs" target="_blank">Protect the Hive</a></span><span style="font-size: 14px; font-family: 'Lucida Fax';"> website.&nbsp;</span></p> 
+        <p style="text-align: center;"><span style="font-size: 14px; font-family: 'Lucida Fax';">&nbsp;</span></p> 
+        <p style="text-align: center;"><span style="font-size: 14px; font-family: 'Lucida Fax';"><strong style="font-size: 12pt; text-align: justify; font-family: 'Lucida Fax';">Our commitment to outstanding customer service remains the same, and we hope you are staying safe.</strong></span></p> 
+       </div> 
+      </div> 
+      <div class="col-md-3 col-sm-12 col-xs-12 trio left-border"> 
+       <div class="trio-header"> 
+        <h3 style="text-align:center;">Contact Information</h3> 
+       </div> 
+       <div id="trio-contact" class="trio-content"> 
+        <p id="address" style="text-align: center;"><span style="font-size: 18px;"><strong>R-MC Campus Store<br> 304 Henry Street <br> Brock Commons <br> Ashland, VA 23005</strong></span></p> 
+        <p style="text-align: center;"><span style="font-size: 14px; font-family: 'Lucida Fax';">Phone: <a href="tel:+18047527271">804-752-7271</a></span></p> 
+        <p style="text-align: center;"><span style="font-size: 14px; font-family: 'Lucida Fax';">Fax: <a href="tel:+18047524703">804-752-4703</a></span></p> 
+        <p style="text-align: center;"><span style="font-family: 'Lucida Fax';"><span style="font-size: 14px; font-family: 'Lucida Fax';">Email</span><span style="font-size: 14px; font-family: 'Lucida Fax';">: </span><a class="email" href="/cdn-cgi/l/email-protection#80c3e1edf0f5f3d3f4eff2e5cff2e4e5f2f3c0f2ede3aee5e4f5" style="font-size: 14px;"><span class="__cf_email__" data-cfemail="581b3935282d2b0b2c372a3d172a3c3d2a2b182a353b763d3c2d">[email&nbsp;protected]</span></a></span></p> 
+        <p style="text-align: center;"><span style="font-family: 'Lucida Fax';"><a class="email" href="/cdn-cgi/l/email-protection#4e0d2f233e3b3d1d3a213c2b013c2a2b3c3d0e3c232d602b2a3b" style="font-size: 14px;"></a></span><strong style="font-size: 12pt; text-align: justify; font-family: Lucida Fax;">&nbsp;</strong></p> 
+        <p style="text-align: center;">&nbsp;<span style="font-size: 12pt; text-align: justify; font-family: 'Lucida Fax';"></span></p> 
+        <p style="text-align: center;"><img src="/SiteImages/106-SchoolImages/106-RMCCAMPUSSTORELOGONOBK.png" class="img-responsive" alt="Campus Store Logo"></p> 
+       </div> 
+      </div> 
+      <div id="fb-root">
+       &nbsp;
+      </div> <rwdscript crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v8.0&amp;appId=118447248559&amp;autoLogAppEvents=1"></rwdscript> 
+      <div class="col-md-6 col-sm-12 col-xs-12 fb-feed" style="text-align: left;"> <a href="https://linktr.ee/rmccampusstore"><img src="/SiteImages/106-SchoolImages/106-FACEBOOKBANNERv5.png" class="img-responsive" alt="Follow us on social media" style="padding-bottom:15px;"></a> 
+       <div style="padding-left:25px;"> 
+        <div class="fb-post" data-href="https://www.facebook.com/RMCCampusStore/posts/10159954269819369" data-width="500" data-show-text="true">
+         <blockquote cite="https://www.facebook.com/RMCCampusStore/posts/10159954269819369" class="fb-xfbml-parse-ignore"> 
+          <p>ICYMI: We’ve got new sport shirts available on our website in our “Sports Apparel” section. The shirt is available in most sports.</p> Posted by <a href="https://www.facebook.com/RMCCampusStore/">R-MC Campus Store</a> on&nbsp;<a href="https://www.facebook.com/RMCCampusStore/posts/10159948476639369">Friday, February 26, 2021</a>
+         </blockquote>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <input name="6834293" type="hidden" value="{ id = Text_Id }"> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="BottomSection" class="clear"> 
+  <div class="bookstore-wrap"> 
+   <div class="wrapper2"> 
+    <div class="social-find col-sm-6 col-xs-12"> 
+     <h3 tabindex="0"><span style="font-size: 20px;">Find the R-MC Campus Store On:</span></h3> 
+    </div> 
+    <div class="bookstore-social col-sm-6 col-xs-12"> 
+     <ul> 
+      <li class="bk-facebook"><a href="https://www.facebook.com/RMCCampusStore/" target="_blank">Bookstore Facebook</a> </li> 
+      <li class="bk-twitter"><a href="https://twitter.com/RMCcampusstore" target="_blank">Bookstore Twitter</a> </li> 
+      <li class="bk-instagram"><a target="_blank" href="https://www.instagram.com/rmccampusstore/">Bookstore Instagram</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <input name="6834294" type="hidden" value="{ id = Text_Id }">
+  <footer> 
+   <div class="wrapper"> 
+    <div class="social-icons col-sm-6 col-xs-12"> 
+     <ul> 
+      <li class="facebook"><a target="_blank" href="https://www.facebook.com/RandolphMacon">Facebook</a></li> 
+      <li class="youtube"><a target="_blank" href="https://www.youtube.com/user/RMCWebMaster">YouTube</a></li> 
+      <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/groups?gid=138646">LinkedIn</a></li> 
+      <li class="twitter"><a target="_blank" href="https://twitter.com/RandolphMacon">Twitter</a></li> 
+      <li class="flickr"><a target="_blank" href="https://www.flickr.com/photos/randolphmacon/">Flickr</a></li> 
+      <li class="instagram"><a href="https://www.instagram.com/randolphmacon/" target="_blank">R-MC Instagram Feed</a></li> 
+     </ul> 
+    </div> 
+    <div class="branding col-sm-6 col-xs-12"> <a href="home" id="hlHomeFooter">Randolph-Macon College - Ashland, Virginia</a> 
+    </div> 
+    <div class="col-xs-12"> 
+     <ul class="footer-links"> 
+      <li><a href="http://www.rmc.edu/current-students">Current Students</a></li> 
+      <li><a href="http://www.rmc.edu/faculty-and-staff">Faculty &amp; Staff</a></li> 
+      <li><a href="http://www.rmc.edu/visitrmc">Visit</a></li> 
+      <li><a href="http://gormc.sharepoint.com">Intranet (BuzzNet)</a></li> 
+      <li><a href="http://search.rmc.edu/directory.aspx">Directory</a></li> 
+      <li><a href="http://www.rmc.edu/contactrmc">Contact</a></li> 
+      <li><a href="http://www.rmc.edu/webmail">Webmail</a></li> <!--<td><a class="site-map-link" href="#">Site Map <span>&nbsp;</span></a></td>--> 
+     </ul> 
+    </div> 
+    <div class="contact-info"> 
+     <div class="sfContentBlock"> 
+      <p class="contact-info">P.O. Box 5005;<br class="show-only-on-mobile"> 202 Henry Street,<br class="show-only-on-mobile"> Ashland VA. 23005-5505<br> Main: 804.752.7200&nbsp; <br class="show-only-on-mobile"> Admissions: 800.888.1762</p> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+  <input name="6834295" type="hidden" value="{ id = Text_Id }"> 
+ </div> 
+ <div class="modal fade" id="errorModal" role="dialog"> 
+  <div class="modal-dialog"> <!-- Modal content--> 
+   <div class="modal-content"> 
+    <div class="modal-header"> 
+     <p class="modal-title">Critical Error!</p> 
+    </div> 
+    <div class="modal-body"> 
+     <p>Failed to call the server.</p> 
+    </div> 
+    <div class="modal-footer"> <a type="button" class="btn btn-default hover_pointer" data-dismiss="modal">Close</a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="dynamicModal" class="modal fade" role="dialog"> 
+  <input type="hidden" value="" id="dynamicButton"> 
+  <div class="modal-dialog"> <!-- Modal content--> 
+   <div class="modal-content dynamicModalContent"> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="sessionModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static"> 
+  <div class="modal-dialog"> <!-- Modal content--> 
+   <div class="modal-content"> 
+    <div class="modal-header"> 
+     <p class="modal-title">Session Timeout</p> 
+    </div> 
+    <div class="modal-body"> 
+     <p>Your session has timed out and requires a page refresh.</p> 
+    </div> 
+    <div class="modal-footer"> <a class="btn btn-default sessionClose">Refresh Page</a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</main> 
+<footer> 
+</footer> 
+<div id="div_privacy" class="textc">
+ <a href="/Privacy" tabindex="0">Privacy and Disclaimer</a>
+</div> 
+<div id="Server">
+ I.3.A 
+</div> 
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="746a8115438f685df5745f4e-text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ 
+
+  ga('create', 'UA-11861457-3', 'auto');
+
+  ga('send', 'pageview');
+
+ 
+
+</script> <!-- Google Tag Manager (noscript) --> 
+<noscript>
+ <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MB5V49V" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> <!-- End Google Tag Manager (noscript) --> 
+<script type="746a8115438f685df5745f4e-text/javascript">
+$(document).ready(function() {
+$('div#Cart').prependTo('#Cart-Spot');
+});
+</script> 
+<script type="746a8115438f685df5745f4e-text/javascript">
+$(document).ready(function() {
+$('div#H_Search').prependTo('#Store-Search');
+});
+</script> 
+<style>
+#fb-root {
+    display: none;
+}
+.fb-page span {
+    margin: 0 auto;
+    display: block!important;
+    max-width: 600px;
+}
+.fb_iframe_widget {
+    display: block !important;
+}
+/*make facebook iframe responsive*/
+
+.fb-page span,
+.fb-page span iframe,
+.fb-page span iframe[style] {
+    width: 100%!important;
+}
+/*margin for social media columns on large screen*/
+
+.facebook-column,
+.twitter-column {
+    margin: 20px auto;
+}
+
+</style> 
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v4.0" type="746a8115438f685df5745f4e-text/javascript"></script> 
+<script type="746a8115438f685df5745f4e-text/javascript">
+        $(document).ready(function () {
+                //ADA fix keeps .ui-dialog from loading twice on the page
+                $('.ui-dialog').each(function (e) {
+                    if (e != 0) {
+                        $(this).remove();
+                    }
+                });
+            });
+
+    </script> 
+<script type="746a8115438f685df5745f4e-text/javascript">
+        //allowing maintain scroll position on postbacks for mvc
+        $(document).scroll(function(){
+            localStorage['ControllerPageName'] = document.URL;
+            localStorage['MaintainScrollPosition'] = $(document).scrollTop();
+        });
+        $(document).ready(function () {
+            var postMethod = "GET";
+            var scrollPositionIgnore = $('#scrollPositionIgnore').length;
+            if (postMethod === "POST" && scrollPositionIgnore <= 0) {
+                if (localStorage['ControllerPageName'] == document.URL) {
+                    $(document).scrollTop(localStorage['MaintainScrollPosition']);
+                }
+            }
+            $('.ui-dialog-titlebar-close').html('X');
+            $('.sessionClose').click(function () {
+                window.location.reload();
+            });
+        });
+        window.onload = function () {
+            setTimeout(SessionAlert, 59 * 60000);
+        }
+        function SessionAlert() {
+           $('#sessionModal').modal('show');
+           $('body').css('overflow', 'hidden');
+        }
+    </script> 
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="746a8115438f685df5745f4e-|49" defer></script>
+</body>
+</doc>

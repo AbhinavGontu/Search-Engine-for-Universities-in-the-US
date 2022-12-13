@@ -1,0 +1,180 @@
+<doc>
+<filename>ua.edu4.html</filename>
+<url>http://mybama.ua.edu/</url>
+<ip>130.160.0.44</ip>
+<title>Login - CAS – Central Authentication Service</title>
+<body>
+<header class="container" role="banner" style="padding-bottom:0;"> 
+ <div class="card" style="margin:0;"> 
+  <div class="row card-body" style="display:flex;align-items:center;margin:0;"> 
+   <img src="/cas/themes/ua-main/ua-square-logo-100x100.png" style="margin-right:1em;" width="60" alt="The University of Alabama script logo">
+   <div> 
+    <h1 style="margin:0 0 2px;font-size:1.25rem;color:#22292f;">The University of Alabama</h1> 
+    <h2 style="margin:0;font-size:1rem;color:#525252;">Login Portal</h2> 
+   </div> 
+  </div> 
+  <div> 
+  </div>
+ </div>
+</header> 
+<main role="main" class="container mt-3 mb-3"> 
+ <div id="content" class="row"> 
+  <div class="col-md"> 
+   <div class="card"> 
+    <div class="card-header text-center"> 
+     <h2 style="font-size:1.5rem;margin:0;color:#3d4852;">Login</h2> <!--<span class="fa-stack fa-2x hidden-xs">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+		    </span>-->
+    </div> 
+    <div class="card-body" style="padding-top:0;"> 
+     <form method="post" id="fm1" action="login"> <!--<h3 th:utext="#{screen.welcome.instructions}">Enter your Username and Password</h3>-->
+      <section class="form-group"> 
+      </section> 
+      <section class="form-group"> <!--<label for="username" th:utext="#{screen.welcome.label.netid}">myBama Id</label>--><label for="username">myBama Id:</label> 
+       <div> 
+        <input class="form-control required" id="username" size="25" tabindex="1" type="text" accesskey="u" autocorrect="off" autocapitalize="off" spellcheck="false" autocomplete="off" name="username" value="">
+       </div> 
+      </section> 
+      <section class="form-group"> <label for="password"><span class="accesskey">P</span>assword:</label> 
+       <div> 
+        <input class="form-control required" type="password" id="password" size="25" tabindex="2" accesskey="p" autocomplete="off" name="password" value=""><span id="capslock-on" style="display:none;"> <p> <i class="fa fa-exclamation-circle"></i> <span>CAPSLOCK key is turned on!</span> </p> </span> 
+       </div> 
+      </section> 
+      <input type="hidden" name="execution" value="cfea04a2-6eba-4219-8d8f-f350b6c05508_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LlhmaFQ0YVd1SlFXeUJlQlRFNjArOTBOU21sWUYwQTRmVlFVTUJGN0N3VzJWQVJtSSs5Z1VpSDB6blM2UFV2bmJ3S05DVVJUVjFQMUtqWGdTUW44SFE4TjFvZ0hFQml3K0JtWGVBMzdqcnMrcWl2T1VMZTFZTE5GeXhpSUZidlJSOGVrR3M1UThsUHN2Q01TMGJiZFVUT0RuMEpteEVOZitGemo5NVJsWStzZ3NEb1dDM0NnWHo1Z0UxYW5sRDlNR0FabForclhaZGJpVk52RFpwc1MwQjd2YmM2cC9yeUhoQ0pJem8wNnZHVGw5Q0FQQk1yL1hCS09xUGhNcFpacFA4ZXQ5aUdhOHVUTUpjaHJnVmZuSUZlRlkrSVlNWGI0MGNlcXdUVE5nQk9VU3pmYTJVODhucm8vZU43WFhzcTYrMk5oekdGQXhQcUlDMXVsQ0tPMzFnVC9tOXlGZkljdXozSzNjTEdRWVQ0MldVYktFcmZRc1EydHg2ZW91WmswMEtydFdQUElReG5CRE9WWlVzYnNIakFVRmNXMVVyd1pxK2F5NWxzbTlobGFkd2RYVWpwVmZ2LzVzWWJDaFNXOTFrbm5vdjZKU2hjNVU2ZzBhUXZ6b093RzcxTkRiYXFvRVg2SjV3Wm8vUVVicUdueHJIZWFLdzhOZDhhZ3h5bnFxQXJFWFIzZ1Q1cTJkVlF1aVdnc2NFK0xiaGFELzFsZmdLTkRVWkgwYzVtYzA4bWFRZ2pkNFVDY0hLemcwTlNEUXhKZHdQVEtLZU5XT09mdFRZTXYwSk9ONUZTcEhaR3BnS2E2aG1ZWFRPM3M2SE9QYVU4YzhDMG8yak1MWGVoNXM5NTJkRythM09DV2p3ditXRXZHMFBJKzBZb2ZQa091cVMrUXNjZWQxaCtrZnBRSGdqNmFmN2dlVDEvc3ZaTFFYRTAzaVQ4cWtmYWY3YUZwSGJGejhkaDlnM0x2bWYyZzJGTWk3NXdIMHNLSmJQWEd4QXpkUU5sY1lLWWdWNGcwbFRiRXV3aXBidnZsK01PWTBuOEcxOU5QYmtSNklSVS93T0E3c2Z0YjlQekI1MEtFa2NLaWNMeDZpOG5RSFFkWW9CNHdSdEplVHBBRnl4amZRMWFxdkw4SEl1ZGx6MEp5RTdJTXFRaVBmdkhnazdJQkJZSlZHT0loQWxsMVpiTlhDNzlBM2E0Z1NSUm5tT2pQQUg1NFNhdVlLT3BYWTRzTlFXT2l6NDBjNWlGZThyU2t1dGI5bmFxNmNxcGlhQVN4UWYwalFTclBIY2pVRjJ3NU1panB4QnNaQmxjZHFLM1d0NHNDaUNrTk9EM0JLNC9PRVlHeTB4Wkt4SEk5WlJ6Z0hpS213MmNqRHduaUwwMzVIdTd2SitwU2E1RzZhWGRMVmwxWVBmcDh1NVh0NUE4SllvUkc3clV2L3h2V211VGYyaGtET0oyajhNcGRtbDcvL25DWm43RW1paDFDWXEwSW9PZnczVjYybytNUU52anZ4UTlBcTNhdnAvYTc4MHRDSXY3R2JaSnJ2YmkzSklMbHliTmt4QVdDdndTaFE4Tmk4NGNBTlRYUk5MSTJlYWk4RXY2VG9zemgxUVRoOXFGMVlVeHhPVzBvcFlvampBbjhqS1RIS3kzbGYzT0JLNCs2OEtJTWNxWXVaVXRtYzcyOUcvMnBtUElXNjZxU1FqZDVZZXVaK20xcGJwd2JnMndIYjV0VVZxcm9XQnN5K3gzdjdxNzdBZ3ZnemJHVWlaWWxvR01oTVM3Tm1IWEFtMnMzLzN2UUIvcVhTQXE0K1A5TVdjN1Z4V2RmaDdiakNoT0xLRlJrVUN0Yms2alNGREErNklhL1pFMEhrNnhZL1l0b3pvOTdpSXgzY0s3L1pvaVA2d2lGYlNsTjRxK2hHN3BOcDI5MWxhRkFzM0dlWFlNdmwvN0FZcVlxOUtqbUNRaE84eWhhN3JCSnZVcHlEamhoZUdVSWdXMUtMSlBGUkxWM2ZtaVNZWDljTG5KZ1oyd2xrcWNEOHhoVjEzdXlZZFltd0I1cmZubFYzRTJXdGxaMGtEMUhNMlFEYXpRN1VYcTZjMjFKMUhZRCtTMUZqc0dUd21jellla0orYXdLVVJyR1MvQUg0VDZtV3h5cC9NMTI0Zm5YVFFRdWZ2THZqYnJHUkRiZUxQZGgvNmxZaEZ6R3JXYzJlUWluYXNyNEt6a0VIUk1MTGhzNUxxTHpLL0tWRGs1NmpOWmtDNGRNd2VYblZ2QkVUR1ZHVHc0RnN6UllmNUF1QWloRnZmUE1ZcFZXaWVzY21aTjBpL3JhZEJ6N1NqejdjYTA4M1VHMnd5MGJwTHc0YlMzejMzZUo4TFFKalZSRWtVWUdVY0hsR1NzRFNQT2Q5NEdZcmlCUmVHdWRIQnB0SGFzQTN5QlhON1FtNDB3ZklzR1JRaVNyV2pDTUVUKzlkMlU1RVFFU3V4alcrQXhjbWtURWZzcjFNOHNGYStEd01meVoxK3VzZEM4ZnhuenFuRHNZd2xUMUF4WnFUbUNKcDNCOXRweVdDWWtaakM3QzZnVWc5Y1dKTkdQNmVCYVIzbHNJcll0ckdIM2hVck9rSnUrcTRBblNQanRHYUpSdkpNSEFNRzRDT1Ewa3plTTdQeW9QL1NmNVF0eUdHQUZyNy9ZdEkyL3hFR0hDVzNXWjFpZHlJYW5Sc2FOUG1DNEE0SXVLUk9NQ2Z2YUZVQUdMYlF4alJkajB3aUtRUEJQc0JQbFFSakQrUU9EZEdteElJZWxKRFk5bE4zMjEyamltYVJPTEZNTVdsQUo1R2NodnEzQjJYQ2Jzc216MDgzSG1ldHFWWjRTTTlaWGtHcWtmbVJOSTViWUFFV2tTZEEvLzJhdnFPZFNDclRSMThKWXNWM0l0SW1aTmNXNXA1QStEcDVPbGJJMnk1R2V6OXlPSC9HVXJQTHJqdkVtVkRkQjlDWUxWYjlzYXpSY1JLeXc0R0VFcnJDU2ZEbjB0cXNCNmZBZ2hQODBJT0J0REFXM2w2VzgxYVp6Ujl3Kyt1NXV4VEd2Ykc3UEVkNEtIK2Zlc2Y1MUVDY05tOGpMQ3UyRXRUZEhDZzE1OEFoazl5ZlQyM0VvN0p2SEhFdmNueDdpM3lteXR2endOV08wWngzTFM5YVc1S0JaY1VtRXdsTk9XM0s3TmNsS2NxZU1LTHdCcDZaVEJaY2JYaC9Dbm4vS082M25sdFJ6L3U2bml0SCtxeUdjdzR3UWRGbGlvSEhWczgvSndTMVJpaFF5c0FDWkdaSm50ditmUEpaMCtjTHNUa2kxRzUvaUUwZkl4bWt4RnF5Y29QN08zYXNWNE04b0JkME5VQnpwLzhNSjN1WDhqSVBrZHVVVUo3Y1Q3bTFlcDNxc09JOUMxTkh0Nkxqb1NuVzZHQmFueDNSSHdiN2piMTVOLzF6Y1plZDNUdWNZdFpDUHdZeWNOZUFXNVF2RWRNbUhyQ0F5SVd2cEJhNmtickQvOEJoWThUNVFhUXozOTYwVStQOER5a1VFemZDR016TnlCeWVrZjJhSlhyOEoxTklvRWZReU4xWFNPU3pEWTl0NlRSU3ozanJBZ3RuT0RreVM1MDNhdVNIVjlBRjVvYjVpWEJUeXBsN0RHaGVGTmxwUUNkMnZJb01FZlpzOUJFSHQxbnZWcFJtUlFBL1NBbU9BSzByRFZFQmhxdFo0OVhKaW5KK1dKQVRSSzhmVlh5UEp5SFhJNWU4NFJqc2Z0dmhOaUZ5cDhFcUNNdkVNUTBjdWVzWlBuN1NpUHFib3BZY1c3NzZsSk5oRjZBdm10M0xRczVxYStuZm9UWFliU0ZHZnZ5RTg2OWljRnRCR2s4bEVkSzBzV2pjamw4K1hLQTRCNUxQQTY4OCs5OXBMdTd4Ymx0TjIwRzRTV2VuNXd0d1YxeS8xRHZjeVVna0czMXdsdlRYN1Q0d3ZWNW02R3V1UzNlZEhCN05CeGRKaExmcGswUDhmS1hvWmI2aWFrL0pqVFZmMkdNYTZnci92QUJnSit1dW55N0dtUysvUXVLVlo4clFBRWFleGFyaXhrcmpJaWEvWjkwQ3NMU1Q3UmdRRm5jZTFhOVBBOXlFNmNTRjhSTk5HWHlTdkJNVk9vbzZVMTU3SU5vQlF3S0J1c1hOSVQvb2JmcnJuS0YuU2tlRnBRWWxSY05XdzUtSm03RUlsbUxFamJoU2s4OHdldVQ5QmpmeExKUzVUa2ZxdTl6SnNYQVNPeno2VjZGcWJaeDVIdjNwblNKWDVFRE82cW5BN2c=">
+      <input type="hidden" name="_eventId" value="submit">
+      <input type="hidden" name="geolocation">
+      <input class="btn btn-block btn-submit" name="submit" accesskey="l" tabindex="6" type="submit" value="LOGIN" style="margin:1.5rem 0">
+     </form> <!--<div th:unless="${passwordManagementEnabled}">
+                        <br/>
+                        <span class="fa fa-question-circle"></span>
+                        <span th:utext="#{screen.pm.button.forgotpwd}">Forgot your password?</span>
+                        <p/>
+		    </div>-->
+     <script type="text/javascript">
+                        /*<![CDATA[*/
+                        var i = "One moment please..."
+                            /*]]>*/
+                            $(document).ready(function () {
+                                $("#fm1").submit(function () {
+                                    $(":submit").attr("disabled", true);
+                                    $(":submit").attr("value", i);
+                                    return true;
+                                });
+
+				$(this).val($(this).val().toLowerCase());
+
+				$("input[name='username']").on('input', function(){
+					$(this).val($(this).val().toLowerCase());
+				})
+                            });
+                    </script> 
+     <div id="sidebar"> 
+      <div class="sidebar-content"> 
+       <p style="font-size:.75rem;color:#606f7b;">For security reasons, please <a href="logout">log out</a> and exit your web browser when you are done accessing services that require authentication!</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="notices" class="col-md mt-3 mt-md-0"> 
+   <div id="cookiesDisabled" class="card" style="display: none;"> 
+    <div class="card-body"> 
+     <h5 class="card-title">Browser cookies disabled</h5> 
+     <p class="card-text">Your browser does not accept cookies. Single Sign On WILL NOT WORK.</p> 
+    </div> 
+   </div> 
+   <div id="serviceui" class="card" style="margin-bottom:20px;"> 
+    <div class="card-body" style="margin:.5rem 1rem;"> 
+     <h2 style="margin:0 0 .5rem 0;font-size:1.5rem;color:#3d4852;font-weight:600;">myBama</h2> 
+     <div style="display:flex;align-items:center;"> 
+      <img src="/cas/themes/ua-main/duo-logo.png" style="margin-right:8px;" alt="duo logo" width="35">
+      <p style="margin:0;font-size:12px;color:#525252;">This application supports 2 factor authentication</p> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="cas-resource-list" class="card d-sm-none d-md-block"> 
+    <div class="card-body cas-service-list"> 
+     <ul class="list-group"> 
+      <li class="list-group-item"> <a href="https://oit.ua.edu/service/password-change/"> <i class="fa fa-key"></i>Change Your Password </a> </li> <span> <li class="list-group-item"> <a href="https://bnrsupport.ua.edu/mybamaguest/"> <i class="fa fa-user"></i>Student Parent or Guest Login </a> </li> <li class="list-group-item"> <a href="https://secure.touchnet.com/C20219_tsa/web/login.jsp"> <i class="fa fa-credit-card"></i>Student Financial Account Authorized User </a> </li> <li class="list-group-item"> <a href="https://oit.ua.edu/service/password-recovery/"> <i class="fa fa-star"></i>New myBama users - create password </a> </li> <li class="list-group-item"> <a href="https://oit.ua.edu/service/duo/"> <i class="fa fa-lock"></i>Set up DUO </a> </li> <li class="list-group-item"> <a href="https://oit.ua.edu/service/duo-self-service/"> <i class="fa fa-unlock"></i>Request DUO pass codes </a> </li> </span> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> <!--<div id="providers" class="col-md mt-3 mt-md-0">
+	    <div th:replace="fragments/loginProviders :: loginProviders">
+		<a href="fragments/loginProviders.html">loginProviders</a>
+	    </div>
+	</div>-->
+ </div> 
+</main> 
+<footer class="footer card" role="contentinfo"> 
+ <div class="container card-body"> <!--<span id="copyright" th:utext="#{copyright}"></span>
+            <span>Powered by <a href="http://www.apereo.org/cas">
+                Apereo Central Authentication Service
+                <span th:text="${T(org.apereo.cas.util.CasVersion).getVersion()}"></span>
+                <span th:text="${T(org.apereo.cas.util.CasVersion).getDateTime()}"></span> </a>
+	    </span>-->
+  <p style="margin:0;font-size:.65rem;color:#606f7b;"> For assistance contact the IT Service Desk at <a href="tel:2053485555" style="color:#505050;font-weight:600;">205-348-5555</a> or <a href="mailto:itsd@ua.edu" style="color:#505050;font-weight:600;">itsd@ua.edu</a> <br><br> © <a href="https://ua.edu" target="_blank" style="color:#505050;font-weight:600;">The University of Alabama</a> <span>2021</span> <span style="margin:0 5px;">•</span> <a href="http://www.ua.edu/disclaimer.html" target="_blank" style="color:#505050;font-weight:600;">Disclaimer</a> <span style="margin:0 5px;">•</span> <a href="https://www.ua.edu/aboutsite" target="_blank" style="color:#505050;font-weight:600;">About this Site</a> <span style="margin:0 5px;">•</span> <a href="https://www.ua.edu/privacy" target="_blank" style="color:#505050;font-weight:600;">Privacy</a> </p> 
+ </div> 
+</footer> 
+<script type="text/javascript" src="/cas/webjars/zxcvbn/4.3.0/zxcvbn.js"></script> 
+<script type="text/javascript" src="/cas/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script> 
+<script type="text/javascript" src="/cas/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js"></script> 
+<script src="/cas/webjars/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> 
+<script src="/cas/webjars/headjs/1.0.3/head.min.js"></script> 
+<script type="text/javascript" src="/cas/themes/ua-main/js/cas.js"></script> 
+<script>
+    head.ready(document, function () {
+        if (!window.jQuery) {
+            var jqueryUrl = "\/cas\/webjars\/jquery\/3.3.1-1\/jquery.min.js";
+            head.load(jqueryUrl, loadjQueryUI);
+        } else {
+            notifyResourcesAreLoaded(resourceLoadedSuccessfully);
+        }
+    });
+
+    function loadjQueryUI() {
+        var jqueryUrl = "\/cas\/webjars\/jquery-ui\/1.12.1\/jquery-ui.min.js";
+        head.load(jqueryUrl, loadjQueryCookies);
+    }
+
+    function loadjQueryCookies() {
+        var jqueryUrl = "\/cas\/webjars\/jquery-cookie\/1.4.1-1\/jquery.cookie.js";
+        head.load(jqueryUrl, notifyResourcesAreLoaded(resourceLoadedSuccessfully));
+    }
+
+    function notifyResourcesAreLoaded(callback) {
+        if (typeof callback === "function") {
+            callback();
+        }
+    }
+</script> 
+<script>
+    /*<![CDATA[*/
+
+    var trackGeoLocation = false
+    "true";
+
+    var googleAnalyticsTrackingId = null;
+
+    if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', googleAnalyticsTrackingId, 'auto');
+        ga('send', 'pageview');
+    }
+
+    /*]]>*/
+</script>
+</body>
+</doc>

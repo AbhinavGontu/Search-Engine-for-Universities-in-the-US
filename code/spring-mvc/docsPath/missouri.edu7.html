@@ -1,0 +1,62 @@
+<doc>
+<filename>missouri.edu7.html</filename>
+<url>http://mu-cf-map.col.missouri.edu/muparking/</url>
+<ip>128.206.191.215</ip>
+<title>MU Campus Parking Map</title>
+<body>
+<div id="leftPanel"> 
+ <div id="banner"> <a href="http://www.missouri.edu"><img src="images/mulogoBLK.gif" alt="MU Home" width="22" height="23"></a> <a href="http://parking.missouri.edu/html/main.cfm">MU Parking Information</a> 
+ </div> 
+ <div data-dojo-type="dijit/TitlePane" id="bldgPanel" data-dojo-props="open:true, title:'Locate Parking'"> 
+  <h4>Search by Parking Lot ID</h4> 
+  <div id="campusParkgDD"></div> 
+  <h4>Search by Building</h4> 
+  <div id="campusBldgDD"></div> 
+  <div id="urlLink" class="hide"> <label for="txtBox" id="linkLbl"></label> 
+   <input type="text" size="50" readonly value="" id="txtBox" onfocus="this.select();"> 
+  </div> 
+ </div> 
+ <div id="linkPanel" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Help and Information', open:false, doLayout:false"> 
+  <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="doLayout:false"> 
+   <div data-dojo-type="dijit/layout/ContentPane" title="More Information" data-dojo-props="doLayout:false">
+     Click these map features for more information: 
+    <ul class="list"> 
+     <li>Bike Racks: Capacity</li> 
+     <li>Accessible Parking: Number of spaces</li> 
+     <li>Visitor Parking: Number of spaces</li> 
+     <li>Metered Parking: Number of spaces</li> 
+     <li>Motorcycle Parking: Number of spaces</li> 
+     <li>Other Reserved Parking: Number of spaces</li> 
+     <li>Parking Lots: Lot Name and permit type</li> 
+    </ul> 
+   </div> 
+   <div data-dojo-type="dijit/layout/ContentPane" title="Map Help" data-dojo-props="doLayout:false"> 
+    <ul id="helpLinks" class="list"> 
+     <li><a href="../maphelp/index.html" target="_blank">Map Navigation</a></li> 
+     <li><a href="../maphelp/index.html?=access" target="_blank">Accessibility Guide</a></li> 
+     <li><a href="../maphelp/index.html?=display" target="_blank">Map Layers and Display</a></li> 
+     <li><a href="../maphelp/index.html?=tools" target="_blank">Tools and Information</a></li> 
+     <li><a href="../maphelp/index.html?=print" target="_blank">Printing the Map</a></li> 
+     <li><a href="../maphelp/index.html?=system" target="_blank">System Requirements</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="legendPanelDiv"></div> 
+</div> 
+<div id="navToolbar" data-dojo-type="dijit/Toolbar" class="claro"> 
+ <div data-dojo-type="dijit/form/ToggleButton" title="Zoom In" id="zoomin" iconclass="zoominIcon"></div> 
+ <div data-dojo-type="dijit/form/Button" title="Previous View" id="zoomprev" iconclass="zoomprevIcon"></div> 
+ <div data-dojo-type="dijit/form/Button" title="Next View" id="zoomnext" iconclass="zoomnextIcon"></div> 
+ <div data-dojo-type="dijit/form/Button" title="Reset Map View" id="zoomfullext" iconclass="zoomfullextIcon"></div> 
+ <div data-dojo-type="dijit/form/Button" title="Print Map" id="printbtn" iconclass="printIcon"></div> 
+</div> 
+<div id="mapDiv"> 
+ <div id="wait" class="hide">
+   LOADING . . .
+  <br>
+  <img src="images/loading.gif" alt="Loading . . . "> 
+ </div> 
+</div>
+</body>
+</doc>

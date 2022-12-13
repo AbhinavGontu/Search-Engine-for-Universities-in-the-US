@@ -1,0 +1,28 @@
+<doc>
+<filename>rwu.edu10.html</filename>
+<url>http://gmail.rwu.edu/</url>
+<ip>198.7.243.70</ip>
+<title>Sign in - Google Accounts</title>
+<body>
+<form id="hiddenget" action="https://www.google.com/accounts/AccountChooser?hd=g.rwu.edu&amp;continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;osid=1&amp;service=mail&amp;ss=1&amp;ltmpl=default" method="get"> 
+ <noscript>
+   You should turn on Javascript support. 
+  <input type="submit" id="nojssubmit" value="Continue"> 
+ </noscript> 
+</form> 
+<script nonce="hQ3pesU6jfXqp62pksd0YA">
+window.onload = function() {
+  var redirectUrl = 'https:\x2F\x2Fwww.google.com\x2Faccounts\x2FAccountChooser?hd=g.rwu.edu\x26continue=https%3A%2F%2Fmail.google.com%2Fmail%2F\x26osid=1\x26service=mail\x26ss=1\x26ltmpl=default';
+  var domain = 'g.rwu.edu';
+  var hash = window.location.hash;
+  if (hash) {
+  var match = hash.match(/[#&]Email=([^&]+)/);
+  if (match) {
+  redirectUrl += "&Email=" + match[1] + "@" + domain;
+  }
+  }
+  window.location.replace(redirectUrl);
+};
+</script>
+</body>
+</doc>

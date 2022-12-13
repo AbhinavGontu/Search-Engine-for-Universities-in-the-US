@@ -1,0 +1,139 @@
+<doc>
+<filename>njit.edu13.html</filename>
+<url>http://my.njit.edu</url>
+<ip>128.235.251.55</ip>
+<title>Webauth Authentication Service</title>
+<body>
+<!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--> 
+<div> 
+ <div class="header-row"> 
+  <div class="container"> 
+   <header> <a href="http://www.njit.edu" target="_blank"><img src="/idp/images/logo.d006f08b.png" width="200" alt="New Jersey Institute of Technology"></a> 
+   </header> 
+  </div> 
+ </div> 
+ <div class="the-content-row"> 
+  <div class="container"> 
+   <div class="col-md-8 left-col"> <!--                                                            --> <!--                                                            --> <!--                                                            --> <!--                                                            --> <!-- START - Form Code form JSP can go in here --> 
+    <div> 
+     <div> 
+      <h3>Webauth Authentication Service</h3> 
+     </div> A service requiring authentication has referred you here. For details about the Webauth Authentication Service visit <a href="http://ist.njit.edu/webauth" target="_blank">http://ist.njit.edu/webauth</a>. 
+    </div> 
+    <br> <!-- BEGIN Maintenance notification block --> <!--
+        <div>
+        <div class="alert alert-info fade in" role="alert"><strong>System Maintenance Notification: COMPLETED</strong>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+        <br /><br />The NJIT Webauth Authentication Service will be down from 5 am - 6 am on July 26, 2016 to allow this service to be used to log into WebMail by Google.  See <a href="http://njitsos.wordpress.com" target="_blank">http://njitsos.wordpress.com</a> for additional details.
+
+        <br /><br />As of July 26, 2016 NJIT Webauth Authentication Service can be used to log into NJIT WebMail by Google.
+        </div>
+        </div>
+--> <!--
+        <div>
+        <div class="alert alert-info fade in" role="alert"><strong>Webmail by Google Notification:</strong>
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <br /><br />The URL <strong>https://webmail.njit.edu</strong> will be replaced by <strong>http://webmail.njit.edu</strong> for the initial "Webmail by Google" landing URL.  When users go to webmail.njit.edu they are immediately redirected to our "Webauth Authentication Service" and then "mail.google.com" both of which will continue to support HTTPS.
+        <br />
+        <br />A more technical explanation is available from the <a href="http://ist.njit.edu/ist-news" target="_blank">IST website</a>. If you have questions or concerns please contact the IST Service Desk at 973-596-2900 or http://servicedesk.njit.edu.
+        </div>
+        </div>
+--> <!-- END Maintenance notification block --> <!-- <h2> Login </h2> --> 
+    <form action="/idp/profile/cas/login?execution=e1s1" method="post"> 
+     <div class="form-group"> <label for="username">UCID</label> 
+      <input class="form-element form-field form-control" id="username" name="j_username" type="text" placeholder="Enter your UCID" value=""> 
+     </div> 
+     <div class="form-group"> <label for="password">Password</label> 
+      <input class="form-element form-field form-control" id="password" name="j_password" type="password" value="" placeholder="Enter your Password"> 
+     </div> <!-- Commented out so not to interfere with XE cookie issue preventing login to XE registration 20161031-dmk
+              <div class="checkbox">
+                <label>
+                <input type="checkbox" name="donotcache" value="1"> Don't Remember Login                </label>
+              </div>
+              --> <!--
+              <div class="checkbox">
+                <label>
+                <input id="_shib_idp_revokeConsent" type="checkbox" name="_shib_idp_revokeConsent" value="true"> Clear prior granting of permission for release of your information to this service.                </label>
+              </div>
+--> 
+     <div class="cta-wrapper"> <button class="form-element form-button btn btn-default btn-primary" type="submit" name="_eventId_proceed" onclick="this.childNodes[0].nodeValue='Logging in, please wait...'">Login</button> 
+     </div> 
+    </form> 
+    <hr> 
+    <div> 
+     <div class="alert alert-danger" role="alert">
+      <i class="fa fa-info-circle"></i> Protect your privacy! 
+      <br>
+      <br>Before entering your UCID and password, verify that the URL for this page begins with: <strong>https://webauth.njit.edu/</strong> 
+      <br>
+      <br> Login will remain in effect until you completely exit your browser or several hours have elapsed. Completely exit your web browser when finished. 
+     </div> <!--
+	<strong><span style="color: rgb(153, 0, 0); font-size: 13px;">Please Note: </span></strong>
+	<div>
+		Before entering your UCID and password, verify that the URL for this page begins with: <strong>https://dill.njit.edu/</strong>
+		<br />
+		<br />
+	<p>New Jersey Institute of Technology will <strong>NEVER</strong> ask for your password via email, phone, or any other method.
+	If you receive such a message or have replied to one, please report it to <a href="mailto:abuse@njit.edu">abuse@njit.edu</a>.
+	<strong>NEVER</strong> reply to any email asking for your account information or other personal details.</p>
+--> <!--
+	<p>To protect your privacy, <strong>completely exit your web browser</a></strong> when finished.</p>
+	<p>Login will remain in effect until you completely exit your browser or several hours have elapsed.</p>
+	</div>
+--> 
+    </div> 
+   </div> <!--                                                            --> <!--                                                            --> <!--                                                            --> <!--                                                            --> <!-- END - Form Code form JSP can go in here --> 
+   <div class="col-md-4 right-col"> 
+    <h2>Need further assistance?</h2> 
+    <ul class="list list-help"> 
+     <li class="list-item"><a href="https://ist.njit.edu/password-resets/"> Forgot your password?</a></li> 
+     <li class="list-item"><a href="https://servicedesk.njit.edu/">Need Help?</a></li> 
+    </ul> 
+    <br> 
+    <br> 
+    <p>New Jersey Institute of Technology will <strong>NEVER</strong> ask for your password via email, phone, or any other method. If you receive such a message or have replied to one, please report it to <a href="mailto:abuse@njit.edu">abuse@njit.edu</a>. <strong>NEVER</strong> reply to any email asking for your account information or other personal details.</p> 
+   </div> 
+  </div> 
+ </div> 
+ <footer class="footer"> 
+  <div class="container"> 
+   <div class="row"> 
+    <div class="col-sm-6 col-md-6"> 
+     <div id="address">
+      <a href="http://www.njit.edu">New Jersey Institute of Technology</a>
+      <br> <!-- <span>University Heights</span> <span>Newark, New Jersey 07102</span> --> 
+      <p>University Heights | Newark, New Jersey 07102</p> 
+     </div> 
+    </div> 
+    <div class="col-sm-6 col-md-6 right-col"> 
+     <ul id="footer_links" class="list-inline"> 
+      <li><a href="http://www.njit.edu/about/key-contacts.php">Contact Us</a></li> 
+      <li><a href="http://www.njit.edu/about/visit/gettingtonjit.php">Maps &amp; Directions</a></li> 
+     </ul> 
+     <ul id="footer_social" class="list-inline"> 
+      <li><a href="https://www.facebook.com/pages/Newark-NJ/NJIT/7185471825" title="NJIT on Facebook"><i class="fa fa-facebook-official"></i></a></li> 
+      <li><a href="https://twitter.com/njit" title="NJIT on Twitter"><i class="fa fa-twitter-square"></i></a></li> 
+      <li><a href="https://youtube.com/njit" title="NJIT on YouTube"><i class="fa fa-youtube-square"></i></a></li> 
+      <li><a href="https://www.flickr.com/photos/njit" title="NJIT on Flickr"><i class="fa fa-flickr"></i></a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+ </footer>
+</div>  
+<script src="/idp/scripts/vendor.8db2cce7.js"></script> 
+<script src="/idp/scripts/plugins.bde8e777.js"></script> 
+<script src="/idp/scripts/main.d41d8cd9.js"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> 
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+</body>
+</doc>

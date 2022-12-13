@@ -1,0 +1,405 @@
+<doc>
+<filename>utm.edu0.html</filename>
+<url>http://www.utm.edu/</url>
+<ip>208.87.72.93</ip>
+<title>The University of Tennessee at Martin</title>
+<body>
+<noscript>
+ <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5QNQ52" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> 
+<div id="utmHomepage"> <v-app> 
+  <v-system-bar app dark color="#0A223E" class="mx-auto"> 
+   <a class="mx-auto white--text" href="https://www.utm.edu/alerts/corona/">COVID-19 updates, case counts, and information </a> 
+  </v-system-bar> 
+  <v-main class="grey lighten-2" v-if="loadedAll" :class="{ 'pt-0': isHome }" v-cloak> 
+   <v-container fluid class="pa-0"> 
+    <utm-alert v-if="loaded.firebase.show &amp;&amp; loaded.firebase.data.alert" :show="loaded.firebase.data.alert.show" :title="loaded.firebase.data.alert.title" :icon="loaded.firebase.data.alert.icon" :info="loaded.firebase.data.alert.info" :more_info="loaded.firebase.data.alert.more_info" :updated="loaded.firebase.data.alert.updated" :type="loaded.firebase.data.alert.type"></utm-alert> 
+    <utm-menu :is-home="isHome"></utm-menu> 
+    <section class="sectionSplash" v-if="loaded.firebase.show &amp;&amp; loaded.firebase.data.splash"> <v-img v-if="!loaded.firebase.data.splash.hasSplashVideo" height="100vh" :src="loaded.firebase.data.splash.bgImage" lazy-src="/_imgs/_main/low/07232020_CooperHammockMarketing020.jpg"> 
+      <v-overlay color="black" :opacity="loaded.firebase.data.splash.overlay.opacity" absolute> 
+       <v-container fluid fill-height class="px-12"> 
+        <v-row class="d-flex justify-center align-center"> 
+         <v-col cols="12"> 
+          <div class="text-center"> 
+           <div id="title" class="asphaltsBrush mx-auto white--text">
+             {{ loaded.firebase.data.splash.title }}
+           </div> 
+           <hr class="mx-auto"> 
+           <br> 
+           <p id="blurb" class="lead archer mx-auto white--text"> {{loaded.firebase.data.splash.blurb}}</p> <a :href="loaded.firebase.data.splash.button.link"> 
+            <v-btn rounded x-large depressed class="btn-orange">
+              {{ loaded.firebase.data.splash.button.text }} 
+            </v-btn> </a> 
+          </div> <!-- <section id="section04" class="jumpToHere" aria-label="Jump to News and Headlines">
+                                        <a href="#jumpToHere" aria-label="news and headlines section">
+                                            <span alt="go to news and events section"></span>&nbsp;</a>
+                                    </section> --> 
+         </v-col> 
+        </v-row> 
+       </v-container> 
+      </v-overlay> 
+     </v-img> 
+     <div v-else id="fullScreenDiv"> 
+      <div id="videoDiv"> 
+       <video preload="auto" id="video" autoplay="autoplay" loop="loop" muted> 
+        <source :src="loaded.firebase.data.splash.bgVideo" type="video/mp4">  
+       </video> <v-overlay color="black" :opacity="loaded.firebase.data.splash.overlay.opacity" absolute> 
+        <v-container fluid fill-height class="px-12"> 
+         <v-row class="d-flex justify-center align-center"> 
+          <v-col cols="10"> 
+           <div class="text-center"> 
+            <h2 id="title" class="asphaltsBrush mx-auto white--text"> {{ loaded.firebase.data.splash.title }}</h2> 
+            <hr class="mx-auto"> 
+            <br> 
+            <p id="blurb" class="lead archer mx-auto white--text"> {{loaded.firebase.data.splash.blurb}}</p> <a :href="loaded.firebase.data.splash.button.link"> 
+             <v-btn rounded x-large depressed class="btn-orange">
+               {{ loaded.firebase.data.splash.button.text }} 
+             </v-btn> </a> 
+           </div> <!-- <section id="section04" class="jumpToHere" aria-label="Jump to News and Headlines">
+                                        <a href="#jumpToHere" aria-label="news and headlines section">
+                                            <span alt="go to news and events section"></span>&nbsp;</a>
+                                    </section> --> 
+          </v-col> 
+         </v-row> 
+        </v-container> 
+       </v-overlay> 
+      </div> 
+     </div> 
+    </section> <!-- SECTION NEWS         --> 
+    <section id="jumpToHere" class="section  section-news" v-if="loaded.news"> <v-container fluid id="newssection" class="px-0  news-wrapper mx-auto"> 
+      <utm-blurb-and-image v-if="loaded.news &amp;&amp; loaded.news.data[0]" :image-url="_getWordpressImageFromMeta(loaded.news.data[0])" :inset="true" :swap="false" panel-title="FEATURED" :blurb="loaded.news.data[0].excerpt" :call-to-action-secondary="loaded.news.data[0].title" button-title="READ MORE" :button-url="loaded.news.data[0].link"> 
+      </utm-blurb-and-image> 
+      <v-row class="mx-auto mt-12 news-articles"> 
+       <template v-for="(newsItem,index) in loaded.news.data" v-if="index > 0 &amp; index <= 3"> <v-col cols="12" lg="4" class="news-card" :key="index"> 
+         <a :href="newsItem.link" target="_blank"> <p class="author utm-text-orange">{{ newsItem.dateformatted }}</p> 
+          <div class="news-card-title">
+           {{ newsItem.title }}
+          </div> <p class="rssblurb" v-html="newsItem.excerpt "><br></p> </a> 
+        </v-col> 
+       </template> 
+      </v-row> 
+      <v-row> 
+       <v-col cols="12" class="mb-10 d-flex justify-center"> 
+        <a href="/news"> 
+         <v-btn rounded x-large depressed class="btn-orange">
+           MORE NEWS 
+         </v-btn> </a> 
+       </v-col> 
+      </v-row> 
+     </v-container> 
+    </section> <!-- SECTION EXPERIENCE --> 
+    <section class="sectionExperience " v-if="loaded.firebase.show"> 
+     <div class="container-fluid px-0 "> 
+      <div class="row-fluid"> 
+       <div class="grid-container"> 
+        <div class="grid-item pa-3 d-flex flex-column justify-center align-center"> 
+         <div class=""> 
+          <div class="panel-heading"> 
+           <div class="panel-title">
+             EXPERIENCE UT MARTIN 
+           </div> 
+          </div> 
+          <div class="grid-advantage  grid-item-title grid-item-title-lg pt-3 pb-10">
+           LET YOUR SPIRIT &nbsp; <span class="asphaltsBrush utm-text-orange">SOAR</span> 
+          </div> 
+          <p class="grid-item-blurb grid-item-blurb-sm utm-text-gray"> Broaden&nbsp;your&nbsp;horizons&nbsp;at the place where&nbsp;your&nbsp;future takes flight. <!--  We want you to succeed, and we can help
+                                                you spread your wings and go anywhere your dreams may take you. --> </p> 
+          <div class="text-center mx-auto"> <a href="https://www.utm.edu/apply"> 
+            <v-btn rounded x-large depressed class="btn-orange">
+              APPLY NOW 
+            </v-btn> </a> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="grid-item" v-for="(gridItem,idx) in randomizedGrid"> <v-img :src="gridItem.img.url" :alt="gridItem.img.alt" :aspect-ratio="1/1" :key="idx"> 
+          <v-overlay :color="gridItem.overlay.color" absolute :opacity="gridItem.overlay.opacity" class="pa-8"> 
+           <div clas="d-flex justify-center "> <a :href="gridItem.data.url"> 
+             <div v-if="idx == 0 || idx == 3" :class="[ gridItem.data.titleAttributes[0] ,'grid-item-title-xl' , 'grid-item-title', 'text-left']">
+               {{ gridItem.data.title }}
+             </div> 
+             <div v-else :class="[ gridItem.data.titleAttributes , 'grid-item-title', 'text-left']">
+               {{ gridItem.data.title }}
+             </div> 
+             <div class="grid-item-blurb utm-text-white grid-item-blurb-sm text-left">
+               {{gridItem.data.blurb}} 
+             </div> </a> 
+           </div> 
+          </v-overlay> 
+         </v-img> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </section> <!-- SECTION EXPERIENCE --> <!-- SECTION EVENTS --> 
+    <section class="sectionEvents" v-if="loaded.events &amp;&amp; (loaded.firebase.show &amp;&amp; loaded.firebase.data.event.bgImage)"> 
+     <div class="container-fluid px-0 "> 
+      <div class=" row-fluid paral-before paralsec d-block" :style=" 'background-image: url('+loaded.firebase.data.event.bgImage+');'"> <!-- "_imgs/_main/05052018_SpringCommencement182.jpg"> --> 
+      </div> 
+     </div> <!-- End News and Announcements Row --> <v-container fluid class="pt-0 ma-0" id="dates" v-if=" loaded.events"> 
+      <v-row class="highlight-event d-flex justify-center p-0"> 
+       <div class="highlight-triangles-container"> <v-img src="/_imgs/Triangles.square.png" cover aspect-ratio="1/1" style="margin-top: -130px" width="330px" height="330px" content-class="d-flex justify-center align-center"> 
+         <div class="triangle-text"> 
+          <div class="section-title">
+           GET INVOLVED
+          </div> 
+          <hr class="section-title-underline"> 
+          <div class="archer upcoming-events">
+           Upcoming 
+           <br>Events
+          </div> 
+         </div> 
+        </v-img> 
+       </div> 
+      </v-row> <!-- <div class="row mb-3 pt-1 toggle-row">
+
+                                <div class="col-12 text-right">
+
+
+                                    <div class="toggles mx-auto">
+
+                                        <span v-on:click="toggleEventsChecked"
+                                            v-bind:class="{  'text-right': true,'pl-2':false, 'events-checked': !eventsChecked , 'events-checked-bg': false}">ACADEMIC
+                                            CALENDAR</span>
+
+                                        <div class="switch-container">
+                                            <div class="switch">
+                                                <input type="checkbox" v-model="eventsChecked" id="toggle"
+                                                    aria-label="toggle switch to select calendars" />
+                                                <label for="toggle" aria-label="toggle switch to select calendars">
+                                                    <div class="events-container"></div>
+                                                    <div class="academic-container"></div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <span v-on:click="toggleEventsChecked"
+                                            v-bind:class="{ 'text-left': true,'events-checked': eventsChecked, 'events-checked-bg': false}">EVENTS
+                                            CALENDAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                                    </div>
+
+
+                                </div>
+                            </div> --> 
+      <v-row class="event-display py-8 mx-auto" v-if="loaded.events.show"> 
+       <div> <!--  v-bind:class="{'events-load-left': eventsChecked,'events-load-right': !eventsChecked }" --> <v-row> 
+         <v-col cols="12" md="6" class="calendar-items" v-for="(item, index) in loaded.events.data" :key="index" v-if=" item.state.status != 'Canceled'"> 
+          <p class="event utm-text-blue">{{ item.name }}</p> 
+          <p class="location utm-text-gray"> {{item.startsOn | isoToLocalDateTime}} - {{item.endsOn | isoToLocalTime}} </p> 
+          <p class="more-info"> <a :href="'https://runway.utm.edu/event/'+item.id">More info</a> </p> 
+         </v-col> 
+        </v-row> 
+       </div> 
+      </v-row> 
+      <v-row> 
+       <div class="mx-auto"> <a href="https://runway.utm.edu/organization/univrel/events"> 
+         <v-btn rounded x-large depressed class="btn-white btn-border-blue">
+           CAMPUS EVENT LIST 
+         </v-btn> </a> 
+       </div> 
+      </v-row> 
+     </v-container> 
+    </section> <!-- SECTION EVENTS --> <!-- SECTION SOCIAL --> 
+    <section class="sectionSocial" v-if="loaded.twitter &amp;&amp; loaded.twitter.data &amp;&amp; loaded.twitter.data.length > 1"> <v-img src="_imgs/SocialMediaSection_BG.tinyier.jpg" class="justify-center align-center" :aspect-ratio="16/9"> 
+      <v-container fluid class="pa-0"> 
+       <v-row justify="center" align="center" class="section-title-social-container"> 
+        <div class="mx-auto text-center"> 
+         <h1 class="section-title-social-headline">sky's the limit!</h1> 
+         <h1 class="section-title-social-tagline ">#beutmproud</h1> 
+        </div> 
+       </v-row> 
+       <v-row v-if="loaded.twitter.data[0] &amp;&amp; loaded.twitter.data[1]" justify="center" class="mx-auto"> 
+        <template v-for="(tweet,index) in loaded.twitter.data" v-if="index<3"> <v-col cols="12" lg="3" class="ma-0 pa-0" :key="index"> 
+          <div class="standard-item  "> 
+           <div class="tweet-user-icon "> <a v-if="!tweet.retweeted_status" :href="'https://twitter.com/'+tweet.user.screen_name"> <img :src="getTwitterProfileImage(tweet.user)" alt="Twitter user icon"> </a> <a v-else :href="'https://twitter.com/'+tweet.retweeted_status.user.screen_name"> <img :src="getTwitterProfileImage(tweet.retweeted_status.user)" alt="Twitter user icon"> </a> 
+           </div> 
+           <div class="tweet-user-id mx-auto"> 
+            <svg class="" role="img" aria-label="Twitter icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px"> <rect fill="#fff" height="512" rx="15%"></rect> <path d="m456 133c-14 7-31 11-47 13 17-10 30-27 37-46-15 10-34 16-52 20-61-62-157-7-141 75-68-3-129-35-169-85-22 37-11 86 26 109-13 0-26-4-37-9 0 39 28 72 65 80-12 3-25 4-37 2 10 33 41 57 77 57-42 30-77 38-122 34 170 111 378-32 359-208 16-11 30-25 41-42z" fill="#1DA1F2"></path> 
+            </svg> <a v-if="!tweet.retweeted_status" :href="'https://twitter.com/'+tweet.user.screen_name"> @{{ tweet.user.screen_name }} </a> <a v-else :href="'https://twitter.com/'+tweet.retweeted_status.user.screen_name"> @{{ tweet.retweeted_status.user.screen_name }} </a> 
+            <br> <!-- {{ tweet.created_at | prettyDate }} --> 
+           </div> 
+           <div class="row twitter-content  h-100"> 
+            <p v-if="!tweet.retweeted_status" v-html=" getTwitterTextAddSpanForHashtag(tweet)" class="align-middle white--text"> </p> 
+            <p v-else v-html=" getTwitterTextAddSpanForHashtag(tweet.retweeted_status)" class="align-middle white--text"></p> 
+           </div> 
+           <div class="row twitter-icon h-10 white--text"> 
+           </div> 
+          </div> 
+         </v-col> 
+        </template> 
+       </v-row> 
+       <v-row class="mx-auto text-center align-items-center social-icons"> 
+        <v-col cols="12"> 
+         <a href="https://www.instagram.com/utmartin" target="_blank" rel="noopener noreferrer" aria-label="instagram link"> 
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 372 372" xml:space="preserve" width="35px" height="35px"> <g> 
+            <path fill="transparent" stroke="white" stroke-width="29" d="M117,39h140c43.1,0,78,34.9,78,78v140c0,43.1-34.9,78-78,78H117c-43.1,0-78-34.9-78-78V117 C39,73.9,73.9,39,117,39z"> 
+            </path> 
+            <circle fill="transparent" stroke="#fff" stroke-width="29" cx="187" cy="187" r="69"> 
+            </circle> 
+           </g> <circle fill="#fff" stroke="#fff" cx="274" cy="100" r="19"></circle> 
+          </svg> </a> 
+         <a href="https://www.facebook.com/utmartin" target="_blank" rel="noopener noreferrer" aria-label="Facebook link"> 
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="facebook icon" viewbox="0 0 512 512" width="35px" height="35px"> <rect width="512" height="512" rx="15%" fill="transparent"></rect> <path fill="#fff" d="M330 512V322h64l9-74h-73v-47c0-22 6-36 37-36h39V99c-7-1-30-3-57-3-57 0-95 34-95 98v54h-64v74h64v190z"> 
+           </path> 
+          </svg> </a> 
+         <a href="https://twitter.com/utmartin" target="_blank" rel="noopener noreferrer" aria-label="Twitter link"> 
+          <svg role="img" aria-label="Twitter icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px"> <rect fill="#333" height="512" rx="15%"></rect> <path d="m456 133c-14 7-31 11-47 13 17-10 30-27 37-46-15 10-34 16-52 20-61-62-157-7-141 75-68-3-129-35-169-85-22 37-11 86 26 109-13 0-26-4-37-9 0 39 28 72 65 80-12 3-25 4-37 2 10 33 41 57 77 57-42 30-77 38-122 34 170 111 378-32 359-208 16-11 30-25 41-42z" fill="#fff"></path> 
+          </svg> </a> 
+         <a href="https://www.youtube.com/user/utmartin" target="_blank" rel="noopener noreferrer" aria-label="Youtube link"> 
+          <svg role="img" aria-label="YouTube icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px"> <rect fill="#333" height="512" rx="15%"></rect> <path d="m139 56 31 72v81h25v-81l28-72h-26l-16 54-15-54zm112 41c-17 0-29 12-29 27v61c0 15 13 27 29 27s29-12 29-27v-61c0-15-12-27-29-27zm46 2v93c0 21 21 24 27 16l6-8v9h26v-110h-21v86c0 11-16 11-17 0v-86zm-46 14c6 0 10 4 10 10v63c0 6-4 10-10 10s-10-4-10-10v-63c0-6 5-10 10-10zm-110 122c-29 0-52 23-52 52v115c0 29 23 52 52 52h229c29 0 52-23 52-52v-115c0-29-23-52-52-52zm-28 40h74v18h-28v124h-23v-124h-23zm143 0h23v41c21-17 37-5 37 16v56c0 26-15 42-39 19l-2 10h-19zm107 30c12 0 24 6 25 19 2 14 1 29 1 43h-40v25c0 6 4 10 10 10h3c5 0 9-4 9-10v-12h18c8 47-59 55-59 0v-33c0-9 1-17 3-23 4-12 16-19 30-19zm-181 7h23v83c0 11 14 4 14-1v-82h23v105h-18v-13c-5 10-25 19-36 11-5-4-6-11-6-17zm107 9c-5 0-10 3-10 9v62c1 11 19 11 20 0v-62c0-6-5-9-10-9zm71 5c-5 0-11 3-11 10v13h22l1-13c0-6-6-10-12-10z" fill="#fff"></path> 
+          </svg> </a> 
+         <a href="https://www.snapchat.com/add/discoverutm" target="_blank" rel="noopener noreferrer" aria-label="Snapchat link"> 
+          <svg xmlns="https://www.w3.org/2000/svg" aria-label="Snapchat icon" role="img" viewbox="0 0 512 512" width="35px" height="35px"> <rect rx="15%" fill="transparent" width="512" height="512"></rect> <path fill="white" stroke="#333" stroke-width="7" d="M203 414c-18-13-32-20-66-14-5 1-14 4-15-5-2-7-2-18-7-19-31-4-42-10-47-16-2-2-3-7 1-8 53-10 78-61 83-71 6-15-4-24-23-30-9-3-24-7-24-17 0-5 5-8 10-10 4-1 8-2 12 0 12 5 23 7 29 2 0-27-7-61 4-89 13-31 45-59 96-59s83 28 96 59c11 28 4 62 4 89 6 5 17 3 29-2 4-2 8-1 12 0 5 2 10 5 10 10 0 10-15 14-24 17-19 6-29 15-23 30 5 10 30 61 83 71 4 1 3 6 1 8-5 6-16 12-47 16-5 1-5 12-7 19-1 9-10 6-15 5-34-6-48 1-66 14a82 82 0 0 1-53 20c-21 1-38-8-53-20z"> 
+           </path> 
+          </svg> </a> 
+        </v-col> 
+       </v-row> 
+      </v-container> 
+     </v-img> <!--<pre>{{ social.twitter }}</pre>--> 
+    </section> <!-- SECTION SOCIAL --> <!-- SECTION VIDEO --> 
+    <section v-if="loaded.video.show"> 
+     <div class="wrapper"> <!-- <div id="youtubeOverlay" style="height:72%;width:100%;position:absolute;z-index:9;"></div> --> 
+      <div class="youtube" @click="playVideo('lcpRXoiRCBU')"> 
+       <img :src="loaded.video.cover" class="img-fluid" alt="video background image of cheerleader"> 
+       <div id="play-video" class="video-play-button-pulse" href="#"> <span></span> 
+       </div> 
+      </div> 
+     </div> 
+    </section> <!-- SECTION VIDEO --> 
+    <section> <v-container fluid class="px-0 sectionBlurb"> 
+      <v-row class="footer-blurb"> 
+       <v-col cols="12" lg="6" class="pa-0"> 
+        <utm-blurb-left class="left-blurb" primary-text="Let your future" secondary-text="TAKE FLIGHT!" button-url="/apply" button-text="APPLY NOW"> 
+        </utm-blurb-left> 
+       </v-col> 
+       <v-col cols="12" lg="6" class="d-flex justify-center align-center"> 
+        <utm-blurb-right class="right-blurb " primary-text="Never Fly" secondary-text="solo!" button-url="/tour" button-text="TAKE A CAMPUS TOUR"> 
+        </utm-blurb-right> 
+       </v-col> 
+      </v-row> 
+     </v-container> 
+    </section> <!-- SECTION FOOTER --> 
+    <div id="footer" class="container-fluid px-0 align-items-center utm-text-gray"> 
+     <div class="row"> 
+      <div class="col-12 text-center"> <a class="footerlogo" href="#" aria-label="the university of tennesee at martin logo"> 
+        <svg baseprofile="tiny" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 177.1 41.5" width="200"> <path d="M74.7 30.3c0 .5-.6.5-.9.5h-.9c-.9-.1-2.1-.1-3.2 0-.4 0-.8.1-1.2.1-.4 0-.6-.3-.6-.5 0-.5.4-.7.8-.8.5-.2 1.1-.4 1-1.6l-.3-11.2c0-.5-.1-.8-.1-.9-.1 0-.3.2-.5.7l-6 12.2c0 .1-.1.2-.1.3-.4.9-.7 1.3-1 1.3-.4 0-.6-.6-.8-.9v-.1l-6.2-12.9c0-.1 0-.1-.1-.1v.2l-.3 10.1c-.1 2.3.9 2.6 1.7 2.8.4.1.9.2.9.8 0 .6-.7.6-1 .6h-.8c-.5 0-1.2-.1-1.7-.1-.9 0-1.5 0-1.9.1h-.6c-.3 0-.5-.2-.5-.6 0-.5.4-.7.7-.8.5-.1 1.2-.3 1.3-2.1.1-1.3.2-2.5.3-3.6.2-2.8.4-5 .4-7.2 0-4.8-1.4-5.2-2.1-5.5-.3-.1-.7-.2-.7-.7 0-.2.1-.6.7-.6.3 0 .5 0 .8.1.5.1 1 .1 1.5 0 .3 0 .5-.1.8-.1.5 0 .6.4.7.7 0 .1.1.1.1.2l7 14.9c.1.2.2.5.3.5.1-.2.4-.8.7-1.3v-.1l7-13.7c0-.1.1-.1.1-.2.2-.4.4-.9.8-.9.2 0 .6 0 .9.1h.5c.3 0 .6 0 .8-.1.2 0 .4-.1.6-.1.3 0 .5.3.5.6 0 .5-.4.6-.8.7-.7.2-1.5.3-1.4 2.4l.4 14.4c.1 1.3.7 1.4 1.4 1.6.4.1 1 .2 1 .8zm23.8 0c0 .5-.5.5-.6.5-.6 0-1.2 0-1.8-.1-1 0-2-.1-2.9 0-.4 0-.8.1-1.2.1-.6 0-.9-.2-.9-.5 0-.5.5-.6.9-.8.5-.2.9-.3.9-.7 0-.4-.4-1.3-.6-2.1-.1-.2-.2-.4-.2-.6L91 23.8c-.3-.7-.4-.9-1-.9h-6.4c-.6 0-.9 0-1.1.5l-1.9 4.1c-.1.2-.2.6-.2.9 0 1.1.6 1.2 1.2 1.3.4.1.9.2.9.6 0 .5-.2.7-.7.7h-.3c-.4 0-.8 0-1.2-.1-.8-.1-1.6-.1-2.4 0-.4 0-.8.1-1.2.1-.3 0-.5-.2-.5-.6 0-.4.4-.5.7-.6.4-.1 1-.3 1.5-1.2l6.9-14.8c.4-.9.7-1.6 1-2.2.8-1.8.9-2.1 1.4-2.1.4 0 .6.6.8 1.1v.2l6 14.9.3.9c.3.8.6 1.7 1.1 2.4.4.7 1.1.8 1.6.9.5-.2 1-.1 1 .4zm-8.7-9.5l-2.8-7-3.3 7c0 .1-.1.1-.1.2h6.2c.1 0 .1 0 0-.2zm29.1 9.5c0 .3-.3.6-2.1.6-2.2 0-3.4-1.5-4.5-3.2l-3.2-5.1c-.1-.2-.2-.3-.3-.5-.6-1-.6-1-2.5-1h-.8c-.3 0-.4.1-.5.1-.1.1-.1.2 0 .3V27.7c0 1.3.9 1.5 1.8 1.7.6.1 1.2.3 1.2.8 0 .2-.1.5-.5.5h-.5c-.4 0-1.2-.1-3-.1-.5 0-1.1 0-1.6.1-.5 0-1.1.1-1.7.1-.3 0-.5-.2-.5-.6 0-.4.4-.6.8-.7.6-.3 1.3-.5 1.3-1.8V13c0-1.5-.8-1.7-1.5-1.8-.4-.1-1-.2-1-.8 0-.3.4-.6.8-.6h.5c.2 0 .5.1 1.4.1.9 0 1.7 0 2.5-.1.8 0 1.6-.1 2.3-.1h.7c1.9 0 6.4.5 6.4 5.3 0 2.1-1.4 4.2-3.5 5.1l4.7 7.1c1.3 2 2.4 2.3 2.9 2.4 0 .2.4.2.4.7zm-12.7-19h-.3c-.9 0-1.1 0-1.1.8v7.4s.2.2 1.4.2h1.4c.9 0 3.8-.3 3.8-3.9.1-4.1-3.6-4.5-5.2-4.5zm29.9-.4c0-.8-.3-1.1-1.1-1.1h-.8c-1.2 0-3.7.1-7.6.1-2.1 0-3.7 0-5.1-.1h-3.1c-.7 0-.7.8-.8 1.2l-.3 3c0 .3.2.6.5.6.5 0 .6-.4.7-.7l.1-.3c.5-1.4.5-1.7 2.1-1.7h4.7s.1.2.1 1v15.2c0 .9-.7 1.2-1.4 1.4-.5.2-.9.3-.9.8 0 .4.2.6.6.6h.2c.3 0 1.2-.1 3.8-.1.4 0 .9 0 1.3.1.4 0 .7.1 1.1.1.2 0 .3-.1.4-.1.1-.1.1-.3.1-.4 0-.5-.5-.6-.9-.7-.7-.2-1.4-.3-1.4-1.6V12.7 12h5c1.6 0 1.7.7 1.8 1.3 0 .4.1.9.7.9.2 0 .3-.1.4-.2.2-.2.2-.5.1-.7l-.3-2.4zm8.7 18.6c-.9-.2-1.5-.4-1.5-1.4V12.6c0-1.2.7-1.4 1.3-1.6.4-.1.8-.2.8-.7 0-.5-.5-.5-.8-.5-.5 0-.9 0-1.4.1-1 .1-2 .1-2.9 0-.5 0-1.1-.1-1.6-.1s-.5.3-.5.6c0 .4.4.5.9.6.7.2 1.5.4 1.5 1.5v14.8c0 1.7-.8 1.9-1.4 2.1-.4.1-.8.2-.8.7 0 .6.4.7.8.7h.5c.4 0 1.1-.1 2.3-.1.7 0 1.4 0 2 .1h1.1c.3 0 .8 0 .8-.5s-.6-.7-1.1-.8zm23.4-19.6c-.3 0-.8 0-1.2.1-.5 0-1.2.1-1.7.1s-.9 0-1.3-.1c-.4 0-.9-.1-1.3-.1-.3 0-.6.2-.6.5 0 .5.5.6 1 .8.9.2 2.2.5 2.2 2.9v12l-13.8-15.4-.1-.1c-.2-.3-.5-.6-.8-.6-.2 0-.5 0-.7.1-.5.1-.9.1-1.3 0-.2 0-.5-.1-.7-.1-.2 0-.7.2-.7.5 0 .5.5.6.9.7 1 .2 2.6.6 2.6 4.7v10.7c0 2.5-1 2.8-1.7 3-.4.1-.8.2-.8.8 0 .4.2.6.6.6h.5c.6 0 1.5-.1 2.2-.1.8 0 1.5 0 2 .1h1c.1 0 .6 0 .6-.6 0-.5-.5-.6-.9-.6-.8-.1-1.6-.3-1.6-1.7V16v-.4l.3.3.1.1 12.5 14c.6.6.9.9 1.3.9.5 0 .5-.7.5-1.5V12.7c0-1.2.5-1.4 1-1.6.3-.1.7-.3.7-.7-.3-.3-.5-.5-.8-.5z" /> <g fill="#FF8200"> 
+          <path d="M38.5 17v13.9h-6V9.5h16.1c-.3.3-.2.8-.7 1.5-.6.8-1.2.4-1.7 1-.4.5-.3 1.1-.7 1.7-.6.8-1.5.5-2.2 1.3-.5.7-.5 1.3-1 2h-3.8zM24.1 9.5c-.3.3-.2.9-.7 1.5-.6.8-1.2.4-1.7 1-.4.5-.3 1.1-.7 1.6-.6.8-1.5.5-2.2 1.3-.5.7-.5 1.3-1 2h7.8v7h-6.5c-.5 0-1 .1-1.3-.3-.3-.3-.3-.6-.3-1V9.5h-6.9v15.1c0 1.8 1.2 3.5 1.8 4.1.8.8 2.5 2.2 4.5 2.2H26l5.5-6.3V9.5h-7.4z" /> 
+         </g> 
+        </svg> </a> 
+       <p style="font-size: .4em">&nbsp;</p> 
+       <p class="footer-address">554 University Street <br> Martin, TN 38238 <br><a href="tel:+18008298861" target="_blank">(800) 829-UTM1</a></p> 
+       <p>&nbsp;</p> 
+      </div> 
+     </div> 
+     <div class="row mx-auto"> 
+      <div class="col-12 align-item-center text-center pb-3">
+       Follow Us
+      </div> 
+      <div class=" mx-auto  social-line-spacer">
+        &nbsp; 
+      </div> 
+      <div class="col-12 mx-auto text-center align-items-center"> <a href="https://www.instagram.com/utmartin" target="_blank" rel="noopener noreferrer" aria-label="instagram link"> 
+        <svg version="1.1" id="intagramIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 372 372" style="enable-background:new 0 0 372 372;" xml:space="preserve" width="35px" height="35px"> <g> 
+          <path fill="#fff" stroke="#333" stroke-width="29" d="M117,39h140c43.1,0,78,34.9,78,78v140c0,43.1-34.9,78-78,78H117c-43.1,0-78-34.9-78-78V117
+                            C39,73.9,73.9,39,117,39z" /> 
+          <circle fill="#fff" stroke="#333" stroke-width="29" cx="187" cy="187" r="69" /> 
+         </g> <circle fill="#444" stroke="#444" cx="274" cy="100" r="19" /> 
+        </svg> </a> <a href="https://www.facebook.com/utmartin" target="_blank" rel="noopener noreferrer" aria-label="Facebook link"> 
+        <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="facebook icon" viewbox="0 0 512 512" width="35px" height="35px"> <rect width="512" height="512" rx="15%" fill="#fff"></rect> <path fill="#333" d="M330 512V322h64l9-74h-73v-47c0-22 6-36 37-36h39V99c-7-1-30-3-57-3-57 0-95 34-95 98v54h-64v74h64v190z"></path> 
+        </svg> </a> <a href="https://twitter.com/utmartin" target="_blank" rel="noopener noreferrer" aria-label="Twitter link"> 
+        <svg role="img" id="twitterIcon" aria-label="Twitter icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px"> <rect fill="#fff" height="512" rx="15%"></rect> <path d="m456 133c-14 7-31 11-47 13 17-10 30-27 37-46-15 10-34 16-52 20-61-62-157-7-141 75-68-3-129-35-169-85-22 37-11 86 26 109-13 0-26-4-37-9 0 39 28 72 65 80-12 3-25 4-37 2 10 33 41 57 77 57-42 30-77 38-122 34 170 111 378-32 359-208 16-11 30-25 41-42z" fill="#333"></path> 
+        </svg> </a> <a href="https://www.youtube.com/user/utmartin" target="_blank" rel="noopener noreferrer" aria-label="Youtube link"> 
+        <svg id="youtubeIcon" role="img" aria-label="YouTube icon" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px"> <rect fill="#fff" height="512" rx="15%"></rect> <path d="m139 56 31 72v81h25v-81l28-72h-26l-16 54-15-54zm112 41c-17 0-29 12-29 27v61c0 15 13 27 29 27s29-12 29-27v-61c0-15-12-27-29-27zm46 2v93c0 21 21 24 27 16l6-8v9h26v-110h-21v86c0 11-16 11-17 0v-86zm-46 14c6 0 10 4 10 10v63c0 6-4 10-10 10s-10-4-10-10v-63c0-6 5-10 10-10zm-110 122c-29 0-52 23-52 52v115c0 29 23 52 52 52h229c29 0 52-23 52-52v-115c0-29-23-52-52-52zm-28 40h74v18h-28v124h-23v-124h-23zm143 0h23v41c21-17 37-5 37 16v56c0 26-15 42-39 19l-2 10h-19zm107 30c12 0 24 6 25 19 2 14 1 29 1 43h-40v25c0 6 4 10 10 10h3c5 0 9-4 9-10v-12h18c8 47-59 55-59 0v-33c0-9 1-17 3-23 4-12 16-19 30-19zm-181 7h23v83c0 11 14 4 14-1v-82h23v105h-18v-13c-5 10-25 19-36 11-5-4-6-11-6-17zm107 9c-5 0-10 3-10 9v62c1 11 19 11 20 0v-62c0-6-5-9-10-9zm71 5c-5 0-11 3-11 10v13h22l1-13c0-6-6-10-12-10z" fill="#333"></path> 
+        </svg> </a> <a href="https://www.snapchat.com/add/discoverutm" target="_blank" rel="noopener noreferrer" aria-label="Snapchat link"> 
+        <svg xmlns="https://www.w3.org/2000/svg" aria-label="Snapchat icon" role="img" viewbox="0 0 512 512" width="35px" height="35px"> <rect rx="15%" fill="transparent" width="512" height="512"></rect> <path fill="#333" stroke="#fff" stroke-width="7" d="M203 414c-18-13-32-20-66-14-5 1-14 4-15-5-2-7-2-18-7-19-31-4-42-10-47-16-2-2-3-7 1-8 53-10 78-61 83-71 6-15-4-24-23-30-9-3-24-7-24-17 0-5 5-8 10-10 4-1 8-2 12 0 12 5 23 7 29 2 0-27-7-61 4-89 13-31 45-59 96-59s83 28 96 59c11 28 4 62 4 89 6 5 17 3 29-2 4-2 8-1 12 0 5 2 10 5 10 10 0 10-15 14-24 17-19 6-29 15-23 30 5 10 30 61 83 71 4 1 3 6 1 8-5 6-16 12-47 16-5 1-5 12-7 19-1 9-10 6-15 5-34-6-48 1-66 14a82 82 0 0 1-53 20c-21 1-38-8-53-20z"></path> 
+        </svg> </a> 
+      </div> 
+     </div> 
+     <p class="pa-0 ma-0">&nbsp;</p> 
+    </div> 
+    <div class="container-fluid px-0 utm-text-gray" id="copyright"> 
+     <p class="text-sm-center text-center col-12"> <br>A primary campus of the <a class="utm-text-black" href="http://tennessee.edu/"> University of Tennessee System</a> and partner in the <a class="utm-text-black" href="http://www.tntransferpathway.org/">Tennessee Transfer Pathway</a>.</p> 
+    </div> <!-- SECTION FOOTER --> 
+   </v-container> 
+  </v-main> 
+ </v-app> 
+</div> <!-- Vue 
+    <script defer src="/_js/vue.min.js" defer></script>--> <!-- development version, includes helpful console warnings 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    --> <!-- production version, optimized for size and speed --> <!-- <script defer src="/_js/vue.min.js"></script> --> 
+<script defer src="/_js/twemoji.min.js" async></script> 
+<script defer src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script> 
+<script defer src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.js"></script> 
+<script defer src="/_js/vue/filters.js"></script> 
+<script defer src="/_js/components/utmMenu0.js"></script> 
+<script defer src="/_js/components/utmAlert.js"></script> 
+<script defer src="/_js/components/utmBlurbLeft.js"></script> 
+<script defer src="/_js/components/utmBlurbRight.js"></script> 
+<script defer src="/_js/components/utmBlurbAndImage.js"></script> 
+<script defer src="/_js/document.vuetify.js"></script> 
+<script data-mobi-subdomain="utm" data-mobi-hide-default-button async src="https://mobi.visitdays.com/assets/snippet/assets/main.bundle.js" defer></script> <!--Matter.js Floating Triangles Background--> <!-- 
+    <script defer src="/_js/search.config.min.js?=201812060108" defer></script> --> <!-- On Dom Loaded Initialize --> <!-- <script defer src="/_js/components/utmOnDomLoad.js?src=webchat"></script> --> <!--INDEX VUE CLASS --> 
+<script>
+        let onDomLoadedHomePage = function () {
+
+            /********************************************\
+                Home Page 
+            \********************************************/
+            //Scroll Down Button
+            // let mainPageJumpToContent = document.querySelector('.jumpToHere a');
+            // if (mainPageJumpToContent) {
+            //     mainPageJumpToContent
+            //         .addEventListener('click', function (e) {
+            //             e.preventDefault();
+            //             // var log = $($(this).attr('href')).offset().top;
+            //             // //console.log(log);
+            //             // $('html, body').animate({
+            //             //     scrollTop: $($(this).attr('href')).offset().top
+            //             // }, 500, 'linear');
+            //             document.querySelector('#jumpToHere').scrollIntoView({
+            //                 behavior: 'smooth'
+            //             });
+            //         })
+            // } else {
+            //     console.error("JumpButton - Error")
+            // }
+
+
+
+
+
+
+        };
+        /*
+        	ON PAGE LOADED DO THE FOLLOWING
+        */
+        //if the document is already in the readyState  or is not loading do the onDomloaded
+        if (
+            document.readyState === "complete" ||
+            (document.readyState !== "loading" && !document.documentElement.doScroll)
+        ) {
+            onDomLoaded();
+        }
+        //the dom hasn't been loaded and set the event listener 
+        else {
+            document.addEventListener("DOMContentLoaded", onDomLoadedHomePage);
+        }
+    </script> <!--GOOGLE ANALYTICS INCLUDE--> 
+<script src="_scripts/analytics.js"></script> <!-- SECTION WEBCHAT --> <!-- 
+<style>
+    body{
+        padding-bottom: 85px;
+        
+    }
+    .admit-hub-webchat{
+        padding-top:80px;
+        background-color: #0c2340;
+    }
+</style>
+<div class="admit-hub-webchat">
+    &nbsp;
+</div> --> <!-- AdmitHub Web Chat --> 
+<script>window.admitHubBot = {botToken: "57ff547b10ec48ab9" };</script> 
+<script defer src="https://webbot.admithub.com/static/js/webchat.js"></script> <!-- <link rel="stylesheet" type="text/css" href="https://webbot.admithub.com/static/css/webchat.css"> --> 
+<link rel="preload" href="https://webbot.admithub.com/static/css/webchat.css" as="style" onload="this.rel='stylesheet'"> <!-- DO NOT EDIT ABOVE THIS LINE --> <!-- SECTION WEBCHAT -->
+</body>
+</doc>

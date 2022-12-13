@@ -1,0 +1,28 @@
+<doc>
+<filename>quincy.edu6.html</filename>
+<url>http://mail.quincy.edu</url>
+<ip>142.250.68.19</ip>
+<title>Sign in - Google Accounts</title>
+<body>
+<form id="hiddenget" action="https://www.google.com/accounts/AccountChooser?hd=quincy.edu&amp;continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;osid=1&amp;service=mail&amp;ss=1&amp;ltmpl=default" method="get"> 
+ <noscript>
+   You should turn on Javascript support. 
+  <input type="submit" id="nojssubmit" value="Continue"> 
+ </noscript> 
+</form> 
+<script nonce="ZH8sfaBtlFCnV9YkAnqtoA">
+window.onload = function() {
+  var redirectUrl = 'https:\x2F\x2Fwww.google.com\x2Faccounts\x2FAccountChooser?hd=quincy.edu\x26continue=https%3A%2F%2Fmail.google.com%2Fmail%2F\x26osid=1\x26service=mail\x26ss=1\x26ltmpl=default';
+  var domain = 'quincy.edu';
+  var hash = window.location.hash;
+  if (hash) {
+  var match = hash.match(/[#&]Email=([^&]+)/);
+  if (match) {
+  redirectUrl += "&Email=" + match[1] + "@" + domain;
+  }
+  }
+  window.location.replace(redirectUrl);
+};
+</script>
+</body>
+</doc>

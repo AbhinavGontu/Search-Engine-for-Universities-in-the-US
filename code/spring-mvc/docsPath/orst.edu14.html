@@ -1,0 +1,847 @@
+<doc>
+<filename>orst.edu14.html</filename>
+<url>http://osubeavers.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=MBKS&linkID=oregonst&shopperContext=&caller=&appCode=</url>
+<ip>216.177.87.52</ip>
+<title>Oregon State Beavers | Online Ticket Office | Sorry</title>
+<body>
+<div id="skiptocontent"> <a href="#content" aria-label="Skip to content">Skip to content</a> 
+</div> <a name="topofpage" aria-label="Top of the page"></a> <!-- responsive mini cart --> <!-- ****************************************************************************************
+		Responsive Mini-cart
+***************************************************************************************** --> <!-- get global styles --> 
+<link rel="stylesheet" type="text/css" media="screen" href="https://pac-media.s3-us-west-2.amazonaws.com/common/legacy/scripts/evLibrary/minicart/miniCart-responsive.css?ev_version=05.210112"> <!-- get global support functions --> 
+<script type="text/javascript" src="https://pac-media.s3-us-west-2.amazonaws.com/common/legacy/scripts/evLibrary/minicart/minicart_responsive.min.js?ev_version=05.210112"></script> 
+<script type="text/javascript">
+
+
+	// ****************************************
+	//	NetCommerce Support Functions
+	// ****************************************
+
+	function updateTimer(idx) {
+		var newTime = cartList[idx].timer.display(idx),
+			minLeft = newTime.split(":")[0];
+		jq("#countdown"+idx).html(newTime);
+
+		if(!isNaN(minLeft) && Number(minLeft)<1) {
+			jq("#countdown"+idx).addClass("warning");
+		}
+
+		// INV-527
+		if (!isNaN(minLeft) && Number(minLeft) === 0) {
+			resetSessionStorage();
+		}
+		// INV-527
+	}
+
+	function startTimer(cartIndex, setTimerID) {
+		var exp = 'updateTimer('+cartIndex+');'
+		if(setTimerID)
+			timerID = setInterval(exp, 1000);
+		else
+			setInterval(exp, 1000);
+	}
+
+	function appPendingCart(txt) {
+		let elm = '<span class="list-group-item list-group-item-info">' +
+						'<p>' + txt + '</p>' +
+						'<p class="text-muted">New Application - <span class="error">This item is currently in the shopping cart.<br></span></p>' +
+					'</span>';
+					return elm;
+	}
+
+	function appCompleteCart(txt) {
+		let elm = '<span class="list-group-item list-group-item-info">' +
+						'<p>' + txt + ' - Completed</p>' +
+					'</span>';
+					return elm;
+	}
+
+	function getAppIdFromUrl(hrefStr) {
+		let startPos = hrefStr.indexOf("appCode=") + 8;
+		let endPos = hrefStr.indexOf('&',startPos);
+		let appId = hrefStr.substring(startPos, endPos);
+		return appId;
+	}
+
+	// ****************************************
+	//	Init flags
+	// ****************************************
+
+	// Determine number of active carts and the current cart's index
+	var timerID,
+		activeRes = 0,
+		thisCartIndex = -1;
+	if(hasProperty("ts.rsd") && getPropertyValue("ts.rsd") == "1" && (!common.hasCart))
+	{
+		var rxCartId, expire, curl;
+		et.resolvePoolId("ev_oregonst").done(function(p_poolId)
+		{
+			//et.evrxCartTimer(p_poolId, "ev_oregonst", "en_US").done(function(data)
+			et.getEvrxCart("oregonst", "ev_oregonst", p_poolId, "EV193", "5100b5410670016758").done(function(data)
+			{
+				if(data.status.cd == 0){
+					if(data.status.mg != "successful"){
+						alert(JSON.stringify(data.status.mg))
+					}
+					else{
+						if(typeof(data.value)!="undefined")
+						{
+							if(data.value.id != null)
+							{
+								rxCartId = JSON.parse(JSON.stringify(data.value.id));
+								expire = JSON.parse(JSON.stringify(data.value.secondsUntilTimeout));
+								var surl = "http://" + window.location.host + "/cgi-bin/ncommerce3/SEGetGroupList?linkID=oregonst";
+								var rurl = "http://" + window.location.host + "/cgi-bin/ncommerce3/GetApps?linkID=oregonst&linkSource=SR&caller=appList";
+								surl = escape(surl);
+								rurl = escape(rurl);
+								curl = "https://" + window.location.host + "/evrx/cart/?cartId=" + rxCartId + "&itemType=SE&linkID=oregonst&siteId=ev_oregonst&locale=en_US&ehid=EV193&esid=5100b5410670016758&continueUrlSE=" + surl + "&continueUrlSR=" + rurl;
+								cartList[0].url = curl;
+								cartList[0].cart.number = -999;
+								cartList[0].ticketNum = 99999;
+								cartList[0].cart.expire = expire;
+								sharedCartId = rxCartId;
+								evrxOrderId = data.value.orderId;
+								hasEvrxCart = true;
+								evrxCartType = data.value.requestType;
+								evrxCartStatus =data.value.statusType;
+								if(evrxCartType == "APP_RENEWAL") {
+									evrxCartAppId = data.value.lines[0].renewalApplicationId;
+									jQuery(".list-group-item").each(function() {
+										if(this.href)
+										{
+											if(evrxCartAppId == getAppIdFromUrl(this.href)) {
+												if(evrxCartStatus == "PENDING") {
+													jQuery(this).after(appPendingCart(jQuery(this).text()));
+													jQuery(this).remove();
+												}
+											}
+										}
+									});
+								}
+								// set RSD session storage
+								sessionStorage.setItem("rxCart", JSON.stringify(data.value));
+
+								createTimer(sharedCartId, evrxOrderId);
+							}
+						} else {
+							var appIds = localStorage.getItem("appIds");
+							var paymentDataAppIds = JSON.parse(appIds);
+							jQuery(".list-group-item").each(function() {
+								if(this.href)
+								{
+									if(paymentDataAppIds[0] == getAppIdFromUrl(this.href)) {
+										jQuery(this).after(appCompleteCart(jQuery(this).text()));
+										jQuery(this).remove();
+									}
+								}
+							});
+						}
+					}
+				}
+				else
+				{
+					//alert("Get evrx cart call failed" + " - " + data.status.mg);
+					cartList[0].url = "";
+					cartList[0].cart.number = "";
+					cartList[0].ticketNum = "";
+					cartList[0].cart.expire = "";
+
+					// delete RSD session storage
+					resetSessionStorage();
+
+				}
+			}).fail(function(data)
+			{
+				alert("Get evrx cart call failed");
+			});
+
+
+		}).fail(function(data)
+		{
+			//alert("Failed to resolve pool ID.");
+			console.log("Failed to resolve pool ID.");
+		});
+	}
+	else
+	{
+		var p1, p2;
+		p1= ""; p2="";
+		createTimer(p1, p2);
+	}
+
+function resetSessionStorage() {
+	sessionStorage.removeItem('itemListObj');
+	sessionStorage.removeItem('PKObj');
+	sessionStorage.removeItem('DPObj');
+	sessionStorage.removeItem('SRObj');
+	sessionStorage.removeItem('TTObj');
+	sessionStorage.removeItem('packageInfo');
+	sessionStorage.removeItem('rxCart');
+
+	// INV-527
+	sessionStorage.removeItem('reservedSeatTotal');
+	sessionStorage.removeItem('currentSeatTotal');
+	// End INV-527
+}
+
+function createTimer(sharedCartId, evrxOrderId)
+{
+	for(var i=0; i < cartList.length; i++) {
+		if(cartList[i].cart.expire > 0) {
+			++activeRes;
+			if(cartList[i].cart == cart) {
+				thisCartIndex = i;
+			}
+		}
+	}
+
+	// ****************************************
+	//	Session Storage
+	// ****************************************
+	(function() {
+		if(activeRes > 0) {
+			// CART
+			if(common.pageName=="CartDisplay.html" && typeof(hasReservation)!="undefined" && hasReservation) {
+				sessionStorage.setItem("itemListObj", JSON.stringify(itemList_));
+				sessionStorage.setItem("PKObj", JSON.stringify(cartPKList_));
+				sessionStorage.setItem("DPObj", JSON.stringify(cartPledgeList_));
+				sessionStorage.setItem("SRObj", JSON.stringify(cartRenewalList_));
+				sessionStorage.setItem("TTObj", JSON.stringify(cartAcceptTTList_));
+			}
+
+			// PACKAGES
+			if(common.pageName=="DisplayPackageReservation.html" && typeof(packageConfirm)==="object") {
+				sessionStorage.setItem("packageInfo", JSON.stringify(packageConfirm));
+				// delete session storage once package added
+				jq(document).ready(function() {
+					jq('[onclick*="submitPackageConfirmForm"]').bind("click", function() {
+						sessionStorage.removeItem('packageInfo');
+					});
+				}); // END jq(document).ready
+			}
+
+		} else {
+			// delete session storage if cart is emptied
+			resetSessionStorage();
+		}
+
+		// load ev_cart info
+		setEvCart();
+	})();
+
+	// ****************************************
+	//	ACTION!
+	// ****************************************
+
+	if(activeRes > 0 && common.pageName != "OrderWait.html" && common.pageName != "OrderOk.html") {
+
+		// Create timer forms
+		timerDisplayed = 1;
+
+		for(var i=0; i < cartList.length; i++) {
+			if(cartList[i].cart.expire > 0) {
+			   if(hasProperty("ts.rsd") && getPropertyValue("ts.rsd") == "1") {
+				cartList[i].timer = new Timer_ajax(cartList[i], i, sharedCartId, evrxOrderId);
+			   }
+			   else {
+				cartList[i].timer = new Timer(cartList[i], i);
+			   }
+			}
+		}
+
+		setTimerFlag = false;
+
+		if(thisCartIndex > -1) {
+			var cartExists = !(cartList[thisCartIndex].pkNum=="" && cartList[thisCartIndex].transferNum=="" && cartList[thisCartIndex].appNum=="" && cartList[thisCartIndex].appPayCode=="" && cartList[thisCartIndex].ticketNum=="" && cartList[thisCartIndex].miscNum=="" && cartList[thisCartIndex].pledgeNum=="" && cartList[thisCartIndex].pledgePayNum=="");
+			var packageExists = (pkItemOnBuild[0]!=undefined && pkItemOnBuild[0].pkNum!="");
+
+			if(cartExists || packageExists) {
+
+				// print module
+				jQuery("body").append(
+					'<div id="timer_responsive" class="'+ (typeof(minicart_setting)==="string" && minicart_setting!="" ? "mc_"+minicart_setting : "") +'">' +
+					'	<div class="container"><div class="row">' +
+					'		<div class="col-xs-9">' +
+					'			<i class="fa fa-shopping-cart fa-2x pull-left"></i>' +
+					'			<div id="minicart_Info"></div>' +
+					'		</div>' +
+					'		<div class="col-xs-3 text-right" aria-live="polite" aria-atomic="true" aria-label="Shopping cart expires in"><strong id="countdown' + thisCartIndex + '" class="cart_text"></strong></div>' +
+					'	</div></div>' +
+					'</div>'
+				);
+				if(packageExists)  {
+					// load package data
+					minicart_getPackageInfo(pkItemOnBuild[0].pkUrl);
+				} else if(cartExists) {
+					// load cart data
+					minicart_getCartInfo(cartList[thisCartIndex].url);
+				}
+
+				minicart_adjustPage();
+
+			} // END if(cartExists || packageExists)
+
+			setTimerFlag = true;
+
+			if(setTimerFlag) {
+				startTimer(thisCartIndex, true);
+			}
+
+		} // END if(thisCartIndex)
+
+	} // END if(activeRes)
+
+} // END createTimer
+
+</script> <!-- end showactivecartlist_responsive --> <!-- END responsive mini cart --> 
+<div id="banner-responsive"> 
+ <div class="contentArea"> 
+  <div class="logo"> 
+   <img src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/mobile/mobile-banner.png" alt="site logo"> 
+  </div> 
+  <div class="mini-menu-toggle"> <i class="fa fa-bars"></i> 
+  </div> 
+  <div id="topMobileNav"></div> 
+ </div> 
+</div> <!-- SEARCH MODULE for Mobile - container EV16190,DISC56 To make it wotk on mobile--> 
+<div id="superSearchModule_m"></div> 
+<div id="wrap"> 
+ <div id="container" class="container"> 
+  <div id="banner" role="banner"> 
+   <div class="container"> 
+    <div id="navigation"> 
+     <div class="row flex" id="navrow"> 
+      <div class="col-md-1"> <a href="http://www.osubeavers.com/" target="_blank" class="logo"><img alt="OSU Logo" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/main_logo.png"></a> 
+      </div> 
+      <div class="col-md-1 orangebar">
+       &nbsp;
+      </div> 
+      <div class="col-md-10"> 
+       <div id="topmenu" role="navigation"></div> 
+      </div> 
+     </div> <!-- sign in widgets - mint or chocolate --> 
+     <script type="text/javascript" src="/www/ev_oregonst/ss/evenue/customize/shared/js/integration.js"></script> 
+     <script type="text/javascript">
+
+		var IPFlag = "0";
+		if(hasProperty("reg.integratedPatron")) {
+			IPFlag = getPropertyValue("reg.integratedPatron");
+		}
+
+		function emailValidateMyAccount_embedded(email) {
+			var str = email.value; // email string
+
+			var reg1 = /(@.*@)|(\.\.)|(@\.)|(\.@)|(^\.)/; // not valid
+			var reg2 = /^.+\@(\[?)[a-zA-Z0-9\-\.]+\.([a-zA-Z]{2,9}|[0-9]{1,4})(\]?)$/; // valid
+
+			if(IPFlag == "0")
+			{
+				if( isNaN(parseInt(str)) == false )
+					return true;
+			}
+
+			if (!reg1.test(str) && reg2.test(str)) { // if syntax is valid
+				return true;
+			}
+			window.status = "Please enter a valid Internet e-mail address";
+
+			email.focus();
+			email.select();
+			return false;
+		}
+
+		function formValidate_embedded(frm) {
+			if(emailValidateMyAccount_embedded(frm.email) == false && accntValidate(frm.email) == false) {
+				alert("Please enter a valid Internet e-mail address or account number");
+				return false;
+			}
+			if(passwordValidate(frm.password) == false) {
+				if(IPFlag)
+					alert("Please enter a password between 6 and 15 characters in length");
+				else
+					alert("Please enter a password between 4 and 12 characters in length");
+				return false;
+			}
+			return true;
+		}
+
+		function getReturnUrl_embedded(url) {
+			if(typeof(url)=="undefined" || url=="") {
+				var url = document.location.href;
+			}
+			var returnURL = url;
+
+			// default links for cart or any other page without linkID
+			if("EVError.html"=="CartDisplay.html") {
+				returnURL = createNavigateHref("CART");
+			} else if(returnURL.indexOf("linkID=oregonst")==-1) {
+				returnURL = createNavigateHref("SE");
+			}
+			if(returnURL.match(/^https?:\/\//i)==null) returnURL = "https://" + window.location.host + returnURL;
+			
+			if('EVError.html' == 'CartDisplay.html' && !common.hasCart){
+				returnURL = createNavigateHref("SE");
+			} else if(returnURL.indexOf("#")>-1 && returnURL.indexOf("#")<returnURL.indexOf("?")) {
+				// fix for where the "#" comes before "?"
+				returnURL = returnURL.split("#")[0] + returnURL.substr(returnURL.indexOf("?"));
+				returnURL = returnURL.split('&url=')[0];
+			} else {
+				// re-direct/cross browser issue
+				returnURL = returnURL.split("#")[0];
+			}
+
+			// secure
+			returnURL = returnURL.replace(/^http:/i, "https:");
+
+			return returnURL;
+		}
+
+		function goOn_embedded(action) {
+			var act, aType, cUrl;
+			if("".indexOf("ssoio.d2w") != -1)
+			{
+				cUrl = "".substring("".indexOf("url=") + 4, "".length);
+				if(cUrl.indexOf("&") != -1)
+				{
+					cUrl = cUrl.substring(0, cUrl.indexOf("&") - 1);
+				}
+				//alert(cUrl);
+			}
+			else
+			{
+				cUrl = encodeURIComponent("");
+			}
+			//var j = jQuery.noConflict();
+
+			if(action == "REGISTER") {
+				et.ssoLogin("ev_oregonst", "-1", "", "", "EV193", "5100b5410670016758").done(function(data)
+				{
+					//console.log("login successfully");
+					if('EVError.html' == 'CartDisplay.html' && !common.hasCart)
+					{
+						act = "CA";
+						window.location = "https://" + window.location.host + "/www/ev_oregonst/ss/evenue/?p=1#EvNavigation?linkID=oregonst&siteId=ev_oregonst&locale=en_US&action=" + act + "&cartType=" + (getgcURL() != "" ? "&gcUrl=1" : "&gcUrl=0") + "&continueUrl=" + encodeURIComponent(getReturnUrl_embedded());
+					}
+					else if('' == "CH")
+					{
+						act = "CH";
+						aType = "R";
+						var urlF = "https://" + window.location.host + "/cgi-bin/ncommerce3/SECartRedisplay?linkID=oregonst&cartNum=" + cart.number;
+						sendCartInfo(act, urlF, aType);
+					}
+					else
+					{
+						act = "CA";
+						window.location = "https://" + window.location.host + "/www/ev_oregonst/ss/evenue/?p=1#EvNavigation?linkID=oregonst&siteId=ev_oregonst&locale=en_US&action=" + act + "&cartType=" + (getgcURL() != "" ? "&gcUrl=1" : "&gcUrl=0") + "&continueUrl=" + encodeURIComponent(getReturnUrl_embedded());
+					}
+				}).fail(function(data)
+				{
+					alert("Blank login failed:" + JSON.stringify(data));
+				});
+			} else if(action == "FORGOT") {
+				// template 7.10.100 Forgot password flow additions, temporary
+				var ev_url = getReturnUrl_embedded();
+				jq.cookie("ev_url", encodeURIComponent(ev_url));
+
+				//	location.href = "/cgi-bin/ncommerce3/EVExecMacro?linkID=oregonst&evm=regf&addrReq=&phoneReq=&RSRC=&RDAT=";
+				//	7.10.100 temporary fix
+				location.href = "/cgi-bin/ncommerce3/EVExecMacro?linkID=oregonst&evm=regf&addrReq=&phoneReq=&RSRC=&RDAT=&linkSource=&shopperContext=";
+			} else {
+				return false;
+			}
+		}
+
+	</script> <!--<div id="header_menu" class="pull-right" > PAC-17111 Moved in script--> 
+     <script type="text/javascript">
+		    //PAC-17111
+			document.write(
+				'<div id="header_menu" class="pull-right '+(sessionStorage.getItem("ev_sh_"+linkID)=='true'?'hidden':'')+'" >'
+			);
+			//end PAC-17111
+			if(common.loggedIn) {
+				document.write(
+					'<a href="', createNavigateHref("ACCOUNT"), '" class="btn btn-default btn-xs"><i class="fa fa-file"></i> Manage My Account</a> '
+				);
+			}
+			if(regAdminInfo.loginMode != "D" && common.loggedIn) {
+				document.write(
+					'<a href="', createNavigateHref("LOGOUT"), '" onClick="return confirmLogOut()" class="btn btn-primary btn-xs"><i class="fa fa-unlock"></i> Logout</a>'
+				);
+			}
+
+				if( !common.loggedIn &&
+					(regAdminInfo.loginMode == "R" || regAdminInfo.loginMode == "O") &&
+					("EVError.html" != "MyAccount.html") &&
+					(("EVError.html" != "DisplayEventList.html") || ("EVError.html" == "DisplayEventList.html" && "" == ""))
+				) {
+
+					var loginAction_ = "https://" + window.location.host + "/cgi-bin/ncommerce3/REGLogin";
+
+					// updated to use getReturnUrl_embedded for url/returnURL
+					document.write(
+						'<form action="'+ loginAction_ +'" method="post" name="loginForm" onSubmit="return formValidate_embedded(this)">' +
+						'	<input type="hidden" name="addrReq" value="">' +
+						'	<input type="hidden" name="phoneReq" value="">' +
+						'	<input type="hidden" name="shopperContext" value="">' +
+						'	<input type="hidden" name="linkSource" value="">' +
+						'	<input type="hidden" name="relink" value="">' +
+						'	<input type="hidden" name="returnURL" value="'+ getReturnUrl_embedded() +'">' +
+						'	<input type="hidden" name="linkID" value="oregonst">' +
+						'	<input type="hidden" name="entry" value="">' +
+						'	<input type="hidden" name="cartNum" value="">' +
+						'	<input type="hidden" name="account" value="">' +
+						'	<input type="hidden" name="pin" value="">' +
+						'	<input type="hidden" name="skippedLogin" value="0">' +
+						'	<input type="hidden" name="numAddr" value="">' +
+						'	<input type="hidden" name="RSRC" value="">' +
+						'	<input type="hidden" name="RDAT" value="">' +
+						'	<input type="hidden" name="numPhones" value="">'
+					);
+					var urlV = ("").replace(/^http:/i, "https:");
+					if("".indexOf("ssoio.d2w") == -1)
+					{
+						urlV = "https://" + window.location.host + "/cgi-bin/ncommerce3/ExecMacro/evenue/ev69/core/ssoio.d2w/report?linkID=" + 'oregonst' + "&isSignin=1&url=" + encodeURIComponent(getReturnUrl_embedded());
+					}
+					document.write('<input type="hidden" name="url" value="', urlV,'">');
+
+					document.write(
+						'<button type="button" onclick="goOn_embedded(\'REGISTER\');" class="btn btn-default btn-xs"><i class="fa fa-user"></i> Create an Account</button> '
+					);
+
+					//login widget hidden form - must have this
+                    var widgetHiddenForm = '<p><input type="text" id="email" name="email" maxlength="50" class="form-control" placeholder="Email / Account #" aria-label="Email or Account Number"></p>'+
+                    '<p><input type="password" id="password" name="password" maxlength="12" class="form-control" placeholder="Password" aria-label="Password" autocomplete="off"></p>'+
+                    '<p><input type="submit" name="submitForm" value="Login" class="btn btn-default btn-sm"></p>';
+                    
+                    //original widget dropdown btn
+                    var widgetDropdownBtn = '<button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown">'+
+					    '<i class="fa fa-lock"></i> Login <i class="fa fa-caret-down"></i>'+
+                    '</button>';
+
+                    //original widget dropdown menu
+                    var widgetLoginDropdown = 
+                    '   <div class="dropdown-menu dropdown-menu-right">'+
+                    '       <div class="row">'+
+                    '           <div class="col-md-12 text-center dropdown-login">'+
+                    widgetHiddenForm +
+                    '               <p>'+
+                    '					<a href="javascript:goOn_embedded(\'REGISTER\');">New User</a><br />'+
+                    '					<a href="javascript:goOn_embedded(\'FORGOT\');">Forgot Password?</a>'+
+                    '				</p>'+
+                    '           </div>'+
+                    '       </div>'+
+                    '   </div>';
+
+                    //EV-16179 Add LB sign in method
+                    var widgetLBBtn = '<button class="btn btn-primary btn-xs" type="button" onClick="evUILib.launchSignInLB(lightboxLoginMethodOptions)">'+
+					    '<i class="fa fa-lock"></i> '+(lightboxLoginMethodOptions.login ? lightboxLoginMethodOptions.login : 'Login')+' <i class="fa fa-caret-down"></i>'+
+                    '</button>'+
+                    '<div style="display: none;">'+widgetHiddenForm+'</div>';
+                    
+					document.write(
+						'<div class="btn-group login-dropdown-container">',
+                            window.loginMethod === "lightbox" ? widgetLBBtn : widgetDropdownBtn+widgetLoginDropdown,
+						'</div>',
+						'</form>'
+					);
+			}
+            
+        //DISC-23 / EV-16287 - ADA fix : move the end div tag into script since #header_menu opening div tag was moved in
+        document.write(
+            '</div>'
+        );
+			
+
+		//Fix input element click problem
+		jq('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+			e.stopPropagation();
+        });
+
+        //EV-16179 - Auto focus to email input field if dropdown is opened
+        jq('#header_menu .login-dropdown-container').on('show.bs.dropdown', function () {
+            var self =  this;
+            //need a delay
+            setTimeout(function() { 
+                jq(self).find('#email').focus() 
+            }, 500);
+        });
+		</script> 
+     <script type="text/javascript">
+
+	if(
+		regAdminInfo.loginMode != "D" &&
+		common.loggedIn &&
+		shopperInfo.first != "" &&
+		shopperInfo.last != ""
+	) {
+		document.write(
+            '<div id="login">Welcome ', shopperInfo.first ? shopperInfo.first : '' ,' ', shopperInfo.last ? shopperInfo.last : '' ,'!</div>'
+		);
+	}
+
+</script> 
+    </div> <!-- Promo Code Widget --> 
+    <script type="text/javascript">
+			/*
+			document.write(
+				promoBox_mod(1, "", '<div id="promo_widget">', '</div>')
+			);
+			*/
+		</script> <!-- end of Promo Code Widget --> <!-- SEARCH MODULE - container --> <!-- <div id="superSearchModule"></div> --> 
+   </div> 
+  </div> 
+  <script>
+	//netCommerceNavLinks - populate all nav links
+	jq.getScript('/www/ev_oregonst/ss/evenue/customize/ev_oregonst/script/netCommerce/netCommerceNav.js');
+</script> 
+  <div id="content" role="main" aria-label="main content" tabindex="-1"> <!-- EV-1347, must appear after subheader --> <!-- ==================================================
+	END HEADER
+=================================================== --> 
+   <script type="text/javascript">
+
+//	printHead("sorry", navHead);
+
+</script> 
+   <div align="center"> <!-- _everror.inc --> 
+    <p>&nbsp;</p> 
+    <script type="text/javascript">
+
+    var regex     = /.*has no applications available online.  Please call ticket office for further processing/;
+    var errortext = error.msg;
+    var result    = errortext.match(regex);
+
+    if(result) {
+      document.write(
+        '<p class="error">Sorry, you currently have no applications available online.</p>',
+        '<p>If you have received your invoice in the mail, ',
+        '  <a href="/cgi-bin/ncommerce3/EVExecMacro?linkID=oregonst&evm=rega&linkSource=SR','&url=', encodeURIComponent(createNavigateHref("SR")), '">click here</a> to link your account ',
+        '  and view your applications online. ',
+        '  You will need your Customer Number and PIN which can be found above your name on your invoice.</p>'
+      );
+    } else if (error.msg == "Ballena cart exists"){
+      if (typeof window.sessionStorage === "object") {
+        if (sessionStorage.getItem("ballenaId")) {
+          var bId= sessionStorage.getItem("ballenaId");
+          var rurl = "/www/ev_oregonst/ss/evenue/?p=1#EvNavigation?action=CH&cartType=T&ballena=bId&siteId=ev_oregonst&linkID=oregonst&locale=en_US#/level_1/my_account/";
+          document.write(
+            '<p class="error">', error.msg, '</p>',
+            '<p><a href="', rurl, '"> Return to Payment</a>.</p>'
+          );
+        }
+        else {
+          var rurl = "/www/ev_oregonst/ss/evenue/?p=1#MyAccount?siteId=ev_oregonst&locale=en_US&linkID=oregonst";
+          error.msg = "This process is not allowed with a current order in your shopping cart. Please complete or cancel your current order, or logout and try again.";
+          document.write(
+            '<p class="error">', error.msg, '</p>',
+            '<p><a href="', rurl, '"> Return to My Account</a>.</p>'
+          );
+        }
+      }
+      else {
+        var rurl = "/www/ev_oregonst/ss/evenue/?p=1#MyAccount?siteId=ev_oregonst&locale=en_US&linkID=oregonst";
+        error.msg = "This process is not allowed with a current order in your shopping cart. Please complete or cancel your current order, or logout and try again.";
+        document.write(
+          '<p class="error">', error.msg, '</p>',
+          '<p><a href="', rurl, '"> Return to My Account</a>.</p>'
+        );
+      }
+    } else {
+      // reload site code - part 2 of 2
+      if(error.msg == "The inventory is set OFFLINE. Please contact eVenue system administrator for further information"){
+        document.write(
+          '<p class="error">Please wait while we update event information. This process only takes a few minutes.</p>',
+          '<img src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/waitani.gif" onload="JavaScript:timedRefresh(30000);">'
+        );
+      } else if (error.msg.indexOf("Your reservations have expired|") != -1) {
+          document.write(
+          '<p class="error">Your reservations have expired</p>'
+        );
+        var sCartId, sOrderId;
+        sCartId = error.msg.split("|")[1];
+        sOrderId = error.msg.split("|")[2];
+        console.log("The expired shared cart has cartId and orderId as: " + sCartId + " and " + sOrderId);
+        console.log("Canceling existing shared cart...");
+        var rjson;
+        rjson = {
+            "cartId": sCartId,
+            "orderId": sOrderId
+          };
+        et.resolvePoolId("ev_oregonst").done(function(p_poolId)
+        {
+          et.cancelEvrxCart(p_poolId, "ev_oregonst", "en_US", rjson).done(function(data)
+          {
+            if(data.status.cd == 0)
+            {
+              if(data.status.mg != "successful" && data.status.mg != null){
+                alert(JSON.stringify(data.status.mg))
+              }
+              else{
+                //Do nothing here.
+              }
+            }
+            else
+            {
+              alert("Cancel shared cart service call failed" + " - " + data.status.mg);
+            }
+          }).fail(function(data)
+          {
+            alert("Cancel shared cart service call failed");
+          });
+        }).fail(function(data)
+        {
+          //alert("Failed to resolve pool ID.");
+          console.log("Failed to resolve pool ID.");
+        });
+      } else {
+        document.write(
+          '<p class="error">', error.msg.replace('Click on the \'package items\' link above to access your current package.','<br>Click on the Shopping Cart timer to access your current package.'), '</p>',
+          '<p>If you want to try again, click <a href="', error.url, '"> here</a>.</p>'
+        );
+      }
+    }
+
+  </script> 
+   </div> <!-- ==================================================
+	END MAIN CONTENT
+=================================================== --> <!-- Move ev_tag_manager.js up here so evTags object can be used when needed--> 
+   <script type="text/javascript" src="https://pac-media.s3-us-west-2.amazonaws.com/common/legacy/scripts/pixels/ev_tag_manager.js"></script> 
+  </div> <!-- content / cart-page --> 
+ </div> <!-- container --> 
+ <div id="footer" role="contentinfo"> 
+  <div class="container_logos"> 
+   <div style="max-width: 900px; margin-left: auto; margin-right: auto;"> 
+    <div class="logos"> 
+     <div class="logo pac12"> <a target="_blank" href="http://pac-12.com"><img alt="Pac 12" border="0" style="width:147px;" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/footer_pac12.png"></a> 
+     </div> 
+     <div class="logo ncaa"> <a target="_blank" href="http://www.ncaa.org"><img alt="Pac 12" border="0" style="width:72px;" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/footer_ncaa.png"></a> 
+     </div> 
+     <div class="logo learfield"> <a target="_blank" href="http://learfieldsports.com/university-partners/beaver-sports-properties/"><img alt="Pac 12" border="0" style="width:235px;" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/footer_learfield.png"></a> 
+     </div> 
+     <div class="logo neulion"> <a target="_blank" id="corporate-logo" href="http://www.sidearmsports.com"><img alt="Side Arm Sports" id="CorporateLogo" border="0" style="width:230px;" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/footer_sidearm.png"></a> 
+     </div> 
+     <div class="clear"></div> 
+    </div> 
+   </div> 
+   <div class="row" align="center">
+    <img alt="OSU" border="0" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/footer_beaver.png">
+   </div> 
+  </div> 
+  <div id="browserReq" style="display:none;"> 
+   <div class="text-center"> 
+    <p class="text-left"><span class="bold-text">Browser Requirements</span><br> This site supports the current versions of the browsers listed below. Using older browsers, non-compatible browsers, or disabling browser features (such as Javascript, cookies and SSL), will reduce site functionality.</p> 
+    <p>To download a browser, click on one of the following icons.<br><br> <a href="http://www.microsoft.com/windows/internet-explorer/" target="_blank"><img src="/www/ev_oregonst/ss/evenue/customize/shared/images/browserIcons/ie.png" class="border-0" alt="Download Microsoft Internet Explorer"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.apple.com/safari/" target="_blank"><img src="/www/ev_oregonst/ss/evenue/customize/shared/images/browserIcons/safari.png" class="border-0" alt="Download Safari"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.mozilla.com/en-US/firefox/" target="_blank"><img src="/www/ev_oregonst/ss/evenue/customize/shared/images/browserIcons/firefox.png" class="border-0" alt="Download Firefox"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.google.com/chrome" target="_blank"><img src="/www/ev_oregonst/ss/evenue/customize/shared/images/browserIcons/chrome.png" class="border-0" alt="Download Chrome"></a></p> 
+   </div> 
+  </div> 
+  <div id="logoOuterWrapper"></div> 
+  <p class="buttonSet"> <a class="hdr_site_security" href="javascript:void(showBox('//media.paciolan.com/evenue/Common/evData/site_security/site-security.html', 'Security Information', 700, 500, 1))">Site Security</a> <a class="hdr_browser_req" href="#">Browser Requirements</a> <a class="hdr_privacy_policy" href="javascript:;" target="_blank">Privacy Policy</a> </p> 
+ </div> 
+</div> <!-- end of wrap --> 
+<script type="text/javascript">
+	//Force favicon
+	/*
+	(function() {
+		var link = document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = '/www/ev_oregonst/ss/evenue/customize/ev_oregonst/images/favicon.ico';   // change to AWS?
+		document.getElementsByTagName('head')[0].appendChild(link);
+	}());
+	*/
+	
+	var isMediaGA = true; //Keep this true if using google_analytics.js from media server; change to false when the client has other customized google_analytics.js  
+	//jq.getScript('/www/ev_oregonst/ss/evenue/customize/ev_oregonst/script/google_analytics.js');
+
+</script> <!-- Load banner objects and auto-run carouselBanner --> 
+<script type="text/javascript" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/script/netCommerce/customization/bannerData.js?timestamp=20210316" "></script><!-- 
+	Bootstrap modal's HTML
+	Placed at the end of the document so the pages load faster 
+
+	1. since only one modal markup, it's using only one id, so when the mocal called a modal with an id of "showbox-modal-dialog" will appear
+	2. id of "lbContainer" will generate when the modal called, so only will empty content of "lbContainer" when modal closed
+--> 
+<div class="modal fade modal-center" id="showbox-modal-dialog" tabindex="-1" role="dialog" aria-labelledby="showbox-modal-dialog" aria-hidden="true"> 
+ <div class="modal-dialog modal-center modal-size"> 
+  <div tabindex="-1" class="modal-content modal-size"> 
+   <div class="div-close-button"> <button type="button" class="closeX ev-close-button" data-dismiss="modal" aria-label="Close lightbox" onclick="removeBox();">×</button> 
+   </div> 
+   <div class="modal-header"> 
+    <h4 class="modal-title" id="modal-label"><!-- Title goes here --></h4> 
+   </div> 
+   <div class="modal-body">
+    <!-- content goes here -->
+   </div> 
+   <div class="modal-footer"></div> 
+  </div> 
+ </div> 
+</div> <!-- DO NOT REMOVE --> 
+<script>
+	 //ADA update - form needs submit button but some forms we don't submit, so preventDefault
+	  jq('[type="submit"][ev-stopsubmit="true"]').on('click', function(e) {
+		  e.preventDefault();
+	  });
+
+	// Template update - enter click event simulates a click event for keyboard navigation
+	jq('input[type="checkbox"]').keypress(function(e) { if (e.keyCode === 13) { jq(this).trigger('click'); } });
+
+</script> 
+<script type="text/javascript">
+	var ev_gaTrack = function() {}; // init for ad blockers
+	// set version sstorage
+	sessionStorage.setItem("ev_Version", "05.210112");
+
+	if (typeof(isMediaGA)=='undefined' || isMediaGA) jq.getScript('https://pac-media.s3-us-west-2.amazonaws.com/common/legacy/scripts/pixels/google_analytics.js?ev_version='+sessionStorage.getItem('ev_Version'));
+</script> 
+<script type="text/javascript" src="/www/ev_oregonst/ss/evenue/customize/ev_oregonst/script/pixels.js?timestamp=01_20210316"></script> 
+<script type="text/javascript" src="https://pac-media.s3-us-west-2.amazonaws.com/common/legacy/scripts/Spectra_Logo/powered-by-widget-svg.js"></script> <!-- SEARCH MODULE LOAD - search config must be loaded before the searchmodule--> 
+<script type="text/javascript">
+		if(jq("#superSearchModule, #superSearchModuleExpandable").length>0) {
+			getScript("/www/ev_oregonst/ss/evenue/customize/ev_oregonst/script/global/searchConfig.min.js", function() {
+				getScript("/www/ev_oregonst/ss/evenue/customize/shared/js/searchModuleV1.js");
+			});			
+		}
+		//EV16190, DISC-55
+		if(jq("#superSearchModule_m, #superSearchModuleExpandable_m").length>0) {
+			if(typeof searchOptions!='undefined'){
+				getScript("/www/ev_oregonst/ss/evenue/customize/ev_oregonst/script/global/searchConfig.min.js", function() {
+				    getScript("/www/ev_oregonst/ss/evenue/customize/shared/js/searchModuleV1_m.js");
+			    });	
+			} else {
+
+				getScript("/www/ev_oregonst/ss/evenue/customize/shared/js/searchConfig.min.js", function() {
+					getScript("/www/ev_oregonst/ss/evenue/customize/shared/js/searchModuleV1_m.js");
+				});	
+			}
+		
+		}
+        //end EV16190, DISC-55
+    // update private policy
+    jq('a.hdr_privacy_policy').attr('href', et.privacy_policy);	
+
+	</script> 
+<script type="text/javascript">
+        //The session timer is in the footer_bundle.js
+        //DISC-42 / EV-16294 - load the footer_bundle.js file
+        //This is in load.footerbundle event so zkpConfig will always be loaded (success or fail)
+        //when it tries to load footer_bundle
+        jq(document).on('load.footerbundle', function() {
+            var commonMediaFooterBundle = '/dist/footer_bundle.js';
+            var footerBundleUrl = commonLibPath + '/' + commonMediaVersionFallback + commonMediaFooterBundle;
+            if (commonOverrideUrl !== '') {
+                footerBundleUrl = commonOverrideUrl+commonMediaFooterBundle
+            }
+            else if (typeof zkpConfig['evenue.common.version'] !== 'undefined') {
+                footerBundleUrl = commonLibPath + '/' + zkpConfig['evenue.common.version'] + commonMediaFooterBundle;
+            }
+
+            jq.getScript(footerBundleUrl, function(resp) {
+                // console.log('footer_bundle loaded')
+            });
+        });
+        jq(document).on('evenueconfig.loaded', function() {
+            // console.log('evenueconfig.loaded action triggered');
+        });
+    </script>  <!-- ==================================================
+	END FOOTER
+=================================================== -->
+</body>
+</doc>

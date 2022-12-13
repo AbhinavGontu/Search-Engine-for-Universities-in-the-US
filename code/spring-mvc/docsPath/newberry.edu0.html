@@ -1,0 +1,595 @@
+<doc>
+<filename>newberry.edu0.html</filename>
+<url>http://www.newberry.edu/</url>
+<ip>45.55.105.198</ip>
+<title>Newberry College | liberal arts college | Newberry, South Carolina</title>
+<body>
+<div class="row"> 
+ <div> 
+ </div> 
+</div> 
+<div x-data="{ openMobileNav: false, about: false, academics: false, admissions: false, campusLife: false, alumni: false }" class="mobile-nav-new"> 
+ <div class="mobile-nav-new_header"> <a href="/" class="mobile-nav-new_header-logo"> <img src="https://www.newberry.edu/images/ncedu-red-logo.png" alt="Newberry College Logo"> </a> 
+  <div class="nav-icon" x-bind:class="openMobileNav ? 'cursor-pointer nav-icon open' : 'cursor-pointer nav-icon'" @click="openMobileNav = !openMobileNav"> 
+   <div></div> 
+  </div> 
+ </div> 
+ <nav class="slide-out-nav" x-show="openMobileNav"> 
+  <div class="mobile-nav-content"> <a href="/about-us" @click.prevent="about = true" x-bind:class="about === true ? 'active' : ''" title="About">About</a> 
+   <ul class="sub-nav" x-show="about" @click.away="about = false"> 
+    <li> <a href="/about-us#advantage" title="Our Advantage">Our Advantage</a> </li> 
+    <li> <a href="/about-us#our-heritage" title="Our Heritage">Our Heritage</a> </li> 
+    <li> <a href="/about-us#leadership" title="Our Leadership">Our Leadership</a> </li> 
+    <li> <a href="/about-us#publications" title="Publications">Publications</a> </li> 
+   </ul> <a href="/academics" @click.prevent="academics = true" x-bind:class="academics === true ? 'active' : ''" title="Academics">Academics</a> 
+   <ul class="sub-nav" x-show="academics" @click.away="academics = false"> 
+    <li> <a href="/academics#areas-of-study" title="Areas Of Study">Areas Of Study</a> </li> 
+    <li> <a href="/academics#online-programs" title="Online Programs">Online Programs</a> </li> 
+    <li> <a href="/academics#academic-experience" title="Academic Experience">Academic Experience</a> </li> 
+    <li> <a href="/academics#registrar" title="Registrar">Registrar</a> </li> 
+    <li> <a href="/academics#resources" title="Resources">Resources</a> </li> 
+   </ul> <a href="/admission" @click.prevent="admissions = true" x-bind:class="admissions === true ? 'active' : ''" title="Admissions">Admission</a> 
+   <ul class="sub-nav" x-show="admissions" @click.away="admissions = false"> 
+    <li> <a href="/admission#getting-started" title="Getting Started">Getting Started</a> </li> 
+    <li> <a href="/admission#" title="Transfer">Transfer</a> </li> 
+    <li> <a href="/admission#tuition-financial-aid" title="Tuition &amp; Aid">Tuition &amp; Aid</a> </li> 
+    <li> <a href="/admission#enrolling" title="Enrolling">Enrolling</a> </li> 
+    <li> <a href="/contact" title="Contact Admission">Contact Admission</a> </li> 
+   </ul> <a href="/campus-life" @click.prevent="campusLife = true" x-bind:class="campusLife === true ? 'active' : ''" title="Campus Life">Campus Life</a> 
+   <ul class="sub-nav" x-show="campusLife" @click.away="campusLife = false"> 
+    <li> <a href="/campus-life#residence-life" title="Residence Life">Residence Life</a> </li> 
+    <li> <a href="/campus-life#organizations" title="Get Involved">Get Involved</a> </li> 
+    <li> <a href="/campus-life#activities" title="Things To Do">Things To Do</a> </li> 
+    <li> <a href="/campus-life#services" title="Student Services">Student Services</a> </li> 
+    <li> <a href="/new-student-orientation" title="Wolf Pack Welcome">Wolf Pack Welcome</a> </li> 
+    <li> <a href="/family-weekend" title="Family Weekend">Family Weekend</a> </li> 
+   </ul> <a href="/alumni" @click.prevent="alumni = true" x-bind:class="alumni === true ? 'active' : ''" title="Alumni">Alumni</a> 
+   <ul class="sub-nav" x-show="alumni" @click.away="alumni = false"> 
+    <li> <a href="/alumni#stay-involved" title="Join The Pack">Join The Pack</a> </li> 
+    <li> <a href="/homecoming" title="Homecoming">Homecoming</a> </li> 
+    <li> <a href="/alumni#stay-connected" title="Stay Connected">Stay Connected</a> </li> 
+   </ul> 
+   <div class="mobile-quicklinks"> <a href="/giving" title="Giving">Giving</a> <a href="/career-services" title="Careers">Careers</a> <a href="http://www.newberrywolves.com/" title="Athletics" target="_blank">Athletics</a> <a href="https://my.newberry.edu/ICS/" title="Wolf Den" target="_blank">Wolf Den</a> 
+    <form id="search_form" class="search-mobile" method="post" action="https://www.newberry.edu/"> 
+     <div class="hiddenFields"> 
+      <input type="hidden" name="ACT" value="46"> 
+      <input type="hidden" name="results_page" value="results"> 
+      <input type="hidden" name="honey" value="field_1394c0cdbf50bfe4afb6d0295b494fd26f11f52c"> 
+      <input type="hidden" name="site_id" value="1"> 
+      <input type="hidden" name="csrf_token" value="f8094b18f60ae6ea369165d25ea1a19758c56959"> 
+     </div> 
+     <div class="mobile-search-box-wrapper"> <label for="keywords" class="visuallyhidden">Keywords</label> 
+      <input type="text" id="keywords" name="keywords" class="search-box" placeholder="SEARCH"> 
+     </div> <button data-active="false"> <i class="fa fa-search"><span class="visuallyhidden">Submit Search</span></i> </button> 
+     <div style="display:none;"> <label>Please do not fill-in this field <input type="text" name="field_1394c0cdbf50bfe4afb6d0295b494fd26f11f52c" value=""></label> 
+     </div> 
+    </form> 
+   </div> 
+   <div class="mobile-resource-links"> <a href=""><span><img src="https://www.newberry.edu/images/mobile-nav-icon1.png" alt="Request Information"></span> Request Information</a> <a href=""><span><img src="https://www.newberry.edu/images/mobile-nav-icon2.png" alt="Visit Campus"></span> Visit Campus</a> <a href=""><span><img src="https://www.newberry.edu/images/mobile-nav-icon3.png" alt="Apply Now"></span> Apply Now</a> <a href=""><span><img src="https://www.newberry.edu/images/mobile-nav-icon4.png" alt="Give Now"></span> Give Now</a> 
+   </div> 
+   <div class="social-mobilenav-links"> 
+    <ul> 
+     <li><a href="https://www.facebook.com/newberrycollege" target="_blank"><span class="visuallyhidden">Newberry College Facebook</span><i class="fa fa-facebook"></i></a></li> 
+     <li><a href="https://www.instagram.com/newberry_college" target="_blank"><span class="visuallyhidden">Newberry College Instagram</span><i class="fa fa-instagram"></i></a></li> 
+     <li><a href="https://www.linkedin.com/school/newberrycollege/" target="_blank"><span class="visuallyhidden">Newberry College LinkedIn</span><i class="fa fa-linkedin"></i></a></li> 
+     <li><a href="https://twitter.com/newberrycollege" target="_blank"><span class="visuallyhidden">Newberry College Twitter</span><i class="fa fa-twitter"></i></a></li> 
+     <li><a href="https://www.youtube.com/channel/UCPrdbPwnAh_xGv1AqBx0B3Q" target="_blank"><span class="visuallyhidden">Newberry College YouTube</span><i class="fa fa-youtube"></i></a></li> <!--<li class="nav-merit-logo-container">
+                        <a target="_blank" href="http://www.newberry.meritpages.com" class="topnav-merit-logo">
+                            <img src="https://www.newberry.edu/images/merit-logo-white.png" alt="Newberry College Merit">
+                        </a>
+                    </li>--> 
+    </ul> 
+   </div> 
+  </div> 
+ </nav> 
+</div> 
+<style type="text/css">
+    .nav-icon {
+        margin: 1em;
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .nav-icon:after,
+    .nav-icon:before,
+    .nav-icon div {
+        background-color: #000;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        transition: all .2s ease-in-out;
+    }
+    .nav-icon.open:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+
+    .nav-icon.open:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+
+    .nav-icon.open div {
+        transform: scale(0);
+    }
+</style> <a class="visuallyhidden skip-topnav" href="#page-maincontent">Skip to Main Content</a> <a class="visuallyhidden skip-topnav" href="#page-footerlinks">Skip to Footer Links</a> 
+<section id="new-navigation" class="top-bar top-bar_new top-bar_new-home"> 
+ <nav id="social-top-nav"> 
+  <ul> 
+   <li><a href="https://www.facebook.com/newberrycollege" target="_blank"><span class="visuallyhidden">Newberry College Facebook</span><i class="fa fa-facebook"></i></a></li> 
+   <li><a href="https://www.instagram.com/newberry_college" target="_blank"><span class="visuallyhidden">Newberry College Instagram</span><i class="fa fa-instagram"></i></a></li> 
+   <li><a href="https://www.linkedin.com/school/newberrycollege/" target="_blank"><span class="visuallyhidden">Newberry College LinkedIn</span><i class="fa fa-linkedin"></i></a></li> 
+   <li><a href="https://twitter.com/newberrycollege" target="_blank"><span class="visuallyhidden">Newberry College Twitter</span><i class="fa fa-twitter"></i></a></li> 
+   <li><a href="https://www.youtube.com/channel/UCPrdbPwnAh_xGv1AqBx0B3Q" target="_blank"><span class="visuallyhidden">Newberry College YouTube</span><i class="fa fa-youtube"></i></a></li> <!-- <li class="nav-merit-logo-container">
+                <a style="border-radius:initial; background:none; padding-top:0;" target="_blank" href="http://www.newberry.meritpages.com" class="topnav-merit-logo merit">
+                    <img id="merit-logo" src="https://www.newberry.edu/images/merit-logo-white.png" alt="Newberry College Merit">
+                </a>
+            </li>--> 
+  </ul> 
+ </nav> 
+ <header> 
+  <div class="navigation-container"> 
+   <figure> <a href="/" class="logo"> <img src="https://www.newberry.edu/images/nb-wolf-logo.png" alt="Newberry College Logo"> </a> 
+   </figure> 
+   <div class="top-nav-logo-bar"> 
+    <nav class="quicklinks"> <a href="/giving" title="Giving">Giving</a> <a href="/career-services" title="Careers">Careers</a> <a href="http://www.newberrywolves.com/" title="Athletics" target="_blank">Athletics</a> <a href="https://my.newberry.edu/ICS/" title="Wolf Den" target="_blank">Wolf Den</a> 
+     <form id="search_form" class="search" method="post" action="https://www.newberry.edu/"> 
+      <div class="hiddenFields"> 
+       <input type="hidden" name="ACT" value="46"> 
+       <input type="hidden" name="results_page" value="results"> 
+       <input type="hidden" name="honey" value="field_1394c0cdbf50bfe4afb6d0295b494fd26f11f52c"> 
+       <input type="hidden" name="site_id" value="1"> 
+       <input type="hidden" name="csrf_token" value="f8094b18f60ae6ea369165d25ea1a19758c56959"> 
+      </div> 
+      <div class="search-box-wrapper"> <span class="close"><i class="fa fa-arrow-circle-o-right"></i></span> <label for="keywords" class="visuallyhidden">Keywords</label> 
+       <input type="text" id="keywords" name="keywords" class="search-box"> 
+      </div> <button data-active="false"> <i class="fa fa-search"><span class="visuallyhidden">Submit Search</span></i> </button> 
+      <div style="display:none;"> <label>Please do not fill-in this field <input type="text" name="field_1394c0cdbf50bfe4afb6d0295b494fd26f11f52c" value=""></label> 
+      </div> 
+     </form> 
+    </nav> 
+    <nav class="main-nav main-nav_home" x-data="{ about: false, academics: false, admissions: false, campusLife: false, alumni: false }"> <a href="/about-us" @mouseenter="about = true;academics = false;admissions = false;campusLife = false;alumni = false" @focus="about = true;academics = false;admissions = false;campusLife = false;alumni = false" title="About"> About <span class="nav-active" x-show="about"></span> </a> 
+     <div class="sub-nav" x-show="about" @click.away="about = false;academics = false;admissions = false;campusLife = false;alumni = false" @mouseleave="about = false;academics = false;admissions = false;campusLife = false;alumni = false"> 
+      <div class="container"> 
+       <div class="sub-nav_col"> 
+        <h2>About</h2> 
+        <p> Newberry College has a rich tradition of providing personal attention, challenging academic programs, and a close-knit community that welcomes everyone. We combine our strong liberal arts foundation with specialized professional degree programs to prepare students such as you for successful futures. </p> <a class="red-button" href="/about-us"> Learn More </a> 
+       </div> 
+       <div class="sub-nav_col"> 
+        <ul class="sub-nav-menu"> 
+         <li> <a href="/about-us#advantage" title="Our Advantage">Our Advantage</a> </li> 
+         <li> <a href="/about-us#our-heritage" title="Our Heritage">Our Heritage</a> </li> 
+         <li> <a href="/about-us#leadership" title="Our Leadership">Our Leadership</a> </li> 
+         <li> <a href="/about-us#publications" title="Publications">Publications</a> </li> 
+        </ul> 
+       </div> 
+       <div class="clearfix"></div> 
+      </div> 
+     </div> <a href="/academics" @mouseenter="about = false;academics = true;admissions = false;campusLife = false;alumni = false" @focus="about = false;academics = true;admissions = false;campusLife = false;alumni = false" title="Academics"> Academics <span class="nav-active" x-show="academics"></span> </a> 
+     <div class="sub-nav" x-show="academics" @click.away="about = false;academics = false;admissions = false;campusLife = false;alumni = false" @mouseleave="about = false;academics = false;admissions = false;campusLife = false;alumni = false"> 
+      <div class="container"> 
+       <div class="sub-nav_col"> 
+        <h2>Academics</h2> 
+        <p> A Newberry College education reaches beyond classroom walls, city limits, preconceived notions of higher learning, and definitions of success. A Newberry education is a personal challenge to every student in pursuit of knowledge who possesses the drive to live and learn with purpose. </p> <a class="red-button" href="/academics"> Learn More </a> 
+       </div> 
+       <div class="sub-nav_col"> 
+        <ul class="sub-nav-menu"> 
+         <li> <a href="/academics#areas-of-study" title="Areas Of Study">Areas Of Study</a> </li> 
+         <li> <a href="/academics#online-programs" title="Online Programs">Online Programs</a> </li> 
+         <li> <a href="/academics#academic-experience" title="Academic Experience">Academic Experience</a> </li> 
+         <li> <a href="/academics#registrar" title="Registrar">Registrar</a> </li> 
+         <li> <a href="/academics#resources" title="Resources">Resources</a> </li> 
+        </ul> 
+       </div> 
+       <div class="clearfix"></div> 
+      </div> 
+      <div class="clearfix"></div> 
+     </div> <a href="/admission" @mouseenter="about = false;academics = false;admissions = true;campusLife = false;alumni = false" @focus="about = false;academics = false;admissions = true;campusLife = false;alumni = false" title="Admissions"> Admission <span class="nav-active" x-show="admissions"></span> </a> 
+     <div class="sub-nav" x-show="admissions" @click.away="about = false;academics = false;admissions = false;campusLife = false;alumni = false" @mouseleave="about = false;academics = false;admissions = false;campusLife = false;alumni = false"> 
+      <div class="container"> 
+       <div class="sub-nav_col"> 
+        <h2>Admission</h2> 
+        <p> Our commitment to education for life means just that — education that will give you advantages financially, intellectually, and socially, for the rest of your life. </p> <a class="red-button" href="/admission"> Learn More </a> 
+       </div> 
+       <div class="sub-nav_col"> 
+        <ul class="sub-nav-menu"> 
+         <li> <a href="/admission#getting-started" title="Getting Started">Getting Started</a> </li> 
+         <li> <a href="/admission#transfer" title="Transfer">Transfer</a> </li> 
+         <li> <a href="/admission#tuition-financial-aid" title="Tuition &amp; Aid">Tuition &amp; Aid</a> </li> 
+         <li> <a href="/admission#enrolling" title="Enrolling">Enrolling</a> </li> 
+         <li> <a href="/contact" title="Contact Admission">Contact Admission</a> </li> 
+        </ul> 
+       </div> 
+       <div class="clearfix"></div> 
+      </div> 
+     </div> <a href="/campus-life" @mouseenter="about = false;academics = false;admissions = false;campusLife = true;alumni = false" @focus="about = false;academics = false;admissions = false;campusLife = true;alumni = false" title="Campus Life"> Campus Life <span class="nav-active" x-show="campusLife"></span> </a> 
+     <div class="sub-nav" x-show="campusLife" @click.away="about = false;academics = false;admissions = false;campusLife = false;alumni = false" @mouseleave="about = false;academics = false;admissions = false;campusLife = false;alumni = false"> 
+      <div class="container"> 
+       <div class="sub-nav_col"> 
+        <h2>Campus Life</h2> 
+        <p> At Newberry College, learning takes place both inside and outside the classroom. No matter where you are — on-campus, in-town, or off-the-beaten path, you’ll exchange ideas and build relationships with faculty, students, and community members alike. </p> <a class="red-button" href="/campus-life"> Learn More </a> 
+       </div> 
+       <div class="sub-nav_col"> 
+        <ul class="sub-nav-menu"> 
+         <li> <a href="/campus-life#residence-life" title="Residence Life">Residence Life</a> </li> 
+         <li> <a href="/campus-life#organizations" title="Get Involved">Get Involved</a> </li> 
+         <li> <a href="/campus-life#activities" title="Things To Do">Things To Do</a> </li> 
+         <li> <a href="/campus-life#services" title="Student Services">Student Services</a> </li> 
+         <li> <a href="/new-student-orientation" title="Wolf Pack Welcome">Wolf Pack Welcome</a> </li> 
+         <li> <a href="/family-weekend" title="Family Weekend">Family Weekend</a> </li> 
+        </ul> 
+       </div> 
+       <div class="clearfix"></div> 
+      </div> 
+     </div> <a href="/alumni" @mouseenter="about = false;academics = false;admissions = false;campusLife = false;alumni = true" @focus="about = false;academics = false;admissions = false;campusLife = false;alumni = true" title="Alumni"> Alumni <span class="nav-active" x-show="alumni"></span> </a> 
+     <div class="sub-nav" x-show="alumni" @click.away="about = false;academics = false;admissions = false;campusLife = false;alumni = false" @mouseleave="about = false;academics = false;admissions = false;campusLife = false;alumni = false"> 
+      <div class="container"> 
+       <div class="sub-nav_col"> 
+        <h2>Alumni</h2> 
+        <p> No matter how many years pass after your graduation, you’ll always be a part of the Newberry College family. </p> <a class="red-button" href="/alumni"> Learn More </a> 
+       </div> 
+       <div class="sub-nav_col"> 
+        <ul class="sub-nav-menu"> 
+         <li> <a href="/alumni#stay-involved" title="Join The Pack">Join The Pack</a> </li> 
+         <li> <a href="/homecoming" title="Homecoming">Homecoming</a> </li> 
+         <li> <a href="/alumni#stay-connected" title="Stay Connected">Stay Connected</a> </li> 
+        </ul> 
+       </div> 
+       <div class="clearfix"></div> 
+      </div> 
+     </div> 
+    </nav> 
+   </div> 
+  </div> 
+ </header> 
+</section> 
+<section class="body-wrapper"> 
+ <section class="home-slider home-slider_new"> 
+  <div class="flexslider"> 
+   <ul class="slides"> 
+    <li tabindex="0"> 
+     <div class="slide-wrapper" style="background-image:url(https://www.newberry.edu/images/content-page-images/Smeltzer_Heller_Pan_Compressed.jpg);"> 
+      <div class="container" tabindex="0"> 
+       <div class="content"> <span class="heading"><strong>Our Safe</strong> Return to Campus</span> <a href="https://www.newberry.edu/returning" target="_blank" alt="Updates on Campus Health &amp; Operations" style="display:block;" class="insight-video "><span class="play-video shorten smooth">Updates on Campus Health &amp; Operations</span></a> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li tabindex="0"> 
+     <div class="slide-wrapper" style="background-image:url(https://www.newberry.edu/images/content-page-images/Homepage_slider.schedule_visit_.png);"> 
+      <div class="container" tabindex="0"> 
+       <div class="content"> <span class="heading"><strong>Schedule Your</strong> Campus Visit Today</span> <a href="https://my.newberry.edu/ICS/Admissions/Events_and_Visits.jnz" target="_blank" alt="Schedule your campus visit" style="display:block;" class="insight-video "><span class="play-video shorten smooth">See for yourself what makes Newberry so special!</span></a> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li tabindex="0"> 
+     <div class="slide-wrapper" style="background-image:url(https://www.newberry.edu/images/content-page-images/img-slide-holland-hall2.jpg);"> 
+      <div class="container" tabindex="0"> 
+       <div class="content"> <span class="heading"><strong>Experience</strong> Newberry College</span> <a href="205962291" target="_self" alt="Introduction to Newberry College video" style="display:block;" class="insight-video fancybox.ajax"><span class="play-video  smooth">Your Journey Starts Here <i class="fa fa-play"></i></span></a> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li tabindex="0"> 
+     <div class="slide-wrapper" style="background-image:url(https://www.newberry.edu/images/content-page-images/Homepage_slider.online_programs_.png);"> 
+      <div class="container" tabindex="0"> 
+       <div class="content"> <span class="heading"><strong>Newberry</strong> Online Programs</span> <a href="/academics/online-programs" target="_blank" alt="Schedule your campus visit" style="display:block;" class="insight-video "><span class="play-video shorten smooth">Degree-completion programs for busy adults. Enrolling Now.</span></a> 
+       </div> 
+      </div> 
+     </div> </li> 
+   </ul> 
+  </div> 
+  <div class="angle-left"></div> 
+  <div class="angle-right"></div> 
+ </section> 
+ <section class="home-collage" id="page-maincontent"> 
+  <div class="text-center section-spacing"> 
+   <div class="section-headline"> 
+    <h2>Imagine Yourself at Newberry College</h2> 
+   </div> 
+   <p></p> 
+  </div> 
+  <div class="mobile"> 
+   <div class="container"> 
+    <div class="block-row"> 
+     <div class="block block-mobile text_block text_block-dark-gray"> 
+      <h3>Prime Location <span class="arrows"></span></h3> 
+      <p>The beautifully landscaped 90-acre campus is situated in the heart of historic Newberry, South Carolina: one of Sweitzer &amp; Fields’ 50 Best Small Southern Towns.</p> 
+      <p> <a href="/campus-life#activities" title="Prime Location"> <span class="plus"></span> Learn more </a> </p> 
+     </div> 
+     <div class="block block-mobile image_block"> 
+      <img src="https://www.newberry.edu/images/content-page-images/aerial-1.jpg" title=""> 
+     </div> 
+    </div> 
+    <div class="block-row"> 
+     <div class="block  block-mobile image_block"> 
+      <img src="https://www.newberry.edu/images/news/50313430-00701-0371.jpg" title=""> 
+     </div> 
+     <div class="block block-mobile text_block"> 
+      <h3>Loyal Alumni Family <span class="arrows"></span></h3> 
+      <p>Newberry Born, Newberry Bred! Our alumni are one big, connected family!</p> 
+      <p> <a href="/alumni" title="Loyal Alumni Family" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+     </div> 
+    </div> 
+    <div class="block-row"> 
+     <div class="block block-mobile text_block text_block-dark-gray"> 
+      <h3>Competitive Athletics <span class="arrows"></span></h3> 
+      <p>The Wolves are a pack to be reckoned with in the South Atlantic Conference, offering 21 NCAA Division II sports, cheerleading and dance.</p> 
+      <p> <a href="https://newberrywolves.com" title="Competitive Athletics" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+     </div> 
+     <div class="block block-mobile image_block"> 
+      <img src="https://www.newberry.edu/images/news/Mens_BB_2019_for_Collage.png" title=""> 
+     </div> 
+    </div> 
+    <div class="block-row"> 
+     <div class="block block-mobile image_block"> 
+      <img src="https://www.newberry.edu/images/content-page-images/-iI5DM9Q.jpeg" title=""> 
+     </div> 
+     <div class="block block-mobile text_block"> 
+      <h3>Close-knit Community <span class="arrows"></span></h3> 
+      <p>With a welcoming atmosphere on campus and a 13:1 student-to-faculty ratio in the classroom, Newberry is your home away from home.</p> 
+      <p> <a href="/campus-life" title="Close-knit Community" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+     </div> 
+    </div> 
+    <div class="block-row"> 
+     <div class="block block-mobile text_block-dark-gray text_block"> 
+      <h3>Challenging Academic Programs <span class="arrows"></span></h3> 
+      <p>We offer 32 majors, online degree-completion programs and five dual-degree programs, grounded in the liberal arts to prepare you for lifetime success.</p> 
+      <p> <a href="/academics" title="Challenging Academic Programs" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+     </div> 
+     <div class="block block-mobile image_block"> 
+      <img src="https://www.newberry.edu/images/content-page-images/DSC_1973_1.jpg" title=""> 
+     </div> 
+    </div> 
+    <div class="block-row"> 
+     <div class="block block-mobile image_block"> 
+      <img src="https://www.newberry.edu/images/news/Nursing_2019_for_Collage.jpg" title=""> 
+     </div> 
+     <div class="block block-mobile  text_block"> 
+      <h3>Highly Ranked <span class="arrows"></span></h3> 
+      <p>Newberry College is consistently recognized for outstanding value, diversity, and overall quality.</p> 
+      <p> <a href="https://www.newberry.edu/news" title="Highly Ranked"> <span class="plus"></span> Learn more </a> </p> 
+     </div> 
+    </div> 
+    <div class="block-row"> 
+     <div class="block block-mobile text_block text_block-dark-gray"> 
+      <h3>Rich Heritage &amp; Traditions <span class="arrows"></span></h3> 
+      <p>Founded in 1856 and affiliated with the Evangelical Lutheran Church in America, Newberry remains rooted in the Lutheran liberal arts tradition.</p> 
+      <p> <a href="/about-us#our-heritage" title="Rich Heritage &amp; Traditions"> <span class="plus"></span> Learn more </a> </p> 
+     </div> 
+     <div class="block block-mobile image_block"> 
+      <img src="https://www.newberry.edu/images/content-page-images/DSC_6555.jpg" title=""> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="desktop"> 
+   <div class="container"> 
+    <div class="block block1 image_block white-border-right"> 
+     <div class="image_circle"> 
+      <img src="https://www.newberry.edu/images/content-page-images/img-news-03.jpg" title=""> 
+     </div> 
+     <img src="https://www.newberry.edu/images/content-page-images/aerial-1.jpg" title=""> 
+    </div> 
+    <div class="block block2 text_block text_block-dark-gray red-border-left"> 
+     <h3>Prime Location <span class="arrows"></span></h3> 
+     <p>The beautifully landscaped 90-acre campus is situated in the heart of historic Newberry, South Carolina: one of Sweitzer &amp; Fields’ 50 Best Small Southern Towns.</p> 
+     <p> <a href="/campus-life#activities" title="Prime Location"> <span class="plus"></span> Learn more </a> </p> 
+    </div> 
+    <div class="block block3 image_block white-border-left"> 
+     <div class="image_circle"> 
+      <img src="https://www.newberry.edu/images/content-page-images/img-life-04.jpg" title=""> 
+     </div> 
+     <img src="https://www.newberry.edu/images/news/50313430-00701-0371.jpg" title=""> 
+    </div> 
+    <div class="block block4 red-border-top text_block"> 
+     <div class="image_circle"> 
+      <img src="https://www.newberry.edu/images/content-page-images/107382850_10158558690708588_8325509997812261319_o.jpg" title=""> 
+     </div> 
+     <h3>Loyal Alumni Family <span class="arrows"></span></h3> 
+     <p>Newberry Born, Newberry Bred! Our alumni are one big, connected family!</p> 
+     <p> <a href="/alumni" title="Loyal Alumni Family" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+    </div> 
+    <div class="block block5 white-border-top white-border-right white-border-bottom red-border-after-bottom text_block text_block-light-gray"> 
+     <h3>Competitive Athletics <span class="arrows"></span></h3> 
+     <p>The Wolves are a pack to be reckoned with in the South Atlantic Conference, offering 21 NCAA Division II sports, cheerleading and dance.</p> 
+     <p> <a href="https://newberrywolves.com" title="Competitive Athletics" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+    </div> 
+    <div class="block block6 white-border-top white-border-bottom image_block"> 
+     <img src="https://www.newberry.edu/images/news/Mens_BB_2019_for_Collage.png" title=""> 
+    </div> 
+    <div class="block block7 white-border-top white-border-left red-border-after-bottom text_block text_block-light-gray"> 
+     <h3>Close-knit Community <span class="arrows"></span></h3> 
+     <p>With a welcoming atmosphere on campus and a 13:1 student-to-faculty ratio in the classroom, Newberry is your home away from home.</p> 
+     <p> <a href="/campus-life" title="Close-knit Community" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+    </div> 
+    <div class="block block8 white-border-left image_block"> 
+     <img src="https://www.newberry.edu/images/content-page-images/-iI5DM9Q.jpeg" title=""> 
+    </div> 
+    <div class="block block9 white-border-right image_block"> 
+     <div class="image_circle"> 
+      <img src="https://www.newberry.edu/images/content-page-images/10269063_10152356595598588_2427254044301510706_o.jpg" title=""> 
+     </div> 
+     <img src="https://www.newberry.edu/images/content-page-images/DSC_1973_1.jpg" title=""> 
+    </div> 
+    <div class="block block10 red-border-right text_block-dark-gray text_block"> 
+     <h3>Challenging Academic Programs <span class="arrows"></span></h3> 
+     <p>We offer 32 majors, online degree-completion programs and five dual-degree programs, grounded in the liberal arts to prepare you for lifetime success.</p> 
+     <p> <a href="/academics" title="Challenging Academic Programs" target="_blank"> <span class="plus"></span> Learn more </a> </p> 
+    </div> 
+    <div class="block block11 white-border-left white-border-top image_block"> 
+     <div class="image_circle"> 
+      <img src="https://www.newberry.edu/images/news/Squirell_2_for_collage_2020.png" title=""> 
+     </div> 
+     <img src="https://www.newberry.edu/images/news/Nursing_2019_for_Collage.jpg" title=""> 
+    </div> 
+    <div class="block block12 text_block-dark-gray white-border-left red-border-right text_block"> 
+     <h3>Highly Ranked <span class="arrows"></span></h3> 
+     <p>Newberry College is consistently recognized for outstanding value, diversity, and overall quality.</p> 
+     <p> <a href="https://www.newberry.edu/news" title="Highly Ranked"> <span class="plus"></span> Learn more </a> </p> 
+    </div> 
+    <div class="block block13 image_block"> 
+     <img src="https://www.newberry.edu/images/content-page-images/DSC_6555.jpg" title=""> 
+    </div> 
+    <div class="block block14 text_block text_block-light-gray red-border-bottom"> 
+     <h3>Rich Heritage &amp; Traditions <span class="arrows"></span></h3> 
+     <p>Founded in 1856 and affiliated with the Evangelical Lutheran Church in America, Newberry remains rooted in the Lutheran liberal arts tradition.</p> 
+     <p> <a href="/about-us#our-heritage" title="Rich Heritage &amp; Traditions"> <span class="plus"></span> Learn more </a> </p> 
+    </div> 
+    <div class="block block15 white-border-left white-border-top image_block"> 
+     <img src="https://www.newberry.edu/images/news/DSC_2930.jpg" title=""> 
+    </div> 
+   </div> 
+  </div> 
+ </section> 
+ <section class="home-isotope white-wolf-bg"> 
+  <div class="container"> 
+   <div class="news-events-section"> 
+    <div class=""> 
+     <div class="section-headline"> 
+      <h2>News</h2> 
+     </div> 
+     <ul class="news-home"> 
+      <li class="item size-50-1 news news-2up-blocks"> 
+       <div class="inner clearfix"> <a name="news" id="news"></a> <a href="/news/newberry-college-has-unique-opportunity-through-netvue-grant"> 
+         <div class="photo" style="background:url(/images/made/31054c9377d491c9/Witt_in_the_classroom_306_204.jpg); background-size:cover; background-position:center center; float: left;width: 154px;height: 204px;margin-right: 20px;"></div></a>
+       </div><a href="/news/newberry-college-has-unique-opportunity-through-netvue-grant"> 
+        <div class="news-content"> <span class="date">March 11, 2021</span> 
+         <p class="news-headline">Newberry College has Unique Opportunity through NetVUE Grant</p> 
+         <p class="news-description">NEWBERRY&nbsp;—&nbsp;Newberry College has received a $25,000 Vocation across the Academy Grant from the Network for Vocation in Undergraduate Education.…<span class="readmore">Read More</span> <span class="visuallyhidden">about Newberry College has Unique Opportunity through NetVUE Grant</span> </p> 
+        </div> </a> </li>
+     </ul>
+    </div>  
+    <li class="item size-50-1 news news-2up-blocks"> 
+     <div class="inner clearfix"> <a name="news" id="news"></a> <a href="/news/golden-brown-gratitude"> 
+       <div class="photo" style="background:url(/images/made/31054c9377d491c9/IMG_4302_306_204.JPG); background-size:cover; background-position:center center; float: left;width: 154px;height: 204px;margin-right: 20px;"></div></a>
+     </div><a href="/news/golden-brown-gratitude"> 
+      <div class="news-content"> <span class="date">February 23, 2021</span> 
+       <p class="news-headline">Golden Brown Gratitude</p> 
+       <p class="news-description">NEWBERRY —&nbsp;Last Friday, Newberry College President Maurice Scherrens presented each student, faculty and staff member with their own box of…<span class="readmore">Read More</span> <span class="visuallyhidden">about Golden Brown Gratitude</span> </p> 
+      </div> </a> </li>
+   </div>  
+   <li class="item size-50-1 news news-2up-blocks"> 
+    <div class="inner clearfix"> <a name="news" id="news"></a> <a href="/news/newberry-college-music-announces-annual-honors-recital"> 
+      <div class="photo" style="background:url(/images/made/31054c9377d491c9/IMG_2590_306_204.JPG); background-size:cover; background-position:center center; float: left;width: 154px;height: 204px;margin-right: 20px;"></div></a>
+    </div><a href="/news/newberry-college-music-announces-annual-honors-recital"> 
+     <div class="news-content"> <span class="date">February 17, 2021</span> 
+      <p class="news-headline">Newberry College Music Announces Annual Honors Recital</p> 
+      <p class="news-description">NEWBERRY —&nbsp;At the start of another unprecedented year, one Newberry College tradition will happen right on cue. &nbsp; The Department of Music…<span class="readmore">Read More</span> <span class="visuallyhidden">about Newberry College Music Announces Annual Honors Recital</span> </p> 
+     </div> </a> </li>
+  </div>  
+  <li class="item size-50-1 news news-2up-blocks"> 
+   <div class="inner clearfix"> <a name="news" id="news"></a> <a href="/news/heres-what-the-newberry-college-board-of-trustees-approved-friday"> 
+     <div class="photo" style="background:url('/images/img-news-02.jpg'); background-size:cover; float: left;width: 154px;height: 204px;margin-right: 20px;"></div></a>
+   </div><a href="/news/heres-what-the-newberry-college-board-of-trustees-approved-friday"> 
+    <div class="news-content"> <span class="date">February 16, 2021</span> 
+     <p class="news-headline">Here’s What the Newberry College Board of Trustees Decided in February</p> 
+     <p class="news-description">NEWBERRY —&nbsp;In its February meeting, the Newberry College Board of Trustees approved numerous significant measures, including a renewal of the…<span class="readmore">Read More</span> <span class="visuallyhidden">about Here’s What the Newberry College Board of Trustees Decided in February</span> </p> 
+    </div> </a>  </li>  
+  <div class="clearfix"></div> 
+  <div class="width-12 text-center"> <a class="red-button" href="/news"> <p class="fauxH4" style="color:white">All News</p> </a> 
+  </div> 
+  <div class="clearfix"></div>  
+  <div class="news-events_2col hide"> 
+   <div class="section-headline"> 
+    <h2>Events</h2> 
+   </div> 
+   <ul class="events-home"> 
+   </ul> 
+   <div class="width-12 "> <a class="red-button" href="/events/calendar"><p class="fauxH4" style="color:white">All Events</p></a> 
+   </div> 
+  </div> 
+  <div class="clearfix"></div>   
+  <div class="clearfix"></div> 
+ </section> 
+</section> 
+<script type="text/javascript" src="https://ai.ocelotbot.com/embed/standard/6ce151eb-e9fc-45da-85d8-37a90c56e1fe?ha=right&amp;hv=16px&amp;va=bottom&amp;vv=100px&amp;ts=1&amp;bs=calloutBubble&amp;av=0"></script> 
+<nav id="bottom-sticky-nav" class="btm-sticky-nav fixed"> 
+ <ul> 
+  <li> <a href="https://my.newberry.edu/ICS/Admissions/Request_Information.jnz" target="_blank" title="Request Information"> <span class="global-icon info"><img src="https://www.newberry.edu/images/quicklink-icon1.png" alt="Request Information Icon"></span> Request Information </a> </li> 
+  <li> <a href="https://my.newberry.edu/ICS/Admissions/Schedule_a_Visit.jnz?portlet=Visits_and_Events&amp;screen=Begin%2f%2fba8a60fa-be58-4e54-8f77-6d2e8a49d325&amp;screenType=next%27" target="_blank" title="Visit Campus"> <span class="global-icon map"><img src="https://www.newberry.edu/images/quicklink-icon2.png" alt="Visit Campus"></span> Visit Campus </a> </li> 
+  <li> <a href="https://my.newberry.edu/ICS/Admissions/Apply_Online.jnz" target="_blank" title="Apply Now"> <span class="global-icon note"><img src="https://www.newberry.edu/images/quicklink-icon3.png" alt="Apply Now Icon"></span> Apply Now </a> </li> 
+  <li> <a href="https://secure.etransfer.com/NewberryCollege/Gift.cfm" data-fancybox-type="iframe" class="modal-giving-open" title="Give Now"> <span class="global-icon heart"><img src="https://www.newberry.edu/images/quicklink-icon4.png" alt="Give Now Icon"></span> Give Now </a> </li> 
+ </ul> 
+</nav> 
+<div class="backtotop"> <a href="#top"> <img src="https://www.newberry.edu/images/backtotop-icon.png" alt="back to top"> </a> 
+</div> 
+<footer id="page-footerlinks"> 
+ <div class="footer_top"> 
+  <div class="container"> 
+   <div class="logo"> <a href="/"> <img class="footer-seal" src="/images/ncedu-red-logo.png" alt="Newberry College Logo"> </a> 
+   </div> 
+   <nav class="footer-nav"> 
+    <div class="footer_column1"> 
+     <div class="title"> 
+      <h2>Quick Links</h2> 
+     </div> 
+     <div class="menu"> <a href="/accessibility" title="Accessibility">Accessibility</a> <a href="/accreditation" title="Accreditation">Accreditation</a> <a href="http://www.newberrycshop.com" title="Bookstore" target="_blank">Bookstore</a> <a href="/catalog" title="Course Catalog">Course Catalog</a> <a href="/emergency-info" title="Emergency Information">Emergency Information</a> <a href="/employment" title="Employment">Employment</a> <a href="https://newberry.studentaidcalculator.com/survey.aspx" target="_blank" title="Estimate Financial Aid">Estimate Financial Aid</a> <a href="/faculty" title="Faculty &amp; Staff Directory">Faculty &amp; Staff Directory</a> <a href="/information-technology" title="Information Technology">Information Technology</a> <a href="/legal" title="Legal">Legal</a> <a href="https://newberry.libguides.com/wesselslibrary" title="Library">Library</a> <a href="/title-ix" title="NC Title IX">NC Title IX</a> <a href="/policies" title="Policies &amp; Reports">Policies &amp; Reports</a> <a href="/security" title="Security">Security</a> <a href="/sitemap" title="Sitemap">Sitemap</a> 
+     </div> 
+    </div> 
+    <div class="footer_column2"> 
+     <div class="title"> 
+      <h2>Contact</h2> 
+     </div> 
+     <div class="menu"> 
+      <div class="footer-address"> 
+       <p>2100 College Street,<br> Newberry, SC 29108</p> 
+      </div> 
+      <div class="footer-phone"> 
+       <p>1-800-845-4955</p> 
+      </div> 
+     </div> 
+    </div> 
+   </nav> 
+  </div> 
+ </div> 
+ <div class="row footer_copyright"> 
+  <div class="container"> 
+   <div class="footer_copyright-right"> 
+    <div class="social-nav"> 
+     <ul class="social"> 
+      <li><a href="https://www.facebook.com/newberrycollege" target="_blank"><span class="visuallyhidden">Newberry College Facebook</span><i class="fa fa-facebook"></i></a></li> 
+      <li><a href="https://www.instagram.com/newberry_college" target="_blank"><span class="visuallyhidden">Newberry College Instagram</span><i class="fa fa-instagram"></i></a></li> 
+      <li><a href="https://www.linkedin.com/school/newberrycollege/" target="_blank"><span class="visuallyhidden">Newberry College LinkedIn</span><i class="fa fa-linkedin"></i></a></li> 
+      <li><a href="https://twitter.com/newberrycollege" target="_blank"><span class="visuallyhidden">Newberry College Twitter</span><i class="fa fa-twitter"></i></a></li> 
+      <li><a href="https://www.youtube.com/channel/UCPrdbPwnAh_xGv1AqBx0B3Q" target="_blank"><span class="visuallyhidden">Newberry College YouTube</span><i class="fa fa-youtube"></i></a></li> <!--<li>
+                            <a target="_blank" href="http://www.newberry.meritpages.com" class="merit-footer-icon merit">
+                                <img id="merit-logo" src="https://www.newberry.edu/images/merit-logo-white.png" alt="Newberry College Merit">
+                            </a>
+                        </li>--> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="footer_copyright-left"> 
+    <p> © 2021 Newberry College. All Rights Reserved. <a href="https://www.duboseweb.com" target="_blank">Website Design by DuBose Web Group</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="/accessibility">Accessibility Statement</a> </p> 
+   </div> 
+   <div class="clearfix"></div> 
+  </div> 
+ </div> 
+</footer> <!-- jQuery --> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script> <!-- Flexslider --> 
+<script src="/assets/js/vendor/jquery.flexslider-min.js"></script> <!-- Isotope --> 
+<script src="/assets/js/vendor/isotope.pkgd.min.js"></script> <!-- FancyBox --> 
+<script src="/assets/js/vendor/fbox/jquery.fancybox.js"></script> <!--Owl Carousel--> 
+<script src="/assets/js/vendor/owl.carousel.min.js"></script> <!--Lazy Sizes--> 
+<script src="/assets/js/vendor/lazysizes.min.js"></script> <!--MMenu--> 
+<script src="/assets/js/vendor/mmenu.js"></script> <!--jQuery UI for datepickers--> 
+<script src="/assets/js/vendor/jquery-ui.js"></script> <!-- Custom Scripts --> 
+<script type="text/javascript" src="/assets/js/vendor/validate.js"></script> 
+<script src="/assets/js/vendor/jquery.h5validate.js"></script> 
+<script>
+$(document).ready(function () {$('form').h5Validate();});
+</script> 
+<script src="/assets/js/vendor/jquery.knob.min.js"></script> 
+<script src="/assets/js/main.js?v=2020122301"></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. UA-24744783-1--> 
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-24744783-1');ga('send','pageview');
+</script> 
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> 
+<script src="https://secure.adnxs.com/seg?add=3980387&amp;t=1" type="text/javascript"></script>
+</body>
+</doc>

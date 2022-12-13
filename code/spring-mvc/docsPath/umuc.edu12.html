@@ -1,0 +1,1105 @@
+<doc>
+<filename>umuc.edu12.html</filename>
+<url>http://www.umuc.edu/administration/index.cfm</url>
+<ip>143.204.135.122</ip>
+<title>Administration Home | UMGC</title>
+<body>
+<a name="__topdoc__"></a>
+<script type="text/javascript">
+<!--
+// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+var bCanRollover=0
+if (bName == "Netscape")
+{
+if(bVer >= 3)
+bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+if(bVer >= 4)
+bCanRollover=1;
+}
+function ImageSet(imgID,newTarget)
+{
+if (bCanRollover)
+document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+window.status = "";
+}
+function setStatbar(statbar)
+{
+// #22793 - no-op because browsers don't honor the assignment
+//	var strStatbar=unescape(statbar);
+//	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+if( menus_included == 1 )
+document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink)
+{
+// links are in one of the following formats:
+// 		cpe_60_0,CP___PAGEID=100
+// 		CPNEWWIN:WindowName^params@CP___
+// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+// displaylink is the server relative URL or fully qualified URL
+windowname = "";
+windowparams = "";
+// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL;
+pos = link.indexOf("CPNEWWIN:");
+if (pos != -1)
+{
+pos1 = link.indexOf ("^");
+windowname = link.substring (pos+9, pos1);
+pos2 = link.indexOf ("@");
+windowparams = link.substring (pos1 + 1, pos2);
+link = link.substring (pos2 + 1, link.length);
+}
+if( displaylink && displaylink != "" )
+{
+if (windowname == "")
+window.location = displaylink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (displaylink, windowname, windowparams);
+}
+}
+else
+{
+targetLink = link;
+if (link.indexOf ("CP___") != -1)
+{
+httpPos = -1;
+commaPos = link.indexOf(",");
+if (commaPos != -1)
+{
+targetUrl = link.substr(commaPos + 1);
+if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+{
+httpPos = commaPos + 1;
+}
+}
+if (httpPos != -1)
+{
+targetLink = link.substr(httpPos);
+commaPos = targetLink.indexOf(",");
+if (commaPos != -1)
+targetLink = targetLink.substr(0, commaPos);
+}
+else
+targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
+if (windowname == "")
+window.location = targetLink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (targetLink, windowname, windowparams);
+}
+}
+else
+{
+//commaPos = link.indexOf(",");
+//if (commaPos != -1)
+//	link = link.substr(0, commaPos);
+if (windowname == "")
+window.location = link;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (link, windowname, windowparams);
+}
+}
+}
+}
+function doWindowOpen(href,name,params)
+{
+if (params != '')
+window.open (href, name, params);
+else
+window.open (href, name);
+}
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+function FormatWindowParams(windowparams)
+{
+if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 ||
+windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+{
+windowparams = substringReplace(windowparams,':left=',',left=');
+windowparams = substringReplace(windowparams,'left=','left=');
+windowparams = substringReplace(windowparams,':ww=',',width=');
+windowparams = substringReplace(windowparams,'ww=','width=');
+windowparams = substringReplace(windowparams,':hh=',',height=');
+windowparams = substringReplace(windowparams,'hh=','height=');
+windowparams = substringReplace(windowparams,':loc=',',location=');
+windowparams = substringReplace(windowparams,'loc=','location=');
+windowparams = substringReplace(windowparams,':dir=',',directories=');
+windowparams = substringReplace(windowparams,'dir=','directories=');
+windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+windowparams = substringReplace(windowparams,'tb=','toolbar=');
+windowparams = substringReplace(windowparams,':stat=',',status=');
+windowparams = substringReplace(windowparams,':mb=',',menubar=');
+windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+windowparams = substringReplace(windowparams,':rs=',',resizable=');
+}
+return windowparams;
+}
+// -->
+</script> 
+<noscript>
+ <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-7KQ4" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> 
+<div id="container"> 
+ <div id="header-container" class="fluid-width"> 
+  <div id="skip-container">
+   <a href="#main-body" class="skip-to-content">Skip to Main Content</a>
+  </div> 
+  <header id="site-header"> 
+   <div id="desktop-site-nav" class="desktop-only"> 
+    <div id="global-nav-container"> 
+     <nav id="global-nav" class="desktop-only global-nav"> 
+      <ul id="audience-nav" class="inline-block audience-nav"> 
+       <li class="inline-block "><a href="/index.cfm">Prospective Students</a> </li>
+       <li class="inline-block "><a href="/current-students/index.cfm">Current Students</a> </li>
+       <li class="inline-block aud-nav-active"><a href="/administration/index.cfm">Administration</a> </li>
+       <li class="inline-block "><a href="/business-partners/index.cfm">Partners</a></li> 
+       <li class="inline-block utility-more">More + 
+        <div class="more-links-menu"> 
+         <ul> 
+          <li><a href="http://alumni.umgc.edu">Alumni</a></li> 
+          <li><a href="http://impact.umgc.edu">Donors</a></li> 
+          <li><a href="//globalmedia.umgc.edu">Media</a></li> 
+         </ul> 
+        </div> </li> 
+      </ul> 
+      <ul id="utility-links" class="inline-block utility-links"> 
+       <li class=""><a class="tools-link" href="http://impact.umgc.edu/s/710/18/home.aspx">
+         <div class="donate-link">
+          <span>Donate to UMGC</span>
+         </div></a></li> 
+       <li class=""><a href="/events/index.cfm">Events</a></li> 
+       <li class=""><a href="/news/index.cfm">News</a></li> 
+       <li class="utility-locations "><a href="/locations/index.cfm">Locations +</a> 
+        <div class="locations-menu"> 
+         <ul> 
+          <li><a href="/locations/index.cfm">U.S. Locations</a></li> 
+          <li><a href="//asia.umgc.edu">UMGC Asia</a></li> 
+          <li><a href="//www.europe.umgc.edu">UMGC Europe</a></li> 
+          <li><a href="/academic-programs/about-online-learning.cfm">Learn Online</a></li> 
+         </ul> 
+        </div> </li> 
+       <li class=""><a href="/current-students/degree-requirements/transcripts/index.cfm">Transcripts</a></li> 
+       <li class="login-personas "><a href="/login/index.cfm"><span class="glyphicons glyphicons-user"></span>Log In</a></li> 
+      </ul> 
+     </nav> 
+    </div> 
+    <div id="site-tools-container"> 
+     <div id="site-tools"> 
+      <div class="table-row"> 
+       <div id="nav-left" class="table-cell"> 
+        <div id="logo" class="inline-block"> <a href="/index.cfm">
+          <picture> <!--[if IE 9]><video style="display:none;"><![endif]--> 
+           <source srcset="/ui/images/umgc-logo-desktop.svg" media="(min-width:801px)"> 
+           <source srcset="/ui/images/umgc-logo-tablet.svg" media="(min-width:415px)"> <!--[if IE 9]></video><![endif]--> 
+           <img srcset="/ui/images/umgc-logo-mobile.svg" alt="University of Maryland Global Campus" title=""> 
+          </picture> <img class="logo-docked" srcset="/ui/images/umgc-logo-mobile.svg" alt="University of Maryland Global Campus" title=""> </a> 
+        </div> 
+       </div> 
+       <div id="nav-right" class="table-cell">
+        <span id="nav-burger" class="glyphicons glyphicons-show-lines"></span>
+       </div> 
+       <div id="tools" class="table-cell"> 
+        <div id="links" class="inline-block"> 
+         <div id="help-and-number" class="inline-block"> <a href="tel:1(855)655-8682" data-gtm="click-to-call">855-655-8682</a>
+          <br> 
+          <div data-gtm="click-to-get-help" class="tools-help tools-help-stateside">
+           Get Help 
+           <div class="help-links-menu"> 
+            <ul id="help-menu"> 
+             <li class="mobile-only"> <p class="hamburger-header-text removeWordBreak">Get Help</p> </li> 
+             <li><a href="https://www.umgc.edu/help/index.cfm" id="https://www.umgc.edu/help/index.cfm|">Find Answers</a></li> 
+             <li class="mobile-only"><a href="sms://868247"><span class="removeWordBreak">Text an Advisor</span></a></li> 
+             <li><a onclick="$('#webchat-icon').click();"><span class="removeWordBreak"> Chat Now</span></a></li> 
+             <li><a class="mcsc-resource-link" href="https://umgc.edu/help/submit-case.cfm" id="https://umgc.edu/help/submit-case.cfm|"><span class="removeWordBreak">Email Us</span></a></li>
+            </ul> 
+           </div> 
+          </div> 
+         </div> <a id="search-glyph" class="glyphicons glyphicons-search"></a> 
+        </div> 
+        <div id="search" class="inline-block"> 
+         <form id="gs" name="gs" method="get" action="/search-results.cfm" class="inline-block"> 
+          <fieldset class="search-fieldset inline-block"> 
+           <input id="searchText" type="text" name="q" placeholder="Search UMGC.edu" class="inline-block search-box" title="Search UMGC.edu">
+           <input type="submit" style="" id="searchBtn" value="Search" class="inline-block"> 
+          </fieldset> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="hamburger-nav-container" class="mobile-tablet-only"> 
+    <div id="hamburger-nav" class="hidden"> 
+     <p class="hamburger-header-text">Administration</p> 
+     <div id="mobile-tablet-site-nav" class="hamburger-nav-wrapper"> 
+      <nav id="global-nav-mobile" class="mobile-tablet-only global-nav"> 
+       <div class="details"> 
+        <div class="details-summary"> 
+         <p class="mobile-tablet-only hamburger-nav-title">UMGC For …</p> 
+        </div> 
+        <div class="details-content"> 
+         <ul id="audience-nav-mobile" class="inline-block audience-nav"> 
+          <li class="inline-block aud-nav-active"><a class="active" href="/index.cfm">Prospective Students</a> </li>
+          <li class="inline-block"><a href="/current-students/index.cfm">Current Students</a> </li>
+          <li class="inline-block"><a href="/administration/index.cfm ">Administration</a> </li>
+          <li class="inline-block"><a href="/business-partners/index.cfm">Partners</a></li> 
+          <li class="inline-block"><a href="http://alumni.umgc.edu">Alumni</a> </li>
+          <li class="inline-block mobile-tablet-only"><a href="http://sites.umgc.edu/impact">Donors</a> </li>
+          <li class="inline-block"><a href="//globalmedia.umgc.edu">Media</a> </li>
+         </ul> 
+        </div> 
+       </div> 
+       <div class="global-nav-item"> 
+        <ul class="inline-block"> 
+         <li><a href="https://www.umgc.edu/login/index.cfm">Log In</a></li> 
+        </ul> 
+       </div> 
+      </nav> <!-- Administration Nav  --->
+      <nav id="site-nav">
+       <ul> 
+        <li class="mega-menu-item"><a class="desktop-only" href="/administration/leadership-and-governance/index.cfm" title="Leadership &amp; Governance"><span class="mega-menu-item-text">Leadership &amp; Governance</span></a> 
+         <div class="details"> 
+          <div class="details-summary"> 
+           <p class="mobile-tablet-only hamburger-nav-title">Leadership &amp; Governance</p> 
+          </div> 
+          <div class="details-content"> 
+           <div class="mega-menu three-col"> 
+            <ul class="mega-col table-cell"> 
+             <li class="mobile-tablet-only"><a class="mobile-tablet-only" href="/administration/leadership-and-governance/index.cfm">Leadership &amp; Governance</a></li> 
+             <li><a href="/administration/leadership-and-governance/president/index.cfm">Office of the President</a></li> 
+             <li><a href="/administration/leadership-and-governance/strategic-plan/index.cfm">Strategic Plan</a></li> 
+             <li><a href="/administration/leadership-and-governance/accreditation-self-study-report.cfm">Accreditation Self-Study Report</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/leadership-and-governance/boards-and-committees/index.cfm">Boards and Committees</a></li> 
+             <li><a href="/administration/leadership-and-governance/boards-and-committees/board-of-visitors.cfm">Board of Visitors</a></li> 
+             <li><a href="/administration/leadership-and-governance/boards-and-committees/cabinet.cfm">Cabinet</a></li> 
+             <li><a href="/administration/leadership-and-governance/boards-and-committees/executive-committee.cfm">Executive Committee</a></li> 
+             <li><a href="/administration/leadership-and-governance/boards-and-committees/maryland-cybersecurity-council/index.cfm">Maryland Cybersecurity Council</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/leadership-and-governance/shared-governance/index.cfm">Shared Governance</a></li> 
+             <li><a href="/administration/leadership-and-governance/shared-governance/academic-advisory-board.cfm">Academic Advisory Board</a></li> 
+             <li><a href="/administration/leadership-and-governance/shared-governance/adjunct-faculty-association.cfm">Adjunct Faculty Association</a></li> 
+             <li class="desktop-only"><a href="/current-students/student-life-and-support/student-advisory-council/index.cfm">Student Advisory Council</a></li> 
+             <li class="mega-links-title desktop-only">Related Link</li> 
+             <li class="desktop-only"><a href="/about/awards-and-recognition.cfm">Awards and Recognition</a></li> 
+             <li class="desktop-only"><a href="/about/mission-and-history.cfm">Mission and History</a></li> 
+             <li class="desktop-only"><a href="/about/accreditation.cfm">Regional Accreditation</a></li> 
+             <li class="desktop-only"><a href="/about/university-system-of-maryland-membership.cfm">University System of Maryland Membership</a></li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> </li> 
+        <li class="mega-menu-item"><a class="desktop-only" href="/administration/arts-and-diversity/index.cfm" title="Arts &amp; Diversity"><span class="mega-menu-item-text">Arts &amp; Diversity</span></a> 
+         <div class="details"> 
+          <div class="details-summary"> 
+           <p class="mobile-tablet-only hamburger-nav-title">Arts &amp; Diversity</p> 
+          </div> 
+          <div class="details-content"> 
+           <div class="mega-menu"> 
+            <ul class="mega-col table-cell"> 
+             <li class="mobile-tablet-only"><a class="mobile-tablet-only" href="/administration/arts-and-diversity/index.cfm">Arts &amp; Diversity</a></li> 
+             <li><a href="/administration/arts-and-diversity/arts/index.cfm">Arts Program</a></li> 
+             <li><a href="/administration/arts-and-diversity/arts/collections/index.cfm">Art Collections</a></li> 
+             <li><a href="/administration/arts-and-diversity/arts/exhibits.cfm">Art Exhibits</a></li> 
+             <li><a href="/administration/arts-and-diversity/arts/friends-of-the-arts-program.cfm">Friends of the Arts Program</a></li> 
+             <li><a href="/administration/arts-and-diversity/arts/location-hours.cfm">Art Locations and Hours</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/arts-and-diversity/diversity/index.cfm">Diversity</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/arts-and-diversity/umuc-tv.cfm">UMGC-TV</a></li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> </li> 
+        <li class="mega-menu-item"><a class="desktop-only" href="/administration/centers-and-institutes/index.cfm" title="Centers &amp; Institutes"><span class="mega-menu-item-text">Centers &amp; Institutes</span></a> 
+         <div class="details"> 
+          <div class="details-summary"> 
+           <p class="mobile-tablet-only hamburger-nav-title">Centers &amp; Institutes</p> 
+          </div> 
+          <div class="details-content"> 
+           <div class="mega-menu"> 
+            <ul class="mega-col table-cell"> 
+             <li class="mobile-tablet-only"><a class="mobile-tablet-only" href="/administration/centers-and-institutes/index.cfm">Centers &amp; Institutes</a></li> 
+             <li><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/index.cfm">Center for Innovation in Learning and Student Success</a></li> 
+             <li><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/about.cfm">About CILSS</a></li> 
+             <li><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/initiatives/index.cfm">Initiatives</a></li> 
+             <li><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/research-overview.cfm">Research Overview</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/centers-and-institutes/center-for-security-studies/index.cfm">Center for Security Studies</a></li> 
+             <li><a href="/administration/centers-and-institutes/center-for-security-studies/about.cfm">About the Center for Security Studies</a></li> 
+             <li><a href="/administration/centers-and-institutes/center-for-security-studies/events-workshops.cfm">Security Studies Events and Workshops</a></li> 
+             <li><a href="/administration/centers-and-institutes/center-for-security-studies/partnerships.cfm">Security Studies Partnerships</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell">
+             <!-- Intentionally left surrounding ul tag empty to preserve spacing in MM ---> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> </li> 
+        <li class="mega-menu-item"><a class="desktop-only" href="/administration/policies-and-reporting/index.cfm" title="Policies &amp; Reporting"><span class="mega-menu-item-text">Policies &amp; Reporting</span></a> 
+         <div class="details"> 
+          <div class="details-summary"> 
+           <p class="mobile-tablet-only hamburger-nav-title">Policies &amp; Reporting</p> 
+          </div> 
+          <div class="details-content"> 
+           <div class="mega-menu"> 
+            <ul class="mega-col table-cell"> 
+             <li class="mobile-tablet-only"><a class="mobile-tablet-only" href="/administration/policies-and-reporting/index.cfm">Policies &amp; Reporting</a></li> 
+             <li><a href="/administration/policies-and-reporting/institutional-data/index.cfm">Institutional Data</a></li> 
+             <li><a href="/administration/policies-and-reporting/institutional-data/facts-at-a-glance.cfm">Facts at a Glance</a></li> 
+             <li><a href="/administration/policies-and-reporting/institutional-data/fact-book-archive.cfm">Fact Book and Fact Sheet Archive</a></li> <!--<li><a href="/administration/policies-and-reporting/institutional-data/interactive-fact-finder.cfm">Interactive Fact Finder</a></li>---> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/policies-and-reporting/policies/index.cfm">Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/academic-affairs/index.cfm">Academic Affairs Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/administration-policies/index.cfm">Administration Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/external-relations/index.cfm">External Relations Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/faculty/index.cfm">Faculty Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/fiscal-and-business-affairs/index.cfm">Fiscal and Business Affairs Policies</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/policies-and-reporting/policies/general/index.cfm">General Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/human-resources/index.cfm">Human Resources Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/research/index.cfm">Research Policies</a></li> 
+             <li><a href="/administration/policies-and-reporting/policies/student-affairs/index.cfm">Student Affairs Policies</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/policies-and-reporting/affirmative-action-and-equal-opportunity/index.cfm">Affirmative Action and Equal Opportunity</a></li> 
+             <li><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/index.cfm">Sexual Misconduct (Title IX)</a></li> 
+             <li><a href="/administration/policies-and-reporting/suspected-child-abuse-and-neglect.cfm">Suspected Child Abuse and Neglect</a></li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> </li> 
+        <li class="mega-menu-item"><a class="desktop-only" href="/administration/jobs/index.cfm" title="Jobs at UMUC"><span class="mega-menu-item-text">Jobs at UMGC</span></a> 
+         <div class="details"> 
+          <div class="details-summary"> 
+           <p class="mobile-tablet-only hamburger-nav-title">Jobs at UMGC</p> 
+          </div> 
+          <div class="details-content"> 
+           <div class="mega-menu"> 
+            <ul class="mega-col table-cell"> 
+             <li class="mobile-tablet-only"><a class="mobile-tablet-only" href="/administration/jobs/index.cfm">Jobs at UMGC</a></li> 
+             <li><a href="https://careers.umgc.edu/jobs/">Apply for a Job</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="https://careers.umgc.edu/who-we-are.html">Who We Are</a></li> 
+             <li><a href="https://careers.umgc.edu/culture.html">Culture</a></li> 
+             <li><a href="https://careers.umgc.edu/faculty.html" id="https://careers.umgc.edu/faculty.html|">Faculty Careers</a></li> 
+             <li><a href="https://careers.umgc.edu/professional-careers.html">Professional Careers</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="https://careers.umgc.edu/benefits.html">Benefits</a></li> 
+             <li><a href="https://careers.umgc.edu/faqs.html">Careers FAQs</a></li> 
+             <li><a href="https://careers.umgc.edu/community-diversity.html">Community and Diversity</a></li> 
+            </ul> 
+            <ul class="mega-col table-cell"> 
+             <li><a href="/administration/jobs/new-hire-orientation/index.cfm">New Hire Orientation</a></li> 
+             <li><a href="/administration/jobs/new-hire-orientation/human-resources-forms.cfm">Human Resources Forms</a></li> 
+             <li><a href="/administration/jobs/new-hire-orientation/benefits-enrollment-information/index.cfm">Benefits Enrollment Information</a></li> 
+             <li><a href="/administration/jobs/new-hire-orientation/retirement-enrollment-information/index.cfm">Retirement Enrollment Information</a></li> 
+             <li><a href="/administration/jobs/new-hire-orientation/checklist.cfm">Orientation Checklist</a></li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> </li>
+       </ul>
+      </nav> 
+     </div> 
+    </div> 
+    <div class="separator-line mobile-tablet-only"></div> 
+   </div> 
+  </header> 
+ </div> <!--[if IE 8]>
+<script type="text/javascript">
+$(document).ready(function() {
+$.fancybox('<div style="padding: 0.75em;">Your browser is out of date, and this website does not support Internet Explorer 8. Your browser may not display all features of this and other websites. <a href="http://microsoft.com/windows/ie/default.htm" target="_blank">Upgrade your browser</a>.</div>');
+});
+</script>
+<div id="ie8-message" class="hidden">
+<p>Your browser is out of date, and this website does not support Internet Explorer 8. Your browser may not display all features of this and other websites. <a href="http://microsoft.com/windows/ie/default.htm" target="_blank">Upgrade your browser</a>.</p>
+</div>
+<![endif]--> 
+ <main id="main-body"> <!-- Checks to see if page is an event page, adds in event right column classes if yes --> 
+  <div id="body-content"> 
+   <div id="breadcrumb"> 
+    <div id="cs_control_1420" class="cs_control  CS_Element_LinkBar"> <a href="/" class="CS_LinkBar_Item">Home</a> <span class="CS_LinkBar_CurrentItem">Administration</span> 
+    </div> 
+   </div> 
+   <section id="main-content"> 
+    <div id="cs_control_1421" class="cs_control CS_Element_Schedule"> 
+     <div title="" id="CS_Element_maincontainer"> 
+      <div id="gridRow_1_1_1421" class="cs_GridRow"> 
+       <div id="gridCol_1_1_1_1_1421" class="cs_GridColumn"> 
+        <div id="cs_control_122761" class="cs_control  CS_Element_Textblock"> 
+         <div class="page-content-wrapper"> 
+          <div class="page-content"> 
+           <h1>University Administration</h1> 
+           <h2>Learn about the leaders, policies, and programs that make UMGC a leading provider of career-relevant higher education.</h2> 
+           <p>The administration at University of Maryland Global Campus helps the university operate smoothly and efficiently. Learn about university leadership, centers and institutes, art, diversity, and much more.</p> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="cs_control_122762" class="cs_control  CS_Element_Custom"> 
+         <div class="featured-links-container"> 
+          <h2>UMGC Leadership, Information, and Employment</h2> 
+          <div class="featured-links"> 
+           <div class="carousel-element"> 
+            <div class="main-gallery flickity-watchcss"> 
+             <div class="gallery-cell"> 
+              <div class="featured-links-content-link"> 
+               <div class="featured-links-content"> <picture> <!--[if IE 9]><video style="display:none;"><![endif]--> 
+                 <source srcset="/umuc-images/inline/images/administration-leadership-governance-xlarge.jpg" media="(min-width:801px)"> 
+                 <source srcset="/umuc-images/banner/images/administration-leadership-governance-banner-tablet.jpg" media="(min-width:415px)"> <!--[if IE 9]></video><![endif]--> 
+                 <img id="imageFamily__img-administration-leadership-governance" srcset="/umuc-images/banner/images/administration-leadership-governance-banner-tablet.jpg" alt=""> 
+                </picture> 
+                <div class="featured-links-content-wrapper"> 
+                 <p class="links-title"><a href="/administration/leadership-and-governance/index.cfm" data-gtm="vertical-link">Leadership and Governance</a></p> 
+                 <p>Find information on UMGC's leadership, governance, strategic plan, and accreditation.</p> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="gallery-cell"> 
+              <div class="featured-links-content-link"> 
+               <div class="featured-links-content"> <picture> <!--[if IE 9]><video style="display:none;"><![endif]--> 
+                 <source srcset="/umuc-images/inline/images/learning-resources-xl.jpg" media="(min-width:801px)"> 
+                 <source srcset="/umuc-images/banner/images/learning-resources-banner-tablet.jpg" media="(min-width:415px)"> <!--[if IE 9]></video><![endif]--> 
+                 <img id="imageFamily__img-on-site-hybrid-learning-options" srcset="/umuc-images/banner/images/learning-resources-banner-tablet.jpg" alt=""> 
+                </picture> 
+                <div class="featured-links-content-wrapper"> 
+                 <p class="links-title"><a href="/administration/policies-and-reporting/index.cfm" data-gtm="vertical-link">Policies and Reporting</a></p> 
+                 <p>Learn about the policies governing UMGC's operations and the institutional data we report.</p> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+             <div class="gallery-cell"> 
+              <div class="featured-links-content-link"> 
+               <div class="featured-links-content"> <picture> <!--[if IE 9]><video style="display:none;"><![endif]--> 
+                 <source srcset="/umuc-images/inline/images/online-marketing-program-xlarge.jpg" media="(min-width:801px)"> 
+                 <source srcset="/umuc-images/banner/images/online-marketing-program-banner-tablet.jpg" media="(min-width:415px)"> <!--[if IE 9]></video><![endif]--> 
+                 <img id="imageFamily__img-online-marketing-program" srcset="/umuc-images/banner/images/online-marketing-program-banner-tablet.jpg" alt=""> 
+                </picture> 
+                <div class="featured-links-content-wrapper"> 
+                 <p class="links-title"><a href="/administration/jobs/index.cfm" data-gtm="vertical-link">Jobs at UMGC</a></p> 
+                 <p>Learn about employment opportunities for faculty and staff.</p> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="cs_control_124401" class="cs_control  CS_Element_Custom"> 
+         <div class="topics-tiles-container"> 
+          <h2>Arts, Diversity, and Institutes</h2> 
+          <div class="topics-tile"> 
+           <div class="topics-image">
+            <img src="/umuc-images/inline/images/administration-arts-culture-small.jpg" alt="">
+           </div> 
+           <p class="links-title"><a href="/administration/arts-and-diversity/index.cfm" data-gtm="horizontal-link">Arts and Diversity</a></p> 
+           <p>Learn about UMGC's art and diversity programs and how they reflect our rich culture.</p> 
+          </div> 
+          <div class="topics-tile"> 
+           <div class="topics-image">
+            <img src="/umuc-images/inline/images/admin-centers-institutes-small-istock-903715608.jpg" alt="">
+           </div> 
+           <p class="links-title"><a href="/administration/centers-and-institutes/index.cfm" data-gtm="horizontal-link">Centers and Institutes</a></p> 
+           <p>Discover UMGC's programs on innovation in learning and security studies.</p> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="cs_control_124538" class="cs_control  CS_Element_Custom"> 
+         <section id="rh-meta-admin-announcements" class="" rh-on-page-settings''>
+          <h2 id="rh-meta-admin-announcements_header">The Latest UMGC News</h2> 
+          <div class="announcements-thumbnails-headlines-and-summaries-list announcements-list"> 
+           <div class="announcements-thumbnails-headlines-and-summaries-list-entry announcements-entry"> 
+            <div class="float-pic-left announcements-entry-thumbnail"> 
+             <img src="/umuc-images/inline/images/teaser-image-default-small.jpg" alt="UMUC news item icon"> 
+            </div> 
+            <h4><a href="/news/announcements/armyignited-faqs.cfm">ArmyIgnitED FAQs</a></h4> 
+            <p>Read these FAQs to better understand the GoArmyEd system transition to ArmyIgnitED.</p> 
+            <br clear="left"> 
+           </div><!-- .announcements-thumbnails-headlines-and-summaries-list-entry.announcements-list-entry --> 
+           <div class="announcements-thumbnails-headlines-and-summaries-list-entry announcements-entry"> 
+            <div class="float-pic-left announcements-entry-thumbnail"> 
+             <img src="/umuc-images/inline/images/march-small.jpg" alt="Celebrating Diversity" title="Celebrating Diversity"> 
+            </div> 
+            <h4><a href="/news/announcements/march-2021-diversity-event.cfm">Rewriting the Rules of Female Entrepreneurship</a></h4> 
+            <p>Register now for a conversation with Solanges Vivens, a business leader who hopes to inspire the next generation of female entrepreneurs.</p> 
+            <br clear="left"> 
+           </div><!-- .announcements-thumbnails-headlines-and-summaries-list-entry.announcements-list-entry --> 
+           <div class="announcements-thumbnails-headlines-and-summaries-list-entry announcements-entry"> 
+            <div class="float-pic-left announcements-entry-thumbnail"> 
+             <img src="/umuc-images/inline/images/teaser-image-default-small.jpg" alt="UMUC news item icon"> 
+            </div> 
+            <h4><a href="/news/announcements/registration-is-open.cfm">Registration Is Open</a></h4> 
+            <p>Register now to ensure your place in the courses you need.</p> 
+            <br clear="left"> 
+           </div><!-- .announcements-thumbnails-headlines-and-summaries-list-entry.announcements-list-entry --> 
+           <div class="announcements-thumbnails-headlines-and-summaries-list-entry announcements-entry"> 
+            <div class="float-pic-left announcements-entry-thumbnail"> 
+             <img src="/umuc-images/inline/images/teaser-image-default-small.jpg" alt="UMUC news item icon"> 
+            </div> 
+            <h4><a href="/news/announcements/online-military-advising-spring-2020.cfm">Online Advising for Military-Affiliated Students</a></h4> 
+            <p>UMGC Stateside Military Operations is offering online advising for military-affiliated students.</p> 
+            <br clear="left"> 
+           </div><!-- .announcements-thumbnails-headlines-and-summaries-list-entry.announcements-list-entry --> 
+           <div class="announcements-thumbnails-headlines-and-summaries-list-entry announcements-entry"> 
+            <div class="float-pic-left announcements-entry-thumbnail"> 
+             <img src="/umuc-images/inline/images/teaser-image-default-small.jpg" alt="UMUC news item icon"> 
+            </div> 
+            <h4><a href="/news/announcements/2020-student-organization-award-winners.cfm">Celebrating the 2020 Student Organization Award Winners!</a></h4> 
+            <p>UMGC is pleased to announce the winners of the first annual Student Organization Awards.</p> 
+            <br clear="left"> 
+           </div><!-- .announcements-thumbnails-headlines-and-summaries-list-entry.announcements-list-entry --> 
+           <div class="announcements-thumbnails-headlines-and-summaries-list-entry announcements-entry"> 
+            <div class="float-pic-left announcements-entry-thumbnail"> 
+             <img src="/umuc-images/inline/images/teaser-image-default-small.jpg" alt="UMUC news item icon"> 
+            </div> 
+            <h4><a href="/news/announcements/power-speakers.cfm">Power Speakers Club Celebrates Five Year Anniversary</a></h4> 
+            <p>UMGC's public speaking club is celebrating five years on campus.</p> 
+            <br clear="left"> 
+           </div><!-- .announcements-thumbnails-headlines-and-summaries-list-entry.announcements-list-entry --> 
+          </div><!-- .announcements-headlines-list.announcements-list --> 
+         </section> 
+        </div> 
+        <div id="cs_control_122885" class="cs_control  CS_Element_Custom"> 
+         <div class="topics-tiles-container"> 
+          <h2>UMGC for Alumni, Donors, and Media</h2> 
+          <div class="topics-tile"> 
+           <div class="topics-image">
+            <img src="/umuc-images/inline/images/umuc-alumni-community-small.jpg" alt="">
+           </div> 
+           <p class="links-title"><a href="http://alumni.umuc.edu" data-gtm="horizontal-link">Alumni Community</a></p> 
+           <p><span data-sheets-userformat="{'2':769,'3':{'1':0},'11':4,'12':0}" data-sheets-value="{'1':2,'2':'Learn about UMUC's thriving community of graduates.'}">Learn about UMGC's thriving community of graduates.</span></p> 
+          </div> 
+          <div class="topics-tile"> 
+           <div class="topics-image">
+            <img src="/umuc-images/inline/images/umuc-impact-small.jpg" alt="">
+           </div> 
+           <p class="links-title"><a href="http://sites.umuc.edu/impact" data-gtm="horizontal-link">Donors Impact UMGC</a></p> <span data-sheets-userformat="{'2':769,'3':{'1':0},'11':4,'12':0}" data-sheets-value="{'1':2,'2':'Find out how you can impact UMUC and our students with your donation.'}">Find out how you can impact UMGC and our students with your donation.</span> 
+          </div> 
+          <div class="topics-tile"> 
+           <div class="topics-image">
+            <img src="/umuc-images/inline/images/umuc-global-media-center-small.jpg" alt="">
+           </div> 
+           <p class="links-title"><a href="http://globalmedia.umuc.edu/" data-gtm="horizontal-link">Global Media Center</a></p> 
+           <p>View the Global Media Center Blog.</p> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="disclaimers" class="disclaimers"> 
+     <div class="disclaimer hidden" id="disclaimer-fedgov">
+      <p>The <a href="/about/federal-government-employees/tuition-discount-details.cfm" id="CP___PAGEID=5279,/about/federal-government-employees/tuition-discount-details.cfm,221|">discount for Federal employees and their spouses and eligible dependents</a> will be applied to out-of-state tuition and specialty graduate programs. It does not apply to doctoral programs. This discount cannot be combined with the Completion Scholarship for Maryland community college students or the Pennsylvania Completion Scholarship.</p>
+      <p>Undergraduate and standard graduate program <a href="/costs-and-financial-aid/tuition/index.cfm" id="CP___PAGEID=4663,index.cfm,62|">tuition</a> for students who meet the criteria for <a href="/costs-and-financial-aid/tuition/qualifying-for-in-state-rates.cfm" id="CP___PAGEID=4687,qualifying-for-in-state-rates.cfm,62|" style="">Maryland residency</a> will be the applicable in-state rate. Tuition for <a href="/military-and-veterans/benefits-and-financial-aid/military-tuition-rate-eligibility.cfm" id="CP___PAGEID=163277,military-tuition-rate-eligibility.cfm,74|">active-duty military</a>; members of the Selected Reserves, National Guard, and the Commissioned Corps of the U.S. Public Health Service and National Oceanic and Atmospheric Administration; and the spouses and dependents of these student groups will be the applicable military or specialty rate. If you are a student using Post 9/11 benefits, please contact an advisor at <a href="tel:1-800-939-8682" id="tel:1-800-939-8682|">800-939-8682</a> to determine if you can apply both benefits.</p>
+     </div> 
+     <div class="disclaimer hidden" id="disclaimer-certificates">
+      <p>View important information about the <a id="CP___PAGEID=1779,/terms-and-conditions/disclosures/index.cfm,215|" href="/terms-and-conditions/disclosures/index.cfm">education debt, earnings, and completion rates</a> of students enrolled in certificate programs.</p>
+     </div> 
+     <div class="disclaimer hidden" id="disclaimer-tuition">
+      <p>All students are required to pay tuition for all courses in which they are enrolled. Tuition rates are subject to the approval of the University System of Maryland Board of Regents. They may be changed, or other charges may be included, as a result of the Board of Regents decisions. Notwithstanding any other provision of this or any other university publication, the university reserves the right to make changes in tuition, fees and other charges at any time such changes are deemed necessary by the university and the USM Board of Regents.</p>
+      <p>The Board of Regents has authorized the university to charge a student's delinquent account for all collection costs incurred by the university. The normal collection fee is 17 percent plus attorney and/or court costs. The service charge for a dishonored check is $30. Requests for services (for example, transcripts, diplomas, registration) will be denied until all debts are paid.</p>
+      <p>Please see the <a href="http://www.usmd.edu/regents/bylaws/SectionVIII/viii270.pdf" id="CP___PAGEID=5507,http://www.usmd.edu/regents/bylaws/SectionVIII/viii270.pdf,1|" target="_blank">Policy on Student Classification for Admission and Tuition Purposes</a> for specific details about residency requirements.</p>
+      <p>Financial aid and tuition remission for University System of Maryland employees cannot be applied to noncredit courses. Golden ID benefits may not be applied to fees, noncredit courses, specialty graduate programs, or doctoral programs. Regular tuition rates apply for cooperative education, course challenge examinations, and EXCEL 301.</p>
+     </div> 
+     <div class="disclaimer hidden" id="disclaimer-gi-bill">
+      <p>GI Bill is a registered trademark of the U.S. Department of Veterans Affairs. More information about education benefits offered by VA is available on the <a id="http://www.benefits.va.gov/gibill|" href="http://www.benefits.va.gov/gibill">U.S. government GI Bill website</a>.</p>
+     </div> 
+     <div class="disclaimer hidden" id="disclaimer-ucsp-615-waiver">
+      <p>The UCSP 615 requirement may be waived if you previously earned a graduate degree from a regionally accredited institution. For more information, contact your academic advisor.</p>
+     </div> 
+    </div> <!-- break-point-for-makeCoursesClickable ---> 
+   </section>
+   <aside id="right-gutter" class="table-cell medium"> 
+    <div id="cs_control_1437" class="cs_control CS_Element_Schedule"> 
+     <div title="" id="CS_Element_asidecontainer"> 
+     </div> 
+    </div> 
+    <div id="cs_control_31042" class="cs_control  CS_Element_Custom"> 
+     <nav class="topic-link-list"> 
+      <ul class="">
+       <li class="topic-link topic-active page-active"><a href="/administration/index.cfm">Administration</a>
+        <ul class="subtopic-links level-2">
+         <li class="topic-link"><a href="/administration/arts-and-diversity/index.cfm">Arts and Diversity</a>
+          <ul class="subtopic-links level-3">
+           <li class="topic-link"><a href="/administration/arts-and-diversity/arts/index.cfm">Arts</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/exhibits.cfm">Art Exhibitions</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/collections/index.cfm">Art Collections</a>
+              <ul class="subtopic-links level-5">
+               <li class="topic-link"><a href="/administration/arts-and-diversity/arts/collections/maryland-artist-collection.cfm">Maryland Artist Collection</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/arts-and-diversity/arts/collections/doris-patz-collection.cfm">The Doris Patz Collection</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/arts-and-diversity/arts/collections/asian-collection.cfm">Asian Collection</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/arts-and-diversity/arts/collections/international-collection.cfm">International Collection</a>
+                <ul class="subtopic-links level-6"></ul></li>
+              </ul></li>
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/talks.cfm">Art Talks</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/location-hours.cfm">Arts Locations and Hours</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/art-at-umgc-emagazine.cfm">Art@UMGC eMagazine</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/friends-of-the-arts-program.cfm">Friends of the Arts Program</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/art-advisory-board.cfm">Art Advisory Board</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/arts-and-diversity/arts/arts-program.cfm">About the Arts Program</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/arts-and-diversity/diversity/index.cfm">Diversity</a>
+            <ul class="subtopic-links level-4"></ul></li>
+           <li class="topic-link"><a href="/administration/arts-and-diversity/umuc-tv.cfm">UMGC-TV</a>
+            <ul class="subtopic-links level-4"></ul></li>
+          </ul></li>
+         <li class="topic-link"><a href="/administration/centers-and-institutes/index.cfm">Centers and Institutes</a>
+          <ul class="subtopic-links level-3">
+           <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/index.cfm">Center for Innovation in Learning and Student Success</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/about.cfm">About CILSS</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/initiatives/index.cfm">CILSS Initiatives</a>
+              <ul class="subtopic-links level-5">
+               <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/initiatives/adaptive-learning.cfm">Adaptive Learning</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/initiatives/predictive-analytics.cfm">Predictive Analytics</a>
+                <ul class="subtopic-links level-6"></ul></li>
+              </ul></li>
+             <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-innovation-in-learning-and-student-success/research-overview.cfm">CILSS Research Overview</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-security-studies/index.cfm">Center for Security Studies</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-security-studies/about.cfm">About the Center for Security Studies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-security-studies/events-workshops.cfm">Center for Security Studies Events and Workshops</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-security-studies/partnerships.cfm">Center for Security Studies Partnerships</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/centers-and-institutes/center-for-security-studies/resources-conferences.cfm">Center for Security Studies Resources and Conferences</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+          </ul></li>
+         <li class="topic-link"><a href="/administration/leadership-and-governance/index.cfm">Leadership and Governance</a>
+          <ul class="subtopic-links level-3">
+           <li class="topic-link"><a href="/administration/leadership-and-governance/president/index.cfm">President</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/leadership-and-governance/president/addresses-house-senate.cfm">President's Addresses to the House and Senate</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/leadership-and-governance/boards-and-committees/index.cfm">Boards and Committees</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/leadership-and-governance/boards-and-committees/cabinet.cfm">Cabinet</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/leadership-and-governance/boards-and-committees/executive-committee.cfm">Executive Committee</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/leadership-and-governance/boards-and-committees/maryland-cybersecurity-council/index.cfm">Maryland Cybersecurity Council</a>
+              <ul class="subtopic-links level-5">
+               <li class="topic-link"><a href="/administration/leadership-and-governance/boards-and-committees/maryland-cybersecurity-council/cybersecurity-resources.cfm">Cyber Security Resources Finder</a>
+                <ul class="subtopic-links level-6"></ul></li>
+              </ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/leadership-and-governance/shared-governance/index.cfm">Shared Governance</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/leadership-and-governance/shared-governance/academic-advisory-board.cfm">Academic Advisory Board</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/leadership-and-governance/shared-governance/adjunct-faculty-association.cfm">Adjunct Faculty Association</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/leadership-and-governance/shared-governance/academic-governance-archive.cfm">Academic Governance Archive</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/leadership-and-governance/strategic-plan/index.cfm">Strategic Plan</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/leadership-and-governance/strategic-plan/2015-2018-plan.cfm">Previous Strategic Plan (2015–2018)</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/leadership-and-governance/strategic-plan/community-dialogue-archive.cfm">Community Dialogue Archive (for 2015–2018 Strategic Plan)</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/leadership-and-governance/accreditation-self-study-report.cfm">Accreditation Self-Study Report</a>
+            <ul class="subtopic-links level-4"></ul></li>
+          </ul></li>
+         <li class="topic-link"><a href="/administration/policies-and-reporting/index.cfm">Policies and Reporting</a>
+          <ul class="subtopic-links level-3">
+           <li class="topic-link"><a href="/administration/policies-and-reporting/institutional-data/index.cfm">Institutional Data</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/policies-and-reporting/institutional-data/facts-at-a-glance.cfm">Facts at a Glance</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/institutional-data/fact-book-archive.cfm">Fact Book and Fact Sheet Archive</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/policies-and-reporting/heerf-cares-act-funding-reports.cfm">HEERF/CARES Act</a>
+            <ul class="subtopic-links level-4"></ul></li>
+           <li class="topic-link"><a href="/administration/policies-and-reporting/policies/index.cfm">Policies</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/academic-affairs/index.cfm">Academic Affairs Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/administration-policies/index.cfm">Administration Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/external-relations/index.cfm">External Relations Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/faculty/index.cfm">Faculty Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/fiscal-and-business-affairs/index.cfm">Fiscal and Business Affairs Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/general/index.cfm">General Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/human-resources/index.cfm">Human Resources Policies and Procedures</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/research/index.cfm">Research Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/policies/student-affairs/index.cfm">Student Affairs Policies</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/policies-and-reporting/affirmative-action-and-equal-opportunity/index.cfm">Affirmative Action and Equal Opportunity Unit</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/policies-and-reporting/affirmative-action-and-equal-opportunity/equal-employment-policy.cfm">About Equal Employment</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/index.cfm">Sexual Misconduct (Title IX)</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/title-ix-coordinator.cfm">Title IX Coordinator</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/report-process.cfm">Sexual Misconduct Report Process</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/reporting-to-responsible-employees.cfm">Reporting Sexual Misconduct to Responsible Employees</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/limits-on-confidentiality.cfm">Limits on Sexual Misconduct Confidentiality</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/complainants-rights.cfm">Rights and Resources for Victims of Sexual Misconduct</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/accused-respondent-rights.cfm">Rights for Students and Employees Accused of Sexual Misconduct</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/faqs.cfm">Sexual Misconduct FAQs</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/submit-sexual-misconduct-report.cfm">Submit a Sexual Misconduct Report</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/policies-and-reporting/suspected-child-abuse-and-neglect.cfm">Suspected Child Abuse and Neglect</a>
+            <ul class="subtopic-links level-4"></ul></li>
+          </ul></li>
+         <li class="topic-link"><a href="/administration/jobs/index.cfm">Jobs at UMGC</a>
+          <ul class="subtopic-links level-3">
+           <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/index.cfm">New Hire Orientation</a>
+            <ul class="subtopic-links level-4">
+             <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/human-resources-forms.cfm">Human Resources Forms</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/benefits-enrollment-information/index.cfm">Benefits Enrollment Information</a>
+              <ul class="subtopic-links level-5">
+               <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/benefits-enrollment-information/adjunct-faculty.cfm">Adjunct Faculty Benefits</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/benefits-enrollment-information/contingent-ii-50-74.cfm">Contingent II Employees: 50 to 74% FTE Benefits</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/benefits-enrollment-information/contingent-ii-75-100.cfm">Contingent II Employees: 75 to 100% FTE Benefits</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/benefits-enrollment-information/regular-status-and-collegiate-faculty.cfm">Regular Employees and 12-Month Faculty Benefits</a>
+                <ul class="subtopic-links level-6"></ul></li>
+              </ul></li>
+             <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/retirement-enrollment-information/index.cfm">Retirement Enrollment Information</a>
+              <ul class="subtopic-links level-5">
+               <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/retirement-enrollment-information/adjunct-faculty.cfm">Adjunct Faculty Retirement</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/retirement-enrollment-information/contingent-ii.cfm">Contingent II Employees Retirement</a>
+                <ul class="subtopic-links level-6"></ul></li>
+               <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/retirement-enrollment-information/regular-status-and-collegiate-faculty.cfm">Regular Employees and 12-Month Faculty Retirement</a>
+                <ul class="subtopic-links level-6"></ul></li>
+              </ul></li>
+             <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/checklist.cfm">New Hire Orientation Checklist</a>
+              <ul class="subtopic-links level-5"></ul></li>
+             <li class="topic-link"><a href="/administration/jobs/new-hire-orientation/confirmation-form.cfm">New Hire Orientation Confirmation Form</a>
+              <ul class="subtopic-links level-5"></ul></li>
+            </ul></li>
+           <li class="topic-link"><a href="/administration/jobs/umuc-employment-and-income-verification.cfm">UMGC Employment and Income Verification</a>
+            <ul class="subtopic-links level-4"></ul></li>
+          </ul></li>
+         <li class="topic-link"><a href="/administration/presidential-search.cfm">Presidential Search</a>
+          <ul class="subtopic-links level-3"></ul></li>
+         <li class="topic-link"><a href="/administration/honoring-javier-miyares.cfm">Honoring Javier Miyares</a>
+          <ul class="subtopic-links level-3"></ul></li>
+        </ul></li>
+      </ul> 
+     </nav> 
+    </div> 
+    <div id="cs_control_31032" class="cs_control CS_Element_Schedule"> 
+     <div title="" id="CS_Element_asidecontainerbelownav"> 
+     </div> 
+    </div> 
+   </aside> 
+  </div> 
+ </main> 
+ <footer id="site-footer"> 
+  <section id="footer-wrapper"> 
+   <div class="footer-info-social">
+    <div id="footer-req-info">
+     <ul> 
+      <li class="req-info"><strong><a href="/admissions/request-information.cfm">Request Info</a></strong></li> 
+      <li class="req-info"><a href="tel:1(855)655-8682"><strong>855-655-8682</strong></a></li>
+     </ul>
+    </div>
+    <div class="footer-social tab">
+     <a href="/contact/social-media-community/index.cfm"><strong>Get Social</strong></a>
+    </div>
+   </div> 
+   <div class="footer-links table"> 
+    <div class="table-row"> 
+     <div class="col table-cell"> 
+      <h3>Featured</h3>
+      <ul> 
+       <li><a href="https://umuc.secure.force.com/apply/">Application for Admission</a></li> 
+       <li><a href="/contact/a-to-z-directory.cfm">A to Z Directory</a></li> 
+       <li><a href="/administration/arts-and-diversity/index.cfm">Arts and Diversity</a></li> 
+       <li><a href="/administration/policies-and-reporting/institutional-data/index.cfm">Institutional Data</a></li> 
+       <li><a href="/terms-and-conditions/disclosures/index.cfm">Consumer Disclosures &amp; Policies</a></li> 
+       <li><a href="/administration/leadership-and-governance/president/index.cfm">President</a></li> 
+       <li><a href="/administration/leadership-and-governance/shared-governance/index.cfm">Shared Governance</a></li> 
+       <li><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/index.cfm">Title IX/Sexual Misconduct</a></li> 
+       <li><a href="/business-partners/procurement.cfm">Vendor Information</a></li> 
+       <li><a href="/about/accreditation.cfm">Accreditation</a></li>
+      </ul> 
+     </div> 
+     <div class="col table-cell">
+      <div class="footer-quick-links">
+       <h3>Quick Links</h3>
+       <ul> 
+        <li><a href="/login/index.cfm">Log In</a></li> 
+        <li><a href="/events/index.cfm">Events</a></li> 
+        <li><a href="/news/index.cfm">News</a></li> 
+        <li><a href="//careers.umgc.edu">Jobs</a></li> 
+        <li><a href="/locations/index.cfm">U.S. Locations</a></li> 
+        <li><a href="https://asia.umgc.edu/" id="https://asia.umgc.edu/|">UMGC Asia</a></li> 
+        <li><a href="//www.europe.umgc.edu">UMGC Europe</a></li> 
+        <li><a href="//gear.umgc.edu">UMGC Gear</a></li> 
+        <li><a href="/contact/index.cfm">Contact UMGC</a></li>
+       </ul>
+      </div>
+      <div class="footer-address">
+       <h3 class="footer-tab-contact">Contact Us</h3>
+       <ul> 
+        <li><a href="/help/index.cfm">Help Center</a></li> 
+        <li><strong>Academic Center at Largo</strong><br> 1616 McCormick Drive,<br> Largo, MD 20774<br> <a href="/locations/regional/academic-center-at-largo.cfm"><strong>Directions to Academic Center at Largo</strong></a></li> 
+        <li><strong>Mailing Address</strong><br> <em>No classes or services at this location</em><br> 3501 University Blvd. East,<br> Adelphi, MD 20783</li>
+       </ul>
+       <div class="footer-social">
+        <a href="/contact/social-media-community/index.cfm"><strong>Get Social</strong></a>
+       </div>
+      </div>
+      <div class="footer-tab-aud col table-cell">
+       <!--for tablet middle column only -->
+       <h3>UMGC For</h3>
+       <ul> 
+        <li><a href="/index.cfm">Prospective Students</a></li> 
+        <li><a href="/military-and-veterans/index.cfm">Military &amp; Veterans</a></li> 
+        <li><a href="/current-students/index.cfm">Current Students</a></li> 
+        <li><a href="/administration/index.cfm">Administration</a></li> 
+        <li><a href="/business-partners/index.cfm">Partners</a></li> 
+        <li><a href="http://alumni.umgc.edu">Alumni</a></li> 
+        <li><a href="//sites.umgc.edu/impact/index.cfm">Donors</a></li> 
+        <li><a href="//globalmedia.umgc.edu" target="_blank">Media</a></li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer-aud col table-cell">
+      <h3>UMGC For</h3>
+      <ul> 
+       <li><a href="/index.cfm">Prospective Students</a></li> 
+       <li><a href="/military-and-veterans/index.cfm">Military &amp; Veterans</a></li> 
+       <li><a href="/current-students/index.cfm">Current Students</a></li> 
+       <li><a href="/administration/index.cfm">Administration</a></li> 
+       <li><a href="/business-partners/index.cfm">Partners</a></li> 
+       <li><a href="http://alumni.umgc.edu">Alumni</a></li> 
+       <li><a href="//sites.umgc.edu/impact/index.cfm">Donors</a></li> 
+       <li><a href="//globalmedia.umgc.edu" target="_blank">Media</a></li>
+      </ul>
+     </div> 
+     <div class="footer-contact col table-cell"> 
+      <h3>Contact Us</h3> 
+      <ul> 
+       <li><strong><a href="/admissions/request-information.cfm">Request Info</a></strong><br> <a href="tel:1(855)655-8682"><strong>855-655-8682</strong></a></li> 
+       <li><a href="/help/index.cfm">Help Center</a></li> 
+       <li><strong>Academic Center at Largo</strong><br> 1616 McCormick Drive,<br> Largo, MD 20774<br> <a href="/locations/regional/academic-center-at-largo.cfm"><strong>Directions to Academic Center at Largo</strong></a></li> 
+       <li><strong>Mailing Address</strong><br> <em>No classes or services at this location</em><br> 3501 University Blvd. East,<br> Adelphi, MD 20783<br> </li>
+      </ul> 
+      <div class="footer-social"> <a href="/facebook"><span class="social social-facebook"></span></a> <a href="/twitter"><span class="social social-twitter"></span></a> <a href="/instagram"><span class="social social-instagram"></span></a> <a href="/contact/social-media-community/index.cfm"><strong>Get Social</strong></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="usm-wrapper desktop-only"> 
+    <img src="/ui/images/usm-logo.png" alt="University System of Maryland logo">
+    <p>UMGC is a proud member of the University System of Maryland.</p> 
+   </div> 
+   <div class="footer-cr-wrapper">
+    <div class="cr-line table-row">
+     <div class="usm-wrapper mobile-tablet-only">
+      <img alt="University System of Maryland logo" src="/ui/images/usm-logo.png">
+      <p>UMGC is a proud member of the University System of Maryland.</p>
+     </div>
+     <p class="footer-cr-left">© 2021 University of Maryland Global Campus. All rights reserved.</p>
+    </div>
+    <div class="cr-links table-row">
+     <ul class="footer-cr-links"> 
+      <li><a href="/terms-and-conditions/accessibility-statement.cfm">Accessibility Statement</a></li> 
+      <li><a href="/terms-and-conditions/index.cfm">Terms &amp; Conditions</a></li> 
+      <li><a href="/terms-and-conditions/privacy-policy.cfm">Privacy Policy</a></li> 
+      <li><a class="mcsc-resource-link" href="https://privacyportal.onetrust.com/webform/89db11aa-01de-46b7-8c69-0ed170aa36a4/draft/5f6a1059-25c0-4f5b-aa56-c0d65dc18dee" id="https://privacyportal.onetrust.com/webform/89db11aa-01de-46b7-8c69-0ed170aa36a4/draft/5f6a1059-25c0-4f5b-aa56-c0d65dc18dee|" target="_blank">Data Protection</a></li> 
+      <li><a href="/terms-and-conditions/social-media-policy.cfm">Social Media Policy</a></li>
+     </ul>
+    </div>
+   </div> 
+   <div class="footer-resources table-row">
+    <div class="details">
+     <div class="details-summary">
+      <div class="resources-button">
+       Resources
+      </div>
+     </div>
+     <div class="details-content">
+      <div class="resources-links">
+       <h3>Featured</h3>
+       <ul> 
+        <li><a href="https://umuc.secure.force.com/apply/">Application for Admission</a></li> 
+        <li><a href="/current-students/course-registration/academic-calendar/index.cfm">Academic Calendar</a></li> 
+        <li>Catalogs: <span id="9495_9501_tableSpan"><span class="footer-links-small"><a class="mcsc-resource-link" href="/documents/upload/2020-2021-catalog.pdf" id="CP___PAGEID=380455|">Current Year</a> </span></span><span class="footer-links-small"> | <a href="/current-students/degree-requirements/catalogs.cfm">Prior Years</a></span></li> 
+        <li><a href="/terms-and-conditions/disclosures/index.cfm">Consumer Disclosures &amp; Policies</a></li> 
+        <li><a href="http://sites.umgc.edu/library/index.cfm">Library</a></li> 
+        <li><a href="http://webapps.umgc.edu/soc/us.cfm">Schedule of Classes</a></li> 
+        <li><a href="/administration/policies-and-reporting/sexual-misconduct-title-ix/index.cfm">Title IX/Sexual Misconduct</a></li> 
+        <li><a href="/about/accreditation.cfm">Accreditation</a></li>
+       </ul>
+       <h3>Quick Links</h3>
+       <ul> 
+        <li><a href="/login/index.cfm">Log In</a></li> 
+        <li><a href="/events/index.cfm">Events</a></li> 
+        <li><a href="/news/index.cfm">News</a></li> 
+        <li><a href="//careers.umuc.edu">Jobs</a></li> 
+        <li><a href="/locations/index.cfm">U.S. Locations</a></li> 
+        <li><a href="//www.asia.umgc.edu">UMGC Asia</a></li> 
+        <li><a href="//www.europe.umgc.edu">UMGC Europe</a></li> 
+        <li><a href="//gear.umgc.edu">UMGC Gear</a></li> 
+        <li><a href="/contact/index.cfm">Contact UMGC</a></li>
+       </ul>
+       <h3>UMGC For</h3>
+       <ul> 
+        <li><a href="/index.cfm">Prospective Students</a></li> 
+        <li><a href="/military-and-veterans/index.cfm">Military &amp; Veterans</a></li> 
+        <li><a href="/current-students/index.cfm">Current Students</a></li> 
+        <li><a href="/administration/index.cfm">Administration</a></li> 
+        <li><a href="/business-partners/index.cfm">Partners</a></li> 
+        <li><a href="http://alumni.umgc.edu">Alumni</a></li> 
+        <li><a href="//sites.umgc.edu/impact/index.cfm">Donors</a></li> 
+        <li><a href="//globalmedia.umgc.edu" target="_blank">Media</a></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div> 
+  </section> 
+ </footer> 
+ <script src="https://umucbot.azurewebsites.net/js/webchat-es5.js" defer></script> 
+ <script src="https://unpkg.com/markdown-it@8.4.2/dist/markdown-it.min.js"></script> 
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script> 
+ <link rel="stylesheet" href="/ui/css/chatbot.c00fad9b.css" type="text/css"> 
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+ <script src="https://umucbot.azurewebsites.net/js/acceleredbot.js"></script> 
+ <link rel="stylesheet" href="https://umucbot.azurewebsites.net/css/acceleredbot.css"> 
+ <div id="webchat-icon"></div> 
+ <div id="webchat"></div> 
+ <script type="text/javascript" language="JavaScript">
+var chatbot = "true";
+;
+</script> 
+</div> <!-- Now calls async-check.js which loads deferred.js --> 
+<script src="/ui/js/async-check-rb.7e94bc9c.js"></script> 
+<script src="/ui/js/thirdPartyLib/flickity/flickity.pkgd.js" type="text/javascript"></script> 
+<script src="/ui/js/flickity-options.749a4790.js" type="text/javascript"></script> 
+<div id="course-popup-html" class="hidden fancybox">
+ <div class="course-popup" id="course-popup-UCSP-615" style="max-width:520px;"> 
+  <h3>Orientation to Graduate Studies at UMGC</h3> 
+  <h4>UCSP 615 | 0 Credits</h4> 
+  <p>(Required within the first 6 credits of graduate study for all new graduate students, except those in programs requiring CBR, DCL, or PRO 600.) An overview of the skills needed for academic and professional success. Focus is on enhancing communication and critical thinking skills. Assignments provide familiarity with tools such as library and information resources. APA style and resources are also addressed.</p>
+ </div>
+</div> 
+<script>
+umuc.disableCourseClickable = "false";
+umuc.inclusionList = "\\bACCT 417|\\bACCT 422|\\bACCT 424|\\bAASP 201|\\bACCT 220|\\bACCT 221|\\bACCT 301|\\bACCT 310|\\bACCT 311|\\bACCT 320|\\bACCT 321|\\bACCT 323|\\bACCT 326|\\bACCT 350|\\bACCT 410|\\bACCT 411|\\bANTH 298|\\bANTH 345|\\bANTH 346|\\bANTH 350|\\bANTH 351|\\bANTH 398|\\bANTH 417|\\bARAB 111|\\bARAB 112|\\bACCT 425|\\bACCT 436|\\bACCT 438|\\bACCT 440|\\bACCT 452|\\bACCT 486A|\\bACCT 486B|\\bACCT 495|\\bACCT 610|\\bACCT 611|\\bACCT 613|\\bACCT 618|\\bACCT 620|\\bACCT 625|\\bACCT 628|\\bACCT 630|\\bACCT 635|\\bACCT 640|\\bACCT 645|\\bACCT 660|\\bACCT 670|\\bACM 610|\\bACM 620|\\bAMBA 640|\\bAMBA 650|\\bAMBA 660|\\bAMBA 670|\\bANTH 101|\\bANTH 102|\\bARTT 152|\\bARTT 210|\\bARTT 320|\\bARTT 428|\\bASC 601|\\bASC 603|\\bASC 605|\\bASC 607|\\bASC 609|\\bASC 611|\\bASCM 626|\\bASCM 627|\\bASCM 628|\\bASCM 629|\\bASCM 630|\\bASCM 631|\\bASCM 632|\\bASCM 650|\\bASTD 135|\\bASTD 155|\\bARAB 114|\\bARAB 115|\\bARAB 333|\\bARTH 204|\\bARTH 334|\\bARTH 372|\\bARTH 373|\\bARTH 375|\\bARTH 478|\\bARTT 110|\\bARTT 120|\\bBEHS 453|\\bBEHS 486A|\\bBEHS 486B|\\bBEHS 495|\\bBIFS 613|\\bBIFS 614|\\bBIFS 617|\\bBIFS 618|\\bBIFS 619|\\bBIOL 101|\\bBIOL 102|\\bASTD 284|\\bASTD 285|\\bASTD 302|\\bASTD 370|\\bASTD 398|\\bASTD 485|\\bASTR 100|\\bBEHS 103|\\bBEHS 210|\\bBEHS 220|\\bBEHS 300|\\bBEHS 320|\\bBEHS 343|\\bBEHS 364|\\bBEHS 380|\\bBIOL 320|\\bBIOL 325|\\bBIOL 328|\\bBIOL 350|\\bBIOL 357|\\bBIOL 362|\\bBIOL 398|\\bBIOL 422|\\bBIOL 486A|\\bBIOL 486B|\\bBIOL 103|\\bBIOL 160|\\bBIOL 161|\\bBIOL 164|\\bBIOL 181|\\bBIOL 220|\\bBIOL 301|\\bBIOL 302|\\bBIOL 304|\\bBIOL 307|\\bBMGT 485|\\bBMGT 486A|\\bBMGT 486B|\\bBMGT 487|\\bBMGT 488|\\bBMGT 495|\\bBMGT 496|\\bBSBD 640|\\bBSBD 641|\\bBIOL 495|\\bBIOT 601|\\bBIOT 630|\\bBIOT 640|\\bBIOT 643|\\bBIOT 645|\\bBIOT 670|\\bBMGT 110|\\bBMGT 304|\\bBMGT 305|\\bBMGT 317|\\bBMGT 330|\\bBMGT 335|\\bBMGT 339|\\bBMGT 364|\\bBMGT 365|\\bBMGT 380|\\bBMGT 381|\\bBMGT 392|\\bBMGT 398|\\bBMGT 411|\\bBMGT 456|\\bBMGT 464|\\bBMGT 465|\\bBMGT 466|\\bBMGT 484|\\bCCJS 301|\\bCCJS 302|\\bCCJS 311|\\bCCJS 321|\\bCCJS 340|\\bCCJS 341|\\bCCJS 342|\\bCCJS 345|\\bCCJS 350|\\bCCJS 352|\\bCCJS 360|\\bCCJS 380|\\bBSBD 642|\\bBSBD 643|\\bBTMN 632|\\bBTMN 634|\\bBTMN 636|\\bBTRA 640|\\bBTRA 641|\\bBTRA 642|\\bBTRA 643|\\bCAPL 398A|\\bCAPL 495|\\bCBR 600|\\bCCA 610|\\bCCA 625|\\bCCA 630|\\bCCA 640|\\bCCA 670|\\bCCJS 100|\\bCCJS 101|\\bCCJS 105|\\bCCJS 230|\\bCCJS 234|\\bCMIS 141|\\bCMIS 242|\\bCMIS 310|\\bCMIS 320|\\bCMIS 330|\\bCMIS 420|\\bCMIS 440|\\bCMIS 486A|\\bCMIS 486B|\\bCCJS 390|\\bCCJS 416|\\bCCJS 420|\\bCCJS 421|\\bCCJS 440|\\bCCJS 441|\\bCCJS 461|\\bCCJS 486A|\\bCCJS 486B|\\bCCJS 495|\\bCCJS 497|\\bCHEM 121|\\bCHEM 297|\\bCHIN 111|\\bCHIN 112|\\bCHIN 114|\\bCHIN 115|\\bCJMS 600|\\bCJMS 610|\\bCJMS 620|\\bCJMS 630|\\bCJMS 640|\\bCJMS 650|\\bCJMS 660|\\bCMBA 615|\\bCMBA 625|\\bCMBA 635|\\bCMBA 645|\\bCMBA 655|\\bCMBA 665|\\bCMBA 675|\\bCMBA 685|\\bCMBA 695|\\bCMBA 696|\\bCMBA 697|\\bCMIS 102|\\bCMIS 111|\\bCMIT 391|\\bCMIT 420|\\bCMIT 421|\\bCMIT 422|\\bCMIT 424|\\bCMIT 425|\\bCMIT 426|\\bCMIT 436|\\bCMIT 440|\\bCMIT 455|\\bCMIS 498|\\bCMIT 202|\\bCMIT 265|\\bCMIT 291|\\bCMIT 320|\\bCMIT 321|\\bCMIT 326|\\bCMIT 336|\\bCMIT 350|\\bCMIT 351|\\bCMIT 352|\\bCMIT 380|\\bCMIT 382|\\bCMIT 386|\\bCMIT 388|\\bCMST 290|\\bCMST 295|\\bCMST 301|\\bCMST 303|\\bCMST 310|\\bCMST 311|\\bCMST 320|\\bCMIT 456|\\bCMIT 460|\\bCMIT 486A|\\bCMIT 486B|\\bCMIT 495|\\bCMIT 499|\\bCMP 610|\\bCMP 620|\\bCMP 630|\\bCMP 640|\\bCMSC 150|\\bCMSC 307|\\bCMSC 325|\\bCMSC 330|\\bCMSC 335|\\bCMSC 350|\\bCMSC 405|\\bCMSC 412|\\bCMSC 427|\\bCMSC 430|\\bCMSC 437|\\bCMSC 447|\\bCMSC 451|\\bCMSC 465|\\bCMSC 486A|\\bCMSC 486B|\\bCMSC 495|\\bCMSC 498|\\bCMST 100B|\\bCMST 100D|\\bCMST 100F|\\bCMST 100G|\\bCOMM 302|\\bCOMM 390|\\bCOMM 400|\\bCOMM 459|\\bCOMM 480|\\bCOMM 486A|\\bCOMM 486B|\\bCOMM 492|\\bCOMM 495|\\bCOMM 600|\\bCOOP 486|\\bCOP 610|\\bCOP 620|\\bCOP 630|\\bCOP 640|\\bCOP 670|\\bCSEC 610|\\bCSEC 620|\\bCMST 325|\\bCMST 341|\\bCMST 351|\\bCMST 385|\\bCMST 386|\\bCMST 388|\\bCMST 425|\\bCMST 450|\\bCMST 486A|\\bCMST 486B|\\bCMST 488|\\bCMST 495|\\bCOMM 200|\\bCOMM 202|\\bCOMM 207|\\bCOMM 300|\\bCYB 670|\\bDATA 610|\\bDATA 620|\\bDATA 630|\\bDATA 640|\\bDATA 650|\\bDATA 670|\\bDBA 600|\\bDBA 800|\\bDBA 810|\\bDBA 820|\\bDBA 830|\\bDBA 840|\\bDBA 850|\\bDBA 860|\\bDBA 870|\\bDBA 880|\\bDBA 899|\\bDBST 651|\\bDBST 652|\\bDBST 660|\\bDBST 663|\\bCSEC 630|\\bCSEC 635|\\bCSEC 640|\\bCSEC 645|\\bCSEC 650|\\bCSEC 655|\\bCSEC 661|\\bCSEC 662|\\bCSEC 670|\\bCSIA 300|\\bCSIA 310|\\bCSIA 350|\\bCSIA 360|\\bCSIA 413|\\bCSIA 459|\\bCSIA 485|\\bCSIA 486A|\\bCSIA 486B|\\bCSIA 520|\\bCSIA 530|\\bCSIA 535|\\bCST 610|\\bCST 620|\\bCST 630|\\bCST 640|\\bDMCC 841|\\bDMCC 851|\\bDMCC 890|\\bDMCC 891|\\bDMCC 892|\\bDMCC 899|\\bDMGT 600|\\bDMGT 800|\\bDMGT 810|\\bDMGT 820|\\bDMGT 830|\\bDMGT 835|\\bDMGT 845|\\bDMGT 850|\\bDMGT 860|\\bDMGT 882|\\bDMGT 890|\\bDMGT 891|\\bDMGT 892|\\bDMGT 899|\\bECON 103|\\bECON 201|\\bECON 203|\\bECON 305|\\bECON 306|\\bECON 430|\\bDBST 665|\\bDBST 667|\\bDBST 668|\\bDBST 670|\\bDCL 600|\\bDEPM 604|\\bDEPM 609|\\bDEPM 622|\\bDEPM 625|\\bDEPM 650|\\bDETC 620|\\bDETC 630|\\bDETT 607|\\bDETT 611|\\bDETT 621|\\bDFC 610|\\bDFC 620|\\bDFC 630|\\bDFC 640|\\bDMBA 610|\\bDMBA 620|\\bDMBA 630|\\bDMC 800|\\bDMC 810|\\bDMC 820|\\bDMC 830|\\bDMC 840|\\bDMC 850|\\bDMC 860|\\bDMC 870|\\bDMC 880|\\bDMC 890|\\bDMC 891|\\bDMC 892|\\bDMCC 800|\\bDMCC 810|\\bDMCC 821|\\bDMCC 830|\\bENGL 240|\\bENGL 250|\\bENGL 281|\\bENGL 294|\\bENGL 303|\\bENGL 310|\\bENGL 311|\\bENGL 312|\\bENGL 363|\\bENGL 364|\\bECON 440|\\bEDTC 600|\\bEDTC 605|\\bEDTC 610|\\bEDTC 615|\\bEDTC 620|\\bEDTC 625|\\bEDTC 630|\\bEDTC 640|\\bEDTC 645|\\bEDTC 650|\\bEDTC 670|\\bEDTP 600|\\bEDTP 635|\\bEDTP 639|\\bEDTP 645|\\bEDTP 650|\\bEMAN 600|\\bEMAN 610|\\bEMAN 620|\\bEMAN 630|\\bEMAN 670|\\bEMGT 302|\\bEMGT 304|\\bEMGT 308|\\bEMGT 312|\\bEMGT 314|\\bEMGT 486A|\\bEMGT 486B|\\bENGL 102|\\bENGL 103|\\bENMT 307|\\bENMT 310|\\bENMT 315|\\bENMT 321|\\bENMT 322|\\bENMT 340|\\bENMT 360|\\bENMT 365|\\bENMT 380|\\bENMT 390|\\bENMT 398|\\bENMT 405|\\bENMT 486A|\\bENMT 486B|\\bENMT 495|\\bENVM 600|\\bENVM 610|\\bENVM 641|\\bENVM 643|\\bENVM 644|\\bENVM 647|\\bENVM 649|\\bENVM 650|\\bENVM 651|\\bENVM 652|\\bENVM 653|\\bENGL 381|\\bENGL 384|\\bENGL 386|\\bENGL 389|\\bENGL 406|\\bENGL 418|\\bENGL 430|\\bENGL 433|\\bENGL 439|\\bENGL 441|\\bENGL 495|\\bENMT 301|\\bENMT 303|\\bFINC 495|\\bFREN 111|\\bFREN 112|\\bFSCN 302|\\bFSCN 304|\\bFSCN 305|\\bENVM 670|\\bEXCL    X001|\\bEXCL 301|\\bFIN 610|\\bFIN 615|\\bFIN 620|\\bFIN 630|\\bFIN 640|\\bFIN 645|\\bFIN 660|\\bFINC 321|\\bFINC 328|\\bFINC 330|\\bFINC 331|\\bFINC 340|\\bFINC 351|\\bFINC 352|\\bFINC 355|\\bFINC 421|\\bFINC 430|\\bFINC 440|\\bFINC 450|\\bFINC 460|\\bFINC 486A|\\bFINC 486B|\\bFINC 490|\\bPMAN 600|\\bPMAN 634|\\bSPAN 112|\\bSPAN 211|\\bSPAN 212|\\bSPAN 311|\\bMRKT 411|\\bMRKT 412|\\bMRKT 454|\\bPMAN 635|\\bPMAN 637|\\bPMAN 638|\\bPMAN 639|\\bSPAN 314|\\bSPAN 418|\\bSPAN 419|\\bMRKT 457|\\bMRKT 458|\\bMRKT 486A|\\bMRKT 486B|\\bMRKT 495|\\bPMAN 641|\\bPMAN 650|\\bSPAN 486A|\\bSPAN 486B|\\bSPCH 100|\\bSPCH 125|\\bSPCH 324|\\bMRKT 600|\\bMRKT 601|\\bMRKT 602|\\bMRKT 603|\\bMRKT 604|\\bMRKT 605|\\bMRKT 606|\\bMRKT 620|\\bMRKT 671|\\bMSAF 670|\\bPRO 600|\\bPRPA 600|\\bPRPA 601|\\bPRPA 602|\\bPRPA 610|\\bPRPA 620|\\bPRPA 650|\\bPSAD 302|\\bSPCH 470|\\bSPCH 472|\\bSPCH 482|\\bSTAT 200|\\bMSC 610|\\bMSC 620|\\bMSC 630|\\bMSC 640|\\bMSC 670|\\bMSFS 670|\\bPSAD 304|\\bPSAD 306|\\bPSAD 408|\\bPSAD 410|\\bPSAD 414|\\bPSAD 416|\\bPSAD 486A|\\bSTAT 400|\\bSWEN 603|\\bSWEN 645|\\bSWEN 646|\\bSWEN 647|\\bSWEN 651|\\bMUSC 210|\\bNPMN 600|\\bNPMN 610|\\bNPMN 620|\\bNPMN 640|\\bNPMN 650|\\bPSAD 486B|\\bPSAD 495|\\bPSYC 100|\\bPSYC 300|\\bSWEN 656|\\bSWEN 661|\\bSWEN 670|\\bSYSE 610|\\bSYSE 620|\\bSYSE 625|\\bNPMN 655|\\bNPMN 660|\\bNSCI 100|\\bNSCI 101|\\bNSCI 103|\\bPSYC 301|\\bPSYC 306|\\bPSYC 307|\\bPSYC 308|\\bSYSE 630|\\bSYSE 640|\\bSYSE 650|\\bSYSE 660|\\bSYSE 670|\\bTHET 110|\\bNSCI 120|\\bNSCI 170|\\bNSCI 171|\\bNSCI 301|\\bPSYC 309|\\bPSYC 309O|\\bPSYC 310|\\bPSYC 321|\\bTLMN 602|\\bTLMN 623|\\bTLMN 630|\\bTLMN 641|\\bTLMN 645|\\bTLMN 670|\\bTLP 610|\\bNSCI 362|\\bNSCI 398|\\bNURS 300|\\bNURS 350|\\bNURS 360|\\bPSYC 332|\\bPSYC 335|\\bPSYC 338|\\bPSYC 341|\\bPSYC 351|\\bTLP 620|\\bTLP 630|\\bTLP 640|\\bTLP 670|\\bNURS 362|\\bNURS 410|\\bNURS 420|\\bNURS 460|\\bNURS 462|\\bNURS 485|\\bNURS 495|\\bNUTR 100|\\bPSYC 353|\\bPSYC 354|\\bPSYC 386|\\bPSYC 432|\\bTMAN 611|\\bTMAN 625|\\bNUTR 101|\\bOMDE 601|\\bOMDE 603|\\bOMDE 606|\\bOMDE 608|\\bOMDE 610|\\bOMDE 670|\\bPACE 100|\\bPSYC 436|\\bPSYC 437|\\bPSYC 495|\\bUCSP 605|\\bUCSP 615|\\bUCSP 620|\\bUCSP 625|\\bUCSP 630|\\bUCSP 635|\\bUCSP 636|\\bPACE 110|\\bPACE 110A|\\bPACE 111|\\bSDEV 300|\\bSDEV 325|\\bSDEV 350|\\bSDEV 355|\\bSDEV 360|\\bSDEV 400|\\bSDEV 425|\\bSDEV 455|\\bUCSP 815|\\bWMST 200|\\bWRTG 111|\\bPACE 111B|\\bPACE 111C|\\bPACE 111M|\\bSDEV 460|\\bSDEV 486A|\\bSDEV 486B|\\bSOCY 100|\\bSOCY 300|\\bWRTG 112|\\bWRTG 291|\\bWRTG 293|\\bPACE 111P|\\bPACE 111S|\\bSOCY 309|\\bSOCY 313|\\bSOCY 325|\\bSOCY 350|\\bWRTG 391|\\bWRTG 393|\\bWRTG 394|\\bPACE 111T|\\bPHIL 100|\\bPHIL 110|\\bPHIL 140|\\bSOCY 398|\\bSOCY 423|\\bSOCY 426|\\bSOCY 428|\\bSOCY 443|\\bPHIL 304|\\bPHIL 336|\\bPHIL 348|\\bPHIL 349|\\bSOCY 462|\\bSOCY 473|\\bSOCY 486A|\\bSOCY 486B|\\bSPAN 111|\\bHRMN 300|\\bHRMN 302|\\bHRMN 362|\\bHRMN 367|\\bITEC 630|\\bITEC 640|\\bJAPN 111|\\bJAPN 112|\\bFSCN 413|\\bFSCN 416|\\bGEOG 100|\\bGEOL 100|\\bGERM 111|\\bHIMS 650|\\bHIMS 655|\\bHIMS 661|\\bHIMS 670|\\bHIST 115|\\bHIST 116|\\bHRMN 392|\\bHRMN 395|\\bHRMN 400|\\bJAPN 114|\\bJAPN 115|\\bJAPN 221|\\bJAPN 222|\\bGERM 112|\\bGERM 211|\\bGERM 212|\\bGERM 311|\\bHIST 125|\\bHIST 141|\\bHIST 142|\\bHIST 156|\\bHIST 157|\\bHRMN 406|\\bHRMN 408|\\bHRMN 467|\\bHRMN 486A|\\bHRMN 486B|\\bHRMN 495|\\bJAPN 333|\\bJOUR 201|\\bJOUR 330|\\bJOUR 486A|\\bJOUR 486B|\\bGERM 314|\\bHIST 202|\\bHSE 610|\\bHSE 620|\\bHSE 630|\\bHSE 640|\\bHSE 670|\\bHSMN 610|\\bHSMN 620|\\bKORN 333|\\bLDT 610|\\bLDT 620|\\bLDT 630|\\bLDT 640|\\bLDT 670|\\bGERO 100|\\bGERO 301|\\bGERO 302|\\bGERO 306|\\bGERO 311|\\bHIST 289|\\bHIST 309|\\bHSMN 625|\\bHSMN 630|\\bHSMN 640|\\bHSMN 670|\\bHUMN 100|\\bLGST 101|\\bLGST 200|\\bLGST 201|\\bLGST 204|\\bLGST 300|\\bLGST 301|\\bLGST 312|\\bLGST 314|\\bGERO 320|\\bGERO 338|\\bGERO 342|\\bGERO 390|\\bGERO 427|\\bHIST 316L|\\bHUMN 344|\\bHUMN 351|\\bMRKT 310|\\bMRKT 311|\\bGERO 486A|\\bGERO 486B|\\bGERO 495|\\bGERO 496|\\bGERO 497|\\bGHCA 635|\\bGHMT 610|\\bGHMT 620|\\bGHMT 630|\\bHIST 326|\\bHUMN 495|\\bIFSM 201|\\bMATH 107|\\bMATH 108|\\bMATH 115|\\bGRCO 100|\\bGRCO 230|\\bGRCO 350|\\bGRCO 354|\\bHIST 337|\\bHIST 365|\\bHIST 373|\\bHIST 377|\\bIFSM 300|\\bIFSM 301|\\bIFSM 304|\\bMGMT 610|\\bMGMT 615|\\bMGMT 630|\\bMGMT 640|\\bGRCO 355|\\bGRCO 450|\\bGRCO 479|\\bGRCO 486A|\\bGRCO 486B|\\bGRCO 495|\\bHIST 381|\\bHIST 392|\\bIFSM 305|\\bIFSM 310|\\bIFSM 311|\\bIFSM 330|\\bMRKT 314|\\bMRKT 354|\\bMRKT 355|\\bMRKT 356|\\bGVPT 100|\\bGVPT 101|\\bGVPT 125|\\bHIST 461|\\bHIST 462|\\bHIST 464|\\bIFSM 370|\\bIFSM 432|\\bIFSM 438|\\bIFSM 441|\\bMATH 140|\\bMATH 141|\\bMATH 241|\\bMATH 246|\\bGVPT 170|\\bHIST 465|\\bHIST 480|\\bHIST 482|\\bHIST 483|\\bIFSM 461|\\bIFSM 486A|\\bIFSM 486B|\\bIFSM 495|\\bIMAN 601|\\bMRKT 394|\\bMRKT 395|\\bMRKT 410|\\bGVPT 200|\\bGVPT 280|\\bGVPT 306|\\bGVPT 308|\\bHIST 486A|\\bHIST 486B|\\bHIST 495|\\bHMGT 300|\\bHMGT 307|\\bHMGT 310|\\bIMAN 615|\\bIMAN 625|\\bIMAN 635|\\bIMAN 670|\\bIMAT 637|\\bIMAT 639|\\bIMAT 670|\\bLGST 315|\\bLGST 316|\\bLGST 320|\\bLGST 325|\\bLGST 330|\\bLGST 340|\\bLGST 398|\\bLGST 486A|\\bLGST 486B|\\bLGST 495|\\bGVPT 403|\\bHMGT 320|\\bHMGT 322|\\bHMGT 335|\\bHMGT 372|\\bHMGT 400|\\bINFA 610|\\bINFA 620|\\bINFA 630|\\bINFA 640|\\bINFA 650|\\bMATH 301|\\bMATH 340|\\bMATH 402|\\bMATH 463|\\bMBA 610|\\bGVPT 406|\\bGVPT 407|\\bGVPT 408|\\bGVPT 409|\\bHMGT 420|\\bHMGT 435|\\bHMGT 486A|\\bHMGT 486B|\\bHMGT 495|\\bHMLS 302|\\bINFA 660|\\bINFA 670|\\bINMS 600|\\bINMS 610|\\bINMS 620|\\bINMS 630|\\bINMS 640|\\bMGMT 650|\\bMGMT 670|\\bGVPT 444|\\bGVPT 457|\\bGVPT 475|\\bGVPT 486A|\\bHMLS 304|\\bHMLS 310|\\bHMLS 406|\\bHMLS 408|\\bINMS 650|\\bINMS 660|\\bISAS 600|\\bISAS 610|\\bISAS 620|\\bISAS 630|\\bISAS 640|\\bISAS 650|\\bLIBS 150|\\bMATH 105|\\bGVPT 486B|\\bGVPT 495|\\bGVPT 498|\\bHCAD 600|\\bHCAD 610|\\bHCAD 620|\\bHCAD 625|\\bHMLS 414|\\bHMLS 416|\\bHMLS 495|\\bITEC 610|\\bITEC 625|\\bITEC 626|\\bMBA 620|\\bMBA 630|\\bMBA 640|\\bMBA 670|\\bHCAD 630|\\bHCAD 635|\\bHCAD 640|\\bHCAD 645|\\bHCAD 650|\\bHCAD 660|\\bHCAD 665|\\bHCAD 670|\\bHRMD 610|\\bHRMD 620|\\bHRMD 630|\\bHRMD 640|\\bHRMD 650|\\bHRMD 651|\\bHRMD 665|\\b\\bACCT|\\bACCT|\\bAASP|\\bANTH|\\bARAB|\\bACM|\\bAMBA|\\bARTT|\\bASC|\\bASCM|\\bASTD|\\bARTH|\\bBEHS|\\bBIFS|\\bBIOL|\\bASTR|\\bBMGT|\\bBSBD|\\bBIOT|\\bCCJS|\\bBTMN|\\bBTRA|\\bCAPL|\\bCBR|\\bCCA|\\bCMIS|\\bCHEM|\\bCHIN|\\bCJMS|\\bCMBA|\\bCMIT|\\bCMST|\\bCMP|\\bCMSC|\\bCOMM|\\bCOOP|\\bCOP|\\bCSEC|\\bCYB|\\bDATA|\\bDBA|\\bDBST|\\bCSIA|\\bCST|\\bDMCC|\\bDMGT|\\bECON|\\bDCL|\\bDEPM|\\bDETC|\\bDETT|\\bDFC|\\bDMBA|\\bDMC|\\bENGL|\\bEDTC|\\bEDTP|\\bEMAN|\\bEMGT|\\bENMT|\\bENVM|\\bFINC|\\bFREN|\\bFSCN|\\bEXCL|\\bFIN|\\bPMAN|\\bSPAN|\\bMRKT|\\bSPCH|\\bMSAF|\\bPRO|\\bPRPA|\\bPSAD|\\bSTAT|\\bMSC|\\bMSFS|\\bSWEN|\\bMUSC|\\bNPMN|\\bPSYC|\\bSYSE|\\bNSCI|\\bTHET|\\bTLMN|\\bTLP|\\bNURS|\\bNUTR|\\bTMAN|\\bOMDE|\\bPACE|\\bUCSP|\\bSDEV|\\bWMST|\\bWRTG|\\bSOCY|\\bPHIL|\\bHRMN|\\bITEC|\\bJAPN|\\bGEOG|\\bGEOL|\\bGERM|\\bHIMS|\\bHIST|\\bJOUR|\\bHSE|\\bHSMN|\\bKORN|\\bLDT|\\bGERO|\\bHUMN|\\bLGST|\\bGHCA|\\bGHMT|\\bIFSM|\\bMATH|\\bGRCO|\\bMGMT|\\bGVPT|\\bIMAN|\\bHMGT|\\bIMAT|\\bINFA|\\bMBA|\\bHMLS|\\bINMS|\\bISAS|\\bLIBS|\\bHCAD|\\bHRMD";
+umuc.courseData =  new Array();
+umuc.courseData[0] = new Object();
+umuc.courseData[0]["ucsp 615"] = "Orientation to Graduate Studies at UMGC (0 Credits, UCSP 615)";
+</script> <!-- beg (1) PrimaryResources --> 
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script>
+<script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script> <!-- end (1) PrimaryResources --> <!-- beg (2) SecondaryResources --> <!-- end (2) SecondaryResources --> <!-- beg (3) CustomFoot --> <!-- end (3) CustomFoot --> <!-- beg (4) TertiaryResources --> <!-- end (4) TertiaryResources --> 
+<script type="text/javascript">
+<!--
+var jsPageContributeMode = 'read';
+var jsPageSessionContributeMode = 'read';
+
+var jsPageAuthorMode = 0;
+var jsPageEditMode = 0;
+
+
+if(!commonspot)
+	var commonspot = {};
+commonspot.csPage = {};
+
+
+	commonspot.csPage.url = '/administration/index.cfm';
+
+
+commonspot.csPage.id = 112618;
+
+commonspot.csPage.siteRoot = '/';
+commonspot.csPage.subsiteRoot = '/administration/';
+
+
+// -->
+</script> 
+<script type="text/javascript">
+<!--
+	if (typeof parent.commonspot == 'undefined' || typeof parent.commonspot.lview == 'undefined' || typeof parent.commonspot.lightbox == 'undefined')
+		loadNonDashboardFiles();
+	else if (parent.commonspot && typeof newWindow == 'undefined')
+	{
+		var arrFiles = 
+				[
+					{fileName: '/commonspot/javascript/lightbox/overrides.js', fileType: 'script', fileID: 'cs_overrides'},
+					{fileName: '/commonspot/javascript/lightbox/window_ref.js', fileType: 'script', fileID: 'cs_windowref'}
+				];
+		
+		loadDashboardFiles(arrFiles);
+	}
+//-->
+</script>
+</body>
+</doc>

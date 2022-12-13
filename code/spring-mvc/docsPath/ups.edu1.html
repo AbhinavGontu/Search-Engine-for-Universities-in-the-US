@@ -1,0 +1,1763 @@
+<doc>
+<filename>ups.edu1.html</filename>
+<url>http://www.loggerathletics.com</url>
+<ip>13.227.73.124</ip>
+<title>Puget Sound Athletics</title>
+<body>
+? 
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png"> 
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png"> 
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png"> 
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png"> 
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png"> 
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"> 
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png"> 
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png"> 
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png"> 
+<link rel="icon" type="image/png" sizes="194x194" href="/favicons/favicon-194x194.png"> 
+<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png"> 
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png"> 
+<link rel="manifest" href="/favicons/site.webmanifest"> 
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#660000"> 
+<link rel="shortcut icon" href="/favicons/favicon.ico"> 
+<meta name="msapplication-TileColor" content="#660000"> 
+<meta name="msapplication-config" content="/favicons/browserconfig.xml"> 
+<meta name="theme-color" content="#ffffff"> <!-- rum header --> 
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ4CWFNbGwIAVFVVBgk=",licenseKey:"a8324e80d1",applicationID:"1004718"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(21),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(u){try{o("ierr",[u,s.now(),!0])}catch(d){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(22),c=t("ee"),s=t("loader"),u=t("gos"),f=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(6),t(5),"addEventListener"in window&&t(3),s.xhrWrappable&&t(7),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(u(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(f);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[f,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),u=XMLHttpRequest,f="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(u.prototype)):u.prototype.hasOwnProperty(f)&&(i(window),i(u.prototype)),a.on(f+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(22),a=t(21);e.exports=i;var c=window,s="fetch-",u=s+"body-",f=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(f,function(t,e){r(d[h],e,u),r(l[h],e,u)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],5:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],6:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",u="clearTimeout",f="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[u,"clearImmediate"],u+d),o.on(s+f,r),o.on(c+f,i)},{}],7:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=f.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,f.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(3);var u=t("ee"),f=u.get("xhr"),d=t("wrap-function")(f),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,g="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=f;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{f.emit("new-xhr",[e],e),e.addEventListener(g,i,!1)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),f.on("send-xhr-start",function(t,e){r(t,e),o(e)}),f.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else u.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],8:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,u=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),g={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||s(t)&&l())&&(g.traceContextParentHeader=i(h,m),g.traceContextStateHeader=o(h,v,n,r,u)),(t.sameOrigin&&!f()||!t.sameOrigin&&s(t)&&d())&&(g.newrelicHeader=a(h,m,v,n,r,u)),g}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",u="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+u+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return u()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(18),h=t(10);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],9:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(10),u=t(8).generateTracePayload,f=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(14),m=t(13),v=t(11),g=window.XMLHttpRequest;a.features.xhr=!0,t(7),t(4),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=u(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),f.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=u(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],10:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],11:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(13);e.exports=r},{}],12:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(21),c=t(22),s=t("ee").get("tracer"),u=t("loader"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){f[e]=i(l+e,!0,"api")}),f.addPageAction=i(l+"addPageAction",!0),f.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[u.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],15:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(23);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],16:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],17:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!v){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),v=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,u,f,d=t("handle"),l=t("loader"),p=t(20),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}f=new PerformanceObserver(o);try{f.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var v=!1,g=["click","keydown","mousedown","pointerdown","touchstart"];g.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],18:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],19:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],20:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),u=s.length,f=0;f<u;f++)s[f].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){w[t]=m(t).concat(e)}function h(t,e){var n=w[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return w[t]||[]}function v(t){return l[t]=l[t]||i(n)}function g(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var w={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:g,abort:c,aborted:!1};return x}function o(t){return u(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",u=t("gos"),f=t(21),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(15),c=t("handle"),s=t(21),u=t("ee"),f=t(19),d=t(16),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,g=v&&v.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=v&&g&&g[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:x,userAgent:f};t(12),t(17),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,u){function nrWrapper(){var o,a,f,l;try{a=this,o=d(arguments),f="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],f],t)}c(n+"start",[o,a,s],f,u);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],f,u),h}finally{c(n+"end",[o,a,l],f,u)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,u,f="-"===r.charAt(0);for(u=0;u<e.length;u++)s=e[u],c=t[s],a(c)||(t[s]=n(c,f?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=f),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=f);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,f),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var f=t("ee"),d=t(22),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=u},{}]},{},["loader",2,9]);</script>   
+<div id="page" class="page clearfix"> 
+ <div class="wrapper clearfix"> 
+  <header id="site-header" class="site-header"> 
+   <div class="container clearfix"> <a href="#nav" class="skip-navigation">Skip to navigation</a> <a href="#mainbody" class="skip-navigation">Skip to content</a> <a href="#site-footer" class="skip-navigation">Skip to footer</a> 
+    <h1 class="site-title"><a href="/"><img src="/images/setup/2019_logo.png" alt="Puget Sound"></a></h1> 
+    <div class="mobile-menu-bar clearfix"> 
+     <ul class="clearfix"> 
+      <li><a href="/composite"><span aria-hidden="true" class="gicon-calendar"></span> <span class="text">Composite</span></a></li> 
+      <li><a href="/search"><span aria-hidden="true" class="gicon-search"></span> <span class="text">Search</span></a></li> 
+      <li><a href="#" id="jump-to-nav"><span aria-hidden="true" class="gicon-menu"></span> <span class="text">Menu</span></a></li> 
+     </ul> 
+    </div> 
+    <nav id="nav" class="dropnav" data-module="dropnav" data-activate-on="hover"> 
+     <div class="offscreen">
+      Site Navigation
+     </div> 
+     <ul class="clearfix" role="menubar"> 
+      <li class="nav nav1 has-submenu" data-follow-link="false"> <a href="/navbar-sports-redesign" class="nav-link">Sports</a> 
+       <div id="submenu1" class="submenu level1 clearfix"> 
+        <ul class="clearfix"> 
+         <li class="has-submenu" data-follow-link="false"> <a href="/navbar-men-redesign" aria-label="Sports: Men's Sports">Men's Sports</a> 
+          <div class="submenu level2 clearfix"> 
+           <ul class="clearfix"> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/bsb/index" aria-label="Sports: Men's Sports: Baseball">Baseball</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/bsb/2020-21/schedule" aria-label="Sports: Men's Sports: Baseball: Schedule">Schedule</a></li> 
+               <li><a href="/sports/bsb/2020-21/roster" aria-label="Sports: Men's Sports: Baseball: Roster">Roster</a></li> 
+               <li><a href="/sports/bsb/2020-21/news" aria-label="Sports: Men's Sports: Baseball: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/mbkb/index" aria-label="Sports: Men's Sports: Basketball">Basketball</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/mbkb/2020-21/schedule" aria-label="Sports: Men's Sports: Basketball: Schedule">Schedule</a></li> 
+               <li><a href="/sports/mbkb/2020-21/roster" aria-label="Sports: Men's Sports: Basketball: Roster">Roster</a></li> 
+               <li><a href="/sports/mbkb/2020-21/news" aria-label="Sports: Men's Sports: Basketball: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/crew/index" aria-label="Sports: Men's Sports: Crew">Crew</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/crew/2020-21/schedule" aria-label="Sports: Men's Sports: Crew: Schedule">Schedule</a></li> 
+               <li><a href="/sports/crew/2020-21/wroster" aria-label="Sports: Men's Sports: Crew: Roster">Roster</a></li> 
+               <li><a href="/sports/crew/2020-21/news" aria-label="Sports: Men's Sports: Crew: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/xc/index" aria-label="Sports: Men's Sports: Cross Country">Cross Country</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/xc/2019-20/schedule" aria-label="Sports: Men's Sports: Cross Country: Schedule">Schedule</a></li> 
+               <li><a href="/sports/xc/2020-201/wroster" aria-label="Sports: Men's Sports: Cross Country: Roster">Roster</a></li> 
+               <li><a href="/sports/xc/2019-20/news" aria-label="Sports: Men's Sports: Cross Country: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/fball/index" aria-label="Sports: Men's Sports: Football">Football</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/fball/2020-21/schedule" aria-label="Sports: Men's Sports: Football: Schedule">Schedule</a></li> 
+               <li><a href="/sports/fball/2020-21/roster" aria-label="Sports: Men's Sports: Football: Roster">Roster</a></li> 
+               <li><a href="/sports/fball/2020-21/news" aria-label="Sports: Men's Sports: Football: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/golf/index" aria-label="Sports: Men's Sports: Golf">Golf</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/golf/2020-21/wschedule" aria-label="Sports: Men's Sports: Golf: Schedule">Schedule</a></li> 
+               <li><a href="/sports/golf/2020-21/mroster" aria-label="Sports: Men's Sports: Golf: Roster">Roster</a></li> 
+               <li><a href="/sports/golf/2020-21/news" aria-label="Sports: Men's Sports: Golf: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/msoc/index" aria-label="Sports: Men's Sports: Soccer">Soccer</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/msoc/2020-21/schedule" aria-label="Sports: Men's Sports: Soccer: Schedule">Schedule</a></li> 
+               <li><a href="/sports/msoc/2020-21/roster" aria-label="Sports: Men's Sports: Soccer: Roster">Roster</a></li> 
+               <li><a href="/sports/msoc/2019-20/news" aria-label="Sports: Men's Sports: Soccer: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/swimdive/index" aria-label="Sports: Men's Sports: Swimming">Swimming</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/swimdive/2020-21/schedule" aria-label="Sports: Men's Sports: Swimming: Schedule">Schedule</a></li> 
+               <li><a href="/sports/swimdive/2020-21/wroster" aria-label="Sports: Men's Sports: Swimming: Roster">Roster</a></li> 
+               <li><a href="/sports/swimdive/2020-21/news" aria-label="Sports: Men's Sports: Swimming: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/mten/index" aria-label="Sports: Men's Sports: Tennis">Tennis</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/mten/2020-21/schedule" aria-label="Sports: Men's Sports: Tennis: Schedule">Schedule</a></li> 
+               <li><a href="/sports/mten/2020-21/roster" aria-label="Sports: Men's Sports: Tennis: Roster">Roster</a></li> 
+               <li><a href="/sports/mten/2019-20/news" aria-label="Sports: Men's Sports: Tennis: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/track/index" aria-label="Sports: Men's Sports: Track &amp; Field">Track &amp; Field</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/track/2020-21/schedule" aria-label="Sports: Men's Sports: Track &amp; Field: Schedule">Schedule</a></li> 
+               <li><a href="/sports/track/2020-21/mroster" aria-label="Sports: Men's Sports: Track &amp; Field: Roster">Roster</a></li> 
+               <li><a href="/sports/track/2020-21/news" aria-label="Sports: Men's Sports: Track &amp; Field: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+           </ul> 
+          </div> </li> 
+         <li class="has-submenu" data-follow-link="false"> <a href="/navbar-women-redesign" aria-label="Sports: Women's Sports">Women's Sports</a> 
+          <div class="submenu level2 clearfix"> 
+           <ul class="clearfix"> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/wbkb/index" aria-label="Sports: Women's Sports: Basketball">Basketball</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/wbkb/2020-21/schedule" aria-label="Sports: Women's Sports: Basketball: Schedule">Schedule</a></li> 
+               <li><a href="/sports/wbkb/2020-21/roster" aria-label="Sports: Women's Sports: Basketball: Roster">Roster</a></li> 
+               <li><a href="/sports/wbkb/2019-20/news" aria-label="Sports: Women's Sports: Basketball: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/crew/index" aria-label="Sports: Women's Sports: Crew">Crew</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/crew/2020-21/schedule" aria-label="Sports: Women's Sports: Crew: Schedule">Schedule</a></li> 
+               <li><a href="/sports/crew/2020-21/wroster" aria-label="Sports: Women's Sports: Crew: Roster">Roster</a></li> 
+               <li><a href="/sports/crew/2020-21/news" aria-label="Sports: Women's Sports: Crew: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/xc/index" aria-label="Sports: Women's Sports: Cross Country">Cross Country</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/xc/2019-20/schedule" aria-label="Sports: Women's Sports: Cross Country: Schedule">Schedule</a></li> 
+               <li><a href="/sports/xc/2020-201/wroster" aria-label="Sports: Women's Sports: Cross Country: Roster">Roster</a></li> 
+               <li><a href="/sports/xc/2019-20/news" aria-label="Sports: Women's Sports: Cross Country: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/golf/index" aria-label="Sports: Women's Sports: Golf">Golf</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/golf/2020-21/wschedule" aria-label="Sports: Women's Sports: Golf: Schedule">Schedule</a></li> 
+               <li><a href="/sports/golf/2020-21/mroster" aria-label="Sports: Women's Sports: Golf: Roster">Roster</a></li> 
+               <li><a href="/sports/golf/2020-21/news" aria-label="Sports: Women's Sports: Golf: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/wlax/index" aria-label="Sports: Women's Sports: Lacrosse">Lacrosse</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/wlax/2020-21/schedule" aria-label="Sports: Women's Sports: Lacrosse: Schedule">Schedule</a></li> 
+               <li><a href="/sports/wlax/2020-21/roster" aria-label="Sports: Women's Sports: Lacrosse: Roster">Roster</a></li> 
+               <li><a href="/sports/wlax/2019-20/news" aria-label="Sports: Women's Sports: Lacrosse: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/wsoc/index" aria-label="Sports: Women's Sports: Soccer">Soccer</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/wsoc/2020-21/schedule" aria-label="Sports: Women's Sports: Soccer: Schedule">Schedule</a></li> 
+               <li><a href="/sports/wsoc/2020-21/roster" aria-label="Sports: Women's Sports: Soccer: Roster">Roster</a></li> 
+               <li><a href="/sports/wsoc/2019-20/news" aria-label="Sports: Women's Sports: Soccer: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/sball/index" aria-label="Sports: Women's Sports: Softball">Softball</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/sball/2020-21/schedule" aria-label="Sports: Women's Sports: Softball: Schedule">Schedule</a></li> 
+               <li><a href="/sports/sball/2020-21/roster" aria-label="Sports: Women's Sports: Softball: Roster">Roster</a></li> 
+               <li><a href="/sports/sball/2019-20/news" aria-label="Sports: Women's Sports: Softball: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/swimdive/index" aria-label="Sports: Women's Sports: Swimming">Swimming</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/swimdive/2020-21/schedule" aria-label="Sports: Women's Sports: Swimming: Schedule">Schedule</a></li> 
+               <li><a href="/sports/swimdive/2020-21/wroster" aria-label="Sports: Women's Sports: Swimming: Roster">Roster</a></li> 
+               <li><a href="/sports/swimdive/2020-21/news" aria-label="Sports: Women's Sports: Swimming: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/wten/index" aria-label="Sports: Women's Sports: Tennis">Tennis</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/wten/2020-21/schedule" aria-label="Sports: Women's Sports: Tennis: Schedule">Schedule</a></li> 
+               <li><a href="/sports/wten/2020-21/roster" aria-label="Sports: Women's Sports: Tennis: Roster">Roster</a></li> 
+               <li><a href="/sports/wten/2019-20/news" aria-label="Sports: Women's Sports: Tennis: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/track/index" aria-label="Sports: Women's Sports: Track &amp; Field">Track &amp; Field</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/track/2020-21/schedule" aria-label="Sports: Women's Sports: Track &amp; Field: Schedule">Schedule</a></li> 
+               <li><a href="/sports/track/2020-21/wroster" aria-label="Sports: Women's Sports: Track &amp; Field: Roster">Roster</a></li> 
+               <li><a href="/sports/track/2019-20/news" aria-label="Sports: Women's Sports: Track &amp; Field: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+            <li class="has-submenu" data-follow-link="true"> <a href="/sports/wvball/index" aria-label="Sports: Women's Sports: Volleyball">Volleyball</a> 
+             <div class="submenu level3 clearfix"> 
+              <ul class="clearfix"> 
+               <li><a href="/sports/wvball/2020-21/schedule" aria-label="Sports: Women's Sports: Volleyball: Schedule">Schedule</a></li> 
+               <li><a href="/sports/wvball/2020-21/roster" aria-label="Sports: Women's Sports: Volleyball: Roster">Roster</a></li> 
+               <li><a href="/sports/wvball/2020-21/news" aria-label="Sports: Women's Sports: Volleyball: News">News</a></li> 
+              </ul> 
+             </div> </li> 
+           </ul> 
+          </div> </li> 
+        </ul> 
+       </div> </li> 
+      <li class="nav nav2 has-submenu" data-follow-link="false"> <a href="/navbar-fanzone" class="nav-link">Fan Zone</a> 
+       <div id="submenu2" class="submenu level1 clearfix"> 
+        <ul class="clearfix"> 
+         <li><a href="/information/awards/index" aria-label="Fan Zone: Awards">Awards</a></li> 
+         <li><a href="http://bookstore.ups.edu/" target="_blank" aria-label="Fan Zone: Bookstore">Bookstore</a></li> 
+         <li><a href="/information/camps/loggercamps" aria-label="Fan Zone: Camps">Camps</a></li> 
+         <li><a href="/information/halloffame" aria-label="Fan Zone: Hall of Fame">Hall of Fame</a></li> 
+         <li><a href="/information/loggerclub" aria-label="Fan Zone: Logger Club">Logger Club</a></li> 
+         <li><a href="/information/loggerclubfiles/loggerline" aria-label="Fan Zone: Logger Line Archives">Logger Line Archives</a></li> 
+         <li><a href="/information/media_center" aria-label="Fan Zone: Media Center">Media Center</a></li> 
+         <li><a href="/information/awards/index" aria-label="Fan Zone: Puget Sound Awards">Puget Sound Awards</a></li> 
+         <li><a href="/design/mobile_backgrounds" aria-label="Fan Zone: Smartphone Wallpaper">Smartphone Wallpaper</a></li> 
+         <li><a href="/information/sportsmanship.pdf" aria-label="Fan Zone: Sportsmanship">Sportsmanship</a></li> 
+         <li><a href="https://pugetsound.prestosports.com/information/Visitor-s_Guide" aria-label="Fan Zone: Visitor's Guide">Visitor's Guide</a></li> 
+        </ul> 
+       </div> </li> 
+      <li class="nav nav3 has-submenu" data-follow-link="false"> <a href="/navbar-information" class="nav-link">Inside Athletics</a> 
+       <div id="submenu3" class="submenu level1 clearfix"> 
+        <ul class="clearfix"> 
+         <li><a href="https://loggerathletics.com/information/studentathletes" aria-label="Inside Athletics: Current Student-Athletes">Current Student-Athletes</a></li> 
+         <li><a href="/secure/index" aria-label="Inside Athletics: Department Login">Department Login</a></li> 
+         <li><a href="/information/facilities/athleticfacilities" aria-label="Inside Athletics: Facilities">Facilities</a></li> 
+         <li><a href="/information/mission" aria-label="Inside Athletics: Mission Statement">Mission Statement</a></li> 
+         <li><a href="/information/quickfacts" aria-label="Inside Athletics: Quick Facts">Quick Facts</a></li> 
+         <li><a href="/information/sportsinformation" aria-label="Inside Athletics: Sports Information">Sports Information</a></li> 
+         <li><a href="/information/sportsmedicine" aria-label="Inside Athletics: Sports Medicine">Sports Medicine</a></li> 
+         <li><a href="/information/directory/index" aria-label="Inside Athletics: Staff Directory">Staff Directory</a></li> 
+        </ul> 
+       </div> </li> 
+      <li class="nav nav4"><a href="/information/facilities/athleticfacilities" class="nav-link">Facilities</a></li> 
+      <li class="nav nav5"><a href="https://www.pugetsound.edu/support-puget-sound/athletics-donation/" target="_blank" class="nav-link">Donate</a></li> 
+      <li class="nav nav6 has-submenu" data-follow-link="false"> <a href="/navbar-recruit" class="nav-link">Recruiting </a> 
+       <div id="submenu6" class="submenu level1 clearfix"> 
+        <ul class="clearfix"> 
+         <li><a href="https://pugetsound.prestosports.com/information/becomealogger" aria-label="Recruiting : Become a Logger">Become a Logger</a></li> 
+         <li><a href="https://www.pugetsound.edu/academics/" target="_blank" aria-label="Recruiting : Academics">Academics</a></li> 
+         <li><a href="https://www.pugetsound.edu/admission/" target="_blank" aria-label="Recruiting : Admission">Admission</a></li> 
+         <li><a href="https://www.pugetsound.edu/student-life/campus-living/" target="_blank" aria-label="Recruiting : Campus Living">Campus Living</a></li> 
+         <li><a href="https://www.pugetsound.edu/admission/tuition-aid-scholarships/" target="_blank" aria-label="Recruiting : Financial Aid">Financial Aid</a></li> 
+        </ul> 
+       </div> </li> 
+     </ul> 
+     <div class="none close">
+      Close
+     </div>
+    </nav> 
+    <div class="social-links"> 
+     <ul class="clearfix"> 
+      <li> <a href="https://www.facebook.com/psloggers" target="_blank"> <span class="icon gicon-facebook-fill"></span> <span class="text">Facebook-fill</span> </a> </li> 
+      <li> <a href="https://twitter.com/PSLoggers" target="_blank"> <span class="icon gicon-twitter"></span> <span class="text">Twitter</span> </a> </li> 
+      <li> <a href="https://www.instagram.com/psloggers/" target="_blank"> <span class="icon gicon-instagram"></span> <span class="text">Instagram</span> </a> </li> 
+      <li> <a href="https://www.youtube.com/user/PugetSoundLoggers" target="_blank"> <span class="icon gicon-youtube"></span> <span class="text">Youtube</span> </a> </li> 
+      <li> <a href="/composite"> <span class="icon gicon-calendar"></span> <span class="text">Calendar</span> </a> </li> 
+     </ul> 
+    </div> 
+    <div class="btn-puget">
+     <a href="/"><img src="/images/setup/2019_typography.png" alt="Puget"></a>
+    </div> 
+   </div> 
+  </header> 
+  <div class="body-container clearfix"> 
+   <main id="mainbody" class="mainbody clearfix"> 
+    <div class="landing-row carousel-row no-pad"> 
+     <div class="clearfix"> 
+      <div class="landing-row-offset"> 
+       <div class="landing-col span12"> 
+        <section aria-label="top stories"> 
+         <h2 class="section-header">Top Stories</h2> 
+         <div class="j-carousel j-carousel" id="j-carousel"> <a href="javascript:void(0)" class="prev">Previous</a> <a href="javascript:void(0)" class="next">Next</a> <a href="javascript:void(0)" class="pp">Pause</a> 
+          <div class="controls clearfix" role="tablist"> 
+           <div class="control control1" role="tab" tabindex="0" aria-label="Midweek rivalry game on tap for men's soccer"> 
+            <img src="/sports/msoc/2020-21/photos/0003/MSOC_edit-27.jpg?max_width=222&amp;max_height=111&amp;crop=true" alt="Midweek rivalry game on tap for men's soccer" class="thumb"> 
+            <div class="thumb-title">
+              Men's Soccer 
+            </div> 
+           </div> 
+           <div class="control control2" role="tab" tabindex="0" aria-label="Johnson earns NWC Student-Athlete of the Week"> 
+            <img src="/sports/mbkb/2020-21/photos/NWC_Johnson.png?max_width=222&amp;max_height=111&amp;crop=true" alt="Johnson earns NWC Student-Athlete of the Week" class="thumb"> 
+            <div class="thumb-title">
+              Men's Basketball 
+            </div> 
+           </div> 
+           <div class="control control3" role="tab" tabindex="0" aria-label="Shellhammer named Logger of the Week"> 
+            <img src="/sports/bsb/2020-21/ShellLOW.png?max_width=222&amp;max_height=111&amp;crop=true" alt="Shellhammer named Logger of the Week" class="thumb"> 
+            <div class="thumb-title">
+              Baseball 
+            </div> 
+           </div> 
+           <div class="control control4" role="tab" tabindex="0" aria-label="Smith scores in 1-1 tie at Whitman"> 
+            <img src="/sports/msoc/2020-21/photos/0002/D5C_6922-Edit_UPS_MSoccer_20Feb21_Whitman_Web.jpg?max_width=222&amp;max_height=111&amp;crop=true" alt="Smith scores in 1-1 tie at Whitman" class="thumb"> 
+            <div class="thumb-title">
+              Men's Soccer 
+            </div> 
+           </div> 
+           <div class="control control5" role="tab" tabindex="0" aria-label="Loggers narrowly fall to PLU in season-opener"> 
+            <img src="/sports/golf/2020-21/photos/0002/PS-GOLF-24.jpg?max_width=222&amp;max_height=111&amp;crop=true" alt="Loggers narrowly fall to PLU in season-opener" class="thumb"> 
+            <div class="thumb-title">
+              Golf 
+            </div> 
+           </div> 
+          </div> 
+          <div class="feed"> 
+           <div class="seats"> 
+            <div class="seat seat1 article msoc"> 
+             <div class="media-box"> 
+              <div class="slide-img" data-url="/sports/msoc/2020-21/releases/20210316lleec3"> 
+               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/sports/msoc/2020-21/photos/0003/MSOC_edit-27.jpg?max_width=1600" alt="Midweek rivalry game on tap for men's soccer" width="1600" height="900"> 
+              </div> 
+             </div> 
+             <div class="story-box"> <a href="/sports/msoc/2020-21/releases/20210316lleec3" class="title">Midweek rivalry game on tap for men's soccer</a> 
+              <div class="carousel-related-links"> <a aria-label="Men's Soccer event: March 17 06:30 PM: Puget Sound at Pacific Lutheran: Video" href="/links/tlbg2b" target="_blank"> Video </a> <span> | </span> <a aria-label="Men's Soccer event: March 17 06:30 PM: Puget Sound at Pacific Lutheran: Live stats" href="/links/hnnxuf" target="_blank"> Live stats </a> 
+              </div> <time datetime="2021-03-16T12:00" class="date"> March 16, 2021 <span class="pipe"> | </span> <span class="sport-name">Men's Soccer</span> </time> <span class="leadin">As part of make-up games against Pacific Lutheran, the Puget Sound men’s...</span> 
+             </div> 
+            </div> 
+            <div class="seat seat2 article mbkb"> 
+             <div class="media-box"> 
+              <div class="slide-img" data-url="/sports/mbkb/2020-21/releases/20210316lanmer"> 
+               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/sports/mbkb/2020-21/photos/NWC_Johnson.png?max_width=1600" alt="Johnson earns NWC Student-Athlete of the Week" width="1600" height="900"> 
+              </div> 
+             </div> 
+             <div class="story-box"> <a href="/sports/mbkb/2020-21/releases/20210316lanmer" class="title">Johnson earns NWC Student-Athlete of the Week</a> <time datetime="2021-03-16T12:00" class="date"> March 16, 2021 <span class="pipe"> | </span> <span class="sport-name">Men's Basketball</span> </time> <span class="leadin">Freshman Paul Johnson was named the Northwest Conference Student-Athlete of the...</span> 
+             </div> 
+            </div> 
+            <div class="seat seat3 article bsb"> 
+             <div class="media-box"> 
+              <div class="slide-img" data-url="/sports/bsb/2020-21/releases/20210316l27pyj"> 
+               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/sports/bsb/2020-21/ShellLOW.png?max_width=1600" alt="Shellhammer named Logger of the Week" width="1600" height="900"> 
+              </div> 
+             </div> 
+             <div class="story-box"> <a href="/sports/bsb/2020-21/releases/20210316l27pyj" class="title">Shellhammer named Logger of the Week</a> <time datetime="2021-03-16T12:00" class="date"> March 16, 2021 <span class="pipe"> | </span> <span class="sport-name">Baseball</span> </time> <span class="leadin">Junior pitcher Owen Shellhammer has been named the Logger of the Week after he...</span> 
+             </div> 
+            </div> 
+            <div class="seat seat4 article msoc"> 
+             <div class="media-box"> 
+              <div class="slide-img" data-url="/sports/msoc/2020-21/releases/20210314sv10pl"> 
+               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/sports/msoc/2020-21/photos/0002/D5C_6922-Edit_UPS_MSoccer_20Feb21_Whitman_Web.jpg?max_width=1600" alt="Smith scores in 1-1 tie at Whitman" width="1600" height="900"> 
+              </div> 
+             </div> 
+             <div class="story-box"> <a href="/sports/msoc/2020-21/releases/20210314sv10pl" class="title">Smith scores in 1-1 tie at Whitman</a> 
+              <div class="carousel-related-links"> <a aria-label="Men's Soccer event: March 14 01:30 PM: Puget Sound at Whitman: Preview" href="/sports/msoc/2020-21/releases/20210311omgf9j"> Preview </a> <span> | </span> <a aria-label="Men's Soccer event: March 14 01:30 PM: Puget Sound at Whitman: Video" href="/links/w6eqm4" target="_blank"> Video </a> <span> | </span> <a aria-label="Men's Soccer event: March 14 01:30 PM: Puget Sound at Whitman: Live stats" href="/links/w6eqm4" target="_blank"> Live stats </a> <span> | </span> <a aria-label="Men's Soccer event: March 14 01:30 PM: Puget Sound at Whitman: Box Score" href="/sports/msoc/2020-21/boxscores/20210314_n8al.xml"> Box Score </a> 
+              </div> <time datetime="2021-03-14T12:00" class="date"> March 14, 2021 <span class="pipe"> | </span> <span class="sport-name">Men's Soccer</span> </time> <span class="leadin">Ryan Smith scored his second goal of the season as the Puget Sound men’s...</span> 
+             </div> 
+            </div> 
+            <div class="seat seat5 article golf"> 
+             <div class="media-box"> 
+              <div class="slide-img" data-url="/sports/golf/2020-21/releases/20210314zrz13y"> 
+               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/sports/golf/2020-21/photos/0002/PS-GOLF-24.jpg?max_width=1600" alt="Loggers narrowly fall to PLU in season-opener" width="1600" height="900"> 
+              </div> 
+             </div> 
+             <div class="story-box"> <a href="/sports/golf/2020-21/releases/20210314zrz13y" class="title">Loggers narrowly fall to PLU in season-opener</a> <time datetime="2021-03-14T12:00" class="date"> March 14, 2021 <span class="pipe"> | </span> <span class="sport-name">Golf</span> </time> <span class="leadin">The Puget Sound men’s golf team began its 2021 spring season with a dual...</span> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <script>
+(function($) {
+$(function() {
+
+var root = $('#j-carousel');
+var carouselInstance = null;
+
+
+$('.play-video', root).on('click', function(e) {
+    e.preventDefault();
+
+    var videoSrc = $(this).data('file');
+    var videoType = $(this).data('type');
+  	var playerWrapper = $('<div class="player-wrapper" tabindex="0" style="display:none; position:absolute; left:0; right:0; top:0; bottom:0; z-index:10000; background:#000; overflow:hidden"><a href="javascript:void(0)" class="close" style="position:absolute; right:10px; top:10px; z-index:2; display:block; width:28px; height:28px; cursor:pointer; text-indent:-9999px; background:url(/info/images/close.png) no-repeat 0 0">Close Video</a></div>');
+
+	if (carouselInstance) {
+		carouselInstance.stop();
+	}
+    playerWrapper.appendTo(root).show().focus();
+    var playerHeight = playerWrapper.outerHeight();
+    var playerWidth = playerWrapper.outerWidth();
+
+    if (videoType == "youtube") {
+	    var playerEl = $('<iframe id="player" type="text/html" width="'+ playerWidth +'" height="' + playerHeight + '" src="https://www.youtube.com/embed/' + videoSrc + '?enablejsapi=1&origin=http://pugetsound.prestosports.com&autoplay=1&cc_load_policy=1&rel=0"></iframe>')
+        playerWrapper.append(playerEl);
+    } else {
+        var playerEl = $('<video/>').attr({
+            'class': 'player video-js',
+            'data-setup': '{"controls": true, "autoplay": true, "width":' + playerWidth + ', "height":' + playerHeight + '}'
+        });
+
+        playerEl.append('<source src="' + videoSrc + '" type="' + videoType + '"  />');
+        playerWrapper.append(playerEl);
+        videojs($('.video-js', root).get(0));
+    }
+    $(document).trigger('dom_updated');
+
+    videoFlag = true;
+});
+
+$('.seat.video', root).on('click', function(e) {
+	var seat = $(this);
+	if ($(e.target).is('.slide-img img')) {
+		e.preventDefault();
+		$('.play-video', seat).trigger('click');
+	}
+});
+
+root.on('click', '.close', function(e) {
+    e.preventDefault();
+	if (carouselInstance) {
+		carouselInstance.play();
+	}
+
+	videoFlag = null;
+
+	if ($('.video-js', root).length) {
+    	videojs($('.video-js', root).get(0)).dispose();
+	}
+    $('.player-wrapper', root).remove();
+    $('.seat.active .play-video', root).focus();
+});
+
+$('.gallery', root).on('mouseenter', function() {
+	if (carouselInstance) {
+		carouselInstance.stop();
+	}
+});
+
+$('.gallery', root).on('mouseleave', function() {
+	if (carouselInstance && !videoFlag) {
+		carouselInstance.play();
+	}
+});
+
+carouselInstance = root.presto_Carousel(1600, 900, {
+	auto: true,
+	animation: 3,
+	interval: 5000,
+	animationSpeed: 400,
+	control: '.control'
+}).getPRESTO_Carousel();
+
+
+});
+})(jQuery);
+</script> 
+         <link rel="alternate" type="application/rss+xml" title="RSS" href="/landing/headlines-featured?feed=rss_2.0"> 
+        </section> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="landing-row video-row no-pad"> 
+     <div class="clearfix"> 
+      <div class="landing-row-offset"> 
+       <div class="landing-col span12"> 
+        <section class="section-video" aria-label="logger sports network"> 
+         <h2 class="section-header">Logger Sports Network</h2> 
+         <div class="mod-recent-videos style3" data-module="mod-load-playlist" data-feed-url="https://googleapis.presto-sport.com/youtube/v3/playlistItems?part=snippet%2C+status&amp;key=AIzaSyBjfZAdENxKmOrnjBK_n0efaXGmRYUr4yM&amp;maxResults=3&amp;playlistId=PL1MfyNV_F6dTFZ9H3ulf6QMcPZZWMQtmN" data-playable="true" data-page-size="3" data-pagination="false" data-playlist-type="youtube" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-recent-videos-styles.css"> 
+          <div class="playlist"></div> 
+         </div> <a href="https://www.youtube.com/user/PugetSoundLoggers" target="_blank" class="more-video-btn">View More Videos</a> 
+        </section> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="landing-row explore-row no-pad"> 
+     <div class="clearfix"> 
+      <div class="landing-row-offset"> 
+       <div class="landing-col span12"> 
+        <section aria-label="explore"> 
+         <h2 class="section-header">Explore</h2> 
+         <div class="navbar-explore clearfix" role="menubar" data-module="nav"> 
+          <div class="clearfix"> 
+           <ul class="clearfix"> 
+            <li> <a href="https://pugetsound.prestosports.com/Spring_2021_Return_to_Sports_Plan_1.25.21.pdf">Return to Athletic Activities Plan (updated Jan. 25, 2021)</a> </li> 
+           </ul> 
+          </div> 
+         </div> 
+         <script type="text/javascript" src="/info/ga/include.js" async data-uid="UA-1939879-1"></script> 
+        </section> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="landing-row tabs-social-row no-pad"> 
+     <div class="clearfix"> 
+      <div class="landing-row-offset"> 
+       <div class="landing-col span8"> 
+        <section aria-label="tabs"> 
+         <h2 class="section-header">Tabs</h2> 
+         <div id="secondary-tabs" class="tabs-wrapper secondary-tabs"> 
+          <ul class="tabs clearfix"> 
+           <li class="tab tab1"><a href="#tabs1_calendar" data-tab="true">Calendar</a></li> 
+           <li class="tab tab2"><a href="#tabs1_results" data-tab="true">Results</a></li> 
+           <li class="tab tab3"><a href="#tabs1_standings" data-tab="true">Standings</a></li> 
+          </ul> 
+          <div class="panes"> <a href="#tabs1_calendar" class="tab_title tab_title1" data-tab="true">Calendar</a> 
+           <div id="tabs1_calendar" class="pane pane1"> 
+            <div class="overflow clearfix"> 
+             <div class="schedule-boxscore"> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 17
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Men's Soccer</span> <span class="status"> 6:30 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/vq8n7hbcschjpaiv.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Pacific Lutheran</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="notes">
+                 Parkland, Wash.
+                </div> 
+                <div class="links"> <a aria-label="Men's Soccer event: March 17 06:30 PM: Puget Sound at Pacific Lutheran: Video" href="/links/tlbg2b" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Men's Soccer event: March 17 06:30 PM: Puget Sound at Pacific Lutheran: Live stats" href="/links/hnnxuf" target="_blank"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> <span class="sep"> | </span> <a aria-label="Men's Soccer event: March 17 06:30 PM: Puget Sound at Pacific Lutheran: Preview" href="/sports/msoc/2020-21/releases/20210316lleec3"> <i class="icon gicon-pr" title="Preview"></i> <span class="text">Preview</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Baseball</span> <span class="status"> 12:00 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/74jvwhsmyhfrhz6v.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Pacific (Ore.)</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links empty"> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Baseball</span> <span class="status"> 3:00 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/74jvwhsmyhfrhz6v.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Pacific (Ore.)</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links empty"> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Men's Soccer</span> <span class="status"> 1:30 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/elgbm77g44zl65j3.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Whitworth</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="notes">
+                 Make up from Feb. 13
+                </div> 
+                <div class="links"> <a aria-label="Men's Soccer event: March 20 01:30 PM: Whitworth vs. Puget Sound: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Men's Soccer event: March 20 01:30 PM: Whitworth vs. Puget Sound: Live stats" href="/sports/msoc/2020-21/boxscores/20210320_7bhd.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Softball</span> <span class="status"> 12:00 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/ch2n9ghwwoazioos.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Whitworth</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links"> <a aria-label="Softball event: March 20 12:00 PM: Whitworth vs. Puget Sound: Video" href="/links/pr4seo" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Softball event: March 20 12:00 PM: Whitworth vs. Puget Sound: Live stats" href="/sports/sball/2020-21/boxscores/20210320_romq.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Softball</span> <span class="status"> 2:00 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/ch2n9ghwwoazioos.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Whitworth</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links"> <a aria-label="Softball event: March 20 02:00 PM: Whitworth vs. Puget Sound: Video" href="/links/pr4seo" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Softball event: March 20 02:00 PM: Whitworth vs. Puget Sound: Live stats" href="/sports/sball/2020-21/boxscores/20210320_w6oq.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Track &amp; Field</span> <span class="status"> </span> 
+                </div> 
+                <div class="teams clearfix"> 
+                 <div class="team clearfix"> <span class="team-name"> <span class="va">at</span> at Seattle Pacific</span> 
+                 </div> 
+                </div> 
+                <div class="links empty"> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Women's Lacrosse</span> <span class="status"> 1:00 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/6vxv67jcgfyjrczs.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> George Fox</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links"> <a aria-label="Women's Lacrosse event: March 20 01:00 PM: Puget Sound at George Fox: Video" href="/links/awxdpr" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Women's Lacrosse event: March 20 01:00 PM: Puget Sound at George Fox: Live stats" href="/sports/wlax/2020-21/boxscores/20210320_lfqm.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Women's Soccer</span> <span class="status"> 11:00 AM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/djyqfrd2moeuxqmi.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Whitworth</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="notes">
+                 Make up from Feb. 13
+                </div> 
+                <div class="links"> <a aria-label="Women's Soccer event: March 20 11:00 AM: Whitworth vs. Puget Sound: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Women's Soccer event: March 20 11:00 AM: Whitworth vs. Puget Sound: Live stats" href="/sports/wsoc/2020-21/boxscores/20210320_uwpl.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 20
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Women's Tennis</span> <span class="status"> 2:00 PM </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/os98upvtwh67wt7b.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> George Fox</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links empty"> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> <a href="#tabs1_results" class="tab_title tab_title2" data-tab="true">Results</a> 
+           <div id="tabs1_results" class="pane pane2"> 
+            <div class="overflow clearfix"> 
+             <div class="schedule-boxscore"> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 14
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Baseball</span> <span class="status"> 
+                  <div class="inProgress">
+                   Cancelled
+                  </div> </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/l94yeh3ep2xzb2yt.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Linfield</span> 
+                 <div class="result">
+                  2-3 
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Baseball event: March 14 02:00 PM: Linfield vs. Puget Sound: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Baseball event: March 14 02:00 PM: Linfield vs. Puget Sound: Live stats" href="/sports/bsb/2020-21/boxscores/20210314_rihd.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 14
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Men's Soccer</span> <span class="status"> Final - 2OT </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/y1mtf3tmr94p5drs.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Whitman</span> 
+                 <div class="result">
+                  T, 1-1
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Men's Soccer event: March 14 01:30 PM: Puget Sound at Whitman: Recap" href="/sports/msoc/2020-21/releases/20210314sv10pl"> <i class="icon gicon-rc" title="Recap"></i> <span class="text">Recap</span> </a> <span class="sep"> | </span> <a aria-label="Men's Soccer event: March 14 01:30 PM: Puget Sound at Whitman: Box Score" href="/sports/msoc/2020-21/boxscores/20210314_n8al.xml"> <i class="icon gicon-bs" title="Box Score"></i> <span class="text">Box Score</span> </a> <span class="sep"> | </span> <a aria-label="Men's Soccer event: March 14 01:30 PM: Puget Sound at Whitman: Video" href="/links/w6eqm4" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 14
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Baseball</span> <span class="status"> Cancelled </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/l94yeh3ep2xzb2yt.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Linfield</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links"> <a aria-label="Baseball event: March 14 12:00 PM: Linfield vs. Puget Sound: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Baseball event: March 14 12:00 PM: Linfield vs. Puget Sound: Live stats" href="/sports/bsb/2020-21/boxscores/20210314_8bzj.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> <span class="sep"> | </span> <a aria-label="Baseball event: March 14 12:00 PM: Linfield vs. Puget Sound: Preview" href="/sports/bsb/2020-21/releases/20210311unnhsn"> <i class="icon gicon-pr" title="Preview"></i> <span class="text">Preview</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 14
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Women's Soccer</span> <span class="status"> Final </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/0gsblx9vjyhohpot.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Whitman</span> 
+                 <div class="result">
+                  W, 4-0
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Women's Soccer event: March 14 11:00 AM: Puget Sound at Whitman: Recap" href="/sports/wsoc/2020-21/releases/20210314o7ffps"> <i class="icon gicon-rc" title="Recap"></i> <span class="text">Recap</span> </a> <span class="sep"> | </span> <a aria-label="Women's Soccer event: March 14 11:00 AM: Puget Sound at Whitman: Box Score" href="/sports/wsoc/2020-21/boxscores/20210314_rrco.xml"> <i class="icon gicon-bs" title="Box Score"></i> <span class="text">Box Score</span> </a> <span class="sep"> | </span> <a aria-label="Women's Soccer event: March 14 11:00 AM: Puget Sound at Whitman: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 14
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Men's Tennis</span> <span class="status"> Final </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/gugzgw2vgearpyi2.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Whitman</span> 
+                 <div class="result">
+                  L, 9-0
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Men's Tennis event: March 14 10:00 AM: Whitman vs. Puget Sound: Recap" href="/sports/mten/2020-21/releases/20210314sjq2pg"> <i class="icon gicon-rc" title="Recap"></i> <span class="text">Recap</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 13
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Women's Volleyball</span> <span class="status"> Final </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/y3v44j8yr0o98wi0.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Whitworth</span> 
+                 <div class="result">
+                  W, 3-1
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Women's Volleyball event: March 13 05:00 PM: Puget Sound at Whitworth: Recap" href="/sports/wvball/2020-21/releases/20210313xmsiah"> <i class="icon gicon-rc" title="Recap"></i> <span class="text">Recap</span> </a> <span class="sep"> | </span> <a aria-label="Women's Volleyball event: March 13 05:00 PM: Puget Sound at Whitworth: Box Score" href="/sports/wvball/2020-21/boxscores/20210313_e22d.xml"> <i class="icon gicon-bs" title="Box Score"></i> <span class="text">Box Score</span> </a> <span class="sep"> | </span> <a aria-label="Women's Volleyball event: March 13 05:00 PM: Puget Sound at Whitworth: Video" href="/links/73tr3l" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 13
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Baseball</span> <span class="status"> Final </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/l94yeh3ep2xzb2yt.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Linfield</span> 
+                 <div class="result">
+                  L, 12-2
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Baseball event: March 13 02:00 PM: Linfield vs. Puget Sound: Recap" href="/sports/bsb/2020-21/releases/20210313uj8q46"> <i class="icon gicon-rc" title="Recap"></i> <span class="text">Recap</span> </a> <span class="sep"> | </span> <a aria-label="Baseball event: March 13 02:00 PM: Linfield vs. Puget Sound: Box Score" href="/sports/bsb/2020-21/boxscores/20210313_jbvi.xml"> <i class="icon gicon-bs" title="Box Score"></i> <span class="text">Box Score</span> </a> <span class="sep"> | </span> <a aria-label="Baseball event: March 13 02:00 PM: Linfield vs. Puget Sound: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 13
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Men's Soccer</span> <span class="status"> Final </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/y1mtf3tmr94p5drs.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Whitman</span> 
+                 <div class="result">
+                  L, 2-0
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Men's Soccer event: March 13 01:30 PM: Puget Sound at Whitman: Recap" href="/sports/msoc/2020-21/releases/20210313tcbany"> <i class="icon gicon-rc" title="Recap"></i> <span class="text">Recap</span> </a> <span class="sep"> | </span> <a aria-label="Men's Soccer event: March 13 01:30 PM: Puget Sound at Whitman: Box Score" href="/sports/msoc/2020-21/boxscores/20210313_rczw.xml"> <i class="icon gicon-bs" title="Box Score"></i> <span class="text">Box Score</span> </a> <span class="sep"> | </span> <a aria-label="Men's Soccer event: March 13 01:30 PM: Puget Sound at Whitman: Video" href="/links/w6eqm4" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 13
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Baseball</span> <span class="status"> Final </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/l94yeh3ep2xzb2yt.png" alt="">
+                 </div> <span class="team-name"> <span class="va">vs.</span> Linfield</span> 
+                 <div class="result">
+                  W, 7-2
+                 </div> 
+                </div> 
+                <div class="links"> <a aria-label="Baseball event: March 13 11:00 AM: Linfield vs. Puget Sound: Recap" href="/sports/bsb/2020-21/releases/20210313uj8q46"> <i class="icon gicon-rc" title="Recap"></i> <span class="text">Recap</span> </a> <span class="sep"> | </span> <a aria-label="Baseball event: March 13 11:00 AM: Linfield vs. Puget Sound: Box Score" href="/sports/bsb/2020-21/boxscores/20210313_n0tt.xml"> <i class="icon gicon-bs" title="Box Score"></i> <span class="text">Box Score</span> </a> <span class="sep"> | </span> <a aria-label="Baseball event: March 13 11:00 AM: Linfield vs. Puget Sound: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="event-box"> 
+               <div class="event-info clearfix"> 
+                <div class="date clearfix">
+                 Mar 13
+                </div> 
+                <div class="sport-status clearfix"> <span class="sport">Women's Soccer</span> <span class="status"> Cancelled </span> 
+                </div> 
+                <div class="team"> 
+                 <div class="team-logo">
+                  <img src="https://cdn.prestosports.com/action/cdn/logos/id/0gsblx9vjyhohpot.png" alt="">
+                 </div> <span class="team-name"> <span class="va">at</span> Whitman</span> 
+                 <div class="result"></div> 
+                </div> 
+                <div class="links"> <a aria-label="Women's Soccer event: March 13 11:00 AM: Puget Sound at Whitman: Video" href="/links/pmbqu2" target="_blank"> <i class="icon gicon-vi" title="Video"></i> <span class="text">Video</span> </a> <span class="sep"> | </span> <a aria-label="Women's Soccer event: March 13 11:00 AM: Puget Sound at Whitman: Live stats" href="/sports/wsoc/2020-21/boxscores/20210313_7t4q.xml"> <i class="icon gicon-ls" title="Live stats"></i> <span class="text">Live stats</span> </a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> <a href="#tabs1_standings" class="tab_title tab_title3" data-tab="true">Standings</a> 
+           <div id="tabs1_standings" class="pane pane3"> 
+            <div class="overflow clearfix"> 
+             <div class="content-switcher" data-module="jswitcher" data-ajax="false"> 
+              <div class="switcher-list" aria-label="Football" role="listbox" tabindex="0"> 
+               <div class="selection">
+                Football
+               </div> 
+               <ul> 
+                <li class="active"><a href="/sports/fball/standings?tmpl=mod-standings-template" role="option" aria-label="Football" aria-selected="true">Football</a></li> 
+                <li><a href="/sports/msoc/standings?tmpl=mod-standings-template" role="option" aria-label="Men's Soccer" aria-selected="false">Men's Soccer</a></li> 
+                <li><a href="/sports/wsoc/standings?tmpl=mod-standings-template" role="option" aria-label="Women's Soccer" aria-selected="false">Women's Soccer</a></li> 
+                <li><a href="/sports/wvball/standings?tmpl=mod-standings-template" role="option" aria-label="Volleyball" aria-selected="false">Volleyball</a></li> 
+                <li><a href="/sports/mbkb/standings?tmpl=mod-standings-template" role="option" aria-label="Men's Basketball" aria-selected="false">Men's Basketball</a></li> 
+                <li><a href="/sports/wbkb/standings?tmpl=mod-standings-template" role="option" aria-label="Women's Basketball" aria-selected="false">Women's Basketball</a></li> 
+                <li><a href="/sports/bsb/standings?tmpl=mod-standings-template" role="option" aria-label="Baseball" aria-selected="false">Baseball</a></li> 
+                <li><a href="/sports/wlax/standings?tmpl=mod-standings-template" role="option" aria-label="Women's lacrosse" aria-selected="false">Women's lacrosse</a></li> 
+                <li><a href="/sports/sball/standings?tmpl=mod-standings-template" role="option" aria-label="Softball" aria-selected="false">Softball</a></li> 
+                <li><a href="/sports/mten/standings?tmpl=mod-standings-template" role="option" aria-label="Men's Tennis" aria-selected="false">Men's Tennis</a></li> 
+                <li><a href="/sports/wten/standings?tmpl=mod-standings-template" role="option" aria-label="Women's Tennis" aria-selected="false">Women's Tennis</a></li> 
+               </ul> 
+              </div> 
+              <div class="content-panels"> 
+               <div class="content-panel clearfix  active "> 
+                <div class="mod-standings fball style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 7-0 </td> 
+                    <td class="stats-col overall-rec"> 8-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 5-2 </td> 
+                    <td class="stats-col overall-rec"> 6-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 4-3 </td> 
+                    <td class="stats-col overall-rec"> 6-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 4-3 </td> 
+                    <td class="stats-col overall-rec"> 5-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 4-3 </td> 
+                    <td class="stats-col overall-rec"> 4-6 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 3-4 </td> 
+                    <td class="stats-col overall-rec"> 4-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 1-6 </td> 
+                    <td class="stats-col overall-rec"> 2-7 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 0-7 </td> 
+                    <td class="stats-col overall-rec"> 1-8 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/fball/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings msoc style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 11-1-2 </td> 
+                    <td class="stats-col overall-rec"> 14-5-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 10-4 </td> 
+                    <td class="stats-col overall-rec"> 13-7 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 8-4-2 </td> 
+                    <td class="stats-col overall-rec"> 11-4-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 8-6 </td> 
+                    <td class="stats-col overall-rec"> 10-9-1 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 6-7-1 </td> 
+                    <td class="stats-col overall-rec"> 9-7-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 3-9-2 </td> 
+                    <td class="stats-col overall-rec"> 5-12-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 2-9-3 </td> 
+                    <td class="stats-col overall-rec"> 3-12-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 2-10-2 </td> 
+                    <td class="stats-col overall-rec"> 5-12-3 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/msoc/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings wsoc style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 14-1-1 </td> 
+                    <td class="stats-col overall-rec"> 16-3-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 11-2-3 </td> 
+                    <td class="stats-col overall-rec"> 13-4-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 10-4-2 </td> 
+                    <td class="stats-col overall-rec"> 11-7-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 8-6-2 </td> 
+                    <td class="stats-col overall-rec"> 9-8-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 8-6-2 </td> 
+                    <td class="stats-col overall-rec"> 9-9-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 5-9-2 </td> 
+                    <td class="stats-col overall-rec"> 6-12-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 4-12 </td> 
+                    <td class="stats-col overall-rec"> 4-15 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 2-10-4 </td> 
+                    <td class="stats-col overall-rec"> 4-10-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 1-13-2 </td> 
+                    <td class="stats-col overall-rec"> 3-14-2 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/wsoc/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings wvball style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 14-2 </td> 
+                    <td class="stats-col overall-rec"> 21-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 13-3 </td> 
+                    <td class="stats-col overall-rec"> 19-8 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 11-5 </td> 
+                    <td class="stats-col overall-rec"> 18-8 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 9-7 </td> 
+                    <td class="stats-col overall-rec"> 12-12 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 7-9 </td> 
+                    <td class="stats-col overall-rec"> 10-15 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 6-10 </td> 
+                    <td class="stats-col overall-rec"> 13-10 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 6-10 </td> 
+                    <td class="stats-col overall-rec"> 10-14 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 5-11 </td> 
+                    <td class="stats-col overall-rec"> 11-13 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 1-15 </td> 
+                    <td class="stats-col overall-rec"> 6-18 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/wvball/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings mbkb style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 14-2 </td> 
+                    <td class="stats-col overall-rec"> 23-6 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 14-2 </td> 
+                    <td class="stats-col overall-rec"> 20-6 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 13-3 </td> 
+                    <td class="stats-col overall-rec"> 20-8 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 10-6 </td> 
+                    <td class="stats-col overall-rec"> 14-12 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 7-9 </td> 
+                    <td class="stats-col overall-rec"> 11-14 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 6-10 </td> 
+                    <td class="stats-col overall-rec"> 12-13 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 4-12 </td> 
+                    <td class="stats-col overall-rec"> 8-17 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 4-12 </td> 
+                    <td class="stats-col overall-rec"> 7-18 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 0-16 </td> 
+                    <td class="stats-col overall-rec"> 1-24 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/mbkb/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings wbkb style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 15-1 </td> 
+                    <td class="stats-col overall-rec"> 26-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 11-5 </td> 
+                    <td class="stats-col overall-rec"> 23-6 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 11-5 </td> 
+                    <td class="stats-col overall-rec"> 17-9 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 7-9 </td> 
+                    <td class="stats-col overall-rec"> 14-11 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 7-9 </td> 
+                    <td class="stats-col overall-rec"> 13-13 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 7-9 </td> 
+                    <td class="stats-col overall-rec"> 13-13 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 6-10 </td> 
+                    <td class="stats-col overall-rec"> 12-13 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 6-10 </td> 
+                    <td class="stats-col overall-rec"> 11-14 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 2-14 </td> 
+                    <td class="stats-col overall-rec"> 3-21 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/wbkb/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings bsb style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 7-2 </td> 
+                    <td class="stats-col overall-rec"> 11-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 7-2 </td> 
+                    <td class="stats-col overall-rec"> 9-7 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 4-2 </td> 
+                    <td class="stats-col overall-rec"> 11-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 5-4 </td> 
+                    <td class="stats-col overall-rec"> 8-8 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 3-3 </td> 
+                    <td class="stats-col overall-rec"> 4-13 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 2-4 </td> 
+                    <td class="stats-col overall-rec"> 6-7 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 3-6 </td> 
+                    <td class="stats-col overall-rec"> 7-9 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 3-6 </td> 
+                    <td class="stats-col overall-rec"> 5-11 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 2-7 </td> 
+                    <td class="stats-col overall-rec"> 5-11 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/bsb/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings wlax style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 1-1 </td> 
+                    <td class="stats-col overall-rec"> 2-1 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 2-0 </td> 
+                    <td class="stats-col overall-rec"> 2-1 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 0-2 </td> 
+                    <td class="stats-col overall-rec"> 1-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 0-2 </td> 
+                    <td class="stats-col overall-rec"> 1-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 0-1 </td> 
+                    <td class="stats-col overall-rec"> 0-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 1-0 </td> 
+                    <td class="stats-col overall-rec"> 1-1 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 2-0 </td> 
+                    <td class="stats-col overall-rec"> 2-1 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/wlax/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings sball style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 4-0 </td> 
+                    <td class="stats-col overall-rec"> 12-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 4-0 </td> 
+                    <td class="stats-col overall-rec"> 10-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 3-1 </td> 
+                    <td class="stats-col overall-rec"> 4-7 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 2-2 </td> 
+                    <td class="stats-col overall-rec"> 5-10 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 3-5 </td> 
+                    <td class="stats-col overall-rec"> 4-9 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 3-5 </td> 
+                    <td class="stats-col overall-rec"> 3-7 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 1-3 </td> 
+                    <td class="stats-col overall-rec"> 5-9 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 0-4 </td> 
+                    <td class="stats-col overall-rec"> 4-11 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/sball/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings mten style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 2-0 </td> 
+                    <td class="stats-col overall-rec"> 3-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 2-0 </td> 
+                    <td class="stats-col overall-rec"> 2-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 1-0 </td> 
+                    <td class="stats-col overall-rec"> 3-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 1-1 </td> 
+                    <td class="stats-col overall-rec"> 2-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 1-1 </td> 
+                    <td class="stats-col overall-rec"> 3-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 0-1 </td> 
+                    <td class="stats-col overall-rec"> 4-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 0-1 </td> 
+                    <td class="stats-col overall-rec"> 2-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 0-1 </td> 
+                    <td class="stats-col overall-rec"> 0-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 0-2 </td> 
+                    <td class="stats-col overall-rec"> 0-4 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/mten/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+               <div class="content-panel clearfix "> 
+                <div class="mod-standings wten style1" data-module="cssloader" data-stylesheet-url="https://cdn.prestosports.com/action/cdn/info/modules/css/mod-standings-styles.css"> 
+                 <table> 
+                  <thead> 
+                   <tr> 
+                    <th class="label-col text team-name accent-bg" scope="col">Schools</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Conf</th> 
+                    <th class="col-header stats-col accent-bg" scope="col">Overall</th> 
+                   </tr> 
+                  </thead> 
+                  <tbody> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Linfield </th> 
+                    <td class="stats-col overall-rec"> 2-0 </td> 
+                    <td class="stats-col overall-rec"> 6-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitman </th> 
+                    <td class="stats-col overall-rec"> 2-0 </td> 
+                    <td class="stats-col overall-rec"> 5-2 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific Lutheran </th> 
+                    <td class="stats-col overall-rec"> 1-0 </td> 
+                    <td class="stats-col overall-rec"> 4-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> George Fox </th> 
+                    <td class="stats-col overall-rec"> 1-1 </td> 
+                    <td class="stats-col overall-rec"> 5-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Lewis &amp; Clark </th> 
+                    <td class="stats-col overall-rec"> 1-1 </td> 
+                    <td class="stats-col overall-rec"> 2-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Whitworth </th> 
+                    <td class="stats-col overall-rec"> 0-1 </td> 
+                    <td class="stats-col overall-rec"> 4-4 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Puget Sound </th> 
+                    <td class="stats-col overall-rec"> 0-1 </td> 
+                    <td class="stats-col overall-rec"> 2-5 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Pacific (Ore.) </th> 
+                    <td class="stats-col overall-rec"> 0-1 </td> 
+                    <td class="stats-col overall-rec"> 1-3 </td> 
+                   </tr> 
+                   <tr> 
+                    <th class="label-col team-name text" scope="row"> Willamette </th> 
+                    <td class="stats-col overall-rec"> 0-2 </td> 
+                    <td class="stats-col overall-rec"> 0-8 </td> 
+                   </tr> 
+                  </tbody> 
+                 </table> <a href="/sports/wten/standings" class="full-standings">Full Standings</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <script>
+(function($) {
+$(function() {
+
+var api;
+var root = $('#secondary-tabs');
+var tabs = root.children('.tabs');
+var panes = root.children('.panes').children('.pane');
+var tabTitles = root.children('.panes').children('.tab_title[data-tab]');
+
+api = tabs.tabs(panes, {
+    current: 'active',
+	tabs: 'a[data-tab]',
+    initialIndex: 0,
+    onBeforeClick: function(e, i) {
+        tabs.removeClass('state' + (this.getIndex() + 1)).addClass('state' + (i + 1));
+        panes.removeClass('active').eq(i).addClass('active');
+    },
+	onClick: function() {
+		$(document).trigger("ui_updated");
+	}
+}).data('tabConfig', { 'initialIndex': 0 }).data('tabs');
+
+tabTitles.click(function(e) {
+    e.preventDefault();
+    if (typeof api !== 'undefined') {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            tabTitles.removeClass('active');
+            $(this).addClass('active');
+            api.click(tabTitles.index(this));
+        }
+    }
+});
+
+});
+})(jQuery);
+</script> 
+        </section> 
+       </div> 
+       <div class="landing-col span4"> 
+        <section aria-label="social tabs"> 
+         <h2 class="section-header">Social Tabs</h2> 
+         <div id="social-tabs" class="tabs-wrapper social-tabs"> 
+          <ul class="tabs clearfix"> 
+           <li class="tab tab1"><a href="#tabs2_facebook-fill" data-tab="true">Facebook-fill</a></li> 
+           <li class="tab tab2"><a href="#tabs2_twitter" data-tab="true">Twitter</a></li> 
+           <li class="tab tab3"><a href="#tabs2_youtube" data-tab="true">Youtube</a></li> 
+          </ul> 
+          <div class="panes"> <a href="#tabs2_facebook-fill" class="tab_title tab_title1" data-tab="true">Facebook-fill</a> 
+           <div id="tabs2_facebook-fill" class="pane pane1"> 
+            <div class="overflow clearfix"> 
+             <div class="fb-page" data-href="https://www.facebook.com/psloggers/" data-tabs="timeline" data-width="500" data-height="595" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div> 
+            </div> 
+           </div> <a href="#tabs2_twitter" class="tab_title tab_title2" data-tab="true">Twitter</a> 
+           <div id="tabs2_twitter" class="pane pane2"> 
+            <div class="overflow clearfix">
+             <a class="twitter-timeline" href="https://twitter.com/PSLoggers" data-widget-id="525682237673439232" height="590" width="339">Tweets by @PSLoggers</a> 
+             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div> 
+           </div> <a href="#tabs2_youtube" class="tab_title tab_title3" data-tab="true">Youtube</a> 
+           <div id="tabs2_youtube" class="pane pane3"> 
+            <div class="overflow clearfix">
+             <h3 class="box-title"><span>LOGGER</span><span>SPORTS</span><span>NETWORK</span><span>#L<span class="small-l">OGGER</span>UP</span></h3> 
+             <div class="youtube-wrapper clearfix" data-module="youtube-feed" data-playlistid="PL1MfyNV_F6dTFZ9H3ulf6QMcPZZWMQtmN" data-playable="true" data-maxresults="10" data-responsive="true" data-show-player-title="false" data-show-caption="1" data-show-player-description="false"> 
+              <div class="player yt-player-holder"> 
+               <div id="youtube-player1"></div> 
+              </div> 
+              <div class="playlist"> 
+               <div class="overflow"></div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <script>
+(function($) {
+$(function() {
+
+var api;
+var root = $('#social-tabs');
+var tabs = root.children('.tabs');
+var panes = root.children('.panes').children('.pane');
+var tabTitles = root.children('.panes').children('.tab_title[data-tab]');
+
+api = tabs.tabs(panes, {
+    current: 'active',
+	tabs: 'a[data-tab]',
+    initialIndex: 0,
+    onBeforeClick: function(e, i) {
+        tabs.removeClass('state' + (this.getIndex() + 1)).addClass('state' + (i + 1));
+        panes.removeClass('active').eq(i).addClass('active');
+    },
+	onClick: function() {
+		$(document).trigger("ui_updated");
+	}
+}).data('tabConfig', { 'initialIndex': 0 }).data('tabs');
+
+tabTitles.click(function(e) {
+    e.preventDefault();
+    if (typeof api !== 'undefined') {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            tabTitles.removeClass('active');
+            $(this).addClass('active');
+            api.click(tabTitles.index(this));
+        }
+    }
+});
+
+});
+})(jQuery);
+</script> 
+        </section> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </main> 
+  </div> 
+  <footer id="site-footer" class="site-footer"> 
+   <div class="container clearfix"> 
+    <p class="footer-text"> <span class="title">University of Puget Sound Athletics</span> <a href="https://goo.gl/maps/N65z7moGFkvM7ig26" target="_blank">1500 N. Warner St. Tacoma, WA 98416-1044</a><span>|</span> Phone: <a href="tel:2538793140" target="_blank">253.879.3140</a> <span>|</span> Fax: 253.879.3634<span>|</span> <a href="http://prestosports.com/privacy-policy" target="_blank">Privacy Policy</a><span>|</span> <a href="https://www.pugetsound.edu/" target="_blank">PUGETSOUND.EDU</a> </p> 
+    <div class="navbar-image footer-logos"> 
+     <ul class="clearfix"> 
+      <li> <a href="http://www.ncaa.org/d3" target="_blank" aria-label="NCAA"> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/images/setup/2019_footer_logo_1.jpg" alt="NCAA" class="lazyload"> </a> </li> 
+      <li> <a href="http://www.nwcsports.com/" target="_blank" aria-label="NWC"> <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/images/setup/2019_footer_logo_2.jpg" alt="NWC" class="lazyload"> </a> </li> 
+     </ul> 
+    </div> <!-- from: generic theme -->
+    <script type="text/javascript" src="/info/ga/include.js" async data-uid="UA-1939879-1"></script> 
+   </div> 
+  </footer> 
+  <div class="site-developer inverted bg-primary" role="banner"> <a href="https://prestosports.com" target="_blank"> <img class="img-responsive site-developer-logo" src="https://s3.amazonaws.com/logos.psbin.com/prestosports/prestosports-logo-white.png" alt="Developed by PrestoSports"> </a> 
+  </div> 
+ </div> 
+</div> 
+<script type="text/javascript">var _qevents = _qevents || [];(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge")+ ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);})();</script>
+<script type="text/javascript">_qevents.push( { qacct:"p-c1MZx5LfVe-Xw"} );</script>
+<noscript aria-hidden="true">
+ <div style="display: none;">
+  <img src="http://pixel.quantserve.com/pixel/p-c1MZx5LfVe-Xw" height="1" width="1" alt="">
+ </div>
+</noscript>
+<script>var _comscore = _comscore || [];_comscore.push({ c1: "2", c2: "19291688" });(function() {var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";el.parentNode.insertBefore(s, el);})();</script>
+<noscript aria-hidden="true">
+ <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=19291688&amp;cv=2.0&amp;cj=1" alt="">
+</noscript> <!-- dropoff-scripts --> 
+<script type="text/javascript" src="https://cdn.prestosports.com/action/cdn/info/jquery.easing.js"></script> 
+<script type="text/javascript" src="https://cdn.prestosports.com/action/cdn/info/carousel_plugin.js"></script> 
+<script type="text/javascript" src="https://cdn.prestosports.com/action/cdn/info/jquery.touchSwipe.min.js"></script> 
+<div id="fb-root"></div> 
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script> 
+<script type="text/javascript" src="https://cdn.prestosports.com/action/cdn/info/cookie-handler.js"></script> 
+<script type="text/javascript">
+$(function() {
+	if (readCookie('adminuser')) {
+		$('body').append('<span id="edit-page-btn" style="display: block; padding: 10px; z-index: 9999; background: #000; color: #fff; font-size: 12px; position: fixed; right: 0; top: 0; cursor: default">Edit Page</span>');
+		$('#edit-page-btn').click(function() {
+			url = document.location.protocol + '//' + document.location.hostname
+			if (document.location.port) url += ':' + document.location.port;
+			url += '/admin/content/wiki/g2g';
+			url += document.location.pathname;
+			window.location = url;
+		});
+	}
+});
+</script> 
+<script type="text/javascript">
+$(function() {
+  if (window.self == window.top) {
+    return;
+  }
+  var heroic = document.referrer.indexOf("herosports.com/");
+  if (heroic > -1) {
+    alert("We do not allow HERO Sports to frame our site.");
+    window.top.location = window.location;
+  }
+});
+</script> 
+<script>
+        window.requirejsBaseUrl = "https://cdn.prestosports.com/action/cdn/info";
+    </script> 
+<script data-main="https://cdn.prestosports.com/action/cdn/info/main.js" src="https://cdn.prestosports.com/action/cdn/info/vendor/require.js"></script> <!-- rum footer --> 
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam-cell.nr-data.net","licenseKey":"a8324e80d1","agent":"","beacon":"bam-cell.nr-data.net","applicationTime":1411,"applicationID":"1004718","transactionName":"MgcAZENYXhJYVkFdXQtNJFldTVUTFnFaWVMMDEJeUFRVQV9cWUBXFw==","queueTime":0}</script> 
+<div id="index_pages_f3cbbcd1-853c-4e5e-8cb5-e21d1803b33b" key="googleAdContainer" adspot="PS_WEB_INDEX_LEADERBOARD" sizes="[[320,50],[728,90],[970,90]]"></div> 
+<script type="text/javascript" src="//securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script type="text/javascript" src="/info/googleService/googleService.js"></script>
+<script>jQuery(document).ready(function (){ ps.info.ads.GoogleAds.render('/1025241/PS_WEB/'); ps.info.ads.GoogleAds.cleanEmptySpots(); } );</script>
+</body>
+</doc>

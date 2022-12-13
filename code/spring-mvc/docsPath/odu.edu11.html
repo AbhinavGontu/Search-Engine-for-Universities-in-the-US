@@ -1,0 +1,295 @@
+<doc>
+<filename>odu.edu11.html</filename>
+<url>http://conferenceusa.com/watch/default.aspx?path=odu</url>
+<ip>67.192.28.17</ip>
+<title>CUSA.tv | Powered by SIDEARM Showcase</title>
+<body>
+<img src="https://pixel.sitescout.com/iap/a3feb7ac18cadc13" width="1" height="1" style="position: absolute; left: -150px;">
+<img src="https://clickserv.sitescout.com/conv/5c9c138845bb9de3" width="1" height="1" style="position: absolute; left: -150px;"><!-- Begin comScore Tag --> 
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "3005086" });
+    (function() {
+      var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+      s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+      el.parentNode.insertBefore(s, el);
+    })();
+  </script> 
+<noscript> 
+ <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=3005086&amp;cv=2.0&amp;cj=1" alt=""> 
+</noscript> <!-- End comScore Tag -->  <!-- ko loadAccount: {for:$root.user, into:$root.register}, loadAccountIf: $root.user --> <!-- /ko --> <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]--> 
+<div class="ui-helper-hidden-accessible"> <!-- ko ifnot: config().allFree --> <!-- ko ifnot: user --> 
+ <div class="utility-links row"> <a class="button single-line small-4 columns primary" href="#" data-bind="clickDeferred: beginRegisterUser" tabindex="2">Sign Up</a> <a class="button single-line small-4 columns" href="#" data-bind="clickDeferred: beginAuthenticateUser" tabindex="2">Log In</a> <a class="button small-4 columns" href="#" data-bind="attr: {href:techSupportUrl}" tabindex="2"> <small>Contact</small> <span>Support</span> </a> 
+ </div> <!-- /ko --> <!-- /ko --> 
+</div> 
+<div class="off-canvas-wrap" data-offcanvas> 
+ <div class="inner-wrap"> 
+  <aside class="left-off-canvas-menu" aria-hidden="true"> 
+   <ul class="off-canvas-list"> 
+    <li><label>Navigation</label></li> 
+    <li><a href="/" data-bind="text: location.host.replace('www.', '').toLowerCase()">Home Page</a></li> <!-- ko foreach: navigation --> 
+    <li><a data-bind="text: title, attr: {href:link,target:target}, css:{'ui-state-active':isActive}"></a></li> <!-- /ko --> <!-- ko if: socialAds().length > 0 --> 
+    <li><label>Updates</label></li> <!-- /ko --> <!-- ko foreach: socialAds --> 
+    <li><a data-bind="text: title, attr: {href:link}"></a></li> <!-- /ko --> <!-- ko ifnot: config().allFree --> <!-- ko with: user --> 
+    <li><label>Hello, <span data-bind="text: FirstName"></span></label></li> 
+    <li><a href="/watch/subscriptions.aspx">View your Subscriptions</a></li> 
+    <li><a href="/watch/purchase.aspx?process=purchase">Purchase a Subscription</a></li> 
+    <li><a href="/watch/purchase.aspx?process=update">Edit Account</a></li> 
+    <li><a href="#" data-bind="click: $root.logoutUser">Log Out</a></li> <!-- /ko --> <!-- ko ifnot: user --> 
+    <li><label>Account</label></li> 
+    <li><a href="#" data-bind="clickDeferred: beginRegisterUser">Sign Up</a></li> 
+    <li><a href="#" data-bind="clickDeferred: beginAuthenticateUser">Log In</a></li> <!-- /ko --> <!-- /ko --> 
+   </ul> 
+  </aside> <a class="exit-off-canvas"></a> 
+  <main class="grid"> 
+   <header class="cols_20"> <a class="left-off-canvas-toggle hide-for-large-up"><i class="icon-menu"></i></a> <a class="logo" href="/" tabindex="1"> <!-- ko if: theme().identityImage --> <img src="" alt="" data-bind="attr: {src:theme().identityImage, alt: theme().identityName}" class="custom-logo"> <!-- /ko --> <!-- ko if: theme().identityName && !theme().identityImage --> <img src="" alt="" data-bind="attr: {src: '/images/logos/site/site.png', alt: theme().identityName}"> <span data-bind="text: theme().identityName" class="aa-name">All Access</span> <!-- /ko --> <i class="before"></i> <i class="after"></i> <i class="back"></i> </a> 
+    <div class="ad_sponsor"> 
+    </div> 
+    <div class="ads"> <!-- ko with: theme().socialLinks --> <!-- ko with: $data.twitter --> 
+     <div class="ad_watch">
+      <a data-bind="attr: { href: 'http://twitter.com/' + $data }" target="_blank"><i class="icon-twitter"></i></a>
+     </div> <!-- /ko --> <!-- ko with: $data.facebook --> 
+     <div class="ad_watch">
+      <a data-bind="attr: { href: 'http://facebook.com/' + $data }" target="_blank"><i class="icon-facebook-squared"></i></a>
+     </div> <!-- /ko --> <!-- /ko --> 
+    </div> <i class="angle-left"></i> <i class="angle-right"></i> 
+   </header> 
+   <div class="cols_20"> <!-- ko if: config().allFree --> <a class="contact-support-circle" href="#" data-bind="attr: {href:techSupportUrl}"> <span>?</span> Help </a> <!-- /ko --> 
+    <ul data-bind="foreach: navigation, visible: navigation().length > 1 || (navigation()[0] &amp;&amp; navigation()[0].image_url != null)" class="menu"> 
+     <li> <a data-bind="attr: {href:link, target:target}, css:{'ui-state-active':isActive}"> <!-- ko ifnot:$data.image_url --> <span data-bind="text: title"></span> <!-- /ko --> <!-- ko if:$data.image_url --> <img data-bind="attr: { src: image_url, alt: title }" alt=""> <!-- /ko --> </a> </li> 
+    </ul> 
+   </div> 
+   <div class="cols_13 main-column"> <!-- ko if: user() && !user().HasPaymentMethod && register.hasRecurringPackage() --> 
+    <div class="alert-box warning">
+      Your subscription expires on <span data-bind="text: moment(register.lastTokenExpires()).format('MMMM Do YYYY')"></span>. You must update your billing info to ensure your subscription continues to be available. <a href="#" data-bind="click: beginUpdateProfile">Click here to update your billing info.</a> 
+    </div> <!-- /ko --> <!-- set a cookie when dismissing the announcement, we won't show the same announcement again --> <!-- ko if: config().announcement && lastAnnouncementDismissed() !== config().announcement.Id --> 
+    <div data-alert class="alert-box radius" data-bind="foundation: {}"> <span data-bind="html: linkifiedAnnouncement"></span> <a href="#" class="close" data-bind="on.click: lastAnnouncementDismissed(config().announcement.Id)">×</a> 
+    </div> <!-- /ko --> 
+    <div id="player"> 
+     <div class="aspect"> <iframe src="/watch/widget/blank.html" data-bind="playVideo: selectedVideo" frameborder="0" allowfullscreen="true"></iframe> 
+     </div> <!-- ko if: liveStatWidgetUrl --> <iframe id="videoPlayerStatsWidget" allowtransparency="true" data-bind="attr: { src: liveStatWidgetUrl }"></iframe> <!-- /ko --> <!-- ko ifnot: liveStatWidgetUrl --> 
+     <div data-bind="with: selectedVideo" class="info"> 
+      <div data-bind="text: title"></div> 
+     </div> <!-- /ko --> 
+    </div> 
+    <div class="types" data-bind="visible: config().showViewTabs"> 
+     <input type="radio" name="type" data-bind="checked: filter.type" value="Live" id="type1"> <label for="type1">Live / Upcoming Events</label> 
+     <input type="radio" name="type" data-bind="checked: filter.type" value="Archive" id="type2"> <label for="type2">On Demand</label> 
+    </div> 
+    <div class="filters"> <select data-bind="options:sports, 
+                       optionsValue:&quot;id&quot;, 
+                       optionsText:&quot;name&quot;,
+                       optionsCaption: &quot;All Sports&quot;,
+                       value:filter.sport,
+                       visible: any(sports)"></select> <select data-bind="options:schools, 
+                       optionsValue:&quot;id&quot;, 
+                       optionsText:&quot;name&quot;,
+                       optionsCaption: &quot;All Schools&quot;,
+                       value:filter.school,
+                       visible: any(schools)"></select> <select data-bind="options:categories, 
+                       optionsValue:&quot;id&quot;, 
+                       optionsText:&quot;name&quot;,
+                       optionsCaption: &quot;All Categories&quot;,
+                       value:filter.category,
+                       visible: any(categories)"></select> 
+     <input type="text" style="margin:10px 0 0 10px;width:97%;" data-bind="value:filter.text, valueUpdate: 'afterkeydown'" placeholder="Search..."> 
+    </div> 
+    <div class="media-list-empty" data-bind="visible: noMedia">
+      No media matches your choosen type/sport/school/category 
+    </div> 
+    <div class="media-list-empty" data-bind="visible: mediaGroups.loading">
+      Loading... 
+    </div> 
+    <div class="media-list" data-bind="foreach: mediaGroups"> 
+     <div class="media-list-group"> 
+      <h4 data-bind="text: name, css: key, visible: name"></h4> <!-- ko foreach: items --> 
+      <div class="media-list-item" data-bind="click: $root.playVideo, css: {upcoming: $root.isUpcoming($data) }"> 
+       <div class="poster"> 
+        <img data-bind="fadeInImage: poster, attr: {alt:title}" alt=""> 
+       </div> 
+       <div class="media-info"> 
+        <div class="info"> <span class="live-text" data-bind="visible: $root.isLiveNow($data)">Live Now</span> <span data-bind="mediaDateText: $data, visible: !$root.isLiveNow($data)"></span> / <span data-bind="text: $data.sport_title || &quot;&quot;"></span> 
+        </div> 
+        <div class="title" data-bind="text: title"></div> 
+        <div class="free" data-bind="visible: free">
+         FREE
+        </div> 
+        <div class="audio-only" data-bind="visible: format == &quot;Audio&quot;">
+         AUDIO ONLY
+        </div> 
+        <div class="locked" data-bind="visible: !authorized">
+         <i class="icon-lock"></i>
+        </div> 
+       </div> 
+       <div class="actions"> <button data-bind="click: $root.tweet, clickBubble: false"><i class="icon-twitter"></i> Tweet</button> <button data-bind="click: $root.fbShare, clickBubble: false"><i class="icon-facebook-squared"></i> Share</button> <button data-bind="visible: formats.httpDownload, click: $root.downloadDialog, clickBubble: false">Download</button> <button data-bind="click: $root.showLink, clickBubble: false"><i class="icon-link"></i> Link</button> <button data-bind="visible: $root.allowFanEmbedding, click: $root.revealEmbedCode, clickBubble: false"><i class="icon-code"></i> Embed</button> 
+       </div> <!-- ko if: $root.allowFanEmbedding --> 
+       <div class="watch-embed-code-generate" style="display:none"> 
+        <h4>Link to this Video</h4> 
+        <input type="text" data-bind="value: $root.getShareUrl($data)"> 
+        <h4>Embed this Video</h4> <textarea data-bind="embedCode: $data"></textarea> <label><input type="checkbox" data-bind="checked: $root.autoPlayEmbeds"> Autoplay</label> 
+       </div> <!-- /ko --> 
+      </div> <!-- /ko --> 
+      <br> 
+     </div> 
+    </div> <button class="secondary expand" data-bind="on.click: $root.loadMore(), text: mediaGroups.loading() ? 'Loading...' : 'Show More...'">Show More...</button> 
+   </div> 
+   <div class="cols_7 show-for-large-up"> <!-- ko with: user --> 
+    <div class="utility-links logged-in-menu" data-bind="foundation: {}"> <!-- ko if:$root.homePage --> 
+     <div class="small-4 columns name button disabled"> <small>Hello,</small> <span data-bind="text: FirstName"></span> 
+     </div> <!-- /ko --> <!-- ko ifnot:$root.homePage --> <a href="/watch/" class="small-4 columns name button primary"> <small>Watch</small> <span>Now</span> </a> <!-- /ko --> <!-- ko if: useCBSAuth --> 
+     <ul id="userDropCbsManageAcct" data-dropdown-content class="f-dropdown"> 
+      <li><a href="https://www.cbssports.com/settings">Manage Your Account</a></li> 
+      <li><a href="#" data-bind="click: $root.logoutUser">Log Out</a></li> 
+     </ul> <a href="#" data-dropdown="userDropCbsManageAcct" class="small-4 columns button"> <small>Your</small> <span>Account</span> </a> <!-- /ko --> <!-- ko ifnot: useCBSAuth --> 
+     <ul id="userDrop2" data-dropdown-content class="f-dropdown"> 
+      <li><a href="/watch/subscriptions.aspx">View your Subscriptions</a></li> 
+      <li><a href="/watch/purchase.aspx?process=purchase">Purchase a Subscription</a></li> 
+      <li><a href="/watch/purchase.aspx?process=update">Edit Account</a></li> 
+      <li><a href="#" data-bind="click: $root.logoutUser">Log Out</a></li> 
+     </ul> <a href="#" data-dropdown="userDrop2" class="small-4 columns button"> <small>Your</small> <span>Account</span> </a> <!-- /ko --> <a class="button small-4 columns" href="#" data-bind="attr: {href:$root.techSupportUrl}"> <small>Contact</small> <span>Support</span> </a> 
+    </div> <!-- /ko --> <!-- ko ifnot: config().allFree --> <!-- ko ifnot: user --> 
+    <div class="utility-links row"> <a class="button single-line small-4 columns primary" href="#" data-bind="clickDeferred: beginRegisterUser" tabindex="2">Sign Up</a> <a class="button single-line small-4 columns" href="#" data-bind="clickDeferred: beginAuthenticateUser" tabindex="2">Log In</a> <a class="button small-4 columns" href="#" data-bind="attr: {href:techSupportUrl}" tabindex="2"> <small>Contact</small> <span>Support</span> </a> 
+    </div> <!-- /ko --> <!-- /ko --> 
+    <div class="right-column-top-ads"> <a href="http://www.spcatthestar.com" id="ctl00_ctl10_rptAds_ctl00_hlAdSpot" target="_blank" onclick="window.open('/common/controls/adhandler.aspx?ad_id=118&amp;target=http%3a%2f%2fwww.spcatthestar.com', '_blank'); return false;" class=" ad_watch" rev="WatchPlayer"> <img id="ctl00_ctl10_rptAds_ctl00_mediaAd_imgPrimary_LS" src="https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/conferenceusa.com/images/2021/2/12/BSWF_BannerAds_300x250.jpg" alt="BSWMF 300x250" style="border-width:0px;z-index:1;display:block;"> </a> <a href="https://teamready.com/" id="ctl00_ctl10_rptAds_ctl01_hlAdSpot" target="_blank" onclick="window.open('/common/controls/adhandler.aspx?ad_id=113&amp;target=https%3a%2f%2fteamready.com%2f', '_blank'); return false;" class=" ad_watch" rev="WatchPlayer"> <img id="ctl00_ctl10_rptAds_ctl01_mediaAd_imgPrimary_LS" src="https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/conferenceusa.com/images/2020/10/29/Ready_2020_10_Conference_Ready_OSD_r03b_CUSA_300x250_21.png" alt="Ready 300x250" style="border-width:0px;z-index:1;display:block;"> </a> <a href="http://www.ryan.com/" id="ctl00_ctl10_rptAds_ctl02_hlAdSpot" target="_blank" onclick="window.open('/common/controls/adhandler.aspx?ad_id=1133&amp;target=http%3a%2f%2fwww.ryan.com%2f', '_blank'); return false;" class=" ad_watch" rev="WatchPlayer"> <img id="ctl00_ctl10_rptAds_ctl02_mediaAd_imgPrimary_LS" src="https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/conferenceusa.com/images/2020/4/30/ryan_300x250.jpg" alt="ryan 300x250" style="border-width:0px;z-index:1;display:block;"> </a> 
+    </div> 
+    <div id="rightColTabs" data-bind="jQuery: { tabs: {
+                                active: Math.max(0, (['headlines', 'tweets', 'social']).indexOf($root.config().rightColumnTab))
+                            } }"> 
+     <ul> 
+      <li data-bind="visible: stories().length > 0"> <a href="#rightColHeadlines"><i class="icon-article-alt"></i> Headlines</a> </li> 
+      <li data-bind="visible: tweets"> <a href="#rightColTwitter"><i class="icon-twitter"></i> Tweets</a> </li> 
+      <li data-bind="visible: socialStadiumContent"> <a href="#rightColSocial"><i class="icon-chat-empty"></i> Social</a> </li> 
+     </ul> 
+     <div id="rightColHeadlines" class="headlines"> <!-- ko if: sport --> 
+      <h4>{{sport().name}} Headlines</h4> <!-- /ko --> 
+      <div class="stories" data-bind="foreach: stories"> 
+       <div class="story"> 
+        <div class="image"> <!-- ko if: $data.enclosure --> 
+         <img data-bind="fadeInImage: enclosure.url, attr: {alt:title}"> <!-- /ko --> 
+        </div> 
+        <div class="header" data-bind="text: $parent.formatDate(pubDate, &quot;M.D.YYYY&quot;)"></div> <a data-bind="attr: {href: link}, html: title" class="title" target="_blank"></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="rightColTwitter" class="tweets" data-bind="if: tweets"> 
+      <div class="stories" data-bind="foreach: tweets"> 
+       <div class="story"> 
+        <div class="image"> 
+         <img data-bind="fadeInImage: user.profile_image_url, attr: {alt:user.screen_name}"> 
+        </div> 
+        <div class="header"> <a data-bind="text: &quot;@&quot; + user.screen_name, attr: {href: $parent.twitterProfileLink($data.user)}" target="_blank"></a> <a class="date" data-bind="attr: {href: $parent.twitterStatusLink($data)}, text: $parent.formatDate($data.created_at, &quot;fromNow&quot;)" target="_blank"></a> 
+        </div> <span data-bind="html: linkifiedText" class="title" target="_blank"> </span>
+       </div> 
+      </div> 
+     </div> 
+     <div id="rightColSocial" class="tweets" data-bind="if: socialStadiumContent"> 
+      <div class="stories" data-bind="foreach: socialStadiumContent"> 
+       <div class="story"> 
+        <div class="image"> 
+         <img data-bind="fadeInImage: $data.profile ? profile.picture : user.picture, attr: { title: $data.profile ? profile.fullName : user.fullName}"> 
+        </div> 
+        <div class="header"> <!-- ko with: $data.profile --> <a data-bind="text: &quot;@&quot; + userName, attr: {href: $root.socialStadiumLink}" target="_blank"></a> <!-- /ko --> <span class="date" data-bind="text: $parent.formatDate($data.awarded, &quot;fromNow&quot;)"></span> 
+        </div> <a data-bind="attr: {href: $root.socialStadiumLink}, text: title" class="title" target="_blank"></a> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="footer"> 
+      <div> <a href="https://sidearmsports.com"> <img src="/watch/img/sidearm-logo.png" alt="SIDEARM Sports"> </a> 
+      </div> 
+      <div> <a href="#" data-bind="attr: {href:techSupportUrl}"> Contact Technical Support </a> <a href="//www.sidearmsports.com/privacypolicy/" target="_blank">Privacy Policy </a> <a href="//www.sidearmsports.com/terms-of-service/" target="_blank">Terms of Service</a> <a href="https://cbssports.com">Video Platform powered by CBS Sports</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </main> 
+  <footer class="grid reverse"> 
+   <div class="cols_6"> 
+    <div class="footer hide-for-large-up"> 
+     <div> <a href="https://sidearmsports.com"> <img src="/watch/img/sidearm-logo.png" alt="SIDEARM Sports"> </a> 
+     </div> 
+     <div> <a href="#" data-bind="attr: {href:techSupportUrl}"> Contact Technical Support </a> <a href="//www.sidearmsports.com/privacypolicy/" target="_blank">Privacy Policy </a> <a href="//www.sidearmsports.com/terms-of-service/" target="_blank">Terms of Service</a> <a href="https://cbssports.com">Video Platform powered by CBS Sports</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="cols_14"> 
+   </div> 
+  </footer> 
+ </div> 
+</div> 
+<div class="dim-the-lights-cover" data-bind="click:function(){ $('html').removeClass('dim-the-lights'); }"></div> 
+<script src="/common/ts/dist/cbs-surround.js?_=637505406062552925"></script> 
+<script>
+            var __config = {"theme":{"homeLink":"","identityName":"CUSA.tv","identityImage":"","colors":{"color1":"#eeeeee","color2":"#aaaaaa","background":"#ffffff","foreground":"#232323"},"homeTabLogoUrl":null,"socialLinks":{}},"clientId":1217,"sslEverything":false,"socialCampaign":{"Id":null,"Hashtag":"from:conference_usa","IncludedHashtags":["from:conference_usa"],"Description":null},"socializeHosts":[],"packages":[{"id":1,"title":"24 Hour Pass","description":"Access all Conference USA live video content and archived materials for all schools for one day. Good only for 24 hours after purchase. Does not automatically renew.","price":6.95,"trial":false,"recurring":false,"active":true,"type":"r","duration":1,"durationUnit":"d","starts":null,"ends":null,"sport_ids":null,"only_valid_for_selected_school_id":false,"school_id_is_required_for_attribution":false,"alternate_landing_page":null},{"id":2,"title":"Monthly Recurring Subscription","description":"Access all Conference USA live video content and archived materials for all schools for one month. Automatically renews from month to month, but can be canceled at any time.","price":10.95,"trial":false,"recurring":true,"active":true,"type":"r","duration":1,"durationUnit":"m","starts":null,"ends":null,"sport_ids":null,"only_valid_for_selected_school_id":false,"school_id_is_required_for_attribution":false,"alternate_landing_page":null},{"id":3,"title":"Yearly Pass","description":"Access all Conference USA live video content and archived materials for all schools for one year. Automatically renews from year to year, but can be canceled at any time.","price":99.95,"trial":false,"recurring":true,"active":true,"type":"r","duration":1,"durationUnit":"yyyy","starts":null,"ends":null,"sport_ids":null,"only_valid_for_selected_school_id":false,"school_id_is_required_for_attribution":false,"alternate_landing_page":null}],"announcement":null,"preRolls":[],"defaultStatsDelay":7000,"analyticsTrackers":["UA-80096606-10"],"defaultView":"Live","showViewTabs":true};
+            var payUrl = "https://pay.sidearmsports.com/";
+            var useCBSAuth = window.useCBSAuth = false;
+            var utagData = window.utagData = {
+                embedPageUrl: location.href,
+                schoolCode: "c-usa",
+                brandPlatformId: "sidearm_site_" + (document.documentElement.clientWidth > 600 ? "desktop" : "mweb"),
+                pageViewGuid: PageTargetting.getPageviewGuid(),
+                _pageViewGuid: PageTargetting.getPageviewGuid() // cbs says they need it /shrug
+            };
+        </script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/foundation.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/URI.js/1.11.2/URI.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/history.js/1.8/native.history.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.4.0/moment.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script> 
+<script src="//s3.amazonaws.com/assets.sidearmsports.com/common/js/showcase_embed/master_v5.js?201110201430"></script> 
+<script src="/watch/js/blockadblock.js?_=637504042951393225"></script> 
+<script src="/watch/js/sidearm.adSpot.js?_=636268065217020227"></script> 
+<script src="/watch/js/watch.js?_=637505406075522714"></script> 
+<link rel="stylesheet" href="//assets.sidearmsports.com.s3.amazonaws.com/adaptive/css/addtohomescreen.css"> 
+<script src="//assets.sidearmsports.com.s3.amazonaws.com/adaptive/js/addtohomescreen.min.js"></script> 
+<script>
+            addToHomescreen({
+               skipFirstVisit: true,
+               maxDisplayCount: 0,
+               displayPace: 120
+            });
+        </script> 
+<script>        
+            $(".left-off-canvas-toggle").on("click", function(e) { /* 
+                offcanvas doesn't work on iOS without a click handler attached to this element...
+                so here we are.
+            */ });
+        </script> 
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){
+        i['GoogleAnalyticsObject']=r;
+        i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+        a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+        a.async=1;
+        a.src=g;
+        m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-80096606-10', 'auto', 'tracker0');
+    location.search.indexOf('dontSendPageview=1') > -1 || ga('tracker0.send', 'pageview');
+</script> <!-- Google Tag Manager --> 
+<noscript>
+ <iframe src="//www.googletagmanager.com/ns.html?id=" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','');</script> <!-- End Google Tag Manager --> 
+<form name="aspnetForm" method="post" action="./default.aspx?path=odu" id="aspnetForm"> 
+ <div> 
+  <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTg5NDcxODk2D2QWAmYPZBYEZg9kFgICCg8WAh4EaHJlZgUqL3dhdGNoL2Nzcy93YXRjaC5sZXNzP189NjM3NTA1NDA2MDc1MzY4NjM1ZAIWD2QWBgIBDxYCHgRUZXh0BTNnYSgnY3JlYXRlJywgJ1VBLTgwMDk2NjA2LTEwJywgJ2F1dG8nLCAndHJhY2tlcjAnKTtkAgMPFgIfAQVWbG9jYXRpb24uc2VhcmNoLmluZGV4T2YoJ2RvbnRTZW5kUGFnZXZpZXc9MScpID4gLTEgfHwgZ2EoJ3RyYWNrZXIwLnNlbmQnLCAncGFnZXZpZXcnKTtkAgUPFgIfAQXRBA0KICAgIDwhLS0gR29vZ2xlIFRhZyBNYW5hZ2VyIC0tPg0KICAgIDxub3NjcmlwdD48aWZyYW1lIHNyYz0iLy93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20vbnMuaHRtbD9pZD0iDQogICAgaGVpZ2h0PSIwIiB3aWR0aD0iMCIgc3R5bGU9ImRpc3BsYXk6bm9uZTt2aXNpYmlsaXR5OmhpZGRlbiI+PC9pZnJhbWU+PC9ub3NjcmlwdD4NCiAgICA8c2NyaXB0PihmdW5jdGlvbih3LGQscyxsLGkpe3dbbF09d1tsXXx8W107d1tsXS5wdXNoKHsnZ3RtLnN0YXJ0JzoNCiAgICBuZXcgRGF0ZSgpLmdldFRpbWUoKSxldmVudDonZ3RtLmpzJ30pO3ZhciBmPWQuZ2V0RWxlbWVudHNCeVRhZ05hbWUocylbMF0sDQogICAgaj1kLmNyZWF0ZUVsZW1lbnQocyksZGw9bCE9J2RhdGFMYXllcic/JyZsPScrbDonJztqLmFzeW5jPXRydWU7ai5zcmM9DQogICAgJy8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0bS5qcz9pZD0nK2krZGw7Zi5wYXJlbnROb2RlLmluc2VydEJlZm9yZShqLGYpOw0KICAgIH0pKHdpbmRvdyxkb2N1bWVudCwnc2NyaXB0JywnZGF0YUxheWVyJywnJyk7PC9zY3JpcHQ+DQogICAgPCEtLSBFbmQgR29vZ2xlIFRhZyBNYW5hZ2VyIC0tPg0KZBgDBSdjdGwwMCRjdGwxMCRycHRBZHMkY3RsMDIkbWVkaWFBZCRtb1ZpZXcPD2RmZAUnY3RsMDAkY3RsMTAkcnB0QWRzJGN0bDAxJG1lZGlhQWQkbW9WaWV3Dw9kZmQFJ2N0bDAwJGN0bDEwJHJwdEFkcyRjdGwwMCRtZWRpYUFkJG1vVmlldw8PZGZkkZbjbQpC4Xuu5kv3zIUrSgtZbBh574tciri4XQHT0M0="> 
+ </div> 
+ <div> 
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2BDE442D"> 
+ </div>
+ <noscript> 
+  <img height="1" width="1" src="https://www.facebook.com/tr?id=330017467783557&amp;ev=PageView&amp;noscript=1"> 
+ </noscript> 
+ <script type="text/javascript">count_ad(118);count_ad(113);count_ad(1133);</script>
+ <script type="text/javascript">launch_ads ('WatchPlayer',false,10000)</script>
+</form>
+</body>
+</doc>

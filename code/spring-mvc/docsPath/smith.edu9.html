@@ -1,0 +1,54 @@
+<doc>
+<filename>smith.edu9.html</filename>
+<url>http://portal.smith.edu</url>
+<ip>131.229.64.224</ip>
+<title>Smith College Web Login Service - Loading Session Information</title>
+<body>
+<div class="wrapper"> 
+ <div class="container"> 
+  <header> 
+   <h3>Smith College Web Login Service - Loading Session Information</h3> 
+  </header> 
+  <div class="content">
+    Loading login session information from the browser... 
+  </div> 
+  <noscript> 
+   <div class="content">
+     Since your browser does not support JavaScript, you must press the Continue button once to proceed. 
+   </div> 
+  </noscript> 
+  <form name="form1" action="/idp/profile/SAML2/Redirect/SSO?execution=e1s1" method="post"> 
+   <input name="shib_idp_ls_exception.shib_idp_session_ss" type="hidden"> 
+   <input name="shib_idp_ls_success.shib_idp_session_ss" type="hidden" value="false"> 
+   <input name="shib_idp_ls_value.shib_idp_session_ss" type="hidden"> 
+   <input name="shib_idp_ls_exception.shib_idp_persistent_ss" type="hidden"> 
+   <input name="shib_idp_ls_success.shib_idp_persistent_ss" type="hidden" value="false"> 
+   <input name="shib_idp_ls_value.shib_idp_persistent_ss" type="hidden"> 
+   <input name="shib_idp_ls_supported" type="hidden"> 
+   <input name="_eventId_proceed" type="hidden"> 
+   <noscript> 
+    <input type="submit" value="Continue"> 
+   </noscript> 
+  </form> 
+  <script>
+<!--
+function doLoad() {
+    var localStorageSupported = isLocalStorageSupported();
+    document.form1["shib_idp_ls_supported"].value = localStorageSupported;
+    if (localStorageSupported) {
+        readLocalStorage("shib_idp_session_ss");
+        readLocalStorage("shib_idp_persistent_ss");
+    }
+    document.form1.submit();
+}
+// -->
+</script> 
+ </div> 
+ <footer> 
+  <div class="container container-footer"> 
+   <p class="footer-text">Smith College Single Sign-On Login</p> 
+  </div> 
+ </footer> 
+</div>
+</body>
+</doc>

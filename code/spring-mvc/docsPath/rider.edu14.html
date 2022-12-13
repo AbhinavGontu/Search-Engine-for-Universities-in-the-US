@@ -1,0 +1,329 @@
+<doc>
+<filename>rider.edu14.html</filename>
+<url>http://www.rider.edu/courseroster</url>
+<ip>104.16.111.101</ip>
+<title>ECR: N/A</title>
+<body>
+<!-- Modal window/divs --> <!-- about alert modal window --> <!-- Modal --> 
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalTitle" aria-hidden="true"> 
+ <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document"> 
+  <div class="modal-content"> 
+   <div class="modal-header"> 
+    <h5 class="modal-title" id="aboutModalTitle">Enhanced Course Roster (2.0.4)</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button> 
+   </div> 
+   <div class="modal-body"> 
+    <h5>About</h5> 
+    <p class="small">This product is developed/maintained by <a href="mailto:rfitzwater@rider.edu">Rhon Fitzwater</a> and hosted by the School of Liberal Arts and Sciences.</p> 
+    <p class="small">Refreshed interface that is now fully responsive. Give ECR a try on your mobile device!</p> 
+    <p class="small">Filtering has been rebuilt with new advanced filtering options. Many more under-the-hood upgrades. </p>
+    <p class="small">You may have noticed starring courses is no longer available. This feature will return before the next scheduling period.</p> 
+    <p class="small">Please send any feedback, suggestions or problems to <a href="mailto:rfitzwater@rider.edu">rfitzwater@rider.edu</a>.</p> 
+    <hr> 
+    <dl class="small"> 
+     <h5>Change Log</h5> 
+     <dt>
+      Enhanced Course Roster version 2.0.4b20200908
+     </dt> 
+     <dd>
+      Fixed a bug that caused hang on select inputs.
+     </dd> 
+     <dt>
+      Enhanced Course Roster version 2.0.3b20200823
+     </dt> 
+     <dd>
+      Fixed bug that caused search to not be activated if you tab out of input to fast.
+     </dd> 
+     <dt>
+      Enhanced Course Roster version 2.0.2b20200820
+     </dt> 
+     <dd>
+      Fixed error when attempting to view a term that doesn't exist.
+     </dd> 
+     <dd>
+      Bug fixes and CSS improvements.
+     </dd> 
+     <dt>
+      Enhanced Course Roster version 2.0.1b20200811
+     </dt> 
+     <dd>
+      Bug fixes and other improvements.
+     </dd> 
+     <dt>
+      Enhanced Course Roster version 2.0.0b202007015c
+     </dt> 
+     <dd>
+      Initial 2.0 release.
+     </dd> 
+    </dl> 
+   </div> 
+   <div class="modal-footer"> <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button> 
+   </div> <small id="dataUpdatedTime" class="form-text text-muted"> This data is archived.</small> 
+  </div> 
+ </div> 
+</div> <!-- end about modal window --> <!-- search modal window --> 
+<div class="modal fade" id="advancedSearchModal" tabindex="-1" role="dialog" aria-labelledby="advancedSearchModalLabel" aria-hidden="true"> 
+ <div class="modal-dialog modal-dialog-scrollable modal-dialog-slideout ml-auto" role="document"> 
+  <div class="modal-content"> 
+   <div class="modal-header"> 
+    <h5 class="modal-title" id="advancedSearchModalLabel">Individual Column Filters <small id="resetHiddenFilters" rel="tooltip" title="Click to reveal all hidden filters." class="form-text text-muted"><i class="far fa-eye" aria-hidden="true"></i>&nbsp;Show Hidden Filters</small></h5> <button type="button" class="close " data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button> 
+   </div> 
+   <div class="modal-body"> 
+    <form class="form" id="advancedFilters" role="form" onsubmit="applyFilters()"> 
+     <div class="form-group row" id="modalityRow"> <label for="searchCol0" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Instruction Modality</label> 
+      <div class="col input-group"> 
+       <div id="searchCol0"></div> <small id="Help" class="form-text text-muted">Select one or more options from the list.</small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="modality" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="subjectRow"> <label for="searchCol1" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Subject</label> 
+      <div class="col input-group"> 
+       <div id="searchCol1"></div> <small id="Help" class="form-text text-muted">To display COM and FTV courses try entering <em>COM FTV</em>.</small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="subject" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="courseRow"> <label for="searchCol2" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Course</label> 
+      <div class="col input-group"> 
+       <div id="searchCol2"></div> <small id="Help" class="form-text text-muted">To display only 300 level courses try entering <em>^3</em>.</small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="course" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="sectionRow"> <label for="searchCol3" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Section</label> 
+      <div class="col input-group"> 
+       <div id="searchCol3"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="section" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="titleRow"> <label for="searchCol4" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Title</label> 
+      <div class="col input-group"> 
+       <div id="searchCol4"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="title" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="instructorRow"> <label for="searchCol5" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Instructor</label> 
+      <div class="col input-group"> 
+       <div id="searchCol5"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="instructor" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="crnRow"> <label for="searchCol6" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">CRN</label> 
+      <div class="col input-group"> 
+       <div id="searchCol6"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="crn" aria-hidden="true"></i> 
+     </div> 
+     <hr> 
+     <div class="form-group row" id="daysRow"> <label for="searchCol9" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Days</label> 
+      <div class="col input-group"> 
+       <div id="searchCol9"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="days" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="timeRow"> <label for="searchCol10" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Time</label> 
+      <div class="col input-group"> 
+       <div id="searchCol10"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="time" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="buildingRow"> <label for="searchCol21" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Building</label> 
+      <div class="col input-group"> 
+       <div id="searchCol21"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="building" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="roomRow"> <label for="searchCol22" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Room</label> 
+      <div class="col input-group"> 
+       <div id="searchCol22"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="room" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="campusRow"> <label for="searchCol18" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Campus</label> 
+      <div class="col input-group"> 
+       <div id="searchCol18"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="campus" aria-hidden="true"></i> 
+     </div> 
+     <hr> 
+     <div class="form-group row" id="enrolledRow"> <label for="searchCol12" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Enrolled</label> 
+      <div class="col input-group"> 
+       <div id="searchCol12"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="enrolled" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="availableRow"> <label for="searchCol15" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Available</label> 
+      <div class="col input-group"> 
+       <div id="searchCol15"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="available" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="waitlistRow"> <label for="searchCo24" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Waitlist</label> 
+      <div class="col input-group"> 
+       <div id="searchCol24"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="waitlist" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="statusRow"> <label for="searchCol16" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Status</label> 
+      <div class="col input-group"> 
+       <div id="searchCol16"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="status" aria-hidden="true"></i> 
+     </div> 
+     <hr> 
+     <div class="form-group row" id="coreqRow"> <label for="searchCol25" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Corequisites</label> 
+      <div class="col input-group"> 
+       <div id="searchCol25"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="coreq" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="restrictionsRow"> <label for="searchCol26" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Resrictions</label> 
+      <div class="col input-group"> 
+       <div id="searchCol26"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="restrictions" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="prereqRow"> <label for="searchCol27" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Prerequisites</label> 
+      <div class="col input-group"> 
+       <div id="searchCol27"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="prereq" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="courseattrRow"> <label for="searchCol28" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Course Attributes</label> 
+      <div class="col input-group"> 
+       <div id="searchCol28"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="courseattr" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="commentsRow"> <label for="searchCol29" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Comments</label> 
+      <div class="col input-group"> 
+       <div id="searchCol29"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="comments" aria-hidden="true"></i> 
+     </div>  
+     <div class="form-group row" id="collegeRow"> <label for="searchCol19" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">College</label> 
+      <div class="col input-group"> 
+       <div id="searchCol19"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="college" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="levelRow"> <label for="searchCol20" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">Level</label> 
+      <div class="col input-group"> 
+       <div id="searchCol20"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="level" aria-hidden="true"></i> 
+     </div> 
+     <hr> 
+     <div class="form-group row" id="mincredsRow"> <label for="searchCol7" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Min Credits</label> 
+      <div class="col input-group"> 
+       <div id="searchCol7"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="mincreds" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="maxcredsRow"> <label for="searchCol8" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Max Credits</label> 
+      <div class="col input-group"> 
+       <div id="searchCol8"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="maxcreds" aria-hidden="true"></i> 
+     </div> 
+     <hr> 
+     <div class="form-group row" id="roomcapRow"> <label for="searchCol11" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Room Capacity</label> 
+      <div class="col input-group"> 
+       <div id="searchCol11"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="roomcap" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="globalcapRow"> <label for="searchCol13" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Global Capacity</label> 
+      <div class="col input-group"> 
+       <div id="searchCol13"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="globalcap" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="localcapRow"> <label for="searchCol14" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Local Capacity</label> 
+      <div class="col input-group"> 
+       <div id="searchCol14"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="localcap" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row" id="firecapRow"> <label for="searchCol17" class="text-right col-4 col-form-label  col-form-label-sm form-control-label">Fire Capacity</label> 
+      <div class="col input-group"> 
+       <div id="searchCol17"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="firecap" aria-hidden="true"></i> 
+     </div> 
+     <div class="form-group row form-control-sm d-none" id="insmRow"> <label for="searchCol23" class="text-right col-3 col-form-label  col-form-label-sm form-control-label">INSM</label> 
+      <div class="col input-group"> 
+       <div id="searchCol23"></div><small id="Help" class="form-text text-muted"></small> 
+      </div> <i href="#" class="far fa-eye-slash hideable" rel="tooltip" title="Click to hide this search field." id="insm" aria-hidden="true"></i> 
+     </div> 
+     <input type="submit" style="display: none"> 
+    </form> 
+   </div> 
+   <div class="modal-footer"> <small class="form-text text-muted">Column filters are cumulative, so you can apply multiple individual column filters at the same time, allowing complex searching options to be presented. Separate multiple criteria with a space (spaces are automatically converted to the | symbol). Regular expressions are able to be used in all text fields.</small> <button type="button" id="resetAdvFilters" onclick="clearFilters()" class="btn btn-outline-danger btn-sm mr-auto">Clear All Filters</button> <!--<button type="button" onclick="applyFilters();" class="btn btn-outline-secondary btn-sm">Apply Now</button>--> <button type="button" data-toggle="modal" data-target="#advancedSearchModal" class="btn btn-outline-secondary btn-sm">Close</button> <!--<button type="button" class="close " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>--> 
+   </div> 
+  </div> 
+ </div> 
+</div> <!-- end search modal window --> <!-- End Modal window/divs --> 
+<nav class="navbar navbar-expand fixed-top navbar-dark bg-dark navbar-custom"> <a class="navbar-brand" href="#"> <span class="fa-stack fa-2x"> <i class="far fa-calendar fa-stack-2x" style="margin-top:0px;"></i> <i class="fas fa-graduation-cap fa-stack-1x" style="padding-top:3px;"></i> </span> </a> 
+ <div class="collapse navbar-collapse" id="topnavbar"> 
+  <ul class="navbar-nav mr-auto"> 
+   <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" rel="tooltip" href="#" id="termSelect" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Change Semester"> N/A </a> 
+    <div class="dropdown-menu animateModalDown" aria-labelledby="navbarDropdown0" style="width:200px"> 
+     <form class="px-4 py-3"> 
+      <div class="form-group row"> <label for="semesters" class="col-form-label-sm">Semester:</label> 
+       <div class="col-md"> <select class="custom-select custom-select-sm" id="semesters"> <option value="10">Fall</option> <option value="15">JTerm</option> <option value="20">Spring</option> <option value="30">Summer 1</option> <option value="40">Summer 2</option> </select> 
+       </div> 
+      </div> 
+      <div class="form-group row"> <label for="years" class="col-form-label-sm">Year:</label> 
+       <div class="col-sm"> <select class="custom-select custom-select-sm" id="years"> <option>2021</option> <option selected>2020</option> <option>2019</option> <option>2018</option> </select> 
+       </div> 
+      </div> <button type="button" onclick="goTerm()" class="btn btn-outline-secondary btn-sm btn-block">Go</button> 
+     </form> 
+    </div> </li> 
+  </ul> 
+  <ul class="navbar-nav"> 
+   <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" id="advfilters" rel="tooltip" href="#" data-toggle="modal" data-target="#advancedSearchModal" aria-haspopup="true" aria-expanded="false" title="Individual Column Filters"> <i class="fas fa-search"></i>&nbsp;<span class="d-none d-lg-inline">Filters&nbsp;</span><span id="filterCount" class="d-lg-inline badge badge-pill badge-light"></span> </a> </li> 
+   <li class="nav-item animateModalDown" rel="tooltip" id="colvisButtonHere" data-placement="left" title="Show/Hide Columns"></li> 
+  </ul> 
+ </div> 
+</nav> <!-- loading div --> 
+<div id="loader-wrapper"> 
+ <div class="loader-section section-left"></div> 
+ <div class="section-center"> 
+  <h1 class="hit-the-floor"><span style="margin-bottom:15px;" class="fa-stack"> <i class="far fa-calendar fa-stack-2x awesome"></i> <i class="fas fa-graduation-cap fa-stack-1x gradcapanimate" style="padding-top:8px;"></i> </span><br>E<span class="d-none d-lg-inline">nhanced</span> C<span class="d-none d-lg-inline">ourse</span> R<span class="d-none d-lg-inline">oster</span></h1> 
+ </div> 
+ <div class="loader-section section-right"></div> 
+</div> <!-- end loading div --> 
+<div class="container-fluid px-0" style="margin-top:0px;overflow:hidden!important;"> 
+ <div id="resize_wrapper"> 
+  <table id="courseRoster" width="100%" class="table table-light table-striped table-hover table-sm responsive" style="width:100%;"> 
+   <thead class="thead-custom"> 
+    <tr id="tablehead"> 
+     <th title="Modality"><i class="fas fa-chalkboard-teacher"></i>&nbsp; </th> 
+     <th title="Subject">Sbj</th> 
+     <th id="courseHeader" title="Course Number">Crs</th> 
+     <th title="Section">Sec</th> 
+     <th title="Title">Title</th> 
+     <th title="Instructor">Instructor</th> 
+     <th title="Course Registration Number">CRN</th> 
+     <th title="Credits">Cred</th> 
+     <th title="Max Credits">Max Cred</th> 
+     <th title="Days">Days</th> 
+     <th title="Time">Time</th> 
+     <th title="Room Capacity">Rm Cap</th> 
+     <th title="Enrolled">Enr.</th> 
+     <th title="Global Capacity">Glb Cap</th> 
+     <th title="Local Capacity">Lcl Cap</th> 
+     <th title="Available Seats">Avail</th> 
+     <th title="Status">Status</th> 
+     <th title="Fire Capacity">Fire Cap</th> 
+     <th title="Campus">Campus</th> 
+     <th title="College">College</th> 
+     <th title="Level">Level</th> 
+     <th title="Building">Building</th> 
+     <th title="Room">Room</th> 
+     <th title="Instructional Method">INSM</th> 
+     <th title="Waitlist Count">Wait</th> 
+     <th title="Corequesits">CoReqs</th> 
+     <th title="Restrictions">Restrictions</th> 
+     <th title="Prerequisites">Prereqs</th> 
+     <th title="Course Attributes">Course Attr</th> 
+     <th title="Comments">Comments</th> 
+    </tr> 
+   </thead> 
+  </table> 
+ </div> 
+</div> 
+<nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark justify-content-end navbar-custom py-0"> <a class="navbar-brand" href="//www.rider.edu" target="_blank"> <img style="max-height:50px" alt="Rider Logo" class="RiderLogo" src="./assets/img/Rider_Lockup_2C-Cran-REV.png"> </a> 
+ <ul class="nav navbar-nav navbar-logo mx-auto"> 
+  <li class="nav-item"> <button type="button" class="btn btn-outline-secondary btn-sm text-white" style="border:0;" disabled><span id="rowentries" style="display:inline-block"></span><br></button> </li> 
+ </ul> 
+ <ul class="navbar-nav"> 
+  <li class="nav-item dropdown dropup"> <a class="nav-link" href="#" id="exportbutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="tooltip" title="Export"> <i class="fas fa-cloud-download-alt"></i> </a> 
+   <div class="dropdown-menu dropdown-menu-right animateModalUp" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" id="pdfExport"></a> <a class="dropdown-item" id="excelExport"></a> <!--<a class="dropdown-item" id="printExport"></a>--> 
+   </div> </li> 
+  <li class="nav-item dropdown dropup"> <a class="nav-link" href="#" id="optionsbutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="tooltip" title="Options"> <i class="fas fa-cogs"></i> </a> 
+   <div class="dropdown-menu dropdown-menu-right animateModalUp" aria-labelledby="navbarDropdown1"> <a data-toggle="modal" href="#aboutModal" title="Developed by: Rhon Fitzwater" class="dropdown-item"><i class="fas fa-info-circle"></i>&nbsp;About</a> <a href="#toggleDarkmode" onclick="toggleDarkLight()" title="Toggle Light/Dark mode." class="dropdown-item"><i class="fas fa-adjust"></i>&nbsp;Light/Dark Mode</a> 
+    <div class="dropdown-divider"></div> <a class="dropdown-item" href="#" title="Download updated course data." onclick="oTable.ajax.reload( null, false );"><i class="fas fa-redo-alt"></i>&nbsp;Refresh Data</a> <a class="dropdown-item" href="#" title="Reset all saved settings." onclick="oTable.state.clear();localStorage.removeItem('ECR_hiddenFilters');window.location.reload();"><i class="fas fa-trash-restore"></i>&nbsp;Reset Saved State</a> <a class="dropdown-item" href="#" title="Clear all filters." onclick="return clearFilters();"><i class="fas fa-eraser"></i>&nbsp;Clear All Filters</a> 
+   </div> </li> 
+  <li class="nav-item dropdown dropup"> <a class="nav-link" href="#" onclick="intro.start();" id="helpbutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="tooltip" title="Help"> <i class="fas fa-question-circle"></i> </a> </li> 
+ </ul> 
+</nav> <!-- Chosen select elements --> 
+<link rel="stylesheet" href="./assets/css/chosen/chosen.css"> 
+<script defer src="./assets/css/chosen/chosen.jquery.min.js"></script> <!-- End Chosen select elements --> <!-- keyboard shortcuts --> 
+<script defer src="./assets/js/shortcut.js"></script> <!-- end keyboard shortcuts --> <!-- Tour setup --> 
+<link href="./assets/css/introjs.min.css" rel="stylesheet" type="text/css"> 
+<script defer type="text/javascript" src="./assets/js/intro.min.js"></script> 
+<script defer type="text/javascript" src="./assets/js/tour-ecr.js"></script> <!-- end tour -->
+</body>
+</doc>

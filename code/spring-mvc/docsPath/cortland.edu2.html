@@ -1,0 +1,269 @@
+<doc>
+<filename>cortland.edu2.html</filename>
+<url>http://calendar.cortland.edu/FeaturedEventsCalendar/Calendar.aspx</url>
+<ip>137.123.223.120</ip>
+<title>SUNY Cortland: Calendar</title>
+<body>
+<div id="doc3" class="yui-t7" style="margin: auto;"> 
+ <script src="https://www2.cortland.edu/global2/js/css_browser_selector.js" language="javascript" type="text/javascript"></script> 
+ <script type="text/javascript">
+    (function () {
+        var cx = '012837232987443630560:d_umb_mqpn4';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+    })();
+
+    $(document).ready(function () {
+        $(".search").on("click", ".gsc-search-button-v2", function (e) {
+            e.preventDefault();
+
+            var strSearchType = $("input[name=searchOn]:checked").val();
+            var strSearchTerm = null;
+
+            if (strSearchType == "people")
+                strSearchTerm = $("#txtPeopleSearch").val();
+            else
+                strSearchTerm = $("#gsc-i-id1").val();
+
+            var strPeopleSearchUrl = "https://webapp.cortland.edu/DirectorySearch/?facnme=" + strSearchTerm;
+            var strSiteSearchUrl = "http://www.google.com/cse?cx=012837232987443630560%3Ad_umb_mqpn4&q=academic%20calendar&oq=a&gs_l=partner.1.0.0l10.1807.1807.0.3912.1.1.0.0.0.0.158.158.0j1.1.0.gsnos%2Cn%3D13.1.0.0.0jj1..1ac.1.OrerGi58eWo#gsc.tab=0&gsc.page=1&gsc.q=" + strSearchTerm;
+
+            if (strSearchType == "people") {
+                window.location = strPeopleSearchUrl;
+            } else {
+                window.location = strSiteSearchUrl;
+            }
+        });
+
+        $(".search").on("keypress", "#gsc-i-id1", function (e) {
+            $(this).css("margin-top", "-13px");
+        });
+
+        $(".search").on("keypress", "#txtPeopleSearch", function (e) {
+            if (e.keyCode == 13) {
+                $(".gsc-search-button-v2").click();
+            }
+        });
+
+        $(".search").on("blur", "#gsc-i-id1", function () {
+            if ($(this).val() == "" || $(this).val() == null) {
+                $(this).css("margin-top", "0px");
+            }
+        });
+
+        $(".search").on("click", "a[name=searchOn]", function () {
+            var radioId = $(this).prev().attr("id");
+
+            if (radioId == "StyledRadiobox0") {
+                $("#gsc-i-id1").next().remove();
+                $("#gsc-i-id1").removeClass("InputHidden");
+            } else {
+                $("#gsc-i-id1").addClass("InputHidden");
+                $("#gsc-i-id1").val("");
+                $("#gsc-i-id1").after('<input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="txtPeopleSearch" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none; background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif); background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat; font-size: 12px;" dir="ltr" spellcheck="false">');
+            }
+        });
+
+        $(".search").on("click", ".radioLabel", function () {
+            var radioId = $(this).prev().children("input")[0].getAttribute("id");
+
+            if (radioId == "StyledRadiobox0") {
+                $("#gsc-i-id1").next().remove();
+                $("#gsc-i-id1").removeClass("InputHidden");
+            } else {
+                $("#gsc-i-id1").addClass("InputHidden");
+                $("#gsc-i-id1").val("");
+                $("#gsc-i-id1").after('<input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="txtPeopleSearch" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none; background-image: url(http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif); background-color: rgb(255, 255, 255); background-position: 0% 50%; background-repeat: no-repeat no-repeat; font-size: 12px;" dir="ltr" spellcheck="false">');
+            }
+        });
+    });
+</script> 
+ <div id="hd"> 
+  <div class="header"> 
+   <div class="hidden"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_centerCol.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_colWrap.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_bottomLayer.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_bottomCols.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_hd.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_bdY.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_header.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_headerL.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_headerR.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_searchForm.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_topNav.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_ft.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_footerL.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_footerR.gif" alt="Preaload Background"> 
+    <img src="http://www2.cortland.edu/global2/images/template/bg_home2Cols.gif" alt="Preaload Background"> 
+   </div> 
+   <div class="yui-gd"> 
+    <div class="yui-u first"> <a href="http://www2.cortland.edu/home/" title="SUNY Cortland Homepage"><img src="images/logo.gif" alt="SUNY Cortland"><span class="hidden">Back to Homepage</span></a> 
+    </div> 
+    <div class="yui-u"> <!--  $searchOn  --> 
+     <div class="search" style="background: none; margin-top: 5px; overflow: hidden;"> 
+      <div id="siteSearchDiv"> <gcse:searchbox-only></gcse:searchbox-only> 
+      </div> 
+      <div class="clear"></div> 
+      <div class="radioInputs"> <span class="rbStyled" name="BigOrb"> <input type="radio" name="searchOn" value="site" checked id="searchSite" class="InputHidden" tabindex="2"> </span> <label class="radioLabel" for="searchSite" onclick="toggleRadiobox($(this).prev('span').children('a')[0],'','searchOn','StyledRadiobox0');return false;">Site</label> <span class="rbStyled" name="BigOrb"> <input type="radio" name="searchOn" value="people" id="searchPeople" class="InputHidden" tabindex="3"> </span> <label class="radioLabel" for="searchPeople" onclick="toggleRadiobox($(this).prev('span').children('a')[0],'','searchOn','StyledRadiobox1');return false;">People</label> 
+      </div> 
+     </div> 
+     <div class="siteTools"> <a href="http://myreddragon.cortland.edu">myRedDragon</a> <a href="http://www2.cortland.edu/calendar/">Calendar</a> <a href="http://www2.cortland.edu/library/about/">Library</a> <a href="http://www2.cortland.edu/offices/">Offices A-Z</a> <a href="http://www2.cortland.edu/visitors-guide/">Visitor’s Guide</a> 
+     </div> 
+    </div><!-- end yui-u --> 
+   </div> <!--[if lte IE 7]> <div class="audience" style="margin-bottom: -3px;"> <![endif]--> <!--[if gte IE 8]> <div class="audience" style="margin-bottom: 0px;"> <![endif]--> <!--[if !IE]><!--> 
+   <div class="audience"> <!--<![endif]--> 
+    <ul> 
+     <li> <a href="http://www2.cortland.edu/admissions/">Future Students</a> </li> 
+     <li> <a href="http://www2.cortland.edu/current-students/">Current Students</a> </li> 
+     <li> <a href="http://www2.cortland.edu/faculty-staff/">Faculty/Staff</a> </li> 
+     <li> <a href="http://www2.cortland.edu/alumni/">Alumni</a> </li> 
+     <li> <a href="http://www2.cortland.edu/parents-families/">Parents/Families</a> </li> 
+     <li> <a href="http://www2.cortland.edu/community/">Community</a> </li> 
+    </ul> 
+   </div> 
+   <div class="topNav"> 
+    <ul> 
+     <li id="about"> <a href="http://www2.cortland.edu/about/">About Us</a> </li> 
+     <li id="academics"> <a href="http://www2.cortland.edu/academics/">Academics</a> </li> 
+     <li id="admissions"> <a href="http://www2.cortland.edu/admissions/">Admissions</a> </li> 
+     <li id="cost-aid"> <a href="http://www2.cortland.edu/cost-aid/">Cost/Aid</a> </li> 
+     <li id="student-life"> <a href="http://www2.cortland.edu/student-life/">Student Life</a> </li> 
+     <li id="athletics"> <a href="http://www2.cortland.edu/athletics/">Athletics</a> </li> 
+     <li id="giving"> <a class="lastItem_1" href="http://www2.cortland.edu/giving/">Giving</a> </li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="bd"> 
+  <div class="bottomLayer"></div> 
+  <div class="centerCol"> 
+   <div class="headerL"></div> 
+   <div class="headerR"></div> 
+   <div id="yui-main"> 
+    <div class="yui-b"> 
+     <div class="oneCol"> 
+      <div class="colWrapper"> 
+       <div class="titleWrap"> 
+        <div style="float:right;"> 
+         <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=cortland.edu"></script> 
+         <script type="text/javascript">    var addthis_config = { ui_click: true }</script> <a class="addthis_button"> <img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share"> </a> 
+        </div> 
+        <div style="float:left;"> 
+         <div class="crumbtrail"> 
+          <ul> 
+           <li><a href="http://www2.cortland.edu/">Home</a><img src="http://www2.cortland.edu/global2/images/template/icon_bullet.gif" alt="ct_img"></li> 
+           <li>Calendar</li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="clear"></div> 
+        <h1 style="font-size: 174%;" id="calendarNavigationTitle">Calendar</h1> 
+       </div> 
+       <div class="mainCol clearfix"> <!-- START Calendar Search --> 
+        <div class="yui-u"> 
+         <div class="viewBox"> <a id="listViewBtn" href="#" class="dayOn active">List</a> <a id="monthlyViewBtn" href="#" class="monthOff">Month</a> 
+          <div id="listDrop" style="visibility: hidden;"> <a href="#" class="active" id="listViewDay">Day</a> <a href="#" id="listViewMonth">Month</a> 
+          </div> 
+         </div> 
+         <div class="searchBox" id="calendarSearch"> 
+          <div class="formField"> 
+           <h2>Search Events: </h2> 
+          </div> 
+          <div class="formField"> 
+           <input type="text" class="text big" name="keywordBox" id="keywordBox"> 
+          </div> 
+          <div class="formField"> <a href="#" class="btn" id="searchBtn"> <span>Search</span> </a> 
+          </div> 
+          <div class="formField"> <a href="#" class="btn" id="clearBtn"> <span>Clear</span> </a> 
+          </div> 
+         </div> 
+        </div> <!-- Navigation Calendar --> 
+        <div class="calWrapper"> 
+         <div class="leftCol"> 
+          <div id="calendarNavigation"> 
+           <div class="tableWrap"> 
+            <table cellpadding="0" cellspacing="0" id="navigationCalendar"> 
+             <thead class="navHeader"> 
+              <tr> 
+               <th class="last" colspan="1" onclick="funcPreviousNavMonth();">&lt;</th> 
+               <th id="navCalendarDate" class="last" colspan="5"></th> 
+               <th class="last" colspan="1" onclick="funcNextNavMonth();">&gt;</th> 
+              </tr> 
+             </thead> 
+             <tbody id="navBodyHead" class="navBody"> 
+              <tr> 
+               <td class="weekend">Sun</td> 
+               <td>Mon</td> 
+               <td>Tue</td> 
+               <td>Wed</td> 
+               <td>Thu</td> 
+               <td>Fri</td> 
+               <td class="weekend">Sat</td> 
+              </tr> 
+             </tbody> 
+             <tbody id="navBodyCalendar" class="navBody"> 
+             </tbody> 
+            </table> 
+           </div> 
+           <div id="calendarFilters" class="calendarFiltersBox"> 
+            <dl class="appFilters"> 
+             <dt>
+              Event Type Filters:
+             </dt> 
+             <div id="eventTypeFilters"> 
+             </div> 
+            </dl> <button id="eventTypesBtn" class="dialogBtnOK">Select Event Types</button> 
+            <p style="margin-top: 10px;"> <a href="http://www2.cortland.edu/offices/registrars-office/academic-calendars/">Academic Calendars</a> </p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div id="calendarEventsTable"> 
+         <noscript>
+          <p style="margin-top: 100px">Your browser does not support JavaScript. Please contact <a href="http://www2.cortland.edu/offices/information-resources/get-help.dot">Information Resources</a> to resolve this issue.</p>
+         </noscript> 
+        </div> 
+        <div id="popupDialog" title="" style="display: none;"> 
+        </div> 
+        <div id="popupDialogEventTypes" title="Event Types" style="display: none;"> 
+         <p> <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 10px 0;"></span> Please select from the list below which types of events you would like to display: </p> 
+         <div id="event_types_list_wrapper"> 
+          <ul id="event_types_list"> 
+          </ul> 
+         </div> 
+         <br> 
+         <div id="eventTypesNav"> 
+          <center> <a href="#" onclick="funcGetEventTypes(true); return false;">Show All Event Types</a> | <a href="#" onclick="funcGetEventTypes(); return false;">Show Currently Displayed Event Types</a> 
+          </center> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> <!-- background divs --> 
+   <div class="footerL"></div> 
+   <div class="footerR"></div> 
+  </div><!-- end center col --> 
+ </div><!--  END page body --> 
+ <div id="ft"> 
+  <div class="footer"> 
+   <div class="ftLinks"> <a href="http://www2.cortland.edu/about/maps-and-directions/">Maps/Directions</a> <a href="http://www2.cortland.edu/campus-safety/">Campus Safety</a> <a href="http://www2.cortland.edu/off-campus">Off-Campus Locations</a> <a href="http://www2.cortland.edu/home/sitemap.dot">Site Map</a> <a href="http://www2.cortland.edu/employment/">Employment</a> <a href="http://www.cortlandasc.com/" target="_blank">The College Store</a> <a href="http://www2.cortland.edu/about/contact-us.dot" class="last">Contact Us</a> 
+   </div> 
+   <div class="ftLogo"> <a href="http://www2.cortland.edu/home/"><img src="images/logo_footer.gif" alt="Logo:Suny Cortland"></a> 
+   </div> 
+   <div class="ftSocial"> <a href="http://www2.cortland.edu/about/follow-us.dot"><img src="images/icon_linked.gif" alt="Icon:Linkedin"></a> <a href="http://www2.cortland.edu/about/follow-us.dot"><img src="images/icon_facebook.gif" alt="Icon:Facebook"></a> <a href="http://www2.cortland.edu/about/follow-us.dot"><img src="images/icon_twitter.gif" alt="Icon:Twitter"></a> 
+   </div> 
+   <div class="clear"></div> 
+   <p> © 2021 State University of New York College at Cortland <br> P.O. Box 2000 Cortland, NY 13045-0900<br> (607) 753-2011 </p> 
+  </div><!-- end footer --> 
+ </div><!-- end ft --> 
+</div>
+</body>
+</doc>

@@ -1,0 +1,100 @@
+<doc>
+<filename>umkc.edu17.html</filename>
+<url>http://map.missouri.edu/</url>
+<ip>128.206.191.215</ip>
+<title>Mizzou // Campus Map</title>
+<body>
+<div id="leftPanel"> 
+ <div id="banner"> <a href="http://missouri.edu"><img src="images/mu-sig.png" alt="MU Home" width="210" height="65"></a> 
+ </div> <!-- <div id="tempmessage" class=print-no"><font color="red">Please use Firefox (temporary known issues with google chrome)</font></div> --> 
+ <div id="mobileDiv" class="print-no"></div> 
+ <div id="bldgPanelDiv" class="print-no"></div> 
+ <div id="infoPanelDiv"></div> 
+ <div id="parkgPanelDiv" class="print-no"></div> 
+ <div id="legendPanelDiv" class="print-no"></div> 
+ <div id="drivePanel" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Driving Directions', open:false, doLayout:false"> 
+  <p class="print-no"> <label for="startBox">Origin/Departure location: </label><br> <input type="text" id="startBox" size="50"> </p> 
+  <p class="print-no"> <label for="destBox">Destination location: </label><br> <input type="text" id="destBox" size="50"> </p> 
+  <input type="button" value="Get Directions" id="dirBtn" class="myButton" title="Click for Google Map directions"> 
+  <div id="directions-panel"></div> 
+ </div> 
+ <div class="print-no" id="linkPanel" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Help and More Information', open:true, doLayout:false"> 
+  <div data-dojo-type="dijit/layout/TabContainer" id="infoTabs" data-dojo-props="doLayout:false"> 
+   <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Quick Tips', doLayout:false" id="infoTab"> 
+    <div class="tips"> 
+     <ul class="list"> 
+      <li>Zoom in and out quickly by using the scroll wheel on your mouse.</li> 
+      <li>Click and drag the map to pan.</li> 
+      <li>Expand the <strong>Legend and Map Display</strong> panel to show additional information on the map. </li> 
+      <li>Click a building on the map to select it. The <strong>Building Information</strong> panel will display related details.</li> 
+      <li>These layers will display an info window when clicked: 
+       <ul> 
+        <li>Accessible Parking: Number of spaces</li> 
+        <li>Bike Racks: Total capacity</li> 
+        <li>Construction Projects: Project information</li> 
+        <li>Road Closings: Closing information</li> 
+        <li>Battery Collection Containers: Room number or location information</li> 
+       </ul> </li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="doLayout:false, title:'Related Links'" id="linkTab"> 
+    <h3>Additional Maps</h3> 
+    <ul class="list"> <!-- <li><a href="http://www.ps.missouri.edu/WebWelcome/~Perm/VisitorMap.pdf">Printable Map</a> <a href="http://get.adobe.com/reader/" target="_blank" title="Download Acrobat Reader Free (new window)">(PDF)</a></li> --> <!--   <li><a href="http://www.mu-cf-map.col.missouri.edu/VisitorMap.pdf">Printable Map</a> <a href="http://get.adobe.com/reader/" target="_blank" title="Download Acrobat Reader Free (new window)">(PDF)</a></li>
+--> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/VisitorMap.pdf">Printable Map</a> <a href="http://get.adobe.com/reader/" target="_blank" title="Download Acrobat Reader Free (new window)">(PDF)</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/CampusMaps.pdf">Printable Parking Map</a> <a href="http://get.adobe.com/reader/" target="_blank" title="Download Acrobat Reader Free (new window)">(PDF)</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/muparking/">Parking Map Online</a></li> 
+     <li><a href="http://accessibilitymap.missouri.edu/">Campus Accessibility Map Online</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/Projects/">Campus Construction Map Online</a></li> 
+    </ul> 
+    <h3>Additional Information</h3> 
+    <ul class="list"> 
+     <li><a href="http://www.missouri.edu/visitors/">Office of Visitor Relations</a></li> 
+     <li><a href="http://www.mutigers.com/">Mizzou Athletics</a></li> 
+     <li><a href="http://calendar.missouri.edu/">Events Calendar</a></li> 
+     <li><a href="http://www.missouri.edu/directories/">Directories</a></li> 
+    </ul> 
+   </div> 
+   <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="doLayout:false, title:'Map Help'" id="helpTab"> 
+    <ul id="helpLinks" class="list"> <!-- <li><a href="../maphelp/index.html?=nav" target="_blank" title="Opens in new tab or window">Map Navigation</a></li> 
+                        <li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html" target="_blank" title="Opens in new tab or window">Map Navigation</a></li>
+			<li><a href="../maphelp/index.html?=access" target="_blank" title="Opens in new tab or window">Accessibility Guide</a></li>
+                        <li><a href="../maphelp/index.html?=display" target="_blank" title="Opens in new tab or window">Map Layers and Display</a></li>
+                        <li><a href="../maphelp/index.html?=tools" target="_blank" title="Opens in new tab or window">Tools and Information</a></li>
+                        <li><a href="../maphelp/index.html?=print" target="_blank" title="Opens in new tab or window">Printing the Map</a></li>
+                        <li><a href="../maphelp/index.html?=system" target="_blank" title="Opens in new tab or window">System Requirements</a></li>
+ 			--> <!--<li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html?=nav" target="_blank" title="Opens in new tab or window">Map Navigation</a></li> --> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html" target="_blank" title="Opens in new tab or window">Map Navigation</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html?=access" target="_blank" title="Opens in new tab or window">Accessibility Guide</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html?=display" target="_blank" title="Opens in new tab or window">Map Layers and Display</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html?=tools" target="_blank" title="Opens in new tab or window">Tools and Information</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html?=print" target="_blank" title="Opens in new tab or window">Printing the Map</a></li> 
+     <li><a href="http://mu-cf-map.col.missouri.edu/maphelp/index.html?=system" target="_blank" title="Opens in new tab or window">System Requirements</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> 
+ <div class="print-no" id="credits"> 
+  <p> This map is developed by <a href="http://www.cf.missouri.edu/spm/">Campus Facilities Department of Space Planning &amp; Management</a> <br>Email: <a href="mailto:richardsonjam@missouri.edu">richardsonjam@missouri.edu</a> </p> 
+  <p class="small"> ©2014 - Curators of the <a href="http://www.umsystem.edu/" target="_blank" title="Opens in new tab or window">University of Missouri</a>. All rights reserved. <a href="http://www.missouri.edu/dmca/" target="_blank" title="Opens in new tab or window">DMCA</a> and <a href="http://www.missouri.edu/copyright.php" target="_blank" title="Opens in new tab or window">other copyright information</a>. An <a href="http://www.missouri.edu/eeo-aa.php" target="_blank" title="Opens in new tab or window">equal opportunity/affirmative action</a> institution. </p> 
+ </div> 
+</div> 
+<div id="mapPanel"> 
+ <div id="selMapDiv" class="print-no"> <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="title:'Show MU Base Map', iconClass:'dijitCheckBoxIcon', checked:'checked', showLabel:true, label:'Mizzou'" id="selMuMap" type="button"></button> <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="title:'Show Google Map', iconClass:'dijitCheckBoxIcon', showLabel:true, label:'Google'" id="selGoogle" type="button"></button> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Print Map'" id="printbtn" type="button"></button> 
+ </div> 
+ <div id="gmapDiv" style="" class="print-no hideMap"></div> 
+ <div id="mapDiv" style="" class="showMap"> 
+  <div id="wait" class="print-no">
+    LOADING . . . 
+   <br>
+   <img src="images/loading.gif" alt="Loading . . . "> 
+  </div> 
+  <div id="navToolbar" data-dojo-type="dijit/Toolbar" class="print-no"> <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="title:'Zoom In'" id="zoomin" type="button"></button> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Previous View'" id="zoomprev" type="button"></button> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Next View'" id="zoomnext" type="button"></button> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Reset Map View'" id="zoomfullext" type="button"></button> 
+   <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="title:'Link to Map', iconClass:'linkBtn', showLabel:false" id="linkbtn"> <span></span> <span data-dojo-type="dijit/TooltipDialog"> <label id="ddLinkLbl" for="mapLink">Copy and paste:</label> <input data-dojo-type="dijit/form/TextBox" id="mapLink" name="mapLink" onfocus="this.select();" readonly size="30" value=""> </span> 
+   </div> 
+  </div> 
+ </div> 
+</div>
+</body>
+</doc>

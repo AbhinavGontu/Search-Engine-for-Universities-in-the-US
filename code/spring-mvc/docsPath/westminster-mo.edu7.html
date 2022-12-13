@@ -1,0 +1,140 @@
+<doc>
+<filename>westminster-mo.edu7.html</filename>
+<url>http://helpdesk.westminster-mo.edu/</url>
+<ip>174.34.28.142</ip>
+<title>ManageEngine ServiceDesk Plus</title>
+<body>
+<!-- content for customization starts--> 
+<div id="loginFormDiv"></div> 
+<div id="tempLoginFormDiv" style="display:none"> 
+ <div id="login-section1" class="login-section loginform"> 
+  <div id="message" class="tl err-div"> 
+   <div style="clear:both"></div> 
+   <script>
+                function closeAlertMsg()
+                {
+                  var ele = document.getElementById("errorMsg");
+                  if( ele != null )
+                  {
+                    jQuery('#errorMsg').slideUp('slow');//NO I18N
+                    usernameEle = document.getElementById("username");
+                    usernameEle.focus();
+                  }
+                }
+              </script> 
+   <div class="errorMsg" id="errorMsg" hidden> 
+    <div class="alert alert-dismissible alert-danger mb5" role="alert"> <span class="alert-close-icon cursor-hand" aria-hidden="true" onclick="closeAlertMsg();" title="Close"></span> <span class="sr-only"></span> <span aria-hidden="true" class="alert-failure sdp-glyph-status"></span> <span class="msg"></span> 
+    </div> 
+   </div> 
+  </div> 
+  <form action="/j_security_check" id="login-form" method="post" name="login" autocomplete="off"> 
+   <input type="hidden" name="AUTHRULE_NAME" id="AUTHRULE_NAME" value="RememberMeLoginModule"> 
+   <div class="widget-table"> 
+    <div class="pt20"></div> 
+    <div id="loginBox" class="widget-box collapse in" style="overflow:hidden"> 
+     <div id="loginFormTable" class="formsection"> 
+      <div class="fsinner"> 
+       <div>
+        <!-- form container div --> 
+        <div> 
+         <div class="input-group"> <span class="input-group-addon email-label"><span class="login-user-icon"></span></span> 
+          <input class="form-control" name="j_username" placeholder="Username" onkeyup="userNameKeyUp()" onchange="loadDomainListForADLogin(this)" id="username" value="" type="text" autofocus> 
+         </div> 
+        </div> 
+        <div class="pt20"> 
+         <div class="input-group"> <span class="input-group-addon email-label"><span class="login-pawd-icon"></span></span> 
+          <input class="form-control" value="" placeholder="Password" name="j_password" type="password" id="password" autocomplete="off"> 
+         </div> 
+        </div> 
+        <div style="clear:both"></div> 
+        <div class="hide" id="choosedomaindiv">
+         Select a Domain
+        </div> 
+        <div class="hide" id="moreOptionsMsg">
+         Options
+        </div> 
+        <div class="hide" id="jserror">
+         Enter both username and password to proceed
+        </div> 
+        <div class="hide" id="empty_captcha">
+         Captcha text cannot be empty.
+        </div> 
+        <div id="LocalAuthLabel"></div> 
+        <div style="clear:both"></div> <span id="LocalAuthdomainname"></span> 
+        <div id="domainname"></div> 
+        <input name="LDAPEnable" type="hidden" value="false"> <!-- NO OUTPUTENCODING --> 
+        <input name="AdEnable" type="hidden" value="false"> <!-- NO OUTPUTENCODING --> 
+        <input name="enableDomainDropdown" type="hidden" value="true"> 
+        <input name="DomainCount" type="hidden" value="0"> 
+        <input name="LocalAuth" type="hidden" value="No"> 
+        <input name="LocalAuthWithDomain" type="hidden" value="No"> 
+        <input name="dynamicUserAddition_status" type="hidden" value="true"> <!-- NO OUTPUTENCODING --> 
+        <input name="localAuthEnable" type="hidden" value="true"> <!-- NO OUTPUTENCODING --> 
+        <input name="logonDomainName" type="hidden" value="-1"> 
+        <div id="LocalAuthentication" class="hide">
+         Local Authentication
+        </div> 
+        <div id="NoDomain" class="hide">
+         --Select Domain--
+        </div> 
+        <div style="clear:both"></div> 
+        <div id="domainLabel" style="display : none" class="pt10"> <label>Domain - <span id="domain"></span></label> 
+        </div> 
+        <div style="clear:both"></div> 
+        <div class="pb10 pt15" id="keepme"> 
+         <p class="m0"> <label class="checkbox-inline"> <input type="checkbox" name="checkbox" value="checkbox" id="signedInCB" class="m0"> &nbsp;<label for="signedInCB">Keep me signed in</label> </label> </p> 
+        </div> 
+        <div class="pb3"> <button id="loginSDPage" name="loginButton" class="btn btn-primary" data-loading-text="<span class='icon-sm spinner-icon1 mr5'></span>Logging in..." title="Log in" onclick="return checkForNullInLogin(this, this.form, 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz/lKxtVmhf+5N6L1G1c5D0lL2zZIcsUlxeoBr1nn1835FKaAnkP5Y6Waw2Y0iFsgPir1z6Z6ab2MleQV5j3r85F3bBGjWPJcGQHD1mouVku83IDlHk1A5J1AWY7JL92mxL3bM3JqCxUpNUrLn1yP+xvRAnj9u+qnP3OuwhLMbEDgBeGNvj3wmasmrl76G+qB7s8MhuvhTuGP2pT/beCaNes8XINFr4iu52W7gbvIOVKJ+S4DBPpsMNI709JdC6hVh42dcSbSL6azIqCZyJK8e5ncPHlJ/eRLMwGRFdu8iY+PBAtgBtUCtEE5y4in35ZJ7xRJPwUtlJwq3Q0Aij43mQIDAQAB', '18f841c9-3b2f-41f1-bb66-8440361602d6');">Log in</button> 
+        </div> 
+       </div> 
+      </div><!--/.fsinner--> 
+     </div><!--/.formsection--> 
+    </div> 
+   </div> 
+  </form> 
+  <div class="saml-blk" id="or-div"> 
+   <div class="sign-line"> <span class="or-ctr">OR</span> 
+   </div> 
+  </div> 
+  <div class="saml-link" id="saml-div"> <a href="javascript:loadSaml()" class="sign-saml">Log in with SAML Single Sign On</a> 
+  </div> 
+ </div> 
+</div> 
+<script>
+     getCustomHtml('/custom/customimages/Custom_LoginLogo.gif','ManageEngine ServiceDesk Plus','http://www.manageengine.com/products/service-desk/index.html','11.1',''); //NO OUTPUTENCODING
+     </script> <!-- content for customization ends--> 
+<script>loadLogin(false, '', '', '');</script> 
+<script>
+    function setSelect2()
+    {
+      if(jQuery('select[name="domain"]').length > 0)
+      {
+        jQuery('select[name="domain"]').select2();
+      }
+      if(jQuery('select[name="dname"]').length > 0)
+      {
+        jQuery('select[name="dname  "]').select2();
+      }
+      if(jQuery('select[name="authtype"]').length > 0)
+      {
+        jQuery('select[name="authtype"]').select2();
+      }
+    }
+
+    function setFocus() {
+       if(document.login !== null) {
+        document.login.j_username.focus();
+      }
+    }
+    //SD 44904 Method to set Copyright Year in Login page
+    function setCopyrightYear(){
+      var copyrightContent = document.getElementById("copyrightinfo"); //No I18N
+      if(copyrightContent!=null){
+        document.getElementById("copyrightinfo").textContent = copyrightContent.textContent.replace("{{copyright_year}}",(new Date).getFullYear()); //NO OUTPUTENCODING
+      }
+    }
+    //window.top.postMessage(JSON.stringify({"type" : "is_sdp_logged_in", "message" : "false","showSamlLocalChoice":'true'}), "*"); //No I18N
+    window.top.postMessage( (typeof sdpToJSON != 'undefined') ? sdpToJSON({"type" : "is_sdp_logged_in", "message" : "false","showSamlLocalChoice":true}) : JSON.stringify({"type" : "is_sdp_logged_in", "message" : "false","showSamlLocalChoice":true}) , "*"); //No I18N
+    </script>
+</body>
+</doc>

@@ -1,0 +1,561 @@
+<doc>
+<filename>utoledo.edu4.html</filename>
+<url>http://myut.utoledo.edu</url>
+<ip>131.183.52.90</ip>
+<title>MyUT</title>
+<body>
+<!-- Google Tag Manager --> 
+<noscript>
+ <iframe src="//www.googletagmanager.com/ns.html?id=GTM-K4CH2R" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> 
+<script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K4CH2R');
+  </script> <!-- End Google Tag Manager --> <!-- Primary Page Layout
+	================================================== --> 
+<div id="header"> 
+ <div id="top_bar"> 
+  <div class="portal_wrap container"> 
+   <div class="columns" style="width:auto;">
+    <a href="http://www.utoledo.edu" target="_blank" id="ut_home">UToledo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://utmc.utoledo.edu" id="ut_health" target="_blank">UTMC</a>
+   </div> 
+   <div id="login_links"> 
+    <ul id="login_links_list"> <!--<li class="login_links_item"><a href="http://www.utoledo.edu/it/security/" target="_blank" class="login_links">IT Security</a></li> --> 
+     <li class="login_links_item"><a href="https://myutaccount.utoledo.edu/" target="_blank" class="login_links">Create Account</a></li> 
+     <li class="login_links_item"><a href="http://myutaccount.utoledo.edu/" target="_blank" class="login_links">Account Maintenance</a></li> 
+     <li class="login_links_item"><a href="http://www.utoledo.edu/offices/treasurer/parent-guest-payment.html" target="_blank" class="login_links">Parent/Guest Payment</a></li> 
+     <li class="login_links_item"><a href="/portal/" id="log_btn" class="login_links" style="padding-right:5px;">Login</a><img width="14" src="images/shieldSmall.png"></li> 
+    </ul> 
+   </div> 
+  </div> 
+ </div> <!-- end top_bar --> 
+ <div id="top_bar_mobile"> <a href="http://www.utoledo.edu" target="_blank" id="A1">UToledo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="A2" href="http://utmc.utoledo.edu" target="_blank">UTMC</a> 
+  <div id="login_links_mobile"> <a href="/portal/" id="log_btn_mobile" class="login_links_mobile"><strong>Login</strong>&nbsp;&nbsp;<img width="14" src="images/shieldSmall.png"></a> <a href="#" id="log_menu" class="login_links_mobile">Menu&nbsp;&nbsp;<i class="fa fa-bars"></i></a>
+  </div> 
+  <div style="clear:both;"></div> 
+  <ul id="login_links_list_mobile"> <!--<li class="login_links_item_mobile"><a href="http://www.utoledo.edu/it/security/" target="_blank" class="login_links_mobile">IT Security</a></li> --> 
+   <li class="login_links_item_mobile"><a href="https://myutaccount.utoledo.edu/ident.asp?create" target="_blank" class="login_links_mobile">Create Account</a></li> 
+   <li class="login_links_item_mobile"><a href="http://myutaccount.utoledo.edu/" target="_blank" class="login_links_mobile">Account Maintenance</a></li> 
+   <li class="login_links_item_mobile"><a href="http://www.utoledo.edu/offices/treasurer/parent-guest-payment.html" target="_blank" class="login_links_mobile">Parent/Guest Payment</a></li> 
+  </ul> 
+ </div> <!-- end top_bar_mobile --> 
+ <div class="portal_wrap container"> 
+  <div id="myut" class="columns"> 
+   <div class="myutTitle">
+    <span class="yellow">my</span>UT
+   </div> 
+   <div id="tagline">
+    News and Services for the UToledo Community
+   </div> 
+  </div> 
+ </div> <!-- end container --> 
+</div> <!-- end #header --> 
+<div id="nav_bar"> 
+ <div class="container"> 
+  <div style="float:left;" class="newsTabs"> 
+   <ul> 
+    <li class="selected" id="newsTab">News</li> 
+    <li class="u_directory">University Directory</li> 
+   </ul> 
+  </div> 
+ </div> 
+</div> 
+<script language="JavaScript">
+    
+        function submitenter(myfield,e)
+        {
+            var keycode;
+            if (window.event) keycode = window.event.keyCode;
+            else if (e) keycode = e.which;
+            else return true;
+
+            if (keycode == 13)
+            {
+                directorySearch();
+                return false;
+            }
+            else
+                return true;
+        }
+
+
+        function directorySearch() {
+            if ($('#txtFirstName').val() == '' && $('#txtLastName').val() == '' && $('#txtDept').val() == '') {
+                alert('Please enter search criteria');
+                return false;
+            }
+            $('#directory').slideUp(10);
+            $('.u_directory').removeClass('on');
+            
+            var population = $('#campus').val();
+            if (population == 'student') {
+                var url = 'http://www.utoledo.edu/eDirectory/StudentDirectoryResults.aspx?txtFirstName=' + $('#txtFirstName').val() + '&txtLastName=' + $('#txtLastName').val() + '&myut=yes';
+                $.colorbox({
+                    href: '/proxy.aspx?url=' + encodeURIComponent(url) + ' #aspnetForm', width: '90%', height: '90%', maxWidth: '500px'
+                });
+            } else {
+                var url = 'http://www.utoledo.edu/eDirectory/DirectoryResults.aspx?txtFirstName=' + $('#txtFirstName').val() + '&txtLastName=' + $('#txtLastName').val() + '&txtDept=' + $('#txtDept').val().replace('&','%26') + '&myut=yes';
+                $.colorbox({
+                    href: '/proxy.aspx?url=' + encodeURIComponent(url) + ' #aspnetForm', width: '90%', height: '90%', maxWidth: '500px'
+                });
+
+            }
+            return false;
+        }
+
+        function switchCampDir(pop) {
+
+            var population = $(pop).val();
+            if (population == 'student') {
+                document.getElementById('txtDept').disabled = true;
+            } else {
+                document.getElementById('txtDept').disabled = false;
+            }
+        }
+
+        
+        </script> 
+<div id="directory"> <label class="lastname" for="txtLastName"><b class="lastname">Last Name:</b> <input type="text" onkeypress="return submitenter(this,event)" class="lastname" id="txtLastName" name="txtLastName"> </label> <label class="firstname" for="txtFirstName"><b class="firstname">First Name:</b> <input type="text" onkeypress="return submitenter(this,event)" class="firstname" id="txtFirstName" name="txtFirstName"> </label> <label class="department" for="txtDept"><b>Department:</b> <select id="txtDept" name="txtDept"> <!-- depts --><option value="">Select a Department</option><option value="3AB ICCU">3AB ICCU</option><option value="3D Medical Intensive Care">3D Medical Intensive Care</option><option value="4AB GU/Nephrology/Med-Surg">4AB GU/Nephrology/Med-Surg</option><option value="4AB Med/Surgery G I">4AB Med/Surgery G I</option><option value="4CD Oncology/Hemoc/Med-Surg">4CD Oncology/Hemoc/Med-Surg</option><option value="4CD Surgery-Orthopedics">4CD Surgery-Orthopedics</option><option value="5AB Med/Surgery">5AB Med/Surgery</option><option value="5CD Surgery-Neurosciences">5CD Surgery-Neurosciences</option><option value="6A Geriatric Psych">6A Geriatric Psych</option><option value="6AB Surgery - Orthopedics">6AB Surgery - Orthopedics</option><option value="6CD Detox">6CD Detox</option><option value="Academic Athletic Advising">Academic Athletic Advising</option><option value="Academic House-OP">Academic House-OP</option><option value="Accounting">Accounting</option><option value="Acute Hemodialysis">Acute Hemodialysis</option><option value="Acute Occupational Therapy">Acute Occupational Therapy</option><option value="Acute Physical Therapy">Acute Physical Therapy</option><option value="Admin - Campus Env &amp; Phy Plnt">Admin - Campus Env &amp; Phy Plnt</option><option value="Admissions-Law">Admissions-Law</option><option value="Admitting">Admitting</option><option value="Advanced Clinical Simulation">Advanced Clinical Simulation</option><option value="Advanced Microscopy &amp; ImageCtr">Advanced Microscopy &amp; ImageCtr</option><option value="AHEC">AHEC</option><option value="ALI-Administration">ALI-Administration</option><option value="Alumni Relations">Alumni Relations</option><option value="Ambulatory Staffing Pool">Ambulatory Staffing Pool</option><option value="Anesthesiology">Anesthesiology</option><option value="Anesthesiology (Med Univ Ctr)">Anesthesiology (Med Univ Ctr)</option><option value="Anthropology">Anthropology</option><option value="Anticoagulation Clinic">Anticoagulation Clinic</option><option value="Art">Art</option><option value="Astronomy">Astronomy</option><option value="ATH-OP&amp;Maint-Bancroft">ATH-OP&amp;Maint-Bancroft</option><option value="Athletic-Acad Support">Athletic-Acad Support</option><option value="Athletic-Market &amp; Promotn">Athletic-Market &amp; Promotn</option><option value="Athletic-Sports Informatn">Athletic-Sports Informatn</option><option value="Athletics Admin">Athletics Admin</option><option value="Athletics-Developmt">Athletics-Developmt</option><option value="ATOM Admissions">ATOM Admissions</option><option value="Audiology">Audiology</option><option value="Automation - HSC">Automation - HSC</option><option value="Auxiliary Administration">Auxiliary Administration</option><option value="Baseball">Baseball</option><option value="Basketball - Men">Basketball - Men</option><option value="Basketball - Women">Basketball - Women</option><option value="Bio-Engineering">Bio-Engineering</option><option value="Biochem Cancer Biology">Biochem Cancer Biology</option><option value="Bioinform Proteo Gen Program">Bioinform Proteo Gen Program</option><option value="Biological Sciences">Biological Sciences</option><option value="Blood Bank">Blood Bank</option><option value="Business Insights">Business Insights</option><option value="Business Office">Business Office</option><option value="Business Technology">Business Technology</option><option value="Cancer Institute">Cancer Institute</option><option value="Cardiac Rehab">Cardiac Rehab</option><option value="Care of Grounds - HSC">Care of Grounds - HSC</option><option value="Care Of Grounds - MC">Care Of Grounds - MC</option><option value="Career Services">Career Services</option><option value="Carver Teach Ed Ctr">Carver Teach Ed Ctr</option><option value="CCC Pulmonology Clinic">CCC Pulmonology Clinic</option><option value="Center for Clinical Research">Center for Clinical Research</option><option value="Center for Creative Instruction">Center for Creative Instruction</option><option value="Center for Success Coaching">Center for Success Coaching</option><option value="Center For Women">Center For Women</option><option value="Central Control">Central Control</option><option value="Chartwells Food Svcs">Chartwells Food Svcs</option><option value="Chem/Envior Engr">Chem/Envior Engr</option><option value="Chemistry">Chemistry</option><option value="CISP">CISP</option><option value="Civil Engineering">Civil Engineering</option><option value="Classroom Support Services">Classroom Support Services</option><option value="Clean and Alternative Energy Incubator">Clean and Alternative Energy Incubator</option><option value="Clinic Providers">Clinic Providers</option><option value="Clinical Dieticians">Clinical Dieticians</option><option value="Clinical Medical Education">Clinical Medical Education</option><option value="Clinical Support Svcs">Clinical Support Svcs</option><option value="College of Med Grad Programs">College of Med Grad Programs</option><option value="College of Nursing">College of Nursing</option><option value="College of Nursing Instruction">College of Nursing Instruction</option><option value="Comm Wellness &amp; Health Prog">Comm Wellness &amp; Health Prog</option><option value="Communication">Communication</option><option value="Community College Support">Community College Support</option><option value="Continuing Education">Continuing Education</option><option value="Controller">Controller</option><option value="Counseling Center">Counseling Center</option><option value="CT Scanner">CT Scanner</option><option value="Ctr For Drug Design">Ctr For Drug Design</option><option value="Ctr Mat'l Sci &amp; Engin">Ctr Mat'l Sci &amp; Engin</option><option value="Curriculum &amp; Instruction">Curriculum &amp; Instruction</option><option value="CVU">CVU</option><option value="Cytology">Cytology</option><option value="Dana Cancer Center">Dana Cancer Center</option><option value="Dana Cancer Center Administration">Dana Cancer Center Administration</option><option value="Dana Conference Center">Dana Conference Center</option><option value="Dana Infusion Center">Dana Infusion Center</option><option value="Dean - CAL">Dean - CAL</option><option value="Dean - NSM">Dean - NSM</option><option value="Dean - SSARE">Dean - SSARE</option><option value="Dean - Univ College">Dean - Univ College</option><option value="Dean College of Nursing">Dean College of Nursing</option><option value="Dean Medical College">Dean Medical College</option><option value="Dean-Business College">Dean-Business College</option><option value="Dean-Education">Dean-Education</option><option value="Dean-Engineering">Dean-Engineering</option><option value="Dean-Law School">Dean-Law School</option><option value="Dean-Pharmacy">Dean-Pharmacy</option><option value="Dentistry">Dentistry</option><option value="Department of Medical Education">Department of Medical Education</option><option value="Dept of Lab Animal Resources">Dept of Lab Animal Resources</option><option value="Dept of Public Hlth &amp; Prevent Med">Dept of Public Hlth &amp; Prevent Med</option><option value="Dept. Ed Studies/Chair">Dept. Ed Studies/Chair</option><option value="Dept. of Cancer Biology">Dept. of Cancer Biology</option><option value="Dept. Teacher Ed/Chair">Dept. Teacher Ed/Chair</option><option value="Dir-Schl of Visual &amp; Perform. Arts">Dir-Schl of Visual &amp; Perform. Arts</option><option value="Disability Studies">Disability Studies</option><option value="Disability Studies Program">Disability Studies Program</option><option value="Distribution Services">Distribution Services</option><option value="Diversity &amp; Inclusion">Diversity &amp; Inclusion</option><option value="Early Childhood Education">Early Childhood Education</option><option value="Early Learning Center">Early Learning Center</option><option value="Economics">Economics</option><option value="ED Registration">ED Registration</option><option value="Educ Statistics &amp; Research Methods">Educ Statistics &amp; Research Methods</option><option value="Educ, Health &amp; Human Srv-Stud Serv.">Educ, Health &amp; Human Srv-Stud Serv.</option><option value="Educational Administration">Educational Administration</option><option value="Educational Psychology">Educational Psychology</option><option value="EducBldg-Campus Env &amp; Phy Plnt">EducBldg-Campus Env &amp; Phy Plnt</option><option value="eLearning - Class Fee">eLearning - Class Fee</option><option value="Electric-Campus Env &amp; Phy Plnt">Electric-Campus Env &amp; Phy Plnt</option><option value="Electrical Engineering">Electrical Engineering</option><option value="Electron Microscopy">Electron Microscopy</option><option value="Emergency Dept.">Emergency Dept.</option><option value="Emergency Medicine">Emergency Medicine</option><option value="EMS Education">EMS Education</option><option value="Endoscopy Suite">Endoscopy Suite</option><option value="Engineering Career Development">Engineering Career Development</option><option value="Engineering Tech">Engineering Tech</option><option value="English">English</option><option value="Enrollment Management">Enrollment Management</option><option value="Enrollment Operations">Enrollment Operations</option><option value="Environmental Sciences">Environmental Sciences</option><option value="Environmental Services">Environmental Services</option><option value="Equipment Room">Equipment Room</option><option value="Evaluator">Evaluator</option><option value="Facilities Mgt Admin">Facilities Mgt Admin</option><option value="Facilities Oper Admin">Facilities Oper Admin</option><option value="Facilities Planning">Facilities Planning</option><option value="Faculty Affairs">Faculty Affairs</option><option value="Faculty Labor Relations &amp; Inclusion">Faculty Labor Relations &amp; Inclusion</option><option value="Faculty Senate">Faculty Senate</option><option value="Family Medicine">Family Medicine</option><option value="Family Practice">Family Practice</option><option value="Finance">Finance</option><option value="Finance and Administration">Finance and Administration</option><option value="Finance Tech &amp; Oper">Finance Tech &amp; Oper</option><option value="Financial Aid">Financial Aid</option><option value="Food And Nutritional Svcs">Food And Nutritional Svcs</option><option value="Football">Football</option><option value="Foreign Languages">Foreign Languages</option><option value="French">French</option><option value="General Counsel">General Counsel</option><option value="Geography">Geography</option><option value="Geriatrics Clinic">Geriatrics Clinic</option><option value="German">German</option><option value="Gift Planning">Gift Planning</option><option value="Gift Shop">Gift Shop</option><option value="Glendale Medical East Mtnce and Env">Glendale Medical East Mtnce and Env</option><option value="Golf-Men">Golf-Men</option><option value="Golf-Women">Golf-Women</option><option value="Government Relations">Government Relations</option><option value="Grad Assist Reserve">Grad Assist Reserve</option><option value="Graduate Programs Office">Graduate Programs Office</option><option value="Graduate Studies">Graduate Studies</option><option value="Greek Advisors">Greek Advisors</option><option value="Health &amp; Human Services College">Health &amp; Human Services College</option><option value="Health Info Management">Health Info Management</option><option value="Health Professions Lab">Health Professions Lab</option><option value="Health Science Contractor">Health Science Contractor</option><option value="Heart and Vascular Center">Heart and Vascular Center</option><option value="Heart Station">Heart Station</option><option value="Hematology/CLM/Micro">Hematology/CLM/Micro</option><option value="Hillebrand Clinical Skills Center">Hillebrand Clinical Skills Center</option><option value="History">History</option><option value="Honors">Honors</option><option value="Hosp - Advertising/Marketing">Hosp - Advertising/Marketing</option><option value="Hospital Finance">Hospital Finance</option><option value="Hospital Safety">Hospital Safety</option><option value="HSC Comm-Based Vol Faculty">HSC Comm-Based Vol Faculty</option><option value="HSC Emeritus Faculty">HSC Emeritus Faculty</option><option value="Human Organ Donation Program">Human Organ Donation Program</option><option value="Human Resources">Human Resources</option><option value="Human Resources &amp; Talent Devel.">Human Resources &amp; Talent Devel.</option><option value="Human Resources - HSC">Human Resources - HSC</option><option value="Human Trafficking &amp; Social Just Ins">Human Trafficking &amp; Social Just Ins</option><option value="HVAC-Campus Env &amp; Phy Plnt">HVAC-Campus Env &amp; Phy Plnt</option><option value="Incubation">Incubation</option><option value="Independent Collegian">Independent Collegian</option><option value="Infection Prevention &amp; Control">Infection Prevention &amp; Control</option><option value="Institutional Communications">Institutional Communications</option><option value="Institutional Research">Institutional Research</option><option value="Inter-Prof Ed &amp; Improv Human Cond">Inter-Prof Ed &amp; Improv Human Cond</option><option value="Intern/Career Plcmt">Intern/Career Plcmt</option><option value="Internal Audit">Internal Audit</option><option value="International Admiss">International Admiss</option><option value="International Student Orientation">International Student Orientation</option><option value="Interventional Pain Center">Interventional Pain Center</option><option value="IOTM">IOTM</option><option value="IT Personnel">IT Personnel</option><option value="IT Personnel - Clinical Informatics">IT Personnel - Clinical Informatics</option><option value="IT Personnel - HSC">IT Personnel - HSC</option><option value="IT Personnel - MC">IT Personnel - MC</option><option value="Jacobson Clinical Research Center">Jacobson Clinical Research Center</option><option value="Japanese">Japanese</option><option value="Kobacker-Day Treatment Prgm">Kobacker-Day Treatment Prgm</option><option value="Kobacker-I/P Nursing Unit">Kobacker-I/P Nursing Unit</option><option value="Lab Fees-Planetarium">Lab Fees-Planetarium</option><option value="Lab-Admin">Lab-Admin</option><option value="Lab-Central Office">Lab-Central Office</option><option value="Lab-Chemistry">Lab-Chemistry</option><option value="Lab-Coagulation">Lab-Coagulation</option><option value="Lab-Evening and Overnight">Lab-Evening and Overnight</option><option value="Lab-Flow Cytometry">Lab-Flow Cytometry</option><option value="Lab-Histology">Lab-Histology</option><option value="Lab-Microbiology">Lab-Microbiology</option><option value="Lab-Molecular Biology">Lab-Molecular Biology</option><option value="Lab-Serology/Immunology">Lab-Serology/Immunology</option><option value="Lake Erie Res Ed Ctr">Lake Erie Res Ed Ctr</option><option value="Laundry &amp; Linen">Laundry &amp; Linen</option><option value="Law - Placement">Law - Placement</option><option value="Law Library">Law Library</option><option value="Law-Instruction">Law-Instruction</option><option value="LCCC Agreement">LCCC Agreement</option><option value="Learning Enhancement Center">Learning Enhancement Center</option><option value="Life Safety Systems">Life Safety Systems</option><option value="Life Support Education">Life Support Education</option><option value="LLSS, NSM, CommArts Student Service">LLSS, NSM, CommArts Student Service</option><option value="Lockshop">Lockshop</option><option value="MacKinnon-OP">MacKinnon-OP</option><option value="Mail Services">Mail Services</option><option value="Main Campus Contractor">Main Campus Contractor</option><option value="Main Campus Medical Center - MCMC">Main Campus Medical Center - MCMC</option><option value="Main Campus Pharmacy">Main Campus Pharmacy</option><option value="Main Campus Student Athletics">Main Campus Student Athletics</option><option value="Mainten- Campus Env &amp; Phy Plnt">Mainten- Campus Env &amp; Phy Plnt</option><option value="Maintenance/Building Operators">Maintenance/Building Operators</option><option value="Maintenance/Electric">Maintenance/Electric</option><option value="Maintenance/Mechanic">Maintenance/Mechanic</option><option value="Maintenance/Structur">Maintenance/Structur</option><option value="Management">Management</option><option value="Marching Band">Marching Band</option><option value="Marketing">Marketing</option><option value="Mathematics">Mathematics</option><option value="MC Building Services">MC Building Services</option><option value="Med Microbio &amp; Immunology">Med Microbio &amp; Immunology</option><option value="Med Tech Program">Med Tech Program</option><option value="Medical College Library">Medical College Library</option><option value="Medical Dir Office">Medical Dir Office</option><option value="Medical School Admission">Medical School Admission</option><option value="Medicine">Medicine</option><option value="Military Science">Military Science</option><option value="MIME">MIME</option><option value="Minority Business Incubator">Minority Business Incubator</option><option value="Motor Vehicle Operation">Motor Vehicle Operation</option><option value="MP Specialty Clinic">MP Specialty Clinic</option><option value="Multclt Stdt Dev">Multclt Stdt Dev</option><option value="Music">Music</option><option value="Neurodiagnostic Services">Neurodiagnostic Services</option><option value="Neurology">Neurology</option><option value="Neurosciences">Neurosciences</option><option value="New Student Orientation">New Student Orientation</option><option value="Northwest State CC User">Northwest State CC User</option><option value="NSM Instrumentation Center">NSM Instrumentation Center</option><option value="Nuclear Medicine">Nuclear Medicine</option><option value="Nursing - Student Services">Nursing - Student Services</option><option value="Nursing Pool">Nursing Pool</option><option value="Nursing Svcs Admin">Nursing Svcs Admin</option><option value="NWO Stuttering Clinic">NWO Stuttering Clinic</option><option value="Obestetics &amp; Gynecology">Obestetics &amp; Gynecology</option><option value="Obstetrics and Gynecology">Obstetrics and Gynecology</option><option value="Occupational Therapy (UMC)">Occupational Therapy (UMC)</option><option value="Occupational Therapy Prgm">Occupational Therapy Prgm</option><option value="Office Of Bud/Plan">Office Of Bud/Plan</option><option value="Office of Intl Student Scholar Srvs">Office of Intl Student Scholar Srvs</option><option value="Office Of Legal Affairs">Office Of Legal Affairs</option><option value="Office of President">Office of President</option><option value="Office of Research Compliance">Office of Research Compliance</option><option value="Office of the Registrar">Office of the Registrar</option><option value="Online Instr - Africana Studies">Online Instr - Africana Studies</option><option value="Online Instr - Dean Univ College">Online Instr - Dean Univ College</option><option value="Online Instr-MST Liberal Studies">Online Instr-MST Liberal Studies</option><option value="Online Instr-School of Social Just">Online Instr-School of Social Just</option><option value="Online Instr-Women &amp; Gender Studies">Online Instr-Women &amp; Gender Studies</option><option value="Online Instruction - Accounting">Online Instruction - Accounting</option><option value="Online Instruction - Anthropology">Online Instruction - Anthropology</option><option value="Online Instruction - Business Tech">Online Instruction - Business Tech</option><option value="Online Instruction - History">Online Instruction - History</option><option value="Online Instruction - Sociology">Online Instruction - Sociology</option><option value="Online Instruction - Spanish">Online Instruction - Spanish</option><option value="Online Recruitment &amp; Stu. Serv.">Online Recruitment &amp; Stu. Serv.</option><option value="OP - Clinic - Neurology">OP - Clinic - Neurology</option><option value="OP - Clinic - Pain Medicine">OP - Clinic - Pain Medicine</option><option value="OP - Clinic Wound Care">OP - Clinic Wound Care</option><option value="OP Nephrology/Transplant">OP Nephrology/Transplant</option><option value="OP-Clinic-Admin">OP-Clinic-Admin</option><option value="OP-Clinic-Cardiology">OP-Clinic-Cardiology</option><option value="OP-Clinic-Dentistry">OP-Clinic-Dentistry</option><option value="OP-Clinic-Glendale Medicine">OP-Clinic-Glendale Medicine</option><option value="OP-Clinic-Kidney Transplant">OP-Clinic-Kidney Transplant</option><option value="OP-Clinic-OB/GYN">OP-Clinic-OB/GYN</option><option value="OP-Clinic-Orthopedic">OP-Clinic-Orthopedic</option><option value="OP-Clinic-Pediatrics">OP-Clinic-Pediatrics</option><option value="OP-Clinic-Psychiatry">OP-Clinic-Psychiatry</option><option value="OP-Clinic-Recovery Services">OP-Clinic-Recovery Services</option><option value="OP-Clinic-Rehab Med">OP-Clinic-Rehab Med</option><option value="OP-Clinic-Surgery">OP-Clinic-Surgery</option><option value="OP-Clinic-Urology">OP-Clinic-Urology</option><option value="OP-Occupational Therapy">OP-Occupational Therapy</option><option value="OP-Physical Therapy">OP-Physical Therapy</option><option value="Operating Room">Operating Room</option><option value="OPS-PACU">OPS-PACU</option><option value="Orthopedic">Orthopedic</option><option value="Orthopedic Surgery">Orthopedic Surgery</option><option value="Ottawa House">Ottawa House</option><option value="Outcome Management">Outcome Management</option><option value="Outpatient Pharmacy">Outpatient Pharmacy</option><option value="Painters-Campus Env &amp; Phy Plnt">Painters-Campus Env &amp; Phy Plnt</option><option value="Parking Services">Parking Services</option><option value="Parks-OP">Parks-OP</option><option value="Pastoral Care">Pastoral Care</option><option value="PAT">PAT</option><option value="Pathology">Pathology</option><option value="Patient Financial Svcs">Patient Financial Svcs</option><option value="Payroll Office">Payroll Office</option><option value="PEC">PEC</option><option value="Pediatrics">Pediatrics</option><option value="Perfusion">Perfusion</option><option value="Pharm - Enrollment Management">Pharm - Enrollment Management</option><option value="Pharm Clerkship Prog">Pharm Clerkship Prog</option><option value="Pharm-Med/Bio Chem">Pharm-Med/Bio Chem</option><option value="Pharm-Student Srvcs">Pharm-Student Srvcs</option><option value="Pharmacology">Pharmacology</option><option value="Pharmacy">Pharmacy</option><option value="Pharmacy BS Pharm Science Fees">Pharmacy BS Pharm Science Fees</option><option value="Pharmacy Practice">Pharmacy Practice</option><option value="Pharmacy Resident">Pharmacy Resident</option><option value="Philosophy">Philosophy</option><option value="Photo Svcs">Photo Svcs</option><option value="Physician Assistant Studies">Physician Assistant Studies</option><option value="Physics">Physics</option><option value="Physio Pharm Meta Cardio">Physio Pharm Meta Cardio</option><option value="Physiology and Pharmacology">Physiology and Pharmacology</option><option value="PICC-Line Services">PICC-Line Services</option><option value="Plant Ops">Plant Ops</option><option value="Plt Sci Res Facility">Plt Sci Res Facility</option><option value="Political Science">Political Science</option><option value="Pre-Health Advising Center">Pre-Health Advising Center</option><option value="President's Hall">President's Hall</option><option value="Primary Care Fallen Timbers">Primary Care Fallen Timbers</option><option value="ProMedica Practitioner">ProMedica Practitioner</option><option value="Provost Office">Provost Office</option><option value="Psychiatry">Psychiatry</option><option value="Psychology">Psychology</option><option value="Purchasing">Purchasing</option><option value="Pwr Plnt-Campus Env &amp; Phy Plnt">Pwr Plnt-Campus Env &amp; Phy Plnt</option><option value="Quality Management">Quality Management</option><option value="Radiation Oncology">Radiation Oncology</option><option value="Radiation Safety">Radiation Safety</option><option value="Radiation Therapy-Univ Med Ctr">Radiation Therapy-Univ Med Ctr</option><option value="Radiology">Radiology</option><option value="Radiology Ambulatory Sites">Radiology Ambulatory Sites</option><option value="Radiology-Comprehensive Care Center">Radiology-Comprehensive Care Center</option><option value="Radiology-Diagnostic">Radiology-Diagnostic</option><option value="Radiology-Hlth Cntr">Radiology-Hlth Cntr</option><option value="Radiology-Mammography">Radiology-Mammography</option><option value="Radiology-MRI">Radiology-MRI</option><option value="Radiology-Orthopaedics">Radiology-Orthopaedics</option><option value="Radiology-Sonographic Imaging">Radiology-Sonographic Imaging</option><option value="Receiving">Receiving</option><option value="Referral Resource Center">Referral Resource Center</option><option value="Regency Rehab">Regency Rehab</option><option value="Registrar">Registrar</option><option value="Registration">Registration</option><option value="Rehab Physical Therapy">Rehab Physical Therapy</option><option value="Rehab Psychology Svcs">Rehab Psychology Svcs</option><option value="Rehab Speech Therapy">Rehab Speech Therapy</option><option value="Rehab Svcs Admin">Rehab Svcs Admin</option><option value="Rehabilitative Care Unit">Rehabilitative Care Unit</option><option value="Renal Transplant Admin">Renal Transplant Admin</option><option value="Res Hall Admin">Res Hall Admin</option><option value="Research &amp; Sponsored Programs">Research &amp; Sponsored Programs</option><option value="Researcher Collaborators">Researcher Collaborators</option><option value="Resid Prgm-Administrative">Resid Prgm-Administrative</option><option value="Resid Prgm-Anesthesiology">Resid Prgm-Anesthesiology</option><option value="Resid Prgm-Dentistry">Resid Prgm-Dentistry</option><option value="Resid Prgm-Emergency Medicine">Resid Prgm-Emergency Medicine</option><option value="Resid Prgm-Family Practice">Resid Prgm-Family Practice</option><option value="Resid Prgm-Fellowship">Resid Prgm-Fellowship</option><option value="Resid Prgm-Medicine">Resid Prgm-Medicine</option><option value="Resid Prgm-Neurology">Resid Prgm-Neurology</option><option value="Resid Prgm-OB/GYN">Resid Prgm-OB/GYN</option><option value="Resid Prgm-Orthopedics">Resid Prgm-Orthopedics</option><option value="Resid Prgm-Pathology">Resid Prgm-Pathology</option><option value="Resid Prgm-Pediatrics">Resid Prgm-Pediatrics</option><option value="Resid Prgm-Psychiatry">Resid Prgm-Psychiatry</option><option value="Resid Prgm-Radiology">Resid Prgm-Radiology</option><option value="Resid Prgm-Rehab Medicine">Resid Prgm-Rehab Medicine</option><option value="Resid Prgm-Surgery">Resid Prgm-Surgery</option><option value="Resid Prgm-Urology">Resid Prgm-Urology</option><option value="Respiratory Care">Respiratory Care</option><option value="Retiree from Legacy System">Retiree from Legacy System</option><option value="Revenue Cycle">Revenue Cycle</option><option value="RHC Dermatology Clinic">RHC Dermatology Clinic</option><option value="RHC Infectious Disease Clinic">RHC Infectious Disease Clinic</option><option value="RHC Occ Screening and Exp Clinic">RHC Occ Screening and Exp Clinic</option><option value="RHC Reumatology Clinic">RHC Reumatology Clinic</option><option value="Risk Management">Risk Management</option><option value="Rocket Solution Central">Rocket Solution Central</option><option value="Rocket Wireless">Rocket Wireless</option><option value="Safety &amp; Health - HSC">Safety &amp; Health - HSC</option><option value="Safety &amp; Health - MC">Safety &amp; Health - MC</option><option value="Sch of Dentistry Dentrix Group">Sch of Dentistry Dentrix Group</option><option value="School of Exercise Rehab Sciences">School of Exercise Rehab Sciences</option><option value="School of Intervention &amp; Wellness">School of Intervention &amp; Wellness</option><option value="School of Population Health">School of Population Health</option><option value="School of Social Justice">School of Social Justice</option><option value="Senior Behavioral Health">Senior Behavioral Health</option><option value="Service Excellence">Service Excellence</option><option value="Soccer-Women">Soccer-Women</option><option value="Social &amp; Philosophical Foundations">Social &amp; Philosophical Foundations</option><option value="Sociology">Sociology</option><option value="Softball">Softball</option><option value="Spanish">Spanish</option><option value="Special Education">Special Education</option><option value="Special Events">Special Events</option><option value="Specialty Pharmacy">Specialty Pharmacy</option><option value="Sports Medicine">Sports Medicine</option><option value="Staff Development">Staff Development</option><option value="Steam Management - HSC">Steam Management - HSC</option><option value="Steam Management - MC">Steam Management - MC</option><option value="Sterile Processing">Sterile Processing</option><option value="Student Activities Admin">Student Activities Admin</option><option value="Student Affairs">Student Affairs</option><option value="Student Disability Services">Student Disability Services</option><option value="Student Legal Services">Student Legal Services</option><option value="Student Rec Center">Student Rec Center</option><option value="Student Services">Student Services</option><option value="Student Success &amp; Retention">Student Success &amp; Retention</option><option value="Student Testing Center">Student Testing Center</option><option value="Student Tutoring Program">Student Tutoring Program</option><option value="Student Union-Main">Student Union-Main</option><option value="Surgery">Surgery</option><option value="Surgery Anesthesiology">Surgery Anesthesiology</option><option value="Surgical Intensive Care">Surgical Intensive Care</option><option value="Survivor Shop">Survivor Shop</option><option value="Swimming-Women">Swimming-Women</option><option value="Talent Development">Talent Development</option><option value="Tech Prep Teachers">Tech Prep Teachers</option><option value="Technology Transfer">Technology Transfer</option><option value="TechSupp-Campus Env &amp; Phy Plnt">TechSupp-Campus Env &amp; Phy Plnt</option><option value="Telecomm-Cellular">Telecomm-Cellular</option><option value="Telemed Conference Center">Telemed Conference Center</option><option value="Telemetry">Telemetry</option><option value="Tennis-Men">Tennis-Men</option><option value="Tennis-Women">Tennis-Women</option><option value="The Division of Development">The Division of Development</option><option value="Theatre">Theatre</option><option value="Tissue Typing">Tissue Typing</option><option value="Title IX">Title IX</option><option value="Toledo Excel Program">Toledo Excel Program</option><option value="Track &amp; CC - Men">Track &amp; CC - Men</option><option value="Track &amp; CC - Women">Track &amp; CC - Women</option><option value="Training Room">Training Room</option><option value="Transport Services">Transport Services</option><option value="Trauma Program">Trauma Program</option><option value="Treasurer's Office">Treasurer's Office</option><option value="TRIO Student Support Services">TRIO Student Support Services</option><option value="UnderGrad Studies">UnderGrad Studies</option><option value="Undergraduate Admission">Undergraduate Admission</option><option value="Union (AFSCME)">Union (AFSCME)</option><option value="Univ College Degree Programs">Univ College Degree Programs</option><option value="Univ Medical Center Admin">Univ Medical Center Admin</option><option value="Univ of Tol Physicians Group">Univ of Tol Physicians Group</option><option value="University Clean Energy Alliance of Ohio">University Clean Energy Alliance of Ohio</option><option value="University Communications">University Communications</option><option value="University Health Services">University Health Services</option><option value="University Libraries">University Libraries</option><option value="University Marketing">University Marketing</option><option value="University Police">University Police</option><option value="Upward Bound">Upward Bound</option><option value="Urban Affairs Center">Urban Affairs Center</option><option value="Urology">Urology</option><option value="US Dept of Agriculture">US Dept of Agriculture</option><option value="UT Assessment">UT Assessment</option><option value="UT Federal Credit Union">UT Federal Credit Union</option><option value="UT Foundation">UT Foundation</option><option value="UT Press Administrative">UT Press Administrative</option><option value="UT Program Review">UT Program Review</option><option value="UTCare Pharmacy">UTCare Pharmacy</option><option value="UTMC Compliance">UTMC Compliance</option><option value="UToledo Online">UToledo Online</option><option value="Vascular Lab">Vascular Lab</option><option value="Vascular Ultrasound">Vascular Ultrasound</option><option value="Volleyball-Women">Volleyball-Women</option><option value="Volunteer Faculty Clinical">Volunteer Faculty Clinical</option><option value="Volunteer Services">Volunteer Services</option><option value="VP - Acad Program Development">VP - Acad Program Development</option><option value="VP Enrollment, Marketing &amp; Comm">VP Enrollment, Marketing &amp; Comm</option><option value="VP for Finance">VP for Finance</option><option value="Women and Gender Studies">Women and Gender Studies</option><option value="Writing Center">Writing Center</option><!-- /depts --> </select> </label> <label class="facstudent" for="searchType"><b>Search type:</b> <select onchange="switchCampDir(this)" id="campus" class="facstudent" name="searchType"> <option value="facstaff">Faculty/Staff</option> <option value="student">Student</option> </select> </label> 
+ <div class="ends"></div> 
+ <img height="30" width="110" onclick="directorySearch()" alt="SUBMIT" src="/images/btnSubmit.png" style="cursor:pointer; float:right;"> <!--<button type="button" class="cboxClose">close</button> --> 
+ <div style="clear:right;padding-top: 8px; font-size:.625em;"> <strong>Information Changes:</strong> <a target="_blank" href="https://www.utoledo.edu/eDirectory/staff.html">Faculty/Staff</a> : <a target="_blank" href="https://www.utoledo.edu/eDirectory/student.html">Student</a> 
+ </div> 
+</div> 
+<div class="container"> 
+ <div id="slideshow"> 
+  <form method="post" action="./" id="form1"> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE5ODI4MjE5Ng9kFgICBQ9kFgQCAQ8WAh4LXyFJdGVtQ291bnQCBRYKZg9kFgJmDxUDLWRhaWx5X3NsaWRlc2hvdy9pbWFnZXMvMDMxMDIwMjEtNjAzNSBNQUlOLmpwZ1VEci4gV2lsbGlhbSBHdW5uaW5nLCBEci4gQmxhaXIgR3J1YmIsIHBvc3R1cmFsIG9ydGhvc3RhdGljIHRhY2h5Y2FyZGlhIHN5bmRyb21lLCBQT1RTATVkAgEPZBYCZg8VAylkYWlseV9zbGlkZXNob3cvaW1hZ2VzL1N0b3JlUGFnZS1teXV0LmpwZyVSb2NrZXQgR2VhciwgUm9ja2V0IFN0b3JlLCBBbWF6b24uY29tATRkAgIPZBYCZg8VAzZkYWlseV9zbGlkZXNob3cvaW1hZ2VzL0NhbWlsbGHCoEZlcnJlaXJhIFdlbmNlc2xhdS5qcGcsRHIuIENhbWlsbGEgRmVycmVpcmEgV2VuY2VzbGF1LCBoeXBlcnRlbnNpb24BM2QCAw9kFgJmDxUDOmRhaWx5X3NsaWRlc2hvdy9pbWFnZXMvMTk4MCBSb2NrZXRzIGluIE5DQUEgVG91cm5hbWVudC5qcGdMTkNBQSB0b3VybmFtZW50LCAxOTgwcyBSb2NrZXRzLCBIYXJ2ZXkgS251Y2tsZXMsIEppbSBTd2FuZXkgYW5kIE1pdGNoIEFkYW1lawEyZAIED2QWAmYPFQMvZGFpbHlfc2xpZGVzaG93L2ltYWdlcy9IYW1tb2NrIG1haW4gZmVhdHVyZS5qcGccSGFtbW9jaywgc3ByaW5nLWxpa2Ugd2VhdGhlcgExZAIDDxYCHwACBRYKZg9kFgJmDxUCAJ4DPGRpdj48c3Ryb25nPkJyZWFrdGhyb3VnaCBSZXNlYXJjaDwvc3Ryb25nPlVUb2xlZG8gcmVzZWFyY2hlcnMgRHIuIFdpbGxpYW0gR3VubmluZyBhbmQgRHIuIEJsYWlyIEdydWJiJm5ic3A7YXJlJm5ic3A7Z2V0dGluZyZuYnNwO2Nsb3NlciZuYnNwO3RvIHByb3ZpbmcgYSBsb25nLWhlbGQgdGhlb3J5IHRoYXQgcG9zdHVyYWwgb3J0aG9zdGF0aWMgdGFjaHljYXJkaWEgc3luZHJvbWUsIG9yIFBPVFMsIGlzIGFuIGF1dG9pbW11bmUgZGlzb3JkZXIuIFJlYWQgdGhlIFU8YSBocmVmPSJodHRwOi8vbmV3cy51dG9sZWRvLmVkdS9pbmRleC5waHAvMDNfMTZfMjAyMS9wZXJzaXN0ZW5jZS1icmluZ3MtbmV3LXVuZGVyc3RhbmRpbmctdG8tdW5pcXVlLW1lZGljYWwtY29uZGl0aW9uIj5Ub2xlZG8gTmV3cyBzdG9yeS48L2E+PC9kaXY+ZAIBD2QWAmYPFQIVc3R5bGU9ImRpc3BsYXk6bm9uZTsirQM8ZGl2IGlkPSJleHQtZ2VuNjkwIj48c3Ryb25nPlJvY2tldCBHZWFyPC9zdHJvbmc+U3BvcnQgeW91ciBVbml2ZXJzaXR5IG9mIFRvbGVkbyBwcmlkZSB3aGlsZSBzdXBwb3J0aW5nIHlvdXIgc2Nob29sIHRocm91Z2ggdGhlIG5ldyBUb2xlZG8gUm9ja2V0cyBzdG9yZSBhdCA8YSBocmVmPSJodHRwOi8vYW1hem9uLmNvbS90b2xlZG9yb2NrZXRzIiB0YXJnZXQ9Il9ibGFuayI+YW1hem9uLmNvbS90b2xlZG9yb2NrZXRzPC9hPi4gVGhlIHN0b3JlIG9mZmVycyBhIHdpZGUgc2VsZWN0aW9uIG9mIG9mZmljaWFsbHkgbGljZW5zZWQgVC1zaGlydHMgYW5kIHRhbmsgdG9wcywgaG9vZGllcyBhbmQgc3dlYXRzaGlydHMsIGFuZCBsb25nLXNsZWV2ZSBzaGlydHMgZm9yIG1lbiwgd29tZW4gYW5kIGNoaWxkcmVuIGluIGEgdmFyaWV0eSBvZiBzaXplcy48L2Rpdj5kAgIPZBYCZg8VAhVzdHlsZT0iZGlzcGxheTpub25lOyL/AzxzdHJvbmc+UmVzZWFyY2hpbmcgSHlwZXJ0ZW5zaW9uPC9zdHJvbmc+V2l0aCB0aGUgc3VwcG9ydCBvZiBhIGZpdmUteWVhciwgJDEuOSBtaWxsaW9uIGdyYW50IGZyb20gdGhlIE5hdGlvbmFsIEhlYXJ0LCBMdW5nIGFuZCBCbG9vZCBJbnN0aXR1dGUgb2YgdGhlIE5hdGlvbmFsIEluc3RpdHV0ZXMgb2YgSGVhbHRoLCBEci4mbmJzcDtDYW1pbGxhJm5ic3A7RmVycmVpcmEgV2VuY2VzbGF1IGlzIGludmVzdGlnYXRpbmcgaG93IGltbXVuZSByZWNlcHRvcnMgdHVja2VkIHdpdGhpbiBvdXIgYXJ0ZXJpYWwgd2FsbHMgbWlnaHQgYmUgcGl2b3RhbCBpbiBjYXVzaW5nIGhpZ2ggYmxvb2QgcHJlc3N1cmUuIFJlYWQgdGhlIDxhIGhyZWY9Imh0dHA6Ly9uZXdzLnV0b2xlZG8uZWR1L2luZGV4LnBocC8wM18xMl8yMDIxL3V0b2xlZG8tYXdhcmRlZC0xLTktbWlsbGlvbi1ncmFudC10by1zdHVkeS1yb2xlLW9mLWltbXVuZS1zeXN0ZW0taW4taHlwZXJ0ZW5zaW9uIj5VVG9sZWRvIE5ld3Mgc3Rvcnk8L2E+LgpkAgMPZBYCZg8VAhVzdHlsZT0iZGlzcGxheTpub25lOyKYBTxkaXY+PHN0cm9uZz5UaHJvd2JhY2sgTWFyY2ggTWFkbmVzczwvc3Ryb25nPkFzIHRoZSBSb2NrZXRzIGVudGVyIHRoZSAyMDIxIE1BQyB0b3VybmFtZW50IGFzIHRoZSBOby4gMSBzZWVkLCB3ZSByZW1lbWJlciB0aGUgMTk4MCB0ZWFtIHRoYXQgd2FzIHRoZSBsYXN0IG1lbidzIGJhc2tldGJhbGwgdGVhbSBpbnZpdGVkIHRvIHRoZSBOQ0FBIHRvdXJuYW1lbnQuIFRoZSB0ZWFtIGxvc3QgYSBjbG9zZSBnYW1lIDxzcGFuIGlkPSJleHQtZ2VuNjM5Ij50byBGbG9yaWRhIFN0YXRlLCA5NC05MSwgaW4gdGhlIG9wZW5pbmcgcm91bmQgb2YgdGhlIHRvdXJuYW1lbnQuIEluIGEgcGhvdG8gZnJvbSB0aGF0IGdhbWUgYXJlLCBmcm9tIGxlZnQsIEhhcnZleSA8L3NwYW4+S251Y2tsZXMsIEppbSBTd2FuZXkgYW5kIE1pdGNoIEFkYW1lay4gVGhlIFJvY2tldHMgZmFjZSBCYWxsIFN0YXRlIGluIHRoZSBxdWFydGVyZmluYWxzIGF0IDExIGEubS4gVGh1cnNkYXksIE1hcmNoIDExLiBSZWFkIHRoZSA8YSBocmVmPSJodHRwOi8vbmV3cy51dG9sZWRvLmVkdS9pbmRleC5waHAvMDNfMTFfMjAyMS90b2xlZG8tbWVucy1iYXNrZXRiYWxsLXRvLW1lZXQtYmFsbC1zdGF0ZS1pbi1tYWMtcXVhcnRlcmZpbmFscy1vbi10aHVyc2RheSI+VVRvbGVkbyBOZXdzIHN0b3J5PC9hPi48L2Rpdj5kAgQPZBYCZg8VAhVzdHlsZT0iZGlzcGxheTpub25lOyLMAjxzdHJvbmc+SGFuZ2luZyBPdXQ8L3N0cm9uZz5PbGl2aWEgT3NidXJuLCBhIHNvcGhvbW9yZSBjaGVtaWNhbCBlbmdpbmVlcmluZyBtYWpvciwgdGFrZXMgYWR2YW50YWdlIG9mIHRoZSBlYXJseSBzcHJpbmctbGlrZSB3ZWF0aGVyIHRvIHdvcmsgb24gaG9tZXdvcmsgZnJvbSB0aGUgY29tZm9ydCBvZiBhIGhhbW1vY2ssIGFzIGhlciBmcmllbmRzLCBEZWxhbmV5IFNtaXRoLCBhIHNvcGhvbW9yZSBlZHVjYXRpb24gbWFqb3IsIGFuZCBQaXBlciBTbG9uZSwgYSBzb3Bob21vcmUgY2hlbWljYWwgZW5naW5lZXJpbmcgbWFqb3IsIGF0dGVuZCB0aGVpciBjbGFzc2VzIHJlbW90ZWx5LgoKZGROHCBZs76IO/tcAZbI65myNHKORZ/PnjP8BduG/yPYnQ=="> 
+   </div> 
+   <div class="aspNetHidden"> 
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334"> 
+   </div> 
+   <div class="row"> 
+    <div id="slideshow_image" class="nine columns"> 
+     <img src="daily_slideshow/images/03102021-6035 MAIN.jpg " alt="Dr. William Gunning, Dr. Blair Grubb, postural orthostatic tachycardia syndrome, POTS" class="slideshow_image" style="z-index:5;"> 
+     <img src="daily_slideshow/images/StorePage-myut.jpg " alt="Rocket Gear, Rocket Store, Amazon.com" class="slideshow_image" style="z-index:4;"> 
+     <img src="daily_slideshow/images/Camilla&nbsp;Ferreira Wenceslau.jpg " alt="Dr. Camilla Ferreira Wenceslau, hypertension" class="slideshow_image" style="z-index:3;"> 
+     <img src="daily_slideshow/images/1980 Rockets in NCAA Tournament.jpg " alt="NCAA tournament, 1980s Rockets, Harvey Knuckles, Jim Swaney and Mitch Adamek" class="slideshow_image" style="z-index:2;"> 
+     <img src="daily_slideshow/images/Hammock main feature.jpg " alt="Hammock, spring-like weather" class="slideshow_image" style="z-index:1;"> 
+    </div> <!-- end slideshow_image --> 
+    <div id="slideshow_content" class="three columns"> 
+     <div class="slideshow_text"> 
+      <div>
+       <strong>Breakthrough Research</strong>UToledo researchers Dr. William Gunning and Dr. Blair Grubb&nbsp;are&nbsp;getting&nbsp;closer&nbsp;to proving a long-held theory that postural orthostatic tachycardia syndrome, or POTS, is an autoimmune disorder. Read the U<a href="http://news.utoledo.edu/index.php/03_16_2021/persistence-brings-new-understanding-to-unique-medical-condition">Toledo News story.</a>
+      </div> 
+     </div> 
+     <div class="slideshow_text" style="display:none;"> 
+      <div id="ext-gen690">
+       <strong>Rocket Gear</strong>Sport your University of Toledo pride while supporting your school through the new Toledo Rockets store at <a href="http://amazon.com/toledorockets" target="_blank">amazon.com/toledorockets</a>. The store offers a wide selection of officially licensed T-shirts and tank tops, hoodies and sweatshirts, and long-sleeve shirts for men, women and children in a variety of sizes.
+      </div> 
+     </div> 
+     <div class="slideshow_text" style="display:none;"> <strong>Researching Hypertension</strong>With the support of a five-year, $1.9 million grant from the National Heart, Lung and Blood Institute of the National Institutes of Health, Dr.&nbsp;Camilla&nbsp;Ferreira Wenceslau is investigating how immune receptors tucked within our arterial walls might be pivotal in causing high blood pressure. Read the <a href="http://news.utoledo.edu/index.php/03_12_2021/utoledo-awarded-1-9-million-grant-to-study-role-of-immune-system-in-hypertension">UToledo News story</a>. 
+     </div> 
+     <div class="slideshow_text" style="display:none;"> 
+      <div>
+       <strong>Throwback March Madness</strong>As the Rockets enter the 2021 MAC tournament as the No. 1 seed, we remember the 1980 team that was the last men's basketball team invited to the NCAA tournament. The team lost a close game <span id="ext-gen639">to Florida State, 94-91, in the opening round of the tournament. In a photo from that game are, from left, Harvey </span>Knuckles, Jim Swaney and Mitch Adamek. The Rockets face Ball State in the quarterfinals at 11 a.m. Thursday, March 11. Read the <a href="http://news.utoledo.edu/index.php/03_11_2021/toledo-mens-basketball-to-meet-ball-state-in-mac-quarterfinals-on-thursday">UToledo News story</a>.
+      </div> 
+     </div> 
+     <div class="slideshow_text" style="display:none;"> <strong>Hanging Out</strong>Olivia Osburn, a sophomore chemical engineering major, takes advantage of the early spring-like weather to work on homework from the comfort of a hammock, as her friends, Delaney Smith, a sophomore education major, and Piper Slone, a sophomore chemical engineering major, attend their classes remotely. 
+     </div> 
+     <div id="slideshow_nav"> 
+      <center> 
+       <img src="images/dotYellow.png" class="scale-with-grid" alt="Show Slide 1">
+       <img src="images/dotWhite.png" class="scale-with-grid" alt="Show Slide 2">
+       <img src="images/dotWhite.png" class="scale-with-grid" alt="Show Slide 3">
+       <img src="images/dotWhite.png" class="scale-with-grid" alt="Show Slide 4">
+       <img src="images/dotWhite.png" class="scale-with-grid" alt="Show Slide 5"> 
+      </center> 
+     </div> 
+    </div> <!-- end slideshow_content --> 
+   </div> 
+  </form> 
+ </div> <!-- end slideshow --> <!-- Mobile Call to Action
+   <div class="row" id="presSearch_mobile" style="display:none;">
+    <div class="twelve columns" >
+    	<a href="http://www.utoledo.edu/depts/hr/benefits/open-enrollment/" target="_blank"><img src="images/open-enrollment-2018-MyUT_mobile.jpg" alt="2018 Open Enrollment sign up period ends Tuesday, October 31. Click here to learn more." /></a>
+    </div>
+  </div>--> 
+ <div id="news_event_tabs" class="row"> 
+  <ul> 
+   <li id="utodaytab" class="on">UTODAY</li> 
+   <li id="uteventstab">TODAY'S EVENTS</li> 
+  </ul> 
+ </div> 
+ <div class="row"> 
+  <div class="nine columns" id="utodaydiv"> 
+   <h4 id="utoday">UTODAY</h4> 
+   <div id="utoday_filter_toggle" class="row">
+    <span>Show Filters</span>
+   </div> 
+   <div class="row"> 
+    <div class="three columns" id="utoday_filter" style="padding-top:20px"> 
+     <ul id="category_filter" style="display:none"> 
+      <li id="all" class="on gtm_filter"><span class="all">ALL</span></li> 
+      <li id="news" class="gtm_filter"><span class="news">NEWS</span></li> <!--<li id="journals" class="gtm_filter"><span class="journals">JOURNALS</span></li>--> 
+      <li id="video" class="gtm_filter"><span class="video">VIDEO</span></li> 
+      <li id="ut-health" class="gtm_filter"><span class="health">UTMC</span></li> 
+      <li id="ut-athletics" class="gtm_filter"><span class="athletics">ATHLETICS</span></li> 
+     </ul> 
+     <input type="text" placeholder="Search" title="Search Field" id="search_term" class="search_field" onkeypress="return OnSearchEnter(this,event)"> <a id="search_button" class="gtm_filter" href="#"><img src="images/iconSearch.png" alt="Search" height="18" width="18" border="0" class="search_icon"></a> 
+     <div class="clear"></div> <!-- Call to Action
+          <div id="presSearch">
+             <h4 id="reminder">Reminder</h4>
+            <a href="http://www.utoledo.edu/depts/hr/benefits/open-enrollment/" target="_blank"><img src="images/open-enrollment-2018-MyUT.jpg" alt="2018 Open Enrollment sign up period ends Tuesday, October 31. Click here to learn more." class="scale-with-grid" /></a>
+          </div>
+          --> 
+    </div> <!-- end utoday_filter --> 
+    <div id="news_content" class="nine columns"> <!-- myutfeed start --> 
+     <div id="inner-content" class="wrap clearfix"> 
+      <div id="main" class="eightcol first clearfix" role="main"> 
+       <article id="post-46214" class="clearfix post-46214 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-steve-easton" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_16_2021/toledo-mens-basketball-team-to-play-richmond-in-nit-march-17 " rel="bookmark" title="Toledo men's basketball team to play Richmond in NIT March 17">Toledo men's basketball team to play Richmond in NIT March 17</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-16" pubdate>March 16, 2021</time> &nbsp;By&nbsp;Steve Easton </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/NIT_Not_Done_Yet_02_1_-150x84.jpeg" class="scale-with-grid wp-post-image" alt="Orange graphic reading in purple NOT DONE YET with cowboy boots and a hat" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/NIT_Not_Done_Yet_02_1_-150x84.jpeg 150w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/NIT_Not_Done_Yet_02_1_-300x169.jpeg 300w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/NIT_Not_Done_Yet_02_1_-768x432.jpeg 768w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/NIT_Not_Done_Yet_02_1_-1024x576.jpeg 1024w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/NIT_Not_Done_Yet_02_1_.jpeg 1416w" sizes="(max-width: 150px) 100vw, 150px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           The University of Toledo men’s basketball team has qualified for post-season play with its selection to the National Invitation Tournament. The Rockets (21-8) will travel to Denton, Texas to face the University <a href="http://news.utoledo.edu/index.php/03_16_2021/toledo-mens-basketball-team-to-play-richmond-in-nit-march-17" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_16_2021/toledo-mens-basketball-team-to-play-richmond-in-nit-march-17 "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2Ftoledo-mens-basketball-team-to-play-richmond-in-nit-march-17%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2Ftoledo-mens-basketball-team-to-play-richmond-in-nit-march-17%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2Ftoledo-mens-basketball-team-to-play-richmond-in-nit-march-17%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46210" class="clearfix post-46210 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-tyrel-linkhorn" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_16_2021/persistence-brings-new-understanding-to-unique-medical-condition " rel="bookmark" title="Persistence Brings New Understanding to Unique Medical Condition">Persistence Brings New Understanding to Unique Medical Condition</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-16" pubdate>March 16, 2021</time> &nbsp;By&nbsp;Tyrel Linkhorn </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46210-thumb-150x84.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46210-thumb-150x84.jpg 150w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46210-thumb-300x169.jpg 300w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46210-thumb.jpg 748w" sizes="(max-width: 150px) 100vw, 150px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           The symptoms of postural orthostatic tachycardia syndrome, or POTS, can be as varied as they are confounding.
+           <br> There can be fatigue, pain, bleeding disorders and anxiety. Heart palpitations and lightheadedness are common. Some <a href="http://news.utoledo.edu/index.php/03_16_2021/persistence-brings-new-understanding-to-unique-medical-condition" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_16_2021/persistence-brings-new-understanding-to-unique-medical-condition "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2Fpersistence-brings-new-understanding-to-unique-medical-condition%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2Fpersistence-brings-new-understanding-to-unique-medical-condition%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2Fpersistence-brings-new-understanding-to-unique-medical-condition%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46212" class="clearfix post-46212 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-brody-hickle" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_16_2021/65123 " rel="bookmark" title="Thailand Native Excels in Toledo at Tennis, Mechanical Engineering Studies">Thailand Native Excels in Toledo at Tennis, Mechanical Engineering Studies</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-16" pubdate>March 16, 2021</time> &nbsp;By&nbsp;Brody Hickle </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img width="118" height="150" src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46212-thumb-118x150.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46212-thumb-118x150.jpg 118w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46212-thumb-236x300.jpg 236w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46212-thumb-768x975.jpg 768w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46212-thumb.jpg 807w" sizes="(max-width: 118px) 100vw, 118px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           Growing up in Bangkok, Thawin "Ernie" Suksathaporn came to love the sport of tennis. Eventually he became good enough to become a top player on the junior circuit of his native country.
+           <br> But <a href="http://news.utoledo.edu/index.php/03_16_2021/65123" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_16_2021/65123 "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2F65123%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2F65123%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_16_2021%2F65123%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46208" class="clearfix post-46208 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-meghan-cunningham" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_15_2021/leader-named-to-new-risk-management-initiative " rel="bookmark" title="Leader Named to New Risk Management Initiative">Leader Named to New Risk Management Initiative</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-15" pubdate>March 15, 2021</time> &nbsp;By&nbsp;Meghan Cunningham </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img width="100" height="150" src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46208-thumb-100x150.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46208-thumb-100x150.jpg 100w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46208-thumb-200x300.jpg 200w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46208-thumb.jpg 683w" sizes="(max-width: 100px) 100vw, 100px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           An experienced risk manager is joining The University of Toledo to lead the new enterprise risk management initiative.
+           <br> Douglas Huffner will join UToledo as associate vice president for risk management and chief risk <a href="http://news.utoledo.edu/index.php/03_15_2021/leader-named-to-new-risk-management-initiative" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_15_2021/leader-named-to-new-risk-management-initiative "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Fleader-named-to-new-risk-management-initiative%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Fleader-named-to-new-risk-management-initiative%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Fleader-named-to-new-risk-management-initiative%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46204" class="clearfix post-46204 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-staff" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_15_2021/shop-rocket-gear-at-new-amazon-store " rel="bookmark" title="Shop Rocket Gear at New Amazon Store">Shop Rocket Gear at New Amazon Store</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-15" pubdate>March 15, 2021</time> &nbsp;By&nbsp;Staff </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46204-thumb-150x84.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46204-thumb-150x84.jpg 150w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46204-thumb-300x169.jpg 300w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46204-thumb.jpg 748w" sizes="(max-width: 150px) 100vw, 150px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           Sport your University of Toledo pride while supporting your school through the new Toledo Rockets store at amazon.com/toledorockets.
+           <br> The store offers a wide selection of officially licensed T-shirts and tank tops, hoodies and <a href="http://news.utoledo.edu/index.php/03_15_2021/shop-rocket-gear-at-new-amazon-store" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_15_2021/shop-rocket-gear-at-new-amazon-store "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Fshop-rocket-gear-at-new-amazon-store%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Fshop-rocket-gear-at-new-amazon-store%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Fshop-rocket-gear-at-new-amazon-store%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46206" class="clearfix post-46206 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-staff" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_15_2021/utoledo-siblings-band-receives-best-music-video-by-world-songwriting-awards " rel="bookmark" title="UToledo Alumnus' Band Receives Best Music Video by World Songwriting Awards">UToledo Alumnus' Band Receives Best Music Video by World Songwriting Awards</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-15" pubdate>March 15, 2021</time> &nbsp;By&nbsp;Staff </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46206-thumb-150x84.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46206-thumb-150x84.jpg 150w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46206-thumb-300x169.jpg 300w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46206-thumb.jpg 748w" sizes="(max-width: 150px) 100vw, 150px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           Inner Circle Avenue, a UToledo music alumnus’ band with his siblings, who also have ties to the University, recently won Best Music Video Award from the World Songwriting Awards.
+           <br> The band is composed <a href="http://news.utoledo.edu/index.php/03_15_2021/utoledo-siblings-band-receives-best-music-video-by-world-songwriting-awards" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_15_2021/utoledo-siblings-band-receives-best-music-video-by-world-songwriting-awards "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Futoledo-siblings-band-receives-best-music-video-by-world-songwriting-awards%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Futoledo-siblings-band-receives-best-music-video-by-world-songwriting-awards%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_15_2021%2Futoledo-siblings-band-receives-best-music-video-by-world-songwriting-awards%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46197" class="clearfix post-46197 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-tyrel-linkhorn" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_12_2021/utoledo-awarded-1-9-million-grant-to-study-role-of-immune-system-in-hypertension " rel="bookmark" title="UToledo Awarded $1.9 Million Grant to Study Role of Immune System in Hypertension">UToledo Awarded $1.9 Million Grant to Study Role of Immune System in Hypertension</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-12" pubdate>March 12, 2021</time> &nbsp;By&nbsp;Tyrel Linkhorn </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46197-thumb-150x84.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46197-thumb-150x84.jpg 150w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46197-thumb-300x169.jpg 300w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46197-thumb.jpg 748w" sizes="(max-width: 150px) 100vw, 150px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           Hypertension affects nearly half of U.S. adults, making it one of the most common chronic conditions in America.
+           <br> Despite its pervasiveness, however, the root cause of high blood pressure remains largely unknown - <a href="http://news.utoledo.edu/index.php/03_12_2021/utoledo-awarded-1-9-million-grant-to-study-role-of-immune-system-in-hypertension" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_12_2021/utoledo-awarded-1-9-million-grant-to-study-role-of-immune-system-in-hypertension "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Futoledo-awarded-1-9-million-grant-to-study-role-of-immune-system-in-hypertension%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Futoledo-awarded-1-9-million-grant-to-study-role-of-immune-system-in-hypertension%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Futoledo-awarded-1-9-million-grant-to-study-role-of-immune-system-in-hypertension%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46199" class="clearfix post-46199 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-kirk-baird" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_12_2021/public-health-senior-charts-new-course-at-utoledo " rel="bookmark" title="Public Health Senior Charts New Course at UToledo">Public Health Senior Charts New Course at UToledo</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-12" pubdate>March 12, 2021</time> &nbsp;By&nbsp;Kirk Baird </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img width="120" height="150" src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46199-thumb-120x150.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46199-thumb-120x150.jpg 120w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46199-thumb-240x300.jpg 240w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46199-thumb-768x960.jpg 768w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46199-thumb.jpg 819w" sizes="(max-width: 120px) 100vw, 120px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           Sarah Johnson didn’t think she wanted to spend her college years so close to her hometown of Temperance, Mich.
+           <br> The University of Toledo changed her mind.
+           <br> "After doing more research and settling in for <a href="http://news.utoledo.edu/index.php/03_12_2021/public-health-senior-charts-new-course-at-utoledo" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_12_2021/public-health-senior-charts-new-course-at-utoledo "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Fpublic-health-senior-charts-new-course-at-utoledo%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Fpublic-health-senior-charts-new-course-at-utoledo%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Fpublic-health-senior-charts-new-course-at-utoledo%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46201" class="clearfix post-46201 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-steve-easton" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_12_2021/toledo-mens-basketball-outlasts-ball-state-in-ot-to-advance-in-mac-tournament " rel="bookmark" title="Toledo Men's Basketball Outlasts Ball State in OT to Advance in MAC Tournament">Toledo Men's Basketball Outlasts Ball State in OT to Advance in MAC Tournament</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-12" pubdate>March 12, 2021</time> &nbsp;By&nbsp;Steve Easton </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_image" class="two columns alpha"> 
+          <img src="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46201-thumb-150x84.jpg" class="scale-with-grid wp-post-image" alt="" srcset="http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46201-thumb-150x84.jpg 150w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46201-thumb-300x169.jpg 300w, http://wordpress.utoledo.edu/myut/wp-content/uploads/sites/24/2021/03/46201-thumb.jpg 748w" sizes="(max-width: 150px) 100vw, 150px"> 
+         </div> 
+         <div id="article_container" class="six columns alpha omega"> 
+          <div id="article_excerpt">
+           Senior Marreon Jackson scored 29 points to lead Toledo to a 91-89 overtime victory over Ball State in quarterfinal action of the Mid-American Conference Men’s Basketball Tournament in Cleveland on Thursday.
+           <br> The victory <a href="http://news.utoledo.edu/index.php/03_12_2021/toledo-mens-basketball-outlasts-ball-state-in-ot-to-advance-in-mac-tournament" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_12_2021/toledo-mens-basketball-outlasts-ball-state-in-ot-to-advance-in-mac-tournament "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Ftoledo-mens-basketball-outlasts-ball-state-in-ot-to-advance-in-mac-tournament%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Ftoledo-mens-basketball-outlasts-ball-state-in-ot-to-advance-in-mac-tournament%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Ftoledo-mens-basketball-outlasts-ball-state-in-ot-to-advance-in-mac-tournament%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <article id="post-46203" class="clearfix post-46203 post type-post status-publish format-standard hentry category-news tag-staff" role="article"> 
+        <header class="article-header news"> 
+         <div class="article-title">
+          <a class="colorbox" href="http://news.utoledo.edu/index.php/03_12_2021/rocket-dining-prepares-to-open-full-service-chick-fil-a " rel="bookmark" title="Rocket Dining Prepares to Open Full-Service Chick-fil-A">Rocket Dining Prepares to Open Full-Service Chick-fil-A</a>
+         </div> 
+         <p class="byline vcard"><time class="updated" datetime="2021-03-12" pubdate>March 12, 2021</time> &nbsp;By&nbsp;Staff </p> 
+        </header> 
+        <section class="entry-content clearfix"> 
+         <div id="article_container" class="eight columns alpha omega"> 
+          <div id="article_excerpt">
+           In preparation of the March 29 grand opening of the expanded full-service Chick-fil-A, the existing Chick-fil-A Express in the Thompson Student Union is closing on Saturday, March 13.
+           <br> The new and larger Chick-fil-A <a href="http://news.utoledo.edu/index.php/03_12_2021/rocket-dining-prepares-to-open-full-service-chick-fil-a" class="colorbox" rel="nofollow">[…]</a>
+          </div> 
+          <div class="article_social"> <a href="http://www.facebook.com/sharer/sharer.php?u=http://news.utoledo.edu/index.php/03_12_2021/rocket-dining-prepares-to-open-full-service-chick-fil-a "> <img src="/images/facebook.png" alt="Like on Facebook"> &nbsp;</a><a href="http://twitter.com/intent/tweet?text=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Frocket-dining-prepares-to-open-full-service-chick-fil-a%20"> <img src="/images/twitter.png" alt="Share on Twitter"> </a>&nbsp;<a href="http://plus.google.com/share?url=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Frocket-dining-prepares-to-open-full-service-chick-fil-a%20"> <img src="/images/gplus.png" alt="Share on Google Plus"> </a> &nbsp;<a href="mailto:?subject=MyUT Shared Link&amp;body=http%3A%2F%2Fnews.utoledo.edu%2Findex.php%2F03_12_2021%2Frocket-dining-prepares-to-open-full-service-chick-fil-a%20"> <img src="/images/mail.gif" alt="Share on Google Plus"> </a> 
+          </div> 
+         </div> 
+        </section> 
+       </article> 
+       <nav class="pagination">
+        <ul class="page-numbers"> 
+         <li><span aria-current="page" class="page-numbers current">1</span></li> 
+         <li><a class="page-numbers" href="http://wordpress.utoledo.edu/myut/page/2/">2</a></li> 
+         <li><a class="page-numbers" href="http://wordpress.utoledo.edu/myut/page/3/">3</a></li> 
+         <li><a class="page-numbers" href="http://wordpress.utoledo.edu/myut/page/4/">4</a></li> 
+         <li><span class="page-numbers dots">…</span></li> 
+         <li><a class="page-numbers" href="http://wordpress.utoledo.edu/myut/page/657/">657</a></li> 
+         <li><a class="page-numbers" href="http://wordpress.utoledo.edu/myut/page/658/">658</a></li> 
+         <li><a class="page-numbers" href="http://wordpress.utoledo.edu/myut/page/659/">659</a></li> 
+         <li><a class="next page-numbers" href="http://wordpress.utoledo.edu/myut/page/2/">→</a></li> 
+        </ul> 
+       </nav> 
+       <script>
+ /* <![CDATA[ */
+            var pbd_alp = { "startPage": "1", "maxPages": "659", "nextLink": "http://wordpress.utoledo.edu/myut/page/2/" };
+            /* ]]> */
+</script> 
+      </div> 
+     </div> <!-- myutfeed end --> 
+    </div> <!--end news_content --> 
+   </div> <!-- end row --> 
+  </div> <!-- end utodaydiv --> 
+  <div class="three columns" id="uteventsdiv"> 
+   <h4 id="utevents">TODAY'S EVENTS</h4> 
+   <script>feed2js_ck = true;
+
+document.write('<div class="rss-box">');
+document.write('<ul class="rss-items">');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J6tZ8W6dZk9zqg%2fof70pzi7Atg0xxGDn1zsFEB3x30Gsr8GLN7xuiVo" target="_self">Sibs Saturday 2021</a><br />');
+document.write('<span class="rss-date">  (all day) </span><br />');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J7%2fFWQMufc1XlRTvoPs%2fDCCa%2bzfPvODxfAPkHefiD37UO9OQRNHtxVn" target="_self">Tasty Tuesdays - Kitchen Sink Cookies</a><br />');
+document.write('<span class="rss-date">  at 12 PM </span><br />');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J5tyETtPg0w50Ukgw1aQJ6Pi5KMZLN%2fJtJaawXarPViSdTAcWHqtD45" target="_self">Virtual Student Town Hall Meeting</a><br />');
+document.write('<span class="rss-date">  at 12:05 PM </span><br />');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J4p4NLIfeuWgPn3spYhk6%2b0CNYeKDg3BPfoatCZkyve2SftR399Py3c" target="_self">Women\'s Volleyball vs. Bowling Green</a><br />');
+document.write('<span class="rss-date">  at 6 PM </span><br />');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J698BrsHXggVwhHyXs5mdISWP7ja7HFVLOKKLiXtA%2bFfwsolf1%2bZcRC" target="_self">South American and Hispanic Students\' Association General Body Meeting</a><br />');
+document.write('<span class="rss-date">  at 7 PM </span><br />');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J4Jl6FSDMomX%2f9IeiwRyyxCCxdo%2fiAaiGjQmFNU68o6hsrHiQm83JNe" target="_self">Women and Negotiation: Knowing What You\'re Worth and Learning How to Ask for It</a><br />');
+document.write('<span class="rss-date">  at 7 PM </span><br />');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J5svwh5qtPdhRC6cwcmF2b%2fIJOGL7yPtmh1bKf%2b2vvwto%2bJDPlDFbw%2b" target="_self">Lutheran Christian Club (LCC) - Screwtape Letters by C.S. Lewis</a><br />');
+document.write('<span class="rss-date">  at 7:30 PM </span><br />');
+document.write('</li>');
+document.write('<li class="rss-item"><a class="rss-item" href="https://calendar.utoledo.edu/EventDetails.aspx?data=hHr80o3M7J6ewnM9fpyVTaD0oRikFj2WPQputDfEKKw7flUrcfJ017tEonjGKHne" target="_self">Fencing Practice</a><br />');
+document.write('<span class="rss-date">  at 7:30 PM </span><br />');
+document.write('</li>');
+document.write('</ul></div>');
+</script> 
+   <h4 id="utevents2">EVENT CALENDARS</h4> 
+   <ul id="calendars_list_newbrowsers" onchange="loadCalendar(this)" style="font-size:1em; font-weight:bold;"> 
+    <li> <a class="gtm_cal" target="_blank" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RXDtUCv0R2tMo86j%2fe084O6LZx2Qb9UUUg41XSAWidC6scC6ubIlsdExHNqmer2%2fTCs9XrYLFAR4QdU8x5aD2%2f%2bpU4KMbacpu5UZURXjuCfDARQzy9krctLFzWR9avNbK65zYb6EWCvzG%2bWyGxfvPAM5e7ccBhPu04R%2fvb8BYw0UDO%2bv%2f4exHE4">Academic</a> </li> 
+    <li> <a class="gtm_cal" target="_blank" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RVIplQ%2bY7aau%2fewYncZ2slydJWG%2bGzvzB%2bEpkVo6sm0zE%2fqB%2btl8vZRApLcg9X3%2bDbhpOpV6VleL%2bVQmivW4N%2fiK8JrKOhquQ5G56F6zHv8Z49hQKsDQmIXYdjp5LUd1ZgOeAmQ46Zgi7aPd0R1jnERemGZDCGBk%2f2yISIOXWA8l5tlFFUmjiYT">University Events</a></li> 
+    <li> <a class="gtm_cal" target="_blank" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=sGPTO%2fCuy5V3%2fq%2bvHHxJJYl131nOrkXu%2b7AK7qSoLyWU3zppE9Hf2oSNVC7wqAhjdCWJEggh9X9Xxh1AsrMRnEt7nx1C2GrHTvlp2ly%2fdZGzWKgt0MKLeeBqdv6zQPTxX5z59kjZBYg%2fhBH%2f6vDNOI9%2f5nF8UW8D8cCK%2bTu%2fbXm8Rfp0E0nez5UcKTGvUylV">Student Activities</a></li> 
+    <li> <a class="gtm_cal" target="_blank" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RUL0s3HEQuugmOe9FqtQCl5dwJFa5YWoGohxQrL3fFrP6Hn2qGfuIpBcoRWoa5z2yHzRd8zYMMRDuzENl5ABTTSH68KZjO2f6cZ5T1zqXLVky75hjSPFbhNtpJZIqup6ZXXy231TwNu8f5o2dxnGuHiVSkUUJG8PARIgTs7uV30fl6voxH9rkVJ4V%2fPTjSvDjoOa7xk6dgTwQsXlHDwZkj%2b">The Arts</a></li> 
+    <li> <a class="last gtm_cal" target="_blank" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RWbUmJs2wRFZ9Bb4KJ%2bBw4sNBerge9pd%2fQ3TMsRKipTLZiKM8a7VEyGeJH1Fg%2f3imsQJ8vZ%2bwKNMpJdb7c%2bT3weq8j3zLAU7y8DhzgzcqEr0xfH1YQ3KdZNSKAfDJbNzGX%2fQq77Ate2ZgX3h%2fh%2fnJWSXzWToZdZk4J2bthXn2db%2fVtYwKwrlTM9zgBeAvBocIukLUCXIQZyvl9%2fgs2oFn%2fyqyqb0kpJzDoXdthIQoqHUKAqtLHZ2L8P">All Calendars</a></li> 
+   </ul> 
+   <ul id="calendars_list_oldie" onchange="loadCalendar(this)" style="font-size:1em; font-weight:bold;"> 
+    <li><a target="_blank" class="gtm_cal" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RXDtUCv0R2tMo86j%2fe084O6LZx2Qb9UUUg41XSAWidC6scC6ubIlsdExHNqmer2%2fTCs9XrYLFAR4QdU8x5aD2%2f%2bpU4KMbacpu5UZURXjuCfDARQzy9krctLFzWR9avNbK65zYb6EWCvzNk1jMThkcTBMYmHcTsdIuwWuZbKVGalM6IIitsfQBtM">Academic</a> </li> 
+    <li><a target="_blank" class="gtm_cal" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RVIplQ%2bY7aau%2fewYncZ2slydJWG%2bGzvzB%2bEpkVo6sm0zE%2fqB%2btl8vZRApLcg9X3%2bDbhpOpV6VleL%2bVQmivW4N%2fiK8JrKOhquQ5G56F6zHv8Z49hQKsDQmIXYdjp5LUd1ZgOeAmQ46Zgi8uGmiKpqHBqdHrTAVg25MLAe63ugMBYcV16HRHHinfX">University Events</a></li> 
+    <li><a target="_blank" class="gtm_cal" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=sGPTO%2fCuy5V3%2fq%2bvHHxJJYl131nOrkXu%2b7AK7qSoLyWU3zppE9Hf2oSNVC7wqAhjdCWJEggh9X9Xxh1AsrMRnEt7nx1C2GrHTvlp2ly%2fdZGzWKgt0MKLeeBqdv6zQPTxX5z59kjZBYg%2fhBH%2f6vDNOCgdTSDNK8pn1L3O01jEd6L8FzwUCFzwhur48b7a047e">Student Activities</a></li> 
+    <li> <a class="gtm_cal" target="_blank" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RUL0s3HEQuugmOe9FqtQCl5dwJFa5YWoGohxQrL3fFrP6Hn2qGfuIpBcoRWoa5z2yHzRd8zYMMRDuzENl5ABTTSH68KZjO2f6cZ5T1zqXLVky75hjSPFbhNtpJZIqup6ZXXy231TwNu8f5o2dxnGuHiVSkUUJG8PARIgTs7uV30fl6voxH9rkVJ4V%2fPTjSvDjoOa7xk6dgTwQsXlHDwZkj%2b">The Arts</a></li> 
+    <li><a target="_blank" class="gtm_cal" href="proxy.aspx?url=http://calendar.utoledo.edu/MasterCalendar.aspx?data=Ai6R2a1%2f4RWbUmJs2wRFZ9Bb4KJ%2bBw4sNBerge9pd%2fQ3TMsRKipTLZiKM8a7VEyGeJH1Fg%2f3imsQJ8vZ%2bwKNMpJdb7c%2bT3weq8j3zLAU7y8DhzgzcqEr0xfH1YQ3KdZNSKAfDJbNzGX%2fQq77Ate2ZgX3h%2fh%2fnJWSXzWToZdZk4J2bthXn2db%2fVtYwKwrlTM9zgBeAvBocIukLUCXIQZyvl9%2fgs2oFn%2fyqyqb0kpJzDoXdthIQoqHUKAqtLHZ2L8P">All Calendars</a></li> 
+   </ul> <a id="addEventLink" class="gtm_cal" style="margin-bottom:10px; display:block;" href="proxy.aspx?url=https://calendar.utoledo.edu/AddEvent.aspx" target="_blank">+ Add Your Calendar Event</a> <a class="gtm_cal" style="margin-bottom:10px; display:block; font-size: 1em;" href="http://www.utoledo.edu/offices/marketing/webforms/news-ideas.html" target="_blank">+ Submit Your News Ideas</a> <a class="gtm_cal" style="margin-bottom:10px; display:block; font-size: 1em;" href="https://www.utoledo.edu/offices/marketing/brand-guide/guide.html" target="_blank">+ UToledo Brand Guide</a> 
+  </div> <!-- end uteventsdiv --> 
+ </div> <!-- end row --> 
+</div> <!-- container --> <!-- End Document
+================================================== --> 
+<div id="footer"> 
+ <div id="footer_wrap"> 
+  <div class="container"> 
+   <div class="row"> 
+    <div class="three columns"> 
+     <h4>News</h4> 
+     <ul> 
+      <li><a target="_blank" href="http://news.utoledo.edu/">UToledo News</a></li> 
+      <li><a target="_blank" href="http://wxut.com/">WXUT</a></li> 
+      <li><a target="_blank" href="http://www.independentcollegian.com/">IC</a></li> 
+      <li><a target="_blank" href="http://www.ut10news.com/">UT10 News</a></li> 
+     </ul> 
+    </div> 
+    <div class="three columns"> 
+     <h4>Initiatives</h4> 
+     <ul> 
+      <li><a target="_blank" href="https://utalert.utoledo.edu/">UToledo Alert</a></li> 
+      <li><a target="_blank" href="http://www.utoledo.edu/diversity/">Diversity</a></li> 
+      <li><a target="_blank" href="http://www.utoledo.edu/report/">Report a Concern</a></li> 
+     </ul> 
+    </div> 
+    <div class="three columns"> 
+     <h4>Information</h4> 
+     <ul> 
+      <li><a target="_blank" href="http://www.utoledo.edu/menu/current.html">Current Student</a></li> 
+      <li><a target="_blank" href="http://www.utoledo.edu/menu/a-to-z/">A-Z List</a></li> 
+      <li><a target="_blank" href="http://www.utoledo.edu/offices/compliance/reporting.html">Anonymous Reporting</a></li> 
+      <li><a target="_blank" href="http://www.utoledo.edu/policies">Policies</a></li> 
+     </ul> 
+    </div> 
+    <div class="three columns"> 
+     <h4>Campus Involvement</h4> 
+     <ul> 
+      <li><a target="_blank" href="http://www.utoledo.edu/getinvolved/orglisting/">Student Organizations</a></li> 
+      <li><a target="_blank" href="http://utrockets.com">Athletics</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="six columns" id="copyright"> 
+     <p>myUT is brought to you by The Office of University Communications, The University of Toledo, © 2006- <script>
+                var mydate = new Date()
+                var year = mydate.getYear()
+                if (year < 1000)
+                  year += 1900
+                document.write(year);
+              </script>. All rights reserved. Send all feedback / comments to <a href="mailto:ithelpdesk@utoledo.edu?subject=MyUT%20Support">ithelpdesk@utoledo.edu</a></p> 
+    </div> 
+    <div class="six columns" style="text-align:right;"> <a target="_blank" href="http://www.facebook.com/utoledo"><i class="fab fa-facebook-square"></i></a><a target="_blank" href="http://twitter.com/utoledo/"><i class="fab fa-twitter-square"></i></a><a href="https://www.instagram.com/uoftoledo/" target="_blank"><i class="fab fa-instagram" style="margin-right:0px;"></i></a> <!--<img style="visibility:hidden;" src="/images/loading.gif"
+                alt="" />-->
+     <br> <a class="utAlertSignUp" href="https://utalert.utoledo.edu/" target="_blank">Sign up for UToledo Alert</a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div> <iframe style="display:block;border:none;" src="https://selfservice.utoledo.edu/prod/twbkwbis.P_Logout" height="0" width="0"></iframe>
+</body>
+</doc>

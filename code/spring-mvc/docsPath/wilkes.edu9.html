@@ -1,0 +1,498 @@
+<doc>
+<filename>wilkes.edu9.html</filename>
+<url>http://wilkesuniversitycareers.applicantpro.com/jobs/</url>
+<ip>107.154.79.172</ip>
+<title>Job Listings - Wilkes University Jobs</title>
+<body>
+<div class="container-fixed"> 
+ <div class="container"> 
+  <div class="header" id="headerbar"> 
+   <img alt="Wilkes University" src="/images/4/125/WilkesUniversity_header2.png" usemap="#headerMap"> 
+  </div> 
+  <div id="mainArea" class="panel panel-default"> 
+   <div class="panel-body"> 
+    <ol class="breadcrumb text-left"> 
+     <li><a href="/">Home</a></li> 
+     <li class="active">Jobs</li> 
+    </ol> 
+    <style>
+							@media print {
+							    .navbar {
+							        display: block;
+							        border-width:0 !important;
+							    }
+
+							    .navbar-toggle {
+							        display:none;
+							    }
+
+							    #email_me_job{
+							    	display: none;
+							    }
+
+							    #job_piper_alerts_widget{
+							    	display: none;
+							    }
+
+							    a[href]:after {  
+							    	display:none; 
+							    }
+
+							    .navbar-brand{
+							    	display: block;
+							    	text-decoration: none;
+							    	text-align: center;
+							    }
+							}
+
+							/*Safari Only hack*/
+							@media print and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { 
+								.navbar-brand { 
+									display: none;
+								} 
+							}
+
+							/* Explorer Only hack */
+							.navbar-brand { display:none\0; }
+						</style> 
+    <nav id="top-nav" class="navbar navbar-default " role="navigation"> 
+     <div class="navbar-header"> <a class="navbar-brand text-left" href="#">Job Listings</a> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     </div> 
+     <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+      <div class="row"> 
+       <div class="col-sm-7 text-left"> 
+        <ul class="nav navbar-nav"> <!-- <li><h4 class="navbar-text">16 Total Job(s)</h4></li> --> 
+         <li class="dropdown" id="filter_dropdown" role="combobox"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Filter <b class="caret"></b></a> 
+          <ul class="dropdown-menu dropdown-menu-no-padding"> 
+           <li class="text-left"> 
+            <div class="navbar-filter"> 
+             <p>Looking for something more specific?</p> 
+             <form class="form-horizontal" role="form" id="search"> 
+              <input type="hidden" name="is_internal" value="0"> 
+              <div class="form-group"> 
+               <div class="col-sm-6"> <label for="city" class="control-label">City</label> <select name="city" class="form-control normal" id="city"> <option value="">All</option><option value="Wilkes-Barre">Wilkes-Barre</option> </select> 
+               </div> 
+               <div class="col-sm-6"> <label for="state_id" class="control-label">State/Province</label> <select name="state_id" class="form-control normal" id="state_id"> <option value="">All</option><option value="39">Pennsylvania</option> </select> 
+               </div> 
+              </div> 
+              <div class="form-group"> 
+               <div class="col-sm-6"> <label for="employment_type" class="control-label">Employment Type</label> <select name="employment_type_id" class="form-control normal" id="employment_type"> <option value="">All</option><option value="1949">Full Time</option><option value="1950">Part Time</option> </select> 
+               </div> 
+              </div> 
+              <div class="form-group"> 
+               <div class="col-sm-6"> <label for="org_unit" class="control-label">Department</label> <select name="org_unit_id" class="form-control normal" id="org_unit"> <option value="">All</option><option value="10258">Campus Support Services</option><option value="62400">Custodial</option><option value="55142">Graduate Nursing</option><option value="34397">Math &amp; Computer Science</option><option value="117990">Passan School of Nursing</option><option value="25734">Performing Arts</option><option value="12708">Psychology</option><option value="77893">SHINE Program</option><option value="87632">Student Financial Services</option><option value="24238">The Institute for Public Policy</option><option value="176026">University Police Department</option> </select> 
+               </div> 
+              </div> 
+              <div class="form-group"> 
+               <div class="col-sm-12"> <label for="sort" class="control-label">Sort By</label> <select name="sort" class="form-control normal" id="sort"> <option value="job_title">Job Title</option> <option value="end_date">End Date</option> <option value="city">City</option> <option value="employment_type">Employment Type</option> </select> 
+               </div> 
+              </div> 
+              <div class="form-group"> 
+               <div class="col-sm-9"> <button class="btn btn-lg btn-block accent" type="submit" id="search_button">Search</button> 
+               </div> 
+              </div> 
+             </form> 
+            </div> </li> 
+          </ul> </li> 
+        </ul> 
+        <form class="navbar-form navbar-left" role="search"> <label for="keywords" class="control-label sr-only">Keywords</label> 
+         <input class="form-control" type="search" name="keywords" placeholder="Keywords" id="keywords"> 
+        </form> 
+       </div> 
+       <div class="col-sm-5"> 
+        <ul id="menuLinks" class="nav navbar-nav navbar-right">
+         <li><a href="/jobs/">Jobs</a></li>
+         <li><a href="/account/login.php" title="Login to Your Account">Login</a></li>
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </nav> 
+    <script type="text/javascript">
+
+	$(function() {
+		A.setName('jobListings');
+		$('#search').on('submit',function() {
+			// For state/country searches	
+			A.setTempDir('/jobs/');
+			A.getHTML('getListings', $('#search').serialize() + '&keywords=' + $('#keywords').val(), 'job_listings');
+			$('#filter_dropdown').removeClass('open');
+			return false;
+		});
+
+		$('#keywords').on('keyup', function() {
+			typeDelay(function() {
+				A.setTempDir('/jobs/');
+				A.getHTML('getListings', $('#search').serialize() + '&keywords=' + $('#keywords').val(), 'job_listings');
+			}, 300);
+		});
+	});
+
+</script> 
+    <div class="row text-left"> 
+     <div class="col-sm-7"> 
+      <div id="job_listings"> 
+       <script>
+	if($('#below_text').length)
+		$('#below_text').show();
+</script> 
+       <div class="list-group job-listings"> 
+        <h1>View All Current Job Listings 16 Total Jobs.</h1> 
+        <p></p>
+        <p>Below is a list of the current openings with the University. Click on any of the column titles to sort the list based on that field. Click on the job title to learn more about the opening.</p>
+        <p></p> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1678395.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Academic Coordinator, Graduate Nursing</h4> 
+          <ul class="listing-details"> 
+           <li>Graduate Nursing</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>12-May-2021</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1629027.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Assistant Professor of Computer Science</h4> 
+          <ul class="listing-details"> 
+           <li>Math &amp; Computer Science</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1713871.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Assistant Professor, Graduate Nursing (Psychiatric/Mental Health Nurse Practitioner Program)</h4> 
+          <ul class="listing-details"> 
+           <li>Graduate Nursing</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1713830.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Assistant Professor, Undergraduate Nursing (Obstetrics and Pediatrics)</h4> 
+          <ul class="listing-details"> 
+           <li>Passan School of Nursing</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1713856.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Assistant Professor, Undergraduate Nursing (Psychiatric Mental Health/Medical Surgical)</h4> 
+          <ul class="listing-details"> 
+           <li>Passan School of Nursing</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1698797.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Associate Director for Systems and Data Management</h4> 
+          <ul class="listing-details"> 
+           <li>Student Financial Services</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>15-Apr-2021</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1692424.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Campus Police Officer</h4> 
+          <ul class="listing-details"> 
+           <li>University Police Department</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1712607.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Custodian (Evening Shift)</h4> 
+          <ul class="listing-details"> 
+           <li>Custodial</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1712609.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Custodian (Evening Shift)</h4> 
+          <ul class="listing-details"> 
+           <li>Custodial</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1712587.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Custodian (Overnight shift)</h4> 
+          <ul class="listing-details"> 
+           <li>Custodial</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>15-May-2021</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1567204.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Director of Clinical and Simulation Based Learning</h4> 
+          <ul class="listing-details"> 
+           <li>Passan School of Nursing</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1704398.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Research Assistant</h4> 
+          <ul class="listing-details"> 
+           <li>The Institute for Public Policy</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1710705.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Shuttle Driver</h4> 
+          <ul class="listing-details"> 
+           <li>Campus Support Services</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Part Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1677008.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Technical Director</h4> 
+          <ul class="listing-details"> 
+           <li>Performing Arts</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1700542.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Virtual Home Vistor, SHINE Program</h4> 
+          <ul class="listing-details"> 
+           <li>SHINE Program</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Part Time</li> 
+          </ul> 
+         </div> </a> <a href="https://wilkesuniversitycareers.applicantpro.com/jobs/1645305.html" class="list-group-item strip-side-borders"> 
+         <div class="job-info"> 
+          <h4>Visiting Assistant Professor of Psychology</h4> 
+          <ul class="listing-details"> 
+           <li>Psychology</li>
+           <li>Wilkes-Barre, PA, USA</li>
+           <li>Until Filled</li>
+           <li>Full Time</li> 
+          </ul> 
+         </div> </a> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="col-sm-5"> 
+      <ul class="list-group" id="job_piper_alerts_widget"> 
+       <li class="list-group-item text-center"> <h3>Sign Up For <span class="accent">Job Alerts!</span></h3> </li> 
+       <li class="list-group-item background-theme"> <script type="text/javascript">
+			$(function() {
+				var sidebar_options = { 
+					api_key: "jp_apppro_wilkesuniversitycareers", 
+					style: "sidebar", 
+					title: "", 
+					source: "4_joblist" 
+				};
+				referWidget("create", sidebar_options, "refer-widget");
+			});
+		</script> 
+        <div id="refer-widget"></div> </li> 
+      </ul> 
+      <ul class="list-group"> 
+       <li class="list-group-item"> <strong>Follow Jobs:</strong> </li> 
+       <li class="list-group-item background-theme"> 
+        <div> <a href="https://www.facebook.com/WilkesUniversity" target="_blank" title="Follow Our Jobs On Facebook"><img src="/images/facebook_new.png" style="width:33px" alt="Follow Our Jobs On Facebook" border="0"></a> 
+        </div> </li> 
+      </ul>
+      <ul class="list-group"> 
+       <li class="list-group-item .list-group-item-heading"> <strong>Resources</strong> </li> 
+       <li class="list-group-item background-theme"> 
+        <ul class="arrow-list">
+         <li><a href="/pages/jobshome/">Jobs Listings Home</a></li>
+         <li><a href="http://wilkesuniversitycareers.applicantpro.com/jobs/" target="_blank">Wilkes University Website</a></li>
+        </ul> </li> 
+      </ul>
+      <ul class="list-group"> 
+       <li class="list-group-item .list-group-item-heading"> <strong>Share This Page</strong> </li> 
+       <li class="list-group-item background-theme"> <a name="fb_share" type="button" href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.applicantpro.com%2Fopenings%2Fwilkesuniversitycareers%2Fjobs&amp;t=&amp;src=sp" style="text-decoration: none;" target="_blank" title="Share with your friends on Facebook!"><img src="/images/facebook_new.png" alt="Facebook" style="width:33px;" border="0"></a> <!-- <a href="http://twitter.com/home?status=Current+Career+Opportunities+at+Wilkes+University+%23jobs+https%3A%2F%2Fwww.applicantpro.com%2Fopenings%2Fwilkesuniversitycareers%2Fjobs" title="Click to share this post on Twitter" target="_blank"><img src="/images/twitter_new.png" alt="Twitter" style="width:33px;" border=0 /></a> --> <a href="http://twitter.com/intent/tweet?text=Current+Career+Opportunities+at+Wilkes+University+%23jobs+https%3A%2F%2Fwww.applicantpro.com%2Fopenings%2Fwilkesuniversitycareers%2Fjobs" title="Click to share this post on Twitter" target="_blank"><img src="/images/twitter_new.png" alt="Twitter" style="width:33px;" border="0"></a> <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.applicantpro.com%2Fopenings%2Fwilkesuniversitycareers%2Fjobs%3Flatest_605110d371ce8&amp;title=Current+Career+Opportunities+at+Wilkes+University&amp;summary=Current+Career+Opportunities+at+Wilkes+University&amp;source=wilkesuniversitycareers.applicantpro.com" target="_blank" title="Share these jobs on LinkedIn"><img src="/images/linkedin_icon_new.png" alt="LinkedIn" border="0" height="33px" style="border-radius: 3px;"></a> <a href="mailto:Type%20Email%20Address%20Here?subject=Current Career Opportunities at Wilkes University&amp;body=Here is a link to the current jobs at Wilkes University. https://www.applicantpro.com/openings/wilkesuniversitycareers/jobs" title="Email this to a friend"><img src="/images/envelope.png" alt="Email" style="width:33px;" border="0"></a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="clearfix"></div> 
+    <div id="below_text">
+     <p>In compliance with the Clery Act, Wilkes University publishes annual reports containing information about crime prevention, reporting policies, crime statistics and other safety and security-related information. The University also maintains daily crime and fire logs. You may click here to view the <a href="http://www.wilkes.edu/campus-life/safety-security/annual-security-and-fire-safety-report.aspx" target="_blank">Annual Security and Fire Safety Reports</a>. Hard copies are also available upon request at the Department of Public Safety, 148 South Main Street, Wilkes-Barre.</p>
+    </div> 
+   </div> <!-- panel-body --> 
+   <div class="panel-footer"> 
+    <div> 
+     <div class="footer-links">
+      <a href="http://www.applicantpro.com" target="_blank">Hiring Software</a> Maintained by ApplicantPro - © 2021
+     </div> 
+     <div class="footer-links"> 
+      <form method="post" id="clear_cache" style="display: inline-block;"> 
+       <input type="hidden" name="clear_session_cache_old_style"> <a tabindex="-1" href="javascript:void(0);" onclick="$('#clear_cache').submit();">Refresh</a> 
+      </form> 
+     </div> 
+    </div> <!--[if lt IE 9]>
+						<script type="text/javascript">
+							$(function() {
+								$('.footer-links:last-child').css('border-left', '0');
+								$('.footer-links:last-child a').css('color', $('body .panel-footer').css('background-color'));
+							});
+						</script>
+					<![endif]--> 
+   </div> <!-- panel-footer --> 
+  </div> <!-- panel --> 
+ </div> <!-- container --> 
+</div> <!-- container-fixed --> <!-- Refer.io Script that will be used throughout the site --> 
+<script type="text/javascript">
+			!function(e,r,t){e.referWidget=e.referWidget||function(){(e.referWidget.q=e.referWidget.q||[]).push(arguments)},e.referWidget.l=1*new Date;var n=r.createElement("script"),i=r.getElementsByTagName("script")[0];n.async=1,n.src=t,i.parentNode.insertBefore(n,i)}(window,document, "https://widget-dot-refer-io.appspot.com/refer.js");
+		</script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57286717-2', 'auto');
+  ga('send', 'pageview');
+
+</script> <map name="headerMap" id="headerMap"> <area style="cursor:pointer;" shape="rect" coords="12,1,138,15" href="https://www.wilkes.edu/about-wilkes/offices-and-administration/human-resources/index.aspx#" target="_self" alt="Prospective Students"> <area style="cursor:pointer;" shape="rect" coords="145,0,192,17" href="https://www.wilkes.edu/parents/index.aspx" target="_self" alt="Parents"> <area style="cursor:pointer;" shape="rect" coords="200,0,245,17" href="http://community.wilkes.edu/s/344/start.aspx" target="_self" alt="Alumni"> <area style="cursor:pointer;" shape="rect" coords="835,2,933,17" href="https://portal.wilkes.edu/" target="_self" alt="portal.wilkes.edu"> <area style="cursor:pointer;" shape="rect" coords="940,0,997,17" href="https://www.wilkes.edu/campus-directory/" target="_self" alt="Directory"> <area style="cursor:pointer;" shape="rect" coords="1006,0,1042,16" href="https://www.wilkes.edu/news/" target="_self" alt="News"> <area style="cursor:pointer;" shape="rect" coords="1052,0,1092,14" href="http://wwwcal.wilkes.edu/cal/main/showMain.rdo" target="_self" alt="Events"> <area style="cursor:pointer;" shape="rect" coords="314,15,785,120" href="https://www.wilkes.edu/" target="_self" alt="logo"> <area style="cursor:pointer;" shape="rect" coords="118,142,220,162" href="https://www.wilkes.edu/about-wilkes/index.aspx" target="_self" alt="About Wilkes"> <area style="cursor:pointer;" shape="rect" coords="262,142,346,162" href="https://www.wilkes.edu/academics/index.aspx" target="_self" alt="Academics"> <area style="cursor:pointer;" shape="rect" coords="389,141,513,163" href="https://www.wilkes.edu/admissions/index.aspx" target="_self" alt="Admission &amp; Aid"> <area style="cursor:pointer;" shape="rect" coords="556,142,657,160" href="https://www.wilkes.edu/campus-life/index.aspx" target="_self" alt="Lilfe at Wilkes"> <area style="cursor:pointer;" shape="rect" coords="701,143,768,161" href="https://www.wilkes.edu/academics/colleges/arts-humanities-social-sciences/performing-arts/performing-arts-season/index.aspx" target="_self" alt="The Arts"> <area style="cursor:pointer;" shape="rect" coords="811,142,880,162" href="https://www.gowilkesu.com/" target="_self" alt="Athletics"> <area style="cursor:pointer;" shape="rect" coords="924,142,983,161" href="http://community.wilkes.edu/s/344/start.aspx" target="_self" alt="Alumni"> </map> <!-- scripts 
+	<script type="text/javascript">
+		jQl.loadjQ('/js/all.min.js?ver=2.3.43064');
+	</script>
+	--> <!-- Google Translate For Placeholders --> 
+<script type="text/javascript">
+				var exit_survey_enabled = '0';
+		var fired = '0';
+		var thanks = '0'
+		$(function() {
+			$('#leaving').on('change', function() { 
+				if($(this).val() != 0)
+					$('#notice').css('display', 'block');
+				else
+					$('#notice').css('display', 'none');
+
+				if( $(this).val() == 'Other' ) 
+					$('#reason').css('display', 'block'); 
+				else 
+					$('#reason').css('display', 'none'); 
+			});
+		});
+
+		if(exit_survey_enabled != 0) {
+			$('#left').on('click', function() {
+				var answer = $('#leaving').val();
+				if(answer != 0) {
+					var domain_id = '125';
+					var job = '';
+					var app = '';
+
+					if(answer == 'Other') {
+						if( $('#reason').val() != '' ) {
+							answer = $('#reason').val();
+						} else {
+							answer = 'Other (Non Specified)';
+						}					
+					}
+					$.post("/jobs/edit.php", {n: 'conversion', f: 'survey', v :{app_id : app, domain: domain_id, job_id: job, answer: answer} });
+
+					$('#ouibounce-modal').hide();
+				  							$('#ouibounce-referio-modal').css('display', 'block');
+									}
+			});
+		}
+
+		// if you want to use the 'fire' or 'disable' fn,
+		// you need to save OuiBounce to an object
+		if(exit_survey_enabled != 0 && fired == 0 && thanks == 0) {
+			var modal = '';
+
+			$('html').on( 'mouseleave', function() {
+				if(fired == 0) {
+					fired = 1;
+					modal = ouibounce(document.getElementById('ouibounce-modal'), {
+							aggressive: false,
+						  	timer: 0,
+						  	callback: function() { 
+						  		$('#top-nav').css('z-index', '0'); 
+						  		$.get("/jobs/view.php", {n: 'conversion', f: 'survey_fired'}); 
+								if( typeof(modal) != "undefined" && typeof(modal.disable) != "undefined" )
+									modal.disable();
+						  	}
+						});
+					modal.fire();
+				}
+			});
+
+			setInterval( function() { 
+				$('select').click(
+					function(e) {
+						e = e || window.event;
+						e.stopPropagation();
+						if( typeof(modal) != "undefined" && typeof(modal.disable) != "undefined" )
+							modal.disable();
+					}
+				);
+
+				$('select').mouseleave( 
+					function(e) {
+						e = e || window.event;
+						e.stopPropagation();
+						if( typeof(modal) != "undefined" && typeof(modal.disable) != "undefined" )
+							modal.disable();
+					}
+				);
+			}, 1000);
+
+			$('body').on('click', function() {
+			  	$('#ouibounce-modal').hide();
+			  	$('#ouibounce-referio-modal').hide();
+			});
+
+			$('#ouibounce-modal .modal').on('click', function(e) {
+			  	e.stopPropagation();
+			});
+
+			$('#ouibounce-referio-modal .modal').on('click', function(e) {
+			  	e.stopPropagation();
+			});
+
+			$('#ouibounce-referio-modal .modal-footer button').on('click', function(e) {
+			  	$('#ouibounce-referio-modal').hide();
+			});
+		}
+	</script> <!--
+	<script type="text/javascript">
+		var pkBaseURL = (("https:" == document.location.protocol) ? "https://wilkesuniversitycareers.applicantpro.com/stats/" : "http://wilkesuniversitycareers.applicantpro.com/stats/");
+		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+		var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 391);
+		piwikTracker.trackPageView();
+		piwikTracker.enableLinkTracking();
+		} catch( err ) {}
+	</script>
+	<noscript><p><img src="https://wilkesuniversitycareers.applicantpro.com/stats/piwik.php?idsite=391" style="border:0" alt="" /></p></noscript>
+	--> 
+<script type="text/javascript">
+		$(function() {
+			Analytics.addAction();
+		});
+	</script> <!-- 36840 Add role="combobox" to all available selects--> 
+<script>
+		$(function() {
+			$('select').attr('role', 'combobox');
+			$('.dropdown').attr('role', 'combobox');
+		});
+	</script> 
+<script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&amp;ns=1&amp;cb=1964248862"></script>
+</body>
+</doc>

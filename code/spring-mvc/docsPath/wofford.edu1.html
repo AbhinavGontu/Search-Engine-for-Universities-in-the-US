@@ -1,0 +1,197 @@
+<doc>
+<filename>wofford.edu1.html</filename>
+<url>http://calendar.wofford.edu/webevent/scripts/webevent.plx</url>
+<ip>199.190.174.163</ip>
+<title>Wofford College Campus Calendar</title>
+<body>
+<!-- Branding/Banner area --> 
+<div align="center">
+ <div class="bodyWrapper"> <!-- Tool Bar --> 
+  <div id="toolbar"> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+    <tbody>
+     <tr> 
+      <td width="100%">&nbsp;</td> 
+      <td valign="middle" align="right" width="50"> <a href="http://calendar.wofford.edu/webevent/scripts/webevent.plx?cmd=login" onmouseover="document.weLogin.src=&quot;images/loginOver.gif&quot;" onmouseout="document.weLogin.src=&quot;images/login.gif&quot;"> <img name="weLogin" src="images/login.gif" border="0" alt="Login" title="Login"></a> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </div><!--closing toolbar--> <a style="border:0;" href="http://calendar.wofford.edu/webevent/scripts/webevent.plx"><img style="border:0;" src="images/calendarheader.jpg" alt="Wofford College WebEvent View 2.9.0 build 64669, Powered By PeopleCube" title="Wofford College WebEvent Calendar"></a>
+  <table id="header" width="100%" columns="1" style="padding:0;"> 
+   <tbody>
+    <tr> <!--insert header image ---------------------->  
+    </tr> 
+   </tbody>
+  </table> 
+  <br> 
+  <form name="theForm" action="http://calendar.wofford.edu/webevent/scripts/webevent.plx" method="POST"> 
+   <input type="hidden" name="token" value="guest.cd50b485da8b7b96faaafb6a3dda3c11"> 
+   <input type="hidden" name="show_favorites" value="1"> 
+   <input type="hidden" name="cmd" value="startup"> 
+   <input type="hidden" name="subcmd"> 
+   <input type="hidden" name="m" id="m"> 
+   <input type="hidden" name="d" id="d"> 
+   <input type="hidden" name="y" id="y"> 
+   <input type="hidden" name="from_MM0" value="4"> 
+   <input type="hidden" name="from_DD" value="3"> 
+   <input type="hidden" name="from_YYYY" value="2004"> 
+   <input type="hidden" name="to_MM0" value="4"> 
+   <input type="hidden" name="to_DD" value="31"> 
+   <input type="hidden" name="to_YYYY" value="2004"> <!--directions--> 
+   <p style="margin-top: 8px;" class="calendar">Select departments to the left, or simply click "Go to Calendar" to view Full Calendar.</p> 
+   <table cellspacing="0" cellpadding="0" border="0" width="100%"> 
+    <tbody>
+     <tr> 
+      <td valign="top" style="padding-right: 10px"> 
+       <table style="height: 400px; margin: 30px 0 0 10px; padding-top: 30px; width: 100%; background: transparent url(images/deptcals.gif) no-repeat 10px 0;" cellspacing="0" cellpadding="0" border="0"> 
+        <tbody>
+         <tr> 
+          <td><img src="images/shim.gif" height="20" width="1" alt=""></td> 
+          <td colspan="2" align="center" valign="top" nowrap></td> 
+         </tr> 
+         <tr> 
+          <td rowspan="2"><img src="images/shim.gif" height="150" width="1" alt=""></td> 
+          <td rowspan="2" valign="top" align="right" style="padding-left: 10px; padding-right: 10px"> <select name="calID" multiple size="10"> <option value="964" selected="true">*Campus Calendar </option><option value="970">Academic </option><option value="967">Admission </option><option value="976">Alumni and Development </option><option value="979">Arts and Cultural </option><option value="985">Arts and Cultural (Off Campus) </option><option value="982">Arts and Cultural (On Campus) </option><option value="988">Athletics </option><option value="68584">Billing and Payment </option><option value="991">Campus Ministry / Service Learning </option><option value="973">Financial Aid </option><option value="2496">Other </option><option value="994">Student Life </option><option value="1000">Web Home Page </option></select> </td> 
+          <td valign="top" align="center" style="width: 400px; height: 100px"> 
+           <div id="calWrapper"> 
+            <script language="javascript1.2" type="text/javascript">
+var cal = new Cal('cal');
+document.write(cal.paintCalendar());
+cal.buildCalendar();
+cal.onChange('updateDateArgs()');
+</script> 
+           </div> </td> 
+         </tr> 
+         <tr> 
+          <td valign="bottom" align="center" style="padding: 6px;width: 400px;  height: 20px;margin:0;"> <input type="button" value="Go to Calendar" style="font-size: 12px; width: 130px; text-transform: uppercase;" onclick="gotoCalendar()"> </td> 
+         </tr> 
+         <tr> 
+          <td style="padding-top: 10px;"><img src="images/shim.gif" height="220" width="1" alt=""></td> 
+          <td colspan="2" align="center" valign="bottom" style="padding-left: 0;"> 
+           <table style="width: 100%; padding-top:15px;background:transparent url(images/eventsbg.gif) no-repeat 10px 0;"> 
+            <tbody>
+             <tr> 
+              <td><img src="images/shim.gif" width="1" height="15" alt=""></td> 
+             </tr> 
+             <tr> 
+              <td align="center" style="font-size: 10pt; font-weight: bold"> </td> 
+             </tr> 
+             <tr> 
+              <td><img src="images/shim.gif" width="1" height="10" alt=""></td> 
+             </tr> 
+             <tr> 
+              <td style="padding-left: 10px; font-size: 9pt;"> Named like: <input type="text" name="key" style="width: 240px"> </td> 
+             </tr> 
+             <tr> 
+              <td style="padding-left: 5px; font-size: 9pt;"> <input type="radio" name="dates" value="all" checked>All dates.<br> <input type="radio" name="dates" value="some"> Dates between:<br><img src="images/shim.gif" width="40" height="1" alt=""> <input type="text" id="searchStartDate" name="searchStartDate" style="width: 90px" onclick="popupCal(this, &quot;calPopup&quot;, &quot;calPopup1&quot;)" onchange="if (validateDate(this.value) > 0) calPopup.updateCalendar(_calYYYY, _calMM, _calDD)" onkeypress="checkEnter(event, this, &quot;calPopup&quot;)"> and <input type="text" name="searchEndDate" style="width: 90px" onchange="if (validateDate(this.value) > 0) calPopup1.updateCalendar(_calYYYY, _calMM, _calDD)" onclick="popupCal(this, &quot;calPopup1&quot;, &quot;calPopup&quot;)" onkeypress="checkEnter(event, this, &quot;calPopup1&quot;)"> </td> 
+             </tr> 
+             <tr> 
+              <td><img src="images/shim.gif" width="1" height="15" alt=""></td> 
+             </tr> 
+             <tr> 
+              <td align="center"> <input type="button" value="Search" style="font-size: 0.8em" onclick="submitCommand(&quot;search&quot;, &quot;Search&quot;)"> </td> 
+             </tr> 
+             <tr> 
+              <td><img src="images/shim.gif" width="1" height="15" alt=""></td> 
+             </tr> 
+            </tbody>
+           </table> </td> 
+         </tr> 
+        </tbody>
+       </table> </td> <!-- width is specified in next cell to help IE5.2 along --> 
+      <td valign="top" style="padding-right: 10px" width="80%"> <!-- List of Events /Featured Events -----------------------> 
+       <div style="margin: 35px 10px 0 20px;">
+        <table cellpadding="0" cellspacing="0" border="0"> 
+         <tbody>
+          <tr> 
+           <td colspan="4" style="background: url(images/featuredevents.gif) no-repeat;padding-top: 60px;margin:0;"></td> 
+          </tr> 
+          <tr> 
+           <td><img src="images/shim.gif" width="100" height="1" alt=""></td> 
+           <td><img src="images/shim.gif" width="100" height="1" alt=""></td> 
+           <td><img src="images/shim.gif" width="100" height="1" alt=""></td> 
+           <td><img src="images/shim.gif" width="1" height="1" alt=""></td> 
+          </tr> 
+          <tr> 
+           <td background="images/tabLabels/oninactive.gif" align="center">Today</td> 
+           <td background="images/tabLabels/onactive.gif" align="center" style="font-size: 13px;cursor: pointer" onmousedown="location.href=&quot;http://calendar.wofford.edu/webevent/scripts/webevent.plx?cmd=guestFrontpage&amp;userid=guest&amp;days=7&amp;subcmd=show&quot;">This Week</td> 
+           <td width="60%">&nbsp;</td> 
+          </tr> 
+          <tr> 
+           <td colspan="3" style="background-color: #F2E8CD; padding: 4px;max-width: 300px;"> 
+            <div style="width: 100%; height: 300px; overflow: auto; border: 1px solid #d0d0c4; background-color: #FFF"> 
+             <table style="font-family: Georgia;" border="0"> 
+              <tbody>
+               <tr> 
+                <td><b> <a class="daily" style="font-family: Georgia; font-size: 12px; color:#9B2E37; " href="http://calendar.wofford.edu/webevent/scripts/webevent.plx?token=guest.cd50b485da8b7b96faaafb6a3dda3c11;cmd=calday;calID=964;y=2021;m=3;d=16">Tuesday, March 16, 2021</a></b> </td> 
+               </tr> 
+               <tr> 
+                <td style="font-size: 9pt; font-weight: bold; color:#9B2E37; padding-left: 20px; "> </td> 
+               </tr> 
+               <tr> 
+                <td style="font-weight: bold; padding-left: 20px;"> <a style="font-family: Georgia;color: #757264; text-decoration:none;word-spacing: 2px; font-size: 13px;" href="javascript:popup(&quot;http://calendar.wofford.edu/webevent/scripts/webevent.plx?token=guest.cd50b485da8b7b96faaafb6a3dda3c11;cmd=showevent;eventID=74926&quot;, 400, 500, 100, 100, SCROLL, RESIZABLE)"> Registration for Fall 2021 </a></td> 
+               </tr> 
+               <tr> 
+                <td style="font-size: 12px; font-family: Arial;color: #757264; line-height: 18px;padding-left: 20px; padding-bottom: 8px"> </td> 
+               </tr> 
+               <tr> 
+                <td style="font-size: 9pt; font-weight: bold; color:#9B2E37; padding-left: 20px; "> 11:00 AM - Noon</td> 
+               </tr> 
+               <tr> 
+                <td style="font-weight: bold; padding-left: 20px;"> <a style="font-family: Georgia;color: #757264; text-decoration:none;word-spacing: 2px; font-size: 13px;" href="javascript:popup(&quot;http://calendar.wofford.edu/webevent/scripts/webevent.plx?token=guest.cd50b485da8b7b96faaafb6a3dda3c11;cmd=showevent;eventID=74566&quot;, 400, 500, 100, 100, SCROLL, RESIZABLE)"> Study Abroad Orientation: Visa Information Session, via Zoom </a></td> 
+               </tr> 
+               <tr> 
+                <td style="font-size: 12px; font-family: Arial;color: #757264; line-height: 18px;padding-left: 20px; padding-bottom: 8px"> This orientation is for fall and summer 2021 study abroad students regarding visas. International programs staff will discuss general student visa information and answer student questions. All fall and summer 2021 study abroad students whose program requires a visa are required to attend. Zoom link will be shared via email.&nbsp;</td> 
+               </tr> 
+               <tr> 
+                <td style="font-size: 9pt; font-weight: bold; color:#9B2E37; padding-left: 20px; "> 1:00 PM - 5:00 PM</td> 
+               </tr> 
+               <tr> 
+                <td style="font-weight: bold; padding-left: 20px;"> <a style="font-family: Georgia;color: #757264; text-decoration:none;word-spacing: 2px; font-size: 13px;" href="javascript:popup(&quot;http://calendar.wofford.edu/webevent/scripts/webevent.plx?token=guest.cd50b485da8b7b96faaafb6a3dda3c11;cmd=showevent;eventID=74627&quot;, 400, 500, 100, 100, SCROLL, RESIZABLE)"> Exhibit: Art of Printmaking: Global and Historical Approaches, Richardson Family Art Museum </a></td> 
+               </tr> 
+               <tr> 
+                <td style="font-size: 12px; font-family: Arial;color: #757264; line-height: 18px;padding-left: 20px; padding-bottom: 8px"> The Museum is open to the Wofford Campus community Tuesday through Friday from 1 - 5 p.m. The public is invited to visit exhibits on Thursdays from 5 - 7 p.m. Admission is free but reservations are required 24 hours before a visit. Reservations can be made by calling 864-597-4940 or email artmuseum@wofford.edu. MASKS ARE REQUIRED<br><br><span>&nbsp;</span>The Art of Printmaking: Global and Historical Approaches examines printmaking methods throughout history, from early methods of woodblock printing to contemporary photomechanical techniques. Variety in printing methods have allowed artists to experiment with nuanced techniques for the transmission of their images and to display artistic virtuosity, as is evident in Durer's engravings and Rembrandt's etchings.&nbsp;<br><br><span>Curated by Erin Mancini (class of 2021), this exhibition is a culmination of her yearlong art history honors project and is partially funded by SCICU (the South Carolina Independent Colleges and Universities) summer undergraduate research grant in 2020. Several prints on view in the galleries have been generously lent to this exhibition by the Museum &amp; Gallery at Bob Jones University in Greenville, S.C., and the Georgia Museum of art in Athens, Ga.</span></td> 
+               </tr> <!-- End FOREACH d.events --> <!-- End IF d.events.size --> <!-- End FOREACH days     --> 
+              </tbody>
+             </table> 
+            </div> </td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div></td> 
+     </tr> 
+     <tr> 
+      <td colspan="2"> <img src="images/shim.gif" width="1" height="5" alt=""> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+  </form> <!-- New Footer ----------------> 
+  <div id="calPopupWrapper" style="position: absolute; display: none; border: 1px solid black" onmouseover="calIsInUse()" onmouseout="calCanGo(this)"> 
+   <script language="javascript1.2" type="text/javascript">
+if (!isIEmac)
+{
+  var calPopup = new Cal('calPopup');
+  calPopup.makeTeeny();
+  calPopup.onChange('updateStartDate()');
+  document.write(calPopup.paintCalendar());
+  calPopup.buildCalendar();
+  calPopup.paintCalendar();
+}
+</script> 
+  </div> 
+  <div id="calPopup1Wrapper" style="position: absolute; display: none; border: 1px solid black" onmouseover="calIsInUse()" onmouseout="calCanGo(this)"> 
+   <script language="javascript1.2" type="text/javascript">
+if (!isIEmac)
+{
+  var calPopup1 = new Cal('calPopup1');
+  calPopup1.makeTeeny();
+  calPopup1.onChange('updateEndDate()');
+  document.write(calPopup1.paintCalendar());
+  calPopup1.buildCalendar();
+}
+</script> 
+  </div>  
+ </div>
+</div>
+</body>
+</doc>

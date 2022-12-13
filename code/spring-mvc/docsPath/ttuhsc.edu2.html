@@ -1,0 +1,256 @@
+<doc>
+<filename>ttuhsc.edu2.html</filename>
+<url>http://webraider.ttuhsc.edu</url>
+<ip>129.118.173.199</ip>
+<title>Sign In</title>
+<body>
+<div id="noScript" style="position:static; width:100%; height:100%; z-index:100"> 
+ <h1>JavaScript required</h1> 
+ <p>JavaScript is required. This web browser does not support JavaScript or JavaScript in this web browser is not enabled.</p> 
+ <p>To find out if your web browser supports JavaScript or to enable JavaScript, see web browser help.</p> 
+</div> 
+<script type="text/javascript" language="JavaScript">
+         document.getElementById("noScript").style.display = "none";
+    </script> 
+<div id="fullPage"> 
+ <div id="brandingWrapper" class="float"> 
+  <div id="branding"></div> 
+ </div> 
+ <div id="contentWrapper" class="float"> 
+  <div id="content"> 
+   <div id="header"> 
+    <img class="logoImage" src="/adfs/portal/logo/logo.png?id=09BEA47BF85E40C2E0BF41F548491FDBCA0B4E1805AB4ADAAAE2E9D10BEB97FB" alt="Texas Tech University"> 
+   </div> 
+   <div id="workArea"> 
+    <div id="authArea" class="groupMargin"> 
+     <div id="loginArea"> 
+      <div id="loginMessage" class="groupMargin">
+       Sign in with your organizational account
+      </div> 
+      <form method="post" id="loginForm" autocomplete="off" novalidate onkeypress="if (event &amp;&amp; event.keyCode == 13) Login.submitLoginRequest();" action="/adfs/ls/?wa=wsignin1.0&amp;wtrealm=https%3a%2f%2feraider.ttu.edu%2f&amp;wctx=rm%3d0%26id%3dpassive%26ru%3d%252fsignin.aspx%253fredirect%253dhttps%25253A%25252F%25252Fsso.texastech.edu%25252Ffed.sso%25253FredirectUrl%25253D%2525252Ffed.sso%2525252Flogin&amp;wct=2021-03-17T01%3a17%3a29Z"> 
+       <div id="error" class="fieldMargin error smallText"> <label id="errorText" for=""></label> 
+       </div> 
+       <div id="formsAuthenticationArea"> 
+        <div id="userNameArea"> 
+         <input id="userNameInput" name="UserName" type="email" value="" tabindex="1" class="text fullWidth" spellcheck="false" placeholder="someone@example.com" autocomplete="off"> 
+        </div> 
+        <div id="passwordArea"> 
+         <input id="passwordInput" name="Password" type="password" tabindex="2" class="text fullWidth" placeholder="Password" autocomplete="off"> 
+        </div> 
+        <div id="kmsiArea" style="display:none"> 
+         <input type="checkbox" name="Kmsi" id="kmsiInput" value="true" tabindex="3"> <label for="kmsiInput">Keep me signed in</label> 
+        </div> 
+        <div id="submissionArea" class="submitMargin"> <span id="submitButton" class="submit" tabindex="4" onkeypress="if (event &amp;&amp; event.keyCode == 32) Login.submitLoginRequest();" onclick="return Login.submitLoginRequest();">Sign in</span> 
+        </div> 
+       </div> 
+       <input id="optionForms" type="hidden" name="AuthMethod" value="FormsAuthentication"> 
+      </form> 
+      <div id="authOptions"> 
+       <form id="options" method="post" action="https://fs.ttu.edu:443/adfs/ls/?wa=wsignin1.0&amp;wtrealm=https%3a%2f%2feraider.ttu.edu%2f&amp;wctx=rm%3d0%26id%3dpassive%26ru%3d%252fsignin.aspx%253fredirect%253dhttps%25253A%25252F%25252Fsso.texastech.edu%25252Ffed.sso%25253FredirectUrl%25253D%2525252Ffed.sso%2525252Flogin&amp;wct=2021-03-17T01%3a17%3a29Z"> 
+        <script type="text/javascript">
+                function SelectOption(option) {
+                    var i = document.getElementById('optionSelection');
+                    i.value = option;
+                    document.forms['options'].submit();
+                    return false;
+                }
+            </script> 
+        <input id="optionSelection" type="hidden" name="AuthMethod"> 
+        <div class="groupMargin"></div> 
+       </form> 
+      </div> 
+      <div id="introduction" class="groupMargin"> 
+       <table cellspacing="6" cellpadding="8" width="100%">
+        <tbody>
+         <tr>
+          <td width="50%" onclick="location.href=" 'https: eraider.ttu.edu acctsetup'' style="background:#003A66;padding: 15px;" align="center"><span style="color:white;"><a href="https://eraider.ttu.edu/acctsetup" style="color: #fff; ">Set-Up Account</a></span></td>
+          <td width="50%" onclick="location.href=" https: eraider.ttu.edu pwdchange'' style="background:#899FB4;padding: 15px" align="center"><span style="color:white"><a href="https://eraider.ttu.edu/pwdchange" style="color: #fff; ">Change Password</a></span></td>
+         </tr>
+         <tr>
+          <td width="50%" onclick="location.href=" 'https: eraider.ttu.edu acctrecover?process="password''" style="background:#EAE0C6;padding: 15px" align="center"><span style="color:#333"><a href="https://eraider.ttu.edu/acctrecover?process=password" style="color: #333; ">Forgot Password?</a></span></td>
+          <td width="50%" onclick="location.href=" 'https: eraider.ttu.edu acctrecover?process="username''" style="background:#4D5B2A;padding: 15px" align="center"><span style="color:white"><a href="https://eraider.ttu.edu/acctrecover?process=username" style="color: #fff; ">Forgot Username?</a></span></td>
+         </tr>
+        </tbody>
+       </table> 
+       <br>
+       <p style="font-size:.85em;">Use of Texas Tech Information resources is subject to Texas Tech Operating Policies and other applicable laws. As a state higher education institution, Texas Tech is required by the State of Texas to notify you of the following: A) Unauthorized use is prohibited, B) Usage may be subject to security testing and monitoring, C) Misuse is subject to criminal prosecution, and D) No expectation of privacy except as otherwise provided by applicable privacy laws (TAC Â§202.76 -Security Controls Standards Catalog AC-8).</p> 
+      </div> 
+      <script type="text/javascript">
+        //<![CDATA[
+
+            function Login() {
+            }
+
+            Login.userNameInput = 'userNameInput';
+            Login.passwordInput = 'passwordInput';
+
+            Login.initialize = function () {
+
+                var u = new InputUtil();
+
+                u.checkError();
+                u.setInitialFocus(Login.userNameInput);
+                u.setInitialFocus(Login.passwordInput);
+            }();
+
+            Login.submitLoginRequest = function () { 
+                var u = new InputUtil();
+                var e = new LoginErrors();
+
+                var userName = document.getElementById(Login.userNameInput);
+                var password = document.getElementById(Login.passwordInput);
+
+                if (!userName.value || !userName.value.match('[@\\\\]')) {
+                    u.setError(userName, e.userNameFormatError);
+                    return false;
+                }
+
+                if (!password.value) {
+                    u.setError(password, e.passwordEmpty);
+                    return false;
+                }
+
+                if (password.value.length > maxPasswordLength) {
+                    u.setError(password, e.passwordTooLong);
+                    return false;
+                }
+
+                document.forms['loginForm'].submit();
+                return false;
+            };
+
+            InputUtil.makePlaceholder(Login.userNameInput);
+            InputUtil.makePlaceholder(Login.passwordInput);
+        //]]>
+        </script> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="footerPlaceholder"></div> 
+  </div> 
+  <div id="footer"> 
+   <div id="footerLinks" class="floatReverse"> 
+    <div>
+     <span id="copyright">© 2013 Microsoft</span><a id="home" class="pageLink" href="https://eraider.ttu.edu/signin.aspx">© Texas Tech</a><a id="privacy" class="pageLink" href="http://www.ttu.edu/policy"> </a><a id="helpDesk" class="pageLink" href="http://www.depts.ttu.edu/ithelpcentral/"> </a>
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<script type="text/javascript">
+//<![CDATA[
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
+// This file contains several workarounds on inconsistent browser behaviors that administrators may customize.
+"use strict";
+
+// iPhone email friendly keyboard does not include "\" key, use regular keyboard instead.
+// Note change input type does not work on all versions of all browsers.
+if (navigator.userAgent.match(/iPhone/i) != null) {
+    var emails = document.querySelectorAll("input[type='email']");
+    if (emails) {
+        for (var i = 0; i < emails.length; i++) {
+            emails[i].type = 'text';
+        }
+    }
+}
+
+// In the CSS file we set the ms-viewport to be consistent with the device dimensions, 
+// which is necessary for correct functionality of immersive IE. 
+// However, for Windows 8 phone we need to reset the ms-viewport's dimension to its original
+// values (auto), otherwise the viewport dimensions will be wrong for Windows 8 phone.
+// Windows 8 phone has agent string 'IEMobile 10.0'
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement("style");
+    msViewportStyle.appendChild(
+        document.createTextNode(
+            "@-ms-viewport{width:auto!important}"
+        )
+    );
+    msViewportStyle.appendChild(
+        document.createTextNode(
+            "@-ms-viewport{height:auto!important}"
+        )
+    );
+    document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+}
+
+// If the innerWidth is defined, use it as the viewport width.
+if (window.innerWidth && window.outerWidth && window.innerWidth !== window.outerWidth) {
+    var viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute('content', 'width=' + window.innerWidth + 'px; initial-scale=1.0; maximum-scale=1.0');
+}
+
+// Gets the current style of a specific property for a specific element.
+function getStyle(element, styleProp) {
+    var propStyle = null;
+
+    if (element && element.currentStyle) {
+        propStyle = element.currentStyle[styleProp];
+    }
+    else if (element && window.getComputedStyle) {
+        propStyle = document.defaultView.getComputedStyle(element, null).getPropertyValue(styleProp);
+    }
+
+    return propStyle;
+}
+
+// The script below is used for downloading the illustration image 
+// only when the branding is displaying. This script work together
+// with the code in PageBase.cs that sets the html inline style
+// containing the class 'illustrationClass' with the background image.
+var computeLoadIllustration = function () {
+    var branding = document.getElementById("branding");
+    var brandingDisplay = getStyle(branding, "display");
+    var brandingWrapperDisplay = getStyle(document.getElementById("brandingWrapper"), "display");
+
+    if (brandingDisplay && brandingDisplay !== "none" &&
+        brandingWrapperDisplay && brandingWrapperDisplay !== "none") {
+        var newClass = "illustrationClass";
+
+        if (branding.classList && branding.classList.add) {
+            branding.classList.add(newClass);
+        } else if (branding.className !== undefined) {
+            branding.className += " " + newClass;
+        }
+        if (window.removeEventListener) {
+            window.removeEventListener('load', computeLoadIllustration, false);
+            window.removeEventListener('resize', computeLoadIllustration, false);
+        }
+        else if (window.detachEvent) {
+            window.detachEvent('onload', computeLoadIllustration);
+            window.detachEvent('onresize', computeLoadIllustration);
+        }
+    }
+};
+
+if (window.addEventListener) {
+    window.addEventListener('resize', computeLoadIllustration, false);
+    window.addEventListener('load', computeLoadIllustration, false);
+}
+else if (window.attachEvent) {
+    window.attachEvent('onresize', computeLoadIllustration);
+    window.attachEvent('onload', computeLoadIllustration);
+}
+
+
+// Sample code to change �Sign in with organizational account� string.
+
+// Check whether the loginMessage element is present on this page.
+var loginMessage = document.getElementById('loginMessage');
+if (loginMessage)
+{
+       // loginMessage element is present, modify its properties.
+	loginMessage.innerHTML = 'Please sign-in with ttu\\eRaider username or ttuhsc\\eRaider username or your @ttu.edu email address.';
+}
+// Check whether the userNameInput element is present on this page.
+var userNameInput = document.getElementById('userNameInput');
+if (userNameInput)
+{
+// userNameInput element is present, modify its properties.
+userNameInput.placeholder = 'ttu\\username or ttuhsc\\username or email@ttu.edu';
+}
+//]]>
+</script>
+</body>
+</doc>

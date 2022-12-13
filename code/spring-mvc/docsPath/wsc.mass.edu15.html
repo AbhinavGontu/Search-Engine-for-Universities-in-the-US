@@ -1,0 +1,137 @@
+<doc>
+<filename>wsc.mass.edu15.html</filename>
+<url>http://westfield-ma.libapps.com/</url>
+<ip>54.234.234.196</ip>
+<title>LibApps Login @ Westfield State University</title>
+<body>
+<div id="s-lib-banner" class="container s-lib-banner-public">
+  LibApps Login @ Westfield State University
+</div> 
+<div id="s-lib-public-main" class="s-lib-main container"> 
+ <section> 
+  <div id="s-libapps-page-content" class="row"> 
+   <div id="s-libapps-page-content-center" class="col-md-12" style="max-width:800px;"> 
+    <section> 
+     <div id="s-libapps-public-wrapper" class="row"> 
+      <div id="s-libapps-content-div" class="col-md-12"> 
+       <div id="s-libapps-public-message" class="alert alert-info" style="display:none;"> 
+       </div> 
+       <div id="s-libapps-public-content" style="padding-top:5px;"> <!-- login.twig --> 
+        <div class="row"> 
+         <div class="col-md-6" style="border-right:1px solid #ccc;"> 
+          <form method="post" name="s-libapps-login-form" id="s-libapps-login-form" onsubmit="submitLoginForm(); return false;"> 
+           <input type="hidden" name="action" value="1"> 
+           <input type="hidden" name="site_id" value="0"> 
+           <input type="hidden" name="target" value=""> 
+           <input type="hidden" name="target64" value=""> 
+           <input type="hidden" name="public" value="0"> 
+           <input type="hidden" name="mode" value="0"> 
+           <div style="margin-bottom:10px; font-weight:bold;">
+             Login with your LibApps account credentials: 
+           </div> 
+           <div class="form-group"> 
+            <input type="text" class="form-control" name="s-libapps-email" id="s-libapps-email" placeholder="Email" value=""> 
+           </div> 
+           <div class="form-group"> 
+            <input type="password" class="form-control" name="s-libapps-password" id="s-libapps-password" placeholder="Password"> 
+           </div> 
+           <div> <button type="submit" class="btn btn-primary" id="s-libapps-login-button" data-loading-text="Processing..." onclick="jQuery(this).button('loading');"> Log Into LibApps </button> 
+           </div> 
+          </form> 
+          <div id="s-libapps-login-links"> <a href="?action=1">Reset Password?</a><span style="padding:0 10px;">|</span><a href="https://ask.springshare.com/faq/443" target="_blank">Login FAQ</a> 
+          </div> 
+         </div> 
+         <div id="s-libapps-libauth-links" class="col-md-6"> 
+          <div style="margin-bottom:10px; font-weight:bold;">
+            You may also login using: 
+          </div> 
+          <div style="margin-bottom:5px;">
+           <a href="javascript:void(0);" style="font-size:16px;" onclick="initLibAuth('https://libauth.com/linker?app=libapps&amp;auth_id=353&amp;target=aHR0cHM6Ly93ZXN0ZmllbGQtbWEubGliYXBwcy5jb20vbGliYXBwcy9sb2dpbl9wcm9jZXNzLnBocD9hY3Rpb249NyZhdXRoX2lkPTM1MyZsaWJhdXRoX2dyb3VwX2lkPTAm');">Use Westfield Credentials</a>
+          </div> 
+         </div> 
+        </div> 
+        <div id="s-libapps-login-notes"> 
+         <p> What is LibApps? LibApps at Westfield State University is a platform powering LibGuides, LibAnswers, LibCal, LibInsight, and other Springshare tools licensed by your institution. </p> 
+         <p> <b>Browser Support:</b> Chrome, Firefox, Safari, Edge. Cookies must be enabled. <span class="pull-right" style="color: #eee;"> <b>Customer ID</b>: 1692 </span> </p> 
+        </div> 
+        <script type="text/javascript">
+    //====================================================
+    submitLoginForm = function () {
+        xhr = jQuery.ajax({
+            url: "login_process.php",
+            type: "POST",
+            dataType: "json",
+            data: jQuery("#s-libapps-login-form").serialize(),
+            success: function (response, textStatus, jqXHR) {
+                /**
+                 * If successful, we'll redirect to the target URL, remembering to
+                 * grab the hash in the event we are navigating to a specific box or
+                 * other section.
+                 */
+                if (response.data.result === 1) {
+                    window.location.replace(response.data.target + window.location.hash);
+                } else {
+                    resetLoginForm();
+                    if (response.data.is_reset === 1) {
+                        jQuery("#s-libapps-public-message").html("").toggle(false);
+                        jQuery("#s-libapps-public-content").html(response.data.html);
+                    } else {
+                        setMessage(
+                            (response.data.html
+                                    ? response.data.html
+                                    : "Your email or password were incorrect."
+                            ),
+                            "alert alert-danger"
+                        );
+                    }
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                springSpace.UI.error(errorThrown);
+            }
+        });
+    };
+    //====================================================
+    resetLoginForm = function () {
+        jQuery("#s-libapps-login-button").button("reset");
+        jQuery("#s-libapps-password").val("").focus();
+    };
+    //====================================================
+    initLibAuth = function (url) {
+        document.location.href = url;
+    }
+    //====================================================
+</script> <!-- !login.twig --> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <div id="s-libapps-footer-public"> 
+     <div id="s-lib-footer-rights">
+       Copyright 2007-2021 <a href="https://springshare.com">Springshare, LLC.</a> All rights reserved. 
+     </div> | 
+     <div id="s-lib-footer-privacy"> <a href="https://springshare.com/privacy.html">Springshare privacy policy.</a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </section> 
+</div> 
+<div id="s-lib-alert" title="">
+ <div id="s-lib-alert-content"></div>
+</div>
+<div id="s-lib-popover-title" class="hide"> <span class="text-info"><strong>title</strong></span> <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">×</button> 
+</div>
+<div id="s-lib-popover-content" class="hide">
+ <i class="fa fa-refresh fa-spin"></i> Loading... <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+</div>
+<script type="text/javascript">
+                setMessage=function(text, class_name) {
+                    jQuery("#s-libapps-public-message")
+                        .html(text)
+                        .attr("class", (class_name === "" ? "alert alert-info" : class_name))
+                        .toggle(text !== "");
+                }
+            </script> <!-- !public.php -->
+</body>
+</doc>

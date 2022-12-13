@@ -1,0 +1,808 @@
+<doc>
+<filename>whittier.edu18.html</filename>
+<url>http://moodle.org/</url>
+<ip>104.22.65.81</ip>
+<title>Moodle - Open-source learning platform | Moodle.org</title>
+<body>
+<div id="page-wrapper"> 
+ <div> <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a> 
+ </div>
+ <script src="https://moodle.org/lib/javascript.php/1615373780/lib/babel-polyfill/polyfill.min.js"></script> 
+ <script src="https://moodle.org/lib/javascript.php/1615373780/lib/polyfills/polyfill.js"></script> 
+ <script src="https://moodle.org/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script>
+ <script src="https://moodle.org/lib/javascript.php/1615373780/lib/javascript-static.js"></script> 
+ <script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script> 
+ <nav id="moodlesitestopnavbar" class="navbar fixed-top navbar-expand-md navbar-light bg-light"> 
+  <div class="container-fluid"> 
+   <div class="d-none d-lg-block"> <a class="sitelogo" href="https://moodle.org"> <img alt="Moodle.org" width="96" height="25" src="https://moodle.org/theme/image.php/moodleorg/theme_moodleorg/1615373780/sitebar/moodle_sitebar_logo_grayhat"> </a> 
+   </div> 
+   <ul class="navbar-nav homenav"> 
+    <li class="nav-item home"> <a class="nav-link active" href="https://moodle.org"><span class="sr-only">Home</span> <i class="fa fa-home"></i> </a> </li> 
+   </ul> <button class="navbar-toggler btn p-2 icon-nomargin text-white mr-1" type="button" data-toggle="collapse" data-target="#sitetopnavbar" aria-controls="sitetopnavbar" aria-expanded="false" aria-label="Toggle navigation"> <i class="icon fa fa-bars fa-fw " aria-hidden="true"></i> </button> 
+   <div class="collapse navbar-collapse" id="sitetopnavbar"> 
+    <ul class="navbar-nav"> 
+     <li class="nav-item documentation"> <a class="nav-link" href="https://docs.moodle.org"><span>Documentation</span></a> </li> 
+     <li class="nav-item download"> <a class="nav-link" href="https://download.moodle.org"><span>Downloads</span></a> </li> 
+     <li class="nav-item demo"> <a class="nav-link" href="https://moodle.org/demo"><span>Demo</span></a> </li> 
+     <li class="nav-item tracker"> <a class="nav-link" href="https://tracker.moodle.org"><span>Tracker</span></a> </li> 
+     <li class="nav-item development"> <a class="nav-link" href="https://docs.moodle.org/dev/Main_Page"><span>Development</span></a> </li> 
+     <li class="nav-item translation"> <a class="nav-link" href="https://lang.moodle.org"><span>Translation</span></a> </li> 
+     <li class="nav-item moodlenet"> <a class="nav-link" href="https://moodle.net"><span>MoodleNet</span></a> </li> 
+     <li class="nav-item search"> <a class="nav-link" href="https://moodle.org/public/search/"><span class="sr-only">Search</span><i class="fa fa-search"></i></a> </li> 
+    </ul> 
+   </div> 
+  </div> 
+ </nav> 
+ <nav class="navbar-second px-0 withlogo py-0 navbar navbar-expand navbar-bootswatch moodle-has-zindex"> 
+  <div class="container-fluid"> 
+   <div class="row mx-0 w-100"> 
+    <div class="col-12 d-flex flex-wrap align-items-end"> 
+     <div class="d-flex"> <a href="https://moodle.org" class="navbar-brand py-0 mb-3"> <img src="https://moodle.org/theme/image.php/moodleorg/theme_moodleorg/1615373780/moodle_logo_small" alt="Moodle" height="61px" width="204px"> </a> 
+     </div> 
+     <ul class="nav navbar-nav justify-content-center justify-content-md-end mb-2 ml-auto"> <!-- custom_menu --> <span class="custom-menu hidden my-2 my-md-0"> 
+       <div class="langmenu d-inline-block"> 
+        <form method="get" action="https://moodle.org/" class="form-inline" id="single_select_f605163fde91084"> <label for="single_select605163fde91085"> <span class="accesshide ">Language</span> </label> <select id="single_select605163fde91085" class="custom-select langmenu" name="lang"> <option value="am"> አማርኛ ‎(am)‎</option> <option value="om">Afaan Oromoo ‎(om)‎</option> <option value="af">Afrikaans ‎(af)‎</option> <option value="an">Aragonés ‎(an)‎</option> <option value="oc_es">Aranés ‎(oc_es)‎</option> <option value="ast">Asturianu ‎(ast)‎</option> <option value="az">Azərbaycanca ‎(az)‎</option> <option value="ms">Bahasa Melayu ‎(ms)‎</option> <option value="bar">Bairisch ‎(bar)‎</option> <option value="bm">Bamanankan ‎(bm)‎</option> <option value="bi">Bislama ‎(bi)‎</option> <option value="bs">Bosanski ‎(bs)‎</option> <option value="br">Breizh ‎(br)‎</option> <option value="ca">Català ‎(ca)‎</option> <option value="ca_valencia">Català (Valencià) ‎(ca_valencia)‎</option> <option value="cs">Čeština ‎(cs)‎</option> <option value="mis">Crnogorski ‎(mis)‎</option> <option value="cy">Cymraeg ‎(cy)‎</option> <option value="da">Dansk ‎(da)‎</option> <option value="se">Davvisámegiella ‎(se)‎</option> <option value="de_ch">Deutsch - Schweiz ‎(de_ch)‎</option> <option value="de">Deutsch ‎(de)‎</option> <option value="dsb">Dolnoserbski ‎(dsb)‎</option> <option value="mh">Ebon ‎(mh)‎</option> <option value="et">eesti ‎(et)‎</option> <option value="en" selected>English ‎(en)‎</option> <option value="ta">English ‎(ta)‎</option> <option value="en_us">English (United States) ‎(en_us)‎</option> <option value="es_co">Español - Colombia ‎(es_co)‎</option> <option value="es">Español - Internacional ‎(es)‎</option> <option value="es_ve">Español - Venezuela ‎(es_ve)‎</option> <option value="es_mx">Español (México) ‎(es_mx)‎</option> <option value="eo">Esperanto ‎(eo)‎</option> <option value="eu">Euskara ‎(eu)‎</option> <option value="ee">Èʋegbe ‎(ee)‎</option> <option value="fil">Filipino ‎(fil)‎</option> <option value="sv_fi">Finlandssvenska ‎(sv_fi)‎</option> <option value="fo">Føroyskt ‎(fo)‎</option> <option value="fr_ca">Français (Canada) ‎(fr_ca)‎</option> <option value="fr">Français ‎(fr)‎</option> <option value="ga">Gaeilge ‎(ga)‎</option> <option value="gd">Gàidhlig ‎(gd)‎</option> <option value="gl">Galego ‎(gl)‎</option> <option value="oc_gsc">Gascon ‎(oc_gsc)‎</option> <option value="ha">Hausa ‎(ha)‎</option> <option value="hr">Hrvatski ‎(hr)‎</option> <option value="haw">ʻŌlelo Hawaiʻi ‎(haw)‎</option> <option value="ig">Igbo ‎(ig)‎</option> <option value="id">Indonesian ‎(id)‎</option> <option value="zu">isiZulu ‎(zu)‎</option> <option value="is">Íslenska ‎(is)‎</option> <option value="it">Italiano ‎(it)‎</option> <option value="kl">Kalaallisut ‎(kl)‎</option> <option value="rw">Kinyarwanda ‎(rw)‎</option> <option value="sw">Kiswahili ‎(sw)‎</option> <option value="hat">Kreyòl Ayisyen ‎(hat)‎</option> <option value="kmr">Kurmanji ‎(kmr)‎</option> <option value="fkv">Kvääni ‎(fkv)‎</option> <option value="lo">Laotian ‎(lo)‎</option> <option value="la">Latin ‎(la)‎</option> <option value="lv">Latviešu ‎(lv)‎</option> <option value="lb">Lëtzebuergesch ‎(lb)‎</option> <option value="lt">Lietuvių ‎(lt)‎</option> <option value="smj">Lulesamisk ‎(smj)‎</option> <option value="hu">magyar ‎(hu)‎</option> <option value="mg">Malagasy ‎(mg)‎</option> <option value="mi_tn">Māori - Tainui ‎(mi_tn)‎</option> <option value="mi_wwow">Māori - Waikato ‎(mi_wwow)‎</option> <option value="mi">Māori Te Reo ‎(mi)‎</option> <option value="mn_mong">Mongolian ‎(mn_mong)‎</option> <option value="nl">Nederlands ‎(nl)‎</option> <option value="nn">Norsk - nynorsk ‎(nn)‎</option> <option value="no_gr">Norsk ‎(no_gr)‎</option> <option value="no">Norsk ‎(no)‎</option> <option value="uz">O'zbekcha ‎(uz)‎</option> <option value="oc_lnc">Occitan-Lengadocian ‎(oc_lnc)‎</option> <option value="pcm">Pidgin ‎(pcm)‎</option> <option value="pl">Polski ‎(pl)‎</option> <option value="pt_br">Português - Brasil ‎(pt_br)‎</option> <option value="pt">Português - Portugal ‎(pt)‎</option> <option value="ro">Română ‎(ro)‎</option> <option value="rm_surs">Romansh Sursilvan ‎(rm_surs)‎</option> <option value="sm">Samoan ‎(sm)‎</option> <option value="tn">Setswana ‎(tn)‎</option> <option value="sq">Shqip ‎(sq)‎</option> <option value="sk">Slovenčina ‎(sk)‎</option> <option value="sl">Slovenščina ‎(sl)‎</option> <option value="so">Soomaali ‎(so)‎</option> <option value="sma">Sørsamisk ‎(sma)‎</option> <option value="sr_lt">Srpski ‎(sr_lt)‎</option> <option value="fi">Suomi ‎(fi)‎</option> <option value="sv">Svenska ‎(sv)‎</option> <option value="tl">Tagalog ‎(tl)‎</option> <option value="ta_old">Tamil ‎(ta_old)‎</option> <option value="kab">Taqbaylit ‎(kab)‎</option> <option value="th">Thai ‎(th)‎</option> <option value="xct">Tibetan ‎(xct)‎</option> <option value="tpi">Tok Pisin ‎(tpi)‎</option> <option value="to">Tongan ‎(to)‎</option> <option value="tr">Türkçe ‎(tr)‎</option> <option value="tk">Turkmen ‎(tk)‎</option> <option value="ug_lt">Uyghur - latin ‎(ug_lt)‎</option> <option value="fj">VakaViti ‎(fj)‎</option> <option value="ca_valencia_racv">Valencià_RACV ‎(ca_valencia_racv)‎</option> <option value="vi">Vietnamese ‎(vi)‎</option> <option value="wo">Wolof ‎(wo)‎</option> <option value="el">Ελληνικά ‎(el)‎</option> <option value="ba">Башҡорт теле ‎(ba)‎</option> <option value="be">Беларуская ‎(be)‎</option> <option value="bg">Български ‎(bg)‎</option> <option value="ky">Кыргызча ‎(ky)‎</option> <option value="kk">Қазақша ‎(kk)‎</option> <option value="mk">Македонски ‎(mk)‎</option> <option value="mn">Монгол ‎(mn)‎</option> <option value="ru">Русский ‎(ru)‎</option> <option value="sr_cr_bo">Српски ‎(sr_cr_bo)‎</option> <option value="sr_cr">Српски ‎(sr_cr)‎</option> <option value="sr">Српски ‎(sr)‎</option> <option value="tt">Татар ‎(tt)‎</option> <option value="tg">Тоҷикӣ ‎(tg)‎</option> <option value="uk">Українська ‎(uk)‎</option> <option value="ka">ქართული ‎(ka)‎</option> <option value="hy">Հայերեն ‎(hy)‎</option> <option value="he">עברית ‎(he)‎</option> <option value="ug_ug">ئۇيغۇرچە ‎(ug_ug)‎</option> <option value="ur">اردو ‎(ur)‎</option> <option value="ar">العربية ‎(ar)‎</option> <option value="ps">پښتو ‎(ps)‎</option> <option value="prs">دری ‎(prs)‎</option> <option value="ckb">سۆرانی ‎(ckb)‎</option> <option value="fa">فارسی ‎(fa)‎</option> <option value="dv">ދިވެހި ‎(dv)‎</option> <option value="zgh">ⵜⴰⵎⴰⵣⵉⵖⵜ ‎(zgh)‎</option> <option value="ti">ትግርኛ ‎(ti)‎</option> <option value="ne">नेपाली ‎(ne)‎</option> <option value="mr">मराठी ‎(mr)‎</option> <option value="hi">हिंदी ‎(hi)‎</option> <option value="bn">বাংলা ‎(bn)‎</option> <option value="pan">ਪੰਜਾਬੀ ‎(pan)‎</option> <option value="gu">ગુજરાતી ‎(gu)‎</option> <option value="or">ଓଡ଼ିଆ ‎(or)‎</option> <option value="ta_lk">தமிழ் ‎(ta_lk)‎</option> <option value="te">తెలుగు ‎(te)‎</option> <option value="kn">ಕನ್ನಡ ‎(kn)‎</option> <option value="ml">മലയാളം ‎(ml)‎</option> <option value="si">සිංහල ‎(si)‎</option> <option value="dz">རྫོང་ཁ ‎(dz)‎</option> <option value="my">ဗမာစာ ‎(my)‎</option> <option value="km">ខ្មែរ ‎(km)‎</option> <option value="ko">한국어 ‎(ko)‎</option> <option value="ja">日本語 ‎(ja)‎</option> <option value="zh_tw">正體中文 ‎(zh_tw)‎</option> <option value="zh_cn">简体中文 ‎(zh_cn)‎</option> </select> 
+         <noscript> 
+          <input type="submit" class="btn btn-secondary ml-1" value="Go"> 
+         </noscript> 
+        </form> 
+       </div> </span> <!-- page_heading_menu --> 
+      <div> 
+       <div id="searchinput-navbar-605163fdf250f605163fde91086" class="simplesearchform"> 
+        <div class="collapse" id="searchform-navbar"> 
+         <form autocomplete="off" action="https://moodle.org/search/index.php" method="get" accept-charset="utf-8" class="mform form-inline searchform-navbar"> 
+          <input type="hidden" name="context" value="5310"> 
+          <div class="input-group"> <label for="searchinput-605163fdf250f605163fde91086"> <span class="sr-only">Search</span> </label> 
+           <input type="text" id="searchinput-605163fdf250f605163fde91086" class="form-control withclear" placeholder="Search" aria-label="Search" name="q" data-region="input" autocomplete="off"> <a class="btn btn-close" data-action="closesearch" data-toggle="collapse" href="#searchform-navbar" role="button"> <i class="icon fa fa-times fa-fw " aria-hidden="true"></i> <span class="sr-only">Close</span> </a> 
+           <div class="input-group-append"> <button type="submit" class="btn btn-submit" data-action="submit"> <i class="icon fa fa-search fa-fw " aria-hidden="true"></i> <span class="sr-only">Search</span> </button> 
+           </div> 
+          </div> 
+         </form> 
+        </div> <a class="btn btn-open" data-toggle="collapse" data-action="opensearch" href="#searchform-navbar" role="button" aria-expanded="false" aria-controls="searchform-navbar"> <i class="icon fa fa-search fa-fw " aria-hidden="true"></i> <span class="sr-only">Toggle search input</span> </a> 
+       </div> 
+      </div> <!-- navbar_plugin_output --> 
+      <li class="nav-item d-flex flex-nowrap flex-row-reverse"> </li> <!-- user_menu --> 
+      <li class="nav-item d-flex align-items-center"> 
+       <div class="usermenu">
+        <span class="login">You are not logged in. (<a href="https://moodle.org/login/index.php">Log in</a>)</span>
+       </div> </li> 
+     </ul> <!-- search_box --> 
+    </div> 
+   </div> 
+  </div> 
+ </nav> 
+ <div id="page" class="mt-0"> 
+  <div id="page-content"> 
+   <div id="region-main-box" class="col-12 p-0"> 
+    <section id="region-main" class="region-main-content p-0 border-0" aria-label="Content"> 
+     <section id="region-main-slides" class="hero-unit"> 
+      <div id="spiffySlides" class=""> 
+       <div class="tab-content slides" id="nav-tabContent"> 
+        <div class="slide tab-pane fade active getstarted" id="slide1" role="tabpanel" aria-labelledby="slide1-tab"> 
+         <div class="container-fluid fg"> 
+          <div class="row getstarted"> 
+           <div class="offset-xl-1 col-md-5"> 
+            <h2 class="heroslide_getstarted_headline"> Getting started is easy </h2> 
+            <div class="description">
+              Moodle is the world's most popular learning management system. Start creating your online learning site in minutes! 
+            </div> <a href="https://moodle.com/getstarted/" class="button"> Get started today </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="slide tab-pane fade power" id="slide2" role="tabpanel" aria-labelledby="slide2-tab"> 
+         <div class="container-fluid"> 
+          <div class="row power"> 
+           <div class="offset-md-1 col-md-4"> 
+            <div class="videopower"> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3ORsUGVNxGs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+            </div> 
+           </div> 
+           <div class="offset-md-1 col-md-5"> 
+            <h2 class="heroslide_power_headline"> Powerful. Secure. Open source. </h2> 
+            <div class="description">
+              The world's free learning platform that helps you create effective online teaching and learning experiences in a collaborative, private environment. 
+            </div> <a href="https://moodle.org/features" class="button"> Features </a> <a href="https://school.moodledemo.net" class="button"> Demo </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="slide tab-pane fade global" id="slide3" role="tabpanel" aria-labelledby="slide3-tab"> 
+         <div class="container-fluid fg img3"> 
+          <div class="row"> 
+           <div class="offset-md-1 col-md-10"> 
+            <h2 class="heroslide_global_headline"> Powering learning environments worldwide </h2> 
+            <div class="description">
+              Available in over 100 languages, Moodle is trusted by organisations and institutions, large and small, with millions of users all over the world. 
+            </div> <a href="https://moodle.org/sites" class="button"> Registered sites </a> <a href="https://moodle.org/stats" class="button"> Statistics </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="slide tab-pane fade stories story1" id="slide4" role="tabpanel" aria-labelledby="slide4-tab"> 
+         <div class="container-fluid"> 
+          <div class="row stories"> 
+           <div class="offset-md-1 col-md-6"> 
+            <h2 class="heroslide_stories_headline"> Improving teaching and learning everywhere </h2> 
+            <div class="description">
+              “Leading in technology-enabled learning enables us to facilitate student discovery, creativity and opportunity.” - Professor Darrell Evans, Pro Vice-Chancellor (Learning and Teaching), Monash University 
+            </div> <a href="https://moodle.org/stories" class="button"> Read more </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <nav class="spiffyNav"> 
+        <div class="container-fluid"> 
+         <div class="row-container" id="nav-tab" role="tablist"> 
+          <ul class="nav nav-tabs controls"> 
+           <li class="nav-item"> <a href="#slide1" class="nav-link active" id="slide1" data-toggle="tab" role="tab" aria-controls="slide1" aria-selected="true"> 
+             <div class="description">
+               Get started today 
+             </div> </a> </li> 
+           <li class="nav-item"> <a href="#slide2" class="nav-link" id="slide2" data-toggle="tab" role="tab" aria-controls="slide2" aria-selected="true"> 
+             <div class="description">
+               Robust open-source learning platform 
+             </div> </a> </li> 
+           <li class="nav-item"> <a href="#slide3" class="nav-link" id="slide3" data-toggle="tab" role="tab" aria-controls="slide3" aria-selected="true"> 
+             <div class="description">
+               Powering learning environments worldwide 
+             </div> </a> </li> 
+           <li class="nav-item"> <a href="#slide4" class="nav-link" id="slide4" data-toggle="tab" role="tab" aria-controls="slide4" aria-selected="true"> 
+             <div class="description">
+               Moodle stories from around the world 
+             </div> </a> </li> 
+          </ul> 
+         </div> 
+        </div> 
+       </nav> 
+      </div> 
+     </section> 
+     <div id="underslidesbar"> 
+      <div class="container-fluid"> 
+       <div class="row"> 
+        <div id="underslidesbarcommunity" class="underslidesitem col-lg-6"> 
+         <h2>Community driven, globally supported.</h2> <a href="https://moodle.org/community" class="button">Community forums</a> 
+        </div> 
+        <div id="underslidesbardonate" class="underslidesitem col-lg-6"> 
+         <h2>Help us make a difference with open and quality education for all</h2> <a href="https://moodle.com/donations/" class="button">Donate</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="news"> 
+      <div class="container-fluid px-4 pt-4"> 
+       <div class="row"> 
+        <div class="card m-0 px-2 pb-3 border-0 focusblock"> 
+         <div class="card-body"> 
+          <div class="media heading"> 
+           <div class="media-body"> 
+            <div class="d-flex border-bottom-dotted align-items-center"> 
+             <h3> Announcements </h3> <a href="https://moodle.org/rss/file.php/51/1b51bf7f3cab9689af042af1ff4a07f0/mod_forum/1/rss.xml" class="text-moodle-gray ml-auto"> <i class="icon fa fa-rss fa-fw " aria-hidden="true"></i> </a> 
+            </div> 
+           </div> 
+          </div> 
+          <ul class="media-list list-unstyled"> 
+           <li class="media mt-3"> 
+            <div class="media-body"> 
+             <div class="media-heading mb-1"> <a href="https://moodle.org/news/"> Moodle and Open Education Week </a> 
+             </div> 
+             <div class="muted"> <span class="muted text-muted small"> Monday, 8 March 2021 </span> 
+             </div> 
+            </div> </li>
+           <li class="media mt-3"> 
+            <div class="media-body"> 
+             <div class="media-heading mb-1"> <a href="https://moodle.org/news/#p1689961"> Moodle 3.10.2 and other minors are out! </a> 
+             </div> 
+             <div class="muted"> <span class="muted text-muted small"> Monday, 8 March 2021 </span> 
+             </div> 
+            </div> </li>
+           <li class="media mt-3"> 
+            <div class="media-body"> 
+             <div class="media-heading mb-1"> <a href="https://moodle.org/news/#p1670408"> Announcement: Changes to the Moodle App for sites hosted by certain non-official service providers </a> 
+             </div> 
+             <div class="muted"> <span class="muted text-muted small"> Tuesday, 23 February 2021 </span> 
+             </div> 
+            </div> </li>
+          </ul> 
+          <hr> 
+          <div class="d-flex justify-content-end"> 
+           <div class="morelink"> <a class="btn btn-link btn-sm icon-nomargin" href="https://moodle.org/news/"> See all announcements <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="card m-0 px-2 pb-3 border-0 focusblock"> 
+         <div class="card-body"> 
+          <div class="media heading"> 
+           <div class="media-body"> 
+            <div class="d-flex border-bottom-dotted align-items-center"> 
+             <h3> Latest news </h3> <a href="https://moodle.com/feed/" class="text-moodle-gray ml-auto"> <i class="icon fa fa-rss fa-fw " aria-hidden="true"></i> </a> 
+            </div> 
+           </div> 
+          </div> 
+          <ul class="media-list list-unstyled"> 
+           <li class="media mt-3"> 
+            <div class="media-body"> 
+             <div class="media-heading mb-1"> <a href="https://moodle.com/news/road-moodle-4-0-new-navigation/"> The Road to Moodle 4.0 – Sneak Peek of our New Nav! </a> 
+             </div> 
+             <div class="muted"> <span class="muted text-muted small"> Monday, 15 March 2021 </span> 
+             </div> 
+            </div> </li>
+           <li class="media mt-3"> 
+            <div class="media-body"> 
+             <div class="media-heading mb-1"> <a href="https://moodle.com/news/future-proof-digital-credentials-moodle-open-badges/"> Future-proof your learner’s digital credentials with Moodle + Open Badges </a> 
+             </div> 
+             <div class="muted"> <span class="muted text-muted small"> Friday, 12 March 2021 </span> 
+             </div> 
+            </div> </li>
+           <li class="media mt-3"> 
+            <div class="media-body"> 
+             <div class="media-heading mb-1"> <a href="https://moodle.com/news/tips-tricks-engaging-interactive-moodle/"> Tips, tricks, and training for a truly engaging and interactive Moodle experience </a> 
+             </div> 
+             <div class="muted"> <span class="muted text-muted small"> Tuesday, 9 March 2021 </span> 
+             </div> 
+            </div> </li>
+          </ul> 
+          <hr> 
+          <div class="d-flex justify-content-end"> 
+           <div class="morelink"> <a class="btn btn-link btn-sm icon-nomargin" href="https://moodle.com/news"> See all latest news <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="using-moodle container-fluid px-4 pt-2"> 
+      <div class="row"> 
+       <div class="card m-0 pb-4 px-2 border-0 focusblock"> 
+        <div class="card-body theproject"> 
+         <h4>The Moodle project</h4> 
+         <p>Learn more about the Moodle project and our open, collaborative partnerships.</p> 
+         <ul class="list-unstyled alternate" type="square"> 
+          <li><a href="/about/">About Moodle</a></li> 
+          <li><a href="/stats/">Statistics</a></li> 
+          <li><a href="https://moodle.com/about/">Moodle HQ</a></li> 
+          <li><a href="https://moodle.com/partners/">Moodle Partners</a></li> 
+          <li><a href="/dev/">Developers</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="card m-0 pb-4 px-2 border-0 focusblock"> 
+        <div class="card-body settingup"> 
+         <h4>Setting up</h4> 
+         <p>On your own</p> 
+         <ul class="list-unstyled alternate" type="square"> 
+          <li><a href="https://download.moodle.org/">Free download</a></li> 
+          <li><a href="http://docs.moodle.org/en/Installation">Installation</a></li> 
+          <li><a href="/plugins/">Plugins</a></li> 
+          <li><a href="/forums/">Community support</a></li> 
+         </ul> 
+         <p>Via a Moodle Partner</p> 
+         <ul class="list-unstyled alternate" type="square"> 
+          <li><a href="https://moodle.com/partners/?mode=search&amp;services=hosting">Hosting</a></li> 
+          <li><a href="https://moodle.com/partners/?mode=search&amp;services=support">Commercial support</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="card m-0 pb-4 px-2 border-0 focusblock"> 
+        <div class="card-body teaching"> 
+         <h4>Teaching with Moodle</h4> 
+         <p>Explore Moodle's wide range of features and available resources.</p> 
+         <ul class="list-unstyled alternate" type="square"> 
+          <li><a href="http://docs.moodle.org/en/">Documentation</a></li> 
+          <li><a href="https://moodle.net/">Courses and content</a></li> 
+          <li><a href="/books/">Books</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="card m-0 pb-4 px-2 border-0 focusblock"> 
+        <div class="card-body community"> 
+         <h4>Support and community forums</h4> 
+         <p>Get support and share ideas, in your own language.</p> 
+         <ul class="list-unstyled alternate" type="square"> 
+          <li class="community lang-en"> <a href="https://moodle.org/course/view.php?id=5"> Moodle in English </a> </li> 
+          <li class="community lang-es"> <a href="https://moodle.org/course/view.php?id=11"> Moodle en Español </a> </li> 
+         </ul> 
+         <p class="viewmore"><a href="/community/">All communities</a></p> 
+        </div> 
+       </div> 
+       <div class="card m-0 pb-4 px-2 border-0 focusblock"> 
+        <div class="card-body future"> 
+         <h4>Help shape Moodle's future</h4> 
+         <p>Find out what's next and help make a difference.</p> 
+         <ul class="list-unstyled alternate" type="square"> 
+          <li><a href="https://docs.moodle.org/dev/Roadmap">Roadmap</a></li> 
+          <li><a href="/mod/forum/view.php?f=33">Developer discussions</a></li> 
+          <li><a href="https://research.moodle.org/">Moodle research</a></li> 
+          <li><a href="/mod/data/view.php?id=8090">Crowdfunding projects</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="card m-0 pb-4 px-2 border-0 focusblock"> 
+        <div class="card-body uptodate"> 
+         <h4>Keep up-to-date</h4> 
+         <p>Latest Moodle news, updates and insight across the world.</p> 
+         <ul class="list-unstyled alternate" type="square"> 
+          <li><a href="/news/">Announcements</a></li> 
+          <li><a href="https://moodle.com/news">Latest news</a></li> 
+          <li><a href="/security/">Security announcements</a></li> 
+          <li><a href="/buzz/">Moodle buzz</a></li> 
+          <li><a href="/social/">Social media</a></li> 
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="feeds"> 
+      <div class="container-fluid"> 
+       <div class="row mb-5"> <!-- Useful posts --> 
+        <div class="col-md-4 feed useful"> 
+         <div class="d-flex border-bottom-dotted align-items-center"> 
+          <h3> Useful posts </h3> <a href="https://moodle.org/useful/rss.php?lang=en" class="text-moodle-gray ml-auto"> <i class="icon fa fa-rss fa-fw " aria-hidden="true"></i> </a> 
+         </div> 
+         <ul class="media-list list-unstyled"> 
+          <li class="media mt-3 mt-3"> 
+           <div class="itemimage"> <a href="https://moodle.org/user/view.php?id=1222903&amp;course=5" class="d-inline-block aabtn"><img src="https://secure.gravatar.com/avatar/27b6dd8b3c1461922abacf9444e81d5e?s=35&amp;d=identicon" class="userpicture defaultuserpic" width="35" height="35" alt="Picture of Rob Bor" title="Picture of Rob Bor"></a> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/mod/forum/discuss.php?d=311913#p1248528"> Add users with just a Name; not with First Name and Surname!?! </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="name"> <p>Rob Bor  - <span class="date"> Wednesday, 15 April 2015 </span> </p></span>
+            </div> 
+           </div> </li> 
+          <li class="media mt-3 mt-3"> 
+           <div class="itemimage"> <a href="https://moodle.org/user/view.php?id=57734&amp;course=5" class="d-inline-block aabtn"><img src="https://moodle.org/pluginfile.php/209757/user/icon/moodleorg/f2?rev=1" class="userpicture" width="35" height="35" alt="Picture of Melanie Scott" title="Picture of Melanie Scott"></a> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/mod/forum/discuss.php?d=419643#p1691608"> Re: Correctional Facility Moodle Development </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="name"> <p>Melanie Scott  - <span class="date"> Tuesday, 16 March 2021 </span> </p></span>
+            </div> 
+           </div> </li> 
+          <li class="media mt-3 mt-3"> 
+           <div class="itemimage"> <a href="https://moodle.org/user/view.php?id=26675&amp;course=5" class="d-inline-block aabtn"><img src="https://moodle.org/pluginfile.php/44253/user/icon/moodleorg/f2?rev=838793" class="userpicture" width="35" height="35" alt="Picture of Chris Kenniburg" title="Picture of Chris Kenniburg"></a> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/mod/forum/discuss.php?d=417599#p1683747"> Re: Fixing the question bank in Moodle 4.0 - what we are planning </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="name"> <p>Chris Kenniburg  - <span class="date"> Friday, 5 February 2021 </span> </p></span>
+            </div> 
+           </div> </li> 
+          <li class="media mt-3 mt-3"> 
+           <div class="itemimage"> <a href="https://moodle.org/user/view.php?id=1822259&amp;course=5" class="d-inline-block aabtn"><img src="https://moodle.org/pluginfile.php/1984378/user/icon/moodleorg/f2?rev=2654696" class="userpicture" width="35" height="35" alt="Picture of Dominique Bauer" title="Picture of Dominique Bauer"></a> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/mod/forum/discuss.php?d=419591#p1691009"> Re: Questions in a Quiz that aren't in the question bank, is it possible? </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="name"> <p>Dominique Bauer  - <span class="date"> Friday, 12 March 2021 </span> </p></span>
+            </div> 
+           </div> </li> 
+         </ul> 
+         <hr> 
+         <div class="d-flex justify-content-end"> <a class="btn btn-link btn-sm icon-nomargin" href="https://moodle.org/course/view.php?id=5"> More posts <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> 
+         </div> 
+        </div> <!-- Events --> 
+        <div class="col-md-4 feed events"> 
+         <div class="d-flex border-bottom-dotted align-items-center"> 
+          <h3> Events </h3> <a href="https://moodle.org/calendar/export_execute.php?preset_what=all&amp;preset_time=recentupcoming&amp;userid=1601&amp;authtoken=698098357dfbb0ba1f4ed280c9601a8e8808f798" class="text-moodle-gray ml-auto"> <i class="icon fa fa-rss fa-fw " aria-hidden="true"></i> </a> 
+         </div> 
+         <ul class="media-list list-unstyled"> 
+          <li class="media mt-3"> 
+           <div class="itemimage text-moodle-gray"> <i class="icon fa fa-globe fa-fw " title="Site event" aria-label="Site event"></i> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/calendar/view.php?view=day&amp;course=5&amp;time=1615849200"> MoodleMoot Benelux 2021 </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Tuesday, 16 March 2021 </span> 
+            </div> 
+           </div> </li> 
+          <li class="media mt-3"> 
+           <div class="itemimage text-moodle-gray"> <i class="icon fa fa-globe fa-fw " title="Site event" aria-label="Site event"></i> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/calendar/view.php?view=day&amp;course=5&amp;time=1619388000"> MoodleMoot Philippines 2021 </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Monday, 26 April 2021 </span> 
+            </div> 
+           </div> </li> 
+          <li class="media mt-3"> 
+           <div class="itemimage text-moodle-gray"> <i class="icon fa fa-globe fa-fw " title="Site event" aria-label="Site event"></i> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/calendar/view.php?view=day&amp;course=5&amp;time=1620597600"> Moodle 3.11 scheduled release </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Monday, 10 May 2021 </span> 
+            </div> 
+           </div> </li> 
+          <li class="media mt-3"> 
+           <div class="itemimage text-moodle-gray"> <i class="icon fa fa-globe fa-fw " title="Site event" aria-label="Site event"></i> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/calendar/view.php?view=day&amp;course=5&amp;time=1626040800"> Moodle 3.11.1 scheduled release </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Monday, 12 July 2021 </span> 
+            </div> 
+           </div> </li> 
+         </ul> 
+         <hr> 
+         <div class="d-flex justify-content-end"> <a class="btn btn-link btn-sm icon-nomargin" href="calendar/view.php"> More calendar entries <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> 
+         </div> 
+        </div> <!-- Resources --> 
+        <div class="col-md-4 feed resources"> 
+         <div class="d-flex border-bottom-dotted align-items-center"> 
+          <h3> Resources </h3> <a href="https://moodle.org/resources/rss.php?lang=en" class="text-moodle-gray ml-auto"> <i class="icon fa fa-rss fa-fw " aria-hidden="true"></i> </a> 
+         </div> 
+         <ul class="media-list list-unstyled"> 
+          <li class="media mt-3"> 
+           <div class="itemimage"> 
+            <img class="icon " alt="Plugins" title="Plugins" src="https://moodle.org/theme/image.php/moodleorg/mod_lti/1615373780/icon"> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/plugins/theme_foundation "> Plugins: Foundation </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Monday, 15 March 2021 </span> 
+            </div> 
+           </div> </li> 
+          <li class="media mt-3"> 
+           <div class="itemimage"> 
+            <img class="icon " alt="Plugins" title="Plugins" src="https://moodle.org/theme/image.php/moodleorg/mod_lti/1615373780/icon"> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/plugins/plagiarism_compilatio "> Plugins: Compilatio plagiarism plugin </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Monday, 15 March 2021 </span> 
+            </div> 
+           </div> </li> 
+          <li class="media mt-3"> 
+           <div class="itemimage"> 
+            <img class="icon " alt="Jobs" title="Jobs" src="https://moodle.org/theme/image.php/moodleorg/mod_feedback/1615373780/icon"> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/mod/data/view.php?d=54&amp;rid=8745 "> Jobs: Freelance - h5p task - Contract - Remote </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Monday, 15 March 2021 </span> 
+            </div> 
+           </div> </li> 
+          <li class="media mt-3"> 
+           <div class="itemimage"> 
+            <img class="icon " alt="Jobs" title="Jobs" src="https://moodle.org/theme/image.php/moodleorg/mod_feedback/1615373780/icon"> 
+           </div> 
+           <div class="media-body"> 
+            <div class="media-heading mb-1"> <a href="https://moodle.org/mod/data/view.php?d=54&amp;rid=8744 "> Jobs: Moodle Developer - Contract - Singapore / Telecommute </a> 
+            </div> 
+            <div class="muted text-muted small"> <span class="date"> Friday, 12 March 2021 </span> 
+            </div> 
+           </div> </li> 
+         </ul> 
+         <hr> 
+         <div class="d-flex justify-content-end"> <a class="btn btn-link btn-sm icon-nomargin" href="https://moodle.org/plugins/"> Plugins <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> <a class="btn btn-link btn-sm icon-nomargin" href="https://moodle.org/jobs/"> Jobs <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> <a class="btn btn-link btn-sm icon-nomargin" href="http://moodle.net"> Courses <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> <a class="btn btn-link btn-sm icon-nomargin" href="https://moodle.org/buzz/"> Buzz <i class="icon fa fa-angle-double-right fa-fw " aria-hidden="true"></i> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="partners"> 
+      <div class="container-fluid"> 
+       <div class="moodlepartnerbar"> 
+        <div class="row align-items-center"> 
+         <div class="col-md-5"> 
+          <div class="logo d-flex"> <a href="https://moodle.com/partners/" class="ml-auto"> <img src="https://moodle.org/theme/image.php/moodleorg/theme_moodleorg/1615373780/moodle-partners_logo_small" class="img-fluid" width="288px" height="74px"> </a> 
+          </div> 
+         </div> 
+         <div class="col-md-7 pt-3"> 
+          <div class="slogan">
+            The Moodle Project is supported by over 90 certified <a href="https://moodle.com/partners/">Moodle Partners</a> globally. 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="thumbnails"> 
+        <div class="row"> 
+         <div class="col-4 col-sm-2 px-0 px-sm-2"> <a href="https://partners.moodle.com/image/click.php?p=mylearningconsultants&amp;ad=mylearningconsultants"> <img alt="My Learning Consultants" class="grey" src="https://moodle.org/blocks/partners/image/mylearningconsultants/logo-grey.png"> </a> 
+         </div> 
+         <div class="col-4 col-sm-2 px-0 px-sm-2"> <a href="https://partners.moodle.com/image/click.php?p=moonami&amp;ad=moonami"> <img alt="Moonami" class="grey" src="https://moodle.org/blocks/partners/image/moonami/logo-grey.png"> </a> 
+         </div> 
+         <div class="col-4 col-sm-2 px-0 px-sm-2"> <a href="https://partners.moodle.com/image/click.php?p=cr&amp;ad=cr"> <img alt="Classroom Revolution" class="grey" src="https://moodle.org/blocks/partners/image/cr/logo-grey.png"> </a> 
+         </div> 
+         <div class="col-4 col-sm-2 px-0 px-sm-2"> <a href="https://partners.moodle.com/image/click.php?p=vidyamantraus&amp;ad=vidyamantraus"> <img alt="KeyToSchool" class="grey" src="https://moodle.org/blocks/partners/image/vidyamantraus/logo-grey.png"> </a> 
+         </div> 
+         <div class="col-4 col-sm-2 px-0 px-sm-2"> <a href="https://partners.moodle.com/image/click.php?p=elearningexperts&amp;ad=elearningexperts"> <img alt="Elearning Experts" class="grey" src="https://moodle.org/blocks/partners/image/elearningexperts/logo-grey.png"> </a> 
+         </div> 
+         <div class="col-4 col-sm-2 px-0 px-sm-2"> <a href="https://partners.moodle.com/image/click.php?p=openedu&amp;ad=openedu"> <img alt="OpenEdu" class="grey" src="https://moodle.org/blocks/partners/image/openedu/logo-grey.png"> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="container-fluid"> 
+      <div role="main">
+       <span id="maincontent"></span>
+       <br>
+      </div> 
+     </div> 
+    </section> 
+   </div> 
+  </div> 
+ </div> 
+ <footer id="page-footer"> 
+  <div class="footer-nav"> 
+   <div class="container-fluid"> 
+    <div class="row px-3"> 
+     <div class="col-md-2"> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="https://moodle.org">The Moodle Project</a> </li> 
+       <li class="secondary"> <a href="https://moodle.org/about/">About</a> </li> 
+       <li class="secondary"> <a href="https://moodle.org/news/">Announcements</a> </li> 
+       <li class="secondary"> <a href="https://moodle.org/community/">Community forums</a> </li> 
+       <li class="secondary"> <a href="https://docs.moodle.org/dev/Contributing_to_Moodle">Get involved</a> </li> 
+       <li class="secondary"> <a href="https://moodle.com/partners/">Moodle Partners</a> </li> 
+       <li class="secondary"> <a href="https://moodle.com/events/">MoodleMoots</a> </li> 
+       <li class="secondary"> <a href="https://moodleassociation.org/">Moodle Users Association</a> </li> 
+       <li class="secondary"> <a href="https://learn.moodle.net/">Learn Moodle</a> </li> 
+       <li class="secondary"> <a href="https://moodle.com/moodlecloud/">MoodleCloud</a> </li> 
+       <li class="secondary"> <a href="https://moodle.org/donations/">Donate</a> </li> 
+       <li class="secondary"> <a href="https://moodle.com/shop/">Moodle shop</a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-md-2"> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="https://docs.moodle.org">Documentation</a> </li> 
+       <li class="secondary"> <a href="https://docs.moodle.org/">Moodle 3.10</a> </li> 
+       <li class="secondary"> <a href="https://docs.moodle.org/overview/">Browse by language</a> </li> 
+      </ul> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="https://download.moodle.org/">Downloads</a> </li> 
+       <li class="secondary"> <a href="https://download.moodle.org/releases/latest/">Latest release</a> </li> 
+       <li class="secondary"> <a href="https://moodle.org/plugins/">Plugins</a> </li> 
+       <li class="secondary"> <a href="https://download.moodle.org/mobile/">Moodle app</a> </li> 
+       <li class="secondary"> <a href="https://download.moodle.org/desktop/">Moodle Desktop</a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-md-2"> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="https://moodle.org/demo">Demo</a> </li> 
+       <li class="secondary"> <a href="https://school.moodledemo.net/">School</a> </li> 
+       <li class="secondary"> <a href="https://sandbox.moodledemo.net/">Sandbox</a> </li> 
+      </ul> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="https://tracker.moodle.org">Tracker</a> </li> 
+       <li class="secondary"> <a href="https://tracker.moodle.org/browse/MDL">Browse issues</a> </li> 
+       <li class="secondary"> <a href="https://tracker.moodle.org/secure/CreateIssue.jspa?pid=10011&amp;issuetype=1">Report issue</a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-md-2"> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="">Development</a> </li> 
+       <li class="secondary"> <a href="https://docs.moodle.org/dev/">Dev documentation</a> </li> 
+       <li class="secondary"> <a href="https://docs.moodle.org/dev/Roadmap">Roadmap</a> </li> 
+       <li class="secondary"> <a href="https://moodle.org/mod/forum/view.php?id=55">General developer forum</a> </li> 
+       <li class="secondary"> <a href="https://moodle.org/dev/">Developer credits</a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-md-2"> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="https://lang.moodle.org">Translation</a> </li> 
+       <li class="secondary"> <a href="https://docs.moodle.org/dev/Contributing_a_translation">Help translate Moodle</a> </li> 
+       <li class="secondary"> <a href="https://lang.moodle.org/course/view.php?id=2">Translation forums</a> </li> 
+       <li class="secondary"> <a href="https://lang.moodle.org/local/amos/credits.php">Translation credits</a> </li> 
+      </ul> 
+      <ul class="list-unstyled footer-nav-list"> 
+       <li class="primary"> <a href="https://moodle.net">MoodleNet</a> </li> 
+       <li class="secondary"> <a href="https://archive.moodle.net/">Moodle.net archive</a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-md-2"> 
+      <div class="social"> 
+       <img id="moodlelogo" src="https://moodle.org/theme/image.php/moodleorg/theme/1615373780/moodle_logo_grayhat_small" alt="Moodle"> 
+       <div id="sharethis"> 
+        <ul> 
+         <li><a id="share-twitter" href="https://twitter.com/@moodle"><span>Twitter</span></a></li> 
+         <li><a id="share-facebook" href="https://facebook.com/moodle"><span>Facebook</span></a></li> 
+         <li><a id="share-linkedin" href="https://www.linkedin.com/company/moodle"><span>Linked In</span></a></li> 
+         <li><a id="share-youtube" href="https://www.youtube.com/moodlehq"><span>Youtube</span></a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="footer-info"> 
+   <div class="logininfo">
+    You are not logged in. (<a href="https://moodle.org/login/index.php">Log in</a>)
+   </div> 
+   <div class="mt-3"> 
+    <p style="text-align: center;" class="footernotice">Moodle™ is a <a href="https://moodle.com/trademarks/">registered trademark</a> </p> 
+    <p style="text-align: center;" class="footernotice"><a href="https://moodle.org/mod/page/view.php?id=7080">Site policy</a> | <a href="https://moodle.org/contact">Contact</a></p> 
+   </div> <a href="https://download.moodle.org/mobile?version=2020110902&amp;lang=en&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile">Get the mobile app</a>
+   <div class="policiesfooter">
+    <a href="https://moodle.org/admin/tool/policy/viewall.php?returnurl=https%3A%2F%2Fmoodle.org%2F">Policies</a>
+   </div> 
+   <div class="standards"> 
+    <ul> 
+     <li><a class="ll" href="https://docs.moodle.org/en/Standards"><span>Open Source</span></a></li> 
+     <li><a class="l" href="https://docs.moodle.org/en/Standards"><span>IMS LTI™ Certified</span></a></li> 
+     <li><a class="r" href="https://docs.moodle.org/en/Standards"><span>SCORM-ADL compliant</span></a></li> 
+     <li><a class="rr" href="https://docs.moodle.org/en/Standards"><span>Open Badges</span></a></li> 
+    </ul> 
+   </div> 
+   <div class="tool_usertours-resettourcontainer"></div> 
+  </div> 
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-72764-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.org/lib/requirejs.php/1615373780/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.org/lib/javascript.php/1615373780/lib/jquery/jquery-3.5.1.min',
+        jqueryui: 'https://moodle.org/lib/javascript.php/1615373780/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.org/lib/javascript.php/1615373780/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script> 
+  <script src="https://moodle.org/lib/javascript.php/1615373780/lib/requirejs/require.min.js"></script> 
+  <script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('en');
+});;
+M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function(amd) {amd.init("182232", null); M.util.js_complete('block_settings/settingsblock');});;
+M.util.js_pending('block_navigation/navblock'); require(['block_navigation/navblock'], function(amd) {amd.init("182231"); M.util.js_complete('block_navigation/navblock');});;
+
+
+require(['jquery', 'tool_policy/jquery-eu-cookie-law-popup', 'tool_policy/policyactions'], function($, Popup, ActionsMod) {
+        // Initialise the guest popup.
+        $(document).ready(function() {
+            // Only show message if there is some policy related to guests.
+                // Get localised messages.
+                var textmessage = "If you continue browsing this website, you agree to our policies:" +
+                   "<ul>" +
+                   "<li>" +
+                   "<a href=\"https://moodle.org/admin/tool/policy/view.php?versionid=1&amp;returnurl=https%3A%2F%2Fmoodle.org%2F\" " +
+                   "   data-action=\"view-guest\" data-versionid=\"1\" data-behalfid=\"1\" >" +
+                   "Privacy notice" +
+                   "</a>" +
+                   "</li>" +
+                   "" +
+                   "<li>" +
+                   "<a href=\"https://moodle.org/admin/tool/policy/view.php?versionid=2&amp;returnurl=https%3A%2F%2Fmoodle.org%2F\" " +
+                   "   data-action=\"view-guest\" data-versionid=\"2\" data-behalfid=\"1\" >" +
+                   "Cookies policy" +
+                   "</a>" +
+                   "</li>" +
+                   "" +
+                   "</ul>";
+                var continuemessage = "Continue";
+
+                // Initialize popup.
+                $(document.body).addClass('eupopup');
+                if ($(".eupopup").length > 0) {
+                    $(document).euCookieLawPopup().init({
+                        popupPosition: 'bottom',
+                        popupTitle: '',
+                        popupText: textmessage,
+                        buttonContinueTitle: continuemessage,
+                        buttonLearnmoreTitle: '',
+                        compactStyle: true,
+                    });
+                }
+
+            // Initialise the JS for the modal window which displays the policy versions.
+            ActionsMod.init('[data-action="view-guest"]');
+        });
+});
+
+;
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select605163fde91085', [CustomEvents.events.accessibleChange]);
+    $('#single_select605163fde91085').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f605163fde91084').submit();
+        }
+    });
+});
+;
+
+require(
+[
+    'jquery',
+],
+function(
+    $
+) {
+    var uniqid = "605163fdf250f605163fde91086";
+    var container = $('#searchinput-navbar-' + uniqid);
+    var opensearch = container.find('[data-action="opensearch"]');
+    var input = container.find('[data-region="input"]');
+    var submit = container.find('[data-action="submit"]');
+
+    submit.on('click', function(e) {
+        if (input.val() === '') {
+            e.preventDefault();
+        }
+    });
+    container.on('hidden.bs.collapse', function() {
+        opensearch.removeClass('d-none');
+        input.val('');
+    });
+    container.on('show.bs.collapse', function() {
+        opensearch.addClass('d-none');
+    });
+    container.on('shown.bs.collapse', function() {
+        input.focus();
+    });
+});
+;
+
+require(['theme_boost/loader']);
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(5310, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script> 
+  <script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","viewallcourses":"View all courses","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script> 
+  <script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random605163fde91087'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random605163fde91087'); });
+})();
+//]]>
+</script> 
+ </footer>
+</div> 
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"05ab6e1949","applicationID":"269337470","transactionName":"YwBabBRSCEFYAkVaWlpKbUoPHA9cXQRJHUVcFQ==","queueTime":0,"applicationTime":129,"atts":"T0dZGlxIG08=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script>
+</body>
+</doc>

@@ -1,0 +1,305 @@
+<doc>
+<filename>northeastern.edu5.html</filename>
+<url>http://research.northeastern.edu</url>
+<ip>155.33.17.71</ip>
+<title>Research at Northeastern</title>
+<body>
+<!-- Google Tag Manager (noscript) --> 
+<noscript>
+ <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGQLLJ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> <!-- End Google Tag Manager (noscript) --> <a class="skip alert" href="#main_content">Skip to main content</a> <!--[if IE]>
+                <div class="bg--beige fs--sm pa--1 pa--2@d">
+                    <b><i>Note</i></b>: You are using an <strong>outdated</strong> browser. Please <a class="tc--red" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+                </div>
+                <![endif]--> 
+<header class="masthead --logo-md +utility" role="banner"> <a class="__logo" href="https://research.northeastern.edu/"> <img class="__logo__image" src="/app/uploads/logo-research.png" alt="Division of Research logo"> </a> <button class="__toggler hidden--up@d" aria-label="Open"><i data-feather="menu"></i></button> 
+ <nav class="__drawer" role="navigation"> 
+  <div class="w--100 d--flex justify--between hidden--up@d"> <a class="__logo" href="https://research.northeastern.edu/"> <img class="__logo__image" src="/app/uploads/logo-white.png" alt="Division of Research logo"> </a> <button class="__toggler" aria-label="Close"><i data-feather="x"></i></button> 
+  </div> 
+  <ul id="masthead-primary" class="__list">
+   <li class="__item "><a class="__link" href="https://research.northeastern.edu/about/">About</a></li>
+   <li class="__item "><a class="__link" href="https://research.northeastern.edu/faculty-research/">Faculty Research</a></li>
+   <li class="__item "><a class="__link" href="http://www.northeastern.edu/resdev/events/">Calendar</a></li>
+   <li class="__item "><a class="__link" href="https://research.northeastern.edu/announcements/">Announcements</a></li>
+   <li class="__item "><a class="__link" href="https://research.northeastern.edu/govt-relations/">Government Affairs</a></li>
+   <li class="__item "><a class="__link" href="https://research.northeastern.edu/contact/">Contact</a></li> 
+   <li class="__item +icon"> <a class="__link" href="#" data-toggle="modal" data-target="#modal_search" aria-label="Modal Search"> 
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+      <circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+     </svg> </a></li>
+  </ul> 
+  <ul class="__list --utility"> 
+   <li class="__item "> <a class="__link" href="https://research.northeastern.edu/about/themes/health/">Health</a> </li> 
+   <li class="__item "> <a class="__link" href="https://research.northeastern.edu/about/themes/security/">Security</a> </li> 
+   <li class="__item "> <a class="__link" href="https://research.northeastern.edu/about/themes/sustainability/">Sustainability</a> </li> 
+  </ul> 
+ </nav> 
+</header> 
+<main id="main_content" role="main"> 
+ <section id="section-1" class="section py--2h fs--d3 ta--c bg--red"> 
+  <div class="row"> 
+   <div class="col  "> 
+    <div>
+     <a class="tc--white d--block" href="https://research.northeastern.edu/research-covid-19-updates/">Research COVID-19 Updates</a>
+    </div> 
+   </div> 
+  </div> 
+ </section>
+ <section id="section-2" class="section --hero bg--img" style="background-image:url('/app/uploads/16x9-research-banner.jpg');"> 
+  <header class="__header"> 
+   <h2 class="__title">Research that solves global challenges</h2>
+   <div class="__subtitle">
+    Collaborative, cross-disciplinary, and powered by experience. 
+    <div class="pt--1">
+     <a class="btn bg--red" href="https://research.northeastern.edu/about/">Learn More</a>
+    </div>
+   </div> 
+  </header> 
+  <div class="row"> 
+   <div class="col  "> 
+   </div> 
+  </div> 
+ </section>
+ <section id="section-3" class="section py--3 col--stretch ta--c --center"> 
+  <header class="__header"> 
+   <h2 class="__title">Upcoming Events for Researchers</h2>
+   <div class="__subtitle">
+    <a href="http://www.northeastern.edu/resdev/events/" class="btn --sm">Research Calendar</a> <a href="http://www.northeastern.edu/resdev/about/suggest-an-event/" class="btn --sm">Suggest an Event</a>
+   </div> 
+  </header> 
+  <div class="row"> 
+   <div class="col  "> 
+    <script type="text/javascript">
+      (() => {
+  const $this = jQuery(this);
+  const url = `${'https://cors-anywhere.herokuapp.com/'}https://www.northeastern.edu/resdev/api/get_posts/?post_type=tribe_events&order_by=meta_value&meta_key=_EventStartDate&order=ASC&count=5`;
+  
+  jQuery.ajax({
+    type : 'GET',
+    url : url,
+    success : function(data) {
+      let html = '';
+      if (data.count) {
+        jQuery.each(data.posts, function(key, value) {
+            let eventDate = moment(value.custom_fields._EventStartDate[0]).format("MM/DD/YY | h:mm a");
+            html += `
+            <div class="col w--20@d">
+                <div class="card --tile">
+                    <a class="__link" href="${value.url}">
+                        <div class="__body">
+                            <div class="mb--1">${eventDate}</div>
+                            <h2 class="__title">${value.title_plain}</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>`;
+        });
+      } else {
+          html = `<div class="col ta--c fs--italic">No upcoming events</div>`;
+      }
+
+      jQuery('#section-3 .row').html(html);
+    }
+  });
+})();
+    </script> 
+   </div> 
+  </div> 
+ </section>
+ <section id="section-4" class="section py--3 pt--0"> 
+  <div class="row"> 
+   <div class="col w--1/4@d "> 
+    <h2><a class="tc--black" href="https://www.northeastern.edu/resdev/" target="_blank" rel="noopener">Development</a></h2> 
+    <ul class="list-group fs--sm"> 
+     <li><a href="http://www.northeastern.edu/resdev/funding-announcement/" target="_blank" rel="noopener">Funding Opportunity Announcements</a></li> 
+     <li><a href="http://www.northeastern.edu/resdev/limited-submissions/" target="_blank" rel="noopener">Limited Submissions</a></li> 
+     <li><a href="http://www.northeastern.edu/resdev/resources/searchable-funding-databases/" target="_blank" rel="noopener">Searchable Funding Databases</a></li> 
+     <li><a href="http://www.northeastern.edu/resdev/resources/internal-grants/" target="_blank" rel="noopener">Internal Grant Programs</a></li> 
+     <li><a href="http://www.northeastern.edu/resdev/resources/funding-resources/" target="_blank" rel="noopener">External Funding Resources</a></li> 
+     <li><a href="http://www.northeastern.edu/resdev/resources/proposal-writing-resources/writing-guides/" target="_blank" rel="noopener">Proposal Writing Guides</a></li> 
+    </ul> 
+   </div> 
+   <div class="col w--1/4@d "> 
+    <h2><a class="tc--black" href="https://research.northeastern.edu/nu-res/" target="_blank" rel="noopener">NU-RES</a></h2> 
+    <ul class="list-group fs--sm"> 
+     <li><a href="https://research.northeastern.edu/nu-res/lifecycle-management/manage-project/" target="_blank" rel="noopener">Manage my award</a></li> 
+     <li><a href="https://research.northeastern.edu/nu-res/all-resources/" target="_blank" rel="noopener">Forms</a></li> 
+     <li><a href="https://research.northeastern.edu/nu-res/policies-guidelines/" target="_blank" rel="noopener">Policies and Guidelines</a></li> 
+     <li><a href="https://research.northeastern.edu/nu-res/faqs/" target="_blank" rel="noopener">Frequently Asked Questions</a></li> 
+     <li><a href="https://research.northeastern.edu/nu-res/contact/" target="_blank" rel="noopener">NU-RES Contact Info</a></li> 
+    </ul> 
+   </div> 
+   <div class="col w--1/4@d "> 
+    <h2><a class="tc--black" href="https://research.northeastern.edu/research-compliance/" target="_blank" rel="noopener">Compliance</a></h2> 
+    <ul class="list-group fs--sm"> 
+     <li><a href="http://www.northeastern.edu/research/hsrp/" target="_blank" rel="noopener">Human Subject Research Protection</a></li> 
+     <li><a href="https://research.northeastern.edu/animalcare/">Division of Laboratory Animal Medicine</a></li> 
+     <li><a href="https://research.northeastern.edu/nu-res/compliance/responsible-conduct-of-research/" target="_blank" rel="noopener">Responsible Conduct of Research</a></li> 
+     <li><a href="http://research.northeastern.edu/nu-res/compliance/export-control/" target="_blank" rel="noopener">Export Control</a></li> 
+     <li><a href="https://research.northeastern.edu/nu-res/compliance/research-and-regulatory-compliance/financial-conflict-of-interest/" target="_blank" rel="noopener">Financial Conflict of Interest</a></li> 
+     <li><a href="http://www.northeastern.edu/ehs/" target="_blank" rel="noopener">Environmental Health Safety</a></li> 
+    </ul> 
+   </div> 
+   <div class="col w--1/4@d "> 
+    <h2><a class="tc--black" href="http://www.northeastern.edu/cri/" target="_blank" rel="noopener">Innovation</a></h2> 
+    <ul class="list-group fs--sm"> 
+     <li><a href="https://www.northeastern.edu/cri/news/global-entrepreneurship-week-at-northeastern/" target="_blank" rel="noopener">Entrepreneurship Week</a></li> 
+     <li><a href="https://www.northeastern.edu/cri/entrepreneurs/" target="_blank" rel="noopener">Resources</a></li> 
+     <li><a href="https://www.northeastern.edu/cri/programs/" target="_blank" rel="noopener">Programs</a></li> 
+     <li><a href="https://www.northeastern.edu/cri/industry-investors/research-capabilities/" target="_blank" rel="noopener">Research Capabilities</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+ </section>
+ <section id="section-5" class="section py--3 --center bg--gray-100"> 
+  <header class="__header"> 
+   <h2 class="__title">Latest News</h2> 
+  </header> 
+  <div class="row"> 
+   <div class="col   col--stretch"> 
+    <div class="row"> 
+     <div class="col w--1/3@t"> 
+      <article class="card "> <a href="/heres-what-it-takes-to-test-a-covid-19-vaccine-with-clinical-trials/" class="__link"> 
+        <header class="__header"> 
+         <div class="__column"> 
+          <div class="badge --left ">
+            News 
+          </div> 
+         </div> 
+        </header> 
+        <div class="__graphic ar--16x9"> 
+         <img class="__graphic__img" alt="Here’s what it takes to test a COVID-19 vaccine with clinical trials" src="/app/uploads/101020_MM_vaccine_stock_1400-740x493.jpg" data-src="/app/uploads/101020_MM_vaccine_stock_1400-740x493.jpg"> 
+        </div> 
+        <section class="__body"> 
+         <h2 class="__title">Here’s what it takes to test a COVID-19 vaccine with clinical trials</h2> 
+         <p>In last week’s presidential debate, President Donald Trump claimed that a COVID-19 vaccine is only weeks away in the United States—a timeline that is at odds with some of the top scientists in his administration. Mansoor Amiji, University Distinguished Professor in pharmaceutical sciences and chemical engineering at Northeastern, explains why vaccines take so long to develop and distribute.</p> 
+        </section> </a> 
+      </article> 
+     </div> 
+     <div class="col w--1/3@t"> 
+      <article class="card "> <a href="/northeastern-researcher-is-just-happy-to-be-reunited-with-axolotls-as-campus-reopens/" class="__link"> 
+        <header class="__header"> 
+         <div class="__column"> 
+          <div class="badge --left ">
+            News 
+          </div> 
+         </div> 
+        </header> 
+        <div class="__graphic ar--16x9"> 
+         <img class="__graphic__img" alt="Northeastern researcher is just happy to be reunited with axolotls as campus reopens" src="/app/uploads/091520_MM_James_Monaghan_008-740x493.jpg" data-src="/app/uploads/091520_MM_James_Monaghan_008-740x493.jpg"> 
+        </div> 
+        <section class="__body"> 
+         <h2 class="__title">Northeastern researcher is just happy to be reunited with axolotls as campus reopens</h2> 
+         <p>James Monaghan, an associate professor of biology, wants to find out how to improve healing therapies for people by studying the axolotl, a peculiar salamander with some of the most powerful abilities on the planet to repair and regrow injured body parts. Six months after the pandemic forced his lab to pause, Monaghan and his team are back at it. “That was the longest I’d gone without interacting with an axolotl since my first day of graduate school,” he says. </p> 
+        </section> </a> 
+      </article> 
+     </div> 
+     <div class="col w--1/3@t"> 
+      <article class="card "> <a href="/the-coronavirus-might-have-hidden-weak-spots-machine-learning-could-help-find-them/" class="__link"> 
+        <header class="__header"> 
+         <div class="__column"> 
+          <div class="badge --left ">
+            News 
+          </div> 
+         </div> 
+        </header> 
+        <div class="__graphic ar--16x9"> 
+         <img class="__graphic__img" alt="The coronavirus might have weak spots. Machine learning could help find them." src="/app/uploads/enzyme_1400-740x493.jpg" data-src="/app/uploads/enzyme_1400-740x493.jpg"> 
+        </div> 
+        <section class="__body"> 
+         <h2 class="__title">The coronavirus might have weak spots. Machine learning could help find them.</h2> 
+         <p>What makes SARS-CoV-2 so infectious? The answer is in its proteins. Mary Jo Ondrechen and Penny Beuning, professors of chemistry and chemical biology, are using machine learning to investigate these proteins and begin to understand how to slow the spread of the virus.</p> 
+        </section> </a> 
+      </article> 
+     </div> 
+    </div> 
+    <p class="ta--c pt--1"><a class="btn --m" href="https://research.northeastern.edu/category/news/">More News</a></p> 
+   </div> 
+  </div> 
+ </section> 
+</main> 
+<footer role="contentinfo"> 
+ <div id="nu__global-footer"> <!-- <div id="nu__utility-nav"><ul><li><a href="//giving.northeastern.edu" title="Make your gift" target="_blank">Make Your Gift</a></li><li><a href="//www.northeastern.edu/president/" title="President Aoun" target="_blank">President Aoun</a></li></ul></div> -->
+  <div class="nu__footer"> 
+   <div> 
+    <div class="campuses"> 
+     <ul role="list">
+      <li class="nearestcampus" role="listitem"><a href="http://www.northeastern.edu/boston" title="Boston campus [will open in new window]" aria-label="Boston campus [will open in new window]" target="_blank" rel="noopener noreferrer">Boston</a></li>
+      <li role="listitem"><a href="http://www.burlington.northeastern.edu/" title="Burlington campus [will open in new window]" aria-label="Burlington campus [will open in new window]" target="_blank" rel="noopener noreferrer">Burlington</a></li>
+      <li role="listitem"><a href="http://www.northeastern.edu/charlotte/" title="Charlotte campus [will open in new window]" aria-label="Charlotte campus [will open in new window]" target="_blank" rel="noopener noreferrer">Charlotte</a></li>
+      <li role="listitem"><a href="https://www.nchlondon.ac.uk/" title="London campus [will open in new window]" aria-label="London campus [will open in new window]" target="_blank" rel="noopener noreferrer">London</a></li>
+      <li role="listitem"><a href="http://www.northeastern.edu/csi/" title="Nahant campus [will open in new window]" aria-label="Nahant campus [will open in new window]" target="_blank" rel="noopener noreferrer">Nahant</a></li>
+      <li role="listitem"><a href="http://roux.northeastern.edu/" title="Portland campus [will open in new window]" aria-label="Portland campus [will open in new window]" target="_blank" rel="noopener noreferrer">Portland</a></li>
+      <li role="listitem"><a href="https://www.northeastern.edu/bayarea" title="San Francisco campus [will open in new window]" aria-label="San Francisco campus [will open in new window]" target="_blank" rel="noopener noreferrer">San Francisco</a></li>
+      <li role="listitem"><a href="http://www.northeastern.edu/seattle/" title="Seattle campus [will open in new window]" aria-label="Seattle campus [will open in new window]" target="_blank" rel="noopener noreferrer">Seattle</a></li>
+      <li role="listitem"><a href="https://www.northeastern.edu/bayarea" title="Silicon Valley campus [will open in new window]" aria-label="Silicon Valley campus [will open in new window]" target="_blank" rel="noopener noreferrer">Silicon Valley</a></li>
+      <li role="listitem"><a href="http://www.northeastern.edu/toronto/" title="Toronto campus [will open in new window]" aria-label="Toronto campus [will open in new window]" target="_blank" rel="noopener noreferrer">Toronto</a></li>
+      <li role="listitem"><a href="http://www.northeastern.edu/vancouver" title="Vancouver campus [will open in new window]" aria-label="Vancouver campus [will open in new window]" target="_blank" rel="noopener noreferrer">Vancouver</a></li>
+     </ul> 
+     <p> <a href="//www.google.com/maps/place/360+Huntington+Ave,+Boston,+MA+02115/@42.339348,-71.0903674,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a185b1286ff:0x2c025c6d4b00cba2!8m2!3d42.339348!4d-71.0881734" title="View our Boston campus in Google Maps" aria-label="View our Boston campus in Google Maps" target="_blank">360 Huntington Ave., Boston, Massachusetts 02115</a> | <a href="tel:6173732000" aria-label="6 1 7. 3 7 3. 2 0 0 0." title="Give us a call">617.373.2000</a> | <a href="tel:6173733768" title="TTY" aria-label="TTY">TTY 617.373.3768</a> | <a href="https://www.northeastern.edu/emergency-information" title="Emergency information" aria-label="Emergency information">Emergency Information</a><br>© 2019 &nbsp;Northeastern University | <a href="http://my.northeastern.edu/" title="Access MyNortheastern" aria-label="Access MyNortheastern" target="_blank">MyNortheastern</a> </p> 
+    </div> 
+    <div class="connect"> 
+     <ul role="list"> 
+      <li role="listitem"><a href="//www.facebook.com/northeastern/" title="Friend us on Facebook" aria-label="Friend us on Facebook" target="_blank">
+        <svg alt="facebook logo" aria-label="facebook logo" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+         <circle class="cls-1" cx="256" cy="256" r="256" /><path d="m301.6 151.2h36.3v-54.2h-51.4c-29.6 0-68.1 19-68.1 74.2v43h-49.1v56.1h49.1v146h58.6v-146h48.8l8.1-56.1h-56.9v-35.7c0-18.4 9-27.3 24.6-27.3z" />
+        </svg></a></li> 
+      <li role="listitem"><a href="//twitter.com/Northeastern" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank">
+        <svg alt="twitter logo" aria-label="twitter logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 510.57 510.57">
+         <path class="cls-1" d="M255.29,1.43C114.3,1.43,0,115.75,0,256.73S114.3,512,255.29,512,510.57,397.72,510.57,256.73,396.28,1.43,255.29,1.43Zm128.6,203.82c.13,2.76.19,5.53.19,8.33,0,85-64.72,183-183,183a182.12,182.12,0,0,1-98.62-28.89,131.78,131.78,0,0,0,15.34.89,129.07,129.07,0,0,0,79.9-27.53,64.43,64.43,0,0,1-60.09-44.7,62.61,62.61,0,0,0,12.1,1.15,63.61,63.61,0,0,0,17-2.25A64.39,64.39,0,0,1,115,232.22c0-.28,0-.55,0-.83a64.25,64.25,0,0,0,29.15,8.06,64.42,64.42,0,0,1-19.92-85.91,182.61,182.61,0,0,0,132.62,67.21,64.38,64.38,0,0,1,109.62-58.68,128.49,128.49,0,0,0,40.86-15.61A64.52,64.52,0,0,1,379,182.05a128.53,128.53,0,0,0,37-10.13A130.11,130.11,0,0,1,383.89,205.25Z" transform="translate(0 -1.43)" />
+        </svg></a></li> 
+      <li role="listitem"><a href="//www.youtube.com/user/Northeastern" title="Check us out on YouTube" aria-label="Check us out on YouTube" target="_blank">
+        <svg alt="youtube logo" aria-label="youtube logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+         <g>
+          <polygon class="cls-1" points="221.28 308.14 308.19 256 221.28 203.86 221.28 308.14" />
+          <path class="cls-1" d="M256,0C114.62,0,0,114.61,0,256S114.62,512,256,512,512,397.38,512,256,397.38,0,256,0ZM395,267.22a476.39,476.39,0,0,1-2.79,48s-2.72,20.44-11,29.42c-10.57,11.81-22.41,11.87-27.85,12.58-38.91,3-97.33,3.07-97.33,3.07s-72.29-.71-94.53-3c-6.19-1.23-20.06-.88-30.65-12.67-8.34-9-11-29.42-11-29.42a476.12,476.12,0,0,1-2.79-48v-22.5a475.73,475.73,0,0,1,2.79-48s2.72-20.45,11-29.46c10.57-11.82,22.41-11.89,27.85-12.56,38.9-3,97.27-3,97.27-3h.12s58.37,0,97.27,3c5.42.67,17.28.74,27.85,12.54,8.34,9,11,29.46,11,29.46a476.39,476.39,0,0,1,2.79,48Z" />
+         </g>
+        </svg></a></li> 
+      <li role="listitem"><a href="https://www.linkedin.com/school/northeastern-university/" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn" target="_blank">
+        <svg alt="linkedin logo" aria-label="linkedin logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 255 255">
+         <path class="cls-1" d="M200.06,188.58V138.81c0-26.67-14.24-39.08-33.22-39.08-15.32,0-22.18,8.43-26,14.34v-12.3H112c.38,8.14,0,86.81,0,86.81h28.85V140.1a19.61,19.61,0,0,1,1-7c2.08-5.18,6.83-10.55,14.79-10.55,10.45,0,14.62,8,14.62,19.63v46.45h28.86ZM81.58,89.92c10.06,0,16.32-6.67,16.32-15-.18-8.51-6.26-15-16.13-15s-16.33,6.47-16.33,15c0,8.34,6.27,15,16,15ZM128.5,256A127.5,127.5,0,1,1,256,128.5,127.51,127.51,0,0,1,128.5,256ZM96,188.58V101.77H67.15v86.81Z" transform="translate(-1 -1)" />
+        </svg></a></li> 
+      <li role="listitem"><a href="https://www.instagram.com/northeastern/" title="See what we are up to on Instagram" aria-label="See what we are up to on Instagram" target="_blank">
+        <svg alt="instagram logo" aria-label="instagram logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 55 55">
+         <g>
+          <path class="cls-1" d="M27.28,18.51a9.18,9.18,0,1,0,9.32,9.18A9.31,9.31,0,0,0,27.28,18.51Zm0,15.12a5.94,5.94,0,1,1,5.94-5.94A5.94,5.94,0,0,1,27.28,33.63Z" />
+          <path class="cls-1" d="M36.87,16A2.16,2.16,0,1,0,39,18.11,2.13,2.13,0,0,0,36.87,16Z" />
+          <path class="cls-1" d="M27.5,0A27.5,27.5,0,1,0,55,27.5,27.5,27.5,0,0,0,27.5,0ZM42,35.25a6.94,6.94,0,0,1-2,5.27,7.38,7.38,0,0,1-5.26,1.89H20a7.62,7.62,0,0,1-5.26-1.89,7.44,7.44,0,0,1-2-5.4V20.27A7.42,7.42,0,0,1,14.59,15a7.42,7.42,0,0,1,5.27-1.89H34.71a7.24,7.24,0,0,1,5.4,2A7.62,7.62,0,0,1,42,20.4Z" />
+         </g>
+        </svg></a></li> 
+      <li role="listitem"><a href="https://www.snapchat.com/add/NortheasternU" title="Engage with us on SnapChat" aria-label="Engage with us on SnapChat" target="_blank">
+        <svg alt="snapchat logo" aria-label="snapchat logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 256.01 256">
+         <path class="cls-1" d="M128.51,0a128,128,0,1,0,128,128A128,128,0,0,0,128.51,0ZM208.1,169.92c-.95,2.23-5.24,5.39-20.25,7.7-1.22.19-1.7,1.79-2.43,5.14-.27,1.22-.54,2.42-.91,3.68a2,2,0,0,1-2.14,1.6h-.19a18.77,18.77,0,0,1-3.36-.42,44.54,44.54,0,0,0-9-1,40.48,40.48,0,0,0-6.51.55c-4.5.75-8.32,3.45-12.37,6.31-5.88,4.16-12,8.45-21.41,8.45-.41,0-.82,0-1.22,0h0c-.26,0-.53,0-.8,0-9.46,0-15.53-4.29-21.4-8.44-4-2.86-7.88-5.57-12.38-6.32a40.48,40.48,0,0,0-6.51-.55,44.33,44.33,0,0,0-9,1,19.77,19.77,0,0,1-3.36.48,2.11,2.11,0,0,1-2.33-1.66c-.38-1.28-.65-2.51-.91-3.7-.67-3.07-1.14-5-2.43-5.16-15-2.32-19.3-5.48-20.25-7.72a2.59,2.59,0,0,1-.23-1,1.69,1.69,0,0,1,1.41-1.76c23.06-3.8,33.4-27.37,33.83-28.37a.3.3,0,0,1,0-.08c1.41-2.86,1.68-5.34.82-7.38-1.58-3.73-6.74-5.37-10.16-6.45-.84-.26-1.63-.51-2.25-.76-6.82-2.7-7.39-5.46-7.12-6.87.46-2.41,3.67-4.08,6.26-4.08a4.49,4.49,0,0,1,1.87.37,19.84,19.84,0,0,0,8.22,2.17c3.29,0,4.73-1.39,4.91-1.57-.09-1.56-.19-3.19-.3-4.87-.68-10.9-1.54-24.45,1.91-32.18,10.34-23.18,32.26-25,38.74-25l2.83,0h.39c6.48,0,28.45,1.8,38.8,25,3.45,7.74,2.6,21.3,1.91,32.19l0,.48c-.1,1.51-.19,3-.27,4.4a6.57,6.57,0,0,0,4.48,1.55h0a20.51,20.51,0,0,0,7.75-2.15,5.84,5.84,0,0,1,2.4-.47,7.39,7.39,0,0,1,2.77.53l0,0c2.31.82,3.83,2.44,3.86,4.14s-1.19,4-7.17,6.36c-.62.24-1.41.49-2.25.76-3.42,1.09-8.58,2.72-10.16,6.45-.86,2-.59,4.52.82,7.38a.3.3,0,0,1,0,.08c.43,1,10.76,24.57,33.83,28.37a1.7,1.7,0,0,1,1.42,1.76A2.77,2.77,0,0,1,208.1,169.92Z" transform="translate(-0.51)" />
+        </svg></a></li> 
+     </ul> 
+     <p><a href="https://www.northeastern.edu/privacy-information" title="Privacy information" aria-label="Privacy information" target="_blank">Privacy Policy</a></p> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</footer> 
+<div class="modal --lg" id="modal_search" tabindex="-1" role="dialog" aria-hidden="true"> 
+ <div class="__screen" data-dismiss="modal"></div> 
+ <div class="__content w--100@d"> 
+  <div class="__body"> 
+   <form action="https://research.northeastern.edu" method="GET"> 
+    <div class="form__enclosed --search --dark --line"> <label for="modalSearch" class="sr--only">Search</label> 
+     <input autocomplete="off" class="fs--d3 fw--300" name="s" type="search" id="modalSearch" aria-describedby="modalSearch" placeholder="Search by keyword"> <button type="submit" class="btn">Go</button> 
+    </div> 
+   </form> 
+  </div> 
+ </div> <button type="button" class="__close" data-dismiss="modal" aria-label="Close"> <i data-feather="x"></i> </button> 
+</div> 
+<script src="https://www.northeastern.edu/nuglobalutils/common/js/navigation-min.js"></script> 
+<script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+              ga('create', 'UA-3620896-1', 'auto');
+              ga('set', 'anonymizeIp', true);
+              ga('send', 'pageview');
+            </script> 
+<script src="/app/themes/kernl-wp/dist/scripts/main_99fb2413.js"></script>
+</body>
+</doc>

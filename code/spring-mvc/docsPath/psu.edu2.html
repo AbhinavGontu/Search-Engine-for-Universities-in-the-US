@@ -1,0 +1,84 @@
+<doc>
+<filename>psu.edu2.html</filename>
+<url>http://www.work.psu.edu/ldap/</url>
+<ip>146.186.157.31</ip>
+<title>Directory Search</title>
+<body>
+<center> 
+ <table width="550" cellpadding="2" cellspacing="0" border="0"> 
+  <tbody>
+   <tr> 
+    <td width="30%" valign="top" align="left"> <a href="https://www.psu.edu/"> <img src="PS_HOR_RGB_2C.png" width="230" border="0" alt="Penn State logo"> </a> </td> 
+    <td width="70%" valign="center" align="center"> <h1>Penn State Directory</h1> </td> 
+   </tr> 
+  </tbody>
+ </table> 
+</center> 
+<br> 
+<center> 
+ <table width="550" cellpadding="2" cellspacing="0" border="1"> 
+  <tbody>
+   <tr> 
+    <td valign="center" align="center"> <a href="#about"> About This Directory </a> </td> 
+    <td valign="center" align="center"> <a href="#how"> How to Search </a> </td> 
+    <td valign="center" align="center"> <a href="#conf"> Confidentiality Requests </a> </td> 
+    <td valign="center" align="center"> <a href="#update"> How To Update Information </a> </td> 
+   </tr> 
+  </tbody>
+ </table> 
+</center> 
+<p> </p>
+<center> 
+ <form name="search" method="post" action="/cgi-bin/ldap/ldap_query.cgi"> 
+  <table width="550" role="presentation"> 
+   <tbody>
+    <tr> 
+     <td valign="top" align="center"> <label for="sn">Last Name: </label> <input type="text" name="sn" id="sn"> </td> 
+     <td valign="top" align="center"> <label for="cn">Full Name: </label> <input type="text" name="cn" id="cn"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="userid">Userid: </label> <input name="uid" type="text" id="userid" placeholder="e.g., xyz5000"> </td> 
+     <td align="center"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="email">E-mail: </label> <input name="mail" type="text" id="email" placeholder="e.g., xyz5000@psu.edu"> </td> 
+    </tr> 
+    <tr> 
+     <td align="center"> <input name="full" value="0" type="radio" checked id="short"> <label for="short">Short Listing</label>  </td> 
+     <td align="center"> <input name="full" value="1" type="radio" id="full"> <label for="full">Full Listing</label>  </td> 
+    </tr> 
+    <tr> 
+     <td align="right"> <input type="submit" name="submit" value="Search"> </td> 
+     <td align="left"> <input type="reset" value="Clear"> </td>
+    </tr> 
+   </tbody>
+  </table> 
+ </form> 
+</center> 
+<center> <a href="https://www.work.psu.edu/cgi-bin/util/ldap_search_form.cgi"> Restricted Search Page </a> [Penn State Access Account Holders Only] 
+ <p> </p>
+ <table width="550" cellpadding="2" cellspacing="0" border="0"> 
+  <tbody>
+   <tr> 
+    <td align="left"> <a name="about"></a> <h2>About This Directory</h2> <p> This electronic directory contains information about students, faculty, and staff at Penn State. In addition to the information commonly found in telephone books, this directory also contains information such as e-mail addresses and links to <a href="https://www.personal.psu.edu/">Personal Web pages,</a> if they exist. In order to use this directory, your browser must support on-line forms. Note that information obtained here is not guaranteed to be accurate. Fields containing information such as e-mail addresses, Web page URLs, and fax numbers are user-editable and may not accurately reflect employee data supplied by Human Resources or student data supplied by the Registrar's Office. Use this data at your own risk. For more information, see <a href="https://identity.psu.edu/services/directory-services/ldap-enterprise-directory-service/">Directory Services</a> in the document, <a href="https://css.its.psu.edu/internet/">Your Guide to Information Technology Services at Penn State.</a> </p> <a name="how"></a> <h2>How to Search</h2> <p> Enter the information of the person you want to look up in the box, choose long or short results and then click on the "Search" button. Do not include any commas, periods etc. Do not use nicknames in the name fields. (ie. "mike" will not work in the "name" fields for "michael"). You can also use the wildcard character "*" to search. (ie. "micha*" will work for "michael"). Matching in ldap is done on a word-by-word basis (ie. "john" does not match "john-son" but "john*" will match "john-son" ). Note that "name" is not restricted to that of an individual. It can also be, in part or full, that of a facility or an organization, e.g. "accounts" would return information on the "Accounts Office." However, not every department has an entry in this database. </p> <a name="conf"></a> <h2>Confidentiality Requests</h2> <p> Some information about students and employees is considered directory information. Directory information may be publicly shared by the institution unless the individual takes formal action to restrict its release. See <a href="https://www.registrar.psu.edu/confidentiality/confidentiality.cfm">The Confidentiality and Security of Student Records</a> and <a href="https://policy.psu.edu/policies/Ad11">Policy AD11: University Policy on Confidentiality of Student Records.</a> <b>If you prefer not to be listed in Penn State's phone directory, you must request removal of your information. </b> </p> 
+     <ul> 
+      <li>If you are an employee, contact your Human Resources Consultant. Human Resources Consultants can initiate a request for confidentiality in Workday, the HR-Payroll system. All requests will then be reviewed by Labor &amp; Employee relations. You can find your Human Resources Consultant by using <a href="https://ohr.psu.edu/content/hr-strategic-partner-and-consultant-directory">this directory</a>. </li>
+      <li>If you are a student, go to the Registrar's Office, show your student ID, and request confidentiality. Requests are normally processed and made effective the day that they are received. Students should be aware that a request for confidentiality may have some undesirable side effects. For example, if a prospective employer were to contact the Registrar's Office to verify a student's status, the employer could not receive confirmation that the student was attending Penn State. Likewise, if a student were to apply for a credit card with a company that wanted to verify that the applicant was a Penn State student, the Registrar's Office again could not confirm the information. </li>
+     </ul> <a name="update"></a> <h2>How To Update Information</h2> Faculty and staff can change their telephone number and address by contacting HR Services at 814-865-1473 or by submitting an inquiry via <a href="https://worklion.psu.edu">Worklion</a>. </td> 
+   </tr> 
+  </tbody>
+ </table> 
+</center> 
+<p> </p>
+<div align="center"> 
+ <hr width="560"> 
+ <table width="550" border="0" cellpadding="0"> 
+  <tbody>
+   <tr> 
+    <td width="25%" align="center" valign="middle"> <a href="https://it.psu.edu/">About the units of</a><br> 
+     <div align="center"> <a href="https://it.psu.edu/"><img src="https://it.psu.edu/profiles/it_psu_edu/themes/it_psu_edu_sub/logo.png" width="147" height="38" alt="ITS graphic" border="0"> </a> 
+     </div> </td> 
+    <td align="center" valign="top"> <font size="-1"><a href="https://www.psu.edu/">The Pennsylvania State University</a> ©2020. All rights reserved.<br> <a href="https://www.psu.edu/legal-statements">Alternative Media - Nondiscrimination Statement</a><br> Inquiries and requests for assistance should be directed to <a href="https://it.psu.edu/get-support">IT Service Desk</a> staff at <a href="mailto:itservicedesk@psu.edu">ITservicedesk@psu.edu</a>. <br> </font><p><font size="-1"> </font> </p></td>
+   </tr>
+  </tbody>
+ </table> 
+</div>
+</body>
+</doc>

@@ -1,0 +1,315 @@
+<doc>
+<filename>uchicago.edu11.html</filename>
+<url>http://dispim.org/</url>
+<ip>52.10.222.212</ip>
+<title>start - diSPIM Wiki</title>
+<body>
+<div id="globalWrapper"> 
+ <div id="column-content"> 
+  <div id="content"> <a name="top" id="top"></a> <a name="dokuwiki__top" id="dokuwiki__top"></a> 
+   <div id="bodyContent"> 
+    <div class="dokuwiki"> <!-- start main content area --> <!-- start rendered wiki content --> <!-- TOC START --> 
+     <div id="dw__toc" class="dw__toc"> 
+      <h3 class="toggle">Table of Contents</h3> 
+      <div> 
+       <ul class="toc"> 
+        <li class="level2">
+         <div class="li">
+          <a href="#the_idea">The Idea</a>
+         </div></li> 
+        <li class="level2">
+         <div class="li">
+          <a href="#the_implementation">The Implementation</a>
+         </div></li> 
+        <li class="level2">
+         <div class="li">
+          <a href="#the_benefits">The Benefits</a>
+         </div></li> 
+        <li class="level2">
+         <div class="li">
+          <a href="#this_wiki">This Wiki</a>
+         </div></li> 
+       </ul> 
+      </div> 
+     </div> <!-- TOC END --> 
+     <h2 class="sectionedit1" id="the_idea">The Idea</h2> 
+     <div class="level2"> 
+      <p> The <em>diSPIM</em> is a flexible and easy-to-use implementation of Selective Plane Illumination Microscopy (<em>SPIM</em>) that allows for dual views (<em>d</em>) of the sample while mounted on an inverted (<em>i</em>) microscope (i.e. the SPIM objectives are upright). The diSPIM was co-developed by the lab of <a href="http://www.nibib.nih.gov/about-nibib/staff/hari-shroff" class="urlextern" title="http://www.nibib.nih.gov/about-nibib/staff/hari-shroff" rel="ugc nofollow">Hari Shroff</a> at NIH/NIBIB and <a href="http://www.asiimaging.com/" class="urlextern" title="http://www.asiimaging.com/" rel="ugc nofollow">Applied Scientific Instrumentation</a> (ASI). SPIM is also referred to as <a href="http://en.wikipedia.org/wiki/Light_sheet_fluorescence_microscopy" class="urlextern" title="http://en.wikipedia.org/wiki/Light_sheet_fluorescence_microscopy" rel="ugc nofollow">light sheet fluorescence microscopy</a> or LSFM because it uses a sheet or plane of light to illuminate the sample perpendicular to the imaging direction. </p> 
+     </div> 
+     <h2 class="sectionedit2" id="the_implementation">The Implementation</h2> 
+     <div class="level2"> 
+      <p> Two objectives are placed at right angles above a sample mounted horizontally in an open dish, each objective 45 degrees from vertical. A light sheet is created from one objective and imaged using the other objective. A stack of images is collected by moving the light sheet through the sample. For some applications the 3D information from a single view or stack is sufficient (iSPIM). For dual-view systems, the role of the two objectives is reversed to collect another stack from a perpendicular direction, and then the two datasets can be computationally merged to yield a 3D dataset with isotropic resolution (the usual problem of poor axial resolution is overcome by information from the other view). The dual-view diSPIM thus has two (usually symmetric) optical paths including two scanners and two cameras. iSPIM is a subset of diSPIM with a single camera and scanner but otherwise nearly identical. </p> 
+      <p> <a href="http://dispim.org/_media/dispim_on_ramm.jpg" class="media" title="dispim_on_ramm.jpg"><img src="http://dispim.org/_media/dispim_on_ramm.jpg?w=250&amp;tok=b21f1b" class="mediaright" alt="" width="250"></a> </p> 
+      <p> The diSPIM “head” can be mounted on various inverted microscopes including ASI's RAMM frame (shown here). diSPIM systems can be obtained from various <a href="http://dispim.org/docs/system_integrators" class="wikilink1" title="docs:system_integrators" data-wiki-id="docs:system_integrators">system integrators</a>. Various open-source and proprietary software packages are available for both data acquisition and data processing. Most of the underlying microscope hardware is identical regardless of the system integrator and software used. </p> 
+      <p> The choice of diSPIM objectives is limited because they must be co-focused without bumping into each other. The most commonly-used objectives for diSPIM are 40x water-dipping objectives with a NA of 0.8 (Nikon CFI Apo 40XW NIR). The Olympus 20x/0.5 objective is another possibility<sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup> as is the Nikon 10x/0.3. ASI and Special Optics have co-developed an <a href="http://asiimaging.com/docs/cleared_tissue_objective" class="urlextern" title="http://asiimaging.com/docs/cleared_tissue_objective" rel="ugc nofollow">objective for cleared tissue</a> that is suitable for the diSPIM and can image cleared tissue up to 5 mm deep in slab form or within a 12 mm spherical envelope. Single-sided systems (iSPIM) have much more flexibility because the illumination objective can be a low-NA long-WD objective. </p> 
+      <p> Most often sCMOS cameras are used for SPIM imaging. There are working diSPIM systems with Hamamatsu Flash4, Andor Zyla, PCO Edge, and Photometrics Prime 95B cameras. </p> 
+      <p> ASI makes a compact fiber-coupled 2D galvo or “scanner” which is an integral part of the system. The original version of the scanner creates the light sheet by fast scanning in one axis and moves the sheet through the sample using the other axis <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>. There is also a scanner version with a cylindrical lens for static light sheet generation available. The output of the excitation laser (or laser launch) simply is fed into the scanner; it is helpful to have a 2×1 optical switch or dual-output laser launch so the excitation can all be steered to the scanner in the active light path. </p> 
+      <p> For applications where <a href="http://dispim.org/hardware/environmental_control" class="wikilink1" title="hardware:environmental_control" data-wiki-id="hardware:environmental_control">environmental control</a> is important, the diSPIM can easily be fitted with an incubator enclosure and appropriate equipment to keep samples alive and happy. </p> 
+      <p> The bottom objective (the inverted microscope) typically has a lower-magnification objective and less expensive camera for locating the sample. Epi-illumination can easily be added. </p> 
+     </div> 
+     <h2 class="sectionedit3" id="the_benefits">The Benefits</h2> 
+     <div class="level2"> 
+      <p> Like other light sheet techniques, diSPIM illuminates only the focus plane and is thus ideal for imaging living cells and organisms because it minimizes photobleaching and phototoxicity effects. Compared with traditional or spinning disk confocal systems, there is ~2x improvement in axial resolution, &gt;10x reduction in photobleaching, and speed comparable to spinning disk. See a more detailed <a href="http://dispim.org/docs/comparison_with_confocal" class="wikilink1" title="docs:comparison_with_confocal" data-wiki-id="docs:comparison_with_confocal">comparison with confocal</a>. </p> 
+      <p> A major advantage of the diSPIM compared many other light sheet implementations is that sample mounting is extremely simple, similar to an inverted microscope. Most commonly, specimens are placed on a 24 x 50 mm coverslip which is held in a special chamber that holds the dipping media. Other light sheet implementations with open mounting do not feature isotropic resolution. See a more detailed <a href="http://dispim.org/docs/comparison_light_sheet_methods" class="wikilink1" title="docs:comparison_light_sheet_methods" data-wiki-id="docs:comparison_light_sheet_methods">comparison of light sheet methods</a>. </p> 
+      <p> Besides being handy to locate samples, the bottom objective can be used for photomanipulation (including optogenetics) or other experimental techniques. It also can be used to provide a third independent view of the sample. This flexibility is also a unique advantage of the diSPIM. </p> 
+      <p> The diSPIM is a modular microscope so many variations and add-ons are possible depending on your specific needs. Various new features and improvements are being explored by NIH researchers, Applied Scientific Instrumentation, and others. See <a href="http://dispim.org/hardware/variations" class="wikilink1" title="hardware:variations" data-wiki-id="hardware:variations">a partial list of variations</a>. </p> 
+      <p> diSPIM systems are commercially available from multiple <a href="http://dispim.org/docs/system_integrators" class="wikilink1" title="docs:system_integrators" data-wiki-id="docs:system_integrators">system integrators</a>. Compared with other commercial light-sheet solutions they are inexpensive and flexible. Compared with custom-built SPIM/LSFM systems they are easy to obtain, use, and maintain. See also a more complete technical <a href="http://dispim.org/docs/comparison_light_sheet_methods" class="wikilink1" title="docs:comparison_light_sheet_methods" data-wiki-id="docs:comparison_light_sheet_methods">comparison of SPIM techniques</a>. </p> 
+     </div> 
+     <h2 class="sectionedit4" id="this_wiki">This Wiki</h2> 
+     <div class="level2"> 
+      <p> This wiki is a place for diSPIM users (and future diSPIM users) to exchange information in a decentralized way. Please join the community and contribute your expertise! </p> 
+      <p> Content is readable by anybody but only registered users can edit to prevent abuse. <a href="http://dispim.org/wiki/register" class="wikilink1" title="wiki:register" data-wiki-id="wiki:register">Register for an account here</a>. Registered users can also sign up to be automatically notified of wiki edits. </p> 
+     </div> 
+     <div class="footnotes"> 
+      <div class="fn">
+       <sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+       <div class="content">
+        According to the manufacturer's drawings the objectives co-focus exactly when they touch, which also implies zero gap between objective and coverslip. However, in practice they co-focus with a gap comparable to the 40x/0.8, with ~200um between the objective bottom and coverslip.
+       </div>
+      </div> 
+      <div class="fn">
+       <sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+       <div class="content">
+        i.e. the diSPIM is a digital light sheet microscope or DLSM in its original implementation
+       </div>
+      </div> 
+     </div> <!-- end rendered wiki content --> 
+     <br> 
+     <div class="catlinks noprint">
+      <p> <span class="bchead">Trace:</span> <span class="bcsep">•</span> <span class="curid"><bdi><a href="http://dispim.org/start" class="breadcrumbs" title="start">start</a></bdi></span> </p>
+     </div> <!-- end main content area --> 
+     <div class="visualClear"></div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="column-one" class="noprint"> 
+  <div class="portlet" id="p-logo"> <a href="http://dispim.org/start" style="background-image:url(http://dispim.org/lib/tpl/monobook/user/logo.png);" accesskey="h" title="[ALT+H]"></a> 
+  </div> 
+  <div id="p-cactions" class="portlet"> 
+   <ul> 
+    <li id="ca-nstab-main"><span class="selected"><a href="http://dispim.org/start" class="wikilink1" title="start" data-wiki-id="start">Article</a></span></li> 
+    <li id="ca-talk"><a href="http://dispim.org/talk/start" class="wikilink2" title="talk:start" rel="nofollow" data-wiki-id="talk:start">Discussion</a></li> 
+    <li id="ca-edit"><a href="http://dispim.org/start?do=edit&amp;rev=1537995101" class="urlextern" accesskey="E" title="[ALT+E]">Show pagesource</a></li> 
+    <li id="ca-history"><a href="http://dispim.org/start?do=revisions" class="urlextern" accesskey="O" title="[ALT+O]">Old revisions</a></li> 
+   </ul> 
+  </div> 
+  <div id="p-personal" class="portlet"> 
+   <div class="pBody"> 
+    <ul> 
+     <li id="pt-login"><a href="http://dispim.org/start?do=login" rel="nofollow">Log In</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="portlet" id="p-x-navigation"> 
+   <h5>Navigation</h5> 
+   <div class="pBody"> 
+    <div class="dokuwiki"> 
+     <div>
+      <div id="nojs_indexmenu_18156714415f8eddbe40333" data-jsajax="" class="indexmenu_nojs"> 
+       <ul class="idx"> 
+        <li class="open">
+         <div class="li">
+          <a href="http://dispim.org/docs/start" class="indexmenu_idx_head">docs</a>
+         </div> 
+         <ul class="idx"> 
+          <li class="closed">
+           <div class="li">
+            <a href="http://dispim.org/docs/manual" class="indexmenu_idx_head">manual</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/comparison_light_sheet_methods" class="wikilink1" title="docs:comparison_light_sheet_methods" data-wiki-id="docs:comparison_light_sheet_methods">comparison_light_sheet_methods</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/comparison_with_confocal" class="wikilink1" title="docs:comparison_with_confocal" data-wiki-id="docs:comparison_with_confocal">comparison_with_confocal</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/gaussian_beam" class="wikilink1" title="docs:gaussian_beam" data-wiki-id="docs:gaussian_beam">gaussian_beam</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/mm_dispim_plugin_user_guide" class="wikilink1" title="docs:mm_dispim_plugin_user_guide" data-wiki-id="docs:mm_dispim_plugin_user_guide">mm_dispim_plugin_user_guide</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/ospim" class="wikilink1" title="docs:ospim" data-wiki-id="docs:ospim">ospim</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/sample_prep" class="wikilink1" title="docs:sample_prep" data-wiki-id="docs:sample_prep">sample_prep</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/system_integrators" class="wikilink1" title="docs:system_integrators" data-wiki-id="docs:system_integrators">system_integrators</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/docs/user_list" class="wikilink1" title="docs:user_list" data-wiki-id="docs:user_list">user_list</a>
+           </div></li> 
+         </ul> </li> 
+        <li class="open">
+         <div class="li">
+          <a href="http://dispim.org/hardware/start" class="indexmenu_idx_head">hardware</a>
+         </div> 
+         <ul class="idx"> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/computer" class="wikilink1" title="hardware:computer" data-wiki-id="hardware:computer">computer</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/controller" class="wikilink1" title="hardware:controller" data-wiki-id="hardware:controller">controller</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/dated" class="wikilink1" title="hardware:dated" data-wiki-id="hardware:dated">dated</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/environmental_control" class="wikilink1" title="hardware:environmental_control" data-wiki-id="hardware:environmental_control">environmental_control</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/lasers" class="wikilink1" title="hardware:lasers" data-wiki-id="hardware:lasers">lasers</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/objectives" class="wikilink1" title="hardware:objectives" data-wiki-id="hardware:objectives">objectives</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/piezos" class="wikilink1" title="hardware:piezos" data-wiki-id="hardware:piezos">piezos</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/sample_holder" class="wikilink1" title="hardware:sample_holder" data-wiki-id="hardware:sample_holder">sample_holder</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/scanner" class="wikilink1" title="hardware:scanner" data-wiki-id="hardware:scanner">scanner</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/troubleshooting" class="wikilink1" title="hardware:troubleshooting" data-wiki-id="hardware:troubleshooting">troubleshooting</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/hardware/variations" class="wikilink1" title="hardware:variations" data-wiki-id="hardware:variations">variations</a>
+           </div></li> 
+         </ul> </li> 
+        <li class="open">
+         <div class="li">
+          <a href="http://dispim.org/media/start" class="indexmenu_idx_head">media</a>
+         </div> 
+         <ul class="idx"> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/media/other" class="wikilink1" title="media:other" data-wiki-id="media:other">other</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/media/presentations" class="wikilink1" title="media:presentations" data-wiki-id="media:presentations">presentations</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/media/publications" class="wikilink1" title="media:publications" data-wiki-id="media:publications">publications</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/media/video_tutorials" class="wikilink1" title="media:video_tutorials" data-wiki-id="media:video_tutorials">video_tutorials</a>
+           </div></li> 
+         </ul> </li> 
+        <li class="open">
+         <div class="li">
+          <a href="http://dispim.org/playground/playground" class="indexmenu_idx_head">playground</a>
+         </div></li> 
+        <li class="open">
+         <div class="li">
+          <a href="http://dispim.org/software/start" class="indexmenu_idx_head">software</a>
+         </div> 
+         <ul class="idx"> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/software/fiji_mvr" class="wikilink1" title="software:fiji_mvr" data-wiki-id="software:fiji_mvr">fiji_mvr</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/software/gpu_dispimfusion" class="wikilink1" title="software:gpu_dispimfusion" data-wiki-id="software:gpu_dispimfusion">gpu_dispimfusion</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/software/imagej_macro" class="wikilink1" title="software:imagej_macro" data-wiki-id="software:imagej_macro">imagej_macro</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/software/labview" class="wikilink1" title="software:labview" data-wiki-id="software:labview">labview</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/software/micro-manager" class="wikilink1" title="software:micro-manager" data-wiki-id="software:micro-manager">micro-manager</a>
+           </div></li> 
+          <li class="level2">
+           <div class="li">
+            <a href="http://dispim.org/software/mipav_generatefusion" class="wikilink1" title="software:mipav_generatefusion" data-wiki-id="software:mipav_generatefusion">mipav_generatefusion</a>
+           </div></li> 
+         </ul></li> 
+       </ul> 
+      </div>
+     </div> 
+     <p> <a href="http://dispim.org/user/start" class="wikilink1" title="user:start" data-wiki-id="user:start">registered users</a> </p> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="portlet" id="p-search"> 
+   <h5><label for="qsearch__in">Search</label></h5> 
+   <div class="pBody"> 
+    <div class="dokuwiki"> 
+     <form action="http://dispim.org/start" accept-charset="utf-8" id="dw__search" name="dw__search"> 
+      <input type="hidden" name="do" value="search"> 
+      <input id="qsearch__in" name="id" type="text" accesskey="f" value=""> 
+      <input type="button" class="searchButton" id="searchGoButton" value="Go" onclick="document.location.href='http://dispim.org/doku.php?id='+document.getElementById('qsearch__in').value;">&nbsp; 
+      <input type="submit" name="fulltext" class="searchButton" value="Search"> 
+     </form> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="qsearch__out" class="ajax_qsearch JSpopup"></div> 
+  <div class="portlet" id="p-tb"> 
+   <h5>Toolbox</h5> 
+   <div class="pBody"> 
+    <div class="dokuwiki"> 
+     <ul> 
+      <li id="tb-whatlinkshere"><a href="http://dispim.org/start?do=backlink">What links here</a></li> 
+      <li id="tb-recent"><a href="http://dispim.org/start?do=recent" rel="nofollow">Recent Changes</a></li> 
+      <li id="tb-upload"><a href="http://dispim.org/start?do=media" rel="nofollow">Media Manager</a></li> 
+      <li id="tb-special"><a href="http://dispim.org/start?do=index" rel="nofollow">Site index</a></li> 
+      <li id="tb-print"><a href="http://dispim.org/start?rev=1537995101&amp;mddo=print" rel="nofollow">Printable version</a></li> 
+      <li id="tb-permanent"><a href="http://dispim.org/start?rev=1537995101" rel="nofollow">Permanent link</a></li> 
+      <li id="tb-cite"><a href="http://dispim.org/start?rev=1537995101&amp;mddo=cite" rel="nofollow">Cite this article</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+ </div> <!-- end of the left (by default at least) column --> 
+ <div class="visualClear"></div> 
+ <div id="footer" class="noprint"> 
+  <div id="footer-buttons"> <a href="http://dispim.org/feed.php" rel="nofollow" title="Recent changes" target="_blank"><img src="http://dispim.org/lib/tpl/monobook/static/img/button-rss.png" width="80" height="15" title="Recent changes" alt="Recent changes" border="0"></a> <a href="https://www.dokuwiki.org/template:monobook" title="monobook template for DokuWiki" target="_blank"><img src="http://dispim.org/lib/tpl/monobook/static/img/button-monobook.png" width="80" height="15" title="monobook template for DokuWiki" alt="monobook template for DokuWiki" border="0"></a> <a href="https://www.dokuwiki.org/" title="DokuWiki" target="_blank"><img src="http://dispim.org/lib/tpl/monobook/static/img/button-dw.png" width="80" height="15" title="DokuWiki" alt="DokuWiki" border="0"></a> <a href="http://validator.w3.org/check/referer" rel="nofollow" title="Valid XHTML" target="_blank"><img src="http://dispim.org/lib/tpl/monobook/static/img/button-xhtml.png" width="80" height="15" title="Valid XHTML" alt="Valid XHTML" border="0"></a> 
+  </div> 
+  <ul id="f-list"> 
+   <li id="lastmod"> <bdi>start.txt</bdi> · Last modified: 2018/09/26 20:51 by <bdi><a href="http://dispim.org/user/jond" class=" interwiki iw_user wikilink1">Jon Daniels</a></bdi><br> </li> 
+   <li id="copyright"> 
+    <div class="dokuwiki">
+     <div class="license">
+      Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" rel="license" class="urlextern">CC Attribution-Share Alike 4.0 International</a></bdi>
+     </div>
+    </div> </li> 
+   <li id="usermod"> <br> </li> 
+  </ul> 
+ </div> 
+</div> <!-- end of global wrap --> <a href="http://dispim.org/start?do=recent" accesskey="r" style="visibility:hidden;" rel="nofollow">&nbsp;</a> 
+<img src="http://dispim.org/lib/exe/taskrunner.php?id=start&amp;1615944357" width="2" height="1" alt="">
+</body>
+</doc>

@@ -1,0 +1,85 @@
+<doc>
+<filename>northern.edu8.html</filename>
+<url>http://apps.northern.edu/flippingbook/missionforward/missionforward/</url>
+<ip>206.176.54.159</ip>
+<title>MissionForward</title>
+<body>
+<script type="text/javascript">
+        if (!!window.addEventListener) {
+            window.addEventListener('load', main);
+        } else {
+            window.attachEvent('onload', main);
+        }
+
+        function main() {
+
+            var baseUrl = window.location.href.split('#')[0].split('index.html')[0];
+            PUBLICATION_NAME = "MissionForward";
+            var publicationConfig = {};
+
+            function PublisherAdapter(options) {
+                LocalHashAdapter.call(this, options);
+            }
+
+            PublisherAdapter.prototype = Object.create(LocalHashAdapter.prototype);
+            PublisherAdapter.constructor = PublisherAdapter;
+                PublisherAdapter.prototype.translatePath = function(url) {
+                url = LocalHashAdapter.prototype.translatePath.call(this, url);
+                return url.replace('.json', '.js');
+            }
+            publicationConfig.adapter = new PublisherAdapter({
+                firstPage: '1',
+                mappings: {
+                    'skins/current/': 'files/assets/html/skin/',
+                    'assets/common/search/searchtext.js': 'files/assets/mobile/search/searchtext.js',
+                    'assets/mobile/search/searchtext.js': 'files/assets/mobile/search/searchtext.js',
+                    'assets/common/embed/page.html': baseUrl + 'files/assets/flash/page.html',
+                    'assets/common/sound/flip/': 'files/html/static/static/sound/',
+                    'assets/common/pages/text/': 'files/assets/common/page-textlayers/',
+                    'assets/common/pages/substrates/': 'files/assets/common/page-html5-substrates/',
+                        'assets/flash/search/': 'files/assets/mobile/search/',
+                    'static/html/embed.js': baseUrl + 'files/html/static/embed.js',
+                    'static/html/': 'files/html/static/',
+                    'static/mobile/': 'files/mobile/',
+                    'assets/': 'files/assets/',
+                    'locales/': 'files/assets/html/locale/'
+                }
+            });
+
+
+
+            var nav = publicationConfig.navigator !== undefined ? publicationConfig.navigator : navigator;
+
+                
+                    var detector = new PublicationDetector(new UserAgentDetector(nav), ['html', 'mobile']);
+                
+            var isRenderable = detector.isRenderable();
+
+            if (!isRenderable) {
+                renderBasic();
+            }
+
+            publicationConfig.callback = function() {
+                return detector.mainVersion();
+            };
+
+
+            publicationConfig.preloader = {
+                backgroundColor: "#E9E9E9",
+                titleColor: "#3E3E3E",
+                titleText: "MissionForward",
+                logoLink: {
+                    image: "skins/current/images/logo.png",
+                    url: "http://flippingbook.com"
+                }
+            };
+
+
+
+            window.publication = new Publication(publicationConfig);
+
+
+    };
+</script>
+</body>
+</doc>

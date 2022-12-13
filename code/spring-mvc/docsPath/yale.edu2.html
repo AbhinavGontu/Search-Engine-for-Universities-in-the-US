@@ -1,0 +1,137 @@
+<doc>
+<filename>yale.edu2.html</filename>
+<url>http://discover.odai.yale.edu/ydc/</url>
+<ip>52.5.140.71</ip>
+<title>Search Home</title>
+<body>
+<header class="hidden-print"> 
+ <div class="container navbar"> <a class="sr-only" href="#content">Skip to content</a> 
+  <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-collapse"> <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i> </button> <a class="navbar-brand lang-en" href="/ydc/">VuFind</a> 
+  </div> 
+  <div class="collapse navbar-collapse" id="header-collapse"> 
+   <nav> 
+    <ul class="nav navbar-nav navbar-right flip"> 
+     <li class="logoutOptions hidden"> <a href="/ydc/MyResearch/Home?redirect=0" class="modal-link" title="Your Account"><i class="fa fa-home"></i> Your Account</a> </li> 
+     <li class="logoutOptions hidden"> <a href="/ydc/MyResearch/Logout" class="modal-link" title="Log Out"><i class="fa fa-sign-out"></i> Log Out</a> </li> 
+     <li id="loginOptions"> <a href="https://secure.its.yale.edu/cas/login?service=https%3A%2F%2Fdiscover.odai.yale.edu%2Fydc%2FMyResearch%2FHome%3Fauth_method%3DCAS"><i class="fa fa-sign-in"></i> Yale CAS Login</a> </li> 
+     <li class="dropdown"> 
+      <form method="post" name="langForm" id="langForm"> 
+       <input type="hidden" name="mylang"> 
+      </form> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a> 
+      <ul class="dropdown-menu"> 
+       <li class="active"><a href="#" onclick="document.langForm.mylang.value='en';document.langForm.submit()">English</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='de';document.langForm.submit()">Deutsch</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='es';document.langForm.submit()">Español</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='fr';document.langForm.submit()">Français</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='it';document.langForm.submit()">Italiano</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='ja';document.langForm.submit()">日本語</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='nl';document.langForm.submit()">Nederlands</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='pt';document.langForm.submit()">Português</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='pt-br';document.langForm.submit()">Português (Brasil)</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='zh-cn';document.langForm.submit()">中文(简体)</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='zh';document.langForm.submit()">中文（繁體）</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='tr';document.langForm.submit()">Türkçe</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='he';document.langForm.submit()">עברית</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='ga';document.langForm.submit()">Gaeilge</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='cy';document.langForm.submit()">Cymraeg</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='el';document.langForm.submit()">Ελληνικά</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='ca';document.langForm.submit()">Català</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='eu';document.langForm.submit()">Euskara</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='ru';document.langForm.submit()">Русский</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='cs';document.langForm.submit()">čeština</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='fi';document.langForm.submit()">Suomi</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='sv';document.langForm.submit()">Svenska</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='pl';document.langForm.submit()">polski</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='da';document.langForm.submit()">Dansk</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='sl';document.langForm.submit()">slovenščina</a></li> 
+       <li><a href="#" onclick="document.langForm.mylang.value='ar';document.langForm.submit()">اللغة العربية</a></li> 
+      </ul> </li> 
+    </ul> 
+   </nav> 
+  </div> 
+ </div> 
+ <div class="container"> 
+  <nav class="nav searchbox hidden-lg hidden-print"> 
+  </nav> 
+ </div> 
+</header> 
+<div role="main" class="main template-dir-search template-name-home"> 
+ <div class="container"> <!--div id="search_cross" class="searchHomeContent"></div--> 
+  <div class="searchHomeContent"> 
+   <div id="search_cross" class="searchHomeContent"></div> 
+   <div class="well well-lg clearfix" role="search"> 
+    <form class="searchForm navbar-form navbar-left flip" method="get" action="/ydc/Search/Results" name="searchForm" autocomplete="off"> 
+     <input class="searchForm_lookfor form-control search-query autocomplete searcher:Solr" type="text" name="lookfor" value=""> <select class="searchForm_type form-control" name="type" data-native-menu="false"> <option value="AllFields">All Fields</option> <option value="Title">Title</option> <option value="Author">Author</option> <option value="Subject">Subject</option> <option value="CallNumber">Call Number</option> <option value="ISN">ISBN/ISSN</option> <option value="tag">Tag</option> </select> <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Find</button> <a href="/ydc/Search/Advanced" class="btn btn-link" rel="nofollow">Advanced</a> 
+    </form> 
+    <script type="text/javascript">$(".searchForm_lookfor:visible").focus()</script> 
+   </div> 
+   <div class="yale-homepage-text"> 
+    <ul> 
+     <li><a href="https://britishart.yale.edu/">Yale Center for British Art</a></li> 
+     <li><a href="https://peabody.yale.edu/">Yale Peabody Museum</a></li> 
+     <li><a href="https://artgallery.yale.edu/">Yale University Art Gallery</a></li> 
+     <li><a href="https://library.yale.edu/">Yale University Library</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div class="row"> 
+   <div class="col-sm-3"> 
+   </div> 
+   <div class="col-sm-3"> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<footer class="hidden-print"> 
+ <div class="container"> 
+  <hr> 
+  <div class="row"> 
+   <div class="col-sm-4"> 
+    <p><strong>Search Options</strong></p> 
+    <ul> 
+     <li><a href="/ydc/Search/History">Search History</a></li> 
+     <li><a href="/ydc/Search/Advanced">Advanced Search</a></li> 
+    </ul> 
+   </div> 
+   <div class="col-sm-4"> 
+    <p><strong>Need Help?</strong></p> 
+    <ul> 
+     <li><a href="/ydc/Help/Home?topic=search" class="help-link" title="Search Tips">Search Tips</a></li> 
+     <li><a href="mailto:dam.support@yale.edu?subject=CCD Help and Suggestions">Help and Suggestions</a></li> 
+    </ul> 
+   </div> 
+   <div class="col-sm-4"> 
+    <p><strong>About</strong></p> 
+    <ul> 
+     <li><a href="/ydc/Help/Home?topic=about" class="help-link" title="About this Service">About this Service</a></li> 
+     <li><a href="/ydc/Help/Home?topic=copyright" class="help-link" title="Permissions and Copyright">Permissions and Copyright</a></li> 
+     <li><a href="https://www.yale.edu/privacy.html">Privacy Policy</a></li> 
+    </ul> 
+   </div> 
+   <div id="footer" class="col-sm-12"> 
+    <div id="footer_logo"></div> 
+    <div id="footer_contact"> 
+     <p>Copyright © 2020 Yale University. All rights reserved.<br> <a href="https://yale.service-now.com/it" target="_blank">IT at Yale</a> - Contact us at <a href="mailto:dam.support@yale.edu">dam.support@yale.edu</a>. </p> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</footer> <!-- MODAL IN CASE WE NEED ONE --> 
+<div id="modal" class="modal fade hidden-print" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true"> 
+ <div class="modal-dialog"> 
+  <div class="modal-content"> 
+   <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+    <h4 id="modalTitle" class="modal-title">&nbsp;</h4> 
+   </div> 
+   <div class="modal-body">
+    Loading...
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="offcanvas-toggle" data-toggle="offcanvas">
+ <i class="fa"></i>
+</div> 
+<div class="offcanvas-overlay" data-toggle="offcanvas"></div>
+</body>
+</doc>

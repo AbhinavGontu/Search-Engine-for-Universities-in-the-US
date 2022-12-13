@@ -1,0 +1,52 @@
+<doc>
+<filename>uiowa.edu1.html</filename>
+<url>http://hris.uiowa.edu</url>
+<ip>128.255.166.44</ip>
+<title>HawkID Login for Employee Self Service</title>
+<body>
+<div class="container"> 
+ <div class="alert-message"></div> 
+ <div class="panel panel-default login-panel"> 
+  <div class="panel-heading">
+   <h1>HawkID Login for Employee Self Service</h1>
+  </div> 
+  <div class="panel-body"> 
+   <div class="brand"> 
+    <img class="img img-null" src="/uip/images/uiowa-dome.png" alt="University of Iowa Logo"> 
+   </div> 
+   <div class="form-container"> 
+    <form name="authForm" method="post" action="/uip/auth.page;jsessionid=35BEB59F1E15C850ACA7059C75297FB2" class="form-signin"> 
+     <div class="form-group"> <label for="hawkid">HawkID</label> 
+      <input name="uip_hawkid" type="text" class="form-control" id="hawkid" value="" autocapitalize="off" autocorrect="off" spellcheck="false" autocomplete="username" required autofocus> 
+     </div> 
+     <div class="form-group"> <label for="password">Password</label> 
+      <input name="uip_password" type="password" class="form-control" id="password" value="" autocomplete="current-password" required> 
+     </div> 
+     <div class="login-error"></div> 
+     <input type="hidden" name="scope" value="workflow.api.hris"> 
+     <input type="hidden" name="redirect_uri" value="https://hris.uiowa.edu/portal18/auth/login.php"> 
+     <input type="hidden" name="client_id" value="hris"> 
+     <input type="hidden" name="response_type" value="code"> 
+     <input type="hidden" name="uip_nonPassportRequestParameters" value="type=web_server"> 
+     <input type="submit" name="uip_action" value=" Log In " class="btn btn-primary login-button"> 
+     <div class="help-text"> <a href="https://apps.its.uiowa.edu/pwtool/reset">Forgot your HawkID password?</a> 
+     </div> 
+    </form> 
+    <script type="text/javascript" language="JavaScript">
+  <!--
+  var focusControl = document.forms["authForm"].elements["uip_hawkid"];
+
+  if (focusControl.type != "hidden") {
+     focusControl.focus();
+  }
+  // -->
+</script> 
+   </div> 
+  </div> 
+ </div> 
+ <div class="custom-text">
+  <p style="text-align: left">Access to Employee Self Service requires a <a href="http://hawkid.uiowa.edu">HawkID</a> and Password. New Employees receive a HawkID and Password shortly after starting employment. Former Employees may access Employee Self Service for 18 months after leaving the University.<br><br><a href="http://its.uiowa.edu/two-step">Two-Step Login</a> is required for Employee Self Service. Visit <a href="http://its.uiowa.edu/two-step">http://its.uiowa.edu/two-step</a> for more information and to enroll your devices in Two-Step.<br><br>Please contact the <a href="https://its.uiowa.edu/contact">ITS Help Desk</a> for assistance, questions, or concerns.</p>
+ </div> 
+</div>
+</body>
+</doc>

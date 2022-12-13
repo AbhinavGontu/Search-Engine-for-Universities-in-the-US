@@ -1,0 +1,56 @@
+<doc>
+<filename>scu.edu6.html</filename>
+<url>http://camino.instructure.com/</url>
+<ip>67.202.30.193</ip>
+<title>SCU Login - Loading Session Information</title>
+<body>
+<header class="site-header uses-core-navigation site-header-with-seal"> 
+ <div class="site-header-text-and-search"> 
+  <div class="container"> 
+   <div class="row"> 
+    <div class="col-xs-12 site-header-titles"> <a href="https://www.scu.edu" class="pull-left seal"><i class="icon-scu"></i><span class="sr-only">Santa Clara University Homepage</span></a> <a href="https://www.scu.edu" class="wordmarks text-trajan"> <span class="scu-primary">Santa Clara University</span><br> <span class="scu-tagline">The Jesuit University in Silicon Valley</span> </a> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</header> 
+<div class="container"> 
+ <h3>SCU Login - Loading Session Information</h3> 
+ <p>Loading login session information from the browser...</p> 
+ <noscript> 
+  <div class="content">
+    Since your browser does not support JavaScript, you must press the Continue button once to proceed. 
+  </div> 
+ </noscript> 
+ <form name="form1" action="/idp/profile/SAML2/Redirect/SSO?execution=e1s1" method="post"> 
+  <input name="shib_idp_ls_exception.shib_idp_session_ss" type="hidden"> 
+  <input name="shib_idp_ls_success.shib_idp_session_ss" type="hidden" value="false"> 
+  <input name="shib_idp_ls_value.shib_idp_session_ss" type="hidden"> 
+  <input name="shib_idp_ls_exception.shib_idp_persistent_ss" type="hidden"> 
+  <input name="shib_idp_ls_success.shib_idp_persistent_ss" type="hidden" value="false"> 
+  <input name="shib_idp_ls_value.shib_idp_persistent_ss" type="hidden"> 
+  <input name="shib_idp_ls_supported" type="hidden"> 
+  <input name="_eventId_proceed" type="hidden"> 
+  <noscript> 
+   <input type="submit" value="Continue"> 
+  </noscript> 
+ </form> 
+ <script>
+<!--
+function doLoad() {
+    var localStorageSupported = isLocalStorageSupported();
+    document.form1["shib_idp_ls_supported"].value = localStorageSupported;
+    if (localStorageSupported) {
+            readLocalStorage("shib_idp_session_ss");
+            readLocalStorage("shib_idp_persistent_ss");
+        }
+    document.form1.submit();
+}
+// -->
+</script> 
+ <footer class="footer"> 
+  <p>© 2020 Santa Clara University.</p> 
+ </footer> 
+</div> <!-- /container -->
+</body>
+</doc>

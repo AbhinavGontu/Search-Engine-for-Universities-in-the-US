@@ -1,0 +1,70 @@
+<doc>
+<filename>unk.edu4.html</filename>
+<url>http://unk.edu/ecampus-request-info</url>
+<ip>144.216.1.51</ip>
+<title>CampusNexus Forms Builder</title>
+<body>
+<!-- Following loads a file that is not touched during an update, thus preserving customer modifications. --> 
+<div w3-include-html="Content/Custom/CustomerIncludes.html" style="display: none"></div> 
+<script type="text/javascript">
+        w3.includeHTML();
+    </script> 
+<div class="container"> 
+ <nav class="navbar navbar-default" ng-controller="navCtrl"> 
+  <div class="container-fluid"> 
+   <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-ng-hide="!isAuth" data-toggle="collapse" data-target="#navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand text-hide" href=""> Logo </a> 
+   </div> 
+   <div id="navbar" class="navbar-collapse collapse"> 
+    <ul class="nav navbar-nav navbar-right"> 
+     <li class="dropdown" data-ng-hide="!isAuth"> <a href="" data-toggle="dropdown" role="button" aria-expanded="false">{{Name}}<span class="caret"></span></a> 
+      <ul class="dropdown-menu" role="menu"> 
+       <li data-ng-hide="!isAuth"><a href="" data-ng-click="logout()">Logout</a></li> 
+      </ul> </li> 
+    </ul> 
+   </div> <!--/.nav-collapse --> 
+  </div> <!--/.container-fluid --> 
+ </nav> <span kendo-notification="notifier" id="notifier"></span> 
+</div> <data-ng-view></data-ng-view> 
+<script type="text/javascript">
+        function focusElement() {
+            var focusableElements;
+            var element;
+
+            focusableElements = document.querySelectorAll(
+                'div#renderedForm input[type="text"], ' +
+                'div#renderedForm input[type="file"], ' +
+                'div#renderedForm input[type="checkbox"], ' +
+                'div#renderedForm [href]:not(.k-pager-nav):not(.disabled), ' +
+                'div#renderedForm [ng-href]:not(.disabled), ' +
+                'div#renderedForm select, ' +
+                'div#renderedForm textarea, ' +
+                'div#renderedForm button:not([disabled]), ' +
+                'div#renderedForm [tabindex]:not([tabindex="-1"]):not(table)'
+            );
+
+            element = focusableElements[0];
+            if (element) {
+                console.log(element);
+                element.focus();
+                return;
+            }
+
+            var firstEnabledButtonGroup = $("div.btn-group:not(.cmc-form-navigation-buttons-none)")[0];
+            var $lastTransitionButton = $(firstEnabledButtonGroup).find("input[type=button]").last();
+            element = $lastTransitionButton[0];
+            if (element) {
+                console.log(element);
+                element.focus();
+                return;
+            }
+
+            focusableElements = document.querySelectorAll('div#sequenceList input[aria-label="Sequence Name"]');
+            element = focusableElements[0];
+            if (element) {
+                console.log(element);
+                element.focus();
+            }
+        }
+    </script>
+</body>
+</doc>

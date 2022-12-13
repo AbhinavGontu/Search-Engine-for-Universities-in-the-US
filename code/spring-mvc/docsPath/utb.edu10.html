@@ -1,0 +1,537 @@
+<doc>
+<filename>utb.edu10.html</filename>
+<url>http://www.txsmartbuy.com/</url>
+<ip>184.28.78.37</ip>
+<title>Welcome to TxSmartBuy</title>
+<body>
+<script>
+		function loadScript(data)
+		{
+			var element;
+
+			if (data.url)
+			{
+				element = '<script src="'+ data.url +'"><\/script>';
+			}
+			else
+			{
+				element = '<script>'+ data.code + '<\/script>';
+			}
+
+			if (data.seo_remove)
+			{
+				document.write(element);
+			}
+			else
+			{
+				document.write('<\/div>'+ element +'<div class="seo-remove">');
+			}
+		}
+	</script> 
+<script>
+			document.write('<div class="seo-remove">');
+			loadScript({
+				url: '/ShopFlow/sc.environment.ssp?lang=&amp;cur='
+			,	seo_remove: true
+			});
+			document.write('<\/div>');
+		</script>
+<script>SC.ENVIRONMENT.seoSupport = true</script> 
+<script>
+			document.write('<div class="seo-remove">');
+			//alert('run code');
+			for (var i = 0; i < SC.LOAD_FILES.length; i++)
+			{
+				loadScript({
+					url: SC.ENVIRONMENT.baseUrl.replace('{{file}}', SC.LOAD_FILES[i])
+				,	seo_remove: true
+				});
+			}
+			document.write('<\/div>');
+		</script> 
+<script>
+			BDQ = {};
+			// MUST wrap code inside div with class "seo-remove" to prevent running server and client side (appears in browser to run twice)
+			document.write('<div class="seo-remove">');
+			loadScript({
+				url: '/ShopFlow/css/current-css.js?t=' + Math.random()
+			,	seo_remove: true
+			});
+			document.write('<\/div>');
+		</script> 
+<script>
+			// cannot place link tag in div with seo-remove class, so instead check jsEnvironment variable to verify running client side
+			if(SC.ENVIRONMENT.jsEnvironment === 'browser')
+			{
+				BDQ.currentTemplatesUrl = BDQ.currentTemplatesUrl.replace('/Web Site Hosting Files/Live Hosting Files','');
+
+				var link = document.createElement('link');
+				link.href = BDQ.currentTemplatesUrl;
+				link.rel = 'stylesheet';
+				document.getElementsByTagName('head')[0].appendChild(link);
+			}
+		</script> 
+<noscript> 
+ <div class="container"> 
+  <div class="alert alert-error alert-noscript"> <strong>Javascript is disabled on your browser.</strong>
+   <br> To view this site, you must enable JavaScript or upgrade to a JavaScript-capable browser. 
+  </div> 
+ </div> 
+</noscript> 
+<div id="main" class="main">
+ <div> <!-- TEMPLATE STARTS: layout_tmpl--> 
+  <div id="layout" class="layout"> <!-- MACRO STARTS: header --> 
+   <header id="site-header" class="site-header"> <!-- MACRO STARTS: headerTopNav --> 
+    <script type="text/javascript">
+        jQuery('.newWindow').click(function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var loc = jQuery(this).attr("href");
+            window.open(loc, '_blank');
+        });
+    </script> 
+    <nav class="navbar navbar-static-top site-header-top-nav"> 
+     <div class="navbar-inner"> 
+      <div class="txcpa-header-logos"> 
+       <div class="span6"> <a href="http://www.comptroller.texas.gov/" title="comptroller.texas.gov"> <img src="/ShopFlow/img/silverseal.png" alt="Texas Comptroller of Public Accounts" class="pull-left silverseal"> </a> 
+        <p class="txcpa-headfoot-text"> <span>Texas Comptroller of Public Accounts</span> <br> <strong>Glenn Hegar</strong> </p> 
+       </div> 
+      </div> 
+      <div class="txcpa-header-main"> 
+       <div class="container"> <!-- TODO: should the following be inside a macro? --> 
+        <div class="txcpa-logo pull-left"> <!--<img src="/ShopFlow/img/TxSmartBuy_SM.png" alt="Texas Smart Buy" />--> <!-- MACRO STARTS: siteLogo --> 
+         <div id="site-logo" class="site-logo content-banner"> <!-- <a href="/" data-touchpoint="home" data-hashtag="#/">  --> <a href="http://www.txsmartbuy.com"> <img itemprop="image" src="/ShopFlow/img/TxSmartBuy_SM.png" alt="Texas Smart Buy"> </a> 
+         </div> <!-- MACRO ENDS: siteLogo --> 
+        </div> 
+        <div id="site-search-container" class="site-search-container pull-left"> <!-- MACRO STARTS: siteSearch --> 
+         <form class="form-search site-search" method="GET" action="/search" aria-label="search"> 
+          <div class="input-prepend input-append"> 
+           <input id="kySearch" aria-label="search_bar" class="input-medium search-query" placeholder="Commodity Code, Supplier Part #, NIGP or Keyword" type="search" name="keywords" autocomplete="on" maxlength="40"> 
+           <div id="searchButtonDiv" class="btn-group"> <button type="submit" class="btn" id="btnSearch" aria-label="search_button"> <i class="icon-search"></i> Search </button> 
+           </div> 
+          </div> 
+         </form> <!-- MACRO ENDS: siteSearch --> 
+        </div> 
+        <ul class="nav pull-right"> <!-- MACRO STARTS: headerProfile --> 
+         <li><a class="btn-txcpa-gray" href="#" data-touchpoint="login">Sign In</a></li> <!-- MACRO ENDS: headerProfile --> 
+         <li id="mini-cart-container" class="dropdown mini-cart-container"> </li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div class="txcpa-header-secondary-main"> 
+       <div class="container"> 
+        <ul class="nav pull-right"> 
+         <li><a href="http://www.txsmartbuy.com/#esbd" class="newWindow">Bid Postings</a></li> 
+         <li class="dropdown"> <a href="#" id="drop-report" role="button" class="dropdown-toggle" data-toggle="dropdown"> Contracts <b class="caret"></b></a> 
+          <ul class="dropdown-menu reports-dropdown" role="menu" aria-labelledby="drop-report"> 
+           <li><a href="http://www.txsmartbuy.com/#contractsearch" class="newWindow">Search Contracts &amp; Contractors</a></li> 
+           <li><a href="http://www.txsmartbuy.com/#contracts" class="newWindow">Browse Contracts</a></li> 
+          </ul> </li> 
+         <li class="dropdown"> <a href="#" id="drop-report2" role="button" class="dropdown-toggle" data-toggle="dropdown"> SPD Applications <b class="caret"></b></a> 
+          <ul class="dropdown-menu reports-dropdown" role="menu" aria-labelledby="drop-report"> 
+           <li><a href="http://www.txsmartbuy.com/#vpts" class="newWindow">VPTS</a></li> 
+           <li><a href="http://www.txsmartbuy.com/#tppd" class="newWindow">TPPD Reporting</a></li> 
+           <li><a href="http://www.txsmartbuy.com/#esbd" class="newWindow">View ESBD Postings</a></li> 
+           <li><a href="http://www.txsmartbuy.com/#purchase_orders" class="newWindow">Look Up P.O.</a></li> 
+           <li><a href="http://852252.shop.netsuite.com/s.nl?c=852252&amp;n=1" class="newWindow">Purchase History</a></li> 
+          </ul> </li> 
+         <li><a href="http://www.txsmartbuy.com/#help" class="newWindow">Help</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </nav> <!-- MACRO ENDS: headerTopNav --> 
+    <div class="container"> 
+     <div data-type="message-placeholder"></div> 
+     <div class="row-fluid site-branding"> 
+      <div class="span3"> <!-- MOBILE --> 
+       <div class="navbar mobile-nav"> 
+        <div class="navbar-inner"> 
+         <div class="container"> 
+          <ul class="nav pull-right"> 
+           <li> <a href="#" data-touchpoint="home" data-hashtag="#cart" class="mini-cart-summary"> <!-- MACRO STARTS: miniCartSummary --> <i class="icon-shopping-cart"></i> <span class="item-count"> <b>0</b> items </span> <!-- MACRO ENDS: miniCartSummary --> </a> </li> 
+          </ul> <a href="#" class="btn btn-navbar" data-toggle="collapse" data-target=".main-nav"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+         </div> 
+        </div> 
+       </div> 
+       <nav class="navbar collapse visible-phone main-nav site-header-main-nav"> 
+        <div class="navbar-inner"> 
+         <ul class="nav"> <!-- MACRO STARTS: navigationTabs --> 
+          <li> <a data-toggle="collapse" data-target=".main-nav" href="/" data-touchpoint="home" data-hashtag="#/"> Home </a> </li> <!-- MACRO ENDS: navigationTabs --> <!-- MACRO STARTS: navigationTabs --> 
+          <li> <a data-toggle="collapse" data-target=".main-nav" href="/search" data-touchpoint="home" data-hashtag="#/search"> Search </a> </li> <!-- MACRO ENDS: navigationTabs --> 
+         </ul> 
+         <ul class="nav mobile-profile"> <!-- MACRO STARTS: headerProfile --> 
+          <li><a class="btn-txcpa-gray" href="#" data-touchpoint="login">Sign In</a></li> <!-- MACRO ENDS: headerProfile --> 
+         </ul> 
+        </div> 
+       </nav> <!-- /MOBILE --> 
+      </div> 
+      <div class="span6 header-banner"> 
+       <div id="banner-header-top" class="content-banner banner-header-top"></div> &nbsp; 
+      </div> 
+     </div> 
+     <div id="banner-header-bottom" class="content-banner banner-header-bottom"></div> <!-- Logout Model stuff --> 
+     <div id="logoutModalContainer" class="modal-container" style="top:-20px; display:none"> 
+      <div id="logoutModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="logoutModal" aria-hidden="false" style="z-index:2000; display:block; position:fixed; left:25%; right:25%; top:25% "> 
+       <div class="modal-header"> <button type="button" class="close" data-action="confirm-logout-dismiss">CLOSE ×</button> 
+        <h3 id="logoutModalLabel">Signing Out</h3> 
+       </div> 
+       <div id="logoutModalBody" class="modal-body">
+         Are you sure you want to Sign Out? 
+       </div> 
+       <div id="logoutFooter" class="modal-footer"> <a href="#" data-touchpoint="logout" class="btn-txcpa" title="Yes, sign out.">Yes</a> <a href="#" data-action="confirm-logout-dismiss" class="btn-txcpa-gray" title="No, do not sign out.">No</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </header> <!-- MACRO ENDS: header --> <!-- Main Content Area --> 
+   <div id="content" class="container content">
+    <div id="home-page" class="home-page"> <!-- TEMPLATE STARTS: home_tmpl--> 
+     <section> 
+      <h1>Welcome to TxSmartBuy</h1> 
+      <div id="home-page-content" class="home-page-content"> 
+       <div id="txcpa-home-main"> 
+        <div class="container">
+         <div id="COVID19" class="" style="margin-bottom:3%;border: 1px solid; display: flex;flex-wrap: wrap;justify-content: space-around;"> 
+          <h2 class="home-headers" style="text-align: center; width: 100%; background-color: red;"> COVID-19 Purchasing Information for Vendors </h2> 
+          <div class="hpBox" style="width: 75%;font-size:17px;margin:0;padding:1%;"> 
+           <p> The State of Texas is seeking critical equipment and capacity for medical providers, such as personal protective equipment (PPE), alternate care sites, and infection-control products. </p> 
+           <p>For more information, visit <a href="https://www.texas.gov/#covid19" target="_blank" class="hp-link">Texas.gov</a> and submit information through the <a href="https://horne2.outsystemsenterprise.com/TexasCOVID19/ProcurementForm.aspx" target="_blank" class="hp-link">vendor enquiry form</a> for vendors/suppliers who may be able to offer products to the state for COVID-19 incident response. When a vendor submits the online form, Texas Division of Emergency Management (TDEM) staff will automatically receive your detailed information for evaluation. </p> 
+           <p> Vendors should also check their contact information is up-to-date on their Centralized Master Bidder List (CMBL) accounts by logging into their <a class="hp-link" href="https://mycpa.cpa.state.tx.us/securitymp1portal/displayLoginUser.do" target="_blank">CMBL account</a>, or contacting CMBL Support at <a class="hp-link" href="mailto:E.CMBL@cpa.texas.gov" target="_blank">E.CMBL@cpa.texas.gov</a> or 512-463-3459. </p> 
+          </div> 
+          <div style="align-self:center;margin:0 auto"> 
+           <img alt="medical icon" src="https://852252.app.netsuite.com/core/media/media.nl?id=17338569&amp;c=852252&amp;h=5c478af0ded2d7fe95b7" id="imageSeven" style="width: 125px;height: 125px;padding: 2%;flex-basis: auto;vertical-align: bottom;"> 
+          </div> 
+          <hr style="width:100%"> 
+          <div style="width: 100%;text-align: center;font-size:15px;"> 
+           <p> <b>Fraud Alert:</b> Learn How to Help the Comptroller’s Office <a class="hp-link" href="https://comptroller.texas.gov/fraud-alert/" target="_blank">Fight Scammers.</a> </p> 
+          </div> 
+         </div> 
+         <div class="row-fluid" id="left_column" style="float: left; width: 49%; max-width: 49%;"> 
+          <div class="row-fluid" style="border: 1px solid; margin-bottom: 3%; width: 99%; max-width: 99%;"> 
+           <h2 class="home-headers" style="text-align: center;"> Cooperative Purchasing Membership </h2> 
+           <div class="row-fluid" id="imageTarget" style="text-align: center;"> 
+            <br> 
+            <img src="https://system.netsuite.com/core/media/media.nl?id=14922317&amp;c=852252&amp;h=e435b5c463b415ca69c0" alt="Texas SmartBuy Membership logo with gray background and tagline Your Texas Trusted Purchasing Partner" id="imageOne"> 
+            <p id="textOne" class="row-fluid"><style>
+    .hpBox {
+        line-height: 22.5px;
+        margin: 1%;
+        text-align: left;
+        font-size: 18px;
+        padding: 2%;
+        line-height: 22.5px;
+        font-family: OpenSansRegular, Helvetica, Arial, sans-serif;
+    }
+    
+    .hpBox p {
+        margin-bottom: 25px;
+    }
+    
+    .hpBox ul {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    
+    .hpBox li {
+        line-height: inherit;
+        margin-left: 5%;
+    }
+    .hp-link{
+		color:#0000ff;
+		font-weight: bold;
+	}
+    .arrow-list {
+        list-style: none;
+    }
+    
+    .arrow-list >li:before {
+        content: "\2192 \0020";
+    }
+</style> <script>
+    try {
+
+        jQuery(document).ready(function(){
+			jQuery('.hp-link').click(function(event) {
+				event.stopImmediatePropagation();
+			});
+			jQuery('#txcpa-home-main h2').css('text-align','center');
+			if(jQuery('#home-page-content').length > 0 ){
+				var leftColumn$ = jQuery('#left_column');
+				var container$ = leftColumn$.parent();
+				var box1$ = jQuery('#left_column > .row-fluid:first-child');
+				var covid19$ = box1$.find('#COVID19');
+				covid19$.find('h2').css('background-color','red');
+				container$.prepend(covid19$.detach());
+			}
+		});
+
+
+    } catch (EX) {
+
+    }
+</script> </p>
+            <div class="hpBox"> 
+             <p> The State of Texas Cooperative Purchasing Program, available for <b>local governments, education, and non-profit assistance organizations,</b> is now called a Texas SmartBuy Membership. </p> 
+             <p> Gain access to purchase from State of Texas contracts and procurement resources by <a target="_self" class="hp-link" href="https://comptroller.texas.gov/purchasing/docs/members/application.pdf"> becoming a purchasing member</a>! Put the state's multi-billion dollar purchasing power to work for you. </p> 
+             <p> To learn more about the Texas SmartBuy Membership Program, search our&nbsp;<a target="_blank" class="hp-link" href="https://comptroller.texas.gov/purchasing/members/">eligibility requirements</a>&nbsp;and&nbsp;<a target="_blank" class="hp-link" href="https://comptroller.texas.gov/purchasing/members/active.php">active member list</a> or&nbsp;<a class="hp-link" href="https://comptroller.texas.gov/purchasing/contact/outreach.php" target="_blank">reach out to us</a>&nbsp;today!</p> 
+            </div>
+            <p></p> 
+           </div> 
+          </div> 
+          <div class="row-fluid" style="border: 1px solid; width: 99%; max-width: 99%; margin-bottom: 3%;"> 
+           <h2 class="home-headers" style="text-align: center;"> Procurement Certifications &amp; Continuing Education </h2> 
+           <div class="row-fluid" id="imageTarget3" style="text-align: center;"> 
+            <br> 
+            <img src="https://system.netsuite.com/core/media/media.nl?id=14922623&amp;c=852252&amp;h=db68c4a9d09283a9ef58" alt="Front doors representing many nations in various shapes, materials and colors" id="imageThree"> 
+            <p id="textThree" class="row-fluid"></p>
+            <div class="hpBox"> 
+             <p>Public procurement professionals, check out the <b>Statewide Procurement Education System,</b> a learning management portal designed to meet your certification and continuing education needs at <a class="hp-link" href="https://spdedu.cpa.texas.gov" target="_blank"><b>https://spdedu.cpa.texas.gov</b></a></p> 
+             <ul class="arrow-list"> 
+              <li>Register for and track Statewide Procurement sponsored certification courses and continuing education classes</li> 
+             </ul> 
+             <p> For assistance, please contact the <a class="hp-link" href="https://comptroller.texas.gov/purchasing/training" target="_blank" rel="noopener"> <b> Training and Policy Development Program </b></a><br> </p> 
+            </div>
+            <p></p> 
+           </div> 
+          </div> 
+          <div class="row-fluid" style="float: left; border: 1px solid; width: 99%; max-width: 99%; margin-bottom: 3%;"> 
+           <h2 class="home-headers" style="text-align: center;"> Stay Connected &amp; Resources </h2> 
+           <div class="row-fluid" id="imageTarget5" style="text-align: center;"> 
+            <br> 
+            <img src="https://system.netsuite.com/core/media/media.nl?id=14922626&amp;c=852252&amp;h=4f3de5a9e5b18e146e24" alt="blue square with the back of a white envelope in the middle. blue square has a red sash on the right corner with the words subscribe in white" id="imageFive"> 
+            <p id="textFive" class="row-fluid"></p>
+            <div class="hpBox"> 
+             <p> Sign up to receive Statewide Procurement Division contract and system updates via the <a id="null" class="hp-link" href="https://public.govdelivery.com/accounts/TXCOMPT/subscriber/new?topic_id=TXCOMPT_80" target="_self"> <b>Procurement email list!</b> </a> </p> 
+             <hr> 
+             <p> Wonder what the state references for best purchasing&nbsp;practices? </p> 
+             <p> Statewide Procurement Division released the <a id="null" class="hp-link" href="https://comptroller.texas.gov/purchasing/publications/procurement-contract.php" target="_blank"> <b>State of Texas Procurement and Contract Management Guide.</b> </a> This guide is a complete rewrite of the State of Texas Procurement Manual and the State of Texas Contract Management Guide, which are merged into one document to provide a holistic approach to government procurement.</p> 
+            </div>
+            <p></p> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="row-fluid" id="right_column" style="float: right; width: 49%; max-width: 49%;"> 
+          <div class="row-fluid" style="border: 1px solid; width: 99%; max-width: 99%; margin-bottom: 3%;"> 
+           <h2 class="home-headers" style="text-align: center;"> View State Contract Solicitations Without Signing In! </h2> 
+           <div class="row-fluid" id="imageTarget2" style="text-align: center;"> 
+            <br> 
+            <img src="https://system.netsuite.com/core/media/media.nl?id=14922320&amp;c=852252&amp;h=d105ae256fbd259ab880" alt="gray blue text of the word BID in capital letters with a white computer mouse and cord coming out of the letter i" id="imageTwo"> 
+            <p id="textTwo" class="row-fluid"></p>
+            <div class="hpBox"> 
+             <p> <b style="background-color: rgb(255, 255, 0);">Vendors: View state contract solicitations without signing in!</b> </p> 
+             <p>View the solicitation bulletin board here:&nbsp;<a class="hp-link" href="http://www.txsmartbuy.com/esbd" target="_blank"><b>Electronic State Business Daily&nbsp;(ESBD)</b></a></p>
+             <p>Watch a brief ESBD tutorial below. Click the video to enlarge.</p> <a class="hp-link" target="_blank" rel="noopener" href="https://system.na1.netsuite.com/core/media/media.nl?id=14922322&amp;c=852252&amp;h=fe2f1a77f9d52d5e2d8e"> <img src="https://system.na1.netsuite.com/core/media/media.nl?id=14922322&amp;c=852252&amp;h=fe2f1a77f9d52d5e2d8e" alt="circle outline with aqua blue play symbol or sideways triangle"> <br> </a> 
+            </div>
+            <p></p> 
+           </div> 
+          </div> 
+          <div class="row-fluid" style="border: 1px solid; max-width: 99%; width: 99%; margin-bottom: 3%;"> 
+           <h2 class="home-headers" style="text-align: center;"> Ready to do Business with the State? </h2> 
+           <div class="row-fluid" id="imageTarget4" style="text-align: center;"> 
+            <br> 
+            <img src="https://system.netsuite.com/core/media/media.nl?id=14922624&amp;c=852252&amp;h=366e65e8b65af50fe612" alt="Front doors representing many nations in various shapes, materials and colors" id="imageFour"> 
+            <p id="textFour" class="row-fluid"></p>
+            <div class="hpBox"> 
+             <p> Vendors, open the door to market share potential in Texas by registering with the state's <a id="null" class="hp-link" href="https://comptroller.texas.gov/purchasing/vendor/" target="_blank"> <b>Centralized Master Bidders List (CMBL).</b> </a> </p> 
+             <p> The CMBL is your entry to state government bidding opportunities by displaying your business information to our state agencies, local governments and other cooperative purchasing partners. </p> 
+            </div>
+            <p></p> 
+           </div> 
+          </div> 
+          <div class="row-fluid" style="border: 1px solid; max-width: 99%; width: 99%; margin-bottom: 3%;"> 
+           <h2 class="home-headers" style="text-align: center;"> Need Assistance? Contact Us! </h2> 
+           <div class="row-fluid" id="imageTarget6" style="text-align: center;"> 
+            <br> 
+            <img src="https://system.netsuite.com/core/media/media.nl?id=14922625&amp;c=852252&amp;h=f9d8e4877ec6e718beed" alt="Help Desk Guy Graphic" id="imageSix"> 
+            <p id="textSix" class="row-fluid"></p>
+            <div class="hpBox"> 
+             <p>Need assistance with your online purchase order or finding items available for purchase?</p> 
+             <p style="margin-bottom:15px">We're here to help you! Contact the Texas SmartBuy Help Desk at <a class="hp-link" target="_self" href="mailto:txsmartbuy@cpa.texas.gov"><b> txsmartbuy@cpa.texas.gov</b> </a> or call the Outreach Team at <b>512-463-3034 Option 1</b>. Find user guides on our <a class="hp-link" target="_blank" href="/help"><b> Help Page</b>.</a></p> 
+             <ul> <span>Ordering tips:</span> 
+              <li>Use Google Chrome as your web browser</li> 
+              <li>Don't use bookmarks, our site updates frequently</li> 
+              <li>Don't save Texas SmartBuy passwords to your browser</li> 
+             </ul> 
+            </div>
+            <p></p> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <script>
+    jQuery(".dropdown-menu li a").click(function () {
+        var selText = jQuery(this).text();
+        jQuery(this).parents('.btn-group').find('.dropdown-toggle').html(selText + ' <span class="caret"></span>');
+    });
+</script> 
+       </div> 
+      </div> 
+     </section> <!-- TEMPLATE ENDS: home_tmpl --> 
+    </div>
+   </div> <!-- / Main Content Area --> 
+   <div id="txcpa-home"></div> <!--<div id="txcpa-home-columns"></div>--> <!-- MACRO STARTS: footer --> 
+   <footer id="site-footer" class="site-footer"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="span4"> 
+       <img src="/ShopFlow/img/silverseal.png" alt="Texas Comptroller of Public Accounts" class="pull-left silverseal"> 
+       <p class="txcpa-headfoot-text"> <span class="no-break">Texas Comptroller of Public Accounts</span><br> <strong class="no-break">Glenn Hegar</strong> </p> 
+       <ul> 
+        <li><a href="http://comptroller.texas.gov">Home</a></li> 
+        <li><a href="http://comptroller.texas.gov/about/contact/">Contact Us</a></li> 
+       </ul> 
+      </div> 
+      <div class="span4"> 
+       <h5>POLICIES</h5> 
+       <ul> 
+        <li><a href="https://comptroller.texas.gov/about/policies/privacy.php" tabindex="-1">Privacy and Security Policy</a></li> 
+        <li><a href="https://comptroller.texas.gov/about/policies/accessibility.php">Accessibility Policy</a></li> 
+        <li><a href="https://comptroller.texas.gov/about/policies/links.php">Link Policy</a></li> 
+        <li><a href="http://texas.gov">Texas.gov</a></li> 
+        <li><a href="https://www.tsl.texas.gov/trail/index.html">Search from the Texas State Library</a></li> 
+        <li><a href="http://www.dhs.gov/geography/texas">Texas Homeland Security</a></li> 
+        <li><a href="https://veterans.portal.texas.gov/">Texas Veterans Portal</a></li> 
+        <li><a href="https://comptroller.texas.gov/about/policies/public-information-act.php">Public Information Act</a></li> 
+        <li><a href="http://www.sos.state.tx.us/">Texas Secretary of State</a></li> 
+        <li> <!-- Button trigger modal --> <button aria-label="common_browsers" style="color: #38afff; padding: 0px; border: none; text-align: left; white-space: normal" class="btn-link" data-toggle="modal" data-target="#comBrow"> HB855 Browser Statement </button> <!-- Modal --> 
+         <div class="modal hide fade" id="comBrow" tabindex="-1" role="dialog" aria-labelledby="commonlyUsedBrowsersModalLabel"> 
+          <div class="modal-header"> 
+           <h4 class="modal-title" id="commonlyUsedBrowsersModalLabel">HB855 Browser Statement</h4> 
+          </div> 
+          <div class="modal-body"> 
+           <p> In 2015, the Texas Legislature passed House Bill 855, which requires state agencies to publish a list of the three most commonly used Web browsers on their websites. The Texas Comptroller’s most commonly used Web browsers are Google Chrome, Microsoft Internet Explorer and Apple Safari.</p> 
+           <p> We support:</p> 
+           <ul> 
+            <li>Chrome</li> 
+            <li>Edge</li> 
+            <li>Firefox</li> 
+            <li>Internet Explorer</li> 
+            <li>Safari</li> 
+           </ul> 
+          </div> 
+          <div class="modal-footer"> <button class="btn btn-default" data-dismiss="modal" aria-hidden="true" aria-label="Close">Close</button> 
+          </div> 
+         </div> </li> 
+       </ul> 
+      </div> 
+      <div class="span4"> 
+       <h5>OTHER STATE SITES</h5> 
+       <ul> 
+        <li><a href="https://www.texas.gov/">texas.gov</a></li> 
+        <li><a href="http://www.tsl.state.tx.us/trail/">Texas Records and Information Locator (TRAIL)</a></li> 
+        <li><a href="http://publishingext.dir.texas.gov/portal/internal/resources/DocumentLibrary/State%20Website%20Linking%20and%20Privacy%20Policy.pdf">State Link Policy</a></li> 
+        <li><a href="http://veterans.portal.texas.gov">Texas Veterans Portal</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="banner-footer" class="content-banner banner-footer"></div> 
+   </footer> <!-- MACRO ENDS: footer --> 
+  </div> <!-- TEMPLATE ENDS: layout_tmpl --> 
+ </div>
+</div> 
+<script>
+			// This minimizes flickery of the 1st page load!
+			jQuery && jQuery('#main').empty();
+		</script> 
+<script>
+			function getUrlParameterByName(name) {
+				name = name.replace(/[[]/, "\[").replace(/[]]/, "\]");
+				var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(window.location.search);
+				return results === null ? "" : decodeURIComponent(results[1].replace(/+/g, " "));
+			}
+
+			var loggedin = false;
+		    var shopFlowLoggedIn = false;
+		    var checkouturl = SC.ENVIRONMENT.siteSettings.touchpoints.checkout;
+		    var lastActivity = new Date();
+		    checkouturl = checkouturl.substring(0,checkouturl.indexOf('/checkout/'));
+		    var intervalid = null;
+		    jQuery(document).on('click','*',function() {
+		        lastActivity = new Date();
+		    });
+
+		    // ping keeps the session cookie active under the secure domain
+		    function ping()
+		    {
+		        jQuery.ajax({
+		            type: "GET",
+		            url: checkouturl + '/ShopFlow/services/address.ss?action=ping',
+		            dataType: 'jsonp',
+		            cache: false,
+		            contentType: 'application/json',
+		            success: function (data) {
+		                if(data.userid>0)
+		                    // user logged in at some point - set loggedin flag
+		                    loggedin = true;
+		                else
+		                    // user not logged in - stop timer from executing
+		                    clearInterval(intervalid);
+
+
+		                var msDay = 60*60*24*1000;
+		                var msMinute = 60*1000;
+		                var minutes = Math.floor((((new Date() - lastActivity)) % msDay) / msMinute)
+
+		                if(data.userid==0 && loggedin || shopFlowLoggedIn && !loggedin || minutes>30)
+		                {
+		                    // user previously logged in and now not logged in - automatically logout user of ShopFlow
+		                    // OR user logged into shopflow and now logged into checkout
+		                    jQuery('#layout').addClass('hide');
+		                    jQuery('#layout').after('<div>Please Wait...</div>');
+
+		                    var tmpHtmlString ='';
+		                    tmpHtmlString	+=	'<div id="indexLogoutModalContainer" class="modal-container" style="top:-20px; display:block">';
+		                    tmpHtmlString	+=	'<div id="indexLogoutModal" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="indexLogoutModal" aria-hidden="false" style="z-index:2000; display:block; position:fixed; left:25%; right:25%; top:25% ">';
+		                    tmpHtmlString	+=	'<div class="modal-header"><h3 id="indexLogoutModalLabel">Signed Out</h3></div>';
+		                    tmpHtmlString	+=	'<div id="indexLogoutModalBody" class="modal-body">You have been signed out due to inactivitiy. Please login again to continue.</div>';
+		                    tmpHtmlString	+=	'<div id="indexLogoutFooter" class="modal-footer"><a href="#" data-touchpoint="login" class="btn-txcpa" title="Proceed to Login">Proceed to Login</a></div>';
+		                    tmpHtmlString	+=	'</div></div>'
+
+		                    jQuery('#main div').html(tmpHtmlString);
+		                    if(! (jQuery('#modal_backdrop').length>0) ) {
+		                    	jQuery('<div id="modal_backdrop" class="modal-backdrop"></div>').appendTo(document.body);
+		                    }
+		                }
+		            },
+		            error: function(data) {}
+		        });
+		    }
+
+		    if(SC && SC.ENVIRONMENT && SC.ENVIRONMENT.jsEnvironment === 'browser')
+		    {
+		        jQuery(document).ready(function ()
+		        {
+					if(getUrlParameterByName('reloadsavedcart')=='t')
+					{
+						jQuery('#layout').addClass('hide');
+						jQuery('#layout').after('<div>Please Wait...Loading Cart...</div>');
+					}
+
+		            jQuery.ajax({
+		                type: "GET",
+		                url: checkouturl + '/ShopFlow/services/address.ss?action=ping',
+		                dataType: 'jsonp',
+		                cache: false,
+		                async: false,
+		                contentType: 'application/json',
+		                success: function (data) {
+		                    if(data.userid>0)
+		                    {
+		                        shopFlowLoggedIn = true;
+		                    }
+		                    shopFlowData = data;
+		                },
+		                error: function(data) {}
+		            });
+
+		            setTimeout(ping, 1000); // call after page loads
+		            intervalid = setInterval(ping, 60000); // call every 60 seconds while on page
+		        });
+		    }
+		</script> <!-- 143 s: 24% #28 cache: 8% #22 --> <!-- Host [ sh20.prod.bos ] App Version [ 2020.2.0.157 ] --> <!-- COMPID [ 852252 ] URL [ /s.nl ] Time [ Fri Mar 12 07:13:32 PST 2021 ] --> <!-- Not logging slowest SQL --> 
+<img id="loadingIndicator" class="global-loading-indicator" src="/ShopFlow/img/ajax-loader.gif" alt="loading indicator" style="z-index: 9999; position: absolute; display: none;">
+</body>
+</doc>

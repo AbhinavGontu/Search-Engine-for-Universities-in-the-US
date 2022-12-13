@@ -1,0 +1,600 @@
+<doc>
+<filename>tc.columbia.edu9.html</filename>
+<url>http://manhattanville.columbia.edu/</url>
+<ip>104.18.18.34</ip>
+<title>Manhattanville | Columbia | Neighbors</title>
+<body>
+<a id="top" href="#main-content" class="visually-hidden focusable skip-link"> Skip to main content </a> 
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas> 
+ <div class="region region-alerts"> 
+  <section id="block-globalalerts-cu-admin1" class="cu_alert_client_global_alerts block clearfix"> 
+   <div id="alerts"></div> 
+  </section> 
+ </div> 
+ <div data-ng-hide="nav.mobileOpen" data-cu-alerts></div> 
+ <header id="header" role="banner" class="" data-ng-class="nav.classes"> 
+  <div id="nav-wrapper" class="hidden-xs" data-ng-if="breakpoint.class != 'mobile'"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-9 col-md-9 col-lg-9"> <a href="https://www.columbia.edu/">Columbia University in the City of New York</a> 
+     </div> <button id="search-icon-wrapper" data-ng-click="search.toggleWidget()" aria-expanded="{{search.widgetOpen}}" class="hidden-xs col-sm-1 col-md-1 col-lg-1 angular-animate ng-trans ng-trans-fade"> 
+      <div class="search-icon"> <span></span> <span></span> <span></span> 
+      </div> <span class="sr-only">Toggle search</span> </button> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="utility-menu" class="container hidden-xs" data-ng-if="utility_menu"> 
+   <ul class="utility-menu-inner utility-inline"> 
+    <li role="presentation" data-ng-repeat="item in utility_menu track by $index" data-ng-class="(global.path == item.url) ? 'active': ''"> <a ng-if="!search.widgetOpen" data-ng-href="{{ ::(item.url != '<nolink>') ? composeUrlLink(item.url) : '#' }}" data-ng-bind-html="item.label"></a> 
+     <ul class="dl-submenu" data-ng-if="item.children"> 
+      <li><a data-ng-href="{{ ::(item.url != '<nolink>') ? item.url : '#' }}" data-ng-class="(global.path == item.url) ? 'active': ''"><span class="bold" data-ng-bind-html="item.label"></span></a></li> 
+      <li data-ng-repeat="second in item.children track by $index"> <a data-ng-href="{{ ::(second.url != '<nolink>') ? second.url : '#' }}" data-ng-class="(global.path == second.url) ? 'active': ''"><span data-ng-bind-html="second.label"></span></a> 
+       <ul class="dl-submenu" data-ng-if="second.children"> 
+        <li><a data-ng-href="{{ ::(second.url != '<nolink>') ? second.url : '#' }}" data-ng-class="(global.path == second.url) ? 'active': ''"><span class="bold" data-ng-bind-html="second.label"></span></a></li> 
+        <li data-ng-repeat="third in second.children track by $index"> <a data-ng-href="{{ ::(third.url != '<nolink>') ? third.url : '#' }}" data-ng-class="(global.path == third.url) ? 'active': ''"><span data-ng-bind-html="third.label"></span></a> </li> 
+       </ul> </li> 
+     </ul> </li> 
+   </ul> 
+  </div> 
+  <div id="branding" class="container" data-ng-class="{ 'menu-empty' : !menu }"> 
+   <div id="nav-icon-wrapper" data-ng-click="nav.mobileToggle()" class="visible-xs-block" data-ng-class="(nav.mobileOpen) ? 'open' : ''"> 
+    <div id="nav-icon"> <span></span> <span></span> <span></span> <span></span> 
+    </div> 
+   </div> 
+   <div id="brand-wrapper" class="col-sm-12"> 
+    <div id="brand-wrapper-inner"> 
+     <div class="visible-xs-block" data-ng-if="breakpoint.class == 'mobile'">
+      <!-- Mobile --> <a data-ng-href="{{ ::global.baseUrl }}"><span class="brand sr-only">Columbia University</span>
+       <svg class="cu-brand" xmlns="http://www.w3.org/2000/svg" width="187" height="14" viewbox="0 0 187 14"> <path d="M2.9 11.7C1.4 10.4 1 8.5 1 7c0-1.1.4-2.9 1.8-4.4 1-1 2.4-1.7 4.9-1.7.6 0 1.5 0 2.3.2.6.1 1.1.2 1.6.2.2 0 .2.1.2.2s0 .3-.1.9V4c0 .2 0 .3-.1.3s-.1-.1-.1-.3c0-.6-.3-1.3-.7-1.6-.6-.4-1.9-.9-3.3-.9-2.1 0-3.1.6-3.7 1.2-1.1 1.1-1.4 2.5-1.4 4.2 0 3.1 2.4 5.9 5.8 5.9 1.2 0 2.1-.1 2.8-.8.3-.4.5-1.1.6-1.3 0-.2.1-.2.2-.2s.1.1.1.2-.2 1.5-.4 2c-.1.3-.1.3-.4.5-.6.3-1.9.4-2.9.4-2.4-.1-4-.7-5.3-1.9zm16.2-8.9c3.2 0 5.6 1.9 5.6 5.1 0 3-2.3 5.6-5.6 5.6-3.9 0-5.5-2.9-5.5-5.3-.1-2.3 1.6-5.4 5.5-5.4zm.3 10.1c1.3 0 3.8-.7 3.8-4.6 0-3.3-2-5-4.2-5-2.4 0-4 1.5-4 4.4 0 3.2 1.9 5.2 4.4 5.2zm9.5-3.6c0 2 0 2.8.3 3.1.2.2.8.3 1.9.3.7 0 1.4 0 1.7-.4.2-.2.3-.5.3-.8 0-.1.1-.2.1-.2.1 0 .1.1.1.2s-.1 1-.2 1.4c-.1.3-.1.4-.9.4h-5.3c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.6-.8h-.5l-.1-.1c-.1-.1 0-.1.2-.1h3.2c.1 0 .1 0 .1.1l-.1.1h-.5c-.4.1-.4.3-.5.8v5.3zm6.5-2.4V4c0-.4-.1-.7-.6-.8h-.5l-.1-.1c0-.1.1-.1.2-.1h3c.2 0 .2 0 .2.1l-.1.1h-.4c-.4.1-.4.3-.5.8v4.8c0 2 .4 2.8 1 3.3.7.6 1.3.7 2.1.7.9 0 1.7-.4 2.2-1 .7-.8.8-1.9.8-3.3V4s-.1-.7-.6-.8h-.5c-.1 0-.1-.1-.1-.1.1-.1.2-.1.4-.1h2.7c.2 0 .2 0 .2.1 0 0 0 .1-.1.1h-.4c-.4.1-.5.3-.5.8v4.4c0 1.5-.2 3.1-1.3 4.1-1 .9-2.1 1-2.9 1-.5 0-1.9 0-2.9-1-.7-.6-1.2-1.6-1.2-3.6v-2zm22.7 4.6c0 .5.1 1.2.7 1.4.4.1.8.1.9.1.1 0 .1 0 .1.1s-.1.1-.3.1c-.3 0-1.9 0-2.4-.1-.3 0-.4-.1-.4-.1s0-.1.1-.1.1-.2.1-.5l-.7-6.9-3.4 6.9c-.3.6-.4.7-.5.7s-.2-.1-.5-.6c-.4-.7-1.3-2.4-1.6-3.2-.4-.9-1.6-3.2-1.8-3.7h-.1l-.5 6.1v.7c0 .2.1.3.3.4.2.1.4.1.5.1 0 0 .1 0 .1.1s-.1.1-.3.1h-2.5c-.1 0-.2 0-.2-.1l.1-.1h.4c.5-.1.5-.6.5-1.1l1-8.9c0-.1.1-.2.2-.2s.2 0 .3.2l4.3 8.5L56.7 3c.1-.1.1-.2.2-.2s.2.1.2.4l1 8.3zm4.3-4.6V4c0-.5-.1-.7-.6-.8h-.5s-.1 0-.1-.1 0-.1.2-.1h3.2c2.4 0 3 1.4 3 2.1 0 1.1-.7 1.7-1.4 2.4 1.1.3 2.5 1.3 2.5 2.8 0 1.5-1.1 3-3.5 3h-3.5c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3 0 .3-.4.4-.8.1-.6.1-1.6.1-2.9V6.9zm1.2.3c0 .1 0 .1.1.1s.3.1.9.1c.8 0 1.1 0 1.4-.4.3-.3.5-.8.5-1.5 0-1-.6-2.2-2-2.2-.2 0-.5 0-.7.1-.1 0-.2.1-.2.1v3.7zm0 1.5v2.9c0 .7 0 .8.5 1 .4.2 1 .2 1.2.2.9 0 2.1-.4 2.1-2.1 0-.6-.2-1.8-1.3-2.5-.5-.3-.9-.3-1.3-.4h-1.1s-.1 0-.1.1v.8zm9.4.6c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.4-.7h-.4c-.1 0-.1-.1-.1-.1-.1-.2-.1-.2.1-.2h2.8c.2 0 .3 0 .3.1l-.1.1h-.4c-.4.1-.5.3-.5.8v5.3zm7.1-6.1c.2-.4.2-.5.3-.5.1 0 .2.2.3.5.3.6 2.5 6.2 3.4 8.3.5 1.2.9 1.4 1.2 1.5.2.1.4.1.6.1.1 0 .2 0 .2.1s-.2.1-.3.1h-2.2c-.3 0-.5 0-.5-.1s0-.1.1-.1.2-.1.1-.4L82 9.5c0-.1 0-.1-.1-.1h-3.2c-.1 0-.1 0-.1.1l-.8 2.2c-.1.3-.2.7-.2.9 0 .3.2.4.5.4h.1c.1 0 .1 0 .1.1s-.1.1-.2.1h-2.7c-.2 0-.3 0-.3-.1s.1-.1.1-.1h.4c.6-.1.9-.6 1.2-1.2l3.3-8.6zm1.5 5.7c.1 0 .1 0 0 0l-1.3-3.8c-.1-.2-.2-.2-.2 0l-1.3 3.7v.1h2.8zm11-3.1V2.3c0-.5-.2-.8-.7-.9h-.5c-.1 0-.1 0-.1-.1s.1-.1.3-.1H95c.2 0 .3 0 .3.1s-.1.1-.1.1h-.4c-.7.1-.8.4-.8.9V8c0 2.3.5 3.3 1.2 4 .8.7 1.5.9 2.4.9 1 0 1.9-.5 2.5-1.2.7-.9.9-2.3.9-3.9V2.3c0-.5-.2-.8-.7-.9h-.5c-.1 0-.1 0-.1-.1s.1-.1.3-.1h3c.2 0 .3 0 .3.1s-.1.1-.1.1h-.4c-.4.1-.6.4-.6.9v5.2c0 1.7-.2 3.6-1.5 4.8-1.2 1-2.4 1.2-3.3 1.2-.5 0-2.2-.1-3.3-1.1-.8-.8-1.4-1.9-1.4-4.2V5.8zm13.9 5.6c0 1.1.2 1.5.5 1.6.3.1.6.1.7.1.1 0 .1 0 .1.1s-.1.1-.3.1h-2.9c-.1 0-.2 0-.2-.1s0-.1.1-.1.4 0 .6-.1c.4-.1.4-.5.4-1.7V3.5c0-.5.1-.7.2-.7.2 0 .4.3.5.4.2.2 2.3 2.4 4.4 4.6 1.4 1.4 2.9 3.1 3.3 3.5l.1-6.8c0-.9-.1-1.2-.5-1.3-.3 0-.6-.1-.7-.1-.1 0-.1-.1-.1-.1 0-.1.1-.1.3-.1h2.7c.1 0 .3 0 .3.1 0 0-.1.1-.2.1h-.3c-.5.1-.5.4-.5 1.2v8c0 .9 0 1-.1 1s-.3-.1-1.1-.8c-.1-.1-2.2-2.1-3.7-3.7-1.6-1.7-3.2-3.4-3.6-3.9v6.5zm13.7-2.1c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.4-.7h-.4c-.1 0-.1-.1-.1-.1 0-.1.1-.1.2-.1h2.8c.2 0 .2 0 .2.1l-.1.1h-.4c-.4.1-.5.3-.5.8v5.2zm8 2.2c.8-1.8 2.7-6.5 3-7.4.1-.2.1-.4.1-.5 0-.1 0-.2-.2-.3h-.5c-.1 0-.2 0-.2-.1s.1-.1.3-.1h2.5c.1 0 .2 0 .2.1s0 .1-.2.1c-.1 0-.4 0-.7.2-.2.1-.4.3-.8 1.2-.2.4-.8 2-1.6 3.7-.9 2-1.5 3.5-1.8 4.1-.4.8-.5 1-.6 1-.2 0-.3-.2-.5-.8l-3.5-8.3c-.3-.8-.5-.9-1-1h-.5c-.1 0-.1-.1-.1-.1 0-.1.1-.1.4-.1h2.9c.3 0 .4 0 .4.1s0 .1-.1.1c-.2 0-.4 0-.5.1-.1.1-.2.1-.2.2 0 .2.2.6.4 1.1l2.8 6.7zm7.4-4.6V4c0-.5-.1-.7-.6-.8h-.5l-.1-.1c0-.1.1-.1.2-.1h5c.3 0 .5-.1.6-.1.1 0 .1-.1.2-.1l.1.1c0 .1-.1.3-.1.6 0 .1 0 .7-.1.9 0 .1-.1.1-.1.1-.1 0-.1-.1-.1-.2s0-.3-.1-.5-.2-.3-1-.4h-2c-.1 0-.1 0-.1.1v3.7c0 .1 0 .1.1.1h2.4c.3 0 .5 0 .7-.2l.2-.2s.1 0 .1.1-.1.3-.1.8c0 .3-.1.8-.1.9 0 .1 0 .3-.1.3s-.1 0-.1-.1 0-.3-.1-.4c0-.2-.2-.4-.7-.4-.4 0-1.9-.1-2.1-.1-.1 0-.1 0-.1.1v3.4c0 .9.3 1.1 1.7 1.1.4 0 1 0 1.4-.1.4-.2.6-.4.6-.9 0-.2.1-.2.1-.2s.1.1.1.2-.1 1-.2 1.3c-.1.4-.2.4-.8.4h-5c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3 0 .3-.3.4-.7.1-.6.1-1.6.1-2.9V6.9zm8.8 0V4c0-.5-.1-.7-.6-.8h-.5l-.1-.1c0-.1.1-.1.2-.1h3.5c.9 0 1.9.1 2.6.6.4.3 1 .9 1 1.9 0 1-.4 2-1.7 3.1 1.2 1.4 2.1 2.7 2.9 3.5.8.8 1.2.9 1.6.9h.5c.1 0 .1.1.1.1 0 .1-.1.1-.3.1h-.9c-.8 0-1.2-.1-1.5-.3-.6-.3-1.1-1-1.9-2-.6-.7-1.2-1.6-1.5-2-.1-.1-.1-.1-.2-.1h-1.8c-.1 0-.1 0-.1.1v.3c0 1.3 0 2.4.1 2.9 0 .4.1.7.6.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.1c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V6.9zm1.2 1.2c0 .1 0 .1.1.2.2.1.9.2 1.6.2.3 0 .7 0 1.1-.2.5-.3.8-1 .8-2.1 0-1.7-.9-2.7-2.4-2.7-.4 0-.9 0-1 .1-.1 0-.1.1-.1.2v4.3z" /> <path d="M153.8 13.1c-.2-.1-.2-.1-.2-.5 0-.7.1-1.2.1-1.4 0-.1 0-.2.1-.2s.1 0 .1.2v.5c.2 1 1.3 1.3 2.2 1.3 1.4 0 2.1-.8 2.1-1.8s-.5-1.4-1.8-2.4l-.6-.5c-1.5-1.1-2-2-2-2.9 0-1.6 1.3-2.6 3.1-2.6.6 0 1.1.1 1.5.2h.6c.1 0 .1 0 .1.1s-.1.5-.1 1.4c0 .2 0 .3-.1.3s-.1-.1-.1-.2c0-.2-.1-.5-.2-.7-.1-.2-.6-.7-1.8-.7-1 0-1.9.5-1.9 1.5 0 .9.4 1.4 1.8 2.3l.4.3c1.7 1.2 2.3 2.1 2.3 3.3 0 .8-.3 1.7-1.3 2.3-.6.4-1.5.5-2.2.5-.7 0-1.5-.1-2.1-.3zm10.6-3.8c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.4-.7h-.4c-.1 0-.1-.1-.1-.1 0-.1.1-.1.2-.1h2.8c.2 0 .2 0 .2.1l-.1.1h-.4c-.4.1-.5.3-.5.8v5.2zm8 0c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.2 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.4-.3.4-.7.1-.6.1-1.6.1-2.9V3.6h-2c-.9 0-1.2.1-1.4.4-.2.2-.2.3-.2.4 0 .1-.1.1-.1.1s-.1 0-.1-.1.3-1.4.3-1.5c0-.1.1-.3.1-.3.1 0 .2.1.6.2.4 0 .9.1 1.1.1h5.3c.5 0 .8 0 1-.1.2 0 .3-.1.4-.1.1 0 .1.1.1.2v1.6c0 .1-.1.2-.1.2s-.1 0-.1-.2v-.1c0-.4-.4-.7-1.7-.8h-1.8v5.7zm8.6.4c0-.7-.1-1-.3-1.4-.1-.2-2-3.2-2.5-4-.3-.5-.7-.8-.9-1-.2-.1-.5-.2-.6-.2-.1 0-.1-.1-.1-.1s0-.1.2-.1h2.6c.2 0 .2 0 .2.1 0 0-.1.1-.2.1s-.2.1-.2.2c0 .2.1.4.2.5L182 8c.3-.6 2-3.5 2.3-3.9.2-.3.2-.5.2-.7 0-.2-.1-.3-.2-.4-.3.2-.3.1-.3 0 0 0 .1-.1.2-.1h2.4c.1 0 .2 0 .2.1s-.1.1-.2.1c-.2 0-.4 0-.7.2-.3.2-.4.3-.7.7-.5.5-2.4 3.7-2.7 4.3-.2.5-.2.9-.2 1.4v2.6c0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.2 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.4-.3.4-.7V9.7z" /> 
+       </svg></a> 
+     </div> 
+     <div class="hidden-xs">
+      <!-- Desktop --> 
+      <div id="branded-site-name" class="with-logo"> 
+       <div id="site-name">
+        <a href="/"><img src="https://neighbors.columbia.edu/sites/default/files/logo/007-04521_Neighbors_MOT_DS_Flat-07%20%283%29.jpg" alt="Columbia | Neighbors logo" class="img-responsive" width="500" height="230"><span class="sr-only">Columbia | Neighbors</span></a>
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> <button id="search-icon-wrapper-mobile" data-ng-click="search.toggleWidget()" class="visible-xs-block"> 
+    <div class="search-icon"> <span></span> <span></span> <span></span> 
+    </div> <span class="sr-only">Toggle search</span> </button> 
+  </div> 
+  <div id="search-widget-wrapper" data-ng-controller="searchWidget" data-ng-cloak> 
+   <div class="container"> 
+    <div id="search-widget" class="angular-animate ng-trans ng-trans-fade-up" data-ng-show="search.widgetOpen"> 
+     <form data-ng-submit="search.submit()"> 
+      <div class="form-group clearfix"> <button id="search-widget-submit" class="hidden-xs pull-left" type="submit" aria-label="Submit keywords"> 
+        <div class="search-icon"> <span></span> <span></span> <span></span> 
+        </div> <span class="sr-only">Submit keywords</span> </button> <label for="site-search-keywords" class="sr-only">Search the site</label> 
+       <input type="text" id="site-search-keywords" data-ng-model="search.keywords" data-ng-model-options="{ debounce: 100 }" data-ng-keyup="gsa.keyUp($event)" class="form-control input-lg" placeholder="Search the site" aria-label="Search the site" autocomplete="off"> 
+      </div> 
+     </form> 
+    </div> 
+   </div> 
+  </div> 
+  <nav id="mobile-nav" class="angular-animate ng-trans ng-trans-fade-down ng-hide nojs-hide" data-ng-if="breakpoint.class == 'mobile'" data-ng-show="nav.mobileOpen" data-ng-init="initMobileNav()" data-ng-cloak> 
+   <div id="mobile-nav-container" class="dl-menuwrapper"> 
+    <ul class="dl-menu dl-menuopen"> 
+     <li data-ng-repeat="item in menu track by $index" data-ng-class="($last) ? 'last' : ''"> <a data-ng-href="{{ ::(item.url != '<nolink>') ? item.url : '#' }}" data-ng-class="(global.path == item.url) ? 'active': ''"><span data-ng-bind-html="item.label"></span></a> 
+      <ul class="dl-submenu" data-ng-if="item.children"> 
+       <li><a data-ng-href="{{ ::(item.url != '<nolink>') ? item.url : '#' }}" data-ng-class="(global.path == item.url) ? 'active': ''"><span class="bold" data-ng-bind-html="item.label"></span></a></li> 
+       <li data-ng-repeat="second in item.children track by $index"> <a data-ng-href="{{ ::(second.url != '<nolink>') ? second.url : '#' }}" data-ng-class="(global.path == second.url) ? 'active': ''"><span data-ng-bind-html="second.label"></span></a> 
+        <ul class="dl-submenu" data-ng-if="second.children"> 
+         <li><a data-ng-href="{{ ::(second.url != '<nolink>') ? second.url : '#' }}" data-ng-class="(global.path == second.url) ? 'active': ''"><span class="bold" data-ng-bind-html="second.label"></span></a></li> 
+         <li data-ng-repeat="third in second.children track by $index"> <a data-ng-href="{{ ::(third.url != '<nolink>') ? third.url : '#' }}" data-ng-class="(global.path == third.url) ? 'active': ''"><span data-ng-bind-html="third.label"></span></a> </li> 
+        </ul> </li> 
+      </ul> </li> 
+     <li class="menu-cu-item" data-ng-repeat="item in utility_menu track by $index" data-ng-class="($last) ? 'last' : ''" ng-switch on="item.url || 'null'"> <span ng-switch-when="null" data-ng-href="{{ ::(item.url != '<nolink>') ? item.url : '#' }}" data-ng-class="(global.path == item.url) ? 'active': ''"><span data-ng-bind-html="item.label"></span></span> <a ng-switch-default data-ng-href="{{ ::(item.url != '<nolink>') ? item.url : '#' }}" data-ng-class="(global.path == item.url) ? 'active': ''"><span data-ng-bind-html="item.label"></span></a> </li> 
+    </ul> 
+   </div> 
+  </nav> 
+ </header> 
+ <nav id="site-nav-wrapper" hover-intent-out="::nav.focus(-1)" hover-intent-delay="250" class=" hidden-xs"> 
+  <div class="region region-navigation"> 
+   <nav role="navigation" aria-labelledby="block-cu-admin1-mainnavigation-menu" id="block-cu-admin1-mainnavigation" class="menu_block main"> 
+    <h2 class="visually-hidden" id="block-cu-admin1-mainnavigation-menu">Main navigation expanded</h2> 
+    <script>var cu_site_menu = [ { "label": "Resources", "url": "/content/resources"  },  { "label": "Manhattanville Campus", "url": "/content/manhattanville" , "children": [  {"label": "Explore the Campus", "url": "/content/explore-campus"  },  {"label": "History", "url": "/content/history"  },  {"label": "Community Commitments", "url": "/content/community-commitments"  },  {"label": "Campus Construction and Opportunities", "url": "/content/construction-updates-and-opportunities"  }  ]  },  { "label": "Local Events", "url": "/events"  },  { "label": "News", "url": "/news"  },  { "label": "Shop &amp; Dine Local", "url": "/content/columbia-neighbors-shop-dine-local"  },  { "label": "COVID-19 Vaccine Resources", "url": "/content/covid-19-vaccine-resources"  }  ];</script> 
+    <div id="site-nav" class="container" ng-if="search.showMenuOnSearch"> 
+     <ul class="nav nav-justified"> 
+      <li class="menu-item" id="sitenav-1"> <a href="/content/resources" class="clearfix" hover-intent="::nav.focus('sitenav-1')" hover-intent-delay="100"><strong>Resources</strong></a> </li> 
+      <li class="menu-item active-trail" id="sitenav-2" ng-class="{ active: (nav.focusedTree == 'sitenav-2') }"> <a href="/content/manhattanville" class="clearfix" hover-intent="::nav.focus('sitenav-2')" hover-intent-delay="100" ng-keydown="$event.keyCode == 9 &amp;&amp; !$event.shiftKey &amp;&amp; nav.focus('sitenav-2', 1)"><strong>Manhattanville Campus</strong><span class="ss-icon ss-dropdown"></span></a> </li> 
+      <li class="menu-item" id="sitenav-3"> <a href="/events" class="clearfix" hover-intent="::nav.focus('sitenav-3')" hover-intent-delay="100"><strong>Local Events</strong></a> </li> 
+      <li class="menu-item" id="sitenav-4"> <a href="/news" class="clearfix" hover-intent="::nav.focus('sitenav-4')" hover-intent-delay="100"><strong>News</strong></a> </li> 
+      <li class="menu-item" id="sitenav-5"> <a href="/content/columbia-neighbors-shop-dine-local" class="clearfix" hover-intent="::nav.focus('sitenav-5')" hover-intent-delay="100"><strong>Shop &amp; Dine Local</strong></a> </li> 
+      <li class="menu-item" id="sitenav-6"> <a href="/content/covid-19-vaccine-resources" class="clearfix" hover-intent="::nav.focus('sitenav-6')" hover-intent-delay="100"><strong>COVID-19 Vaccine Resources</strong></a> </li> 
+     </ul> 
+    </div> 
+    <div id="site-nav-second" ng-style="{ 'top': nav.secondOffset }" class="nojs-hide" ng-cloak> 
+     <div id="sitenav-2-second" class="menu-second angular-animate ng-trans ng-trans-fade-up ng-hide" ng-show="nav.focusedTree == 'sitenav-2'"> 
+      <div class="container"> 
+       <ul class="menu"> 
+        <li class="menu-item"> <a href="/content/explore-campus" data-drupal-link-system-path="node/586">Explore the Campus</a> </li> 
+        <li class="menu-item"> <a href="/content/history" data-drupal-link-system-path="node/585">History</a> </li> 
+        <li class="menu-item"> <a href="/content/community-commitments" data-drupal-link-system-path="node/592">Community Commitments</a> </li> 
+        <li class="menu-item"> <a href="/content/construction-updates-and-opportunities" data-drupal-link-system-path="node/584">Campus Construction and Opportunities</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </nav> 
+  </div> 
+ </nav> 
+ <section id="search-results" data-ng-controller="searchResults" data-ng-if="global.controller == 'search'" data-ng-include="search.template" autoscroll data-ng-cloak></section> 
+ <main role="main" class="main-container"> 
+  <div class="container visible-xs-block"> 
+   <div id="header-xs" class="row"> 
+    <div class="col-sm-12"> 
+     <div id="site-name-mobile" data-ng-cloak> <a data-ng-href="{{ ::global.baseUrl }}"> <img src="https://neighbors.columbia.edu/sites/default/files/logo/007-04521_Neighbors_MOT_DS_Flat-07%20%283%29.jpg" width="500" height="230" alt="Columbia | Neighbors logo" class="img-responsive"> <span class="sr-only">Columbia | Neighbors</span> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="highlighted"> 
+   <div class="region region-highlighted"> 
+    <div id="messages"> 
+     <div data-drupal-messages-fallback class="hidden"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="main"> 
+   <section> 
+    <div class="layout-content" id="main-content" tabindex="-1"> 
+     <div class="region region-content"> 
+      <nav id="breadcrumb" aria-label="Breadcrumbs"> 
+       <div class="container"> 
+        <h2 class="sr-only">You are here:</h2> 
+        <ol class="breadcrumb"> 
+         <li aria-hidden="true"> <a href="/">Home</a> </li> 
+         <li class="active"> <span>Manhattanville</span> </li> 
+        </ol> 
+       </div> 
+      </nav> 
+      <div id="main-block" class="container conditional-container"> 
+       <article role="article" about="/content/manhattanville" class="cu-landing-page full clearfix"> 
+        <h1 class="sr-only container"> 
+         <div class="container">
+          Manhattanville
+         </div> </h1> 
+        <div class="content"> 
+         <div class="field field--name-field-cu-landing-page-content field--type-entity-reference-revisions field--label-hidden landing-content"> 
+          <div class="paragraph paragraph--type--cu-paragraph-hero paragraph--view-mode--default with-image"> 
+           <div class="banner-image-and-text"> 
+            <div class="banner-image"> 
+             <div class="stellar-relative">
+              <div id="single_image-1231" class="paragraph paragraph--type--single-image paragraph--view-mode--default anchored"> 
+               <figure class="field field--name-field-cu-image field--type-image field--label-hidden image-with-borders image-wrapper cap-bot image-with-modal" id="view-through-manhattanville-campus-west-on-126th-street-1231"> 
+                <img src="/sites/default/files/styles/cu_crop/public/content/EMB_8225%20%281%29.jpg?itok=K6B0EVtI" width="1500" height="500" alt="View through Manhattanville campus west on 126th Street" typeof="foaf:Image" class="img-responsive"> 
+               </figure> 
+              </div>
+             </div> 
+            </div> 
+            <div class="banner-text"> 
+             <div class="container"> 
+              <div class="banner-text-and-title"> 
+               <h2> 
+                <div class="accordion field field--name-field-cu-title field--type-string field--label-hidden field--item">
+                 Manhattanville
+                </div> </h2> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="banner-content"> 
+            <div class="container"> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="paragraph paragraph--type--cu-page-slice paragraph--view-mode--default page-slice"> 
+           <div class="container"> 
+            <div class="field field--name-field-cu-page-slice-content field--type-entity-reference-revisions field--label-hidden row"> 
+             <div class="paragraph paragraph--type--cu-page-slice-item paragraph--view-mode--default col-md-12 col-lg-12"> 
+              <div class="field field--name-field-cu-page-slice-item-content field--type-entity-reference-revisions field--label-hidden solo-grid-item field--items"> 
+               <section id="text_with_label-1222" class="paragraph paragraph--type--text-with-label paragraph--view-mode--default anchored"> 
+                <h2> 
+                 <div class="accordion field field--name-field-cu-title field--type-string field--label-hidden field--item">
+                  Welcome to a New Urban Campus for the 21st Century
+                 </div> </h2> 
+                <div class="field field--name-field-cu-wysiwyg field--type-text-long field--label-hidden field--item">
+                 <p>Columbia’s Manhattanville campus is designed to bring together a diversity of academic disciplines to address the great questions facing our society while welcoming the wider community to experience a shared space for civic life.</p>
+                </div> 
+               </section> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="paragraph paragraph--type--cu-page-slice paragraph--view-mode--default page-slice"> 
+           <div class="container"> 
+            <div class="field field--name-field-cu-page-slice-content field--type-entity-reference-revisions field--label-hidden row"> 
+             <div class="paragraph paragraph--type--cu-page-slice-item paragraph--view-mode--default col-md-12 col-lg-12"> 
+              <div class="field field--name-field-cu-page-slice-item-content field--type-entity-reference-revisions field--label-hidden solo-grid-item field--items"> 
+               <div id="cu_card_group-1217" class="paragraph paragraph--type--cu-card-group paragraph--view-mode--default row anchored"> 
+                <div class="field field--name-field-cu-cards field--type-entity-reference-revisions field--label-hidden field--items clearfix row"> 
+                 <div class="field--item col-md-3 col-lg-3 col-xs-6 col-sm-4"> 
+                  <div id="cu_info_card-1213" class="paragraph paragraph--type--cu-info-card paragraph--view-mode--default anchored card-with-icon"> <a class="card-link" href="/content/explore-campus" aria-labelledby="cu_info_card-1213-title" aria-describedby="cu_info_card-1213-text"> 
+                    <div class="field field--name-field-cu-card-icon field--type-string field--label-hidden card-icon field--item"> <span class="fa fa-map-o"></span><span class="sr-only">map icon</span> 
+                    </div> 
+                    <div id="cu_info_card-1213-title"> 
+                     <div class="field field--name-field-cu-card-title field--type-string field--label-hidden field--item" role="heading" aria-level="3">
+                      Explore the Manhattanville Campus
+                     </div> 
+                    </div> </a> 
+                   <div id="cu_info_card-1213-text"> 
+                   </div> 
+                  </div>
+                 </div> 
+                 <div class="field--item col-md-3 col-lg-3 col-xs-6 col-sm-4"> 
+                  <div id="cu_info_card-1214" class="paragraph paragraph--type--cu-info-card paragraph--view-mode--default anchored card-with-icon"> <a class="card-link" href="/content/history" aria-labelledby="cu_info_card-1214-title" aria-describedby="cu_info_card-1214-text"> 
+                    <div class="field field--name-field-cu-card-icon field--type-string field--label-hidden card-icon field--item"> <span class="fa fa-history"></span><span class="sr-only">history icon</span> 
+                    </div> 
+                    <div id="cu_info_card-1214-title"> 
+                     <div class="field field--name-field-cu-card-title field--type-string field--label-hidden field--item" role="heading" aria-level="3">
+                      Learn About Neighborhood and Campus History
+                     </div> 
+                    </div> </a> 
+                   <div id="cu_info_card-1214-text"> 
+                   </div> 
+                  </div>
+                 </div> 
+                 <div class="field--item col-md-3 col-lg-3 col-xs-6 col-sm-4"> 
+                  <div id="cu_info_card-1215" class="paragraph paragraph--type--cu-info-card paragraph--view-mode--default anchored card-with-icon"> <a class="card-link" href="/content/community-commitments" aria-labelledby="cu_info_card-1215-title" aria-describedby="cu_info_card-1215-text"> 
+                    <div class="field field--name-field-cu-card-icon field--type-string field--label-hidden card-icon field--item"> <span class="fa fa-handshake-o"></span><span class="sr-only">handshake icon</span> 
+                    </div> 
+                    <div id="cu_info_card-1215-title"> 
+                     <div class="field field--name-field-cu-card-title field--type-string field--label-hidden field--item" role="heading" aria-level="3">
+                      Read About Columbia's Community Commitments
+                     </div> 
+                    </div> </a> 
+                   <div id="cu_info_card-1215-text"> 
+                   </div> 
+                  </div>
+                 </div> 
+                 <div class="field--item col-md-3 col-lg-3 col-xs-6 col-sm-4"> 
+                  <div id="cu_info_card-1216" class="paragraph paragraph--type--cu-info-card paragraph--view-mode--default anchored card-with-icon"> <a class="card-link" href="/content/construction-updates-and-opportunities" aria-labelledby="cu_info_card-1216-title" aria-describedby="cu_info_card-1216-text"> 
+                    <div class="field field--name-field-cu-card-icon field--type-string field--label-hidden card-icon field--item"> <span class="fa fa-building-o"></span><span class="sr-only">building icon</span> 
+                    </div> 
+                    <div id="cu_info_card-1216-title"> 
+                     <div class="field field--name-field-cu-card-title field--type-string field--label-hidden field--item" role="heading" aria-level="3">
+                      Get Construction Updates and Opportunities
+                     </div> 
+                    </div> </a> 
+                   <div id="cu_info_card-1216-text"> 
+                   </div> 
+                  </div>
+                 </div> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <section id="views-display-1275" class="cu_events-block_4 paragraph paragraph--type--cu-views-display paragraph--view-mode--default anchored"> 
+           <div class="views-conditional-container container"> 
+            <h2 class="block-title"> Manhattanville Events </h2> 
+            <div class="field field--name-field-cu-view-content field--type-viewfield field--label-hidden"> 
+             <div class="viewfield-wrapper">
+              <div class="viewfield">
+               <div class="view view-cu-events view-id-cu_events view-display-id-block_4 js-view-dom-id-444cd1b4b23b213c094a42f29c196ac1798d19c2678046aad5fa2895284aeb03">
+                <div class="view-content">
+                 <div class="row">
+                  <div class="views-row col-sm-6 col-md-4 col-lg-4">
+                   <article role="article" about="/events/i-see-music-livestream-house-concert-series" class="cu-event teaser clearfix row events">
+                    <div class="date-wrapper col-xs-3 col-sm-3 col-md-3 col-lg-2 text-center">
+                     <div class="date-range-wrapper">
+                      <div class="date">
+                       <a href="/events/i-see-music-livestream-house-concert-series" rel="bookmark"><span class="month">Mar</span><span class="day">16</span><abbr title="Tuesday" class="weekday">Tue</abbr></a>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="event-details col-xs-9 col-sm-9 col-md-9 col-lg-10">
+                     <h3><a href="/events/i-see-music-livestream-house-concert-series" rel="bookmark"><span>I See Music! A Livestream House Concert Series</span></a></h3>
+                     <div class="event-location-name">
+                      <div class="field field--name-field-cu-location field--type-string field--label-hidden field--item">
+                       Online
+                      </div>
+                     </div>
+                     <div class="event-time">
+                      2:00 PM
+                     </div>
+                    </div>
+                   </article>
+                  </div>
+                  <div class="views-row col-sm-6 col-md-4 col-lg-4">
+                   <article role="article" about="/events/biobus-student-town-hall-communication-and-singing-songs-mice-and-men" class="cu-event teaser clearfix row events">
+                    <div class="date-wrapper col-xs-3 col-sm-3 col-md-3 col-lg-2 text-center">
+                     <div class="date-range-wrapper">
+                      <div class="date">
+                       <a href="/events/biobus-student-town-hall-communication-and-singing-songs-mice-and-men" rel="bookmark"><span class="month">Mar</span><span class="day">18</span><abbr title="Thursday" class="weekday">Thu</abbr></a>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="event-details col-xs-9 col-sm-9 col-md-9 col-lg-10">
+                     <h3><a href="/events/biobus-student-town-hall-communication-and-singing-songs-mice-and-men" rel="bookmark"><span>BioBus Student Town Hall: Communication and Singing - Songs of Mice and Men!</span></a></h3>
+                     <div class="event-location-name">
+                      <div class="field field--name-field-cu-location field--type-string field--label-hidden field--item">
+                       Online
+                      </div>
+                     </div>
+                     <div class="event-time">
+                      4:00 PM
+                     </div>
+                    </div>
+                   </article>
+                  </div>
+                  <div class="views-row col-sm-6 col-md-4 col-lg-4">
+                   <article role="article" about="/events/saturday-science-home-edition-spring-2021" class="cu-event teaser clearfix row events">
+                    <div class="date-wrapper col-xs-3 col-sm-3 col-md-3 col-lg-2 text-center">
+                     <div class="date-range-wrapper">
+                      <div class="date">
+                       <a href="/events/saturday-science-home-edition-spring-2021" rel="bookmark"><span class="month">Mar</span><span class="day">20</span><abbr title="Saturday" class="weekday">Sat</abbr></a>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="event-details col-xs-9 col-sm-9 col-md-9 col-lg-10">
+                     <h3><a href="/events/saturday-science-home-edition-spring-2021" rel="bookmark"><span>Saturday Science - Home Edition (Spring 2021)</span></a></h3>
+                     <div class="event-location-name">
+                      <div class="field field--name-field-cu-location field--type-string field--label-hidden field--item">
+                       Online
+                      </div>
+                     </div>
+                     <div class="event-time">
+                      2:00 PM - 4:00 PM
+                     </div>
+                    </div>
+                   </article>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div> 
+            </div> 
+           </div> 
+          </section> 
+          <div class="paragraph paragraph--type--cu-page-slice paragraph--view-mode--default page-slice"> 
+           <div class="container"> 
+            <div class="field field--name-field-cu-page-slice-content field--type-entity-reference-revisions field--label-hidden row"> 
+             <div class="paragraph paragraph--type--cu-page-slice-item paragraph--view-mode--default col-md-5 col-lg-5"> 
+              <div class="field field--name-field-cu-page-slice-item-content field--type-entity-reference-revisions field--label-hidden solo-grid-item field--items"> 
+               <section id="views-display-1503" class="recent_news-attachment_2 paragraph paragraph--type--cu-views-display paragraph--view-mode--default anchored"> 
+                <div class="views-conditional-container container"> 
+                 <h2 class="block-title"> Latest from Manhattanville </h2> 
+                 <div class="field field--name-field-cu-view-content field--type-viewfield field--label-hidden"> 
+                  <div class="viewfield-wrapper">
+                   <div class="viewfield">
+                    <div class="view view-recent-news view-id-recent_news view-display-id-attachment_2 js-view-dom-id-97490c94c79a71aa40fac113817b4958def9b47b579d008f68752f6d062a7606">
+                     <div class="view-content">
+                      <div class="views-row">
+                       <div class="views-field views-field-field-cu-news-topic">
+                        <div class="field-content">
+                         <a href="/construction-0" hreflang="en">Construction</a>
+                        </div>
+                       </div>
+                       <div class="views-field views-field-field-cu-featured-content">
+                        <div class="field-content">
+                         <div id="single_image-5058" class="paragraph paragraph--type--single-image paragraph--view-mode--default anchored">
+                          <figure class="field field--name-field-cu-image field--type-image field--label-hidden image-with-borders image-wrapper cap-bot image-with-modal image-with-caption" id="aerial-view-of-columbia-manhattanville-campus-construction-site-5058">
+                           <img src="/sites/default/files/styles/cu_crop/public/content/Manhattanville%20Panorama%202-13-21%20low%20res.jpg?itok=5fYH2yXW" width="900" height="600" alt="Aerial view of Columbia Manhattanville campus construction site. " title="Project site, aerial view looking north, February 13, 2021" typeof="foaf:Image" class="img-responsive">
+                           <figcaption aria-hidden="true">
+                            <div class="image-caption container">
+                             Project site, aerial view looking north, February 13, 2021
+                            </div>
+                           </figcaption>
+                          </figure>
+                         </div>
+                        </div>
+                       </div>
+                       <h2 class="views-field views-field-title"><span class="field-content"><a href="/news/construction-update-weeks-31521-and-32221" hreflang="en">Construction Update: Weeks of 3/15/21 and 3/22/21</a></span></h2>
+                       <div class="views-field views-field-nothing">
+                        <span class="field-content"><p>The latest updates on what to expect and construction updates related to the&nbsp;Manhattanville campus.</p></span>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div> 
+                 </div> 
+                </div> 
+               </section> 
+              </div> 
+             </div> 
+             <div class="paragraph paragraph--type--cu-page-slice-item paragraph--view-mode--default col-md-7 col-lg-7"> 
+              <div class="field field--name-field-cu-page-slice-item-content field--type-entity-reference-revisions field--label-hidden solo-grid-item field--items"> 
+               <section id="views-display-1505" class="recent_news-block_6 paragraph paragraph--type--cu-views-display paragraph--view-mode--default anchored"> 
+                <div class="views-conditional-container container"> 
+                 <h2 class="block-title"> <a href="/news">All Manhattanville News</a> </h2> 
+                 <div class="field field--name-field-cu-view-content field--type-viewfield field--label-hidden"> 
+                  <div class="viewfield-wrapper">
+                   <div class="viewfield">
+                    <div class="row view view-recent-news view-id-recent_news view-display-id-block_6 js-view-dom-id-f90ec237f8326fd10f042ddfe426035c93913c5043699ee5b62e0b8cbdd10b2e">
+                     <div class="view-content">
+                      <div class="col-md-4 views-row">
+                       <article role="article" about="/news/construction-update-weeks-31521-and-32221" typeof="schema:Article" class="teaser clearfix">
+                        <div class="field field--name-field-cu-date field--type-datetime field--label-hidden field--item">
+                         March 15, 2021
+                        </div>
+                        <h2><a href="/news/construction-update-weeks-31521-and-32221" rel="bookmark"><span property="schema:name">Construction Update: Weeks of 3/15/21 and 3/22/21</span></a></h2><span property="schema:name" content="Construction Update: Weeks of 3/15/21 and 3/22/21" class="hidden"></span>
+                        <div>
+                         <div class="field field--name-field-cu-summary field--type-text-long field--label-hidden field--item">
+                          <p>The latest updates on what to expect and construction updates related to the&nbsp;Manhattanville campus.</p>
+                         </div>
+                         <div class="field field--name-field-cu-tags field--type-entity-reference field--label-inline">
+                          <div class="field--label">
+                           Tags
+                          </div>
+                          <div class="field__items">
+                           <a href="/manhattanville-1" hreflang="en">Manhattanville</a><a href="/construction-updates" hreflang="en">Construction Updates</a>
+                          </div>
+                         </div>
+                        </div>
+                       </article>
+                      </div>
+                      <div class="col-md-4 views-row">
+                       <article role="article" about="/news/construction-update-weeks-3821-and-31521" typeof="schema:Article" class="teaser clearfix">
+                        <div class="field field--name-field-cu-date field--type-datetime field--label-hidden field--item">
+                         March 08, 2021
+                        </div>
+                        <h2><a href="/news/construction-update-weeks-3821-and-31521" rel="bookmark"><span property="schema:name">Construction Update: Weeks of 3/8/21 and 3/15/21</span></a></h2><span property="schema:name" content="Construction Update: Weeks of 3/8/21 and 3/15/21" class="hidden"></span>
+                        <div>
+                         <div class="field field--name-field-cu-summary field--type-text-long field--label-hidden field--item">
+                          <p>The latest updates on what to expect and construction updates related to the&nbsp;Manhattanville campus.</p>
+                         </div>
+                         <div class="field field--name-field-cu-tags field--type-entity-reference field--label-inline">
+                          <div class="field--label">
+                           Tags
+                          </div>
+                          <div class="field__items">
+                           <a href="/manhattanville-1" hreflang="en">Manhattanville</a><a href="/construction-updates" hreflang="en">Construction Updates</a>
+                          </div>
+                         </div>
+                        </div>
+                       </article>
+                      </div>
+                      <div class="col-md-4 views-row">
+                       <article role="article" about="/news/construction-update-weeks-3121-and-3821" typeof="schema:Article" class="teaser clearfix">
+                        <div class="field field--name-field-cu-date field--type-datetime field--label-hidden field--item">
+                         March 01, 2021
+                        </div>
+                        <h2><a href="/news/construction-update-weeks-3121-and-3821" rel="bookmark"><span property="schema:name">Construction Update: Weeks of 3/1/21 and 3/8/21</span></a></h2><span property="schema:name" content="Construction Update: Weeks of 3/1/21 and 3/8/21" class="hidden"></span>
+                        <div>
+                         <div class="field field--name-field-cu-summary field--type-text-long field--label-hidden field--item">
+                          <p>The latest updates on what to expect and construction updates related to the&nbsp;Manhattanville campus.</p>
+                         </div>
+                         <div class="field field--name-field-cu-tags field--type-entity-reference field--label-inline">
+                          <div class="field--label">
+                           Tags
+                          </div>
+                          <div class="field__items">
+                           <a href="/manhattanville-1" hreflang="en">Manhattanville</a><a href="/construction-updates" hreflang="en">Construction Updates</a>
+                          </div>
+                         </div>
+                        </div>
+                       </article>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div> 
+                 </div> 
+                 <div class="more-link form-group">
+                  <a href="/news" class="views-more-link">More News</a>
+                 </div> 
+                </div> 
+               </section> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </article> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+  </div> 
+ </main> 
+ <footer> 
+  <div id="site-footer"> 
+   <div class="container"> 
+    <div class="row flex-layout"> 
+     <div class="col-sm-9"> 
+      <div class="row flex-layout"> 
+       <div class="col-md-6 col-lg-6"> 
+        <div class="clearfix"> <span class="ss-icon ss-location"></span> 
+         <div class="text"> 
+          <address><span class="heading">The Office of Government &amp; Community Affairs</span>309 Low Library, 535 West 116th Street · New York, NY 10027</address> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-md-6 col-lg-3"> 
+        <div class="clearfix"> <span class="ss-icon ss-phone"></span> 
+         <div class="text"> 
+          <h2>Phone</h2> 
+          <div class="value">
+           <a href="tel:2128545915">(212) 854-5915</a>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="col-md-6 col-lg-3"> 
+        <div class="clearfix"> <span class="ss-icon ss-lock"></span> 
+         <div class="text"> 
+          <h2>Internal Use Only</h2> 
+          <div class="value">
+           <a href="/user">Login</a> to Access
+          </div> 
+         </div> 
+        </div> 
+        <div id="cu-social-links" class="social"> 
+         <h2>Follow Us</h2> <a href="https://www.facebook.com/NeighborsHub"><span class="ss-social-regular ss-facebook"></span><span class="sr-only">Facebook</span></a> <a href="http://www.twitter.com/NeighborsHub"><span class="ss-social-regular ss-twitter"></span><span class="sr-only">Twitter</span></a> <a href="http://www.instagram.com/NeighborsHub"><span class="ss-social-regular ss-instagram"></span><span class="sr-only">Instagram</span></a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 pull-right" data-ng-switch on="footer_menu || 'null'" data-ng-cloak> 
+      <ul data-ng-switch-when="null"> 
+       <li data-ng-repeat="item in menu track by $index" ng-switch on="item.url || 'null'"> <span ng-switch-when="null" data-ng-class="(global.path == item.url) ? 'active': ''"></span> <a ng-switch-default data-ng-href="{{ ::(item.url != '<nolink>') ? item.url : '#' }}" data-ng-class="(global.path == item.url) ? 'active': ''"><span data-ng-bind-html="item.label"></span></a> </li> 
+      </ul> 
+      <ul data-ng-switch-default> 
+       <li data-ng-repeat="item in footer_menu track by $index" ng-switch on="item.url || 'null'"> <span ng-switch-when="null" data-ng-class="(global.path == item.url) ? 'active': ''"></span> <a ng-switch-default data-ng-href="{{ ::(item.url != '<nolink>') ? composeUrlLink(item.url) : '#' }}" data-ng-class="(global.path == item.url) ? 'active': ''"><span data-ng-bind-html="item.label"></span></a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="cu-footer"> 
+   <div class="container"> 
+    <div class="row"> 
+     <div class="col-sm-12 col-md-4 col-lg-4 footer-branding-column"> <a href="http://www.columbia.edu" id="footer-cu-homepage"> <span class="brand sr-only">Columbia University</span> <img src="/themes/custom/columbia/assets/img/cu-blue-logo.svg" alt="Columbia University Logo" width="326" height="49" class="img-responsive hidden-xs"> 
+       <svg class="cu-brand" xmlns="http://www.w3.org/2000/svg" width="187" height="14" viewbox="0 0 187 14"> <path d="M2.9 11.7C1.4 10.4 1 8.5 1 7c0-1.1.4-2.9 1.8-4.4 1-1 2.4-1.7 4.9-1.7.6 0 1.5 0 2.3.2.6.1 1.1.2 1.6.2.2 0 .2.1.2.2s0 .3-.1.9V4c0 .2 0 .3-.1.3s-.1-.1-.1-.3c0-.6-.3-1.3-.7-1.6-.6-.4-1.9-.9-3.3-.9-2.1 0-3.1.6-3.7 1.2-1.1 1.1-1.4 2.5-1.4 4.2 0 3.1 2.4 5.9 5.8 5.9 1.2 0 2.1-.1 2.8-.8.3-.4.5-1.1.6-1.3 0-.2.1-.2.2-.2s.1.1.1.2-.2 1.5-.4 2c-.1.3-.1.3-.4.5-.6.3-1.9.4-2.9.4-2.4-.1-4-.7-5.3-1.9zm16.2-8.9c3.2 0 5.6 1.9 5.6 5.1 0 3-2.3 5.6-5.6 5.6-3.9 0-5.5-2.9-5.5-5.3-.1-2.3 1.6-5.4 5.5-5.4zm.3 10.1c1.3 0 3.8-.7 3.8-4.6 0-3.3-2-5-4.2-5-2.4 0-4 1.5-4 4.4 0 3.2 1.9 5.2 4.4 5.2zm9.5-3.6c0 2 0 2.8.3 3.1.2.2.8.3 1.9.3.7 0 1.4 0 1.7-.4.2-.2.3-.5.3-.8 0-.1.1-.2.1-.2.1 0 .1.1.1.2s-.1 1-.2 1.4c-.1.3-.1.4-.9.4h-5.3c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.6-.8h-.5l-.1-.1c-.1-.1 0-.1.2-.1h3.2c.1 0 .1 0 .1.1l-.1.1h-.5c-.4.1-.4.3-.5.8v5.3zm6.5-2.4V4c0-.4-.1-.7-.6-.8h-.5l-.1-.1c0-.1.1-.1.2-.1h3c.2 0 .2 0 .2.1l-.1.1h-.4c-.4.1-.4.3-.5.8v4.8c0 2 .4 2.8 1 3.3.7.6 1.3.7 2.1.7.9 0 1.7-.4 2.2-1 .7-.8.8-1.9.8-3.3V4s-.1-.7-.6-.8h-.5c-.1 0-.1-.1-.1-.1.1-.1.2-.1.4-.1h2.7c.2 0 .2 0 .2.1 0 0 0 .1-.1.1h-.4c-.4.1-.5.3-.5.8v4.4c0 1.5-.2 3.1-1.3 4.1-1 .9-2.1 1-2.9 1-.5 0-1.9 0-2.9-1-.7-.6-1.2-1.6-1.2-3.6v-2zm22.7 4.6c0 .5.1 1.2.7 1.4.4.1.8.1.9.1.1 0 .1 0 .1.1s-.1.1-.3.1c-.3 0-1.9 0-2.4-.1-.3 0-.4-.1-.4-.1s0-.1.1-.1.1-.2.1-.5l-.7-6.9-3.4 6.9c-.3.6-.4.7-.5.7s-.2-.1-.5-.6c-.4-.7-1.3-2.4-1.6-3.2-.4-.9-1.6-3.2-1.8-3.7h-.1l-.5 6.1v.7c0 .2.1.3.3.4.2.1.4.1.5.1 0 0 .1 0 .1.1s-.1.1-.3.1h-2.5c-.1 0-.2 0-.2-.1l.1-.1h.4c.5-.1.5-.6.5-1.1l1-8.9c0-.1.1-.2.2-.2s.2 0 .3.2l4.3 8.5L56.7 3c.1-.1.1-.2.2-.2s.2.1.2.4l1 8.3zm4.3-4.6V4c0-.5-.1-.7-.6-.8h-.5s-.1 0-.1-.1 0-.1.2-.1h3.2c2.4 0 3 1.4 3 2.1 0 1.1-.7 1.7-1.4 2.4 1.1.3 2.5 1.3 2.5 2.8 0 1.5-1.1 3-3.5 3h-3.5c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3 0 .3-.4.4-.8.1-.6.1-1.6.1-2.9V6.9zm1.2.3c0 .1 0 .1.1.1s.3.1.9.1c.8 0 1.1 0 1.4-.4.3-.3.5-.8.5-1.5 0-1-.6-2.2-2-2.2-.2 0-.5 0-.7.1-.1 0-.2.1-.2.1v3.7zm0 1.5v2.9c0 .7 0 .8.5 1 .4.2 1 .2 1.2.2.9 0 2.1-.4 2.1-2.1 0-.6-.2-1.8-1.3-2.5-.5-.3-.9-.3-1.3-.4h-1.1s-.1 0-.1.1v.8zm9.4.6c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.4-.7h-.4c-.1 0-.1-.1-.1-.1-.1-.2-.1-.2.1-.2h2.8c.2 0 .3 0 .3.1l-.1.1h-.4c-.4.1-.5.3-.5.8v5.3zm7.1-6.1c.2-.4.2-.5.3-.5.1 0 .2.2.3.5.3.6 2.5 6.2 3.4 8.3.5 1.2.9 1.4 1.2 1.5.2.1.4.1.6.1.1 0 .2 0 .2.1s-.2.1-.3.1h-2.2c-.3 0-.5 0-.5-.1s0-.1.1-.1.2-.1.1-.4L82 9.5c0-.1 0-.1-.1-.1h-3.2c-.1 0-.1 0-.1.1l-.8 2.2c-.1.3-.2.7-.2.9 0 .3.2.4.5.4h.1c.1 0 .1 0 .1.1s-.1.1-.2.1h-2.7c-.2 0-.3 0-.3-.1s.1-.1.1-.1h.4c.6-.1.9-.6 1.2-1.2l3.3-8.6zm1.5 5.7c.1 0 .1 0 0 0l-1.3-3.8c-.1-.2-.2-.2-.2 0l-1.3 3.7v.1h2.8zm11-3.1V2.3c0-.5-.2-.8-.7-.9h-.5c-.1 0-.1 0-.1-.1s.1-.1.3-.1H95c.2 0 .3 0 .3.1s-.1.1-.1.1h-.4c-.7.1-.8.4-.8.9V8c0 2.3.5 3.3 1.2 4 .8.7 1.5.9 2.4.9 1 0 1.9-.5 2.5-1.2.7-.9.9-2.3.9-3.9V2.3c0-.5-.2-.8-.7-.9h-.5c-.1 0-.1 0-.1-.1s.1-.1.3-.1h3c.2 0 .3 0 .3.1s-.1.1-.1.1h-.4c-.4.1-.6.4-.6.9v5.2c0 1.7-.2 3.6-1.5 4.8-1.2 1-2.4 1.2-3.3 1.2-.5 0-2.2-.1-3.3-1.1-.8-.8-1.4-1.9-1.4-4.2V5.8zm13.9 5.6c0 1.1.2 1.5.5 1.6.3.1.6.1.7.1.1 0 .1 0 .1.1s-.1.1-.3.1h-2.9c-.1 0-.2 0-.2-.1s0-.1.1-.1.4 0 .6-.1c.4-.1.4-.5.4-1.7V3.5c0-.5.1-.7.2-.7.2 0 .4.3.5.4.2.2 2.3 2.4 4.4 4.6 1.4 1.4 2.9 3.1 3.3 3.5l.1-6.8c0-.9-.1-1.2-.5-1.3-.3 0-.6-.1-.7-.1-.1 0-.1-.1-.1-.1 0-.1.1-.1.3-.1h2.7c.1 0 .3 0 .3.1 0 0-.1.1-.2.1h-.3c-.5.1-.5.4-.5 1.2v8c0 .9 0 1-.1 1s-.3-.1-1.1-.8c-.1-.1-2.2-2.1-3.7-3.7-1.6-1.7-3.2-3.4-3.6-3.9v6.5zm13.7-2.1c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.4-.7h-.4c-.1 0-.1-.1-.1-.1 0-.1.1-.1.2-.1h2.8c.2 0 .2 0 .2.1l-.1.1h-.4c-.4.1-.5.3-.5.8v5.2zm8 2.2c.8-1.8 2.7-6.5 3-7.4.1-.2.1-.4.1-.5 0-.1 0-.2-.2-.3h-.5c-.1 0-.2 0-.2-.1s.1-.1.3-.1h2.5c.1 0 .2 0 .2.1s0 .1-.2.1c-.1 0-.4 0-.7.2-.2.1-.4.3-.8 1.2-.2.4-.8 2-1.6 3.7-.9 2-1.5 3.5-1.8 4.1-.4.8-.5 1-.6 1-.2 0-.3-.2-.5-.8l-3.5-8.3c-.3-.8-.5-.9-1-1h-.5c-.1 0-.1-.1-.1-.1 0-.1.1-.1.4-.1h2.9c.3 0 .4 0 .4.1s0 .1-.1.1c-.2 0-.4 0-.5.1-.1.1-.2.1-.2.2 0 .2.2.6.4 1.1l2.8 6.7zm7.4-4.6V4c0-.5-.1-.7-.6-.8h-.5l-.1-.1c0-.1.1-.1.2-.1h5c.3 0 .5-.1.6-.1.1 0 .1-.1.2-.1l.1.1c0 .1-.1.3-.1.6 0 .1 0 .7-.1.9 0 .1-.1.1-.1.1-.1 0-.1-.1-.1-.2s0-.3-.1-.5-.2-.3-1-.4h-2c-.1 0-.1 0-.1.1v3.7c0 .1 0 .1.1.1h2.4c.3 0 .5 0 .7-.2l.2-.2s.1 0 .1.1-.1.3-.1.8c0 .3-.1.8-.1.9 0 .1 0 .3-.1.3s-.1 0-.1-.1 0-.3-.1-.4c0-.2-.2-.4-.7-.4-.4 0-1.9-.1-2.1-.1-.1 0-.1 0-.1.1v3.4c0 .9.3 1.1 1.7 1.1.4 0 1 0 1.4-.1.4-.2.6-.4.6-.9 0-.2.1-.2.1-.2s.1.1.1.2-.1 1-.2 1.3c-.1.4-.2.4-.8.4h-5c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3 0 .3-.3.4-.7.1-.6.1-1.6.1-2.9V6.9zm8.8 0V4c0-.5-.1-.7-.6-.8h-.5l-.1-.1c0-.1.1-.1.2-.1h3.5c.9 0 1.9.1 2.6.6.4.3 1 .9 1 1.9 0 1-.4 2-1.7 3.1 1.2 1.4 2.1 2.7 2.9 3.5.8.8 1.2.9 1.6.9h.5c.1 0 .1.1.1.1 0 .1-.1.1-.3.1h-.9c-.8 0-1.2-.1-1.5-.3-.6-.3-1.1-1-1.9-2-.6-.7-1.2-1.6-1.5-2-.1-.1-.1-.1-.2-.1h-1.8c-.1 0-.1 0-.1.1v.3c0 1.3 0 2.4.1 2.9 0 .4.1.7.6.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.1c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V6.9zm1.2 1.2c0 .1 0 .1.1.2.2.1.9.2 1.6.2.3 0 .7 0 1.1-.2.5-.3.8-1 .8-2.1 0-1.7-.9-2.7-2.4-2.7-.4 0-.9 0-1 .1-.1 0-.1.1-.1.2v4.3z" /> <path d="M153.8 13.1c-.2-.1-.2-.1-.2-.5 0-.7.1-1.2.1-1.4 0-.1 0-.2.1-.2s.1 0 .1.2v.5c.2 1 1.3 1.3 2.2 1.3 1.4 0 2.1-.8 2.1-1.8s-.5-1.4-1.8-2.4l-.6-.5c-1.5-1.1-2-2-2-2.9 0-1.6 1.3-2.6 3.1-2.6.6 0 1.1.1 1.5.2h.6c.1 0 .1 0 .1.1s-.1.5-.1 1.4c0 .2 0 .3-.1.3s-.1-.1-.1-.2c0-.2-.1-.5-.2-.7-.1-.2-.6-.7-1.8-.7-1 0-1.9.5-1.9 1.5 0 .9.4 1.4 1.8 2.3l.4.3c1.7 1.2 2.3 2.1 2.3 3.3 0 .8-.3 1.7-1.3 2.3-.6.4-1.5.5-2.2.5-.7 0-1.5-.1-2.1-.3zm10.6-3.8c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.1 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.3-.3.4-.7.1-.6.1-1.6.1-2.9V4c0-.5-.1-.7-.4-.7h-.4c-.1 0-.1-.1-.1-.1 0-.1.1-.1.2-.1h2.8c.2 0 .2 0 .2.1l-.1.1h-.4c-.4.1-.5.3-.5.8v5.2zm8 0c0 1.3 0 2.4.1 2.9 0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.2 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.4-.3.4-.7.1-.6.1-1.6.1-2.9V3.6h-2c-.9 0-1.2.1-1.4.4-.2.2-.2.3-.2.4 0 .1-.1.1-.1.1s-.1 0-.1-.1.3-1.4.3-1.5c0-.1.1-.3.1-.3.1 0 .2.1.6.2.4 0 .9.1 1.1.1h5.3c.5 0 .8 0 1-.1.2 0 .3-.1.4-.1.1 0 .1.1.1.2v1.6c0 .1-.1.2-.1.2s-.1 0-.1-.2v-.1c0-.4-.4-.7-1.7-.8h-1.8v5.7zm8.6.4c0-.7-.1-1-.3-1.4-.1-.2-2-3.2-2.5-4-.3-.5-.7-.8-.9-1-.2-.1-.5-.2-.6-.2-.1 0-.1-.1-.1-.1s0-.1.2-.1h2.6c.2 0 .2 0 .2.1 0 0-.1.1-.2.1s-.2.1-.2.2c0 .2.1.4.2.5L182 8c.3-.6 2-3.5 2.3-3.9.2-.3.2-.5.2-.7 0-.2-.1-.3-.2-.4-.3.2-.3.1-.3 0 0 0 .1-.1.2-.1h2.4c.1 0 .2 0 .2.1s-.1.1-.2.1c-.2 0-.4 0-.7.2-.3.2-.4.3-.7.7-.5.5-2.4 3.7-2.7 4.3-.2.5-.2.9-.2 1.4v2.6c0 .4.1.7.5.7.2 0 .5.1.6.1.1 0 .1.1.1.1 0 .1-.1.1-.2.1h-3.2c-.2 0-.2 0-.2-.1 0 0 0-.1.1-.1s.3 0 .4-.1c.3-.1.4-.3.4-.7V9.7z" /> 
+       </svg> </a> 
+     </div> 
+     <div class="col-xs-12 col-md-8 footer-links-column" id="cu-footer-links"> <span class="copyright"><a href="https://www.columbia.edu/content/copyright">©2021 Columbia University</a></span> <span class="a11y"><a href="http://health.columbia.edu/disability-services"><i class="fa fa-wheelchair" aria-hidden="true"></i><span class="sr-only">Accessibility</span></a></span> <span><a href="http://eoaa.columbia.edu/notice-nondiscrimination">Nondiscrimination</a></span> <span><a href="https://careers.columbia.edu/">Careers</a></span> <span><a href="https://sites.columbia.edu/">Built using Columbia Sites</a></span> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </footer> 
+ <div id="back-to-top-container" class="container"> <a href="#top" title="Back to top" id="back-to-top" onclick="document.getElementById('top').focus();"> <i class="fa fa-arrow-circle-o-up hidden-xs" aria-hidden="true"></i><i class="fa fa-chevron-up visible-xs-block" aria-hidden="true"></i>Back to Top </a> 
+ </div> 
+ <script>
+      var cu_footer_menu = [];
+                        cu_footer_menu.push({
+            "index": 1,
+            "label":"Contact Us",
+            "url":"https://neighbors.columbia.edu/content/contact-us"
+          });
+                                cu_footer_menu.push({
+            "index": 2,
+            "label":"Document Library",
+            "url":"https://neighbors.columbia.edu/content/document-library"
+          });
+                  </script> 
+</div> <!-- Modal --> 
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-heading"> 
+ <div class="vertical-alignment-helper"> 
+  <div class="modal-dialog vertical-align-center" role="document"> 
+   <div class="modal-content"> 
+    <div class="modal-body" id="modal-body"></div> 
+    <div class="modal-footer"> 
+     <div id="modal-heading" class="text-left"></div> <button type="button" class="btn btn-block btn-primary" data-dismiss="modal" aria-label="Close">Close</button> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<script src="/sites/default/files/js/js_apQxbqW9RzstsUPX6TMjGBqe_c5Psw3ZaCwZFHqGB8o.js"></script> 
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5321fb424ebb991b"></script>
+<script type="text/javascript">
+var addthis_config =
+{
+   ui_tabindex: 0
+}
+</script>
+</body>
+</doc>

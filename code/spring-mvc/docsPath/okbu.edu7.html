@@ -1,0 +1,546 @@
+<doc>
+<filename>okbu.edu7.html</filename>
+<url>http://okbu.libguides.com/az.php</url>
+<ip>34.194.39.199</ip>
+<title>A-Z Databases</title>
+<body>
+<div id="libchat_7c9509d1fe4f30fa5888287635d57aa0"></div>
+<script type="text/javascript" src="//v2.libanswers.com/load_chat.php?hash=7c9509d1fe4f30fa5888287635d57aa0"></script> 
+<style>
+
+/*libchat-styling*/
+.lcs_chat_button {
+font-size: 18px;
+}
+
+/*hide breadcrumbs*/
+#s-lib-bc {
+	display: none;
+	}
+
+/*remove guide search box*/
+#s-lg-guide-header-search {
+	display: none;
+	}
+
+/*header color*/
+.s-lib-header {
+background-color:#ffffff;
+padding: 1.5em;
+}
+
+/*Middle container background*/
+.s-lib-main {
+  background-color: rgba(255, 255, 255, .97);
+padding: 1.5em;
+}
+
+/*extend body to edge of viewport*/
+body {
+	padding-left: 0;
+	padding-right: 0;
+        background-color: #D8DAD9;
+	background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+	}
+/* background-image: url("https://s3.amazonaws.com/libapps/accounts/17883/images/snowtrees.jpg"); background-color: #f4fafc;
+*/
+/*removes green bar on top of guides*/
+#s-lg-guide-tabs-title-bar {
+	border-top: none;
+}
+
+/*adds padding to body of LG*/
+#s-lg-guide-main {
+	padding: 10px;
+	}	
+	
+/*Styles for all non-nav areas of header*/
+/*add background color to header*/
+#header-container {
+	background-color:#005826;
+  	margin: 0;
+}
+
+/*add background color to header*/
+#header-container {
+	background-color:  #005826;
+  	margin: 0;
+}
+
+/*specify font for library name*/
+#lib-name {
+font-family: 'Goudy Bookletter 1911', serif;
+color: white;
+}
+
+/*style library logo*/
+#lib-logo img{
+width: 135px;
+float: left;
+margin: 5px;
+}
+
+
+/*Tabbed boxes*/
+
+/*change font color of active tab in tabbed box*/
+.ui-state-default.ui-state-active a {
+    color: #fff !important;
+    background: #005826;
+}
+/*change font color of inactive tabs in tabbed box*/
+.ui-state-default a {
+    color: #333 !important;
+}
+
+/*widget tabs background and border change background*/
+.ui-widget-header {
+    border: 0;
+    background: transparent;
+   
+}
+
+/*outer border*/
+.ui-widget-content {
+    border: 0 solid rgba(0, 0, 0, 0);
+}
+
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-tabs {
+    position: relative;
+    padding: 0
+    zoom: 1;
+}
+/*End Tabbed boxes code*/
+
+
+
+/*End Widgets code*/
+/*Footer styles*/
+
+/*sets background color for custom footer*/
+#custom-footer {background-color: #627C85;}
+
+/*sets font color for text within content area of footer*/
+#content-container {color: #ffffff;}
+
+/*enlarges font size for text*/
+#library-contact {font-size: 16px;}
+
+/*sets colors for linked social media icons*/
+#social-media a{color: #ffffff;}
+
+/*aligns social media icons to right*/
+#social-media {text-align: right;}
+
+
+/*contact info - footer*/
+.contact-info p {
+    font-size: .16px;
+    font-weight: 400;
+    line-height: 1.75rem;
+   
+}
+
+
+
+
+</style> <!-- END: CUSTOM HEAD JS/CSS --> <!-- AZ public js --> 
+<script>
+var springStats = springStats || {};
+springStats.saConfig = springStats.saConfig || {
+    site_id: 2475,
+    tracking_parameters: {"_st_site_id":2475},
+    tracking_server_host: "libguides-proc.springyaws.com"
+};
+</script> 
+<script async src="/web/js/sa.min.js?3116"></script> 
+<script type="text/javascript">
+    var title_base = "A-Z Databases";
+    var search_data = {"terms":""};
+
+    springSpace.publicObj = new springSpace.public.Public({
+        constant: {
+            PROCESSING: {},
+            CONTENT: {}
+        }
+    });
+
+    jQuery(document).ready(function () {
+        if (window.history && history.pushState) {
+            jQuery(window).bind("popstate", function (e) {
+                // Don\'t reload list if this is the result of a skip link hash update.
+                if (location.hash !== "#s-lib-public-main" && springSpace.azList.historyEdited) {
+                    // location.search will return URL encoded values which will end up causing double-encoding when jQuery sends the loadAzList request.
+                    var search_terms = decodeURIComponent(springSpace.Util.getQSParam({
+                        name: "q",
+                        qs: location.search
+                    }));
+
+                    springSpace.publicObj.loadAzList({
+                        first: springSpace.Util.getQSParam({name: "a", qs: location.search}),
+                        subject_id: springSpace.Util.getQSParam({name: "s", qs: location.search}),
+                        type_id: springSpace.Util.getQSParam({name: "t", qs: location.search}),
+                        vendor_id: springSpace.Util.getQSParam({name: "v", qs: location.search}),
+                        search: springSpace.Util.escapeHtml(search_terms),
+                        site_id: 2475,
+                        action: "back"
+                    });
+                }
+            });
+        }
+
+        springSpace.azList.initSelections();
+
+        if (jQuery("#s-lg-az-search").val() == "") {
+            springSpace.publicObj.loadAzList({
+                first: "",
+                subject_id: 0,
+                type_id: 0,
+                vendor_id: 0,
+                search: search_data.terms,
+                site_id: 2475,
+                action: "init"
+            });
+        }
+        else {
+            // call filterAzBySearch so the passed in search string will be recorded
+            springSpace.publicObj.filterAzBySearch(2475);
+        }
+    });
+    springSpace.azList = {
+        referrer: document.referrer,
+        locations: [],
+        historyEdited: false,
+        is_widget: 0,
+        site_domain: "",
+        init_filters: {
+            subject: 0,
+            vendor: 0,
+            type: 0,
+            alpha: "",
+            search: search_data.terms
+        },
+        letter_selected: "", // "first" alpha letter selecte so we can keep track.
+        letter_alpha_map: {
+            pound: "#",
+            all: ""
+        },
+        getAlphaMap: function (letter) {
+            if (letter == "pound" || letter == "all") {
+                return this.letter_alpha_map[letter]
+            } else {
+                return letter;
+            }
+        },
+        reset: function () {
+            this.letter_selected = "";
+            jQuery(".s-lg-az-first").removeClass("bold");
+            jQuery("#s-lg-az-search").val("");
+            springSpace.publicObj.clearAzSelection("s-lg-sel-az-types");
+            springSpace.publicObj.clearAzSelection("s-lg-sel-subjects");
+            springSpace.publicObj.clearAzSelection("s-lg-sel-az-vendors");
+            springSpace.publicObj.loadAzList({
+                site_id: 2475
+            });
+        },
+        initSelections: function () {
+            if (this.init_filters.subject == 0) {
+                springSpace.publicObj.clearAzSelection("s-lg-sel-subjects");
+            }
+            if (this.init_filters.type == 0) {
+                springSpace.publicObj.clearAzSelection("s-lg-sel-az-types");
+            }
+            if (this.init_filters.vendor == 0) {
+                springSpace.publicObj.clearAzSelection("s-lg-sel-az-vendors");
+            }
+            if (this.init_filters.alpha !== "") {
+                this.selectLetter(this.init_filters.alpha);
+            }
+            if (this.init_filters.search == "") {
+                jQuery("#s-lg-az-search").val("");
+            } else {
+                jQuery("#s-lg-az-search").val(this.init_filters.search);
+            }
+        },
+        selectLetter: function (letter) {
+            springSpace.azList.letter_selected = letter;
+            jQuery(".s-lg-az-first").removeClass("bold").removeAttr("aria-pressed");
+
+            if (letter !== "") {
+                jQuery("#s-lg-az-first-" + springSpace.azList.letter_selected)
+                    .addClass("bold")
+                    .attr('aria-pressed', true);
+
+                // Enable All button
+                jQuery("#s-lg-az-first-all")
+                    .removeClass('s-lg-disabled-text-contrast')
+                    .addClass('s-lg-az-header s-lg-az-first')
+                    .prop('disabled', false);
+            } else {
+                // Disable All button
+                jQuery("#s-lg-az-first-all")
+                    .removeClass('s-lg-az-header s-lg-az-first')
+                    .addClass('s-lg-disabled-text-contrast')
+                    .prop('disabled', true);
+            }
+
+        }
+    };
+    jQuery(window).one('load', function() {springSpace.springTrack.trackPage({_st_type_id: '17'});});
+            springSpace.cookieConsentReadMore = "When you use LibGuides, the system writes several cookies in your browser. These cookies tell us whether and when you are logged in. The cookies are never shared with any third parties. <br \/><br \/>\r\n\r\nIn addition, your IP address and browser info is stored in server logs in order to generate aggregate anonymized usage statistics. Your IP address and login name are also stored in the LibGuides activity log to facilitate troubleshooting. This information is available to Springshare staff only and is only accessed upon institution request. <br \/><br \/>\r\n\r\nWe never share or sell any user information to third parties.";
+        springSpace.cookieConsentConfig = {
+            placement: 'bottom',
+            consent_message: "This site uses cookies and records your IP address for usage statistics. <a id=\"s-ui-cc-read-more-link\">Read More<\/a>",
+            read_more_callback: function () {
+                springSpace.UI.alert({
+                    height: 400, width: 400, title: "Privacy Notification", content: springSpace.cookieConsentReadMore,
+                    focus_on_close: false
+                });
+            }
+        };
+        springSpace.cookieConsent.alert(springSpace.cookieConsentConfig);
+        
+</script>  <!-- az_public_body.twig -->  <a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to main content</a> <!-- obsolete_browser_alert.twig --> 
+<div id="obsolete_browser_alert" class="alert alert-danger obsolete_browser_alert">
+  It looks like you're using Internet Explorer 11 or older. This website works best with modern browsers such as the latest versions of Chrome, Firefox, Safari, and Edge. If you continue with this browser, you may see unexpected results. 
+</div> 
+<style>
+    .obsolete_browser_alert {
+        display: none;
+        font-weight: bold;
+        font-size: 1.25em;
+        text-align: center;
+        padding: 20px;
+        z-index:9999
+    }
+</style> 
+<script>
+    // this property being set indicates an IE browser, so we show the alert
+    if (window.document.documentMode) {
+        document.getElementById("obsolete_browser_alert").style.display = "block";
+    }
+</script> <!-- !obsolete_browser_alert.twig --> <!-- BEGIN: Page Header --> <!--/*From Main Settings*/--> 
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"> 
+<link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua" rel="stylesheet" type="text/css"> 
+<link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Sorts+Mill+Goudy" rel="stylesheet">  
+<div id="header-container"> 
+ <div id="header-banner" class="container"> 
+  <div class="row"> 
+   <div id="brand-col" class="col-sm-8"> 
+    <div class="row"> <!--<div id="lib-logo" class="col-sm-3 col-md-2">
+					  <a href="//okbu.libguides.com/home" style="text decoration: none;"><img src="//s3.amazonaws.com/libapps/accounts/17883/images/Bannerlogo2.png" alt="Mabee Learning Center Logo" />></a>
+					</div>--> <!-- end div id=lib-logo --> 
+     <div id="lib-name" class="col-sm-9 col-md-10"> <a href="//okbu.libguides.com/main"> <!--<span class="logoheader">
+								<h1 style="color: white">Mabee Learning Center</h1>
+						   </span>--> <img alt="OBU Library" src="//s3.amazonaws.com/libapps/accounts/17883/images/OBULibrary_wht_web.png" style="max-width: 75%; max-height: 60px;"> </a> 
+     </div><!-- lib-name --> 
+    </div><!--row--> 
+   </div><!--brand-col--> 
+   <div id="tools-col" class="col-sm-4"> 
+    <div id="search_lg_widget"> 
+     <script>
+						springshare_widget_config_1472088823620 = {	 };
+					</script> 
+     <div id="s-lg-widget-1472088823620"></div> 
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://lgapi.libapps.com/widgets.php?site_id=2475&widget_type=7&widget_embed_type=1&output_format=1&search_box_type=1&placeholder_text=Search...&button_text=Search&widget_height=&widget_width=250&config_id=1472088823620";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","s-lg-widget-script-1472088823620");</script> 
+    </div> <!-- search widget--> 
+   </div><!-- tools-col --> 
+  </div><!-- row --> 
+ </div><!-- header-image --> <!--<div id="header-nav">--> <!--<nav class="navbar navbar-default" role="navigation"> --> <!--<div class="container"> --> <!--</div>--> <!-- /.container-fluid --> <!--</nav> --> <!--</div>--><!-- header-nav --> 
+</div> <!-- header-container --> <!-- END: Page Header --> <!-- BEGIN: Content Header --> 
+<div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders"> 
+ <nav id="s-lib-bc" aria-label="breadcrumb" role="navigation"> 
+  <ol id="s-lib-bc-list" class="breadcrumb"> 
+   <li id="s-lib-bc-customer"> <a title="Oklahoma Baptist University" href="https://www.okbu.edu">Oklahoma Baptist University </a> </li> 
+   <li id="s-lib-bc-site"> <a title="Mabee Learning Center" href="https://okbu.libguides.com/">Mabee Learning Center </a> </li> 
+   <li id="s-lib-bc-page" class="active">A-Z Databases </li> 
+  </ol>
+ </nav> 
+ <h1 id="s-lib-public-header-title">A-Z Databases</h1> 
+ <div id="s-lib-public-header-desc">
+  Find the best library databases for your research.
+ </div> 
+</div> <!-- END: Content Header --> <!-- BEGIN: Nav Bar --> 
+<div id="s-lib-public-nav" class="container s-lib-side-borders"> 
+</div> <!-- END: Nav Bar --> <!-- BEGIN: content --> 
+<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1"> 
+ <section> 
+  <div id="s-lg-az-search-bar" class="row"> 
+   <div id="az-search-col-1" class="col-md-12 center"> 
+    <nav class="navbar navbar-default" aria-label="Search filters"> 
+     <div class="container-fluid"> <!-- Brand and toggle get grouped for better mobile display --> 
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#s-lg-az-nav-1"> <span class="sr-only">Toggle search filters navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      </div> <!-- Collect the nav links, forms, and other content for toggling --> 
+      <div class="collapse navbar-collapse" id="s-lg-az-nav-1"> 
+       <div id="s-lg-az-filters" style="padding-top:15px;"> 
+        <section> 
+         <div id="s-lg-az-filter-cols" class="row"> 
+          <div id="col-subjects" class="col-md-3 center"> <label class="control-label sr-only" for="s-lg-sel-subjects">Database Subject Filter</label> <select id="s-lg-sel-subjects" name="s-lg-sel-subjects" class="form-control" data-placeholder="All Subjects" onchange="springSpace.publicObj.filterAzBySubject(jQuery(this).val(), 2475);"> <option value="" selected>All Subjects</option> <optgroup label="Subjects"> <option value="197464">Anthropology</option> <option value="100470">Archives</option> <option value="26928">Art &amp; Design</option> <option value="26934">Baptist History</option> <option value="120716">Book Reviews</option> <option value="26931">Business</option> <option value="26923">Church History</option> <option value="26965">Citation Style</option> <option value="31498">Communication</option> <option value="113009">Computer Science</option> <option value="31502">Creative Writing</option> <option value="197465">Criminal Justice</option> <option value="29741">Education</option> <option value="197510">Engineering</option> <option value="26921">English</option> <option value="26962">Exercise Science/Sports</option> <option value="197466">Family Science</option> <option value="197517">General Reference</option> <option value="26922">History</option> <option value="26935">Literature</option> <option value="32242">Logins</option> <option value="31497">Mathematics</option> <option value="31500">Modern Languages</option> <option value="26932">Music</option> <option value="26927">Native Americans</option> <option value="26930">Nursing</option> <option value="197475">Open Educational Resources</option> <option value="31505">Philosophy</option> <option value="89731">Political Science</option> <option value="197463">Primary Sources</option> <option value="197467">Psychology</option> <option value="114950">Research</option> <option value="26924">Science</option> <option value="100469">Sociology</option> <option value="31496">Theatre</option> <option value="26942">Theology &amp; Ministry</option> <option value="26943">Western Civilization</option></optgroup> </select> 
+          </div> 
+          <div id="col-types" class="col-md-3 center"> <label class="control-label sr-only" for="s-lg-sel-az-types">Database Types Filter</label> <select id="s-lg-sel-az-types" name="s-lg-sel-az-types" class="form-control" onchange="springSpace.publicObj.filterAzByType(jQuery(this).val(), 2475);" data-placeholder="All Database Types"> <option value="" selected>All Database Types</option><optgroup label="Types"><option value="24058">Book Reviews</option><option value="24057">E-Books</option><option value="4346">Full Text</option><option value="5074">General Reference</option><option value="12026">Index Only</option><option value="19994">Library Website</option></optgroup> </select> 
+          </div> 
+          <div id="col-vendors" class="col-md-3 center"> <label class="control-label sr-only" for="s-lg-sel-az-vendors">Database Vendors Filter</label> <select id="s-lg-sel-az-vendors" name="s-lg-sel-az-vendors" class="form-control" onchange="springSpace.publicObj.filterAzByVendor(jQuery(this).val(), 2475);" data-placeholder="All Vendors / Providers"> <option value="" selected>All Vendors / Providers</option><optgroup label="Vendors"><option value="9883">EBSCO</option><option value="61365">Free</option><option value="104204">Gale</option><option value="102140">Harvard</option><option value="102172">Infobase</option><option value="98074">InfoGroup</option><option value="10914">JSTOR</option><option value="111907">Naxos</option><option value="43481">NCBI</option><option value="11072">OCLC</option><option value="61364">Other</option><option value="98880">Ovid</option><option value="102167">Oxford</option><option value="90452">Project Muse</option><option value="10912">ProQuest</option><option value="31765">Reference Press</option></optgroup> </select> 
+          </div> 
+          <div id="col-search" class="col-md-3 center"> 
+           <form role="search" onsubmit="springSpace.publicObj.filterAzBySearch(2475); return false;"> 
+            <div class="form-group"> <label class="control-label sr-only" for="s-lg-az-search">DATABASES</label> 
+             <div class="input-group"> 
+              <input type="text" id="s-lg-az-search" class="form-control" placeholder="Search for Databases"> <span class="input-group-btn"> <button class="btn btn-default" type="submit">Go</button> </span> 
+             </div> 
+            </div> 
+           </form> 
+          </div> 
+         </div> 
+        </section> 
+       </div> 
+      </div> 
+     </div> 
+    </nav> 
+   </div> 
+  </div> 
+ </section> 
+ <section> 
+  <div id="s-lg-az-cols" class="row"> 
+   <div id="col1" class="col-md-8 center"> 
+    <div id="s-lg-az-index" class="pad-right-sm"> 
+     <div class="btn-group" role="group" aria-label="Alpha-list to filter by first letter of database name"> <button type="button" class="s-lg-az-header s-lg-az-first btn btn-link bold" id="s-lg-az-first-all" onclick="springSpace.publicObj.filterAzByFirst('all', 2475, 'All');">All</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-a" onclick="springSpace.publicObj.filterAzByFirst('a', 2475);">A</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-b" onclick="springSpace.publicObj.filterAzByFirst('b', 2475);">B</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-c" onclick="springSpace.publicObj.filterAzByFirst('c', 2475);">C</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-d" onclick="springSpace.publicObj.filterAzByFirst('d', 2475);">D</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-e" onclick="springSpace.publicObj.filterAzByFirst('e', 2475);">E</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-f" onclick="springSpace.publicObj.filterAzByFirst('f', 2475);">F</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-g" onclick="springSpace.publicObj.filterAzByFirst('g', 2475);">G</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-h" onclick="springSpace.publicObj.filterAzByFirst('h', 2475);">H</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-i" onclick="springSpace.publicObj.filterAzByFirst('i', 2475);">I</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-j" onclick="springSpace.publicObj.filterAzByFirst('j', 2475);">J</button><button type="button" class="s-lg-disabled-text-contrast btn btn-link" disabled>K</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-l" onclick="springSpace.publicObj.filterAzByFirst('l', 2475);">L</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-m" onclick="springSpace.publicObj.filterAzByFirst('m', 2475);">M</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-n" onclick="springSpace.publicObj.filterAzByFirst('n', 2475);">N</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-o" onclick="springSpace.publicObj.filterAzByFirst('o', 2475);">O</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-p" onclick="springSpace.publicObj.filterAzByFirst('p', 2475);">P</button><button type="button" class="s-lg-disabled-text-contrast btn btn-link" disabled>Q</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-r" onclick="springSpace.publicObj.filterAzByFirst('r', 2475);">R</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-s" onclick="springSpace.publicObj.filterAzByFirst('s', 2475);">S</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-t" onclick="springSpace.publicObj.filterAzByFirst('t', 2475);">T</button><button type="button" class="s-lg-disabled-text-contrast btn btn-link" disabled>U</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-v" onclick="springSpace.publicObj.filterAzByFirst('v', 2475);">V</button><button type="button" class="s-lg-az-header btn btn-link s-lg-az-first" id="s-lg-az-first-w" onclick="springSpace.publicObj.filterAzByFirst('w', 2475);">W</button><button type="button" class="s-lg-disabled-text-contrast btn btn-link" disabled>X</button><button type="button" class="s-lg-disabled-text-contrast btn btn-link" disabled>Y</button><button type="button" class="s-lg-disabled-text-contrast btn btn-link" disabled>Z</button><button type="button" class="s-lg-disabled-text-contrast btn btn-link" disabled>#</button> 
+     </div> 
+    </div> 
+    <div id="s-lg-az-search-reset" class="pad-top-med pad-bottom-med"> 
+     <h2 id="s-lg-az-result-count" aria-live="polite" class="bold s-lib-text-lg pull-left pad-right-med"></h2> <button id="s-lg-az-reset" class="btn btn-default btn-sm s-lib-hide" type="button" onclick="springSpace.azList.reset();">Clear Filters/Browse All Databases</button> 
+    </div> 
+    <div id="s-lg-az-content" class="pad-right-sm pad-top-med"> 
+     <div class="bold s-lib-color-lt-grey pad-top-med text-center">
+      Loading...
+     </div> 
+    </div> 
+   </div> 
+   <div id="col2" class="col-md-4 center"> 
+    <div id="s-lg-az-popular-div"> 
+     <div class="margin-bottom-xlg"> 
+      <div class="s-lib-public-side-header"> 
+       <h2 class="pad-bottom-sm">Popular Databases </h2> 
+      </div> 
+      <div class="txt pad-top-sm"> 
+       <div id="s-lg-az-popular-loading" class="bold s-lib-color-lt-grey pad-top-med">
+        Loading...
+       </div> 
+       <div id="s-lg-az-popular"> 
+        <div id="s-lg-az-popular-none" class="s-lg-disabled-text-contrast">
+          We haven't yet identified any Popular databases. Check back soon! 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="s-lg-az-trials-div"> 
+     <div class="margin-bottom-xlg"> 
+      <div class="s-lib-public-side-header"> 
+       <h2 class="pad-bottom-sm">New / Trial Databases </h2> 
+      </div> 
+      <div class="txt pad-top-sm"> 
+       <div id="s-lg-az-trials-loading" class="bold s-lib-color-lt-grey pad-top-med">
+        Loading...
+       </div> 
+       <div id="s-lg-az-trials">
+        The following databases are newly acquired or being evaluated for a future subscription. 
+        <div class="s-lg-az-result s-lg-az-result-trial"> 
+         <div class="s-lg-az-result-title"> <a target="_blank" href="https://okbu.libguides.com/artstor" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '16',_st_content_id: '58845192'});">Artstor <i class="fa fa-fw fa-external-link" aria-hidden="true" title="This link opens in a new window"></i><span class="sr-only">This link opens in a new window</span></a> 
+         </div> 
+         <div class="s-lg-az-result-badges">
+          <span class="s-lg-az-result-badge-trial label">Trial</span> 
+         </div> 
+         <div class="s-lg-az-result-share" title="Share"> <button class="btn btn-sm btn-link" onclick="springSpace.publicObj.displayAzShareAlert({
+                        'id': 58845192, 'site_id': 2475,
+                        'name': 'Share',
+                        'action': 522,
+                        'btn_text': 'Close'
+                    });"><i class="fa fa-share-alt fa-lg fa-fw" aria-hidden="true"></i><span class="sr-only">This opens a pop-up window to share the URL for this database</span> </button> 
+         </div>
+         <div class="s-lg-az-result-description">
+          With approximately 300 collections composed of over 2.5 million images (and growing), scholars can examine wide-ranging material such as Native American art from the Smithsonian, treasures from the Louvre, and panoramic, 360-degree views of the Hagia Sophia in a single, easy-to-use resource.
+          <br> 
+          <br> Artstor also supports study across disciplines, including anthropology from Harvard’s Peabody Museum, archaeology from Erich Lessing Culture and Fine Art Archives, and modern history from Magnum Photos.
+         </div> 
+        </div> 
+        <div class="s-lg-az-result s-lg-az-result-new"> 
+         <div class="s-lg-az-result-title"> <a target="_blank" href="https://okbu.libguides.com/blackfreedom" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: '16',_st_content_id: '58607402'});">Black Freedom <i class="fa fa-fw fa-external-link" aria-hidden="true" title="This link opens in a new window"></i><span class="sr-only">This link opens in a new window</span></a> 
+         </div> 
+         <div class="s-lg-az-result-badges">
+          <span class="s-lg-az-result-badge-new label">New</span> 
+         </div> 
+         <div class="s-lg-az-result-share" title="Share"> <button class="btn btn-sm btn-link" onclick="springSpace.publicObj.displayAzShareAlert({
+                        'id': 58607402, 'site_id': 2475,
+                        'name': 'Share',
+                        'action': 522,
+                        'btn_text': 'Close'
+                    });"><i class="fa fa-share-alt fa-lg fa-fw" aria-hidden="true"></i><span class="sr-only">This opens a pop-up window to share the URL for this database</span> </button> 
+         </div>
+         <div class="s-lg-az-result-description">
+          This website contains approximately 1,600 documents focused on six different phases of Black Freedom:
+          <br> 
+          <br> Slavery and the Abolitionist Movement (1790-1860)
+          <br> The Civil War and the Reconstruction Era (1861-1877)
+          <br> Jim Crow Era from 1878 to the Great Depression (1878-1932)
+          <br> The New Deal and World War II (1933-1945)
+          <br> The Civil Rights and Black Power Movements (1946-1975)
+          <br> The Contemporary Era (1976-2000)
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="s-lg-az-experts-div"> 
+     <div class="bold s-lib-color-lt-grey pad-top-med">
+      Loading...
+     </div> 
+    </div> 
+    <div id="s-lg-az-guides-div"> 
+     <div class="bold s-lib-color-lt-grey pad-top-med">
+      Loading...
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </section> 
+</div> <!-- END: content --> <!-- BEGIN: Page Footer --> 
+<div id="s-lib-footer-public" class="container s-lib-footer footer s-lib-side-borders"> 
+ <div> 
+  <div id="s-lib-footer-brand">
+    Powered by Springshare. 
+  </div> 
+  <div id="s-lib-footer-rights">
+    All rights reserved. 
+  </div> 
+  <div id="s-lib-footer-login-link"> <a href="https://okbu.libapps.com/libapps/login.php?site_id=2475">Librarian Login</a> 
+  </div> 
+ </div> 
+ <div> 
+  <div id="s-lib-footer-support-link"> <a href="mailto:obu.library@okbu.edu">Report a problem.</a> 
+  </div> 
+ </div> 
+</div> <!-- END: Page Footer --> 
+<div id="s-lib-alert" title=""> 
+ <div id="s-lib-alert-content"></div> 
+</div> 
+<div id="s-lib-popover-title" class="hide"> <span class="text-info"><strong>title</strong></span> <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">×</button> 
+</div> 
+<div id="s-lib-popover-content" class="hide">
+ <i class="fa fa-refresh fa-spin"></i> Loading... <button class="btn btn-default btn-sm popclose" type="button">Close</button> 
+</div> 
+<div id="s-lib-scroll-top"> <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top" aria-label="Back to Top"> <span class="fa-stack fa-lg" aria-hidden="true"> <i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i> </span> </a> 
+</div> <!-- BEGIN: Custom Footer --> 
+<div id="customfooter" align="center" style="width: 100%; background-color:#202020; color:#FFFFFF;">
+ <p style="text-align: center;"><br> <a href="//okbu.edu" class="logoImage"> <img src="https://s3.amazonaws.com/libapps/accounts/17883/images/footerLogo.JPG" alt="Oklahoma Baptist University"></a> <br>500 West University, Shawnee, OK 74804 <br>800.654.3285 | info@okbu.edu</p>
+ <br> 
+</div> <!-- END: Custom Footer -->  <!-- !az_public_body.twig --> <!-- !az_public.twig -->
+</body>
+</doc>

@@ -1,0 +1,544 @@
+<doc>
+<filename>umfk.maine.edu0.html</filename>
+<url>http://www.umfk.maine.edu/</url>
+<ip>130.111.27.34</ip>
+<title>University of Maine at Fort Kent | Quality Academic Programs</title>
+<body>
+<span class="sr-only"><h1>University of Maine at Fort Kent</h1></span> <span class="sr-only"><a href="#pageContent">skip to content</a></span> 
+<script>
+var hideAlert = function(hideId) {
+$("#" + hideId).hide('blind','',500);
+}
+</script> 
+<script>
+jQuery.getJSON( "https://www.maine.edu/together/wp-json/covid-19/v1/latest", function( data ) {
+let alertInfo = jQuery('#umfkNotificationContent1');
+alertInfo.html(alertInfo.html() + ' - <div class="small inline">Last Updated: ' + data.ums_covid_19_modified_mobile) + '</div>';
+});
+</script> 
+<div class="alert-notify no-border border-bottom" id="umfkNotification1"> 
+ <div class="alert-content medium" id="umfkNotificationContent1"> <a href="/notifications/together/" target="_blank"><span class="fas fa-exclamation-triangle" title="alert" aria-hidden="true"></span> University of Maine System COVID-19 Information: Together for Maine: Principles for a Safe Return</a> 
+ </div> 
+</div> 
+<div class="alert-notify no-border border-top" id="umfkNotification2"> 
+ <div class="alert-content" id="umfkNotificationContent2"> <a href="/notifications/return2020/" target="_blank"><span class="fas fa-info-circle" title="information" aria-hidden="true"></span> University of Maine at Fort Kent Safe Return to Campus Plans</a> 
+  <div class="inline">
+    &nbsp;| &nbsp;<a href="/notifications/return2020/related-content/cares-act-reports/" target="_self">CARES Act Reports</a>
+  </div> 
+ </div> 
+</div> 
+<script>
+var hideDashboard = function(dashId,expDt) {
+var closeBtn = dashId + 'closebtn';
+var openBtn = dashId + 'openbtn';
+$("#" + dashId).hide('blind','',500);
+// document.cookie = 'hide' + dashId + '=true; expires=' + expDt + 'EST; path=/';
+document.getElementById(closeBtn).classList.toggle('hide');
+document.getElementById(openBtn).classList.toggle('hide');
+}
+var showDashboard = function(dashId,expDt) {
+var closeBtn = dashId + 'closebtn';
+var openBtn = dashId + 'openbtn';
+$("#" + dashId).show('blind','',500);
+// document.cookie = 'hide' + dashId + '=false; expires=' + expDt + 'EST; path=/';
+document.getElementById(closeBtn).classList.toggle('hide');
+document.getElementById(openBtn).classList.toggle('hide');
+}
+/* var chkHidden = function(dashId) {
+var closeBtn = dashId + 'closebtn';
+var openBtn = dashId + 'openbtn';
+var chkCookieVal = 'hide' + dashId + '=';
+var cookieVal = '';
+var decodedCookie = decodeURIComponent(document.cookie);
+var cv = decodedCookie.split(';');
+for (var v=0; v < cv.length; v++) {
+var thisVal = cv[v];
+while (thisVal.charAt(0) == ' ') {
+thisVal = thisVal.substring(1);
+}
+if (thisVal.indexOf(chkCookieVal) == 0) {
+cookieVal = thisVal.substring(chkCookieVal.length, thisVal.length);
+if (cookieVal == 'true') {
+$("#" + dashId).hide();
+document.getElementById(closeBtn).classList.toggle('hide');
+document.getElementById(openBtn).classList.toggle('hide');
+break;
+}
+}
+}
+} */
+$( document ).ready(function() {
+loadContent('/includes/covid-dash-display.cfm?portal=false','coviddashboard');
+/* chkHidden('coviddashboard'); */
+});
+</script> 
+<link rel="stylesheet" href="https://portal.umfk.edu/css/dashboard.css" type="text/css"> 
+<link rel="stylesheet" href="https://portal.umfk.edu/css/dashboard-website.css" type="text/css"> 
+<div class="dashboard-container sm med lg"> 
+ <h2 class="center"> <span><strong>Campus COVID-19 Dashboard</strong></span> <a id="coviddashboardclosebtn" class="margin-leftmed btn btn-green-inline hide" onclick="javascript:hideDashboard('coviddashboard');"><span class="fas fa-chevron-circle-up" title="close" aria-hidden="true"></span><span class="label">Close</span></a> <a id="coviddashboardopenbtn" class="margin-leftmed btn btn-green-inline" onclick="javascript:showDashboard('coviddashboard');"><span class="fas fa-chevron-circle-down" title="open" aria-hidden="true"></span><span class="label">Open</span></a> </h2> 
+ <div id="coviddashboard" class="dashboard" style="display: none;"></div> 
+</div> 
+<header class="navbar-wrapper"> 
+ <nav id="siteNavigation" class="navbar navbar-inverse navbar-static-top" role="navigation"> 
+  <div class="topbar clearfix"> 
+   <ul class="nav pull-left"> 
+    <li class="nav-divider-right"><a href="https://portal.umfk.edu/auth/" target="_blank" id="portalBtn"><span class="yellowtext"><span class="fas fa-paw fa-lg" title="paw print" aria-hidden="true"></span></span> My.UMFK</a></li> 
+    <li class="nav-divider-right hidden-xs"><a href="tel:+1-207-834-7883">Campus Status: (207) 834-7883</a></li> 
+   </ul> 
+   <ul class="nav pull-right"> 
+    <li class="nav-divider-left hidden-xs"><a href="/directory/"><span class="fas fa-address-book" title="address book" aria-hidden="true"></span> Campus Directory</a></li> 
+    <li class="nav-divider-left hidden-xs dropdown"><a href="/departments/" class="dropdown-toggle">Offices</a> 
+     <ul class="dropdown-menu col-4"> 
+      <li class="multi-col"> 
+       <ul> 
+        <li><a href="/offices/academic-affairs/">Academic Affairs</a></li> 
+        <li><a href="/offices/archives/">Acadian Archives/Archives acadiennes</a></li> 
+        <li><a href="/offices/business-office/">Business Office</a></li> 
+        <li><a href="/offices/campus-store/">Campus Store</a></li> 
+        <li><a href="/offices/career-services/">Career Services</a></li> 
+        <li><a href="/offices/commencement/">Commencement</a></li> 
+       </ul> </li> 
+      <li class="multi-col"> 
+       <ul> 
+        <li><a href="/offices/community-education/">Community Education</a></li> 
+        <li><a href="/offices/distance-education/">Distance Education</a></li> 
+        <li><a href="/offices/emergency-management/">Emergency Management</a></li> 
+        <li><a href="/offices/facilities-management/">Facilities Management</a></li> 
+        <li><a href="/offices/financial-aid/">Financial Aid</a></li> 
+        <li><a href="/offices/health-and-wellness/">Health and Wellness</a></li> 
+       </ul> </li> 
+      <li class="multi-col"> 
+       <ul> 
+        <li><a href="/offices/human-resources/">Human Resources</a></li> 
+        <li><a href="/offices/information-technology/">Information Technology</a></li> 
+        <li><a href="/offices/institutional-research/">Institutional Research</a></li> 
+        <li><a href="/offices/library/">Library</a></li> 
+        <li><a href="/offices/planning-evaluation/">Planning &amp; Evaluation</a></li> 
+        <li><a href="/offices/registrar/">Registrar's Office</a></li> 
+       </ul> </li> 
+      <li class="multi-col"> 
+       <ul> 
+        <li><a href="/offices/rural-u/">Rural U</a></li> 
+        <li><a href="/offices/student-affairs/">Student Affairs</a></li> 
+        <li><a href="/offices/student-employment/">Student Employment</a></li> 
+        <li><a href="/offices/student-success-center/">Student Success Center</a></li> 
+       </ul> </li> 
+     </ul> </li> 
+    <li class="nav-divider-left hidden-xs"><a href="/alumni/">Alumni</a></li> 
+    <li class="nav-btn-yellow"><a href="/alumni/giving/"><span class="fas fa-gift" title="gift" aria-hidden="true"></span> Give to UMFK</a></li> 
+   </ul> 
+  </div> 
+  <div class="container"> 
+   <div class="navbar-header row"> 
+    <div class="col-md-2 col-sm-3 show" id="branding"> <a class="navbar-brand" href="/"><img src="/themes/muraumfk2/images/umfk-life-logo.svg" alt="LIFE at University of Maine at Fort Kent: Learn. Innovate. Find. Engage."></a> 
+    </div> 
+    <div class="col-md-2 col-sm-3 hide" id="branding2"> <a class="navbar-brand" href="/"><img src="/themes/muraumfk2/images/umfklogo.svg" alt="University of Maine at Fort Kent"></a> 
+    </div> 
+    <div class="collapse navbar-collapse navbar-ex1-collapse"> 
+     <div class="col-md-10 col-sm-9" id="navPrimary"> 
+      <ul class="navPrimary nav navbar-nav"> 
+       <li class="dropdown first"> <a href="/admissions/" class="dropdown-toggle"> Admissions &amp; Aid 
+         <div class="indicatorbg" aria-hidden="true"></div> 
+         <div class="indicator" aria-hidden="true"></div> </a> 
+        <ul class="dropdown-menu col-4"> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/admissions/majors/">Majors, Minors &amp; Certificates</a></li> 
+           <li><a href="/admissions/scholarships/">Bengal Academic Scholarships</a></li> 
+           <li><a href="/admissions/financial-aid/">Financial Aid</a></li> 
+           <li><a href="/admissions/parents/">Information For Parents</a></li> 
+           <li><a href="/admissions/virtual-overview/">Attend a Virtual Overview</a></li> 
+          </ul> </li> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/admissions/visiting/">Schedule a Visit</a></li> 
+           <li><a href="/admissions/join/">Join Our Mailing List</a></li> 
+           <li><a href="/admissions/staff/">Meet The Admissions Team</a></li> 
+           <li><a href="/admissions/students/">Meet Our Students</a></li> 
+           <li><a href="/admissions/apply/">Application Process &amp; Tools</a></li> 
+          </ul> </li> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/admissions/accepted/">Accepted Students Checklist</a></li> 
+           <li><a href="/admissions/international/">International Students</a></li> 
+           <li><a href="/admissions/transfer/">Transfer Students</a></li> 
+           <li><a href="/admissions/orientation/">New Student Orientation</a></li> 
+           <li><a href="/admissions/military/">Veterans and Military</a></li> 
+          </ul> </li> 
+         <li class="multi-col rounded center"><img src="/sites/default/cache/file/F6705100-CA18-4D33-9E82D8BA71321F74_bottomhighlightimagenew.jpg" alt="Meet the Students Attending University of Maine at Fort Kent"></li> 
+        </ul> </li> 
+       <li class="dropdown"> <a href="/programs/" class="dropdown-toggle"> Academics 
+         <div class="indicatorbg" aria-hidden="true"></div> 
+         <div class="indicator" aria-hidden="true"></div> </a> 
+        <ul class="dropdown-menu col-4"> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/programs/allied-health/">Allied Health</a></li> 
+           <li><a href="/programs/forestry/">Applied Forest Management</a></li> 
+           <li><a href="/programs/arts-and-sciences/">Arts and Sciences</a></li> 
+           <li><a href="/programs/behavioral-science/">Behavioral Science</a></li> 
+           <li><a href="/programs/biology/">Biology</a></li> 
+           <li><a href="/programs/business-management/">Business Management</a></li> 
+          </ul> </li> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/programs/computer-applications/">Computer Applications</a></li> 
+           <li><a href="/programs/conservation-law-enforcement/">Conservation Law Enforcement</a></li> 
+           <li><a href="/programs/security/">Cybersecurity &amp; Info Security</a></li> 
+           <li><a href="/programs/education/">Education</a></li> 
+           <li><a href="/programs/english/">English</a></li> 
+           <li><a href="/programs/environmental/">Environmental Studies</a></li> 
+          </ul> </li> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/programs/general-studies/">General Studies</a></li> 
+           <li><a href="/programs/nursing/">Nursing</a></li> 
+           <li><a href="/programs/safety/">Rural Public Safety Administration</a></li> 
+           <li><a href="/programs/minors-certificates/">Minors &amp; Certificate Programs</a></li> 
+          </ul> </li> 
+         <li class="multi-col rounded center"><img src="/sites/default/cache/file/78991F66-C62F-48CA-B0ECA4CCAC44E97B_bottomhighlightimagenew.jpg" alt="Biology"></li> 
+        </ul> </li> 
+       <li class="dropdown"> <a href="/student-life/" class="dropdown-toggle"> Student Life 
+         <div class="indicatorbg" aria-hidden="true"></div> 
+         <div class="indicator" aria-hidden="true"></div> </a> </li> 
+       <li class="dropdown"> <a href="/athletics/" class="dropdown-toggle"> Athletics 
+         <div class="indicatorbg" aria-hidden="true"></div> 
+         <div class="indicator" aria-hidden="true"></div> </a> </li> 
+       <li class="dropdown"> <a href="/quick-links/" class="dropdown-toggle"> Quick Links 
+         <div class="indicatorbg" aria-hidden="true"></div> 
+         <div class="indicator" aria-hidden="true"></div> </a> 
+        <ul class="dropdown-menu col-4"> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/quick-links/about-umfk/">About UMFK</a></li> 
+           <li><a href="/quick-links/academic-calendar/">Academic Calendar</a></li> 
+           <li><a href="/quick-links/brightspace/">Brightspace</a></li> 
+           <li><a href="/quick-links/campus-calendar/">Campus Calendar</a></li> 
+           <li><a href="/quick-links/campus-directory/">Campus Directory</a></li> 
+           <li><a href="/quick-links/commencement/">Commencement</a></li> 
+           <li><a href="/quick-links/course-search/">Course Search</a></li> 
+          </ul> </li> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/quick-links/edit-emergency-contact-info/">Edit Emergency Contact Info.</a></li> 
+           <li><a href="/quick-links/jobs-at-umfk/">Jobs at UMFK</a></li> 
+           <li><a href="/quick-links/latest-news/">Latest News</a></li> 
+           <li><a href="/quick-links/mainestreet/">MaineStreet</a></li> 
+           <li><a href="/quick-links/student-consumer-information/">Student Consumer Information</a></li> 
+           <li><a href="/quick-links/student-faqs/">Student FAQs</a></li> 
+           <li><a href="/quick-links/title-ix-information/">Title IX Information</a></li> 
+          </ul> </li> 
+         <li class="multi-col"> 
+          <ul> 
+           <li><a href="/quick-links/university-catalog/">University Catalog</a></li> 
+           <li><a href="/quick-links/university-email/">University Email</a></li> 
+           <li><a href="/quick-links/university-email-account-management/">University Email Account Management</a></li> 
+           <li><a href="/quick-links/university-policies/">University Policies</a></li> 
+           <li><a href="/quick-links/webcasts/">Webcasts</a></li> 
+          </ul> </li> 
+         <li class="multi-col rounded center"><img src="/sites/default/cache/file/7D6A3DD1-06ED-47AC-BEC01D412181127E_bottomhighlightimagenew.jpg" alt="About UMFK | A Community Atmosphere - A Global Perspective"></li> 
+        </ul> </li> 
+       <li class="dropdown navbar-form"> <a href="/search/" class="hidden-lg hidden-md hidden-xs btn btn-default pull-right"><span class="fas fa-search" title="search" aria-hidden="true"></span><span class="sr-only">Search</span></a> 
+        <form id="searchForm" class="hidden-sm" action="/search/" role="search"> <span class="input-group"> <input type="text" title="Search UMFK" name="Keywords" id="navKeywords" class="form-control" value="" placeholder="Search UMFK"> <span class="input-group-btn"> <button type="submit" class="btn btn-default"> <span class="fas fa-search" title="Search" aria-hidden="true"></span> <span class="sr-only">Search</span> </button> </span> </span> 
+         <input type="hidden" name="display" value="search"> 
+         <input type="hidden" name="newSearch" value="true"> 
+         <input type="hidden" name="noCache" value="1"> 
+        </form> </li> 
+      </ul> <span class="dropdown navbar-form"> <a href="/admissions/apply/" class="btn btn-default btn-apply pull-right"><strong><span class="fas fa-pencil-alt" title="pencil" aria-hidden="true"></span> Apply Online</strong></a> <a href="/admissions/apply/" class="btn btn-default btn-apply-small pull-right"><strong><span class="fas fa-pencil-alt" title="pencil" aria-hidden="true"></span> Apply</strong></a> </span> 
+      <script>
+$(function(){
+$(["/"]).each(
+function(index, value){
+$("#navPrimary [href='" + value + "']").closest("li").addClass("active");
+$("#navPrimary2 [href='" + value + "']").closest("li").addClass("active");
+}
+);
+})
+</script> 
+     </div> 
+    </div> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+   </div> 
+  </div> 
+ </nav> 
+</header> 
+<div class="print-header center"> 
+ <img src="/themes/muraumfk2/images/umfklogo.svg" alt="University of Maine at Fort Kent" width="291"> 
+</div> 
+<div class="carouselContainer" id="homeCarousel"> 
+ <div id="homeHighlights" class="carousel slide" data-interval="5000"> 
+  <ol class="carousel-indicators"> 
+   <li data-target="#homeHighlights" data-slide-to="0" class="active"></li> 
+   <li data-target="#homeHighlights" data-slide-to="1" class=""></li> 
+   <li data-target="#homeHighlights" data-slide-to="2" class=""></li> 
+   <li data-target="#homeHighlights" data-slide-to="3" class=""></li> 
+   <li data-target="#homeHighlights" data-slide-to="4" class=""></li> 
+  </ol> 
+  <div class="row carousel-inner"> 
+   <div class="row item active"> 
+    <img src="/sites/default/cache/file/40901211-F960-4A74-B014FE0075489F47_homepageimagenew.jpg" alt="Maine's Health Sciences Campus with Professional Programs"> 
+    <div class="container"> 
+     <div class="carousel-caption"> 
+      <h2>Maine's Health Sciences Campus with Professional Programs</h2> 
+      <p>Learn how <strong>UMFK</strong> can prepare you for <strong>LIFE</strong></p> 
+      <p><a class="btn btn-larg btn-primary" href="/homepage-rotator-photos/maine-s-health-sciences-campus-with-professional-programs/">Read More</a></p> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row item"> 
+    <img src="/sites/default/cache/file/EBFE63B3-27C8-4F98-867447B89DEFF0AD_homepageimagenew.jpg" alt="Meet Our President"> 
+    <div class="container"> 
+     <div class="carousel-caption"> 
+      <h2>Meet Our President</h2> 
+      <p>Chat with our new President, Dr. Deb Hedeen</p> 
+      <p><a class="btn btn-larg btn-primary" href="/homepage-rotator-photos/meet-our-president/">Read More</a></p> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row item"> 
+    <img src="/sites/default/cache/file/FC035B88-69E4-4F00-B7B0523E2DD34FC7_homepageimagenew.jpg" alt="Learn from Experts in the Field"> 
+    <div class="container"> 
+     <div class="carousel-caption"> 
+      <h2>Learn from Experts in the Field</h2> 
+      <p>Biomedical • Pre-Med • Pre-Vet • Environmental Science</p> 
+      <p><a class="btn btn-larg btn-primary" href="/homepage-rotator-photos/learn-from-experts-in-the-field/">Read More</a></p> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row item"> 
+    <img src="/sites/default/cache/file/C5972D10-6856-4A00-BED70BA5CF311E8F_homepageimagenew.jpg" alt="Safe and Friendly"> 
+    <div class="container"> 
+     <div class="carousel-caption"> 
+      <h2>Safe and Friendly</h2> 
+      <p>A safe, close-knit, socially-distanced campus</p> 
+      <p><a class="btn btn-larg btn-primary" href="/homepage-rotator-photos/safe-and-friendly/">Read More</a></p> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="row item"> 
+    <img src="/sites/default/cache/file/9739EFD4-12C8-4FB4-892458AA4CA19CE1_homepageimagenew.jpg" alt="Join the UMFK Community"> 
+    <div class="container"> 
+     <div class="carousel-caption"> 
+      <h2>Join the UMFK Community</h2> 
+      <p>Live Together •&nbsp;Grow Together •&nbsp;Develop Lifelong Friendships</p> 
+      <p><a class="btn btn-larg btn-primary" href="/homepage-rotator-photos/join-the-umfk-community/">Read More</a></p> 
+     </div> 
+    </div> 
+   </div> 
+  </div> <a class="left carousel-control" href="#homeHighlights" data-slide="prev" aria-label="previous"><span class="fas fa-chevron-left fa-2x" aria-hidden="true"><span class="hide">Previous</span></span></a> <a class="right carousel-control" href="#homeHighlights" data-slide="next" aria-label="next"><span class="fas fa-chevron-right fa-2x" aria-hidden="true"><span class="hide">Next</span></span></a> 
+  <script>jQuery(document).ready(function($){$('#homeHighlights').carousel({interval:5000});});</script> 
+ </div> 
+ <div class="carousel-buttons container"> 
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+   <div class="mura-object" data-object="component" data-objectid="Homepage Buttons" data-instanceid="2FB11DB2-6845-40DC-B8EF3540782395B7" style="" data-render="server" data-async="false" data-cssstyles="" data-objecticonclass="mi-clone" data-objectname="">
+    <div id="" class="mura-object-content" style="">
+     <div class="row"> 
+      <div class="col-md-4 col-sm-4">
+       <a class="btn-gold" href="/admissions/apply/"><span class="fas fa-pencil-alt fa-lg" title="pencil" aria-hidden="true"></span> Apply Online Now</a>
+      </div> 
+      <div class="col-md-4 col-sm-4">
+       <a class="btn-gold" href="/programs/"><span class="fas fa-university fa-lg" title="university" aria-hidden="true"></span> Degree Programs</a>
+      </div> 
+      <div class="col-md-4 col-sm-4">
+       <a class="btn-gold" href="/admissions/visiting/"><span class="fas fa-compass fa-lg" title="compass" aria-hidden="true"></span> Visit Our Campus</a>
+      </div> 
+     </div>
+    </div>
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container" id="pageContent"> 
+ <div class="row"> 
+  <h2 class="center separator"><strong>Preparing You for LIFE: UMFK Success Stories</strong></h2> 
+  <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottomHighlights"> 
+   <div class="row"> 
+    <div class="col-md-4 col-sm-4"> <a href="https://www.umfk.edu/allied-health/current-student-profiles/cassandra-mcdougall/" target="_self"> <img alt="Cassandra McDougall" src="https://www.umfk.edu/index.cfm/_api/render/file/?fileID=6E49F547-580F-4A0A-940D37741075D417&amp;fileEXT=.jpg&amp;size=bottomhighlightimagenew"> </a> 
+     <h2><a href="https://www.umfk.edu/allied-health/current-student-profiles/cassandra-mcdougall/" target="_self">Cassandra McDougall</a></h2> 
+     <p>Current Allied Health Student</p> 
+    </div> 
+    <div class="col-md-4 col-sm-4"> <a href="https://www.umfk.edu/biology/alumni-profiles/zach-beal/" target="_self"> <img alt="Zach Beal" src="https://www.umfk.edu/index.cfm/_api/render/file/?fileID=65A1DA28-4F52-4CAE-9DDB43CA7D6886AB&amp;fileEXT=.jpg&amp;size=bottomhighlightimagenew"> </a> 
+     <h2><a href="https://www.umfk.edu/biology/alumni-profiles/zach-beal/" target="_self">Zach Beal</a></h2> 
+     <p>Jackson Laboratories</p> 
+    </div> 
+    <div class="col-md-4 col-sm-4"> <a href="https://www.umfk.edu/behavioral/alumni-profiles/yosselin-berrueco/" target="_self"> <img alt="Yosselin Berrueco" src="https://www.umfk.edu/index.cfm/_api/render/file/?fileID=74500DA0-488E-4C9B-928C8D70FF476CDA&amp;fileEXT=.jpg&amp;size=bottomhighlightimagenew"> </a> 
+     <h2><a href="https://www.umfk.edu/behavioral/alumni-profiles/yosselin-berrueco/" target="_self">Yosselin Berrueco</a></h2> 
+     <p>Behavior Support Specialist, Children’s Group Home</p> 
+    </div> 
+   </div> 
+  </section> 
+ </div> 
+ <div class="row"> 
+  <section class="col-lg-12 content accolades"> 
+   <div class="bgImg" aria-hidden="true"></div> 
+   <div class="mura-object" data-object="component" data-objectid="Accolades" data-instanceid="EF87B2AC-5A4C-49C2-8D1911B75B9DDA92" style="" data-render="server" data-async="false" data-cssstyles="" data-objecticonclass="mi-clone" data-objectname="">
+    <div id="" class="mura-object-content" style="">
+     <div class="center offset">
+      <img alt="award-winning education 2021" height="320" src="/sites/default/assets/Image/logos/nationalranks2021.svg" width="320">
+     </div> 
+     <div class="row"> 
+      <div class="span4 col-md-4 col-sm-4 col-xs-12"> 
+       <h2 class="separator">2021 Best Northeastern College</h2> 
+       <p><em>-The Princeton Review</em></p> 
+      </div> 
+      <div class="span4 col-md-4 col-sm-4 col-xs-12"> 
+       <h2 class="separator">2021 Best Regional College North</h2> 
+       <p><em>-U.S. News &amp; World Report</em></p> 
+      </div> 
+      <div class="span4 col-md-4 col-sm-4 col-xs-12"> 
+       <h2 class="separator">2020 Best Bang for the Buck: Northeast</h2> 
+       <p><em>-Washington Monthly</em></p> 
+      </div> 
+     </div>
+    </div>
+   </div> 
+   <div class="mura-region mura-region-loose"> 
+    <div class="mura-region-local"></div> 
+   </div> 
+   <div class="mura-region">
+    <div class="mura-region-local"></div>
+   </div> 
+  </section> 
+ </div> 
+ <div class="row"> 
+  <h2 class="center separator"><strong>Find Us On...</strong></h2> 
+  <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottomHighlights"> 
+   <div class="row"> 
+    <div class="col-md-3 col-sm-3"> <a href="https://www.umfk.edu/social-media/instagram-umfkadm/" target="_blank"> <img alt="instagram umfkadm" src="https://www.umfk.edu/index.cfm/_api/render/file/?fileID=E5D2A355-4033-4CB6-A3F48E232F33CE8F&amp;fileEXT=.jpg&amp;size=bottomhighlightimagenew"> <span class="green-overlay"><span aria-hidden="true" class="fab fa-instagram" title="Instagram"><span class="sr-only">Instagram</span></span></span> </a> 
+     <h2><a href="https://www.umfk.edu/social-media/instagram-umfkadm/" target="_blank"><span class="fab fa-instagram" title="instagram" aria-hidden="true"></span> umfkadm</a></h2> 
+    </div> 
+    <div class="col-md-3 col-sm-3"> <a href="https://www.umfk.edu/social-media/facebook-umfklife/" target="_blank"> <img alt="facebook UMFKLIFE" src="https://www.umfk.edu/index.cfm/_api/render/file/?fileID=7B9BD306-3B1B-421F-A55BBEA2B522D684&amp;fileEXT=.jpg&amp;size=bottomhighlightimagenew"> <span class="green-overlay"><span aria-hidden="true" class="fab fa-facebook" title="Facebook"><span class="sr-only">Facebook</span></span></span> </a> 
+     <h2><a href="https://www.umfk.edu/social-media/facebook-umfklife/" target="_blank"><span class="fab fa-facebook" title="facebook" aria-hidden="true"></span> UMFKLIFE</a></h2> 
+    </div> 
+    <div class="col-md-3 col-sm-3"> <a href="https://www.umfk.edu/social-media/instagram-umfk-athletics/" target="_blank"> <img alt="instagram umfk_athletics" src="https://www.umfk.edu/index.cfm/_api/render/file/?fileID=D9FB9F3C-00DF-4BC9-A097AD24028DD6D2&amp;fileEXT=.jpg&amp;size=bottomhighlightimagenew"> <span class="green-overlay"><span aria-hidden="true" class="fab fa-instagram" title="Instagram"><span class="sr-only">Instagram</span></span></span> </a> 
+     <h2><a href="https://www.umfk.edu/social-media/instagram-umfk-athletics/" target="_blank"><span class="fab fa-instagram" title="instagram" aria-hidden="true"></span> umfk_athletics</a></h2> 
+    </div> 
+    <div class="col-md-3 col-sm-3"> <a href="https://www.umfk.edu/social-media/calendar-upcoming-events/" target="_self"> <img alt="calendar Upcoming Events" src="https://www.umfk.edu/index.cfm/_api/render/file/?fileID=C2CA178D-3A06-4471-9F9CC3CF07CAD0EC&amp;fileEXT=.jpg&amp;size=bottomhighlightimagenew"> <span class="green-overlay"><span aria-hidden="true" class="fas fa-calendar" title="Calendar"><span class="sr-only">Calendar</span></span></span> </a> 
+     <h2><a href="https://www.umfk.edu/social-media/calendar-upcoming-events/" target="_self"><span class="fas fa-calendar" title="calendar" aria-hidden="true"></span> Upcoming Events</a></h2> 
+    </div> 
+   </div> 
+  </section> 
+ </div> 
+</div><!-- /.container --> 
+<footer> 
+ <div class="footer_area content-bottom-shadow"> 
+  <div class="footer_content"> 
+   <div class="container copyright text-center"> 
+    <div class="mura-object" data-object="component" data-objectid="Footer Content" data-instanceid="95527D57-6150-4D90-B4F817C27AEB15A3" style="" data-render="server" data-async="false" data-cssstyles="" data-objecticonclass="mi-clone" data-objectname="">
+     <div id="" class="mura-object-content" style="">
+      <div class="row"> 
+       <div class="span6 col-md-8 col-sm-7 left footer-center"> 
+        <p><img alt="University of Maine at Fort Kent" src="/sites/default/assets/Image/logos/umfklogowhite.svg"></p> 
+        <p>23 University Drive • Fort Kent, ME 04743<br> 1 (888) 879-8635 • 1 (207) 834-7500 • Relay Service 711 | <strong><a class="underline" href="/contact-us/">Contact Us Online</a></strong></p> 
+        <p>Copyright © 2021 University of Maine at Fort Kent. All Rights Reserved.</p> 
+       </div> 
+       <div class="col-md-4 col-sm-5 margin-top"> 
+        <div class="margin-bottomlg">
+         <a href="/blog/"><span class="fas fa-list-alt fa-2x margin-leftsm2 margin-rightsm2" title="blog" aria-hidden="true"></span><span class="sr-only">UMFK Blog</span></a> <a href="/social-media/facebook-umfklife/" target="_blank"><span class="fab fa-facebook fa-2x margin-leftsm2 margin-rightsm2" title="facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a> <a href="/social-media/instagram-umfkadm/" target="_blank"><span class="fab fa-instagram fa-2x margin-leftsm2 margin-rightsm2" title="instagram" aria-hidden="true"></span><span class="sr-only">Instagram</span></a> <a href="https://www.youtube.com/channel/UCE6Rmmo_wH35CM2MOYRb44g" target="_blank"><span class="fab fa-youtube fa-2x margin-leftsm2 margin-rightsm2" title="youtube" aria-hidden="true"></span><span class="sr-only">Youtube</span></a> <a href="/webcast/"><span class="fas fa-video fa-2x margin-leftsm2 margin-rightsm2" title="video" aria-hidden="true"></span><span class="sr-only">Live Webcasts</span></a> <a href="/calendar/"><span class="fas fa-calendar fa-2x margin-leftsm2 margin-rightsm2" title="calendar" aria-hidden="true"></span><span class="sr-only">Campus Calendar</span></a> <a href="/news/"><span class="fas fa-newspaper fa-2x margin-leftsm2 margin-rightsm2" title="newspaper" aria-hidden="true"></span><span class="sr-only">Latest News</span></a>
+        </div> 
+        <div class="footer-links"> 
+         <div class="col-md-6 col-sm-6 col-xs-6 right divide"> 
+          <ul> 
+           <li><a href="/directory/">Campus Directory</a></li> 
+           <li><a href="/offices/">UMFK Offices</a></li> 
+           <li><a href="/student-life/affairs/security/">Crime &amp; Security Report</a></li> 
+           <li><a href="/student-life/affairs/fire-safety/">Fire &amp; Safety Report</a></li> 
+           <li><a href="/consumer-info/">Student Consumer <abbr title="Information">Info.</abbr></a></li> 
+           <li><a href="/brand-toolkit/">Branding Toolkit</a></li> 
+          </ul> 
+         </div> 
+         <div class="col-md-6 col-sm- col-xs-6 left"> 
+          <ul> 
+           <li><a href="/admissions/visiting/campus-map/" target="_blank">Campus Map</a></li> 
+           <li><a href="/alumni/">UMFK Alumni</a></li> 
+           <li><a href="/alumni/giving/">Giving to UMFK</a></li> 
+           <li><a href="/jobs/">Employment at UMFK</a></li> 
+           <li><a href="/student-life/affairs/title-ix/">Title IX <abbr title="Information">Info.</abbr></a></li> 
+           <li><a href="/policies/privacy-policy/">Privacy Policy</a></li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div>
+     </div>
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="dialog" class="ui-scrollable"> 
+ </div> 
+ <div id="dialog2" class="ui-scrollable"> 
+ </div> 
+</footer> 
+<script>
+//JavaScript for Facebook Campaign
+// var ssaUrl = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'pixel.dsp.townsquaremedia.com/iap/ca3f1a7503e4aee9';new Image().src = ssaUrl;
+//JavaScript for replacing audio and video elements with JWPlayer
+var chkAudioPlayer = document.getElementsByTagName('audio');
+var audioPlayersCount = chkAudioPlayer.length;
+var chkVideoPlayer = document.getElementsByTagName('video');
+var videoPlayersCount = chkVideoPlayer.length;
+var itemSrc = '';
+var itemId = '';
+var newitemId = '';
+var oldElement = '';
+var newElement = '';
+var remElement = '';
+for (var a = 0; a < audioPlayersCount; a++) {
+itemSrc = chkAudioPlayer[a].src;
+itemId = chkAudioPlayer[a].id;
+newElement = document.createElement('div');
+newitemId = 'audioplayer' + a;
+newElement.id = newitemId;
+oldElement = document.getElementById(itemId);
+oldElement.parentNode.appendChild(newElement);
+jwplayer(newitemId).setup({
+"file": itemSrc,
+"width": "100%",
+"height": 40,
+"autostart": false
+});
+}
+for (var r = 0; r < audioPlayersCount; r++) {
+itemId = chkAudioPlayer[0].id;
+remElement = document.getElementById(itemId);
+remElement.parentNode.removeChild(remElement);
+}
+for (var v = 0; v < videoPlayersCount; v++) {
+itemSrc = chkVideoPlayer[v].src;
+itemId = chkVideoPlayer[v].id;
+newElement = document.createElement('div');
+newitemId = 'videoplayer' + v;
+newElement.id = newitemId;
+oldElement = document.getElementById(itemId);
+oldElement.parentNode.appendChild(newElement);
+jwplayer(newitemId).setup({
+"file": itemSrc,
+"width": "100%",
+"aspectratio": "16:9",
+"autostart": false
+});
+}
+for (var r2 = 0; r2 < videoPlayersCount; r2++) {
+itemId = chkVideoPlayer[0].id;
+remElement = document.getElementById(itemId);
+remElement.parentNode.removeChild(remElement);
+}
+// JavaScript to check for an anchor in a URL
+$(document).ready(chkAnchor);
+//JavaScript for Monsido Web Governance Tool
+var _monsido = _monsido || [];
+_monsido.push(['_setDomainToken', 'PPchuSanYgSKbKa8fNmnjQ']);
+_monsido.push(['_withStatistics', 'true']);
+</script> 
+<script src="//cdn.monsido.com/tool/javascripts/monsido.js"></script> 
+<script type="text/javascript">
+var _userway_config = {
+account: 'nZoCfxCOOq'
+};
+</script> 
+<script type="text/javascript" src="https://cdn.userway.org/widget.js"></script> 
+<script src="//www.umfk.edu/core/modules/v1/cta/js/mura.displayobject.cta.min.js"></script> 
+<script>!window.google && document.write('<script src="https://maps.google.com/maps/api/js?key=AIzaSyD-9IWTNLTwZSCWvm3xjHV1soH4VPkYrGg&sensor=false"><\/script>');</script> 
+<script>!window.google && document.write('<script src="jquery.a11yfy.gmaps.js"><\/script>');</script>
+</body>
+</doc>

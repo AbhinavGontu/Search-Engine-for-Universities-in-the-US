@@ -1,0 +1,203 @@
+<doc>
+<filename>usfca.edu7.html</filename>
+<url>http://www.ncaa.org/student-athletes/future/eligibility-center</url>
+<ip>23.185.0.4</ip>
+<title></title>
+<body>
+<div id="message"> 
+ <p class="loading_container"> <span>.</span><span>.</span><span>.</span> </p> 
+</div> 
+<script type="text/javascript">
+            (function () {
+                /*
+                 * The system will be replaced by the installer
+                 * with the context root specified during installation.
+                 * By default it is "system", hence the value will be as follows:
+                 * For e.g., system
+                 * OR
+                 * If the templates are deployed outside of the eGain environment then it must be provided as follows:
+                 * var contextRoot = "system";
+                 */
+                var contextRoot = "system";
+
+                /*
+                 * The eGainApiContextPath will be used to call the eGain webservices.
+                 * By default it will be as follows:
+                 * For e.g., /system/
+                 * OR
+                 * If this index.html is deployed outside of the eGain environment then it must be provided as follows:
+                 * For e.g.,
+                 * var eGainApiContextPath = "https://egain.server.com/system/";
+                 */
+                var eGainApiContextPath = "/" + contextRoot + "/";
+
+                /*
+                 * The eGainTemplateUrlContextPath will be used to determine the context path of the template which is being launched.
+                 * For e.g., by default it will be "/system/templates/selfservice/".
+                 * So the template path will be "/system/templates/selfservice/kiwi/":
+                 * 
+                 * IF:
+                 * The templates and this index.html are deployed outside of the eGain environment as siblings on the webserver
+                 * then it must be provided as follows:
+                 * var eGainTemplateUrlContextPath = null;
+                 * 
+                 * ELSE IF:
+                 * The templates and this index.html are deployed outside of the eGain environment but NOT as siblings on the webserver
+                 * then provide the URL path of the templates as follows:
+                 * var eGainTemplateUrlContextPath = "/kb/templates/";
+                 */
+                var eGainTemplateUrlContextPath = "/" + contextRoot + "/templates/selfservice/";
+
+                /*
+                 * Do NOT modify any of the value/code below this comment.
+                 */
+
+                var portalLaunchParamWSUrl = "ws/v11/general/portal/";
+                var pathNames = [];
+                var launchParams = {};
+
+                var logError = function (msg) {
+                    var msgElement = document.getElementById("message");
+                    msgElement.innerHTML = "Sorry, you've visited an invalid URL!!!";
+                    console.log(msg);
+                };
+
+                var sessionStore = function (name, value, remove) {
+                    var retValue = false;
+                    if (name) {
+                        if (typeof value !== "undefined" && null !== value) {
+                            var stringValue = JSON.stringify(value);
+                            sessionStorage.setItem(name, stringValue);
+                            retValue = true;
+                        } else if (true === remove) {
+                            sessionStorage.removeItem(name);
+                            retValue = true;
+                        } else {
+                            retValue = sessionStorage.getItem(name);
+                            retValue = (retValue) ? JSON.parse(retValue) : retValue;
+                        }
+                    }
+                    return retValue;
+                };
+
+                var makeRequest = function (url, callback, accept) {
+                    if (url) {
+                        var xhttp = new XMLHttpRequest();
+                        if (typeof callback === "function") {
+                            xhttp.onreadystatechange = function () {
+                                if (4 === this.readyState && 200 === this.status) {
+                                    callback(this.responseText);
+                                } else if (4 === this.readyState) {
+                                    callback(this.responseText, true);
+                                }
+                            };
+                        }
+                        xhttp.open("GET", url, true);
+                        if (accept) {
+                            xhttp.setRequestHeader("Accept", accept);
+                        }
+                        xhttp.send();
+                    }
+                };
+
+                var setLaunchParams = function (obj) {
+                    if (obj) {
+                        launchParams.contextRoot = contextRoot;
+                        launchParams.templateName = obj.templateName;
+                        launchParams.portalId = "" + ((obj.id) ? obj.id : obj.portalId);
+                        launchParams.portalType = (obj.userType) ? obj.userType : obj.portalType;
+                        launchParams.currentLocale = (obj.locale) ? obj.locale : obj.currentLocale;
+                    }
+                };
+
+                var parseLaunchParams = function (responseText) {
+                    var response = (responseText) ? JSON.parse(responseText) : {};
+                    if (response.portal && response.portal[0]) {
+                        setLaunchParams(response.portal[0]);
+                    } else {
+                        logError("Error in fetching the launch params!!!");
+                    }
+                };
+
+                var getLaunchParameters = function (uniqueId, callback) {
+                    if (uniqueId) {
+                        var url = eGainApiContextPath + portalLaunchParamWSUrl + uniqueId;
+                        makeRequest(url, callback, "application/json");
+                    }
+                };
+
+                var loadTemplatePage = function (pageHtml) {
+                    if (pageHtml) {
+                        /*document.open("text/html", "replace");*/
+                        document.write(pageHtml);
+                        document.close();
+                    } else {
+                        logError("Error loading the template page!!!");
+                    }
+                };
+
+                var getTemplatePage = function (templateName, callback) {
+                    if (templateName) {
+                        eGainTemplateUrlContextPath = (eGainTemplateUrlContextPath) ? eGainTemplateUrlContextPath
+                                : "/" + launchParams.urlContextRoot + "/";
+                        launchParams.templatePath = eGainTemplateUrlContextPath + templateName + "/";
+                        var url = launchParams.templatePath + "index.html";
+                        makeRequest(url, callback, "text/html");
+                    }
+                };
+
+                var saveParamsAndLoadPage = function () {
+                    getTemplatePage(launchParams.templateName, function (responseText, isError) {
+                        if (true === isError) {
+                            logError("There is a problem in getting the configured template page!!!\nPlease contact your system administrator.");
+                        } else {
+                            sessionStore("eGSSIsShortUrl", true);
+                            sessionStore("eGSSPortalParam", launchParams);
+                            loadTemplatePage(responseText);
+                        }
+                    });
+                };
+
+                var pathParts = location.pathname.split("/");
+                pathParts.forEach(function (value) {
+                    if (value) {
+                        pathNames.push(value);
+                    }
+                });
+
+                if (2 <= pathNames.length) {
+                    launchParams.urlContextRoot = pathNames[0];
+                    launchParams.routeUniqueId = pathNames[1];
+                    /*launchParams.initial = {
+                        "url": location.pathname,
+                        "pathNames": pathNames
+                    };*/
+                    var existingLaunchParams = sessionStore("eGSSPortalParam");
+                    if (existingLaunchParams
+                            && existingLaunchParams.routeUniqueId
+                            && existingLaunchParams.routeUniqueId === launchParams.routeUniqueId
+                            && existingLaunchParams.contextRoot
+                            && existingLaunchParams.templateName
+                            && existingLaunchParams.portalId
+                            && existingLaunchParams.portalType
+                            && existingLaunchParams.currentLocale
+                            ) {
+                        setLaunchParams(existingLaunchParams);
+                        saveParamsAndLoadPage();
+                    } else {
+                        getLaunchParameters(launchParams.routeUniqueId, function (responseText, isError) {
+                            if (true === isError) {
+                                logError("You have visited an invalid URL!!!\nPlease launch the URL with correct unique Id.");
+                            } else {
+                                parseLaunchParams(responseText);
+                                saveParamsAndLoadPage();
+                            }
+                        });
+                    }
+                } else {
+                    logError("You have visited an incomplete URL!!!\nPlease provide the unique Id.");
+                }
+            })();
+        </script>
+</body>
+</doc>

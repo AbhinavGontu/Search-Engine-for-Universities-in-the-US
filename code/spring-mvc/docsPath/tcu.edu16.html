@@ -1,0 +1,40 @@
+<doc>
+<filename>tcu.edu16.html</filename>
+<url>http://www.maps.tcu.edu/</url>
+<ip>138.237.39.81</ip>
+<title>TCU Interactive Map</title>
+<body>
+<!-- Google Tag Manager (noscript) --> 
+<noscript>
+ <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBJ5D4W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> <!-- End Google Tag Manager (noscript) --> 
+<h1 style="display:none">Texas Christian University Interactive Map</h1> <iframe id="myMap" allow="geolocation" border="0" frameborder="0" height="100%" scrolling="no" src=" https://map.concept3d.com/?id=1185#!ct/0,30813,30814,28567,28092,32918?mc/32.709022249578176,-97.3618268966675?z/17?lvl/0" style="border: 0px solid #fff; margin: 0; padding: 0;" width="100%"></iframe> 
+<script>
+    "use strict";
+
+    function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split("&");
+        for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split("=");
+            if (sParameterName[0] == sParam) {
+                return sParameterName[1];
+            }
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+
+        // capture map iframe
+        var thisMap = document.getElementById("myMap");
+        var mapSrc = "https://map.concept3d.com/";
+
+        if (thisMap === undefined || window.location.hash === "") {
+            //do nothing
+        } else {
+            //append url parameter to iframe
+            thisMap.src = mapSrc + window.location.search + window.location.hash;
+        }
+    });
+    </script>
+</body>
+</doc>

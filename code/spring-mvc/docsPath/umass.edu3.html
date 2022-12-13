@@ -1,0 +1,1559 @@
+<doc>
+<filename>umass.edu3.html</filename>
+<url>http://fac.umass.edu</url>
+<ip>74.200.12.70</ip>
+<title>UMass Amherst Fine Arts Center</title>
+<body>
+<div id="spinner" class="spinner"></div> 
+<script>    
+    var spinnerDelayTimeout;
+    
+    var showSpinner = function(){};
+    var spinnerElement = document.querySelector('body')
+
+
+
+    var spinnerDelay = 3;
+    
+
+    function stopSpinner() {
+        spinnerElement.classList.remove('show-spinner');
+        cancelSpinnerTimeouts();
+        expandSpinner();
+    }
+
+    function startSpinner() {
+        expandSpinner();
+        spinnerElement.classList.add('show-spinner');
+    }
+    
+    
+    function cancelSpinnerTimeouts() {
+        clearTimeout(spinnerDelayTimeout);
+    }
+    
+    function expandSpinner() {
+        spinnerElement.classList.remove('minimize-spinner');
+    }
+    
+    function minimizeSpinner() {
+        spinnerElement.classList.add('minimize-spinner');
+    }
+    
+    // stop spinner if a JS error occurred
+    window.addEventListener('error', stopSpinner);
+    
+    // Mimimize spinner if clicked
+    spinnerElement.addEventListener('click', minimizeSpinner);
+
+    // Shows the spinner if page takes long to load
+    // pass true to allow spinner to show even with a popup open
+    (showSpinner = function() {
+        var overridePopupCheck = arguments[0] ? arguments[0] : false;
+        if (overridePopupCheck || !document.querySelector("#popupDiv")) {
+            spinnerDelayTimeout = setTimeout(startSpinner, spinnerDelay*1000);
+        }
+        return true;
+    })();
+
+
+
+</script> 
+<script type="text/javascript">
+
+function testValue(value, pattern)
+{
+  if(!value || !pattern)
+    return false;
+
+  if(pattern.constructor === RegExp)
+    return pattern.test(value.toString());
+
+  return value.toString() == pattern.toString();
+}
+
+function isGTM()
+{
+	return true;
+}
+
+function getSessionObject()
+{
+	return {av: {session: {language: "EN", 
+role: "Internet", 
+referrer: null, 
+user_id: undefined, 
+promo_codes: []}}};
+}
+
+function getErrorObject()
+{
+	
+	return null;
+	
+}
+
+function getPageObject()
+{
+	return {av: {page: { page_script: "/Online/default.asp", 
+ search: { total_records: null, 
+ total_pages: null, 
+ page_size: null, 
+ current_page: null, 
+ criteria: { search_from :null, 
+ search_to :null, 
+ search_criteria :null, 
+ category_filter :null, 
+ city_filter :null, 
+ venue_filter :null, 
+ month_filter :null, 
+ object_type_filter :null}}, 
+ articles: [{article_name: "F-P  FAC At Home", article_title: "UMass Amherst Fine Arts Center", article_type: "2", article_id: "6C67003C-1B2A-4329-84FB-39180762F23D"},
+{article_name: "", article_title: "Performning Arts", article_type: "1", article_id: "B4A6BA3A-3359-4098-9D9E-B7846E24287F"},
+{article_name: "", article_title: "", article_type: "1", article_id: "74F8D785-8544-4FD7-80EC-30C9BD1DFF27"},
+{article_name: "", article_title: "", article_type: "1", article_id: "29A65625-1B5D-4994-B5C7-041D6C2A82EE"},
+{article_name: "", article_title: "", article_type: "1", article_id: "60606878-F576-4D7E-861B-608823332925"},
+{article_name: "", article_title: "default header", article_type: "1", article_id: "F8103D8C-7EA0-4B4B-A37E-9DE398B9313D"},
+{article_name: "", article_title: "default footer", article_type: "1", article_id: "5D09622E-A899-411D-B525-B2F262B34B63"}],
+
+          articleExists: function (article_type, article_title)    
+          {
+            if (article_type == null && article_title == null)
+            {
+              if(this.articles.length)
+                return true;
+            }
+            else if (article_type == null)
+            {
+              for(var i = 0; i < this.articles.length; i++) {
+                  if(testValue(this.articles[i].article_title, article_title))
+                    return true;
+              }
+            }
+            else if (article_title == null)
+            {
+              for(var i = 0; i < this.articles.length; i++) {
+                if (testValue(this.articles[i].article_type, article_type))
+                  return true;
+              }
+            }
+            else
+            {
+              for(var i = 0; i < this.articles.length; i++) {
+                if (testValue(this.articles[i].article_title, article_title) && testValue(this.articles[i].article_type, article_type))
+                  return true;
+              }
+            }
+    
+            return false;
+          }
+	}}};
+}
+
+
+function getOrderEventObject()
+{
+	return {event: {av : {event: {order: { action: ""}}}, toString: function() {return "av.event.order-" + this.av.event.order.action}}};
+}
+
+function getCartEventObject()
+{
+	return {event: {av : {event: {cart: { action: ""}}}, toString: function() {return "av.event.cart-" + this.av.event.cart.action}}};
+}
+
+function admissionExists(object, product_name)
+{
+	var ids = new Array();
+	for (var i = 0; i < object.performances.length; i++)
+	{
+		if (testValue(object.performances[i].name, product_name) ||    
+			testValue(object.performances[i].description, product_name) ||
+			testValue(object.performances[i].short_description, product_name))
+		{
+			ids.push(object.performances[i].performance_id);
+		}
+	}
+	if (ids.length > 0)
+	{
+		for (var i = 0; i < object.order_admissions.length; i++)
+		{
+			if (ids.indexOf(object.order_admissions[i].performance_id) != -1)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+function bundleExists(object, product_name)
+{
+	var ids = new Array();
+	for (var i = 0; i < object.bundles.length; i++)
+	{
+		if (testValue(object.bundles[i].name, product_name) ||    
+			testValue(object.bundles[i].description, product_name) ||
+			testValue(object.bundles[i].short_description, product_name))
+		{
+			ids.push(object.bundles[i].bundle_id);
+		}
+	}
+	if (ids.length > 0)
+	{
+		for (var i = 0; i < object.order_bundle.length; i++)
+		{
+			if (ids.indexOf(object.order_bundle[i].bundle_id) != -1)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+function miscItemExists(object, product_name)
+{
+	var ids = new Array();
+	for (var i = 0; i < object.misc_items.length; i++)
+	{
+		if (testValue(object.misc_items[i].name, product_name) ||    
+			testValue(object.misc_items[i].description, product_name) ||
+			testValue(object.misc_items[i].short_description, product_name))
+		{
+			ids.push(object.misc_items[i].miscellaneous_item_id);
+		}
+	}
+	if (ids.length > 0)
+	{
+		for (var i = 0; i < object.order_misc_items.length; i++)
+		{
+			if (ids.indexOf(object.order_misc_items[i].item_id) != -1)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+function giftExists(object, product_name)
+{
+	var ids = new Array();
+	for (var i = 0; i < object.gifts.length; i++)
+	{
+		if (testValue(object.gifts[i].name, product_name) ||    
+			testValue(object.gifts[i].description, product_name) ||
+			testValue(object.gifts[i].short_description, product_name))
+		{
+			ids.push(object.gifts[i].gift_id);
+		}
+	}
+	if (ids.length > 0)
+	{
+		for (var i = 0; i < object.order_gifts.length; i++)
+		{
+			if (ids.indexOf(object.order_gifts[i].gift_id) != -1)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+function storeValueExists(object, product_name)
+{
+	var ids = new Array();
+	for (var i = 0; i < object.stored_values.length; i++)
+	{
+		if (testValue(object.stored_values[i].name, product_name) ||    
+			testValue(object.stored_values[i].description, product_name) ||
+			testValue(object.stored_values[i].short_description, product_name))
+		{
+			ids.push(object.stored_values[i].stored_value_id);
+		}
+	}
+	if (ids.length > 0)
+	{
+		for (var i = 0; i < object.order_stored_values.length; i++)
+		{
+			if (ids.indexOf(object.order_stored_values[i].stored_value_id) != -1)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+function productExists(object, product_type, product_name)
+{
+	var result = false;
+	if (product_name == null && product_type == null)
+	{
+		if (object.order_admissions.length || object.order_bundle.length || object.order_misc_items.length ||
+		object.order_gifts.length || object.order_stored_values.length)
+			result = true;
+	}
+	else if (product_name == null)
+	{
+		if (testValue(product_type, "admission") && object.order_admissions.length)
+			result = true;
+		if (testValue(product_type, "bundle") && object.order_bundle.length)
+			result = true;
+		if (testValue(product_type, "miscellaneous_item") && object.order_misc_items.length)
+			result = true;
+		if (testValue(product_type, "gift") && object.order_gifts.length)
+			result = true;
+		if (testValue(product_type, "stored_value") && object.order_stored_values.length)
+			result = true;
+	}
+	else if (product_type == null)
+	{
+		if (object.order_admissions.length)
+		{
+			result = admissionExists(object, product_name);
+		}
+		if (object.order_bundle.length)
+		{
+			result = bundleExists(object, product_name);
+		}
+		if (object.order_misc_items.length)
+		{
+			result = miscItemExists(object, product_name);
+		}
+		if (object.order_gifts.length)
+		{
+			result = giftExists(object, product_name);
+		}
+		if (object.order_stored_values.length)
+		{
+			result = storeValueExists(object, product_name);
+		}
+	}
+	else
+	{
+		if (testValue(product_type, "admission") && object.order_admissions.length)
+		{
+			result = admissionExists(object, product_name);
+		}
+		if (testValue(product_type, "bundle") && object.bundles.length)
+		{
+			result = bundleExists(object, product_name);
+		}
+		if (testValue(product_type, "miscellaneous_item") && object.misc_items.length)
+		{
+			result = miscItemExists(object, product_name);
+		}
+		if (testValue(product_type, "gift") && object.gifts.length)
+		{
+			result = giftExists(object, product_name);
+		}
+		if (testValue(product_type, "stored_value") && object.stored_values.length)
+		{
+			result = storeValueExists(object, product_name);
+		}
+	}
+	return result;
+}
+
+function admissionValue(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.performances.length; i++)
+	{
+		if (testValue(object.performances[i].name, product_name) ||    
+			testValue(object.performances[i].description, product_name) ||
+			testValue(object.performances[i].short_description, product_name))
+		{
+			id.push(object.performances[i].performance_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_admissions.length; i++)
+		{
+			if (id.indexOf(object.order_admissions[i].performance_id) != -1)
+			{
+				result += object.order_admissions[i].amount.amount;
+			}
+		}
+	}
+	return result;
+}
+
+function bundleValue(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.bundles.length; i++)
+	{
+		if (testValue(object.bundles[i].name, product_name) ||    
+			testValue(object.bundles[i].description, product_name) ||
+			testValue(object.bundles[i].short_description, product_name))
+		{
+			id.push(object.bundles[i].bundle_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_bundle_admissions.length; i++)
+		{
+			if (id.indexOf(object.order_bundle_admissions[i].bundle_id) != -1)
+			{
+				result += object.order_bundle_admissions[i].amount.amount;
+			}
+		}
+	}
+	return result;
+}
+
+function miscItemValue(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.misc_items.length; i++)
+	{
+		if (testValue(object.misc_items[i].name, product_name) ||    
+			testValue(object.misc_items[i].description, product_name) ||
+			testValue(object.misc_items[i].short_description, product_name))
+		{
+			id.push(object.misc_items[i].miscellaneous_item_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_misc_items.length; i++)
+		{
+			if (id.indexOf(object.order_misc_items[i].item_id) != -1)
+			{
+				result += object.order_misc_items[i].amount.amount;
+			}
+		}
+	}
+	return result;
+}
+
+function giftValue(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.gifts.length; i++)
+	{
+		if (testValue(object.gifts[i].name, product_name) ||    
+			testValue(object.gifts[i].description, product_name) ||
+			testValue(object.gifts[i].short_description, product_name))
+		{
+			id.push(object.gifts[i].gift_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_gifts.length; i++)
+		{
+			if (id.indexOf(object.order_gifts[i].gift_id) != -1)
+			{
+				result += object.order_gifts[i].pledge_amount.amount;
+			}
+		}
+	}
+	return result;
+}
+
+function storedValueValue(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.stored_values.length; i++)
+	{
+		if (testValue(object.stored_values[i].name, product_name) ||    
+			testValue(object.stored_values[i].description, product_name) ||
+			testValue(object.stored_values[i].short_description, product_name))
+		{
+			id.push(object.stored_values[i].stored_value_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_stored_values.length; i++)
+		{
+			if (id.indexOf(object.order_stored_values[i].stored_value_id) != -1)
+			{
+				result += object.order_stored_values[i].amount.amount;
+			}
+		}
+	}
+	return result;
+}
+
+function productValue(object, product_type, product_name)
+{
+	var result = 0;
+	if (product_name == null && product_type == null)
+	{
+		if (object.order_admissions.length)
+		{
+			for (var i = 0; i < object.order_admissions.length; i++)
+			{
+				result += object.order_admissions[i].amount.amount;
+			}
+		}
+		if (object.order_bundle_admissions.length)
+		{
+			for (var i = 0; i < object.order_bundle_admissions.length; i++)
+			{
+				result += object.order_bundle_admissions[i].amount.amount;
+			}
+		}
+		if (object.order_misc_items.length)
+		{
+			for (var i = 0; i < object.order_misc_items.length; i++)
+			{
+				result += object.order_misc_items[i].amount.amount;
+			}
+		}
+		if (object.order_gifts.length)
+		{
+			for (var i = 0; i < object.order_gifts.length; i++)
+			{
+				result += object.order_gifts[i].pledge_amount.amount;
+			}
+		}
+		if (object.order_stored_values.length)
+		{
+			for (var i = 0; i < object.order_stored_values.length; i++)
+			{
+				result += object.order_stored_values[i].amount.amount;
+			}
+		}
+	}
+	else if (product_name == null)
+	{
+		if (testValue(product_type, "admission") && object.order_admissions.length)
+		{
+			for (var i = 0; i < object.order_admissions.length; i++)
+			{
+				result += object.order_admissions[i].amount.amount;
+			}
+		}
+		if (testValue(product_type, "bundle") && object.order_bundle_admissions.length)
+		{
+			for (var i = 0; i < object.order_bundle_admissions.length; i++)
+			{
+				result += object.order_bundle_admissions[i].amount.amount;
+			}
+		}
+		if (testValue(product_type, "miscellaneous_item") && object.order_misc_items.length)
+		{
+			for (var i = 0; i < object.order_misc_items.length; i++)
+			{
+				result += object.order_misc_items[i].amount.amount;
+			}
+		}
+		if (testValue(product_type, "gift") && object.order_gifts.length)
+		{
+			for (var i = 0; i < object.order_gifts.length; i++)
+			{
+				result += object.order_gifts[i].pledge_amount.amount;
+			}
+		}
+		if (testValue(product_type, "stored_value") && object.order_stored_values.length)
+		{
+			for (var i = 0; i < object.order_stored_values.length; i++)
+			{
+				result += object.order_stored_values[i].amount.amount;
+			}
+		}
+	}
+	else if (product_type == null)
+	{
+		if (object.order_admissions.length)
+		{
+			result += admissionValue(object, product_name);
+		}
+		if (object.order_bundle_admissions.length)
+		{
+			result += bundleValue(object, product_name);
+		}
+		if (object.order_misc_items.length)
+		{
+			result += miscItemValue(object, product_name);
+		}
+		if (object.order_gifts.length)
+		{
+			result += giftValue(object, product_name);
+		}
+		if (object.order_stored_values.length)
+		{
+			result += storedValueValue(object, product_name);
+		}
+	}
+	else
+	{
+		if (testValue(product_type, "admission") && object.order_admissions.length)
+		{
+			result += admissionValue(object, product_name);
+		}
+		else if (testValue(product_type, "bundle") && object.bundles.length)
+		{
+			result += bundleValue(object, product_name);
+		}
+		else if (testValue(product_type, "miscellaneous_item") && object.misc_items.length)
+		{
+			result += miscItemValue(object, product_name);
+		}
+		else if (testValue(product_type, "gift") && object.gifts.length)
+		{
+			result += giftValue(object, product_name);
+		}
+		else if (testValue(product_type, "stored_value") && object.stored_values.length)
+		{
+			result += storedValueValue(object, product_name);
+		}
+	}
+	return result;
+}
+
+function admissionCount(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.performances.length; i++)
+	{
+		if (testValue(object.performances[i].name, product_name) ||    
+			testValue(object.performances[i].description, product_name) ||
+			testValue(object.performances[i].short_description, product_name))
+		{
+			id.push(object.performances[i].performance_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_admissions.length; i++)
+		{
+			if (id.indexOf(object.order_admissions[i].performance_id) != -1)
+			{
+				result ++;
+			}
+		}
+	}
+	return result;
+}
+
+function bundleCount(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.bundles.length; i++)
+	{
+		if (testValue(object.bundles[i].name, product_name) ||    
+			testValue(object.bundles[i].description, product_name) ||
+			testValue(object.bundles[i].short_description, product_name))
+		{
+			id.push(object.bundles[i].bundle_id);
+		}
+	}
+	if (id.length > 0 && object.order_bundle_admissions.length)
+	{
+		for (var i = 0; i < object.order_bundle_admissions.length; i++)
+		{
+			if (id.indexOf(object.order_bundle_admissions[i].bundle_id) != -1)
+			{
+				result ++;
+			}
+		}
+	}
+	return result;
+}
+
+function miscItemCount(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.misc_items.length; i++)
+	{
+		if (testValue(object.misc_items[i].name, product_name) ||    
+			testValue(object.misc_items[i].description, product_name) ||
+			testValue(object.misc_items[i].short_description, product_name))
+		{
+			id.push(object.misc_items[i].miscellaneous_item_id);
+		}
+	}
+	if (id.length > 0 && object.order_misc_items.length)
+	{
+		for (var i = 0; i < object.order_misc_items.length; i++)
+		{
+			if (id.indexOf(object.order_misc_items[i].item_id) != -1)
+			{
+				result += parseFloat(object.order_misc_items[i].quantity);
+			}
+		}
+	}
+	return result;
+}
+
+function giftCount(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.gifts.length; i++)
+	{
+		if (testValue(object.gifts[i].name, product_name) ||    
+			testValue(object.gifts[i].description, product_name) ||
+			testValue(object.gifts[i].short_description, product_name))
+		{
+			id.push(object.gifts[i].gift_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_gifts.length; i++)
+		{
+			if (id.indexOf(object.order_gifts[i].gift_id) != -1)
+			{
+				result ++;
+			}
+		}
+	}
+	return result;
+}
+
+function storedValueCount(object, product_name)
+{
+	var id = new Array();
+	var result = 0;
+	for (var i = 0; i < object.stored_values.length; i++)
+	{
+		if (testValue(object.stored_values[i].name, product_name) ||    
+			testValue(object.stored_values[i].description, product_name) ||
+			testValue(object.stored_values[i].short_description, product_name))
+		{
+			id.push(object.stored_values[i].stored_value_id);
+		}
+	}
+	if (id.length > 0)
+	{
+		for (var i = 0; i < object.order_stored_values.length; i++)
+		{
+			if (id.indexOf(object.order_stored_values[i].stored_value_id) != -1)
+			{
+				result ++;
+			}
+		}
+	}
+	return result;
+}
+
+function productCount(object, product_type, product_name)
+{
+	var result = 0;
+	if (product_name == null && product_type == null)
+	{
+		if (object.order_admissions.length)
+		{
+			result += object.order_admissions.length;
+		}
+		if (object.order_bundle_admissions.length)
+		{
+			result += object.order_bundle_admissions.length;
+		}
+		if (object.order_misc_items.length)
+		{
+			for (var i = 0; i < object.order_misc_items.length; i++)
+				result += parseFloat(object.order_misc_items[i].quantity);
+		}
+		if (object.order_gifts.length)
+		{
+			result += object.order_gifts.length;
+		}
+		if (object.order_stored_values.length)
+		{
+			result += object.order_stored_values.length;
+		}
+	}
+	else if (product_name == null)
+	{
+		if (testValue(product_type, "admission") && object.order_admissions.length)
+		{
+			result += object.order_admissions.length;
+		}
+		if (testValue(product_type, "bundle") && object.order_bundle_admissions.length)
+		{
+			result += object.order_bundle_admissions.length;
+		}
+		if (testValue(product_type, "miscellaneous_item") && object.order_misc_items.length)
+		{
+			for (var i = 0; i < object.order_misc_items.length; i++)
+				result += parseFloat(object.order_misc_items[i].quantity);
+		}
+		if (testValue(product_type, "gift") && object.order_gifts.length)
+		{
+			result += object.order_gifts.length;
+		}
+		if (testValue(product_type, "stored_value") && object.order_stored_values.length)
+		{
+			result += object.order_stored_values.length;
+		}
+	}
+	else if (product_type == null)
+	{
+		if (object.order_admissions.length)
+		{
+			result += admissionCount(object, product_name);
+		}
+		if (object.order_bundle_admissions.length)
+		{
+			result += bundleCount(object, product_name);
+		}
+		if (object.order_misc_items.length)
+		{
+			result += miscItemCount(object, product_name);
+		}
+		if (object.order_gifts.length)
+		{
+			result += giftCount(object, product_name);
+		}
+		if (object.stored_values.length)
+		{
+			result += storedValueCount(object, product_name);
+		}
+	}
+	else
+	{
+		if (testValue(product_type, "admission") && object.order_admissions.length)
+		{
+			result += admissionCount(object, product_name);
+		}
+		if (testValue(product_type, "bundle") && object.order_bundle_admissions.length)
+		{
+			result += bundleCount(object, product_name);
+		}
+		if (testValue(product_type, "miscellaneous_item") && object.order_misc_items.length)
+		{
+			result += miscItemCount(object, product_name);
+		}
+		if (testValue(product_type, "gift") && object.order_gifts.length)
+		{
+			result += giftCount(object, product_name);
+		}
+		if (testValue(product_type, "stored_value") && object.order_stored_values.length)
+		{
+			result += storedValueCount(object, product_name);
+		}
+	}
+	return result;
+}
+
+function getPerformance(object, performance_id)
+{
+	var result = null;
+    
+	if (performance_id != null && object.performances.length)
+	{
+		for (var i = 0; i < object.performances.length; i++)
+		{
+			if (testValue(object.performances[i].performance_id, performance_id))
+			{
+				result = object.performances[i];
+				break;
+			}
+		}    
+	}
+    
+	return result;
+}
+
+function getBundle(object, bundle_id)
+{
+	var result = null;
+    
+	if (bundle_id != null && object.bundles.length)
+	{
+		for (var i = 0; i < object.bundles.length; i++)
+		{
+			if (testValue(object.bundles[i].bundle_id, bundle_id))
+			{
+				result = object.bundles[i];
+				break;
+			}
+		}    
+	}
+    
+	return result;
+}
+
+function getMiscItem(object, miscitem_id)
+{
+	var result = null;
+    
+	if (miscitem_id != null && object.misc_items.length)
+	{
+		for (var i = 0; i < object.misc_items.length; i++)
+		{
+			if (testValue(object.misc_items[i].miscellaneous_item_id, miscitem_id))
+			{
+				result = object.misc_items[i];
+				break;
+			}
+		}    
+	}
+    
+	return result;
+}
+
+function getGift(object, gift_id)
+{
+	var result = null;
+    
+	if (gift_id != null && object.gifts.length)
+	{
+		for (var i = 0; i < object.gifts.length; i++)
+		{
+			if (testValue(object.gifts[i].gift_id, gift_id))
+			{
+				result = object.gifts[i];
+				break;
+			}
+		}    
+	}
+    
+	return result;
+}
+
+function getStoredValue(object, storedvalue_id)
+{
+	var result = null;
+    
+	if (storedvalue_id != null && object.stored_values.length)
+	{
+		for (var i = 0; i < object.stored_values.length; i++)
+		{
+			if (testValue(object.stored_values[i].stored_value_id, storedvalue_id))
+			{
+				result = object.stored_values[i];
+				break;
+			}
+		}    
+	}
+    
+	return result;
+}
+
+function createGAAdmissions(object, transactionProducts)
+{
+	if( object.order_admissions.length > 0 )
+	{
+		var admissionList = new Array();
+        var admissionPTList = new Array();
+		for (var i = 0; i < object.order_admissions.length; i++)
+		{
+            var perfID = object.order_admissions[i].performance_id;
+			if( admissionList[ perfID ] == undefined )
+            {
+              admissionList[ perfID ] = new Array();
+            }
+            admissionList[ perfID ].push( object.order_admissions[i] );
+
+            if( admissionPTList[ perfID ] == undefined )
+            {
+              admissionPTList[ perfID ] = new Array();
+            }
+            var curPTList = admissionPTList[ perfID ];
+            var admPTID = object.order_admissions[i].price_type;
+            if (curPTList[ admPTID ] == undefined )
+            {
+              curPTList[ admPTID ] = new Array();
+            }
+            curPTList[ admPTID ].push( object.order_admissions[i] );
+		}
+		for( var guid in admissionList )
+		{
+			var admNode = admissionList[ guid ][ 0 ];
+            var perfID = admNode.performance_id;
+			var perfNode;
+			for (var i = 0; i < object.performances.length; i++)
+			{
+				if (perfID == object.performances[i].performance_id)
+				{
+					perfNode = object.performances[i];
+					break;
+				}
+			}    
+            var perfName = perfNode.name;
+            var perfDesc = perfNode.short_description;
+            if (perfDesc == "" || perfDesc == null) {
+               perfDesc = perfName;
+            }
+            var seriesName = perfNode.series_name;
+
+            var curPTList = admissionPTList[ perfID ];
+			for ( var guid in curPTList )
+			{
+				seatNode = curPTList[ guid ][ 0 ];
+                var admAmount = seatNode.amount.amount;
+                var priceTypeLabel = seatNode.price_type;
+                var priceZoneLabel = seatNode.price_zone;
+
+				var admissions = { "sku": perfName + " Admission " + priceTypeLabel + "-" + priceZoneLabel,
+				"name": perfDesc + " Admission",    
+				"category": seriesName + " Admission",
+				"price": admAmount,
+				"quantity": curPTList[ guid ].length
+				};
+    
+				transactionProducts.push(admissions);
+			}
+		}
+	}
+}
+
+function createGABundles(object, transactionProducts)
+{
+	// roll up bundles by id and price
+	// object.order_bundle - data about the bundle on the order: amount, total
+	// object.bundles - data about the bundle item: name & description
+
+	if( object.bundles.length > 0 )
+	{
+		var bundleList = {};
+		for (var i = 0; i < object.order_bundle.length; i++)
+		{
+			var bundleID = object.order_bundle[i].bundle_id;
+			var bundleAmount = object.order_bundle[i].amount.amount;
+    
+			if( bundleList[ bundleID ] == undefined )
+			{
+				bundleList[ bundleID ] = {};
+			}
+			if( bundleList[ bundleID ][ bundleAmount ] == undefined )
+			{
+				bundleList[ bundleID ][ bundleAmount ] = 0;
+			}
+			bundleList[ bundleID ][ bundleAmount ]++;
+		}
+    
+		for (var i = 0; i < object.bundles.length; i++)
+		{
+			var bundleID = object.bundles[i].bundle_id;
+			var sku = object.bundles[i].name;
+			var name = object.bundles[i].description;
+    
+			for(var amount in bundleList[bundleID])
+			{
+				transactionProducts.push(
+				{
+					"sku": sku,
+					"name": name,    
+					"price": amount,
+					"quantity": bundleList[bundleID][amount]
+				});
+			}
+		}
+	}
+}
+
+function createGAMiscItems(object, transactionProducts)
+{
+	if( object.misc_items.length > 0 && object.order_misc_items.length > 0)
+	{
+		var itemList = new Array();
+		var itemAmountList = new Array();
+		for (var i = 0; i < object.order_misc_items.length; i++)
+		{
+			var itemID = object.order_misc_items[i].item_id;
+			if( itemList[ itemID ] == undefined )
+            {
+              itemList[ itemID ] = new Array();
+            }
+            itemList[ itemID ].push( object.order_misc_items[i] );
+			if( itemAmountList[ itemID ] == undefined )
+              itemAmountList[ itemID ] = parseFloat(object.order_misc_items[i].amount.amount);
+		}
+		for (var i = 0; i < object.misc_items.length; i++)
+		{
+			var miscItems = { "sku": object.misc_items[i].name,
+			"name": object.misc_items[i].description,    
+			"category": object.misc_items[i].category,    
+			"price": itemAmountList[object.misc_items[i].miscellaneous_item_id],
+			"quantity": itemList[object.misc_items[i].miscellaneous_item_id].length
+			};
+    
+			transactionProducts.push(miscItems);
+		}
+	}
+}
+
+function createGAGifts(object, transactionProducts)
+{
+	if( object.gifts.length > 0 && object.order_gifts.length > 0)
+	{
+		var giftList = new Array();
+		for (var i = 0; i < object.gifts.length; i++)
+		{
+			var giftID = object.gifts[i].gift_id;
+			if( giftList[ giftID ] == undefined )
+            {
+              giftList[ giftID ] = new Array();
+            }
+            giftList[ giftID ] = object.gifts[i].name;
+		}
+		for (var i = 0; i < object.order_gifts.length; i++)
+		{
+			var gifts = { "sku": giftList[object.order_gifts[i].gift_id],
+			"name": object.order_gifts[i].appeal_id,    
+			"category": object.order_gifts[i].fund,    
+			"price": object.order_gifts[i].pledge_paid_amount.amount,
+			"quantity": 1
+			};
+    
+			transactionProducts.push(gifts);
+		}
+	}
+}
+
+function createGAStoredValueItems(object, transactionProducts)
+{
+	if( object.stored_values.length > 0 )
+	{
+		var storedValueNameList = new Array();
+        var storedValueTypeList = new Array();
+        var storedValueDescList = new Array();
+		for (var i = 0; i < object.stored_values.length; i++)
+		{
+			var certID = object.stored_values[i].stored_value_id;
+			if( storedValueNameList[ certID ] == undefined )
+            {
+              storedValueNameList[ certID ] = new Array();
+              storedValueTypeList[ certID ] = new Array();
+              storedValueDescList[ certID ] = new Array();
+            }
+            storedValueNameList[ certID ] = object.stored_values[i].name;
+            storedValueDescList[ certID ] = object.stored_values[i].description;
+            storedValueTypeList[ certID ] = object.stored_values[i].type;
+		}
+		for (var i = 0; i < object.order_stored_values.length; i++)
+		{
+			var storedValueItems = { "sku": storedValueNameList[object.order_stored_values[i].stored_value_id],
+			"name": storedValueDescList[object.order_stored_values[i].stored_value_id],    
+			"category": storedValueTypeList[object.order_stored_values[i].stored_value_id],    
+			"price": parseFloat(object.order_stored_values[i].amount.amount),
+			"quantity": 1
+			};
+    
+			transactionProducts.push(storedValueItems);
+		}
+	}
+}
+
+function createGATransaction(object)
+{
+	var output;
+	var transactionProducts = new Array;
+    
+	createGAAdmissions(object, transactionProducts);
+	createGABundles(object, transactionProducts);
+	createGAMiscItems(object, transactionProducts);
+	createGAGifts(object, transactionProducts);
+	createGAStoredValueItems(object, transactionProducts);
+    
+	output = { "transactionId": object.order_number.toString(),
+				"transactionAffiliation": object.affiliation == null ? "" : object.affiliation.toString(),    
+				"transactionTotal": object.grand_total.amount,
+				"transactionTax": object.total_tax.amount,
+				"transactionShipping": object.delivery_charges.amount,
+				"transactionCity": object.customer_city == null ? "" : object.customer_city.toString(),
+				"transactionState": object.customer_state == null ? "" : object.customer_state.toString(),
+				"transactionCountry": object.customer_country == null ? "" : object.customer_country.toString(),
+				"transactionProducts": transactionProducts
+			};
+    
+	return output;
+}
+
+
+</script> 
+<script type="text/javascript">
+		var dataLayer = new Array();
+		dataLayer.push(getSessionObject());
+		dataLayer.push(getPageObject());
+		var av_error = getErrorObject();
+		if (av_error != null)
+			dataLayer.push(av_error);
+		
+	</script> <!-- Google Tag Manager --> 
+<noscript>
+ <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5LZT5L" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript> 
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5LZT5L');</script> <!-- End Google Tag Manager --> 
+<div id="header"> 
+ <div class="header-content container"> 
+  <div id="UmassHeader" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+   <div class="col-lg-12 d-none d-lg-inline">
+    <a href="http://www.umass.edu" shape="rect"><img alt="UMass Amherst" src="/content/Images/homeImages/UMassAmherst.gif" style="float: left; border-width: 0px; border-style: solid;"> </a> <a href="default.asp" shape="rect"><img alt="the Fine Arts Center logo" src="/content/Images/homeImages/FineArtsCenter.gif" style="border-width: 0px; border-style: solid;"> </a> 
+   </div> 
+   <div class="col-lg-12 d-lg-none d-block">
+    <a href="default.asp" shape="rect"><img alt="UMass Amherst" src="/content/Images/homeImages/UMassAmherstC.gif" style="border-width: 0px; border-style: solid;"> </a> 
+    <br clear="none"> 
+    <img alt="the Fine Arts Center logo" src="/content/Images/homeImages/FineArtsCenterC.gif" style="border-width: 0px; border-style: solid;"> 
+   </div> 
+  </div> 
+ </div> <button type="button" class="menu-toggle menu-button btn btn-secondary"> <span class="fas fa-align-justify"></span> </button> <button type="button" class="menu-toggle sidebar-button btn btn-secondary"> <span class="fas fa-shopping-cart"></span> </button> 
+</div> 
+<div class="content-wrapper"> 
+ <div id="menu"> 
+  <div class="menuContainer main-nav"> 
+   <ul id="menuTop" class="nav clearfix"> 
+    <li class="menuTopItem  has-sub-menu clearfix dropdown" id="menuTopItem0"> <a tabindex="1" href="javascript:void(0);" class="menu_item empty-link-dropdown-toggle" title="Plan Your Visit" data-toggle="dropdown"> <span class="menu-label">Plan Your Visit</span> <span class="fas fa-chevron-down"></span> <span class="fas fa-chevron-up"></span> </a> 
+     <div class="menuSub dropdown-menu"> <a class="menuSubItem dropdown-item btn" tabindex="2" href="javascript:void(0);" title="Plan Your Visit" onclick="submitNewForm(&quot;Article/Directions?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Plan Your Visit </a> <a class="menuSubItem dropdown-item btn" tabindex="3" href="javascript:void(0);" title="Order Tickets &amp; Subscriptions" onclick="submitNewForm(&quot;Article/HowToOrderTickets?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Order Tickets &amp; Subscriptions </a> <a class="menuSubItem dropdown-item btn" tabindex="4" href="javascript:void(0);" title="Directions and Parking" onclick="submitNewForm(&quot;Article/Directions?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Directions and Parking </a> <a class="menuSubItem dropdown-item btn" tabindex="5" href="javascript:void(0);" title="Hours, Seating &amp; Services" onclick="submitNewForm(&quot;Article/TicketsSeating?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Hours, Seating &amp; Services </a> <a class="menuSubItem dropdown-item btn" tabindex="6" href="javascript:void(0);" title="Gallery &amp; Museum Hours" onclick="submitNewForm(&quot;Article/VisitGalleryAndMuseumHours?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Gallery &amp; Museum Hours </a> <a class="menuSubItem dropdown-item btn" tabindex="7" href="javascript:void(0);" title="Restaurants &amp; Lodging" onclick="submitNewForm(&quot;Article/ArtfulPalate?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Restaurants &amp; Lodging </a> <a class="menuSubItem dropdown-item btn" tabindex="8" href="javascript:void(0);" title="Facility Information" onclick="submitNewForm(&quot;Article/FacilitiesInformation?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Facility Information </a> <a class="menuSubItem dropdown-item btn" tabindex="9" href="javascript:void(0);" title="Accessibility Information" onclick="submitNewForm(&quot;Article/AccessGuide?menu_id=82552992-7E4D-405C-956D-93AFC9AE7F23&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Accessibility Information </a> 
+     </div> </li> 
+    <li class="menuTopItem  has-sub-menu clearfix dropdown" id="menuTopItem1"> <a tabindex="10" href="javascript:void(0);" class="menu_item empty-link-dropdown-toggle" title="Performing Arts" data-toggle="dropdown"> <span class="menu-label">Performing Arts</span> <span class="fas fa-chevron-down"></span> <span class="fas fa-chevron-up"></span> </a> 
+     <div class="menuSub dropdown-menu"> <a class="menuSubItem dropdown-item btn" tabindex="11" href="javascript:void(0);" title="Choose Performance" onclick="submitNewForm(&quot;Article/PerformingArts?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Choose Performance </a> <a class="menuSubItem dropdown-item btn" tabindex="12" href="javascript:void(0);" title="Asian Arts &amp; Culture Program" onclick="submitNewForm(&quot;Article/AACP?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Asian Arts &amp; Culture Program </a> <a class="menuSubItem dropdown-item btn" tabindex="13" href="javascript:void(0);" title="Center Series" onclick="submitNewForm(&quot;Article/CenterSeries?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Center Series </a> <a class="menuSubItem dropdown-item btn" tabindex="14" href="javascript:void(0);" title="¡Guitarra! Classical Guitar Series" onclick="submitNewForm(&quot;Article/Guitarra?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> ¡Guitarra! Classical Guitar Series </a> <a class="menuSubItem dropdown-item btn" tabindex="15" href="javascript:void(0);" title="Magic Triangle" onclick="submitNewForm(&quot;Article/MagicTriangle?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Magic Triangle </a> <a class="menuSubItem dropdown-item btn" tabindex="16" href="javascript:void(0);" title="Jazz in July" onclick="submitNewForm(&quot;Article/JIJ?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Jazz in July </a> <a class="menuSubItem dropdown-item btn" tabindex="17" href="javascript:void(0);" title="Global Arts -  Performances for Schools" onclick="submitNewForm(&quot;Article/GlobalArts?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Global Arts - Performances for Schools </a> <a class="menuSubItem dropdown-item btn" tabindex="18" href="javascript:void(0);" title="Valley Jazz Network" onclick="submitNewForm(&quot;Article/VJN?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Valley Jazz Network </a> <a class="menuSubItem dropdown-item btn" tabindex="19" href="javascript:void(0);" title="UMass Department of Theater" onclick="submitNewForm(&quot;Article/TheaterDepartment?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> UMass Department of Theater </a> <a class="menuSubItem dropdown-item btn" tabindex="20" href="javascript:void(0);" title="UMass Department of Music and Dance" onclick="submitNewForm(&quot;Article/MusicAndDanceDepartment?menu_id=D3A0B978-0A21-4D61-ACB1-05DFFCC83A71&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> UMass Department of Music and Dance </a> 
+     </div> </li> 
+    <li class="menuTopItem  has-sub-menu clearfix dropdown" id="menuTopItem2"> <a tabindex="21" href="javascript:void(0);" class="menu_item empty-link-dropdown-toggle" title="Visual Arts" data-toggle="dropdown"> <span class="menu-label">Visual Arts</span> <span class="fas fa-chevron-down"></span> <span class="fas fa-chevron-up"></span> </a> 
+     <div class="menuSub dropdown-menu"> <a class="menuSubItem dropdown-item btn" tabindex="22" href="javascript:void(0);" title="Calendar" onclick="submitNewForm(&quot;Article/VisualArts?menu_id=32333C27-D358-4995-9AC3-4640BFADA3D8&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Calendar </a> <a class="menuSubItem dropdown-item btn" tabindex="23" href="javascript:void(0);" title="Gallery and Museum Hours" onclick="submitNewForm(&quot;Article/VisitGalleryAndMuseumHours?menu_id=32333C27-D358-4995-9AC3-4640BFADA3D8&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Gallery and Museum Hours </a> <a class="menuSubItem dropdown-item btn" tabindex="24" href="javascript:void(0);" title="Augusta Savage Gallery" onclick="submitNewForm(&quot;Article/AugustaSavage?menu_id=32333C27-D358-4995-9AC3-4640BFADA3D8&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Augusta Savage Gallery </a> <a class="menuSubItem dropdown-item btn" tabindex="25" href="javascript:void(0);" title="Hampden Gallery" onclick="submitNewForm(&quot;Article/HampdenGallery?menu_id=32333C27-D358-4995-9AC3-4640BFADA3D8&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Hampden Gallery </a> <a class="menuSubItem dropdown-item btn" tabindex="26" href="https://fac.umass.edu/UMCA/Online/Article/UMCAHome" title="University Museum of Contemporary Art" target="_blank"> University Museum of Contemporary Art </a> 
+     </div> </li> 
+    <li class="menuTopItem  has-sub-menu clearfix dropdown" id="menuTopItem3"> <a tabindex="27" href="javascript:void(0);" class="menu_item empty-link-dropdown-toggle" title="Opportunities" data-toggle="dropdown"> <span class="menu-label">Opportunities</span> <span class="fas fa-chevron-down"></span> <span class="fas fa-chevron-up"></span> </a> 
+     <div class="menuSub dropdown-menu"> <a class="menuSubItem dropdown-item btn" tabindex="28" href="javascript:void(0);" title="Arts Council Grants" onclick="submitNewForm(&quot;Article/ArtsCouncil?menu_id=CE79A899-FCBE-419C-AB31-59C7373E6C8C&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Arts Council Grants </a> <a class="menuSubItem dropdown-item btn" tabindex="29" href="javascript:void(0);" title="Angel Tickets" onclick="submitNewForm(&quot;Article/AngelTickets?menu_id=CE79A899-FCBE-419C-AB31-59C7373E6C8C&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Angel Tickets </a> <a class="menuSubItem dropdown-item btn" tabindex="30" href="https://securelb.imodules.com/s/1640/alumni/index.aspx?sid=1640&amp;gid=2&amp;pgid=443&amp;cid=1121&amp;dids=1720" title="Make a Gift!" target="_blank"> Make a Gift! </a> <a class="menuSubItem dropdown-item btn" tabindex="31" href="javascript:void(0);" title="Corporate Support" onclick="submitNewForm(&quot;Article/BusinessSupport?menu_id=CE79A899-FCBE-419C-AB31-59C7373E6C8C&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Corporate Support </a> <a class="menuSubItem dropdown-item btn" tabindex="32" href="javascript:void(0);" title="Volunteer" onclick="submitNewForm(&quot;Article/Volunteer?menu_id=CE79A899-FCBE-419C-AB31-59C7373E6C8C&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Volunteer </a> <a class="menuSubItem dropdown-item btn" tabindex="33" href="javascript:void(0);" title="Workstudy and Internships" onclick="submitNewForm(&quot;Article/WorkstudyInternship?menu_id=CE79A899-FCBE-419C-AB31-59C7373E6C8C&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Workstudy and Internships </a> <a class="menuSubItem dropdown-item btn" tabindex="34" href="javascript:void(0);" title="Contact" onclick="submitNewForm(&quot;Article/Contact?menu_id=CE79A899-FCBE-419C-AB31-59C7373E6C8C&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Contact </a> <a class="menuSubItem dropdown-item btn" tabindex="35" href="javascript:void(0);" title="Buy a Gift Certificate" onclick="submitNewForm(&quot;/Online/Article/GC?menu_id=CE79A899-FCBE-419C-AB31-59C7373E6C8C&amp;sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)"> Buy a Gift Certificate </a> 
+     </div> </li> 
+   </ul> 
+  </div> 
+ </div> <!-- customer/order information --> 
+ <div class="customer-options" id="customer-utilities"> <!--ORDER DETAILS BOX--> 
+  <div id="orderInfo"> <!-- This is the same information that displays in the grey navigation bar at the top, showing and formatted for the mobile view, when that bar is hidden. --> <!-- The order of the html elements is different between the two display cases, so we have some duplication of some of the elements.  --> 
+   <div id="customer-order-info"> 
+    <div class="hide-when-window-large"> 
+     <div class="form-group"> <span class="greeting-message"></span> <span class="greeting-name"></span> 
+     </div> 
+    </div> 
+    <div class="customer-greeting"> 
+    </div> 
+    <div class="customer-order shopping-cart-details order-message "> <span id="orderInfoEmptyMessage"></span> 
+    </div> 
+    <div class="customer-buttons"> 
+     <div class="cart-callout"> <button title="Shopping Cart" onclick="submitNewForm(&quot;shoppingCart.asp?sToken=1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;)" id="orderInfoCartLink" tabindex="36" class="shopping-cart-link btn btn-secondary"> Shopping Cart </button> 
+     </div> 
+    </div> 
+   </div> 
+  </div> <!-- This is the grey navigation bar at the top. Does not show when in mobile view. --> 
+  <div id="orderInfoSecondBar" class="hide-when-window-small"> 
+   <div class="form-group"> <span class="greeting-message"></span> <span class="greeting-name"></span> 
+   </div> 
+  </div> 
+  <div class="menuContainer utility-nav"> 
+   <ul id="utility-menu" class="nav"> 
+    <li class="utility-menu-item" id="utility-menu-item0"> <a tabindex="37" href="accountInformation.asp?menu_id=F3A2FC60-B524-4230-90CE-A22A007580C4" class="menu_item" title="My Account"> My Account </a> </li> 
+    <li class="utility-menu-item" id="utility-menu-item1"> <a tabindex="38" href="https://www.umass.edu/facforms/join" class="menu_item" title="Join the Email List!" target="_blank"> Join the Email List! </a> </li> 
+   </ul> 
+  </div> 
+ </div> <!-- CONTENT START --> 
+ <div id="content"> 
+  <div class="container"> 
+   <div class="bodyDetails" id="default"> 
+    <div id="searchBox" class="search-box"> 
+     <form id="searchItems" action="default.asp" method="post" class="form-inline"> 
+      <input type="hidden" name="sToken" value="1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=" class="form-inline"> 
+      <input type="hidden" name="BOset::WScontent::SearchCriteria::venue_filter" value=""> 
+      <input type="hidden" name="BOset::WScontent::SearchCriteria::city_filter" value=""> 
+      <input type="hidden" name="BOset::WScontent::SearchCriteria::month_filter" value=""> 
+      <input type="hidden" name="BOset::WScontent::SearchCriteria::object_type_filter" value=""> 
+      <input type="hidden" name="BOset::WScontent::SearchCriteria::category_filter" value=""> 
+      <input type="hidden" name="BOset::WScontent::SearchCriteria::search_from" value=""> 
+      <input type="hidden" name="BOset::WScontent::SearchCriteria::search_to" value=""> 
+      <input type="hidden" name="doWork::WScontent::search" value="1"> 
+      <input type="hidden" name="BOparam::WScontent::search::article_search_id" value="B59BA194-DCB8-4E75-B9B5-75B1D936ADFB"> 
+      <ul class="list-unstyled"> 
+       <li class="item-search-keyword"> <label> <span class="searchBoxLabel field-label">Search</span> <input type="text" name="BOset::WScontent::SearchCriteria::search_criteria" class=" form-control" value="" title="Search Criteria" id="BOset::WScontent::SearchCriteria::search_criteria" tabindex="39" title="Search" class="form-control"> </label> </li> 
+       <li class="item-search-start-date"> <label> <span class="searchBoxLabel field-label">Event Dates</span> 
+         <div class="input-group">
+          <input type="text" name="BOset::WScontent::SearchCriteria::search_from" class=" form-control" value="" title="Search From" id="BOset::WScontent::SearchCriteria::search_from::0" tabindex="40" title="Event Dates" class="form-control">
+          <div class="input-group-append">
+           <button type="button" class="btn-unstyled calIcon" title="Show date picker" onclick="tsOpenCalendar( event, &quot;BOset::WScontent::SearchCriteria::search_from::0&quot;, &quot;0&quot;, &quot;true&quot;, &quot;sToken&quot;, &quot;1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;);" id="cal::BOset::WScontent::SearchCriteria::search_from::0"></button> 
+          </div>
+         </div> </label> </li> 
+       <li class="item-search-end-date"> <label> <span class="searchBoxLabel field-label">to</span> 
+         <div class="input-group">
+          <input type="text" name="BOset::WScontent::SearchCriteria::search_to" class=" form-control" value="" title="Search To" id="BOset::WScontent::SearchCriteria::search_to::0" tabindex="41" title="to" class="form-control">
+          <div class="input-group-append">
+           <button type="button" class="btn-unstyled calIcon" title="Show date picker" onclick="tsOpenCalendar( event, &quot;BOset::WScontent::SearchCriteria::search_to::0&quot;, &quot;0&quot;, &quot;true&quot;, &quot;sToken&quot;, &quot;1,7c4c5d96,60515c5e,9E331571-AB56-4D7F-A528-B7A1672C2A31,OKXLm4n2DTf9o5HmjecDWFYXEjQ=&quot;);" id="cal::BOset::WScontent::SearchCriteria::search_to::0"></button> 
+          </div>
+         </div> </label> </li> 
+       <li class="item-search-submit"> <input type="submit" class="btn btn-secondary" tabindex="42" value="Go" name="Go" onclick="doGAClicks('Search')"> </li> 
+      </ul> 
+     </form> 
+    </div> 
+    <div class="articles  has-primary-features has-secondary-features"> <!-- top scrolling features included --> 
+     <div class="article-container primary-feature-wrapper"> 
+      <div id="feature-box" class="static-inner"> 
+       <div class="item item-0 static">
+        <img alt="Silkroad with woman playing violin and another woman playing bagpipes on orange background.  Middle Matt Haimoviz with his curly hair blowing upward and playing the cello, then members of Ladysmith Black Mombazo in front of a brick wall wearing blue print shirts.  Their hands are forward and they are smiling." src="/content/Images/21Events/21WebTopSpring.jpg" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="article-body-container"> 
+      <div class="article-container main-article-body"> 
+       <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">Based on current state and University Covid-19 restrictions, Fine Arts Center venues Bowker Auditorium, the Concert Hall, and Hampden Gallery, remain closed to the public. Augusta Savage Gallery and the University Museum of Contemporary Art are open only for UMass campus faculty staff and students.</p> 
+       <h3 style="text-align: right;" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"><span class="glyphicon glyphicon-chevron-down">&nbsp;</span> <a href="/Online/Article/FACatHomeOnDemand" shape="rect">⇥ On View ⇤</a> <span class="glyphicon glyphicon-chevron-down">&nbsp;</span> <a href="/Online/Article/ForStudents" shape="rect">⇥ For Students ⇤</a> &nbsp;</h3> 
+       <h1 xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">Upcoming/On Sale</h1> 
+       <div name="avWidget" id="avWidget_6C67003C-1B2A-4329-84FB-39180762F23D_IDRJJNDOJHWABAMP1QRCVF0X4VHFCD4Y3UQGTDOLKZB0FAGNGDULHG" xmlns:av="http://www.audienceview.com/xml/email/" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
+        <script type="text/javascript">
+  registerWidget( "SearchWebWidget3", "avWidget_6C67003C-1B2A-4329-84FB-39180762F23D_IDRJJNDOJHWABAMP1QRCVF0X4VHFCD4Y3UQGTDOLKZB0FAGNGDULHG", {
+  "SearchWebWidget3": "",
+  
+  "css_id": "VisualArtsGrid",
+  
+  "css_class": "",
+  
+  "css_style": "",
+  
+  "showNoResults": "",
+  
+  "title": "",
+  
+  "showPrice": "",
+  
+  "showLegend": "",
+   "1": "1"});
+</script>
+       </div> 
+       <div style="display: none; max-height: 0px; overflow: hidden;" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">
+        <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size: 12px;">Enjoy our first live-streamed performance this Saturday</span> </span> 
+        <br clear="none"> &nbsp;
+       </div> 
+       <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">&nbsp;</p> &nbsp; 
+       <hr xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+      </div> 
+      <div class="article-container secondary-linked-features"> 
+       <div class="secondary-linked-feature-div" id="secondary-linked-feature-0"> 
+        <br clear="all" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+        <br clear="all" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+        <div name="avWidget" id="avWidget_74F8D785-8544-4FD7-80EC-30C9BD1DFF27_IDB0IS4YVZHNP2M3TBHOSECYAQ4LC02V405QJS22PPG140EHLPRCNO" xmlns:av="http://www.audienceview.com/xml/email/" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
+         <script type="text/javascript">
+  registerWidget( "CalendarWidget", "avWidget_74F8D785-8544-4FD7-80EC-30C9BD1DFF27_IDB0IS4YVZHNP2M3TBHOSECYAQ4LC02V405QJS22PPG140EHLPRCNO", {
+  "CalendarWidget": "",
+  
+  "css_id": "",
+  
+  "css_class": "",
+  
+  "css_style": "",
+  
+  "seriesName": "",
+  
+  "title": "",
+  
+  "displayMonth": "",
+   "1": "1"});
+</script>
+        </div> 
+       </div> 
+       <div class="secondary-linked-feature-div" id="secondary-linked-feature-1"> 
+        <p style="text-align: left;" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"><br clear="none"> <a href="Article/List" shape="rect">View List Format </a> <br clear="none"> <br clear="none"> Box Office 413.545.2511<br clear="none"> <a href="/Online/Article/GC" shape="rect">Buy a Gift Certificate</a> <br clear="none"> <a href="/Online/Article/SeatMaps?sessionlanguage=" shape="rect">Seat Maps</a> <br clear="none"> &nbsp;</p> 
+        <p style="text-align: left;" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"><a href="/Online/Article/ArtsCouncil?sessionlanguage=" shape="rect">Arts Council Grants</a> </p> 
+        <p style="text-align: left;" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">&nbsp;</p> 
+       </div> 
+       <div class="secondary-linked-feature-div" id="secondary-linked-feature-2"> 
+        <h2 xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"><a href="/Online/Article/Justice" shape="rect"><span style="color:#881111;"><strong><span style="font-family:Arial,Helvetica,sans-serif;">Our Renewed Commitment to Justice &amp; Equality</span> </strong> </span> </a> </h2> 
+        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">June 4, 2020</p> 
+        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">Since George Washington’s decision to use Phillis Wheatley’s poetry to manage the public relations challenge of fighting a revolutionary war while preserving his own right to enslave, America has often signified its virtue through its public embrace of Black art while remaining far too silent on the harsh realities of Black life. We, at the Fine Arts Center, understand that it is not enough to celebrate and be moved by great artistic achievements like Coltrane’s <em>Love Supreme</em>, Walker’s <em>Tales of Slavery and Power</em> or Ailey’s <em>Revelations. </em>We&nbsp;must also call out the injustices endangering the people and communities behind the work.</p> 
+        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">Indeed, Black art matters, and so do Black lives.</p> 
+        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">The Fine Arts Center, along with UMass Amherst, stand in solidarity with Black people and all communities seeking justice for victims of police brutality&nbsp;<strong>George Floyd, Breonna Taylor,</strong>&nbsp;<strong>Tony McDade, Sean Reed,&nbsp;Eric Garner, John Crawford III, Michael Brown, Ezell Ford, Dante Parker, Michelle Cusseaux, Laquan McDonald, George Mann, Tanisha Anderson, Akai Gurley, Tamir Rice, Rumain Brisbon, Jerame Reid, Matthew Ajibade, Frank Smart, Natasha McKenna, Tony Robinson, Anthony Hill, Mya Hall, Phillip White, Eric Harris, Walter Scott, William Chapman II, Alexia Christian, Brendon Glenn, Victo&nbsp;Larosa III, Jonathan Sanders, Freddie Gray, Joseph Mann, Salvado Ellswood, Sandra Bland, Albert Joseph Davis, Darrius Stewart, Billy Ray Davis, Samuel DuBose, Michael Sabbie, Brian Keith Day, Christian Taylor, Troy Robinson, Asshams Pharoah Manley, Felix Kumi, Keith Harrison McLeod, Junior Prosper, Alonzo Smith, Tyree Crawford, India Kager, La’Vante Biggs, Michael Lee Marshall, Jamar Clark, Richard Perkins, Nathaniel Harris Pickett, Benni Lee Tignor, Miguel Espinal, Michael Noel, Kevin Matthews, Bettie Jones, Quintonio Legrier, Keith Childress Jr., Janet Wilson, Randy Nelson, Antronie Scott, Wendell Celestine, David Joseph, Calin Roquemore, Dyzhawn Perkins, Christopher Davis, Marco Loud, Peter Gaines, Torrey Robinson, Darius Robinson, Kevin Hicks, Mary Truxillo, Demarcus Semer, Willie Tillman, Terrill Thomas, Sylville Smith, Alton Sterling, Philando Castile, Terence Crutcher, Paul O’Neal, Alteria Woods, Jordan Edwards, Aaron Bailey, Ronell Foster, Stephon Clark, Antwon Rose II, Botham Jean, Pamela Turner, Dominique Clayton, Atatiana Jefferson, Christopher Whitfield, Christopher McCorvey, Eric Reason, Michael Lorenzo Dean, </strong>and sadly, too many other unarmed Black people who have lost their lives to violence.</p> 
+        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">In this painful and illuminating moment, the Fine Arts Center acknowledges how far we are from realizing equality and justice for all in our practices. 2020 marks the 50th anniversary of the UMass Amherst W.E.B. Du Bois Department of Afro-American Studies, and also the Augusta Savage Gallery, supporting a legacy of social justice and inclusion since its incorporation as a Fine Arts Center program. And while our 45-year programmatic history has long honored diverse voices and artistic expressions, &nbsp;we must be a better arts and culture ally that truly recognizes and safeguards difference and magnifies the voices of the oppressed.<br clear="none"> <br clear="none"> <strong>In our recommitment&nbsp;to build a more just, equitable and antiracist world, we recognize that this struggle is intersectional and will take time and deliberate effort to confront.&nbsp;We pledge to match our words with the following actions.&nbsp;</strong> </p> &nbsp; 
+        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"><a href="/Online/Article/Justice" shape="rect"><strong>Click here to read more and join us in taking action.&nbsp;</strong> </a> </p> 
+        <p xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">&nbsp;</p> 
+        <p style="text-align: left;" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/">&nbsp;</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div><!--\\ .bodyDetails --> 
+ </div><!--\\ .container --> 
+</div><!--\\ #content --> 
+<div id="footer"> 
+ <div class="footer-content container"> 
+  <img alt="spaceer" src="/ArticleMedia/Images/spacer190x50.gif" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+  <table border="0" cellpadding="5" cellspacing="15" style="width: 100%;" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="1" colspan="1"> <h3 style="color:#fff;"><a href="tel:4135452511" shape="rect"><span style="font-size:26px;">413.545.2511</span> </a> <br clear="none"> Connect <span style="font-family: tahoma,geneva,sans-serif"><a href="http://www.facebook.com/UmassFineArtsCenter" shape="rect"><img alt="facebook icon" src="/content/Images/19brand/facebook.png"> </a> <a href="https://twitter.com/umassfac" shape="rect"><img alt="twitter icon" src="/content/Images/19brand/twitter.png"> </a> <a href="https://www.youtube.com/user/fineartscenter" shape="rect"><img alt="youtube icon" src="/content/Images/19brand/youtube.png"> </a> <a href="https://www.instagram.com/umassfac" shape="rect"><img alt="instagram" src="/content/Images/19brand/instagram.png"> </a> </span> </h3> <h2>&nbsp;</h2> </td> 
+     <td style="text-align: right;" rowspan="1" colspan="1"> <h2><a href="Article/Contact" shape="rect">CONTACT</a> <br clear="none"> <a href="Article/About" shape="rect">ABOUT</a> <br clear="none"> <a href="Article/GetInvolvedMain" shape="rect"><span>SUPPORT</span> </a> <br clear="none"> <a href="Article/PressRoom" shape="rect">PRESSROOM</a> </h2> </td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <table border="0" cellpadding="0" cellspacing="0" class="UMfooterLink" width="100%" xmlns="http://www.w3.org/1999/xhtml" xmlns:av="http://www.audienceview.com/xml/email/"> 
+   <tbody> 
+    <tr> 
+     <td rowspan="1" colspan="1"> 
+      <div style="background: url(/Online/branding/footerbackground.gif) repeat-x; height: 72px"> 
+       <p align="right">&nbsp;<br clear="none"> <span style="color:#ffffff;">© 2020 </span> <a class="UMfooterLink" href="http://umass.edu/" shape="rect">University of Massachusetts Amherst</a> &nbsp;&nbsp;<a class="UMfooterLink" href="http://www.umass.edu/site-policies" shape="rect">Site Policies&nbsp; </a> <a class="UMfooterLink" href="https://fac.umass.edu/Online/default.asp?BOparam::WScontent::loadArticle::permalink=Contact" shape="rect">Site Contact</a>&nbsp;<a href="https://fac.umass.edu/Online/Article/Sitemap" shape="rect">Sitemap</a> </p> 
+       <p align="left"><span style="color:#ffffff;">We acknowledge that the University of Massachusetts, Amherst stands on traditional Nonotuck Land, and we recognize our neighboring Indigenous nations: the Nipmuc and the Wampanoag to the East, the Mohegan and Pequot to the South, the Mohican to the West, and the Abenaki to the North.</span> </p> 
+       <p><span style="color:#000000;"><img alt="" src="/content/Images/spacer225x117.gif"> </span> </p> 
+      </div> </td> 
+    </tr> 
+    <tr> 
+     <td rowspan="1" colspan="1">&nbsp;</td> 
+     <td rowspan="1" colspan="1">&nbsp;</td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </div> 
+</div><!--\\ .content-wrapper --> 
+<div id="fade" class="black_overlay"></div> <!-- inclusion of bootstrap.js --> <!-- http://twitter.github.com for documentation on bootstrap --> 
+<script src="/lib/bootstrap/js/bootstrap.bundle.min.js?_=7.40.0" type="text/javascript"></script> <!-- end of bootstrap.js --> <!-- Font Awesome for icons --> 
+<script src="/lib/fontawesome-free/js/all.min.js"></script> <!-- contains bootstrap specific function declarations --> 
+<script src="bootstrap-functions.js?_=7.40.0" type="text/javascript"></script> <!-- Logout Handler --> 
+<script>
+$(document).ready(function() {
+    var body = $("body");
+    
+    body
+    .on("logged-out", function(e) {
+        var targetPage = "default.asp?";
+        window.location.assign("login.asp?targetPage="+encodeURIComponent(targetPage));
+    });
+    
+    // on pressing Enter key on an anchor trigger click
+    $("a").keypress(function(e){
+      if(e.keyCode == 13){
+        $(this).trigger("click");
+      }
+    });
+    
+    // When page is loaded make sure the Page Load Spinner is not shown
+    if (spinnerDelayTimeout) {
+        cancelSpinnerTimeouts();
+    }
+    
+    body.removeClass("show-spinner");
+    
+    // Show spinner when form submitted or link clicked
+    var onSubmit;
+    $("form").each(
+      //Trigger the spinner after any other onsubmit functions for the form
+      function(index)
+      {
+        onSubmit = $(this).attr("onsubmit");
+        if ( onSubmit && onSubmit != "" ) {
+          onSubmit = onSubmit.trim();
+          // if the submit is "returning", we need to && showSpinner otherwise it won't be called
+          var returnIndex = onSubmit.indexOf("return");
+          if ( returnIndex != -1 ) {
+            // remove any trailing semi-colons
+            if ( onSubmit.indexOf(";") == onSubmit.length-1 )
+              onSubmit = onSubmit.substr(0, onSubmit.length-1);
+
+            // wrap the return in () in case it contains ||
+            // (add 6 to strip the original "return")
+            onSubmit = onSubmit.substr(0, returnIndex) + "return (" + onSubmit.substr(returnIndex + 6) + ")";
+
+            // and then append the call to the spinner
+            onSubmit += " && showSpinner()";
+          }
+          else {
+            onSubmit += ";showSpinner()";
+          }
+        }
+        else {
+          onSubmit = "showSpinner()";
+        }
+        $(this).attr("onsubmit", onSubmit);
+      }
+    );
+
+    // attach an event listener to each <a> tag to show the spinner if needed
+    // only do this if the <a> tag has an "href" attribute, so we don't show
+    // the spinner if staying on the page.  If navigating away from the page
+    // via an onClick, we are assuming the onClick handles the display of the spinner
+    // (or submits the form with jQuery, so the spinner attached to the form.submit
+    // is fired)
+    $("a").click(function(e) {
+      var href = $(this).attr("href") || "";
+      var target = $(this).attr("target") || "";
+
+      if ((target == "" || /^(_self|_top|_parent)/.test(href)) && href != "" && !/^(#|javascript:|mailto:|file:)/.test(href))
+        showSpinner();
+    });
+});
+</script> <!-- CONTENT END -->  
+<script>
+  $(function(){
+
+    // "Continue Shopping" and "Look for other events" buttons to redirect back to Brochure page user came from
+    $("a[name=continue-shopping], a[name=continueShopping], input[name=startOver], a[name=error-StartOver], input[name=error-StartOver]").on("click", function(e) {
+      var returnTo = getCookie('returnTo');
+      if(returnTo){
+        e.preventDefault();
+        deleteCookie('returnTo');
+        window.location.href = returnTo;
+      }
+    })
+
+    // "New Order" button to redirect to EIF home page
+    $("input.new-order,input[name=cancel-order]").on("click", function(e){
+         var returnTo = getCookie('returnTo');
+          if(returnTo){
+            e.preventDefault();
+            $("#popupDiv_okayButton").on("click", function(e){
+               $.ajax({
+                 url: 'clearOrder.asp',
+                 complete: function() {
+                    deleteCookie('returnTo');
+                    window.location.href = returnTo;    
+                 }
+                });
+    
+             });
+          }
+    })
+  });
+
+//adding the returnTo to the cookie
+  var returnTo = "";
+
+  if (returnTo) {
+      var reffA = document.createElement('a');
+      reffA.href = returnTo;
+
+    if(reffA.host != window.location.host) {
+      setCookie("returnTo", returnTo, 1);
+    }
+  }
+
+  /*
+    *****************************************************
+    Cookie methods
+    *****************************************************
+  */
+  function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+          }
+      }
+      return "";
+  }
+
+  function deleteCookie(cname) {
+      setCookie(cname, "", -1);
+  }
+</script>
+</body>
+</doc>

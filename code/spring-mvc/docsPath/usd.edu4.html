@@ -1,0 +1,1490 @@
+<doc>
+<filename>usd.edu4.html</filename>
+<url>http://www.usdcharliestore.com</url>
+<ip>23.227.38.32</ip>
+<title>USD Charlie's Store | Official Store of the USD Coyotes</title>
+<body>
+<div style="display:none;"> 
+</div> <!-- CreativeR Store Pickup-->   
+<form action="/cart" method="post" novalidate class="cart-drawer-form"> 
+ <div id="cartSlideoutWrapper" class="envy-shopping-right slideout-panel-hidden cart-drawer-right"> 
+  <div class="cart-drawer__top"> 
+   <div class="cart-drawer__empty-div"></div> 
+   <h3 class="type-subheading type-subheading--1 wow fadeIn"> <span class="cart-drawer--title">Your Cart</span> </h3> <a href="#" class="slide-menu cart-close-icon cart-menu-close"><i data-feather="x"></i></a> 
+  </div> 
+  <div class="cart-error-box"></div> 
+  <div class="cart-empty-box">
+    Your basket is empty 
+  </div> 
+  <script type="application/template" id="cart-item-template">
+			<div class="cart-item">
+				<div class="cart-item-image--wrapper">
+					<a class="cart-item-link" href="/product">
+						<img
+							class="cart-item-image"
+							src="/product/image.jpg"
+							alt=""
+						/>
+					</a>
+				</div>
+				<div class="cart-item-details--wrapper">
+					<a href="/product" class="cart-item-link cart-item-details--product-title-wrapper">
+						<span class="cart-item-product-title"></span>
+						<span class="cart-item-variant-title hide"></span>
+					</a>
+
+						<div class="cart-item-price-wrapper">
+							<span class="sr-only">Now</span>
+							<span class="cart-item-price"></span>
+							<span class="sr-only">Was</span>
+							<span class="cart-item-price-original"></span>
+							<span class="cart-item-price-per-unit"></span>
+						</div>
+
+						<ul class="order-discount--cart-list" aria-label="Discount"></ul>
+
+						<div class="cart-item--quantity-remove-wrapper">
+							<div class="cart-item--quantity-wrapper">
+								<button type="button" class="cart-item-quantity-button cart-item-decrease" data-amount="-1" aria-label="Reduce item quantity by one">-</button>
+								<input type="text" class="cart-item-quantity" min="1" pattern="[0-9]*" aria-label="quantity" />
+								<button type="button" class="cart-item-quantity-button cart-item-increase" data-amount="1" aria-label="Increase item quantity by one">+</button>
+							</div>
+
+							<div class="cart-item-remove-button-container">
+								<button type="button" id="cart-item-remove-button">Remove</button>
+							</div>
+					</div>
+
+				</div>
+			</div>
+		</script> 
+  <script type="application/json" id="initial-cart">
+			{"note":null,"attributes":{},"original_total_price":0,"total_price":0,"total_discount":0,"total_weight":0.0,"item_count":0,"items":[],"requires_shipping":false,"currency":"USD","items_subtotal_price":0,"cart_level_discount_applications":[]}
+		</script> 
+  <div class="cart-items"></div> 
+  <div class="ajax-cart--bottom-wrapper"> 
+   <div class="ajax-cart--cart-discount"> 
+    <div class="cart--order-discount-wrapper custom-font ajax-cart-discount-wrapper"></div> 
+   </div> <span class="cart-price-text type-subheading">Subtotal</span> 
+   <div class="ajax-cart--cart-original-price"> <span class="cart-item-original-total-price"><span class="money">$0.00</span></span> 
+   </div> 
+   <div class="ajax-cart--total-price"> 
+    <h5><span class="cart-total-price" id="cart-price"><span class="money">$0.00</span></span></h5> 
+   </div> 
+   <div class="slide-checkout-buttons"> <button type="submit" class="btn cart-button-checkout"> <span class="cart-button-checkout-text">Place your order</span> 
+     <div class="cart-button-checkout-spinner lds-dual-ring hide"></div> </button> 
+   </div> 
+  </div> 
+ </div> 
+</form> 
+<div id="main-body"> 
+ <div id="slideout-overlay"></div> 
+ <div id="shopify-section-announcement-bar" class="shopify-section"> 
+ </div> 
+ <div id="shopify-section-header" class="shopify-section">
+  <style>
+  .site-header__logo-image img,
+  .overlay-logo-image {
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 992px) {
+    .site-header__logo-image img,
+    .overlay-logo-image {
+      width: 200px;
+    }
+    .logo-placement-within-wrapper--logo {
+      width: 200px;
+      flex-basis: 200px;
+    }
+  }
+
+  #main-navigation-wrapper.mega-menu-wrapper .mega-menu ul.nav li{
+    padding-top: px;
+    padding-bottom: px;
+  }
+
+  #site-header svg, .sticky-header-wrapper svg {
+    height: 18px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #site-header svg, .sticky-header-wrapper svg {
+        height: 24px;
+    }
+  }
+
+  .top-search #search-wrapper {
+    background: var(--header-background)!important;
+    border-bottom: 1px solid var(--header-background)!important;
+
+  }
+
+  #top-search-wrapper svg {
+    stroke: var(--header-text)!important;
+  }
+
+  .top-search input {
+    color: var(--header-text)!important;
+  }
+
+  #top-search-wrapper #search_text::placeholder {
+    color: var(--header-text);
+  }
+
+  #top-search-wrapper #search_text::-webkit-input-placeholder {
+    color: var(--header-text);
+  }
+
+  #top-search-wrapper #search_text:-ms-input-placeholder {
+    color: var(--header-text);
+  }
+
+  #top-search-wrapper #search_text::-moz-placeholder {
+    color: var(--header-text);
+  }
+
+  #top-search-wrapper #search_text:-moz-placeholder {
+    color: var(--header-text);
+  }
+
+  .top-search  {
+    border-bottom: solid 1px var(--header-border-color)!important;
+  }
+
+  .predictive-search-group {
+    background-color: var(--header-background)!important;
+  }
+
+  .search-results__meta {
+    background: var(--header-background)!important;
+  }
+
+  .search-results__meta .search-results__meta-clear {
+    color: var(--header-text);
+  }
+
+  .search-results__meta-view-all a {
+    color: var(--header-text)!important;
+  }
+
+  .search-results-panel .predictive-search-group h2 {
+    color: var(--header-text);
+    border-bottom: solid 1px var(--header-border-color);
+  }
+
+  .search-results-panel .predictive-search-group .search-vendor, .search-results-panel .predictive-search-group .money {
+    color: var(--header-text);
+  }
+
+  .search--result-group h5 a {
+    color: var(--header-text)!important;
+  }
+
+  .predictive-loading {
+    color: var(--header-text)!important;
+  }
+</style> 
+  <div class="header-wrapper header-wrapper--overlay" data-wetheme-section-type="header" data-wetheme-section-id="header"> 
+   <div class="header-logo-wrapper" data-section-id="header" data-section-type="header-section"> 
+    <nav id="theme-menu" class="mobile-menu--wrapper slideout-panel-hidden"> 
+     <script type="application/json" id="mobile-menu-data">
+{
+    
+        
+        
+        "0": {
+            "level": 0,
+            "url": "/",
+            "title": "Home",
+            "links": [
+                
+            ]
+        }
+        
+    
+        
+        ,
+        "1": {
+            "level": 0,
+            "url": "/collections",
+            "title": "Shop",
+            "links": [
+                
+                    "1--0",
+                
+                    "1--1",
+                
+                    "1--2",
+                
+                    "1--3",
+                
+                    "1--4",
+                
+                    "1--5",
+                
+                    "1--6",
+                
+                    "1--7",
+                
+                    "1--8"
+                
+            ]
+        }
+        
+          
+            , "1--0": {
+            "level": 1,
+            "url": "/collections/mens",
+            "title": "Men's",
+            "links": [
+                
+            ]
+        }
+        
+        
+          
+            , "1--1": {
+            "level": 1,
+            "url": "/collections/womens",
+            "title": "Women's",
+            "links": [
+                
+            ]
+        }
+        
+        
+          
+            , "1--2": {
+            "level": 1,
+            "url": "/collections/kids",
+            "title": "Youth",
+            "links": [
+                
+                    "1--2--0",
+                
+                    "1--2--1",
+                
+                    "1--2--2"
+                
+            ]
+        }
+        
+        
+        , "1--2--0": {
+            "level": 2,
+            "url": "/collections/infant",
+            "title": "Infant",
+            "links": []
+        }
+        
+        
+        , "1--2--1": {
+            "level": 2,
+            "url": "/collections/toddler",
+            "title": "Toddler",
+            "links": []
+        }
+        
+        
+        , "1--2--2": {
+            "level": 2,
+            "url": "/collections/kids",
+            "title": "Kids",
+            "links": []
+        }
+        
+        
+          
+            , "1--3": {
+            "level": 1,
+            "url": "/collections/game-day",
+            "title": "Gameday",
+            "links": [
+                
+            ]
+        }
+        
+        
+          
+            , "1--4": {
+            "level": 1,
+            "url": "/collections/school-supplies-1",
+            "title": "School Supplies",
+            "links": [
+                
+            ]
+        }
+        
+        
+          
+            , "1--5": {
+            "level": 1,
+            "url": "/collections/accessories",
+            "title": "Accessories",
+            "links": [
+                
+            ]
+        }
+        
+        
+          
+            , "1--6": {
+            "level": 1,
+            "url": "/collections/decor",
+            "title": "Decor",
+            "links": [
+                
+            ]
+        }
+        
+        
+          
+            , "1--7": {
+            "level": 1,
+            "url": "/collections/sale-items",
+            "title": "Charlie's Clearance",
+            "links": [
+                
+            ]
+        }
+        
+        
+          
+            , "1--8": {
+            "level": 1,
+            "url": "/collections/styled-by-charlies",
+            "title": "Styled By Charlie's ",
+            "links": [
+                
+            ]
+        }
+        
+        
+    
+        
+        ,
+        "2": {
+            "level": 0,
+            "url": "https://usd.textbookx.com/institutional/index.php",
+            "title": "Bookstore",
+            "links": [
+                
+            ]
+        }
+        
+    
+        
+        ,
+        "3": {
+            "level": 0,
+            "url": "/pages/covid-19-response",
+            "title": "COVID-19 Response",
+            "links": [
+                
+            ]
+        }
+        
+    
+        
+        ,
+        "4": {
+            "level": 0,
+            "url": "/pages/about-us",
+            "title": "About Us",
+            "links": [
+                
+                    "4--0"
+                
+            ]
+        }
+        
+          
+            , "4--0": {
+            "level": 1,
+            "url": "/pages/contact-us",
+            "title": "Contact Us",
+            "links": [
+                
+            ]
+        }
+        
+        
+    
+        
+        ,
+        "5": {
+            "level": 0,
+            "url": "/products/gift-card",
+            "title": "Purchase a Gift Card",
+            "links": [
+                
+            ]
+        }
+        
+    
+        
+        ,
+        "6": {
+            "level": 0,
+            "url": "/collections/styled-by-charlies",
+            "title": "Styled By Charlie's",
+            "links": [
+                
+            ]
+        }
+        
+    
+}
+</script> 
+     <script type="application/json" id="mobile-menu-data-topbar">
+{
+    
+}
+</script> 
+     <div class="mobile-menu-close">
+      <a href="#" class="slide-menu menu-close-icon mobile-menu-close"><i data-feather="x" aria-hidden="true"></i></a>
+     </div> 
+     <ul class="mobile-menu mobile-menu-main search-enabled" id="mobile-menu--main-menu"> 
+      <li> <a class="mobile-menu-link mobile-menu-link__text" href="/">Home</a> </li> 
+      <li class="mobile-menu-link__has-submenu"> <a class="mobile-menu-link mobile-menu-link__text" href="/collections">Shop</a> <a href="#" class="mobile-menu-sub mobile-menu-right mobile-menu-link" data-link="1"> <i data-feather="chevron-right"></i> </a> </li> 
+      <li> <a class="mobile-menu-link mobile-menu-link__text" href="https://usd.textbookx.com/institutional/index.php">Bookstore</a> </li> 
+      <li> <a class="mobile-menu-link mobile-menu-link__text" href="/pages/covid-19-response">COVID-19 Response</a> </li> 
+      <li class="mobile-menu-link__has-submenu"> <a class="mobile-menu-link mobile-menu-link__text" href="/pages/about-us">About Us</a> <a href="#" class="mobile-menu-sub mobile-menu-right mobile-menu-link" data-link="4"> <i data-feather="chevron-right"></i> </a> </li> 
+      <li> <a class="mobile-menu-link mobile-menu-link__text" href="/products/gift-card">Purchase a Gift Card</a> </li> 
+      <li> <a class="mobile-menu-link mobile-menu-link__text" href="/collections/styled-by-charlies">Styled By Charlie's</a> </li> 
+      <li class="mobile-menu-link mobile-customer-link"><a href="/account/login" id="customer_login_link">Log in</a></li> 
+      <li class="mobile-menu-link mobile-customer-link"><a href="/account/register" id="customer_register_link">Create Account</a></li> 
+     </ul>
+     <form method="post" action="/localization" id="localization_form" accept-charset="UTF-8" class="localization-selector-form" enctype="multipart/form-data">
+      <input type="hidden" name="form_type" value="localization">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="return_to" value="/"> 
+     </form>
+     <ul class="mobile-menu mobile-menu-child mobile-menu-hidden" id="mobile-menu"> 
+      <li aria-haspopup="true"> <a href="#" class="mobile-menu-back mobile-menu-link"> <i data-feather="chevron-left" aria-hidden="true"></i> 
+        <div class="mobile-menu-title"></div> </a> </li> 
+     </ul> 
+     <ul class="mobile-menu mobile-menu-grandchild mobile-menu-hidden" id="mobile-submenu"> 
+      <li aria-haspopup="true"> <a href="#" class="mobile-menu-back mobile-menu-link"> <i data-feather="chevron-left" aria-hidden="true"></i> 
+        <div class="mobile-menu-title"></div> </a> </li> 
+     </ul> 
+    </nav> 
+    <div class="d-flex d-lg-none"> 
+     <div class="mobile-header--wrapper"> 
+      <div class="mobile-side-column mobile-header-wrap--icons"> <a href="#theme-menu" class="slide-menu slide-menu-mobile"> <i id="iconAnim" data-feather="menu"></i> </a> 
+      </div> 
+      <div class="mobile-logo-column mobile-header-wrap--icons"> 
+       <div class="site-header__logo h1 logo-placement--within" id="site-title" itemscope itemtype="http://schema.org/Organization"> <a href="/" itemprop="url" class="site-header__logo-image"> 
+         <noscript aria-hidden="true"> 
+          <img class="" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlies_1000x1000.png?v=1527710948" data-sizes="auto" alt="USD Charlie&amp;#39;s Store" itemprop="logo"> 
+         </noscript> <img class="lazyload  " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlies_150x.png?v=1527710948" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlies_{width}x.png?v=1527710948" data-sizes="auto" data-aspectratio="1.5" alt="USD Charlie&amp;#39;s Store" itemprop="logo"> </a> 
+       </div> 
+      </div> 
+      <div class="mobile-side-column mobile-header-wrap--icons mobile-header-right"> <a href="/search" class="icons--inline search-show" title="Search"> <i data-feather="search"></i> </a> <a href="/cart" class="slide-menu slide-menu-cart"> <i data-feather="shopping-cart"></i> </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="top-search-wrapper"> 
+     <div class="top-search"> 
+      <form id="search-page-form" action="/search"> 
+       <input type="hidden" name="type" value="product,"> 
+       <div id="search-wrapper"> 
+        <div class="search_bar--controls"> <button id="search_submit" type="submit" aria-hidden="true" tabindex="-1"> <i data-feather="search"></i> </button> 
+        </div> 
+        <input id="search_text" name="q" type="text" size="20" placeholder="Search..." autocomplete="off" autocorrect="off" spellcheck="false" class="is-predictive" data-search-types="product," data-show-prices="true" data-show-vendor="false" aria-hidden="true" tabindex="-1"> 
+        <div class="search-clear" id="search-bar--clear" tabindex="-1" aria-hidden="true" aria-label="Close search bar"> <i data-feather="x"></i> 
+        </div> 
+       </div> 
+      </form> 
+     </div> 
+     <div class="predictive-loading hide"> <i class="fa fa-circle-o-notch fa-spin fa-2x fa-fw js"></i><span class="sr-only">Loading...</span> 
+     </div> 
+     <div class="search-summary"></div> 
+     <div class="search-results-panel"></div> 
+    </div> 
+    <header id="site-header" class="clearfix d-none d-lg-block
+
+"> 
+     <div> 
+      <div class="header-content logo-placement-within-wrapper"> 
+       <div class="logo-placement-within-wrapper__item empty"> 
+        <div class="localization-selectors--left"> 
+         <form method="post" action="/localization" id="localization_form" accept-charset="UTF-8" class="localization-selector-form" enctype="multipart/form-data">
+          <input type="hidden" name="form_type" value="localization">
+          <input type="hidden" name="utf8" value="✓">
+          <input type="hidden" name="_method" value="put">
+          <input type="hidden" name="return_to" value="/">
+         </form> 
+        </div> 
+       </div> 
+       <div class="logo-placement-within-wrapper__item"> 
+        <div class="site-header__logo h1 logo-placement--within" id="site-title" itemscope itemtype="http://schema.org/Organization"> <a href="/" itemprop="url" class="site-header__logo-image"> 
+          <noscript aria-hidden="true"> 
+           <img class="" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlies_1000x1000.png?v=1527710948" data-sizes="auto" alt="USD Charlie&amp;#39;s Store" itemprop="logo"> 
+          </noscript> <img class="lazyload  " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlies_150x.png?v=1527710948" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlies_{width}x.png?v=1527710948" data-sizes="auto" data-aspectratio="1.5" alt="USD Charlie&amp;#39;s Store" itemprop="logo"> </a> 
+        </div> 
+       </div> 
+       <div class="logo-placement-within-wrapper__item"> 
+        <div class="main-icons-with-locale"> 
+         <div class="header-icons cart-link"> 
+          <ul> 
+           <li> <a href="/search" class="icons--inline search-show" title="Search" tabindex="0"> <i data-feather="search"></i> </a> </li> 
+           <li> <a href="/account/login" class="icons--inline" title="Log in"> <i data-feather="user"></i> </a> </li> 
+           <li> <a href="/cart" class="icons--inline slide-menu slide-menu-cart" title="Cart"> <i data-feather="shopping-cart"></i> <span class="header--supporting-text"><span class="cart-item-count-header cart-item-count-header--quantity">0</span></span> </a> </li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </header>
+   </div>  
+   <div class="header-menu-wrapper d-none d-lg-block"> 
+    <div class="main-navigation-wrapper-main"> 
+     <div id="main-navigation-wrapper" class="main-navigation-wrapper mega-menu-wrapper"> 
+      <ul class="nav nav-pills"> 
+       <li class="site-nav--active"> <a href="/">Home</a> </li> 
+       <li class="dropdown" aria-haspopup="true"> 
+        <div class="mega-menu--dropdown-wrapper"> <a class="dropdown-envy-toggle" data-delay="200" href="/collections"> <span class="nav-label">Shop</span> <i data-feather="chevron-down"></i> </a> 
+         <ul class="dropdown-menu dropdown-menu--standard"> 
+          <li> <a class="dropdown-submenu__link" href="/collections/mens">Men's</a> </li> 
+          <li> <a class="dropdown-submenu__link" href="/collections/womens">Women's</a> </li> 
+          <li class="dropdown-submenu" aria-haspopup="true"> <a class="dropdown-submenu__link" href="/collections/kids"> Youth 
+            <svg class="feather feather-chevron-right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             <polyline points="9 18 15 12 9 6"></polyline>
+            </svg> </a> 
+           <ul class="dropdown-menu"> 
+            <li> <a class="dropdown-submenu__link" href="/collections/infant">Infant</a> </li> 
+            <li> <a class="dropdown-submenu__link" href="/collections/toddler">Toddler</a> </li> 
+            <li> <a class="dropdown-submenu__link" href="/collections/kids">Kids</a> </li> 
+           </ul> </li> 
+          <li> <a class="dropdown-submenu__link" href="/collections/game-day">Gameday</a> </li> 
+          <li> <a class="dropdown-submenu__link" href="/collections/school-supplies-1">School Supplies</a> </li> 
+          <li> <a class="dropdown-submenu__link" href="/collections/accessories">Accessories</a> </li> 
+          <li> <a class="dropdown-submenu__link" href="/collections/decor">Decor</a> </li> 
+          <li> <a class="dropdown-submenu__link" href="/collections/sale-items">Charlie's Clearance</a> </li> 
+          <li> <a class="dropdown-submenu__link" href="/collections/styled-by-charlies">Styled By Charlie's </a> </li> 
+         </ul> 
+        </div> </li> 
+       <li> <a href="https://usd.textbookx.com/institutional/index.php">Bookstore</a> </li> 
+       <li> <a href="/pages/covid-19-response">COVID-19 Response</a> </li> 
+       <li class="dropdown" aria-haspopup="true"> 
+        <div class="mega-menu--dropdown-wrapper"> <a class="dropdown-envy-toggle" data-delay="200" href="/pages/about-us"> <span class="nav-label">About Us</span> <i data-feather="chevron-down"></i> </a> 
+         <ul class="dropdown-menu dropdown-menu--standard"> 
+          <li> <a class="dropdown-submenu__link" href="/pages/contact-us">Contact Us</a> </li> 
+         </ul> 
+        </div> </li> 
+       <li> <a href="/products/gift-card">Purchase a Gift Card</a> </li> 
+       <li> <a href="/collections/styled-by-charlies">Styled By Charlie's</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div id="main" role="main"> 
+  <div class="index-sections"> <!-- BEGIN content_for_index -->
+   <div id="shopify-section-image--slideshow" class="shopify-section homepage-section--slideshow-wrapper"> 
+    <div class="container-fluid homepage-slider-container slider-section--image--slideshow slider-dots--caption-padding" data-wetheme-section-type="image--slideshow" data-wetheme-section-id="image--slideshow"> 
+     <div class="row"> 
+      <div class="page-width col-md-12"> 
+       <div class="row"> 
+        <div class="flexslider-container col-md-12"> 
+         <div class="flexslider flexslider-homepage slideshow--full-screen" data-slider-id="image--slideshow" data-slider-slide-time="5000" data-slider-animation="fade" data-slider-dots="true" data-slider-arrows="true"> 
+          <ul class="slides" style="width: 500%;"> 
+           <li data-slide-index="0" class="slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc  slideshow-image-overlay mobile-image--disabled" style="display: block; float: left; width: 20.0%"> <a href="/products/2020-t-pattys-day-gray-triblend-shirt" class="slideshow__link" tabindex="-1"> 
+             <div style="position: relative" class="lazyload-blur-wrapper slideshow-desktop-as-mobile-image--ll-wrapper"> 
+              <noscript aria-hidden="true"> 
+               <img class="slideshow-desktop-as-mobile-image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/stpatty_shirt-01_39ae1517-d8ed-46cd-8b00-b73c5439b3b6_1000x1000.jpg?v=1615386508" data-sizes="auto" alt="" data-expand="10000"> 
+              </noscript> 
+              <img class="lazyload slideshow-desktop-as-mobile-image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/stpatty_shirt-01_39ae1517-d8ed-46cd-8b00-b73c5439b3b6_150x.jpg?v=1615386508" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/stpatty_shirt-01_39ae1517-d8ed-46cd-8b00-b73c5439b3b6_{width}x.jpg?v=1615386508" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/files/stpatty_shirt-01_39ae1517-d8ed-46cd-8b00-b73c5439b3b6_150x.jpg?v=1615386508" data-blur="true" alt="" data-expand="10000"> 
+             </div> </a> 
+            <div class="slider-caption horizontal-align--left vertical-align--bottom background slideshow-mobile-image-content slider-dots--padding"> 
+             <h2 class="slideshow-fade-content"><a href="/products/2020-t-pattys-day-gray-triblend-shirt">Shop the St. Pattie's Day Tee</a></h2> 
+             <div class="slider-caption--text slideshow-fade-content"> <a href="/products/2020-t-pattys-day-gray-triblend-shirt"> <p>Get your green gear now!</p> </a> 
+             </div> <a class="btn slideshow-fade-content" href="/products/2020-t-pattys-day-gray-triblend-shirt">Shop now</a> 
+            </div> </li> 
+           <style>
+                      .slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc .slider-caption.background {
+                        background-color: rgba(0,0,0,0)!important;
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc .slider-caption.background a:not(.btn){
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc .slider-caption .btn {
+                        background-color: #d21533 !important;
+                        color: #ffffff !important;
+                      }
+
+											@media only screen and (max-width:768px){
+
+												.slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc .slider-caption:not(.slideshow-mobile-image-content).background {
+                          background-color: #ffffff !important;
+                          color: #242424 !important;
+													text-align: center;
+                        }
+
+                        .slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc .slider-caption:not(.slideshow-mobile-image-content).background a{
+                          color: #242424 !important;
+													vertical-align: bottom;
+                        }
+
+												.slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc .slider-caption:not(.slideshow-mobile-image-content) a.btn {
+                          background-color: #d21533 !important;
+                          color: #ffffff !important;
+												}
+
+												.slider-block--deca2ebd-fc73-4bfe-9479-9f4533a47ffc .slider-caption:not(.slideshow-mobile-image-content) .btn:hover {
+													background-color: #3a3a3a !important;
+												}
+                    </style> 
+           <li data-slide-index="1" class="slider-block--image--slideshow-0  slideshow-image-overlay mobile-image--disabled" style="display: block; float: left; width: 20.0%"> <a href="/collections/accessories" class="slideshow__link" tabindex="-1"> 
+             <div style="position: relative" class="lazyload-blur-wrapper slideshow-desktop-as-mobile-image--ll-wrapper"> 
+              <noscript aria-hidden="true"> 
+               <img class="slideshow-desktop-as-mobile-image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlie-406_1000x1000.jpg?v=1614697717" data-sizes="auto" alt="" data-expand="10000"> 
+              </noscript> 
+              <img class="lazyload slideshow-desktop-as-mobile-image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlie-406_150x.jpg?v=1614697717" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlie-406_{width}x.jpg?v=1614697717" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/files/Charlie-406_150x.jpg?v=1614697717" data-blur="true" alt="" data-expand="10000"> 
+             </div> </a> 
+            <div class="slider-caption horizontal-align--left vertical-align--bottom background slideshow-mobile-image-content slider-dots--padding"> 
+             <h2 class="slideshow-fade-content"><a href="/collections/accessories">Shop Accessories</a></h2> 
+             <div class="slider-caption--text slideshow-fade-content"> <a href="/collections/accessories"> <p>Update your Yote accessories now!</p> </a> 
+             </div> <a class="btn slideshow-fade-content" href="/collections/accessories">Shop Now</a> 
+            </div> </li> 
+           <style>
+                      .slider-block--image--slideshow-0 .slider-caption.background {
+                        background-color: rgba(0,0,0,0)!important;
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--image--slideshow-0 .slider-caption.background a:not(.btn){
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--image--slideshow-0 .slider-caption .btn {
+                        background-color: #a10729 !important;
+                        color: #ffffff !important;
+                      }
+
+											@media only screen and (max-width:768px){
+
+												.slider-block--image--slideshow-0 .slider-caption:not(.slideshow-mobile-image-content).background {
+                          background-color: #ffffff !important;
+                          color: #242424 !important;
+													text-align: center;
+                        }
+
+                        .slider-block--image--slideshow-0 .slider-caption:not(.slideshow-mobile-image-content).background a{
+                          color: #242424 !important;
+													vertical-align: bottom;
+                        }
+
+												.slider-block--image--slideshow-0 .slider-caption:not(.slideshow-mobile-image-content) a.btn {
+                          background-color: #a10729 !important;
+                          color: #ffffff !important;
+												}
+
+												.slider-block--image--slideshow-0 .slider-caption:not(.slideshow-mobile-image-content) .btn:hover {
+													background-color: #3a3a3a !important;
+												}
+                    </style> 
+           <li data-slide-index="2" class="slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276  slideshow-image-overlay mobile-image--disabled" style="display: block; float: left; width: 20.0%"> <a href="http://yote.us/3c0MkzF" class="slideshow__link" tabindex="-1"> 
+             <div style="position: relative" class="lazyload-blur-wrapper slideshow-desktop-as-mobile-image--ll-wrapper"> 
+              <noscript aria-hidden="true"> 
+               <img class="slideshow-desktop-as-mobile-image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/KTK_hero-01_1000x1000.jpg?v=1615392647" data-sizes="auto" alt="" data-expand="10000"> 
+              </noscript> 
+              <img class="lazyload slideshow-desktop-as-mobile-image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/KTK_hero-01_150x.jpg?v=1615392647" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/KTK_hero-01_{width}x.jpg?v=1615392647" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/files/KTK_hero-01_150x.jpg?v=1615392647" data-blur="true" alt="" data-expand="10000"> 
+             </div> </a> 
+            <div class="slider-caption horizontal-align--left vertical-align--bottom background slideshow-mobile-image-content slider-dots--padding"> 
+             <h2 class="slideshow-fade-content"><a href="http://yote.us/3c0MkzF">KTKreations and Katie Kassin's Story</a></h2> 
+             <div class="slider-caption--text slideshow-fade-content"> <a href="http://yote.us/3c0MkzF"> <p>Learn about one of our Coyote Creators and her family's fight to find a cure for cystic fibrosis.</p> </a> 
+             </div> <a class="btn slideshow-fade-content" href="http://yote.us/3c0MkzF">Learn More</a> 
+            </div> </li> 
+           <style>
+                      .slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276 .slider-caption.background {
+                        background-color: rgba(0,0,0,0)!important;
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276 .slider-caption.background a:not(.btn){
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276 .slider-caption .btn {
+                        background-color: #d21533 !important;
+                        color: #ffffff !important;
+                      }
+
+											@media only screen and (max-width:768px){
+
+												.slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276 .slider-caption:not(.slideshow-mobile-image-content).background {
+                          background-color: #ffffff !important;
+                          color: #242424 !important;
+													text-align: center;
+                        }
+
+                        .slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276 .slider-caption:not(.slideshow-mobile-image-content).background a{
+                          color: #242424 !important;
+													vertical-align: bottom;
+                        }
+
+												.slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276 .slider-caption:not(.slideshow-mobile-image-content) a.btn {
+                          background-color: #d21533 !important;
+                          color: #ffffff !important;
+												}
+
+												.slider-block--6f6e2ef9-91e5-45cc-870b-baa04cdea276 .slider-caption:not(.slideshow-mobile-image-content) .btn:hover {
+													background-color: #3a3a3a !important;
+												}
+                    </style> 
+           <li data-slide-index="3" class="slider-block--a4525db2-9f63-4867-974e-e666f1e37d97  slideshow-image-overlay mobile-image--disabled" style="display: block; float: left; width: 20.0%"> <a href="/collections/featured-products" class="slideshow__link" tabindex="-1"> 
+             <div style="position: relative" class="lazyload-blur-wrapper slideshow-desktop-as-mobile-image--ll-wrapper"> 
+              <noscript aria-hidden="true"> 
+               <img class="slideshow-desktop-as-mobile-image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210202_Charlies_0020_1000x1000.jpg?v=1614012493" data-sizes="auto" alt="" data-expand="10000"> 
+              </noscript> 
+              <img class="lazyload slideshow-desktop-as-mobile-image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210202_Charlies_0020_150x.jpg?v=1614012493" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210202_Charlies_0020_{width}x.jpg?v=1614012493" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210202_Charlies_0020_150x.jpg?v=1614012493" data-blur="true" alt="" data-expand="10000"> 
+             </div> </a> 
+            <div class="slider-caption horizontal-align--left vertical-align--bottom background slideshow-mobile-image-content slider-dots--padding"> 
+             <h2 class="slideshow-fade-content"><a href="/collections/featured-products">Shop New Yote Gear</a></h2> 
+             <div class="slider-caption--text slideshow-fade-content"> <a href="/collections/featured-products"> <p>Find your new favorites.</p> </a> 
+             </div> <a class="btn slideshow-fade-content" href="/collections/featured-products">Shop Now</a> 
+            </div> </li> 
+           <style>
+                      .slider-block--a4525db2-9f63-4867-974e-e666f1e37d97 .slider-caption.background {
+                        background-color: rgba(0,0,0,0)!important;
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--a4525db2-9f63-4867-974e-e666f1e37d97 .slider-caption.background a:not(.btn){
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--a4525db2-9f63-4867-974e-e666f1e37d97 .slider-caption .btn {
+                        background-color: #a10729 !important;
+                        color: #ffffff !important;
+                      }
+
+											@media only screen and (max-width:768px){
+
+												.slider-block--a4525db2-9f63-4867-974e-e666f1e37d97 .slider-caption:not(.slideshow-mobile-image-content).background {
+                          background-color: #ffffff !important;
+                          color: #242424 !important;
+													text-align: center;
+                        }
+
+                        .slider-block--a4525db2-9f63-4867-974e-e666f1e37d97 .slider-caption:not(.slideshow-mobile-image-content).background a{
+                          color: #242424 !important;
+													vertical-align: bottom;
+                        }
+
+												.slider-block--a4525db2-9f63-4867-974e-e666f1e37d97 .slider-caption:not(.slideshow-mobile-image-content) a.btn {
+                          background-color: #a10729 !important;
+                          color: #ffffff !important;
+												}
+
+												.slider-block--a4525db2-9f63-4867-974e-e666f1e37d97 .slider-caption:not(.slideshow-mobile-image-content) .btn:hover {
+													background-color: #3a3a3a !important;
+												}
+                    </style> 
+           <li data-slide-index="4" class="slider-block--image--slideshow-1  slideshow-image-overlay mobile-image--disabled" style="display: block; float: left; width: 20.0%"> <a href="/collections/game-day" class="slideshow__link" tabindex="-1"> 
+             <div style="position: relative" class="lazyload-blur-wrapper slideshow-desktop-as-mobile-image--ll-wrapper"> 
+              <noscript aria-hidden="true"> 
+               <img class="slideshow-desktop-as-mobile-image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210302_Charlies_Crazies_0109_1000x1000.jpg?v=1615478103" data-sizes="auto" alt="" data-expand="10000"> 
+              </noscript> 
+              <img class="lazyload slideshow-desktop-as-mobile-image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210302_Charlies_Crazies_0109_150x.jpg?v=1615478103" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210302_Charlies_Crazies_0109_{width}x.jpg?v=1615478103" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/files/210302_Charlies_Crazies_0109_150x.jpg?v=1615478103" data-blur="true" alt="" data-expand="10000"> 
+             </div> </a> 
+            <div class="slider-caption horizontal-align--left vertical-align--bottom background slideshow-mobile-image-content slider-dots--padding"> 
+             <h2 class="slideshow-fade-content"><a href="/collections/game-day">Shop Gameday Gear</a></h2> <a class="btn slideshow-fade-content" href="/collections/game-day">Shop now</a> 
+            </div> </li> 
+           <style>
+                      .slider-block--image--slideshow-1 .slider-caption.background {
+                        background-color: rgba(0,0,0,0)!important;
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--image--slideshow-1 .slider-caption.background a:not(.btn){
+                        color: #ffffff !important;
+                      }
+
+                      .slider-block--image--slideshow-1 .slider-caption .btn {
+                        background-color: #a10729 !important;
+                        color: #ffffff !important;
+                      }
+
+											@media only screen and (max-width:768px){
+
+												.slider-block--image--slideshow-1 .slider-caption:not(.slideshow-mobile-image-content).background {
+                          background-color: #ffffff !important;
+                          color: #242424 !important;
+													text-align: center;
+                        }
+
+                        .slider-block--image--slideshow-1 .slider-caption:not(.slideshow-mobile-image-content).background a{
+                          color: #242424 !important;
+													vertical-align: bottom;
+                        }
+
+												.slider-block--image--slideshow-1 .slider-caption:not(.slideshow-mobile-image-content) a.btn {
+                          background-color: #a10729 !important;
+                          color: #ffffff !important;
+												}
+
+												.slider-block--image--slideshow-1 .slider-caption:not(.slideshow-mobile-image-content) .btn:hover {
+													background-color: #3a3a3a !important;
+												}
+                    </style> 
+          </ul> 
+          <ul class="flex-direction-nav slider--image--slideshow"> 
+           <li class="flex-nav-prev"> <a class="flex-prev" href="#"> 
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left">
+              <polyline points="15 18 9 12 15 6"></polyline>
+             </svg> </a> </li> 
+           <li class="flex-nav-next"> <a class="flex-next" href="#"> 
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+              <polyline points="9 18 15 12 9 6"></polyline>
+             </svg> </a> </li> 
+          </ul> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="slider-pagination-container slider--image--slideshow"></div> 
+    <style>
+	.slider-section--image--slideshow .slider-caption h2 {
+		font-size: 40px;
+	}
+
+	
+	@media screen and (max-width: 768px) {
+		.slider-section--image--slideshow .slider-caption h2 {
+				font-size: 32.0px;
+		}
+	}
+	
+
+	@media screen and (max-width: 768px) {
+		.slider-section--image--slideshow .homepage-featured-content-box h2.homepage-sections--title,
+		.slider-section--image--slideshow .homepage-featured-content-box .featured-row__subtext{
+			color:  !important;
+		}
+	}
+
+	
+
+	
+
+	.flex-direction-nav.slider--image--slideshow svg{
+		stroke: #ffffff;
+	}
+
+	.slider-pagination-container.slider--image--slideshow .flex-control-nav li a {
+	  background: rgba(255, 255, 255, 0.5)
+	}
+	.slider-pagination-container.slider--image--slideshow .flex-control-nav li a.flex-active {
+		background: #ffffff
+	}
+
+	@media only screen and (max-width:767px) {
+		.flex-direction-nav.slider--image--slideshow {
+			display: none;
+		}
+	}
+</style> 
+   </div>
+   <div id="shopify-section-collection--featured-collection" class="shopify-section homepage-section--featured-products-wrapper"> 
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--white"> 
+     <div class="container" data-wetheme-section-type="collection--featured-collection" data-wetheme-section-id="collection--featured-collection"> 
+      <div class="row"> 
+       <div class="page-width col-md-12"> 
+        <div class="title-bar custom-font"> 
+         <h2 class="wow fadeIn">Featured Collection</h2> 
+        </div> 
+        <div class="row homepage-featured-products "> 
+         <div class="grid__item col-6 col-sm-6 col-md-3 four_columns wow zoomIn collection-image-anim
+
+        
+             alpha mobile-clear tablet-clear
+            wow fadeInUp 
+          
+
+		     no-bottom-margin
+
+        "> 
+          <div class="indiv-product"> 
+           <script type="application/json" id="product-grid-4871105019984" class="product-grid-json">
+    {"id":4871105019984,"title":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona","handle":"unisex-gray-downtown-sprinting-50-50-not-today-rona","description":"\u003cp\u003eIntroducing one of our $5 tees! Mask up and purchase our gray Not Today Rona tee to show how you #ProtectThePack.\u003c\/p\u003e\n\u003cp\u003eAll purchases made at Charlie's support USD student scholarships.\u003c\/p\u003e","published_at":"2021-02-03T09:38:58-06:00","created_at":"2021-02-01T08:44:06-06:00","vendor":"USD Charlie's Store","type":"Tee-Unisex","tags":["Gray","Red","Short Sleeve","Tees"],"price":500,"price_min":500,"price_max":500,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":33182977327184,"title":"SM","option1":"SM","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - SM","public_title":"SM","options":["SM"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77327184","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977359952,"title":"MD","option1":"MD","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - MD","public_title":"MD","options":["MD"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77359952","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977392720,"title":"LG","option1":"LG","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - LG","public_title":"LG","options":["LG"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77392720","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977425488,"title":"XL","option1":"XL","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - XL","public_title":"XL","options":["XL"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77425488","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977458256,"title":"2X","option1":"2X","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - 2X","public_title":"2X","options":["2X"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77458256","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","options":["Size"],"media":[{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"},"aspect_ratio":1.0,"height":550,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","width":550}],"content":"\u003cp\u003eIntroducing one of our $5 tees! Mask up and purchase our gray Not Today Rona tee to show how you #ProtectThePack.\u003c\/p\u003e\n\u003cp\u003eAll purchases made at Charlie's support USD student scholarships.\u003c\/p\u003e"}
+  </script> 
+           <div class="collection-image--zoom-effect"> 
+            <div class="zoom-effect--inner"> <a class="grid__image" href="/products/unisex-gray-downtown-sprinting-50-50-not-today-rona" title="Unisex Gray Downtown Screen Printing 50/50 Not Today Rona"> 
+              <div class="aspect-ratio aspect-ratio--square"> 
+               <div style="position: relative" class="lazyload-blur-wrapper"> 
+                <noscript aria-hidden="true"> 
+                 <img class="" src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_1000x1000.jpg?v=1612311166" data-sizes="auto" alt="Unisex Gray Downtown Screen Printing 50/50 Not Today Rona"> 
+                </noscript> 
+                <img class="lazyload  " src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_150x.jpg?v=1612311166" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_{width}x.jpg?v=1612311166" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_150x.jpg?v=1612311166" data-blur="true" alt="Unisex Gray Downtown Screen Printing 50/50 Not Today Rona"> 
+               </div> 
+              </div> </a> 
+            </div> 
+           </div> 
+           <div class="hp-title"> <a href="/products/unisex-gray-downtown-sprinting-50-50-not-today-rona"> <span class="indiv-product-title-text">Unisex Gray Downtown Screen Printing 50/50 Not Today Rona</span> <span class="money-styling"> <span class="money">$5.00</span> 
+              <div class="product-grid--pricing--price-per-unit"></div> </span> <span class="shopify-product-reviews-badge" data-id="4871105019984"></span> </a> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="grid__item col-6 col-sm-6 col-md-3 four_columns wow zoomIn collection-image-anim
+
+        
+            
+            wow fadeInUp delay-1
+          
+
+		     no-bottom-margin
+
+        "> 
+          <div class="indiv-product"> 
+           <script type="application/json" id="product-grid-4869766611024" class="product-grid-json">
+    {"id":4869766611024,"title":"Unisex Downtown SCP Red Tee Beat State New Vintage Design","handle":"unisex-downtown-scp-red-tee-beat-state-new-vintage-design","description":"Check out our new unisex Beat State tee design! This is a must have for rivalry game days. All purchases made at Charlie's support USD student scholarships.","published_at":"2021-02-02T15:46:12-06:00","created_at":"2021-01-27T10:31:55-06:00","vendor":"Downtown Screen Printing \u0026 Embroidery","type":"Unisex Tee","tags":["Beat State","Beat State T-shirt","charlie","Game Day","Men","Red","SD Paw","Short Sleeve","Tees","Womens"],"price":1899,"price_min":1899,"price_max":1899,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":33173129494608,"title":"SM","option1":"SM","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100239700048,"product_id":4869766611024,"position":1,"created_at":"2021-02-02T18:09:21-06:00","updated_at":"2021-02-02T18:09:59-06:00","alt":null,"width":545,"height":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999","variant_ids":[33173129494608,33173129527376,33173129560144,33173129592912,33173129625680]},"available":true,"name":"Unisex Downtown SCP Red Tee Beat State New Vintage Design - SM","public_title":"SM","options":["SM"],"price":1899,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"29494608","featured_media":{"alt":null,"id":9273497157712,"position":1,"preview_image":{"aspect_ratio":1.0,"height":545,"width":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999"}}},{"id":33173129527376,"title":"MD","option1":"MD","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100239700048,"product_id":4869766611024,"position":1,"created_at":"2021-02-02T18:09:21-06:00","updated_at":"2021-02-02T18:09:59-06:00","alt":null,"width":545,"height":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999","variant_ids":[33173129494608,33173129527376,33173129560144,33173129592912,33173129625680]},"available":true,"name":"Unisex Downtown SCP Red Tee Beat State New Vintage Design - MD","public_title":"MD","options":["MD"],"price":1899,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"29527376","featured_media":{"alt":null,"id":9273497157712,"position":1,"preview_image":{"aspect_ratio":1.0,"height":545,"width":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999"}}},{"id":33173129560144,"title":"LG","option1":"LG","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100239700048,"product_id":4869766611024,"position":1,"created_at":"2021-02-02T18:09:21-06:00","updated_at":"2021-02-02T18:09:59-06:00","alt":null,"width":545,"height":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999","variant_ids":[33173129494608,33173129527376,33173129560144,33173129592912,33173129625680]},"available":true,"name":"Unisex Downtown SCP Red Tee Beat State New Vintage Design - LG","public_title":"LG","options":["LG"],"price":1899,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"29560144","featured_media":{"alt":null,"id":9273497157712,"position":1,"preview_image":{"aspect_ratio":1.0,"height":545,"width":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999"}}},{"id":33173129592912,"title":"XL","option1":"XL","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100239700048,"product_id":4869766611024,"position":1,"created_at":"2021-02-02T18:09:21-06:00","updated_at":"2021-02-02T18:09:59-06:00","alt":null,"width":545,"height":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999","variant_ids":[33173129494608,33173129527376,33173129560144,33173129592912,33173129625680]},"available":true,"name":"Unisex Downtown SCP Red Tee Beat State New Vintage Design - XL","public_title":"XL","options":["XL"],"price":1899,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"29592912","featured_media":{"alt":null,"id":9273497157712,"position":1,"preview_image":{"aspect_ratio":1.0,"height":545,"width":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999"}}},{"id":33173129625680,"title":"XX","option1":"XX","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100239700048,"product_id":4869766611024,"position":1,"created_at":"2021-02-02T18:09:21-06:00","updated_at":"2021-02-02T18:09:59-06:00","alt":null,"width":545,"height":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999","variant_ids":[33173129494608,33173129527376,33173129560144,33173129592912,33173129625680]},"available":true,"name":"Unisex Downtown SCP Red Tee Beat State New Vintage Design - XX","public_title":"XX","options":["XX"],"price":1899,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"29625680","featured_media":{"alt":null,"id":9273497157712,"position":1,"preview_image":{"aspect_ratio":1.0,"height":545,"width":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999"}}}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999","options":["Size"],"media":[{"alt":null,"id":9273497157712,"position":1,"preview_image":{"aspect_ratio":1.0,"height":545,"width":545,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999"},"aspect_ratio":1.0,"height":545,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/210202_Charlies_0013.jpg?v=1612310999","width":545}],"content":"Check out our new unisex Beat State tee design! This is a must have for rivalry game days. All purchases made at Charlie's support USD student scholarships."}
+  </script> 
+           <div class="collection-image--zoom-effect"> 
+            <div class="zoom-effect--inner"> <a class="grid__image" href="/products/unisex-downtown-scp-red-tee-beat-state-new-vintage-design" title="Unisex Downtown SCP Red Tee Beat State New Vintage Design"> 
+              <div class="aspect-ratio aspect-ratio--square"> 
+               <div style="position: relative" class="lazyload-blur-wrapper"> 
+                <noscript aria-hidden="true"> 
+                 <img class="" src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/210202_Charlies_0013_1000x1000.jpg?v=1612310999" data-sizes="auto" alt="Unisex Downtown SCP Red Tee Beat State New Vintage Design"> 
+                </noscript> 
+                <img class="lazyload  " src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/210202_Charlies_0013_150x.jpg?v=1612310999" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/210202_Charlies_0013_{width}x.jpg?v=1612310999" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/products/210202_Charlies_0013_150x.jpg?v=1612310999" data-blur="true" alt="Unisex Downtown SCP Red Tee Beat State New Vintage Design"> 
+               </div> 
+              </div> </a> 
+            </div> 
+           </div> 
+           <div class="hp-title"> <a href="/products/unisex-downtown-scp-red-tee-beat-state-new-vintage-design"> <span class="indiv-product-title-text">Unisex Downtown SCP Red Tee Beat State New Vintage Design</span> <span class="money-styling"> <span class="money">$18.99</span> 
+              <div class="product-grid--pricing--price-per-unit"></div> </span> <span class="shopify-product-reviews-badge" data-id="4869766611024"></span> </a> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="grid__item col-6 col-sm-6 col-md-3 four_columns wow zoomIn collection-image-anim
+
+        
+             mobile-clear tablet-clear
+            wow fadeInUp delay-2
+          
+
+		     no-bottom-margin
+
+        "> 
+          <div class="indiv-product"> 
+           <script type="application/json" id="product-grid-4868247978064" class="product-grid-json">
+    {"id":4868247978064,"title":"Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter","handle":"unisex-mv-sport-8oz-55-45-cotton-blend-sd-paw-hoodie-with-gaiter","description":"\u003cp\u003eStay safe and comfy with this 55\/45 Cotton Blend SD Paw Hoodie with Gaiter\u003c\/p\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv class=\"product-description-wrapper\"\u003e\n\u003cp\u003e\u003cspan\u003eAll purchases made at Charlie's support USD student scholarships.\u003c\/span\u003e\u003c\/p\u003e\n\u003c\/div\u003e","published_at":"2021-02-09T16:29:33-06:00","created_at":"2021-01-21T10:35:40-06:00","vendor":"MV Corp dba The Game","type":"Fleece-Unisex","tags":["Black","gaitor","Hoodie","Long Sleeve","mask","Men","Red","SD Paw","Womens"],"price":4299,"price_min":4299,"price_max":4299,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":33165975781456,"title":"SM","option1":"SM","option2":null,"option3":null,"sku":"U-Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter-1","requires_shipping":true,"taxable":true,"featured_image":{"id":17120456114256,"product_id":4868247978064,"position":1,"created_at":"2021-02-09T16:27:25-06:00","updated_at":"2021-02-09T16:27:25-06:00","alt":null,"width":1280,"height":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","variant_ids":[33165975781456,33165975814224,33165975846992,33165975879760,33165975912528,33165975945296]},"available":true,"name":"Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter - SM","public_title":"SM","options":["SM"],"price":4299,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"420000750673","featured_media":{"alt":null,"id":9293741817936,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1280,"width":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"}}},{"id":33165975814224,"title":"MD","option1":"MD","option2":null,"option3":null,"sku":"U-Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter-2","requires_shipping":true,"taxable":true,"featured_image":{"id":17120456114256,"product_id":4868247978064,"position":1,"created_at":"2021-02-09T16:27:25-06:00","updated_at":"2021-02-09T16:27:25-06:00","alt":null,"width":1280,"height":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","variant_ids":[33165975781456,33165975814224,33165975846992,33165975879760,33165975912528,33165975945296]},"available":true,"name":"Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter - MD","public_title":"MD","options":["MD"],"price":4299,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"420000750680","featured_media":{"alt":null,"id":9293741817936,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1280,"width":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"}}},{"id":33165975846992,"title":"LG","option1":"LG","option2":null,"option3":null,"sku":"U-Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter-3","requires_shipping":true,"taxable":true,"featured_image":{"id":17120456114256,"product_id":4868247978064,"position":1,"created_at":"2021-02-09T16:27:25-06:00","updated_at":"2021-02-09T16:27:25-06:00","alt":null,"width":1280,"height":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","variant_ids":[33165975781456,33165975814224,33165975846992,33165975879760,33165975912528,33165975945296]},"available":true,"name":"Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter - LG","public_title":"LG","options":["LG"],"price":4299,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"420000750697","featured_media":{"alt":null,"id":9293741817936,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1280,"width":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"}}},{"id":33165975879760,"title":"XL","option1":"XL","option2":null,"option3":null,"sku":"U-Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter-4","requires_shipping":true,"taxable":true,"featured_image":{"id":17120456114256,"product_id":4868247978064,"position":1,"created_at":"2021-02-09T16:27:25-06:00","updated_at":"2021-02-09T16:27:25-06:00","alt":null,"width":1280,"height":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","variant_ids":[33165975781456,33165975814224,33165975846992,33165975879760,33165975912528,33165975945296]},"available":true,"name":"Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter - XL","public_title":"XL","options":["XL"],"price":4299,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"420000750703","featured_media":{"alt":null,"id":9293741817936,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1280,"width":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"}}},{"id":33165975912528,"title":"2X","option1":"2X","option2":null,"option3":null,"sku":"U-Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter-5","requires_shipping":true,"taxable":true,"featured_image":{"id":17120456114256,"product_id":4868247978064,"position":1,"created_at":"2021-02-09T16:27:25-06:00","updated_at":"2021-02-09T16:27:25-06:00","alt":null,"width":1280,"height":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","variant_ids":[33165975781456,33165975814224,33165975846992,33165975879760,33165975912528,33165975945296]},"available":true,"name":"Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter - 2X","public_title":"2X","options":["2X"],"price":4299,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"420000750710","featured_media":{"alt":null,"id":9293741817936,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1280,"width":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"}}},{"id":33165975945296,"title":"3X","option1":"3X","option2":null,"option3":null,"sku":"U-Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter-6","requires_shipping":true,"taxable":true,"featured_image":{"id":17120456114256,"product_id":4868247978064,"position":1,"created_at":"2021-02-09T16:27:25-06:00","updated_at":"2021-02-09T16:27:25-06:00","alt":null,"width":1280,"height":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","variant_ids":[33165975781456,33165975814224,33165975846992,33165975879760,33165975912528,33165975945296]},"available":true,"name":"Unisex MV Sport 8oz. 55\/45 Cotton Blend SD Paw Hoodie with Gaiter - 3X","public_title":"3X","options":["3X"],"price":4299,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"420000750727","featured_media":{"alt":null,"id":9293741817936,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1280,"width":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"}}}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","options":["Size"],"media":[{"alt":null,"id":9293741817936,"position":1,"preview_image":{"aspect_ratio":1.0,"height":1280,"width":1280,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645"},"aspect_ratio":1.0,"height":1280,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/thumbnail_UN90915-21155FC-006-3924581.jpg?v=1612909645","width":1280}],"content":"\u003cp\u003eStay safe and comfy with this 55\/45 Cotton Blend SD Paw Hoodie with Gaiter\u003c\/p\u003e\n\u003cp\u003e \u003c\/p\u003e\n\u003cdiv class=\"product-description-wrapper\"\u003e\n\u003cp\u003e\u003cspan\u003eAll purchases made at Charlie's support USD student scholarships.\u003c\/span\u003e\u003c\/p\u003e\n\u003c\/div\u003e"}
+  </script> 
+           <div class="collection-image--zoom-effect"> 
+            <div class="zoom-effect--inner"> <a class="grid__image" href="/products/unisex-mv-sport-8oz-55-45-cotton-blend-sd-paw-hoodie-with-gaiter" title="Unisex MV Sport 8oz. 55/45 Cotton Blend SD Paw Hoodie with Gaiter"> 
+              <div class="aspect-ratio aspect-ratio--square"> 
+               <div style="position: relative" class="lazyload-blur-wrapper"> 
+                <noscript aria-hidden="true"> 
+                 <img class="" src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/thumbnail_UN90915-21155FC-006-3924581_1000x1000.jpg?v=1612909645" data-sizes="auto" alt="Unisex MV Sport 8oz. 55/45 Cotton Blend SD Paw Hoodie with Gaiter"> 
+                </noscript> 
+                <img class="lazyload  " src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/thumbnail_UN90915-21155FC-006-3924581_150x.jpg?v=1612909645" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/thumbnail_UN90915-21155FC-006-3924581_{width}x.jpg?v=1612909645" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/products/thumbnail_UN90915-21155FC-006-3924581_150x.jpg?v=1612909645" data-blur="true" alt="Unisex MV Sport 8oz. 55/45 Cotton Blend SD Paw Hoodie with Gaiter"> 
+               </div> 
+              </div> </a> 
+            </div> 
+           </div> 
+           <div class="hp-title"> <a href="/products/unisex-mv-sport-8oz-55-45-cotton-blend-sd-paw-hoodie-with-gaiter"> <span class="indiv-product-title-text">Unisex MV Sport 8oz. 55/45 Cotton Blend SD Paw Hoodie with Gaiter</span> <span class="money-styling"> <span class="money">$42.99</span> 
+              <div class="product-grid--pricing--price-per-unit"></div> </span> <span class="shopify-product-reviews-badge" data-id="4868247978064"></span> </a> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="grid__item col-6 col-sm-6 col-md-3 four_columns wow zoomIn collection-image-anim
+
+        
+             omega
+            wow fadeInUp delay-3
+          
+
+		     no-bottom-margin
+
+        "> 
+          <div class="indiv-product"> 
+           <script type="application/json" id="product-grid-4867870785616" class="product-grid-json">
+    {"id":4867870785616,"title":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie","handle":"unisex-downtown-screen-printing-50-50-blend-university-of-south-dakota-hoodie","description":"\u003cp data-mce-fragment=\"1\"\u003e\u003cspan data-mce-fragment=\"1\"\u003eStay comfy and show your spirit with this 50\/50 Blend University of South Dakota Hoodie!\u003c\/span\u003e\u003c\/p\u003e\n\u003cp data-mce-fragment=\"1\"\u003e\u003cspan data-mce-fragment=\"1\"\u003eAll purchases made at Charlie's support\u003c\/span\u003e\u003cspan data-mce-fragment=\"1\"\u003e USD student scholarships. \u003c\/span\u003e\u003c\/p\u003e","published_at":"2021-02-01T16:49:37-06:00","created_at":"2021-01-20T16:45:26-06:00","vendor":"Downtown Screen Printing \u0026 Embroidery","type":"Fleece-Unisex","tags":["Game Day","Gray","Hoodie","Long Sleeve","Men","Red"],"price":3799,"price_min":3799,"price_max":3799,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":33164687212624,"title":"Red \/ SM","option1":"Red","option2":"SM","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie2624","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000897104,"product_id":4867870785616,"position":1,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:12-06:00","alt":null,"width":708,"height":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","variant_ids":[33164687212624,33164687245392,33164687278160,33164687310928,33164687343696,33164687376464]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Red \/ SM","public_title":"Red \/ SM","options":["Red","SM"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87212624","featured_media":{"alt":null,"id":9269255635024,"position":1,"preview_image":{"aspect_ratio":1.0,"height":708,"width":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272"}}},{"id":33164687245392,"title":"Red \/ MD","option1":"Red","option2":"MD","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie5392","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000897104,"product_id":4867870785616,"position":1,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:12-06:00","alt":null,"width":708,"height":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","variant_ids":[33164687212624,33164687245392,33164687278160,33164687310928,33164687343696,33164687376464]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Red \/ MD","public_title":"Red \/ MD","options":["Red","MD"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87245392","featured_media":{"alt":null,"id":9269255635024,"position":1,"preview_image":{"aspect_ratio":1.0,"height":708,"width":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272"}}},{"id":33164687278160,"title":"Red \/ LG","option1":"Red","option2":"LG","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie8160","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000897104,"product_id":4867870785616,"position":1,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:12-06:00","alt":null,"width":708,"height":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","variant_ids":[33164687212624,33164687245392,33164687278160,33164687310928,33164687343696,33164687376464]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Red \/ LG","public_title":"Red \/ LG","options":["Red","LG"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87278160","featured_media":{"alt":null,"id":9269255635024,"position":1,"preview_image":{"aspect_ratio":1.0,"height":708,"width":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272"}}},{"id":33164687310928,"title":"Red \/ XL","option1":"Red","option2":"XL","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie0928","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000897104,"product_id":4867870785616,"position":1,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:12-06:00","alt":null,"width":708,"height":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","variant_ids":[33164687212624,33164687245392,33164687278160,33164687310928,33164687343696,33164687376464]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Red \/ XL","public_title":"Red \/ XL","options":["Red","XL"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87310928","featured_media":{"alt":null,"id":9269255635024,"position":1,"preview_image":{"aspect_ratio":1.0,"height":708,"width":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272"}}},{"id":33164687343696,"title":"Red \/ 2X","option1":"Red","option2":"2X","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie3696","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000897104,"product_id":4867870785616,"position":1,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:12-06:00","alt":null,"width":708,"height":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","variant_ids":[33164687212624,33164687245392,33164687278160,33164687310928,33164687343696,33164687376464]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Red \/ 2X","public_title":"Red \/ 2X","options":["Red","2X"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87343696","featured_media":{"alt":null,"id":9269255635024,"position":1,"preview_image":{"aspect_ratio":1.0,"height":708,"width":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272"}}},{"id":33164687376464,"title":"Red \/ 3X","option1":"Red","option2":"3X","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie6464","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000897104,"product_id":4867870785616,"position":1,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:12-06:00","alt":null,"width":708,"height":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","variant_ids":[33164687212624,33164687245392,33164687278160,33164687310928,33164687343696,33164687376464]},"available":false,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Red \/ 3X","public_title":"Red \/ 3X","options":["Red","3X"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87376464","featured_media":{"alt":null,"id":9269255635024,"position":1,"preview_image":{"aspect_ratio":1.0,"height":708,"width":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272"}}},{"id":33164687409232,"title":"Gray \/ SM","option1":"Gray","option2":"SM","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie9232","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000864336,"product_id":4867870785616,"position":2,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:31-06:00","alt":null,"width":692,"height":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291","variant_ids":[33164687409232,33164687442000,33164687474768,33164687507536,33164687540304,33164687573072]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Gray \/ SM","public_title":"Gray \/ SM","options":["Gray","SM"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87409232","featured_media":{"alt":null,"id":9269255667792,"position":2,"preview_image":{"aspect_ratio":1.0,"height":692,"width":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"}}},{"id":33164687442000,"title":"Gray \/ MD","option1":"Gray","option2":"MD","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie2000","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000864336,"product_id":4867870785616,"position":2,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:31-06:00","alt":null,"width":692,"height":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291","variant_ids":[33164687409232,33164687442000,33164687474768,33164687507536,33164687540304,33164687573072]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Gray \/ MD","public_title":"Gray \/ MD","options":["Gray","MD"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87442000","featured_media":{"alt":null,"id":9269255667792,"position":2,"preview_image":{"aspect_ratio":1.0,"height":692,"width":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"}}},{"id":33164687474768,"title":"Gray \/ LG","option1":"Gray","option2":"LG","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie4768","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000864336,"product_id":4867870785616,"position":2,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:31-06:00","alt":null,"width":692,"height":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291","variant_ids":[33164687409232,33164687442000,33164687474768,33164687507536,33164687540304,33164687573072]},"available":false,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Gray \/ LG","public_title":"Gray \/ LG","options":["Gray","LG"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87474768","featured_media":{"alt":null,"id":9269255667792,"position":2,"preview_image":{"aspect_ratio":1.0,"height":692,"width":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"}}},{"id":33164687507536,"title":"Gray \/ XL","option1":"Gray","option2":"XL","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie7536","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000864336,"product_id":4867870785616,"position":2,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:31-06:00","alt":null,"width":692,"height":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291","variant_ids":[33164687409232,33164687442000,33164687474768,33164687507536,33164687540304,33164687573072]},"available":true,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Gray \/ XL","public_title":"Gray \/ XL","options":["Gray","XL"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87507536","featured_media":{"alt":null,"id":9269255667792,"position":2,"preview_image":{"aspect_ratio":1.0,"height":692,"width":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"}}},{"id":33164687540304,"title":"Gray \/ 2X","option1":"Gray","option2":"2X","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie0304","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000864336,"product_id":4867870785616,"position":2,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:31-06:00","alt":null,"width":692,"height":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291","variant_ids":[33164687409232,33164687442000,33164687474768,33164687507536,33164687540304,33164687573072]},"available":false,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Gray \/ 2X","public_title":"Gray \/ 2X","options":["Gray","2X"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87540304","featured_media":{"alt":null,"id":9269255667792,"position":2,"preview_image":{"aspect_ratio":1.0,"height":692,"width":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"}}},{"id":33164687573072,"title":"Gray \/ 3X","option1":"Gray","option2":"3X","option3":null,"sku":"U-Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie3072","requires_shipping":true,"taxable":true,"featured_image":{"id":17096000864336,"product_id":4867870785616,"position":2,"created_at":"2021-02-01T16:40:50-06:00","updated_at":"2021-02-01T16:41:31-06:00","alt":null,"width":692,"height":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291","variant_ids":[33164687409232,33164687442000,33164687474768,33164687507536,33164687540304,33164687573072]},"available":false,"name":"Unisex Downtown Screen Printing 50\/50 Blend University of South Dakota Hoodie - Gray \/ 3X","public_title":"Gray \/ 3X","options":["Gray","3X"],"price":3799,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"87573072","featured_media":{"alt":null,"id":9269255667792,"position":2,"preview_image":{"aspect_ratio":1.0,"height":692,"width":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"}}}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","options":["Color","Size"],"media":[{"alt":null,"id":9269255635024,"position":1,"preview_image":{"aspect_ratio":1.0,"height":708,"width":708,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272"},"aspect_ratio":1.0,"height":708,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00345.jpg?v=1612219272","width":708},{"alt":null,"id":9269255667792,"position":2,"preview_image":{"aspect_ratio":1.0,"height":692,"width":692,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291"},"aspect_ratio":1.0,"height":692,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/DSC00343.jpg?v=1612219291","width":692}],"content":"\u003cp data-mce-fragment=\"1\"\u003e\u003cspan data-mce-fragment=\"1\"\u003eStay comfy and show your spirit with this 50\/50 Blend University of South Dakota Hoodie!\u003c\/span\u003e\u003c\/p\u003e\n\u003cp data-mce-fragment=\"1\"\u003e\u003cspan data-mce-fragment=\"1\"\u003eAll purchases made at Charlie's support\u003c\/span\u003e\u003cspan data-mce-fragment=\"1\"\u003e USD student scholarships. \u003c\/span\u003e\u003c\/p\u003e"}
+  </script> 
+           <div class="collection-image--zoom-effect"> 
+            <div class="zoom-effect--inner"> <a class="grid__image" href="/products/unisex-downtown-screen-printing-50-50-blend-university-of-south-dakota-hoodie" title="Unisex Downtown Screen Printing 50/50 Blend University of South Dakota Hoodie"> 
+              <div class="aspect-ratio aspect-ratio--square"> 
+               <div style="position: relative" class="lazyload-blur-wrapper"> 
+                <noscript aria-hidden="true"> 
+                 <img class="" src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/DSC00345_1000x1000.jpg?v=1612219272" data-sizes="auto" alt="Unisex Downtown Screen Printing 50/50 Blend University of South Dakota Hoodie"> 
+                </noscript> 
+                <img class="lazyload  " src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/DSC00345_150x.jpg?v=1612219272" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/DSC00345_{width}x.jpg?v=1612219272" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/products/DSC00345_150x.jpg?v=1612219272" data-blur="true" alt="Unisex Downtown Screen Printing 50/50 Blend University of South Dakota Hoodie"> 
+               </div> 
+              </div> </a> 
+            </div> 
+           </div> 
+           <div class="hp-title"> <a href="/products/unisex-downtown-screen-printing-50-50-blend-university-of-south-dakota-hoodie"> <span class="indiv-product-title-text">Unisex Downtown Screen Printing 50/50 Blend University of South Dakota Hoodie</span> <span class="money-styling"> <span class="money">$37.99</span> 
+              <div class="product-grid--pricing--price-per-unit"></div> </span> <span class="shopify-product-reviews-badge" data-id="4867870785616"></span> </a> 
+           </div> 
+           <div data-option-index="4867870785616" class="color options indiv-product__swatches"> 
+            <input class="" id="section-collection--featured-collection-swatch-4867870785616-red" type="radio" name="option-4867870785616" value="Red" data-href="//cdn.shopify.com/s/files/1/0017/4410/9620/products/DSC00345_400x.jpg?v=1612219272"> <label for="section-collection--featured-collection-swatch-4867870785616-red" style="background-color: red; background-image: url(//cdn.shopify.com/s/files/1/0017/4410/9620/files/red.png?2144;)"> <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0017/4410/9620/t/7/assets/soldout_color.svg?v=3732879461466359155"> </label> 
+            <input class="" id="section-collection--featured-collection-swatch-4867870785616-gray" type="radio" name="option-4867870785616" value="Gray" data-href="//cdn.shopify.com/s/files/1/0017/4410/9620/products/DSC00343_400x.jpg?v=1612219291"> <label for="section-collection--featured-collection-swatch-4867870785616-gray" style="background-color: gray; background-image: url(//cdn.shopify.com/s/files/1/0017/4410/9620/files/gray.png?2144;)"> <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0017/4410/9620/t/7/assets/soldout_color.svg?v=3732879461466359155"> </label> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="text-center wow fadeIn delay-1"> <a href="/collections/featured-products" class="btn"> View all </a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div id="shopify-section-image--image-with-text-block" class="shopify-section homepage-section-image-with-text-block--wrapper">
+    <style>
+
+
+
+
+
+
+
+
+
+
+
+
+.image-with-text-block--image--image-with-text-block .image-text-block--wrapper .img {
+  background-image: url('//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_900x.jpg?v=1597345076');
+}
+
+
+  
+@media (min-width: 901px) and (max-width: 1200px) {
+  .image-with-text-block--image--image-with-text-block .image-text-block--wrapper .img {
+    background-image: url('//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_1200x.jpg?v=1597345076');
+  }
+}
+  
+
+  
+@media (min-width: 1201px) and (max-width: 1500px) {
+  .image-with-text-block--image--image-with-text-block .image-text-block--wrapper .img {
+    background-image: url('//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_1500x.jpg?v=1597345076');
+  }
+}
+  
+
+  
+@media (min-width: 1501px) and (max-width: 2000px) {
+  .image-with-text-block--image--image-with-text-block .image-text-block--wrapper .img {
+    background-image: url('//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_2000x.jpg?v=1597345076');
+  }
+}
+  
+
+  
+@media (min-width: 2001px) {
+  .image-with-text-block--image--image-with-text-block .image-text-block--wrapper .img {
+    background-image: url('//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_4000x.jpg?v=1597345076');
+  }
+}
+  
+
+
+
+.image-with-text-block--image--image-with-text-block .image-text-block-row__text-container{
+  background: #222222;
+  color: #ffffff;
+}
+
+</style> 
+    <div class="homepage-image-text-block--content image-with-text-block--image--image-with-text-block"> 
+     <div class="homepage-image-text-block--text-wrapper homepage-image-text-block--right"> 
+      <div class="image-text-block-row__text-container wow fadeInUp"> 
+       <div class="title-bar custom-font"> 
+        <h2>Protect the Pack</h2> 
+       </div> 
+       <div class="hero__text textarea rte">
+        <p>Charlie's is doing what we can to #ProtectThePack and take COVID-19 precautions seriously.</p>
+       </div> 
+       <div> <a href="/collections/masks-more" class="btn"> Shop Masks &amp; More </a> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="image-text-block--wrapper"> 
+      <div class="image-text-block-row---mobile--image visible-xs"> 
+       <div style="position: relative" class="lazyload-blur-wrapper feature-row__image--ll-wrapper"> 
+        <noscript aria-hidden="true"> 
+         <img class="feature-row__image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_1000x1000.jpg?v=1597345076" data-sizes="auto" alt=""> 
+        </noscript> 
+        <img class="lazyload feature-row__image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_150x.jpg?v=1597345076" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_{width}x.jpg?v=1597345076" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/files/CharliesMask-8_150x.jpg?v=1597345076" data-blur="true" alt=""> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div id="shopify-section-product--featured-product" class="shopify-section homepage-section--indiv-product-wrapper"> 
+    <div class="homepage-sections-wrapper homepage-sections-wrapper--white"> 
+     <div class="container product--featured-product" data-wetheme-section-type="product--featured-product" data-wetheme-section-id="product--featured-product"> 
+      <div class="row"> 
+       <div class="col"> 
+        <div class="title-bar custom-font"> 
+         <h2 class="wow fadeIn">Shop the $5 Tee</h2> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="row" id="product-box" data-section-id="product--featured-product"> 
+       <div class="col-md-6 product-images wow fadeIn"> 
+        <div class="envy-badge sale-badge product-price__sale-label-product--featured-product hide">
+         Sale
+        </div> 
+        <div class="homepage-sections--indiv-product-slider product-single__thumbnails"> 
+         <div class="swiper-container"> 
+          <div class="swiper-wrapper"> 
+           <div class="swiper-slide" data-media-id="media-template-product--featured-product-9273503318096" data-media-type="image"> <a tabindex="0" role="button" class="product-single__thumbnail product-single__thumbnail--selected product-single__thumbnail--first" data-media-id="media-template-product--featured-product-9273503318096" data-media-type="image" data-media-aspect="1.0" data-image-zoom-enable="false" data-variant="33182977327184"> 
+             <template id="media-template-product--featured-product-9273503318096"> 
+              <div class="product-single__media" data-media-type="image" data-media-id="media-template-product--featured-product-9273503318096" data-autoplay="false" data-image-zoom-enable="false"> 
+               <div class="product-single__media__image"> 
+                <noscript aria-hidden="true"> 
+                 <img class="product-single__photo" src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_1000x1000.jpg?v=1612311166" data-sizes="auto" alt="Unisex Gray Downtown Screen Printing 50/50 Not Today Rona" style="max-width: 550px" id="ProductPhotoImg" data-image-id="9273503318096" data-zoom-img="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey.jpg?v=1612311166"> 
+                </noscript> 
+                <img class="lazyload product-single__photo " src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_300x.jpg?v=1612311166" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_{width}x.jpg?v=1612311166" data-sizes="auto" data-aspectratio="1.5" alt="Unisex Gray Downtown Screen Printing 50/50 Not Today Rona" style="max-width: 550px" id="ProductPhotoImg" data-image-id="9273503318096" data-zoom-img="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey.jpg?v=1612311166"> 
+               </div> 
+               <div class="hidden featured-image-loader"> <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> <span class="sr-only">Loading...</span> 
+               </div> 
+              </div> 
+             </template> 
+             <div class="product-single__thumbnail__wrapper" style="padding-top: 100.0%"> 
+              <noscript aria-hidden="true"> 
+               <img class="product-single__type-image product-single__thumbnail__image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_1000x1000.jpg?v=1612311166" data-sizes="auto" alt="
+                
+                    Load image into Gallery viewer, Unisex Gray Downtown Screen Printing 50/50 Not Today Rona
+                
+            " data-image-id="9273503318096" style="max-width: 550px" data-max-width="550"> 
+              </noscript> 
+              <img class="lazyload product-single__type-image product-single__thumbnail__image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_300x.jpg?v=1612311166" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/products/nottodaygrey_{width}x.jpg?v=1612311166" data-sizes="auto" data-aspectratio="1.5" alt="
+                
+                    Load image into Gallery viewer, Unisex Gray Downtown Screen Printing 50/50 Not Today Rona
+                
+            " data-image-id="9273503318096" style="max-width: 550px" data-max-width="550"> 
+             </div> </a> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="swiper-pagination"></div> 
+        </div> 
+       </div> 
+       <div class="col-md-6"> 
+        <section class="product-description-main-wrapper wow fadeInUp"> <a class="homepage-headline-text__link" href="/products/unisex-gray-downtown-sprinting-50-50-not-today-rona"> <h2 class="reviews-enabled">Unisex Gray Downtown Screen Printing 50/50 Not Today Rona</h2> </a> <a href="/products/unisex-gray-downtown-sprinting-50-50-not-today-rona/#shopify-product-reviews"> <span class="shopify-product-reviews-badge" data-id="4871105019984"></span> </a> 
+         <form method="post" action="/cart/add" id="add-to-cart-form" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data">
+          <input type="hidden" name="form_type" value="product">
+          <input type="hidden" name="utf8" value="✓"> 
+          <input type="hidden" id="cart-link" value="/cart"> 
+          <ul class="product-page--pricing discount-badge"> <!-- Variant price --> 
+           <li class="product-page--pricing--variant-price"> <span class="js" id="price-field"> <span class="money">$5.00</span> </span> </li> <!-- Variant 'compare at' price --> 
+           <li class="product-page--pricing--variant-compare-at-price"> <span class="compare-at-price js hide"> <span class="money"></span> </span> </li> 
+           <li class="product-page--pricing--price-per-unit"></li> 
+          </ul> 
+          <div class="product-page--pricing--discount"> <span class="variant-value-wrapper hide"> - <span class="variant-value"><span class="money">$-5.00</span></span> </span> 
+          </div> 
+          <div class="row homepage-sections--indiv-product-slider-variants"> 
+           <div class="swatches-wrapper col-md-12"> 
+            <div class="swatch clearfix" data-option-index="0"> 
+             <div class="swatch-title">
+              Size
+             </div> 
+             <div data-value="SM" class="swatch-element sm available"> 
+              <input id="section-product--featured-product-swatch-0-sm" type="radio" name="option-0" value="SM" checked> <label for="section-product--featured-product-swatch-0-sm"> SM <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0017/4410/9620/t/7/assets/soldout.svg?v=7665111993643661956"> </label> 
+             </div> 
+             <div data-value="MD" class="swatch-element md available"> 
+              <input id="section-product--featured-product-swatch-0-md" type="radio" name="option-0" value="MD"> <label for="section-product--featured-product-swatch-0-md"> MD <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0017/4410/9620/t/7/assets/soldout.svg?v=7665111993643661956"> </label> 
+             </div> 
+             <div data-value="LG" class="swatch-element lg available"> 
+              <input id="section-product--featured-product-swatch-0-lg" type="radio" name="option-0" value="LG"> <label for="section-product--featured-product-swatch-0-lg"> LG <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0017/4410/9620/t/7/assets/soldout.svg?v=7665111993643661956"> </label> 
+             </div> 
+             <div data-value="XL" class="swatch-element xl available"> 
+              <input id="section-product--featured-product-swatch-0-xl" type="radio" name="option-0" value="XL"> <label for="section-product--featured-product-swatch-0-xl"> XL <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0017/4410/9620/t/7/assets/soldout.svg?v=7665111993643661956"> </label> 
+             </div> 
+             <div data-value="2X" class="swatch-element 2x available"> 
+              <input id="section-product--featured-product-swatch-0-2x" type="radio" name="option-0" value="2X"> <label for="section-product--featured-product-swatch-0-2x"> 2X <img class="crossed-out" src="//cdn.shopify.com/s/files/1/0017/4410/9620/t/7/assets/soldout.svg?v=7665111993643661956"> </label> 
+             </div> 
+            </div> 
+           </div> <select name="id" id="ProductSelect-product--featured-product" data-section="product--featured-product" class="form-control original-select product-form__variants no-js"> <option selected value="33182977327184"> SM - $5.00 </option> <option value="33182977359952"> MD - $5.00 </option> <option value="33182977392720"> LG - $5.00 </option> <option value="33182977425488"> XL - $5.00 </option> <option value="33182977458256"> 2X - $5.00 </option> </select> 
+           <div class="quantity-controls__outer swatches-wrapper col-md-6 col-sm-12 col-12"> <label for="Quantity">Quantity</label> 
+            <div class="quantity-controls"> <button type="button" class="qty-minus">-</button> 
+             <input type="text" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector"> <button type="button" class="qty-plus">+</button> 
+            </div> 
+           </div> 
+           <div class="col-md-12 col-sm-12 col-12 featured-product--submit-action"> <button type="submit" name="add" id="purchase" class="btn  secondary-button" data-cart-action="drawer"> Add to Cart </button> 
+            <div data-shopify="payment-button" class="shopify-payment-button">
+             <button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled aria-hidden="true">&nbsp;</button><button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled aria-hidden="true">&nbsp;</button>
+            </div> 
+           </div> 
+          </div> 
+         </form> 
+        </section> 
+       </div> 
+       <script type="application/json" class="product-json" id="ProductJson-product--featured-product">
+          {"id":4871105019984,"title":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona","handle":"unisex-gray-downtown-sprinting-50-50-not-today-rona","description":"\u003cp\u003eIntroducing one of our $5 tees! Mask up and purchase our gray Not Today Rona tee to show how you #ProtectThePack.\u003c\/p\u003e\n\u003cp\u003eAll purchases made at Charlie's support USD student scholarships.\u003c\/p\u003e","published_at":"2021-02-03T09:38:58-06:00","created_at":"2021-02-01T08:44:06-06:00","vendor":"USD Charlie's Store","type":"Tee-Unisex","tags":["Gray","Red","Short Sleeve","Tees"],"price":500,"price_min":500,"price_max":500,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":33182977327184,"title":"SM","option1":"SM","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - SM","public_title":"SM","options":["SM"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77327184","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977359952,"title":"MD","option1":"MD","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - MD","public_title":"MD","options":["MD"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77359952","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977392720,"title":"LG","option1":"LG","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - LG","public_title":"LG","options":["LG"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77392720","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977425488,"title":"XL","option1":"XL","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - XL","public_title":"XL","options":["XL"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77425488","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}},{"id":33182977458256,"title":"2X","option1":"2X","option2":null,"option3":null,"sku":"","requires_shipping":true,"taxable":true,"featured_image":{"id":17100245729360,"product_id":4871105019984,"position":1,"created_at":"2021-02-02T18:12:19-06:00","updated_at":"2021-02-02T18:12:46-06:00","alt":null,"width":550,"height":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","variant_ids":[33182977327184,33182977359952,33182977392720,33182977425488,33182977458256]},"available":true,"name":"Unisex Gray Downtown Screen Printing 50\/50 Not Today Rona - 2X","public_title":"2X","options":["2X"],"price":500,"weight":0,"compare_at_price":null,"inventory_management":"shopify","barcode":"77458256","featured_media":{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"}}}],"images":["\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"],"featured_image":"\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","options":["Size"],"media":[{"alt":null,"id":9273503318096,"position":1,"preview_image":{"aspect_ratio":1.0,"height":550,"width":550,"src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166"},"aspect_ratio":1.0,"height":550,"media_type":"image","src":"https:\/\/cdn.shopify.com\/s\/files\/1\/0017\/4410\/9620\/products\/nottodaygrey.jpg?v=1612311166","width":550}],"content":"\u003cp\u003eIntroducing one of our $5 tees! Mask up and purchase our gray Not Today Rona tee to show how you #ProtectThePack.\u003c\/p\u003e\n\u003cp\u003eAll purchases made at Charlie's support USD student scholarships.\u003c\/p\u003e"}
+        </script> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div id="shopify-section-store-information--map" class="shopify-section homepage-section--map-wrapper"> 
+    <div class="homepage-map-content homepage-map--fallback--mobile-image homepage-map--fallback--has-fallback" data-wetheme-section-type="store-information--map" data-wetheme-section-id="store-information--map" data-maps-apikey="" data-maps-address="414 E. Clark Street, Vermillion, SD"> 
+     <script type="application/json" class="map-theme">
+    
+    []
+  
+
+  </script> 
+     <div class="map-row__text-wrapper d-none d-sm-block"> 
+      <div class="map-row__text-container wow fadeInUp"> 
+       <div class="title-bar custom-font"> 
+        <h2 class="wow fadeIn">Our Stores</h2> 
+       </div> 
+       <div class="rte featured-row__subtext textarea">
+        <p><strong>CAMPUS </strong></p>
+        <p>414 E. Clark Street</p>
+        <p>Vermillion, SD 57069</p>
+        <p>(605) 658-3800</p>
+        <p>.</p>
+        <p><strong>DOWNTOWN</strong></p>
+        <p>2&nbsp;E. Main Street</p>
+        <p>Vermillion, SD 57069</p>
+        <p>(605) 658-2200</p>
+       </div> 
+      </div> 
+     </div> 
+     <div class="map-row__item h-100"> 
+      <div class="map-wrapper h-100"> 
+       <div class="img homepage-map--fallback"> 
+        <div style="position: relative" class="lazyload-blur-wrapper feature-row__image--ll-wrapper"> 
+         <noscript aria-hidden="true"> 
+          <img class="feature-row__image" src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/191219_Charlies_0079-HDR-Pano_1000x1000.jpg?v=1610128868" data-sizes="auto" alt=""> 
+         </noscript> 
+         <img class="lazyload feature-row__image " src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/191219_Charlies_0079-HDR-Pano_150x.jpg?v=1610128868" data-src="//cdn.shopify.com/s/files/1/0017/4410/9620/files/191219_Charlies_0079-HDR-Pano_{width}x.jpg?v=1610128868" data-sizes="auto" data-aspectratio="1.5" data-lowsrc="//cdn.shopify.com/s/files/1/0017/4410/9620/files/191219_Charlies_0079-HDR-Pano_150x.jpg?v=1610128868" data-blur="true" alt=""> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="mobile--map-wrapper map-row__item map-row__text map-row__text--left d-block d-sm-none"> 
+     <div class="map-row__text-container"> 
+      <h2>Our Stores</h2> 
+      <div class="rte featured-row__subtext textarea">
+       <p><strong>CAMPUS </strong></p>
+       <p>414 E. Clark Street</p>
+       <p>Vermillion, SD 57069</p>
+       <p>(605) 658-3800</p>
+       <p>.</p>
+       <p><strong>DOWNTOWN</strong></p>
+       <p>2&nbsp;E. Main Street</p>
+       <p>Vermillion, SD 57069</p>
+       <p>(605) 658-2200</p>
+      </div> 
+     </div> 
+    </div> 
+   </div><!-- END content_for_index --> 
+  </div> 
+ </div> 
+ <div id="shopify-section-footer" class="shopify-section"> 
+  <footer data-wetheme-section-type="footer" data-wetheme-section-id="footer"> 
+   <div class="container"> 
+    <div class="row footer-alignment--center"> 
+     <div class="col-md-4 col-sm-12 content-footer footer-block--wrapper"> 
+      <h3 class="type-subheading type-subheading--1">Campus Hours</h3> 
+      <div class="rte footer-article">
+       <p>Monday-Thursday 8:30 a.m. - 6 p.m.</p>
+       <p>Friday 8:30 a.m. - 4:30 p.m.</p>
+       <p>Saturday 10 a.m. - 2 p.m.</p>
+       <p>-</p>
+       <p>DOWNTOWN HOURS</p>
+       <p>Monday-Friday 10 a.m. - 6 p.m.&nbsp;</p>
+       <p>Saturday 10 a.m. - 4 p.m.&nbsp;</p>
+      </div> 
+     </div> 
+     <div class="col-md-4 col-sm-12 links-footer footer-block--wrapper"> 
+      <h3 class="type-subheading type-subheading--1">Links</h3> 
+      <ul> 
+       <li> <a href="/search">Search</a> </li> 
+       <li> <a href="/pages/privacy">Privacy</a> </li> 
+       <li> <a href="/pages/shipping-and-returns">Shipping and Returns</a> </li> 
+       <li> <a href="/products/gift-card">Purchase a Gift Card</a> </li> 
+       <li> <a href="/pages/contact-us">Contact Us</a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-md-4 col-sm-12 mailing-list-footer footer-block--wrapper"> 
+      <h3 class="type-subheading type-subheading--1">Join our Mailing List</h3> 
+      <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8" class="contact-form">
+       <input type="hidden" name="form_type" value="customer">
+       <input type="hidden" name="utf8" value="✓"> 
+       <input type="hidden" name="contact[tags]" value="newsletter"> 
+       <div class="text-center"> 
+        <div class="lds-dual-ring newsletter-spinner hide"></div> 
+        <p class="note form-success hide"> <strong>Thanks for Joining!</strong> </p> 
+       </div> 
+       <div id="newsletter-wrapper"> 
+        <input id="newsletter_text" type="email" value="" placeholder="Enter email" name="contact[email]" id="Email" class="input-group-field email" aria-label="Enter email" autocorrect="off" autocapitalize="off" required> <button type="submit" id="newsletter_submit" name="commit" aria-label="submit"> 
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+          <polyline points="9 18 15 12 9 6"></polyline>
+         </svg> </button> 
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="bottom-footer"> 
+    <div class="container"> 
+     <div class="bottom-footer-row"> 
+      <div> 
+       <div class="footer-localization-selectors"> 
+        <form method="post" action="/localization" id="localization_form" accept-charset="UTF-8" class="localization-selector-form" enctype="multipart/form-data">
+         <input type="hidden" name="form_type" value="localization">
+         <input type="hidden" name="utf8" value="✓">
+         <input type="hidden" name="_method" value="put">
+         <input type="hidden" name="return_to" value="/">
+        </form> 
+       </div> 
+       <ul id="footer-payment-methods" class="inline-list payment-icons"> 
+        <li>
+         <svg class="payment-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewbox="0 0 38 24" width="38" height="24" aria-labelledby="pi-discover">
+          <title id="pi-discover">Discover</title><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" fill="#000" opacity=".07" /><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" fill="#FFF" /><path d="M37 16.95V21c0 1.1-.9 2-2 2H23.228c7.896-1.815 12.043-4.601 13.772-6.05z" fill="#EDA024" /><path fill="#494949" d="M9 11h20v2H9z" /><path d="M22 12c0 1.7-1.3 3-3 3s-3-1.4-3-3 1.4-3 3-3c1.7 0 3 1.3 3 3z" fill="#EDA024" />
+         </svg> </li> 
+        <li>
+         <svg class="payment-icon" viewbox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master">
+          <title id="pi-master">Mastercard</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" /><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" /><circle fill="#EB001B" cx="15" cy="12" r="7" /><circle fill="#F79E1B" cx="23" cy="12" r="7" /><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z" />
+         </svg></li> 
+        <li>
+         <svg class="payment-icon" viewbox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-visa">
+          <title id="pi-visa">Visa</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" /><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" /><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688" />
+         </svg></li> 
+       </ul> 
+      </div> 
+      <div class="copyright"> 
+       <p> <a href="/">© 2021 USD Charlie's Store</a> | <a target="_blank" rel="nofollow" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by Shopify</a> </p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </footer> 
+ </div> 
+</div> 
+<style>
+
+.verification-popup-logo__image img {
+  max-width: 50px;
+}
+
+ @media screen and (min-width: 992px) {
+  .verification-popup-logo__image img {
+    width: 50px;
+  }
+ }
+
+
+
+#prompt__background {
+  background-color: #333333;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style> 
+<style>
+
+
+
+
+
+
+
+
+
+.popup--image {
+  background-image: url('//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_900x.gif.jpg');
+}
+
+
+  
+@media (min-width: 901px) and (max-width: 1200px) {
+  .popup--image {
+    background-image: url('//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_1200x.gif.jpg');
+  }
+}
+  
+
+  
+@media (min-width: 1201px) and (max-width: 1500px) {
+  .popup--image {
+    background-image: url('//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_1500x.gif.jpg');
+  }
+}
+  
+
+  
+@media (min-width: 1501px) and (max-width: 2000px) {
+  .popup--image {
+    background-image: url('//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_2000x.gif.jpg');
+  }
+}
+  
+
+  
+@media (min-width: 2001px) {
+  .popup--image {
+    background-image: url('//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_4000x.gif.jpg');
+  }
+}
+  
+
+
+</style> 
+<script type="application/json" id="wetheme-global">
+		{
+			
+			"translations": {
+				"addToCart": "Add to Cart",
+				"added": "Added",
+				"soldOut": "Sold Out",
+				"unavailable": "Unavailable",
+				"makeASelection": "Make a Selection",
+				"showMore": "translation missing: en.general.filters.show_more",
+				"showLess": "translation missing: en.general.filters.show_less",
+				"saving": "Saving",
+				"products": "Products",
+		        "pages": "Pages",
+		        "collections": "Collections",
+		        "articles": "Articles",
+		        "loading": "Loading...",
+		        "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
+		        "view_all": "View all results",
+		        "clear": "Clear"
+			},
+			"moneyFormat": "${{amount}}"
+		}
+	</script> 
+<div class="smile-shopify-init" data-channel-key="channel_C2nWemdPKCo4sLHvt6UP3BmQ"></div> <!-- **BEGIN** Hextom CTB Integration // Main Include - DO NOT MODIFY --> <!-- **BEGIN** Hextom CTB Integration // Main - DO NOT MODIFY --> 
+<script type="application/javascript">
+    window.hextom_ctb = {
+        p1: [
+            
+        ],
+        p2: {
+            
+        }
+    };
+</script> <!-- **END** Hextom CTB Integration // Main - DO NOT MODIFY --> <!-- **END** Hextom CTB Integration // Main Include - DO NOT MODIFY -->
+</body>
+</doc>

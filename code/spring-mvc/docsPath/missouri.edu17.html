@@ -1,0 +1,239 @@
+<doc>
+<filename>missouri.edu17.html</filename>
+<url>http://mu-cf-map.col.missouri.edu/maphelp/index.html?=tools</url>
+<ip>128.206.191.215</ip>
+<title>Map Help</title>
+<body>
+<div id="top"> 
+ <div id="banner"> <a href="http://www.missouri.edu"><img src="images/mulogoBLK.gif" alt="MU Home" width="22" height="23"></a> <a href="http://cf.missouri.edu/">Map Help</a> 
+ </div> 
+</div> 
+<div id="main"> 
+ <div data-dojo-type="dijit/layout/TabContainer" id="helpTabs" data-dojo-id="tabContainer" data-dojo-props="doLayout:false"> 
+  <div data-dojo-type="dijit/layout/ContentPane" title="Map Navigation" data-dojo-props="selected:true, doLayout:false" id="nav"> 
+   <h4>Navigation Toolbar</h4> 
+   <p> The map navigation tools are found in the upper right corner of the map. Depending on your map, it will look something like this: </p> 
+   <div id="navToolbar" data-dojo-type="dijit/Toolbar"> <button data-dojo-type="dijit/form/ToggleButton" data-dojo-props="title:'Zoom In'" id="zoomin" type="button"></button> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Previous View'" id="zoomprev" type="button"></button> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Next View'" id="zoomnext" type="button"></button> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Reset Map View'" id="zoomfullext" type="button"></button> 
+    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="title:'Link to Map', iconClass:'linkBtn', showLabel:false" id="linkbtn"> <span></span> <span data-dojo-type="dijit/TooltipDialog"> <label id="ddLinkLbl" for="mapLink">Copy and paste:</label> <input data-dojo-type="dijit/form/TextBox" id="mapLink" name="mapLink" onfocus="this.select();" readonly size="30" value=""> </span> 
+    </div> <button data-dojo-type="dijit/form/Button" data-dojo-props="title:'Print Map'" id="printbtn" type="button"></button> 
+   </div> 
+   <p>You must first select the tool you want to use by clicking it on the toolbar, then you may use it to interact with the map.</p> 
+   <ul class="tool-list"> 
+    <li><img src="images/zoom-in.png" alt="Zoom In Tool" width="24"><strong> Zoom In: </strong>Click and drag over the map to draw a rectangle around the area you want to view.</li> 
+    <li><img src="images/backarrow.png" alt="Previous View Button" width="24"><strong> Previous View: </strong>Click this tool once to return to the last map area you viewed.</li> 
+    <li><img src="images/fwdarrow.png" alt="Next View Button" width="24"><strong> Next View: </strong>Click this tool once to view the next map view in a sequence.</li> 
+    <li><img src="images/zoom-full-extent1.png" alt="Reset View Button" width="24"><strong> Reset Map View: </strong>Click this tool once to zoom out to the full extent of the map.</li> 
+   </ul> 
+   <h4>Zoom Buttons</h4> 
+   <p>With each click of the zoom button controls, the map zooms incrementally. These buttons are located in the upper left corner of the map.</p> 
+   <div id="zoomBtnInfo"> 
+    <ul class="list"> 
+     <li><span class="zoomButton plus">+</span> Click the "+" button to zoom in.</li> 
+    </ul> 
+    <ul class="list"> 
+     <li><span class="zoomButton minus">-</span> Click the "-" button to zoom out.</li> 
+    </ul> 
+   </div> 
+   <h4>Mouse Navigation</h4> You can also use the mouse for map navigation. 
+   <ul class="list"> 
+    <li>Drag the mouse to pan</li> 
+    <li>Mouse Scroll Forward to zoom in On MAC Hold SHIFT Down</li> 
+    <li>Mouse Scroll Backward to zoom out On MAC Hold SHIFT Down</li> 
+    <li>SHIFT + Drag the mouse to zoom in</li> 
+    <li>SHIFT + CTRL + Drag the mouse to zoom out</li> 
+    <li>SHIFT + Click to recenter</li> 
+    <li>Double Click to Center and Zoom in</li> 
+    <li>SHIFT + Double Click to Center and Zoom in</li> 
+   </ul> 
+   <h4>Keyboard Navigation</h4> 
+   <ul class="list"> 
+    <li>Use arrow keys to pan</li> 
+    <li>Use + key to zoom in a level</li> 
+    <li>Use - key to zoom out a level</li> 
+   </ul> 
+  </div> 
+  <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Accessibility', doLayout:false" id="access"> 
+   <h4>Keyboard Accessibility</h4> 
+   <h5>Please note: The following information is taken from <a href="http://dojotoolkit.org/" target="_blank">the Dojo Toolkit</a> documentation and <a href="http://www.esri.com/" target="_blank">ESRI's documentation</a>.</h5> 
+   <p> The mapping application used in this site is built on <a href="http://help.arcgis.com/en/webapi/javascript/arcgis/">ESRI's Javascript API</a>, which also utilizes <a href="http://dojotoolkit.org/" target="_blank">dojo</a>, a javascript library for cross-browser web layout and design. </p> 
+   <h6>Map Accessibility</h6> 
+   <p> See the <a href="index.html?=nav">Map Navigation</a> tab for detailed information related to using the map with the keyboard or the mouse. </p> 
+   <h6>Title Panes: Expanding/Collapsing Panels</h6> The left section of the screen next to the map contains a series of panels that can be expanded or collapsed to view information related to the map. 
+   <p> Keyboard Actions </p> 
+   <table class="accGuides"> 
+    <tbody>
+     <tr> 
+      <th>Action</th> 
+      <th>Key</th> 
+     </tr> 
+     <tr> 
+      <td>Toggle open/close of the Title Pane</td> 
+      <td>Enter or space key with focus on the panel's title.</td> 
+     </tr> 
+     <tr> 
+      <td>Navigate into an opened Title Pane</td> 
+      <td>Tab</td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <h6>Tab Panels</h6> Tab Panels may be used inside a Title Pane to organize content. For example, the Building Search panel is organized into tabs, one for the building dropdown list and another tab for the building search tools. 
+   <p> Keyboard Actions </p> 
+   <table class="accGuides"> 
+    <tbody>
+     <tr> 
+      <th>Action</th> 
+      <th>Key</th> 
+     </tr> 
+     <tr> 
+      <td>Navigate to next tab button</td> 
+      <td>Right arrow</td> 
+     </tr> 
+     <tr> 
+      <td>Navigate to previous tab button</td> 
+      <td>Left arrow</td> 
+     </tr> 
+     <tr> 
+      <td>Navigate to first tab button</td> 
+      <td>Home</td> 
+     </tr> 
+     <tr> 
+      <td>Navigate to last tab button</td> 
+      <td>End</td> 
+     </tr> 
+     <tr> 
+      <td>Navigate into page</td> 
+      <td>Tab</td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <h6>Dropdown Menus</h6> The building dropdown and similar menus can be navigated using the keyboard. 
+   <table class="accGuides"> 
+    <tbody>
+     <tr> 
+      <th>Action</th> 
+      <th>Key</th> 
+     </tr> 
+     <tr> 
+      <td>Set focus on the dropdown or search box</td> 
+      <td>Tab</td> 
+     </tr> 
+     <tr> 
+      <td>Move up or down the list of projects</td> 
+      <td>Up or down arrows</td> 
+     </tr> 
+     <tr> 
+      <td>Filter the dropdown or jump to a letter in the alphabet</td> 
+      <td>Type inside the dropdown or search box.</td> 
+     </tr> 
+     <tr> 
+      <td>Select item</td> 
+      <td>Enter</td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <h6>Search Results table</h6> When you use any of the search tools the results will be displayed in a table below. You can use the keyboard to navigate through the results. 
+   <table class="accGuides"> 
+    <tbody>
+     <tr> 
+      <th>Action</th> 
+      <th>Key</th> 
+     </tr> 
+     <tr> 
+      <td>Navigate from search dropdown to the results list</td> 
+      <td>Tab</td> 
+     </tr> 
+     <tr> 
+      <td>Navigate between rows in the list</td> 
+      <td>Arrow keys</td> 
+     </tr> 
+    </tbody>
+   </table> <!--<table class="accGuides">
+                    <tr>
+                        <th>Action</th>
+                        <th>Key</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Tab</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Tab</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>--> 
+  </div> 
+  <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Map Layers and Display', doLayout:false" id="display"> 
+   <h4>Legend and Map Display Panel</h4> 
+   <div class="leftfloat"> 
+    <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props="doLayout:false" id="tocTabs"> 
+     <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Sample Layers', selected:true" id="otherTocTab"> 
+      <div id="sampletoc"></div> 
+     </div> 
+     <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Base Map'" id="baseTocTab"> 
+      <div id="basetoc"></div> 
+     </div> 
+    </div> 
+    <div id="aerialView"> 
+     <input type="button" id="showAerialBtn" name="showAerialBtn" class="myButton" value="Show Campus Aerial Imagery"> 
+    </div> 
+   </div> 
+   <div class="rightfloat"> 
+    <ul class="list"> 
+     <li>The map legends are grouped in tabs by category.</li> 
+     <li>Each layer on the map is listed by name with its map symbol.</li> 
+     <li>Certain layers can be turned on or off one at a time by checking or unchecking the boxes in the list.</li> 
+     <li>Some layers are not displayed on the map at all scales. When the map is zoomed out those layers are not visible. In this case the checkbox for that layer is disabled in the legend. </li> 
+     <li>Similarly, the Aerial Image can be displayed using the button below the legend. The imagery can not be displayed when the map is zoomed out at larger scales, so the button is disabled until the map is zoomed in. </li> 
+     <li>The option to manually toggle the Base Map layers is typically limited to select layers (if any), such as the map labels.</li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Tools and Information', doLayout:false" id="tools"> 
+   <h4>Map Feature Information</h4> 
+   <p> Depending on the map, there are a variety of ways to view additional information related to map features. </p> 
+   <ol> 
+    <li><strong>Select from a list</strong> 
+     <ul class="list"> 
+      <li>Some maps include panels which contain a list of features.</li> 
+      <li>Select a feature by clicking the item in the list.</li> 
+      <li>Once you make your selection an information panel will display any data available for that item. Additionally, the map will zoom and center on that feature and it will be highlighted in red. </li> 
+     </ul> </li> 
+    <li><strong>Click on the Map</strong> 
+     <ul class="list"> 
+      <li>Click a feature on the map, such as a building. An information panel will display any data available for that item. Additionally, the map will zoom and center on that feature and it will be highlighted in red.. </li> 
+     </ul> </li> 
+    <li> <strong>Hover your mouse over a feature on the map</strong> 
+     <ul class="list"> 
+      <li>This method is typically used for map points. Hovering over a point will display a small info bubble with data related to that features. </li> 
+      <li>Hide the info bubble by clicking the map away from a feature. </li> 
+     </ul> </li> 
+   </ol> 
+   <h4>Link to a building or other feature on the Map</h4> 
+   <p>If a building has been selected a textbox will be displayed at the bottom of the panel. Click anywhere in the textbox to select the URL text. Use [Ctrl + C] to copy the selected URL, then paste it in any email or in the address bar of your browser. </p> 
+   <p>Use this URL to provide a permanent link to the map with this building pre-selected. The site will load with the map zoomed in and centered on this location. </p> 
+   <p> <img src="images/link.png" alt="Link Button" width="24" class="toolImg"><strong>Link Button:</strong> Click this tool and a box will be displayed below the toolbar. Click inside the box to select the URL text, copy and paste to share this link. </p> 
+  </div> 
+  <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'Printing the Map', doLayout:false" id="print"> 
+   <h4>Printing Recommendations</h4> 
+   <img src="images/print.gif" alt="Print Tool" class="inline"> The Print Tool on the map toolbar is recommended for best printing results. However, results may vary depending on your browser, browser version and operating system. 
+   <p> If the Print tool doesn't function properly, you may see better results by using your browser's print button. </p> 
+   <p> Please keep in mind that all images rendered in your web browser, including the map images on this site, are not high-resolution images intended for quality print output. </p> 
+  </div> 
+  <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="title:'System Requirements', doLayout:false" id="system"> 
+   <h4>Browser Support</h4> This site works best in the following browsers: 
+   <ul class="list"> 
+    <li>Firefox 9+</li> 
+    <li>Google Chrome 16+</li> 
+    <li>Internet Explorer 9</li> 
+   </ul> 
+   <p>Functionality in other browsers may vary.</p> 
+  </div> 
+ </div> 
+</div> 
+<div id="mapDiv"></div>
+</body>
+</doc>

@@ -1,0 +1,200 @@
+<doc>
+<filename>uab.edu6.html</filename>
+<url>http://www.uab.edu/map/</url>
+<ip>198.73.7.192</ip>
+<title>Campus Map</title>
+<body>
+<ul id="whitebar"> 
+ <li class="sitelogo"> <a href="/map/" style="border: medium none;"> <img class="sitelogo" style="height: 40px;" src="//www.uab.edu/home/sitelogo.jpg" alt="UAB | The University of Alabama at Birmingham"> </a> </li> 
+</ul> 
+<div id="cssmenu"> <!--Search--> 
+ <ul class="searchbox"> 
+  <li class="ui-widget"> <input type="text" placeholder="Search Campus" id="search"> </li> 
+ </ul> 
+ <div class="close_button" id="close_button" style="display:none"></div> <!--slidy panel aka infowindow--> 
+ <ul id="infowindow" style="display:none;"> 
+  <li> 
+   <div class="panel" id="panel"> 
+    <div id="feedback" style="display:none"> 
+     <form id="feedback_form" name="feedback_form" method="post"> 
+      <input name="sender" placeholder="Your Name"> 
+      <input name="senderEmail" placeholder="Your email"> <textarea rows="5" cols="20" name="message" placeholder="Tell us what you think"></textarea> 
+      <input name="userActions" id="userActions" style="display:none"> 
+      <div class="g-recaptcha" data-sitekey="6LelWAITAAAAACOC4Gj57pdCIpjQtPEJcZqD0dkB"></div> 
+      <input type="submit" name="submit_feedback" value="Send Feedback"> 
+     </form> 
+    </div> <!--<img class="expand_button" id='expand_button' src="images/expand_white.png"/>--> 
+    <div id="streetview" style="width:100%; height:200px"></div> 
+    <div id="full_name"></div> 
+    <div id="address"></div> 
+    <div id="shareHolder"> 
+     <div id="mobileStreetview">
+      <button>Streetview</button>
+     </div> 
+     <div id="shareLink"></div> 
+     <div id="getDirections"> 
+      <form action="https://maps.google.com/maps" method="get" target="_blank"> 
+       <input type="hidden" id="daddr" name="daddr"><!--set value to POI address--> 
+       <input type="submit" name="submit_directions" value="Directions"> 
+      </form> 
+     </div> 
+    </div> 
+    <div id="addl_info"></div> 
+    <div id="alsoHere"></div> 
+    <div id="associated_wktIds"></div> 
+    <div id="featuring"></div> 
+    <div id="tags"></div> 
+   </div><!--end of panel--> </li> 
+ </ul> <!--The Menu--> 
+ <ul id="menu"> 
+  <li> <h3 class="menu_labels" id="students" data-lat="33.500306" data-lng="-86.804660" data-zoom="17">Students</h3> 
+   <ul id="studentspicklist"></ul> </li> 
+  <li> <h3 class="menu_labels" id="hospitals-clinics" data-lat="33.505816" data-lng="-86.801803" data-zoom="17">Hospitals &amp; Clinics</h3> 
+   <ul id="hospitals-clinicspicklist"></ul> </li> 
+  <li> <h3 class="menu_labels" id="research" data-lat="33.503696" data-lng="-86.802168" data-zoom="17">Research</h3> 
+   <ul id="researchpicklist"></ul> </li> 
+  <li> <h3 class="menu_park" id="Parking">Parking</h3> 
+   <ul id="parkingpicklist"> 
+    <li><a class="menu_labels menu_parking" id="public-parking" data-lat="33.504851" data-lng="-86.803278" data-zoom="16">Public Parking</a></li> 
+    <li><a class="menu_labels menu_parking" id="student-parking" data-lat="33.500843" data-lng="-86.810718" data-zoom="16">Student Parking</a></li> 
+    <li><a class="menu_labels menu_parking" id="employee-parking" data-lat="33.502541" data-lng="-86.808053" data-zoom="16">Employee Parking</a></li> <!--
+			<li><a class='menu_transloc' id='active-routes'>Active Bus Routes</a></li>
+			<li><a class='menu_transloc' id='transloc'>All Bus Routes</a></li>
+			<li><a href="https://itunes.apple.com/us/app/transloc-rider-transit-tracking/id751972942?mt=8" class='menu_mobile' id='ios_rider'>Get iOS Rider App</a></li>
+			<li><a href="https://play.google.com/store/apps/details?id=com.transloc.android.rider" class='menu_mobile' id='android_rider'>Get Android Rider App</a></li>
+		  	--> 
+   </ul> </li> 
+  <li> <h3 class="menu_labels" id="administration" data-lat="33.504528" data-lng="-86.805725" data-zoom="16">Administration</h3> 
+   <ul id="administrationpicklist"></ul> </li> 
+  <li> <h3 class="menu_labels" id="athletics" data-lat="33.499469" data-lng="-86.813507" data-zoom="17">Athletics</h3> 
+   <ul id="athleticspicklist"></ul> </li> 
+  <li> <h3 class="menu_labels" id="arts" data-lat="33.498683" data-lng="-86.805021" data-zoom="16">Arts</h3> 
+   <ul id="artspicklist"></ul> </li> 
+  <li> <h3 class="menu_labels" id="dining" data-lat="33.499658" data-lng="-86.805515" data-zoom="17">Dining</h3> 
+   <ul id="diningpicklist"></ul> </li> 
+  <li> <h3 class="menu_labels" id="campus" data-lat="33.502959" data-lng="-86.807722" data-zoom="16">Campus Services</h3> 
+   <ul id="campuspicklist"></ul> </li> 
+  <li> <h3 class="menu_other" id="other">More Layers</h3> 
+   <ul id="otherpicklist"></ul> </li> <!--Future Icon tray for parking & such to replace parking/transit/more layers--> 
+  <li id="icontray"> 
+   <div id=""></div> </li> <!--The Weather--> 
+  <li id="wxWrap"> 
+   <div id="wxIntro">
+    Birmingham:
+   </div> 
+   <div id="wxIcon2"></div> 
+   <div id="wxTemp"></div> </li> <!-- Mobile Only Footer --> 
+  <li id="lilfootermobile" class="mobile gmnoprint gm-style-cc"> <span><a href="https://assistive.usablenet.com/tt/your_link_here">Accessibility</a></span> <span><a href="https://uab.edu/brand/web/policies/disclaimer">Disclaimer</a></span> <span><a href="https://uab.edu/brand/web/policies/webpolicy">Web Policy</a></span> <span><a href="mailto:webcomm@uab.edu?subject=Map%20Inquiry">Contact</a></span> </li> 
+ </ul> <!--Hamburger--> 
+ <ul id="hamburger"> 
+  <li> 
+   <div class="hamburger-menu"></div></li> 
+ </ul> 
+</div><!--end of cssmenu--> <!--Map--> 
+<div id="map"></div> <!--Transloc info window--> 
+<div id="translocinfo" class="ui-draggable ui-draggable-handle">
+ <div>
+  Blazer Express Routes | All routes Monday-Friday
+ </div> <button id="closexp">X</button> <object width="320" height="300" data="blazerexpress.html"> <embed width="320" height="300" src="blazerexpress.html"> Error: Embedded data could not be displayed. </object> 
+</div> <!-- <div id="expand_streetview" style="display:none"></div>--> <!--<div id="zoomOut">-</div><div id="zoomIn">+</div>--> 
+<div id="lilfooter" class="gmnoprint gm-style-cc"> <a href="https://www.uab.edu/directory/buildingcodes">Accessibility</a> <a href="https://uab.edu/brand/web/policies/disclaimer">Disclaimer</a> <a href="https://uab.edu/brand/web/policies/webpolicy">UAB Web Pages Policy</a> <a href="mailto:webcomm@uab.edu?subject=Map%20Inquiry">Contact</a> <span>©&nbsp;UAB</span> 
+</div> <!--JQuery & Google Maps API--> 
+<script src="//code.jquery.com/jquery-latest.min.js"></script> 
+<script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+<script src="//maps.googleapis.com/maps/api/js?v=3.40&amp;key=AIzaSyCPSSZl6edyQGMK2CM2rNviWoiN3zazRDQ"></script> <!--is js?v=3&libraries=geometry needed in api call, now? current version okay? or set version?--> <!--Google recaptcha--> 
+<script src="//www.google.com/recaptcha/api.js"></script> <!--Wicket--> 
+<script src="wicket.src.js"></script> 
+<script src="wicket-gmap3.js"></script> <!--custom scripts--> 
+<script src="infowindows.js"></script> 
+<script src="mapListeners.js"></script> 
+<script src="mapMarkers.js"></script> 
+<script src="mapPolygons.js"></script> 
+<script src="mapControls.js"></script> 
+<script src="mapSearch.js"></script> 
+<script src="styleArray.js"></script> 
+<script src="transloc.js"></script> 
+<script src="markerwithlabel.js"></script> 
+<script src="addtohomescreen.js"></script> <!--custom font load--> 
+<script>
+	var map;
+	var map_options;
+	var mapURL = window.location.href.split('?')[0];
+	var mapShareLink = window.location.href.split('?')[1];
+	var locationID = unescape(location.search.substring(1));	// Get Querystring from the page URL
+	var center = new google.maps.LatLng(33.500190, -86.805465); //for some reason, the map_options - center var won't work for homeControl. has to be here...
+	var isMobile = false;
+	
+	//load function
+	function initialize()
+	{
+	  //check for enterprise mode
+	  if(!document.addEventListener && ('spellcheck' in document.createElement('textarea'))) {
+	  // must be running in Enterprise mode because spellcheck wasn't introduced until IE10
+	   alert('You are in Enterprise Mode, Please turn it off to fully use this site.');
+	  }
+	  //check if  mobile
+	  if((/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent)|| (window.innerWidth <= 800))
+	  {
+		isMobile = true;
+		center = new google.maps.LatLng(33.500419, -86.806153);		
+		addActionToActionList("User is using Mobile Device: " + getBrowser());
+		addToHomescreen(); // prompts to add icon to homescreen for quick launch of map
+	  }else{
+		center = new google.maps.LatLng(33.500778, -86.807574);		
+		addActionToActionList("User is using Desktop: " + getBrowser());
+	  }
+	  map_options = {
+		center: 	center, //depends on mobile or desktop
+		zoom: 		(isMobile ? 16 : 17), //choices are 0 to 22 (17 is the minimum zoomed in to see building shapes
+		maxZoom: 	20,
+		minZoom:	14,
+		mapTypeId:	google.maps.MapTypeId.ROADMAP,//choices are: ROADMAP, SATELLITE, HYBIRD, TERRAIN
+		mapTypeControlOptions: {
+          style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+          position: google.maps.ControlPosition.TOP_RIGHT
+		}
+	  }
+	  //add the settings to the map object
+      map = new google.maps.Map(document.getElementById("map"), map_options);
+	  //style map
+	  var styleArray = [];
+	  styleArray = styleCampusMap();
+	  map.setOptions({styles: styleArray});
+	  map.setTilt(0);//get rid of 45 degree view
+	  loadData(); //mapListeners
+	  // Detect IE and append class to <html> element
+	  if (navigator.userAgent.indexOf("IEMobile") === -1)
+	  {
+        if ((navigator.userAgent.indexOf("rv:11.") !== -1) && (!document.documentElement.classList.contains('ie11')) && window.navigator.msPointerEnabled) {
+          document.documentElement.classList.add("ie11");}
+		else if ((navigator.userAgent.indexOf("MSIE 10.") !== -1) && (!document.documentElement.classList.contains('ie10')) && window.navigator.msPointerEnabled) {
+        document.documentElement.classList.add("ie10");}
+	  }
+	};//end of initialize
+
+	//load initialize on screen load
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+	//delegate for sending feedback via ajax
+	$(function(){
+	  $('#feedback').bind('submit', function(){
+		//check for captcha?
+		$.ajax({
+		  type: 'post',
+		  url: "captcha.php",
+		  data: $("#feedback_form").serialize(),
+		  success: function(response)
+		  {
+			if(response == "success")
+			{
+			  alert("Thank you! Your message has been sent.");
+			  window.location.replace(mapURL);
+			}else{alert("Please complete the recaptcha before submitting.");}
+		  }
+		});
+		return false;
+	  });
+	});
+	</script>
+</body>
+</doc>

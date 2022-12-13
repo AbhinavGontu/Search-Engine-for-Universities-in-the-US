@@ -1,0 +1,351 @@
+<doc>
+<filename>ttuhsc.edu1.html</filename>
+<url>http://events.ttuhsc.edu/</url>
+<ip>69.175.158.223</ip>
+<title>TTUHSC Events</title>
+<body>
+<script>
+
+         //onbeforeunload="HandleBackFunctionality(event)"
+         //bajb_backdetect.OnBack = function () {
+         //    alert('You clicked it!');
+         //}
+         //var clientX = 0;
+         //var clientY = 0;
+         //var scheduled = false;
+
+         //window.onmousedown = function (event) {
+         //    if (!scheduled) {
+         //        scheduled = true;
+         //        setTimeout(function () {
+         //            event = event || window.event;
+         //            clientX = event.clientX;
+         //            clientY = event.clientY;
+         //            scheduled = false;
+         //        }, 1000);
+         //    }
+         //}
+
+         //window.onbeforeunload = function (event) {
+         //    alert(clientY + ":" + clientX);
+         //    if (clientX < 40 && clientY < 0) {
+
+         //    }
+         //    else {
+         //        if (window.location.href.indexOf("Default.aspx") > -1) {
+         //                             window.location.reload();
+         //                         }
+         //    }
+
+         //};
+
+   //      function HandleBackFunctionality(evt) {
+   //          if (evt) {
+   //              if (window.event.clientX < 40 && window.event.clientY < 0) {
+   //                  document.getElementById("demo").innerHTML =
+   //"Page location back is: " + window.location.href;
+   //              }
+   //              else {
+   //                  if (window.location.href.indexOf("Default.aspx") > -1) {
+   //                      window.location.reload();
+   //                  }
+   //              }
+   //          }
+   //      }
+
+         //function showCoords(evt) {
+         //    alert(
+         //      "clientX value: " + evt.clientX + "\n" +
+         //      "clientY value: " + evt.clientY + "\n"
+         //    );
+         //}
+         //var ignore_forunload = false;
+         //function HandleBackFunctionality(evt) {
+         //    if (window.event) {
+         //        if (window.event.clientX < 40 && window.event.clientY < 0) {
+         //        }
+         //        else {
+         //            if (ignore_forunload != true) {
+         //                if (window.location.href.indexOf("Default.aspx") > -1) {
+         //                    window.location.reload();
+         //                }
+         //            }
+                    
+         //        }
+         //    }
+         //    else if (evt) {
+         //        if (evt.currentTarget.performance.navigation.type == 1) {
+         //        }
+         //        if (evt.currentTarget.performance.navigation.type == 2) {
+         //            if (window.location.href.indexOf("Default.aspx") > -1) {
+         //                window.location.reload();
+         //            }
+         //        }
+         //    }
+         //}
+         $(document).ready(function () {
+             var mn = $(".navbar");
+             mns = " navbar-fixed-top";
+             hdr = $('.logotitle-md-dark').height();
+
+             $(window).scroll(function () {
+                 if ($(this).scrollTop() > hdr) {
+                     mn.addClass(mns);
+                 } else {
+                     mn.removeClass(mns);
+                 }
+             });
+
+             $('#closemessage').click(function (e) {
+                 $('.messagedivcls').hide();
+             });
+
+             $('#a1').click(function () {
+                 sessionStorage.setItem('RoleName', '');
+                 sessionStorage.setItem('dateSelected', new Date());
+             });
+
+             $.getJSON("https://app4.ttuhsc.edu/DigitalSignageCAPIntegration/handlers/GetCampusesAndMessages.ashx?campus=active", function (data) {
+                 if (data.length > 0) {
+                     $("#warningWrap").show();
+                     var loops = 0;
+                     $.each(data, function (index) {
+                         $(".emergencyInfo").append("<span><a href=\"" + data[index].EmergencyURL + "\"><strong>" + data[index].CampusName + "</strong></a></span> -<span> " + data[index].Headline + "</span><br /><hr />")
+                         loops++;
+                     });
+                 } else {
+                     $("#warningWrap").hide();
+                 }
+             });
+
+             //$("nav").click(function () {
+             //    ignore_forunload = true;
+             //});
+
+             //$("#advancedsearchlink").click(function () {
+             //    ignore_forunload = true;
+             //});
+         });
+                  </script> <a tabindex="0" class="skip" href="#maincontent">Skip to Main Content</a> 
+<div class="logotitle-md-dark"> 
+ <div class="container"> <a href="//www.ttuhsc.edu"> <img src="App_Images/IT_Gateway_490x70.gif" title="Texas Tech University Health Sciences Center" alt="Texas Tech University Health Sciences Center" width="490"></a>
+ </div> 
+</div> 
+<nav class="navbar navbar-default "> 
+ <div class="container"> 
+  <div class="navbar-header"> <a href="Default.aspx" class="navbar-brand">Events</a> <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main" title="navbartoggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="sr-only">Toggle Menu</span> </button> 
+  </div> 
+  <div class="collapse navbar-collapse" id="navbar-main"> 
+   <ul class="nav navbar-nav"> 
+    <li id="requestli" class="dropdown"><a href="Secure/EventRequest.aspx">Request</a> </li> 
+    <li id="Li1" class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources<span class="caret"></span></a> 
+     <ul class="dropdown-menu"> 
+      <li> <a href="Resources/HowToSubmit.aspx" id="A2">How to Submit</a> </li> 
+      <li> <a href="Resources/Help.aspx" id="A5">Help</a> </li> 
+      <li> <a href="Resources/FAQ.aspx" id="A8">FAQ</a> </li> 
+      <li> <a href="Resources/PostingPolicy.aspx" id="A9">Posting Policy</a> </li> 
+      <li> <a id="A3" href="//www.ttuhsc.edu">TTUHSC Home</a> </li> 
+      <li> <a id="A4" href="//announcements.ttuhsc.edu">Announcements</a> </li> 
+     </ul> </li> 
+    <li id="draftsli" class="dropdown"><a href="Secure/MyEvents.aspx" title="Drafts">Drafts</a> </li> 
+    <li class="dropdown"><a href="SecureExternalUser/SubscriptionOptions.aspx" id="A7" title="Drafts">Subscribe</a> </li> 
+   </ul> 
+   <ul id="btnlogindiv" class="nav navbar-nav navbar-right"> 
+    <li id="lisurvey"> <a href="https://tthsclubbock.co1.qualtrics.com/SE/?SID=SV_dhDKqqcyyt2BKol" class="btn btn-danger feedback" target="_blank">Tell us what you think</a></li> 
+    <li><a href="Secure/Default.aspx" id="btnlogin" class="loginbtn" title="Click here to Request for New Event">Login</a></li> 
+   </ul> 
+  </div> 
+ </div> 
+</nav> 
+<div class="container"> 
+ <noscript> 
+  <p class="error col-md-6"> <img src="App_Images/JavascriptError.png" id="Img1" alt="javascript error"> Please enable JavaScript in your browser. <br> <br> Internet Explorer: Tools-&gt; Options-&gt; Security-&gt; Scripting-&gt; Enable <br> Mozilla Firefox: Tools-&gt; Options-&gt; Check Enable Javascript <br> Chrome: Settings-&gt; Advanced-&gt; Content Settings-&gt; Javascript-&gt; Allow <br> <br> You can use this website only after having enabled Javascript! </p> 
+ </noscript> 
+ <div id="divNoPermissions" class="warning" style="display: none"> 
+  <p> You do not have permissions. Please ask your admin to give you rights. </p> 
+ </div> 
+ <div> 
+  <div class="messagedivcls"> 
+  </div> 
+ </div> 
+ <input name="ctl00$hdnrolename" type="hidden" id="hdnrolename"> 
+</div> 
+<div class="PageContent"> 
+ <div id="warningWrap" style="display:none"> 
+  <div id="warning" class="clearfix"> <i class="fa fa-exclamation"></i> 
+   <div class="emergencyInfo"> <span class="close">Close <i class="fa fa-angle-double-up"></i></span> 
+   </div> 
+  </div> 
+  <div class="tabWrap clearfix"> 
+   <div class="emergencyTab">
+     View Emergency Notice <i class="fa fa-angle-double-down"></i> 
+   </div> 
+  </div> 
+ </div> 
+ <form method="post" action="./" id="frmTemplate" class="form-horizontal"> 
+  <div class="aspNetHidden"> 
+   <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value=""> 
+   <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value=""> 
+   <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="BeploqbT3E1O8+T33/tqiSEWtkkMgKT0ZWJLuBTCG2i1TItL9Y1jek6XcI+cEy0RYBj/B8CWJsOhfrhGZMXhisPICb2v+p03+eLX7QiWptIO3nxCn4u7SljQa0s4apgL/8rdw0xHWuG3yLWlV94uEWD0MDeUNBPoRIAHFgZEYP9Z8N63MMzl/gcDo4jXuYgleiePZlVRVVf3xtUoN97Mg67tvq0wo1HM4XX+SmQOZzUs03SE2zsjoJVWME+SLrqtCS3oWhAf9OZHeuYI8LoH++ZEGuar60xeJrx1QyveWbkRaVTeQH7xCXP1y/QG1XaF03f9dMxjTPbdpFFdU8AJBvOoAh/IZSidb0ZNJDzUrgxyWh+iXrOJublrOQvOgnUH/SfhGboOjkus+uAZcwYjMg=="> 
+  </div> 
+  <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmTemplate'];
+if (!theForm) {
+    theForm = document.frmTemplate;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+  <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZO3Rc_cGfSagKv4ApjlV2zFQ0dTgMRGAscxGLdX59bw5e2LClHK7U2k-Y7Hp-Yx0Sw2&amp;t=637453852754849868" type="text/javascript"></script> 
+  <div class="aspNetHidden"> 
+   <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334"> 
+   <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0"> 
+   <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0"> 
+   <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="vLFf6CEUr3n9nlI2nkZzWP/PvBRZuEJtA7gtKnw5kLksfvZwO1hxECLWaLu/G3w9DUi01itW1IIi5rGbrrdo+W9f/7gu+cWYu9EFYfZI4rukhEZqcs8seQN24BizZWSCLZ36POIfqxLcdpUPdP3K4lBI+F1/FVk2kE5wRtXfBnGvn/ymrHYJceJz4NUlNj2B"> 
+  </div> 
+  <div class="container" role="main" id="maincontent"> 
+   <h1> EVENTS CALENDAR</h1> 
+   <div class="row featurerow"> 
+    <div id="FeaturedEvents" class="col-md-9  col-sm-12 col-xs-12"> 
+    </div> 
+    <div class="col-md-3  col-xs-12 sidebar col-xs-12"> 
+     <div id="datepicker"></div> 
+     <div id="paginator"></div> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="col-md-9"> 
+     <div id="ContentPlaceHolder1_publicheading" style="margin-bottom: 10px;"> 
+      <h2>Public Events <a href="Secure/Default.aspx" id="ContentPlaceHolder1_btnlogintoviewmore" title="Login to view more">(Login to view more)</a></h2> 
+     </div> 
+     <div id="searchbox"> 
+      <input type="text" id="txtsearch" title="Search"> <button type="submit" id="btnSearchClick" class="btnSearch"> <i id="I1" class="fa fa-search" title="Search"></i> <span class="screen-reader-text">Search</span> </button> 
+      <input type="button" value="Reset" id="btnsearchreset" title="Reset" class="btnSearch"> 
+      <div id="advancedsearchlink"> <a href="AdvancedSearch.aspx">Advanced Search</a> 
+      </div> 
+     </div> 
+     <div id="EventListTabs"> 
+      <ul id="tabs" class="nav nav-tabs" data-tabs="tabs"> 
+       <li class="active"><a href="#thismonth" data-toggle="tab" class="widget-title"> <label style="font-size: 0.9em">Month of</label> <label id="thismonthname" style="font-size: 0.9em"></label> </a></li> 
+       <li><a href="#thisweek" data-toggle="tab" class="widget-title"> <label style="font-size: 0.9em">Week of</label> <label id="todaysdate" style="font-size: 0.9em"></label> </a></li> 
+      </ul> 
+      <div id="my-tab-content" class="tab-content"> 
+       <div class="tab-pane active" id="thismonth"> 
+        <div id="divNoEventsMonth" class="error" style="display:none">
+          No events available for this month! 
+        </div> 
+        <table id="eventListMonth" class="eventList" summary="Please find listed here the Event List for the month that you either are in right now or the one that you sleected from the calendar on the top right"> 
+         <caption>
+          Event List for the month
+         </caption> 
+         <thead> 
+          <tr> 
+           <th scope="col">Date</th> 
+           <th scope="col">Event Details</th> 
+          </tr> 
+         </thead> 
+        </table> <!-- pager --> 
+       </div> 
+       <div class="tab-pane " id="thisweek"> 
+        <div id="divNoEventsWeek" class="error" style="display:none">
+          No events available for this week! 
+        </div> 
+        <table id="eventListWeek" class="eventList" summary="Please find listed here the Event List for the week that you either are in right now or the one that you sleected from the calendar on the top right"> 
+         <caption>
+          Event List for the week
+         </caption> 
+         <thead> 
+          <tr> 
+           <th scope="col">Date</th> 
+           <th scope="col">Event Details</th> 
+          </tr> 
+         </thead> 
+        </table> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="eventInformation"> 
+     </div> 
+    </div> 
+    <div class="col-md-3 sidebar"> 
+     <div id="filter"> 
+      <div class="tagsection col-md-12"> 
+       <h2>Filter By Tags</h2> 
+       <div id="TagList"> 
+       </div> 
+      </div> 
+     </div> 
+     <div> 
+      <input type="button" value="Apply" id="btnApply" class="btn btn-danger"> 
+      <input type="button" value="Reset" id="btnReset" class="btn " style="background-color:#333333; color:white;"> 
+     </div> 
+     <section id="ContentPlaceHolder1_ExternalUserLogin"> 
+      <h2> Other Login Options</h2> 
+      <input src="App_Images/btn_google_signin_light_normal_web.png" name="ctl00$ContentPlaceHolder1$btnGoogle" type="image" id="ContentPlaceHolder1_btnGoogle" alt="Sign in with Google" style="cursor:pointer;"> 
+      <input src="App_Images/FaceBookLoginX.png" name="ctl00$ContentPlaceHolder1$btnFacebook" type="image" id="ContentPlaceHolder1_btnFacebook" alt="Sign in with Facebook" value="Sign in with Facebook" style="cursor:pointer;"> 
+     </section> 
+    </div> 
+   </div> 
+  </div> 
+  <input type="hidden" id="hdndateselected" value=""> 
+  <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnEventID" id="ContentPlaceHolder1_hdnEventID"> 
+  <script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script> 
+ </form> 
+</div> 
+<footer class="footer"> 
+ <div class="container"> 
+  <div class="col-md-3"> 
+   <img src="App_Images/Your%20life%20our%20purpose%20logo_TTUHSC_DblT-04.png" class="footerlogo" alt="Your Life Our Purpose - Texas Tech University Health Sciences Center"> 
+  </div> 
+  <ul class="col-md-25 footerdiv footerdiv-border"> 
+   <li><a href="//www.state.tx.us/" target="_blank" title="State of Texas Web Site">State of Texas Web Site</a></li> 
+   <li><a href="//www.texashomelandsecurity.com/" target="_blank" title="Texas Homeland Security">Texas Homeland Security</a></li> 
+   <li><a href="//veterans.portal.texas.gov/en/Pages/default.aspx" target="_blank" title="Texas Veterans Portal">Texas Veterans Portal</a></li> 
+   <li><a href="//sao.fraud.state.tx.us/" target="_blank" title="SAO Fraud Reporting">SAO Fraud Reporting</a></li> 
+   <li><a href="/tac/dmca.aspx" target="_blank" title="DMCA Compliance">DMCA Compliance</a></li> 
+   <li><a href="//secure.ethicspoint.com/domain/en/report_custom.asp?clientid=12414" target="_blank" title="Compliance Hotline">Compliance Hotline</a></li> 
+   <li><a href="//www.fiscal.ttuhsc.edu/reports/Energy/" target="_blank" title="TTUHSC Energy Conservation Report">TTUHSC Energy Conservation Report</a></li> 
+  </ul> 
+  <ul class="col-md-25 footerdiv footerdiv-border"> 
+   <li><a href="//www.thecb.state.tx.us/apps/resumes/" target="_blank" title="Online Institutional Resumes"> Online Institutional Resumes</a></li> 
+   <li><a href="//www.ttuhsc.edu/it/contacts.aspx" target="_blank" title="Campus Webmasters">Campus Webmasters</a></li> 
+   <li><a href="//www.ttuhsc.edu/tac/" target="_blank" title="General Policy Information">General Policy Information</a></li> 
+   <li><a href="//www.ttuhsc.edu" target="_blank" title="TTUHSC Home">TTUHSC Home</a></li> 
+   <li><a href="//www.texastech.edu/" target="_blank" title="Texas Tech University System">Texas Tech University System</a></li> 
+   <li><a href="//www.ttu.edu/" target="_blank" title="Texas Tech University">Texas Tech University</a></li> 
+   <li><a href="//www.angelo.edu" target="_blank" title="Angelo State University">Angelo State University</a></li> 
+  </ul> 
+  <div class="col-md-22 footerdiv"> 
+   <ul class="sociallinks"> 
+    <li><a href="//www.facebook.com/ttuhsc" target="_blank" title="Link to facebook">Facebook</a></li> 
+    <li><a href="//www.twitter.com/ttuhsc/" target="_blank" title="Link to twitter">Twitter</a></li> 
+    <li><a href="//www.youtube.com/user/ttuhsctv/" target="_blank" title="Link to YouTube">Youtube</a></li> 
+    <li><a href="https://www.pinterest.com/TTUHSC/" target="_blank" title="Link to Pinterest">Pinterest</a></li> 
+    <li><a href="//instagram.me/ttuhsc" target="_blank" title="Link to Instagram">Instagram</a></li> 
+    <li></li> 
+   </ul> 
+   <div class="copright"> 
+    <p>© 2017 Texas Tech University Health Sciences Center</p> 
+   </div> 
+  </div> 
+ </div> 
+</footer> 
+<p id="demo"></p>
+</body>
+</doc>

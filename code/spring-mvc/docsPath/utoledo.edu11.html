@@ -1,0 +1,406 @@
+<doc>
+<filename>utoledo.edu11.html</filename>
+<url>http://a.omniupdate.utoledo.edu/10?skin=oucampus&account=main&site=www&action=de&path=/index.pcf</url>
+<ip>136.247.83.27</ip>
+<title>Log In - OU Campus</title>
+<body>
+<div id="header"> 
+ <div id="ou-topbar" class="navbar navbar-fixed-top"> 
+  <div class="navbar-inner"> 
+   <div class="container-fluid"> <a tabindex="1" class="brand"><img alt="oucampus logo" style="height:21px;width:96px" height="21" width="96" src="/resources/images/logo-x2.png"></a> 
+    <ul class="nav top-right pull-right"> 
+     <li class="dropdown"><a href="http://support.omniupdate.com" target="_blank"><i class="icon-help"></i> Help</a> 
+      <ul class="dropdown-menu"> 
+       <li><a href="http://support.omniupdate.com" target="_blank"><i class="icon-books"></i> Support</a></li> 
+       <li><a href="http://ocn.omniupdate.com" target="_blank"><i class="icon-library"></i> Community</a></li> 
+       <li><a href="http://feedback.omniupdate.com" target="_blank"><i class="icon-announcement"></i> Feedback</a></li> 
+      </ul> </li> 
+    </ul> 
+   </div><!-- container --> 
+  </div><!-- #navbar-inner --> 
+ </div> 
+ <div id="ou-location"> 
+  <div class="container-fluid"> 
+   <div class="location-breadcrumb">
+     Login 
+   </div> 
+   <div class="site"> <i class="icon-location"></i> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div id="body"> 
+ <div id="login-view" class="container main"> 
+  <div class="pull-left"> 
+   <form id="form-login" action="#"> 
+    <h4>Login</h4> 
+    <div class="login-fieldset"> 
+     <div class="placeholder"> <i class="icon-user-4"></i> <!-- <label for="username">Username</label> --> 
+      <input tabindex="3" type="text" id="username" name="username" placeholder="Username"> 
+     </div> 
+     <div class="placeholder"> <i class="icon-key"></i> <!-- <label for="password">Password</label> --> 
+      <input tabindex="3" type="password" id="password" name="password" placeholder="Password"> 
+      <div style="text-align:right"> <a id="reset-password" tabindex="3">Reset Password</a> 
+      </div> 
+     </div> 
+     <div class="buttons"> <button type="submit" class="btn btn-primary" tabindex="3">Log In</button> 
+     </div> 
+     <div class="login-message alert" style="display:none"></div> 
+    </div> 
+   </form> 
+   <form id="form-chnge"> 
+    <h4>Change Password</h4> 
+    <div class="login-fieldset"> 
+     <p class="intro"> Please enter a new password for user <span class="username"></span> in account <span class="account"></span>. </p> 
+     <div class="placeholder"> <i class="icon-key"></i> <!-- <label for="password1">Enter new password</label> --> 
+      <input tabindex="3" type="password" id="password1" name="password1" placeholder="Enter new password"> 
+     </div> 
+     <div class="placeholder"> <i class="icon-key"></i> <!-- <label for="password2">Confirm password</label> --> 
+      <input tabindex="3" type="password" id="password2" name="password2" placeholder="Confirm password"> 
+     </div> 
+     <div class="buttons"> <button tabindex="3" class="btn cancel" type="button">Cancel</button> <button tabindex="3" class="btn btn-primary" type="submit">Reset</button> 
+     </div> 
+     <div class="login-message alert" style="display:none"></div> 
+    </div> 
+   </form> 
+   <form id="reset-error" class="alert alert-error"></form> 
+   <div id="system-announcements"> 
+    <h5>System Announcements</h5> 
+    <div class="inner"></div> 
+   </div> 
+  </div> 
+  <div id="user-announcements"></div> 
+ </div> 
+ <div id="login-error-wrapper"> 
+  <div id="login-error"> 
+   <p>We're sorry; the system could not log you in.</p> 
+   <p>The authentication server returned the following error message:</p> 
+   <div class="well"> <code id="login-error-msg"></code> 
+   </div> 
+   <p><a href="javascript:location.reload();" id="login-retry-link">Try Again</a></p> 
+  </div> 
+ </div> 
+</div> 
+<div id="modal-reset-password" class="modal"></div> 
+<form id="form-reset" class="form-horizontal" style="display:none"> 
+ <div class="modal-header"> 
+  <h4>Reset Password</h4> 
+ </div> 
+ <div class="modal-body"> 
+  <p style="margin-bottom:20px">Password reset instructions will be emailed to the address entered below.</p> 
+  <div class="control-group"> <label class="control-label" for="rusername">Username</label> 
+   <div class="controls"> 
+    <input tabindex="1" type="text" id="rusername" name="username" placeholder="Username"> 
+   </div> 
+  </div> 
+  <div class="control-group"> <label class="control-label" for="email">Email</label> 
+   <div class="controls"> 
+    <input tabindex="1" type="text" id="email" name="email" placeholder="Email"> 
+   </div> 
+  </div> 
+ </div> 
+ <div class="modal-footer"> <span class="modal-footer-message"></span> <button type="button" tabindex="1" class="btn cancel" data-dismiss="modal">Cancel</button> <button type="submit" tabindex="1" class="btn btn-primary">Submit</button> 
+ </div> 
+</form> 
+<noscript> 
+ <div id="noscript"> 
+  <h1><i class="icon-warning"></i> Javascript Disabled</h1> 
+  <p>OU Campus requires Javascript. Please enable Javascript in your browser settings.</p> 
+ </div> 
+</noscript> 
+<script type="text/javascript" id="login-page-script">
+	$(function () {
+		if (window.loginError) {
+			document.querySelector('.location-breadcrumb').textContent = 'Login Error';
+			document.querySelector('#login-error-msg').textContent = window.loginError;
+			// document.querySelector('#logout-link').href = window.logoutUrl;
+			document.querySelector('#login-error-wrapper').style.display = 'block';
+			return;
+		}
+		var baseHref = location.protocol + '//' + location.host + location.pathname;
+		var hashparts = location.hash.split(/\?|&/)[0].replace("#","").split("/");
+		var query = location.href.split('?')[1];
+		var pairs = query ? query.split('&') : [];
+		var params = {};
+		var loginWaiter;
+		
+		var submitLogin = function (evt) {
+			evt && evt.preventDefault();
+			if ($('#username').val() == '') {
+				var errorMsg = 'Please enter your username.';
+				$('#form-login .login-message').removeClass('alert-success').addClass("alert-error").html(errorMsg).show();
+				$('#username').focus().one('keydown change', function () {
+					$('#form-login .login-message').empty().hide();
+				});
+				return false;
+			}
+			if ($('#password').val() == '') {
+				var errorMsg = 'Please enter your password.';
+				$('#form-login .login-message').removeClass('alert-success').addClass("alert-error").html(errorMsg).show();
+				$('#password').focus().one('keydown change', function () {
+					$('#form-login .login-message').empty().hide();
+				});
+				return false;
+			}
+			$('input, button').attr('disabled', true);
+			loginWaiter = setTimeout(function () {
+				$('#login-view').addClass('waiting');
+			}, 1500);
+			$.ajax({
+				type: "POST",
+				url: "/authentication/login",
+				data: {
+					skin     : hashparts[0],
+					account  : hashparts[1],
+					username : $("#username").val(),
+					password : $("#password").val()
+				},
+				success: function(data) {
+					clearTimeout(loginWaiter);
+					$('#login-view').removeClass('waiting');
+					var hash = window.location.hash;
+					var hashparts = hash.replace("#","").split("/");
+					if (hashparts[3] == "setup") {
+						window.location.href = "https://" + window.location.host + "/10/" + hash;
+						window.location.reload();
+						return;
+					}
+					window.location.href = "http://" + window.location.host + "/10/" + hash;
+				},
+				error: function(xhr) {
+					var errorMsg = '';
+					try {
+						errorMsg = JSON.parse(xhr.responseText).error;
+					} catch(e) {
+						errorMsg = 'Please specify the skin, account, and site in the URL.';
+					}
+					$("#form-login .login-message").removeClass('alert-success').addClass("alert-error").html(errorMsg).show();
+					$('input, button').attr('disabled', false);
+					clearTimeout(loginWaiter);
+					$('#login-view').removeClass('waiting');
+				}
+			});
+			return false;
+		};
+		var displayAnnouncements = function (data) {
+			if (data.announcements) {
+				$('#system-announcements').show().children('.inner').empty().html(data.announcements);
+			}
+			if (!data.announcement_url) {
+				data.announcement_url = 'https://omniupdate.com/announcements/v10_login.php';
+			}
+			var $iframe = $('<iframe id="user-announcements-iframe" src="' + data.announcement_url + '"></iframe');
+			$(window).on('resize', resizeAnnouncements);
+			resizeAnnouncements();
+			$('#user-announcements').empty().append($iframe);
+		};
+		var resizeAnnouncements = function () {
+			var ww = $(window).width();
+			var $view = $('#login-view');
+			var $ua = $('#user-announcements');
+			$ua.height($(window).height() - $ua.offset().top - 3);
+		};
+		var requestPasswordReset = function (evt) {
+			evt.preventDefault();
+			$form = $(evt.currentTarget);
+			$message = $form.find('.modal-footer-message');
+			if ($('#rusername').val() == '') {
+				var errorMsg = 'Please enter your username.';
+				$message.removeClass('text-success').addClass("text-error").html(errorMsg);
+				$('#rusername').focus().one('keydown change', function () {
+					$message.removeClass('text-error').empty();
+				});
+				return false;
+			}
+			if ($('#email').val() == '') {
+				var errorMsg = 'Please enter your email address.';
+				$message.removeClass('text-success').addClass("text-error").html(errorMsg);
+				$('#rusername').focus().one('keydown change', function () {
+					$message.removeClass('text-error').empty();
+				});
+				return false;
+			}
+			window.$resetFormClone = $('#modal-reset-password').clone(true);
+			$.ajax({
+				type : 'POST',
+				url  : '/authentication/reset',
+				data : {
+					skin     : hashparts[0],
+					account  : hashparts[1],
+					user     : $("#rusername").val(),
+					email    : $("#email").val(),
+					callback : baseHref + location.hash.split('?')[0]
+				},
+				success : function (data) {
+					var $modal = $('#modal-reset-password');
+					var notice = '<p>Your request was successful.</p>' +
+						'<p>You will receive an email containing a link to reset your password.</p>';
+					$modal.find('.modal-body').html(notice);
+					$modal.find('.modal-footer-message').removeClass("text-error").empty();
+					$modal.find('.btn-primary').remove();
+					$modal.find('button.cancel').text('Close').focus();
+				},
+				error : function (xhr) {
+					var errorMsg = '';
+					try {
+						errorMsg = JSON.parse(xhr.responseText).error;
+					} catch(e) {
+						errorMsg = 'Please specify the skin, account, and site in the URL.';
+					}
+					$("#form-reset .modal-footer-message").removeClass('text-success').addClass("text-error").html(errorMsg).show();
+				}
+			});
+		};
+		
+		for (var i = 0; i < pairs.length; i++) {
+			var pair = pairs[i].split('=');
+			params[pair[0]] = pair[1];
+		}
+		
+		// display site in upper right
+		$("div.site").text(hashparts[2] || "");
+		
+		if (params.hash) {
+			$('form').hide();
+			$.ajax({
+				type : 'GET',
+				url  : '/authentication/hash_info',
+				data : { hash: params.hash },
+				success : function (data) {
+					// OU.log('reset info:', data);
+					window.username = data.user;
+					$('#form-chnge').show().find('#password1').focus();
+					$('#form-chnge').find('span.username').text(data.user);
+					$('#form-chnge').find('span.account').text(data.account);
+					$('#form-chnge button.cancel').one('click', function () {
+						$('form').hide();
+						$('#form-login').show();
+						$("#username").focus().trigger('keyup');
+						location.hash = location.hash.split('?')[0];
+					});
+				},
+				error : function (xhr) {
+					var errorMsg = "<p>We're sorry; there was an error retrieving information about your password reset.</p>";
+					try { errorMsg += '<p>' + JSON.parse(xhr.responseText).error + '</p>'; } catch(e) {}
+					errorMsg += "<p>Please contact OmniUpdate Customer Support for assistance.</p>" +
+						'<p><a href="javascript:;" class="login-return-link">Return to login form</a></p>';
+					$("#reset-error").html(errorMsg).show();
+					$('.login-return-link').on('click', function () {
+						location.hash = location.hash.split('?')[0];
+						location.reload();
+					});
+				}
+			});
+		} else {
+			$('#form-login').show();
+		}
+		
+		// show any system announcements
+		if (window.announcements != undefined) {
+			displayAnnouncements(window);
+		} else {
+			var baseHref = location.protocol + '//' + location.host + location.pathname;
+			var hashparts = location.hash.split('?')[0].replace("#","").split("/");
+			$.ajax({
+				type : "GET",
+				url : "/authentication/login_info?" + $.param({
+					skin     : hashparts[0],
+					account  : hashparts[1],
+					site     : hashparts[2],
+					callback : window.location.href,
+					error    : window.location.href
+				}),
+				success : displayAnnouncements,
+				error : function () { displayAnnouncements(window) }
+			});
+		}
+		
+		// consistent cross browser placeholder behavior
+		$('input[type="text"], input[type="password"]').placeholder();
+		
+		// make bootstrap dropdowns show on hover
+		$("li.dropdown")
+			.on("mouseenter", function() { $(this).addClass("open"); })
+			.on("mouseleave", function() { $(this).removeClass("open"); })
+		
+		$("#form-login").on("submit", submitLogin);
+		$('#form-reset').on('submit', requestPasswordReset);
+		
+		$('#form-chnge').on('submit', function () {
+			if ($('#password1').val() == '') {
+				var errorMsg = 'Please enter a new password.';
+				$('#form-chnge .login-message').removeClass('alert-success').addClass("alert-error").html(errorMsg).show();
+				$('#password1').focus().one('keydown change', function () {
+					$('#form-chnge .login-message').empty().hide();
+				});
+				return false;
+			}
+			if ($('#password1').val() != $('#password2').val()) {
+				var errorMsg = 'Please enter the same password in both fields.';
+				$('#form-chnge .login-message').removeClass('alert-success').addClass("alert-error").html(errorMsg).show();
+				$('#password2').focus().select();
+				$('#password1, #password2').one('keydown change', function () {
+					$('#form-chnge .login-message').empty().hide();
+				});
+				return false;
+			}
+			$.ajax({
+				type : "POST",
+				url  : "/authentication/password_reset",
+				data : {
+					hash             : params.hash,
+					password         : $('#password1').val(),
+					password_confirm : $('#password2').val()
+				},
+				success : function (data) {
+					$('form').hide();
+					if (data.success) {
+						location.hash = location.hash.split('?')[0];
+						$('#form-login').show();
+						$('#username').val(window.username).trigger('keyup');
+						$("#password").focus();
+						var message = 'Your password has been reset successfully.';
+						$("#form-login .login-message").removeClass('alert-error').addClass('alert-success').html(message).show();
+					} else {
+						var errorMsg = "We're sorry; there was an error setting your password. ";
+						data.error && (errorMsg += data.error);
+						errorMsg += "<br><br>Please contact OmniUpdate Customer Support for assistance.";
+						$("#reset-error").html(errorMsg).show();
+					}
+				},
+				error : function (xhr) {
+					$('form').hide();
+					var errorMsg = "We're sorry; there was an error setting your password. ";
+					try { errorMsg += JSON.parse(xhr.responseText).error; } catch(e) {}
+					errorMsg += "<br><br>Please contact OmniUpdate Customer Support for assistance.";
+					$("#reset-error").html(errorMsg).show();
+				}
+			});
+			return false;
+		});
+		
+		$('#reset-password').on('click', function () {
+			$('.login-message').empty().hide();
+			$('#modal-reset-password').empty().append($('#form-reset').clone(true).show());
+			$('#modal-reset-password').one('shown', function () {
+				$('#modal-reset-password').find('input[type="text"]').placeholder();
+				if ($('#rusername').val()) {
+					$('#email').focus();
+				} else {
+					$('#rusername').focus();
+				}
+			}).modal();
+		});
+		
+		$('#cancel-reset').on('click', function () {
+			$('.login-message').empty().hide();
+			$('form').hide();
+			$('#form-login').show();
+			$("#username").focus().trigger('keyup');
+		});
+		
+		$("#username").focus();
+	});
+</script>
+</body>
+</doc>

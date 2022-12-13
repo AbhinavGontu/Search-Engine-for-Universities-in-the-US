@@ -1,0 +1,1027 @@
+<doc>
+<filename>pace.edu2.html</filename>
+<url>http://library.pace.edu</url>
+<ip>198.105.44.117</ip>
+<title>Home - Library at Pace University</title>
+<body>
+<div id="libchat_38fbcba9b03225d7a66b9af0de57d7d9"></div> 
+<link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/750/include/lib-core-v2.0.css"> 
+<link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/750/include/lib-home-v2.0spa1gm.css"> 
+<style>
+</style> <!-- START: External Script Libraries --> 
+<script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/750/include/x-tag-core.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script> 
+<script type="text/javascript" src="//s3.amazonaws.com/libapps/sites/750/include/date.js"></script> 
+<script type="text/javascript" src="//s3.amazonaws.com/libapps/sites/750/include/jquery.pseudo.min.js"></script> 
+<script type="text/javascript" src="//s3.amazonaws.com/libapps/sites/750/include/modernizr_custom.min.js"></script> 
+<script type="text/javascript" src="//s3.amazonaws.com/libapps/sites/750/include/xml2json.js"></script><!-- ??? --> <!--  END: External Script Libraries --> <!-- <script type="text/javascript" src="//s3.amazonaws.com/libapps/sites/750/include/pacelib_core.home2.1.js"></script> --> <!-- <script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/750/include/bookaroo.core.v1.1.1.js"></script> --> 
+<script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/750/include/Bookaroo.core.v1.1.4.js"></script> 
+<script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/750/include/bookaroo.home.v0.1.1.js"></script> 
+<script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/750/include/bookaroo.springshare.v0.0.2.js"></script> 
+<script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/750/include/bookaroo.searchplus-v0.0.2.js"></script> 
+<script>
+    Bookaroo.$(document).ready(function() {
+      Bookaroo.start({debug:true});
+    });
+</script> 
+<script type="text/javascript">
+<!--
+if (screen.width <= 800) {
+window.location = "http://libguides.pace.edu/mobile1";
+}
+//-->
+</script> <!-- END: CUSTOM HEAD JS/CSS --> 
+<script>var system = {"name":"Library"};
+            springSpace.publicObj = new springSpace.public.Public({
+                constant: {
+                    PROCESSING: {},
+                    CONTENT: {}
+                },
+                system_name: system.name,
+                customer: {"name":"Pace University"}
+            })
+            </script><!-- get_lg_session_status.twig --> 
+<script>
+    springSpace.Session.CONST.ACTION_AUTH_SET_LG_SESSION_COOKIE = 750;
+
+    
+    callGetLGSessionStatus = function () {
+        springSpace.Session.auth_reload_script = window.location.href;
+        springSpace.Session.getLGSessionStatus({
+            url: "https://pace.libapps.com/libapps/login_process.php",
+            data: {
+                action: 5,
+                app_id: 1,
+                domain: "libguides.pace.edu",
+                site_id: 750,
+                auth_reload: 0
+            }
+        })
+    }
+
+    jQuery(
+        function () {
+                                    callGetLGSessionStatus();
+                    }
+    );
+    </script> <!-- !get_lg_session_status.twig --> 
+<script>
+var springStats = springStats || {};
+springStats.saConfig = springStats.saConfig || {
+    site_id: 750,
+    tracking_parameters: {"_st_site_id":750},
+    tracking_server_host: "libguides-proc.springyaws.com"
+};
+</script> 
+<script async src="/web/js/sa.min.js?3116"></script> 
+<script>
+                    springSpace.Common = springSpace.Common || { };
+                    springSpace.Common.constant = {
+                        PROCESSING: {
+                            ACTION_DISPLAY_POLL: 159
+                        }
+                    };
+                    springSpace.publicObj.constant.PROCESSING.ACTION_LOAD_GUIDE_LIST = 170;
+                    springSpace.publicObj.constant.CONTENT.HOME_GUIDES_TITLE = "Guides";
+                    springSpace.publicObj.homeNavButtons = {"170":"ALL GUIDES","171":"BY GROUP","172":"BY SUBJECT","173":"BY TYPE","174":"BY OWNER"};
+                    springSpace.publicObj.getCountType=function(action) {
+                        var count_type = "";
+                        switch (action) {
+                            case 176:
+                                count_type = "guidetype";
+                                break;
+                            case 177:
+                                count_type = "group";
+                                break;
+                            case 178:
+                                count_type = "owner";
+                                break;
+                        }
+                        return count_type;
+                    };
+                    
+                    springSpace.publicObj.loadGuideCounts=function(config) {
+                        jQuery.ajax({
+                            url: "/index_process.php?action=" + config.action + "&site_id=" + config.site_id + 
+                            (config.group_id ? "&group_id=" + config.group_id : ""),
+                            type: "GET",
+                            dataType: "json",
+                            success: function(response, textStatus, jqXHR) {
+                                if ( response.errCode == 200 ) {
+                                    var count_type = springSpace.publicObj.getCountType(config.action);
+                                    jQuery.each(
+                                        response.data, 
+                                        function(idx, elt) {
+                                            jQuery("#s-lg-index-" + count_type + "-" + elt.id).show();
+                                            jQuery("#s-lg-index-" + count_type + "-count-" + elt.id).html(elt.count);
+                                        }
+                                    );
+                                } else {
+                                    springSpace.UI.notify({mode: "custom", msg: "Error loading guide counts."});
+                                }
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                springSpace.UI.notify({mode: "custom", msg: "Error loading guide counts."});
+                            }
+                        });
+                    }
+                    
+                    var button_data = {"code":"g"};
+
+                    springSpace.homepage = {
+                        default_list_order: "a",
+                        current_list: 170,
+                        current_btn_id: "s-lg-index-all-btn",
+                        current_num_cols: 1,
+                        current_type_label: "",
+                        current_button_code: button_data.code,
+                        group_id: 6678,
+				        historyEdited: false,
+                        initPushState: function() {
+                            if (window.history && history.pushState) {
+                                jQuery(window).bind("popstate", function(e) {
+                                    // Don't reload list if this is the result of a skip link hash update.
+                                    if ( springSpace.homepage.historyEdited ) {
+                                        // location.search will return URL encoded values which will end up causing double-encoding when jQuery sends the loadAzList request.
+                                        var button_code = springSpace.Util.getQSParam({name: "b", qs: location.search});
+                                        var guide_display_code = springSpace.Util.getQSParam({name: "d", qs: location.search});
+                                        
+                                        // If there is no button code, go back to the default button
+                                        if (button_code === "") {
+                                            button_code = "g";
+                                        }
+                                        
+                                        springSpace.publicObj.loadHomepageList({
+                                            nav: "back",
+                                            action: springSpace.homepage.mapQSIdToActionId(button_code),
+                                            group_id: springSpace.homepage.group_id,
+                                            order: springSpace.homepage.mapQSIdToGuideSortId(guide_display_code),
+                                            num_cols: 1,
+                                            elt_id: "s-lg-index-list",
+                                            button_id: springSpace.homepage.mapQSIdToButtonEltId(button_code),
+                                            type_label: "Guides",
+                                            display_sort: ( springSpace.homepage.mapQSIdToButtonEltId(button_code) === "s-lg-index-all-btn")
+                                        });
+                                    }
+                                });
+                            }
+                        },
+                        mapQSIdToButtonEltId: function(qs_id) {
+                            var button_ids = {
+                                "g": "s-lg-index-all-btn",
+                                "s": "s-lg-index-subject-btn",
+                                "t": "s-lg-index-guidetype-btn",
+                                "o": "s-lg-index-owner-btn",
+                                "p": "s-lg-index-group-btn",
+                            };
+                            springSpace.Util.setObjProp(qs_id, "", button_ids);
+                            
+                            return button_ids[qs_id];
+                        },
+                        mapQSIdToActionId: function(qs_id) {
+                            var button_ids = {
+                                "g": "170",
+                                "s": "172",
+                                "t": "173",
+                                "o": "174",
+                                "p": "171",
+                            };
+                            springSpace.Util.setObjProp(qs_id, "", button_ids);
+                            
+                            return button_ids[qs_id];
+                        },
+                        mapButtonEltIdToQSId: function(btn_elt_id) {
+                            var button_ids = {
+                                "s-lg-index-all-btn": "g",
+                                "s-lg-index-subject-btn": "s",
+                                "s-lg-index-guidetype-btn": "t",
+                                "s-lg-index-owner-btn": "o",
+                                "s-lg-index-group-btn": "p",
+                            };
+                            springSpace.Util.setObjProp(btn_elt_id, "", button_ids);
+                            
+                            return button_ids[btn_elt_id];
+                        },
+                        mapQSIdToGuideSortId: function(qs_id) {
+                            var sort_ids = {
+                                "a": "0",
+                                "r": "2",
+                                "p": "3"
+                            };
+                            springSpace.Util.setObjProp(qs_id, "", sort_ids);
+                            
+                            return sort_ids[qs_id];
+                        },
+                        mapGuideSortIdToQSId: function(sort_id) {
+                            var sort_ids = {
+                                "0": "a",
+                                "2": "r",
+                                "3": "p"
+                            };
+                            springSpace.Util.setObjProp(sort_id, "", sort_ids);
+                            
+                            return sort_ids[sort_id];
+                        },
+                        processPushState: function(config) {
+                            if (history.pushState) {
+                                // Only call pushState if this is a call to navigate forward (link, etc.), not back or initial load.
+                                if ( config.nav !== "back" && config.nav !== "init" ) {
+                                    // Only add display code to URL if on the guides button.
+                                    var qs_config = (
+                                        springSpace.homepage.current_button_code === "g" ?
+                                        { button_code: springSpace.homepage.current_button_code,
+                                          guide_display_code: springSpace.homepage.default_list_order } : 
+                                        { button_code: springSpace.homepage.current_button_code }
+                                    );
+                                    
+                                    var url = location.pathname + springSpace.homepage.buildQS(qs_config);
+                                    history.pushState({}, null, url);
+                                }
+                            }
+                            
+                            // Set flag to indicate history has been updated.
+                            springSpace.homepage.historyEdited = true;				
+                        },
+                        buildQS: function(config) {
+                            var params = {
+                                b: springSpace.Util.setProp(config.button_code, ""),
+                                d: springSpace.Util.setProp(config.guide_display_code, "")
+                            };
+                            
+                            // If on the default button, do not add the code
+                            if (params.b === "g") {
+                                return "";
+                            }
+
+                            // Add group_id to query string if supplied.
+                            if (springSpace.homepage.group_id) {
+                                params.group_id = springSpace.homepage.group_id;                            
+                            } 
+                            
+                            var qs_params = [];
+                            
+                            jQuery.each(params, function(idx, val) {
+                                if ( val !== "" && val !== "0") { 
+                                    qs_params.push(idx + "=" + encodeURIComponent(val));
+                                }
+                            });
+                    
+                            return ( qs_params.length == 0 ? "" : "?" + qs_params.join("&") );
+                        }
+                    };
+                    
+                    jQuery(function() {
+                        // Initialize pushState handling.
+                        springSpace.homepage.initPushState();
+                        
+						// Clear out the search term from previous search/back button.
+						jQuery("#s-lg-guide-search").val("");
+						
+						// Load guide list.
+						springSpace.publicObj.loadHomepageList({
+                            action: springSpace.homepage.current_list,
+                            group_id: "6678",
+                            order: springSpace.homepage.mapQSIdToGuideSortId(springSpace.homepage.default_list_order),
+                            num_cols: 1,
+                            elt_id: "s-lg-index-list",
+                            button_id: springSpace.homepage.current_btn_id,
+                            type_label: "Guides",
+                            display_sort: ( springSpace.homepage.current_btn_id === "s-lg-index-all-btn"),
+                            nav: "init"
+                        });
+
+                        // Select default dropdown option.
+                        jQuery("#s-lg-guide-order > option[value=" + springSpace.homepage.mapQSIdToGuideSortId(springSpace.homepage.default_list_order) + "]").prop("selected",true);
+
+                        // Load guide type counts.
+                        springSpace.publicObj.loadGuideCounts({
+                            action: 176,
+                            site_id: 750,
+                            group_id: 6678
+                        });
+
+                        // Load group guides counts.
+                        springSpace.publicObj.loadGuideCounts({
+                            action: 177,
+                            site_id: 750
+                        });
+
+						   // Load owner group counts.
+                        springSpace.publicObj.loadGuideCounts({
+                            action: 178,
+                            site_id: 750,
+							   group_id: 6678
+                        }	);
+                    });
+                    jQuery(function() {jQuery(window).one('load', function() {springSpace.springTrack.trackPage({_st_type_id: '11',_st_group_id: '6678'});});
+                        });
+                </script>  <a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to main content</a> <!-- BEGIN: Page Header --> 
+<div class="container" id="SS_paceGlobalSearchForm_Container"> 
+ <div class="row center-block"> 
+  <div class=""> 
+   <div class="l-dropdown-search search-open" id="SS_paceGlobalSearchForm"> 
+    <form action="https://www.pace.edu/search/google" class="search-form" id="search-form" method="post" target="_blank"> 
+     <div class="container-fluid"> 
+      <div class="row"> 
+       <div class="col-xs-12 bs-dynamic-col"> 
+        <div class="form-inline"> 
+         <div class="form-group has-success has-feedback"> <label class="sr-only" for="edit-keys">Search Pace For:</label> 
+          <div class="input-group"> 
+           <input class="form-control search-field" id="edit-keys" max-length="255" name="keys" placeholder="search" size="40" type="text"> <span class="glyphicon glyphicon-search input-group-addon"></span> 
+           <input name="form_build_id" type="hidden" value="form-SMESk7leQ13Or2gqmtcvSofqIKtp-chuaSqqwymPsAg"> 
+           <input name="form_token" type="hidden" value="3V0FFhFNcybT479erh-we-b2eNyAVWNylT65CWX3fek"> 
+           <input name="form_id" type="hidden" value="search_form"> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="container-fluid" id="SS_paceGlobalHeader_Container"> 
+ <div class="row"> 
+  <div class="col-xs-12 col-lg-10 col-lg-offset-1 bs-dynamic-col"> 
+   <div class="row" id="SS_PaceGlobalNav"> 
+    <div class="col-xs-12 visible-xs-block visible-sm-block visible-md-block" id="SS_paceGlobalLogo"> <a href="http://www.pace.edu"> <img src="https://www.pace.edu/sites/all/themes/zen/paceu/images/logo.gif"> </a> 
+    </div> 
+    <div class="col-lg-3 visible-lg-block" id="SS_paceGlobalLogo"> <a href="http://www.pace.edu"> <img src="https://libapps.s3.amazonaws.com/customers/739/images/logo.png"> </a> 
+    </div> 
+    <div class="col-xs-12 col-lg-9 nav-tiers"> 
+     <div class="row tier1"> 
+      <div class="col-xs-12 col-lg-2 text-left locations"> 
+       <ul class="menu"> 
+        <li class="t_lblue"> <span class="visible-xs-block"></span><a href="http://www.pace.edu/nyc" target="_blank">NYC CAMPUS</a> </li> 
+        <li class="t_green"> <span class="visible-xs-block"></span><a href="http://www.pace.edu/westchester" target="_blank">WESTCHESTER CAMPUS</a> </li> 
+        <li class="t_brown"> <span class="visible-xs-block"></span><a href="http://law.pace.edu" target="_blank">LAW SCHOOL</a> </li> 
+       </ul> 
+      </div> 
+      <div class="col-xs-12 col-lg-10 tier1-links"> 
+       <div class="row"> 
+        <div class="col-xs-12"> 
+         <ul class="text-center pull-right"> 
+          <li><a href="http://www.pace.edu/about-us/all-about-pace" target="_blank">About Pace</a> </li> 
+          <li><a href="http://www.pace.edu/news" target="_blank">News</a> </li> 
+          <li><a href="http://webevents.pace.edu/" target="_blank">Events</a> </li> 
+          <li><a href="http://www.pace.edu/colleges-and-schools" target="_blank">Schools</a> </li> 
+          <li><a href="http://www.pace.edu/president" target="_blank">Pace's New President</a> </li> 
+          <li><a href="http://whitepages.pace.edu/" target="_blank">Directories</a> </li> 
+          <li><a href="http://www.pace.edu/a-z" target="_blank">A to Z</a> </li> 
+          <li id="SS_paceGlobal_openSearch"> <a href="http://www.pace.edu/search" target="_blank"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> </a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="row tier2"> 
+      <div class="col-xs-12"> 
+       <div class="row"> 
+        <div class="globNav_tier2_node1"> <a href="http://www.pace.edu/pace-path" target="_blank">PACE PATH</a> 
+        </div> 
+        <div class="globNav_tier2_node2"> <a href="http://www.pace.edu/academics" target="_blank">ACADEMICS AT PACE</a> 
+        </div> 
+        <div class="globNav_tier2_node3"> <a href="http://www.pace.edu/campus-tour" target="_blank">LIFE ON CAMPUS</a> 
+        </div> 
+        <div class="globNav_tier2_node4"> <a href="http://www.pace.edu/career-preparation" target="_blank">CAREER PREPARATION</a> 
+        </div> 
+        <div class="globNav_tier2_node5"> <a href="http://www.pace.edu/admissions-and-aid" target="_blank">ADMISSION &amp; AID</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<nav id="SS_paceGlobalMobileHeader_Nav"> 
+ <div class="container"> 
+  <div class="navToggle_Container"> <a class="text-center" id="toggleMobileNav_btn" type="button"> <span class="sr-only">Toggle navigation</span> <i class="glyphicon glyphicon-menu-hamburger"></i> </a> 
+  </div> 
+  <div class="navBrand_Container text-center"> <a href="http://www.pace.edu"> <img class="" src="https://www.pace.edu/sites/all/themes/pace7r/images/logo.png" alt="Pace University" title="Pace University"> </a> 
+  </div> 
+ </div> 
+ <div class="container"> 
+  <div class="paceMobileNavbar_subNav" id="paceMobileNavbar-collapse"> 
+   <div class="container"> 
+    <h5><a name="UniversityMenu">MENU</a> </h5> 
+    <div class="col-xs-12"> 
+     <ul class="list-unstyled"> 
+      <li> <h5> <span><a href="http://www.pace.edu/academics" target="_blank">ACADEMICS AT PACE</a> </span> </h5> </li> 
+      <li> <h5> <span><a href="http://www.pace.edu/campus-tour" target="_blank">LIFE ON CAMPUS</a> </span> </h5> </li> 
+      <li> <h5> <span><a href="http://www.pace.edu/career-preparation" target="_blank">CAREER PREPARATION</a> </span> </h5> </li> 
+      <li> <h5> <span><a href="http://www.pace.edu/admissions-and-aid" target="_blank">ADMISSION &amp; AID</a> </span> </h5> </li> 
+     </ul> 
+    </div> 
+    <div class="col-xs-12" id="SS_paceGlobalMobileSearchForm"> 
+     <form action="https://www.pace.edu/search/google" class="search-form" id="search-form" method="post" target="_blank"> 
+      <div class="container-fluid"> 
+       <div class="row"> 
+        <div class="col-xs-12 bs-dynamic-col"> 
+         <div class="form-inline"> 
+          <div class="form-group has-success has-feedback"> <label class="sr-only" for="edit-keys">Search Pace University For:</label> 
+           <div class="input-group"> 
+            <input class="form-control search-field" id="edit-keys" max-length="255" name="keys" placeholder="Search Pace University for..." size="40" type="text"> <span class="glyphicon glyphicon-search input-group-addon"></span> 
+            <input name="form_build_id" type="hidden" value="form-SMESk7leQ13Or2gqmtcvSofqIKtp-chuaSqqwymPsAg"> 
+            <input name="form_token" type="hidden" value="3V0FFhFNcybT479erh-we-b2eNyAVWNylT65CWX3fek"> 
+            <input name="form_id" type="hidden" value="search_form"> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </form> 
+    </div> 
+    <div class="col-xs-12 FindItFast"> 
+     <h5>FIND IT FAST</h5> 
+     <ul class="list-unstyled"> 
+      <li><a href="http://www.pace.edu/a-z" target="_blank">A TO Z</a> </li> 
+      <li><a href="http://www.pace.edu/news" target="_blank">NEWS</a> </li> 
+      <li><a href="http://www.pace.edu/social" target="_blank">SOCIAL MEDIA CENTER</a> </li> 
+      <li><a href="http://www.pace.edu/admission-aid/undergraduate-admission/freshman/new-york-city-campus" target="_blank">VISIT PACE</a> </li> 
+      <li><a href="http://www.pace.edu/admissions-aid/request-information" target="_blank">REQUEST INFORMATION</a> </li> 
+      <li><a href="http://www.pace.edu/admissions-aid/apply-now" target="_blank">APPLY NOW</a> </li> 
+      <li><a href="http://www.pace.edu/colleges-and-schools" target="_blank">SCHOOLS</a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</nav> <!-- END: Page Header --> <!-- BEGIN: content --> 
+<div class="container-fluid lib-content-body"> <!-- START: GLOBAL MODAL --> 
+ <div id="s-lg-box-15008780-container" class="s-lib-box-container"> 
+  <div id="s-lg-box-15008780" class="s-lib-box s-lib-box-std"> 
+   <h2 class="s-lib-box-title">MODAL BASE CODE </h2> 
+   <div id="s-lg-box-collapse-15008780"> 
+    <div class="s-lib-box-content"> 
+     <div id="s-lg-content-32658254" class="  clearfix"> 
+      <div class="modal fade" name="lib-modal" tabindex="-1" role="dialog"> 
+       <div class="modal-dialog" role="document"> 
+        <div class="modal-content"> 
+         <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+          <h4 class="modal-title">Modal title</h4> 
+         </div> 
+         <div class="modal-body"> 
+          <p>One fine body…</p> 
+         </div> 
+         <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button> 
+         </div> 
+        </div><!-- /.modal-content --> 
+       </div><!-- /.modal-dialog --> 
+      </div><!-- /.modal --> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> <!--   END: GLOBAL MODAL --> <!-- BEGIN: PAGE HEADING --> 
+ <div class="lib-page-header"> <springshare-box data-guideid="670380" data-boxid="14986896" data-mapid="17687386" data-configid="1496663586935" id="s-lg-widget-1496663586935"></springshare-box> 
+ </div> <!--  END: PAGE HEADING --> <!-- START: HOME HERO BLOCK ==> SEARCH WIDGET + EVENT SHOWCASE + Q  --> <!--   END: HOME HERO BLOCK  --> <!-- BEGIN: Nav Bar --> 
+ <div id="s-lib-public-nav" class="container s-lib-side-borders"> 
+ </div> <!-- END: Nav Bar --> <!-- START: HOME CONTENT CONTAINER --> 
+ <div class="lib-home-container row"> 
+  <div class="lib-content-section col-xs-12 col-lg-10 col-lg-offset-1"> 
+   <div class="lib-jumbotron bg_pace-Blue"> 
+    <div class="row"> <!-- START: SEARCHPLUS --> 
+     <div class="tier1-feature feature-left col-xs-12 col-md-9"> 
+      <div class="feature-box searchPlus"> <springshare-box class="" data-guideid="670380" data-boxid="14791203" data-mapid="17429775" data-configid="1495197993174" id="s-lg-widget-1495197993174"></springshare-box> 
+      </div> 
+     </div> <!--   END: SEARCHPLUS --> <!-- START: QUICKLINKS --> 
+     <div class="tier1-feature feature-right col-xs-12 col-md-3"> 
+      <div class="feature-box quickLinks"> <springshare-box class="" data-guideid="670380" data-boxid="14792976" data-mapid="17431842" data-configid="1495212582706" id="s-lg-widget-1495212582706"></springshare-box> 
+      </div> 
+     </div> <!--   END: QUICKLINKS --> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+ <div class="lib-home-container row"> 
+  <div class="lib-content-section col-xs-12 col-lg-10 col-lg-offset-1"> 
+   <div class="row"> <!-- START: LIBRARY HOURS --> 
+    <div class="col-xs-12 col-sm-6 col-md-3"> 
+     <div class="feature-box todays-hours"> <springshare-box class="" data-guideid="670380" data-boxid="14814379" data-mapid="17450704" data-configid="1495466727184" id="s-lg-widget-1495466727184"></springshare-box> 
+     </div> 
+    </div> <!--    END: LIBRARY HOURS --> 
+    <div class="col-xs-12 visible-xs-block clearfix">
+      &nbsp; 
+    </div> <!-- START: ASK-A-LIBRARIAN --> 
+    <div class="col-xs-12 col-sm-6 col-md-3 col-md-push-6"> 
+     <div class="feature-box ask-a-librarian"> 
+      <div id="s-lg-box-15009767-container" class="s-lib-box-container"> 
+       <div id="s-lg-box-15009767" class="s-lib-box s-lib-box-std"> 
+        <h2 class="s-lib-box-title">AAL - Feature Box - v2.1.0 </h2> 
+        <div id="s-lg-box-collapse-15009767"> 
+         <div class="s-lib-box-content"> 
+          <div id="s-lg-content-32660171" class="  clearfix"> 
+           <style media="screen">
+  #libchat_5b7ce2544da2aa7b550704686e74163f button {
+    display: inline-block;
+    padding: 0 .5em;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    background-color: rgb(33, 66, 119);
+    color: rgb(255, 255, 255);
+    font-size: .90em;
+    width: 100%;
+  }
+</style> 
+           <div class="col-xs-12"> 
+            <div class="row"> 
+             <div class="lib-aal-image-container"> <a href="https://asklibrary.pace.edu/"><img class="img-responsive center-block" src="https://s3.amazonaws.com/libapps/customers/739/images/ask-a-librarian_sm.png" border="0"></a> 
+             </div> 
+            </div> 
+            <div class="row"> 
+             <div id="libchat_5b7ce2544da2aa7b550704686e74163f" class="lib-aal-button-container"></div> 
+             <script type="text/javascript" src="//v2.libanswers.com/load_chat.php?hash=5b7ce2544da2aa7b550704686e74163f"></script> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> <!-- END: ASK-A-LIBRARIAN --> 
+    <div class="col-xs-12 visible-xs-block clearfix">
+      &nbsp; 
+    </div> <!--  START: EVENTS CAROUSEL  --> 
+    <div class="col-xs-12 col-md-6 col-md-pull-3"> 
+     <div class="row pacelib_widget block-center" id="widget_eventCarousel"> 
+      <div id="s-lg-box-14875349-container" class="s-lib-box-container"> 
+       <div id="s-lg-box-14875349" class="s-lib-box s-lib-box-std"> 
+        <h2 class="s-lib-box-title">media-carousel-controller-ver-2.1.1 </h2> 
+        <div id="s-lg-box-collapse-14875349"> 
+         <div class="s-lib-box-content"> 
+          <div id="s-lg-content-32352594" class="  clearfix"> 
+           <script type="text-template" id="pacelib-carousel-home-template">
+<!-- Indicators -->
+  <ol class="carousel-indicators">
+  <% var itemCount = _.size(items); for(var i = 0; i < itemCount; i++) { %>
+    <li data-target="#pacelib-carousel-home" data-slide-to="<%= i %>" class="<% if ( i === 0 ) { %>active<% } %>"</li>
+  <% }; %>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <% var showCaptionDate = false %>
+  <div class="carousel-inner" role="listbox">
+    <% _.each( items, function( item, _itemIDX ) { %>
+    <div class="item<% if( _itemIDX == 0 ) { %> active<% } %>">
+      <% if( _.isNull(item.url) === false ) { %><a href="<%= item.url %>" target="_blank"><% } %><img src="<%= item.image.src %>" alt="<% if( item.image.alt.length == 0) {%>Image for <%= item.title %><% } else { %><%= item.image.alt %> <% } %>"><% if( _.isNull(item.url) === false ) { %></a><% } %>
+      <div class="carousel-caption bg_pace-Blue">
+        <div class="row">
+          <div class="col-xs-12 captionTitle">
+            <p class="text-left"><% if( _.isNull(item.url) === false ) { %><a href="<%= item.url %>" target="_blank"><% } %><%= item.title %><% if( _.isNull(item.url) === false ) { %></a><% } %></p>
+          </div>
+        </div>
+        <% if (showCaptionDate) { %>
+        <div class="row">
+          <div class="col-xs-12 captionDate">
+          <p class="text-left"><strong><%= item.start.day %>,&nbsp;<%= item.start.date %></strong> @ <%= item.start.time %></p>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</script> 
+           <script>
+  var fetch = {};
+
+  var decodeEntities = (function() {
+    // this prevents any overhead from creating the object each time
+    var element = document.createElement('div');
+
+    function decodeHTMLEntities (str) {
+      if(str && typeof str === 'string') {
+        // strip script/html tags
+        str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+        str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+        element.innerHTML = str;
+        str = element.textContent;
+        element.textContent = '';
+      }
+
+      return str;
+    }
+
+    return decodeHTMLEntities;
+  })();
+  jQuery.decodeEntities = decodeEntities;
+
+
+  fetch = function() {
+    this.toDate = function() {
+      var dT = new Date(),
+          d = Bookaroo.modules.Core.service.utility.ZeroPad( dT.getDate() ),
+          m = Bookaroo.modules.Core.service.utility.ZeroPad( dT.getMonth() + 1 ),
+          y = dT.getFullYear(),
+          _toDate;
+
+      _toDate = y + '-' + m + '-' + d;
+      return ( _toDate );
+    };
+
+    this.libCalEvents = function ( _toDate, _eventDays ) {
+      var dFrd = $.Deferred(),
+          libCalBaseUrl = '//api2.libcal.com/1.0/events/?iid=764&cal_id=2161&key=2cee96c85448cc53b8795e4972a572fd',
+          libCalOpts = '&date=' + _toDate + '&days=' + _eventDays;
+
+      libCalUrl = libCalBaseUrl + libCalOpts;
+
+      $.when( Bookaroo.modules.Core.service.data.Feed( libCalUrl, appendLibcalEvents, false, 180000 ).done() )
+       .then( function( resp ) {
+         dFrd.resolve( resp );
+       });
+      return dFrd.promise();
+    };
+    return ({
+      toDate: this.toDate,
+      libCalEvents: this.libCalEvents
+    });
+  }();
+
+  var getPaceLibEventList = function( items ) {
+    var dFrd = $.Deferred(),
+        display = {}, libCalUrl, _eventScope = 15;
+    _toDate = fetch.toDate();
+
+    $.when( fetch.libCalEvents( _toDate, _eventScope ).done() )
+     .then( function( resp ) {
+       dFrd.resolve( resp );
+      //  console.log('libCal.debug: %o', _.uniqBy(resp, function (events) { return events.title }))
+       console.log('libCal.debug: %o', resp)
+     })
+     .done( function() {
+     });
+
+    return dFrd.promise();
+  };
+
+var appendLibcalEvents = function( _eventData ) {
+  console.log('home.carousel.appendLibcalEvents.eventdata: %o', _eventData)
+  var dFrd = $.Deferred()
+  // var events = ( _.isUndefined(_eventData.query) === false && _.isNull( _eventData.query.results.json ) === false)
+  var events = ( _.isUndefined(_eventData.events) === false)
+    // ? _eventData.query.results.json.events
+    ? _eventData.events
+    // : _eventData.events
+    : null
+  var _items = {};
+
+  if ( _.isNull( events ) === false ) {
+    _.each( events, function( event, _eventIDX ) {
+      _heroImages = 10;
+      _randomHeroImageID = Math.round(Math.random() * ( _heroImages - 1) + 1);
+      _randomHeroImageID = ( _randomHeroImageID < 10) ? '0' + _randomHeroImageID:_randomHeroImageID;
+      _startDate = Bookaroo.modules.Core.service.utility.PrettyDate(new Date(event.start), 'DDD,MM-DD, YYYY: TIME').split(',');
+
+      _items[_eventIDX] = {
+        title: event.title,
+        description: $.decodeEntities(event.description),
+        url: event.url.public,
+        image: {
+          src: ( _.isEmpty(event.featured_image) === false ) ? event.featured_image:'https://s3.amazonaws.com/libapps/customers/739/images/hero_IMG_' + _randomHeroImageID + '.jpg',
+          alt: 'Image for ' + event.title
+        },
+        start: {
+          day: _startDate[0],
+          date: _startDate[1],
+          year: _startDate[2].split('@')[0].replace(' ',''),
+          time: _startDate[2].split('@')[1].replace(' ','')
+        }
+      };
+    });
+  } else {
+    console.error('libCal.Events: No events found')
+    _startDate = Bookaroo.modules.Core.service.utility.PrettyDate(new Date(), 'DDD,MM-DD, YYYY: TIME').split(',');
+    _items[0] = {
+      title: 'No Upcoming Events',
+      description: "",
+      url: null,
+      image: {
+        // src: 'https://libapps.s3.amazonaws.com/customers/739/images/no_events.png',
+        src: 'https://libapps.s3.amazonaws.com/customers/739/images/I_has_a_book_.png',
+        alt: 'Image for No Events'
+      },
+      start: {
+        day: _startDate[0],
+        date: _startDate[1],
+        year: _startDate[2].split('@')[0].replace(' ',''),
+        time: _startDate[2].split('@')[1].replace(' ','')
+      }
+    }
+  }
+
+  dFrd.resolve( _items );
+
+  return dFrd.promise();
+};
+
+$(document).ready( function() {
+  var dfrd = $.Deferred(),
+      items = {
+        0: {
+          title: 'Event #1',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          url: '#',
+          image: {
+            src: 'https://s3.amazonaws.com/libapps/customers/739/images/hero_IMG_05.jpg',
+            alt: 'Books Books Books! '
+          },
+          start: {
+            day: '',
+            date: '',
+            year: '',
+            time: ''
+          }
+        },
+        1: {
+          title: 'Event #2',
+          description: 'A shorter version of description text that describes the description',
+          url: '#',
+          image: {
+            src: 'https://s3.amazonaws.com/libapps/customers/739/images/hero_IMG_02.jpg',
+            alt: ''
+          },
+          start: {
+            day: '',
+            date: '',
+            year: '',
+            time: ''
+          }
+        }
+      };
+
+  var startEventShowcase = function() {
+    var _carouselTemplate = _.template( $('#pacelib-carousel-home-template').html() );
+    $.when( getPaceLibEventList( items ).done() )
+     .then( function( resp ) {
+       console.log('startEventShowcase.debug: %o', resp);
+       if ( _.size(resp) > 0 ) {
+         _carouselRendered =  _carouselTemplate( {items: resp } );
+         $('#pacelib-carousel-home-data').html( _carouselRendered );
+         $('#pacelib-carousel-home').css({ 'opacity': 1 });
+       }
+     })
+     .done( function() {
+       // $('div.item[name="item_placeholder"]').remove()
+       $('#pacelib-carousel-home').carousel({
+         interval: 8000,
+         pause: "hover"
+       });
+     });
+
+  };
+  _.delay(function () {startEventShowcase()}, 0)
+
+});
+</script> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="s-lg-box-14609894-container" class="s-lib-box-container"> 
+       <div id="s-lg-box-14609894" class="s-lib-box s-lib-box-std"> 
+        <h2 class="s-lib-box-title">media carousel </h2> 
+        <div id="s-lg-box-collapse-14609894"> 
+         <div class="s-lib-box-content"> 
+          <div id="s-lg-content-31714662" class="  clearfix"> 
+           <div id="pacelib-carousel-home" class="carousel slide"> 
+            <div id="pacelib-carousel-home-data"> 
+             <div class="item active" name="item_placeholder" aria-selected="false" tabindex="-1"> 
+              <img src="" alt="" width="460px" height="160px"> 
+              <div class="carousel-caption bg_pace-Blue"> 
+               <div class="row"> 
+                <div class="col-xs-12 captionTitle"> 
+                 <p class="text-left"></p> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> <!-- Controls --> <a class="left carousel-control" href="#pacelib-carousel-home" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#pacelib-carousel-home" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> <!--    END: EVENTS CAROUSEL --> 
+   </div> 
+  </div> <!--
+      <div class="col-xs-10 col-xs-offset-1 lib-global-sitemap">
+        <div class="row">
+          
+					<div id="s-lg-box-14997095-container" class="s-lib-box-container">
+						<div id="s-lg-box-14997095" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">v2.0.0
+                                </h2>
+							<div id="s-lg-box-collapse-14997095" >
+								<div class="s-lib-box-content">
+									
+			<div id="s-lg-content-32627328" class="  clearfix">
+				<style>
+  #sitemapContainer { margin-top: 20px; }
+  #sitemapContainer > div.row > div > div:nth-child(1) { padding: 2px 0 2px 10px; }
+  #sitemapContainer > div.row > div > div:nth-child(1) > h5 { color: white; font-weight: bold; margin: 0; padding: .5rem 0; }
+  #sitemapContainer > div.row > div > div:nth-child(1) > h5 > a { color: white; font-weight: bold; margin: 0; padding: 0; text-decoration: none; }
+  #sitemapContainer > div.row > div > div:nth-child(2) ul { list-style-type: none; margin-bottom:0; padding: 0 0 0 10px }
+  #sitemapContainer > div.row > div > div:nth-child(2) ul:nth-child(1)  { padding-top: 5px; }
+  #sitemapContainer > div.row > div > div:nth-child(2) ul li { border: none; border-radius: 0px !important; line-height: 1.5em; padding: 0; padding-top: 1px; padding-bottom: 1px }
+    #sitemapContainer > div.row > div > div:nth-child(2) ul li a:hover { font-weight: bold; text-decoration: none; }
+</style>
+
+<div id="sitemapContainer">
+  <script id="sitemapTemplate" type="text/x-underscore-template">
+    <% var showSubNavs = false %>
+    <% if (siteMap.data.length > 0 && typeof _ == "function") { %>
+      <div class="row">
+        <% _.each( siteMap.data, function (thisItem) { %>
+          <div class="col-xs-12 col-sm-3">
+            <div class="bg_pace-Blue">
+              <h5 class=""><a href="<%= thisItem.url %>"><%= thisItem.category %></a></h5>
+            </div>
+            <div>
+              <ul class="BTN_lib-tier2">
+                <% _.each( thisItem.linkData, function (itemLink) { %>
+                  <li>
+                  <% var linkClass = "btnLink"; if (itemLink.ext) linkClass = linkClass + ' btnLink-ext' %>
+                    <a class="text_pace-Blue <%= linkClass %>" href="<%= itemLink.url %>"><%= itemLink.title %></a>
+                    <% if (showSubNavs && _.has(itemLink, 'subnav')) { %><ul class="BTN_lib-tier3"><% } %>
+                      <% _.each( itemLink.subnav, function(subnavItem) { %>
+                        <li><a href="<%= subnavItem.url %>"><%= subnavItem.title %></a></li>
+                      <% } ); %>
+                    <% if (showSubNavs && _.has(itemLink, 'subnav')) { %></ul><% } %>
+                  </li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    <% } %>
+  </script>
+</div>
+<script>
+  $(document).ready( function() {
+    if ( typeof _ == "function" ) {
+      var sitemapTemplate = _.template($("#sitemapTemplate").html()),
+          siteMap = {
+            data: [
+              { category: 'About the Library', url: 'http://libguides.pace.edu/about2', priority: 4, linkData: [
+                { title: 'Welcome to the Library', url: 'http://libguides.pace.edu/about2#Welcome' },
+                { title: 'Mission Statement', url: 'http://libguides.pace.edu/about2#LibraryMissionStatement' },
+                /*{ title: 'Calendar of Hours', url: 'http://pace.libcal.com/hours.php' },*/
+                { title: 'Locations', url: 'http://libguides.pace.edu/about2#Locations', subnav: [
+                  // { title: 'Birnbaum', url: 'http://libguides.pace.edu/about2#BirnbaumLibrary' },
+                  // { title: 'Mortola', url: 'http://libguides.pace.edu/about2#TheMortolaLibrary' },
+                  // { title: 'Law Library', url: 'http://law.pace.edu/library' }
+                ] },
+                { title: 'Law Library', ext: true, url: 'http://law.pace.edu/library' },
+                { title: 'Collection Development', url: 'http://libguides.pace.edu/about2#CollectionDevelopment' },
+                { title: 'Newsletter', url: 'http://libguides.pace.edu/about2#Newsletter' },
+                /*{ title: 'Library Blog', url: 'http://library.blogs.pace.edu/' },*/
+                { title: 'The Library Minute', ext: true, url: 'https://www.youtube.com/watch?v=3S4ey_9TRZw&list=PL6AF8A85F42398078' }
+                ]
+              },
+              { category: 'Library Services', url: 'http://libguides.pace.edu/services2', priority: 1, linkData: [
+                { title: 'Access Services', url: 'http://libguides.pace.edu/services2#AccessServices/' },
+                // { title: 'Collection Development', url: 'http://libguides.pace.edu/c.php?g=370485&p=2509417' },
+                { title: 'Technology Services', url: 'http://libguides.pace.edu/services2#TechnologyServices' },
+                { title: 'Distance Education', ext: true, url: 'http://libguides.pace.edu/distance-education-services' },
+                { title: 'Faculty Resources', ext: true, url: 'http://libguides.pace.edu/faculty' },
+                { title: 'Instructional Services', url: 'http://libguides.pace.edu/services2#InstructionalServices' },
+                { title: 'Interlibrary Loan', ext: true, url: 'https://pace.illiad.oclc.org/illiad/logon.html' },
+                { title: 'Reference Services', url: 'http://libguides.pace.edu/services2#ReferenceServices' },
+                { title: 'University Archives', url: 'http://libguides.pace.edu/services2#UniversityArchives' }
+                ]
+              },
+              { category: 'Search', url: 'http://libguides.pace.edu/search', priority: 3, linkData: [
+                { title: 'Library Catalog - Find a Book', url: 'http://libguides.pace.edu/search/catalog' },
+                { title: 'Databases - Find an Article', url: 'http://libguides.pace.edu/search/databases' },
+                { title: 'Journal Title Search', url: 'http://libguides.pace.edu/c.php?g=371330&p=2510390' },
+                { title: 'Course Reserves', url: 'http://libguides.pace.edu/search/course-reserves' },
+                { title: 'Research Guides', url: 'http://libguides.pace.edu/c.php?g=371330&p=2510709' },
+                { title: 'Other Library Catalogs', url: 'http://libguides.pace.edu/c.php?g=371330&p=2511040' },
+                { title: 'Digital Commons @ Pace', url: 'http://libguides.pace.edu/c.php?g=371330&p=2510710' }
+                ]
+              },
+              { category: 'Help', url: 'http://libguides.pace.edu/help', priority: 2, linkData: [
+                { title: 'FAQ\'s', url: 'http://asklibrary.pace.edu/index' },
+                { title: 'Remote Access Help', url: 'http://libguides.pace.edu/c.php?g=373090&p=2521806' },
+                { title: 'Citing Sources', url: 'http://libguides.pace.edu/c.php?g=373090&p=2525136' },
+                { title: 'Video Tutorials', url: 'http://libguides.pace.edu/videos' },
+                { title: 'Copyright &amp; the Online User', url: 'http://libguides.pace.edu/distance-education-services/copyright' },
+                { title: 'More', url: 'http://libguides.pace.edu/help' }
+                ]
+              }]
+            };
+      $('#sitemapContainer').append(sitemapTemplate({siteMap: siteMap}));
+      // var _sitemap = _.sortBy(siteMap, function (o) { return o.data[priority]});
+      // console.log('sitemap: %o', _siteMap)
+    }
+  });
+</script>
+		   </div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+        </div>
+      </div>
+ --> 
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 lib-global-contact-subfooter"> 
+   <div class="row"> 
+    <div id="s-lg-box-15003444-container" class="s-lib-box-container"> 
+     <div id="s-lg-box-15003444" class="s-lib-box s-lib-box-std"> 
+      <h2 class="s-lib-box-title">CODE </h2> 
+      <div id="s-lg-box-collapse-15003444"> 
+       <div class="s-lib-box-content"> 
+        <div id="s-lg-content-32645352" class="  clearfix"> 
+         <div class="contact-subfooter"> 
+          <div class="fb_Slider"> 
+           <ul class="list-inline list-unstyled"> 
+            <li><button class="btn btn-xs btn-block js-btnLink js-btnLink-ext" href="http://facebook.com/BirnbaumLibrary" type="button" name="button">Birnbaum Library (NYC)</button></li> 
+            <li><button class="btn btn-xs btn-block js-btnLink js-btnLink-ext" href="http://facebook.com/MortolaLibrary" type="button" name="button">Mortola Library (PLV)</button></li> 
+           </ul> 
+          </div> <span> 
+           <ul class="list-inline list-unstyled"> 
+            <li class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline"><strong>CONTACT US:</strong></li> 
+            <li class=""><strong>NYC:&nbsp;</strong>212 346.1332</li> 
+            <li class=""><strong>PLV:&nbsp;</strong>914 773.3380</li> 
+            <li class="pull-right visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline"> <button class="btn btn-xs btn-block js-btnLink js-btnLink-ext" href="http://asklibrary.pace.edu/feedback" role="button"><b>FEEDBACK</b></button> </li> 
+            <li class="visible-xs-block clearfix">&nbsp;</li> 
+            <li class="pull-right"><a class="js-btnLink js-btnLink-ext" href="http://instagram.com/pacelibrary?ref=badge"><i class="fa fa-instagram"></i></a></li> 
+            <li class="pull-right"><a class="js-btnLink js-btnLink-ext" href="http://www.youtube.com/user/pacelibrary"><i class="fa fa-youtube"></i></a></li> 
+            <li class="pull-right"><a href="#" class="fb_Toggle"><i class="fa fa-facebook"></i></a></li> 
+            <li class="pull-right"><a class="js-btnLink js-btnLink-ext" href="http://twitter.com/pacelibrary"><i class="fa fa-twitter"></i></a></li> 
+            <li class="pull-right"><a class="js-btnLink js-btnLink-ext" href="https://infoedge.blogs.pace.edu/"><i class="fa fa-wordpress"></i></a></li> 
+           </ul> </span> 
+         </div> 
+         <script>
+  $('.fb_Toggle').on('click', function (e) {
+    e.preventDefault();
+    $('.fb_Slider').addClass('active')
+  })
+  $('.contact-subfooter').on('mouseleave', function () {
+    $('.fb_Slider').removeClass('active')
+  })
+</script> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> <!--   END: HOME CONTENT CONTAINER --> <!-- BEGIN: Springshare Page Footer --> <!-- END: Springshare Page Footer --> <!-- START: Springshare internals  --> 
+ <div id="s-lib-alert" title=""> 
+  <div id="s-lib-alert-content"></div> 
+ </div> 
+ <div id="s-lib-popover-title" class="hide"> <span class="text-info"><strong>title</strong></span> <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">×</button> 
+ </div> 
+ <div id="s-lib-popover-content" class="hide">
+  <i class="fa fa-refresh fa-spin"></i> Loading... <button class="btn btn-default btn-sm popclose" type="button">Close</button> 
+ </div> <!--   END: Springshare internals  --> <!-- START: SPRINGSHARE SCROLL-TO-TOP TOOL --> 
+ <div id="s-lib-scroll-top" title="Back to Top"> <span class="fa-stack fa-lg"> <i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i> </span> 
+ </div> <!--  END: SPRINGSHARE SCROLL-TO-TOP TOOL --> 
+</div> <!-- END: content --> <!-- BEGIN: Custom Footer --> 
+<div class="container"> 
+ <div class="row"> 
+  <div class="col-xs-10 col-xs-offset-1 bs-dynamic-col"> 
+   <div id="SS_paceGlobalFooter"> 
+    <div class="row"> 
+     <div class="col-xs-4 pull-left"> 
+      <ul> 
+       <li><a href="http://www.pace.edu/copyright-notice" target="_blank">©&nbsp;Pace University</a></li> 
+      </ul> 
+     </div> 
+     <div class="col-xs-8 pull-right"> 
+      <ul> 
+       <li><a href="http://www.pace.edu/about-us/all-about-pace">About Pace</a></li> 
+       <li><a href="https://careers.pace.edu/">Work at Pace</a></li> 
+       <li><a href="http://www.pace.edu/web-site-privacy-policy">Privacy Policy</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div> <!-- END: Public Footer --> <!-- BEGIN: Analytics code -->
+<script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-106256789-1', 'auto');  ga('send', 'pageview');</script><!-- END: Analytics code -->
+</body>
+</doc>

@@ -1,0 +1,97 @@
+<doc>
+<filename>tc.columbia.edu17.html</filename>
+<url>http://vq2st5lq8v.search.serialssolutions.com/ejp/?libHash=VQ2ST5LQ8V#/?language=en-US&titleType=JOURNALS</url>
+<ip>216.147.213.8</ip>
+<title></title>
+<body>
+<span ng-controller="BrandingController as brandingCtrl"> <span ng-bind-html="brandingCtrl.getBrandingLinkColorStyle()"></span> <span ng-bind-html="brandingCtrl.getBrandingLinkHoverColorStyle()"></span> </span> 
+<input type="hidden" id="requestStatus" ng-value="$root.requestStatus"> 
+<div id="header" ng-controller="BrandingController as brandingCtrl"> 
+ <div ng-class="{'header-regular': brandingCtrl.mobileHeaderEnable.value == 'true', 'header-regular header-mobile': brandingCtrl.mobileHeaderEnable.value == 'false'}" ng-if="brandingCtrl.brandingHeader.value != ''" ng-bind-html="brandingCtrl.trustAsHtml(brandingCtrl.brandingHeader.value)"> 
+ </div> 
+ <div class="header-mobile" ng-if="brandingCtrl.mobileHeaderEnable.value == 'true'" ng-bind-html="brandingCtrl.trustAsHtml(brandingCtrl.mobileHeader.value)"> 
+ </div> 
+</div> 
+<div role="main" class="container-fluid"> 
+ <div ui-view="languageSelection" id="language-div"></div> 
+ <div ui-view="titleSearch"></div> 
+ <div ui-view="searchOpenClose"></div> 
+ <div id="search-controls" uib-collapse="!$root.showSearchControls"> 
+  <div ui-view="pmiddoiSearch"></div> 
+  <div ui-view="aTozSearch"></div> 
+  <div ng-if="$root.cjkSearchEnabled.value == 'true'"> 
+   <div ui-view="cjkSearch"></div> 
+  </div> 
+  <div ng-if="$root.medicalDisplayAboveHilcc.value == 'false'"> 
+   <div ng-if="$root.hilccSubjectsEnabled.value == 'true'"> 
+    <div ui-view="hilccSearch"></div> 
+    <div ui-view="hilccSearchSubjects"></div> 
+   </div> 
+   <div ng-if="$root.medicalSubjectsEnabled.value == 'true'"> 
+    <div ui-view="medicalSearch"></div> 
+   </div> 
+  </div> 
+  <div ng-if="$root.medicalDisplayAboveHilcc.value == 'true'"> 
+   <div ng-if="$root.medicalSubjectsEnabled.value == 'true'"> 
+    <div ui-view="medicalSearch"></div> 
+   </div> 
+   <div ng-if="$root.hilccSubjectsEnabled.value == 'true'"> 
+    <div ui-view="hilccSearch"></div> 
+    <div ui-view="hilccSearchSubjects"></div> 
+   </div> 
+  </div> 
+  <div ng-if="$root.databaseListEnabled.value == 'true'"> 
+   <div ui-view="databaseList"></div> 
+  </div> 
+ </div> 
+ <div ui-view="searchResults"></div> 
+ <div ui-view="touResults"></div> 
+ <div ui-view="languageSelection" id="language-div-mobile"></div> 
+</div> 
+<div id="footer" ng-controller="BrandingController as brandingCtrl"> 
+ <div class="privacy-policy-footer-container" ng-if="brandingCtrl.brandingFooter.value == ''" ng-bind-html="brandingCtrl.getPrivacyPolicyLink()"> 
+ </div> 
+ <div ng-class="{'footer-regular': brandingCtrl.mobileFooterEnable.value == 'true', 'footer-regular footer-mobile': brandingCtrl.mobileFooterEnable.value == 'false'}" ng-if="brandingCtrl.brandingFooter.value != ''" ng-bind-html="brandingCtrl.trustAsHtml(brandingCtrl.brandingFooter.value)"> 
+ </div> 
+ <div class="footer-mobile" ng-if="brandingCtrl.mobileFooterEnable.value == 'true'" ng-bind-html="brandingCtrl.trustAsHtml(brandingCtrl.mobileFooter.value)"> 
+ </div> 
+ <div class="update-date-footer-container" ng-if="brandingCtrl.brandingFooter.value != ''" ng-bind-html="brandingCtrl.getUpdateDate()"> 
+ </div> 
+</div> <span ng-controller="BrandingController as brandingCtrl"> 
+ <link ng-if="brandingCtrl.brandingCssFile.value != ''" rel="stylesheet" property="stylesheet" ng-href="{{ brandingCtrl.trustUrl(brandingCtrl.brandingCssFile.value) }}"> </span> 
+<script type="text/javascript" src="./vendor/angular-ui-router.min.js?v=6"></script> 
+<script type="text/javascript" src="./vendor/angular-animate.min.js?v=6"></script> 
+<script type="text/javascript" src="./vendor/angular-sanitize.min.js?v=6"></script> 
+<script type="text/javascript" src="./vendor/angular-aria.min.js?v=1"></script> 
+<script type="text/javascript" src="./vendor/ngStorage.min.js?v=6"></script> 
+<script type="text/javascript" src="./vendor/ng-repeat-fast-0.2.21.js?v=6"></script> 
+<script type="text/javascript" src="./vendor/bootstrap/js/ui-bootstrap-tpls-0.14.3.min.js?v=6"></script> 
+<script type="text/javascript" src="app-config.js?v=6"></script> 
+<script type="text/javascript" src="app-config-routes.js?v=7"></script> 
+<script type="text/javascript" src="app-config-interceptors.js?v=6"></script> 
+<script type="text/javascript" src="./systemConfig/system-config.service.js?v=6"></script> 
+<script type="text/javascript" src="./searchAtoZList/a-to-z-list.controller.js?v=6"></script> 
+<script type="text/javascript" src="./searchCJKList/cjk-list.service.js?v=6"></script> 
+<script type="text/javascript" src="./searchCJKList/cjk-list.controller.js?v=6"></script> 
+<script type="text/javascript" src="./searchTitle/title-search-form.service.js?v=6"></script> 
+<script type="text/javascript" src="./searchTitle/title-search.controller.js?v=7"></script> 
+<script type="text/javascript" src="./searchPMIDDOI/search-pmiddoi.controller.js?v=7"></script> 
+<script type="text/javascript" src="./searchMedical/medical-search-form.service.js?v=6"></script> 
+<script type="text/javascript" src="./searchMedical/medical-search.controller.js?v=6"></script> 
+<script type="text/javascript" src="./searchResults/search-results.controller.js?v=7"></script> 
+<script type="text/javascript" src="./ulrichsInfo/ulrichs-info.controller.js?v=6"></script> 
+<script type="text/javascript" src="./ulrichsInfo/ulrichs-info.directive.js?v=6"></script> 
+<script type="text/javascript" src="./databaseList/database-list.service.js?v=6"></script> 
+<script type="text/javascript" src="./databaseList/database-list.controller.js?v=6"></script> 
+<script type="text/javascript" src="./parameterService/parameter-retrieval.service.js?v=8"></script> 
+<script type="text/javascript" src="./searchOpenClose/search-open-close.controller.js?v=6"></script> 
+<script type="text/javascript" src="./language/language.service.js?v=6"></script> 
+<script type="text/javascript" src="./language/language.controller.js?v=6"></script> 
+<script type="text/javascript" src="./branding/branding.controller.js?v=7"></script> 
+<script type="text/javascript" src="./searchHILCC/hilcc-search.service.js?v=6"></script> 
+<script type="text/javascript" src="./searchHILCC/hilcc-search.controller.js?v=6"></script> 
+<script type="text/javascript" src="./searchHILCC/hilcc-search-subjects.controller.js?v=6"></script> 
+<script type="text/javascript" src="./touResults/tou-results.controller.js?v=1"></script> 
+<script type="text/javascript" src="./autofocus/autofocus.directive.js?v=6"></script> <span ng-controller="BrandingController as brandingCtrl"> <script ng-if="brandingCtrl.brandingJsFileEnabled.value == 'true'" type="text/javascript" ng-src="{{ brandingCtrl.trustUrl(brandingCtrl.brandingJsFile.value) }}"></script> </span>
+</body>
+</doc>

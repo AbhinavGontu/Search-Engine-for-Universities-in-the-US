@@ -1,0 +1,1899 @@
+<doc>
+<filename>mc.edu19.html</filename>
+<url>http://wso2.com/</url>
+<ip>104.18.15.72</ip>
+<title>WSO2 | Next-generation technologies to future-proof your business</title>
+<body>
+<style>
+   .cWSO2MobileNav , #sm_menu_ham , .sm_menu_outer.accordion {
+   display:none;
+   }
+   .navbar{
+   background: #fff;
+   padding-top: 0;
+   padding-bottom: 0;
+   box-shadow: 1px 3px 4px 0 #adadad33;
+   }
+   .navbar-light .navbar-brand {
+   color: #2196F3;
+   }
+   .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+   color: #ff7300 !important;
+   }
+   .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+   color: #fff;
+   }
+   .navbar-light .navbar-nav .nav-link {
+   padding-top: 10px;
+   padding-bottom: 0px;
+   transition: 0.3s;
+   padding-left: 15px;
+   padding-right: 15px;
+   /* font-size: 14px; */
+   /* height: 64px; */
+   line-height: 47px;
+   }
+   .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+   /* background: #212a32; */
+   transition: 0.3s;
+   }
+   .dropdown-item:focus, .dropdown-item:hover {
+   text-decoration: none;
+   }
+   .dropdown-item:hover {
+   color: #fff;
+   text-decoration: none;
+   background-color: #212a32 !important;
+   }
+   .dmenu.cActiveMenu {
+   background-color:#212a32;
+   }
+   /* .dmenu.cActiveMenu.show a ,  .dmenu.show  a{
+   background-color:red !important;
+   color: #212a32;
+   }  */
+   .sm-menu{
+   border-radius: 0px;
+   border: 0px;
+   top: 97%;
+   box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px;
+   }
+   .dropdown-item {
+   color: #3c3c3c;
+   /* font-size: 14px; */
+   }
+   .dropdown-item.active, .dropdown-item:active {
+   /* color: #fff; */
+   text-decoration: none;
+   background-color: #2196F3;
+   }
+   .dropdown-item:focus, .dropdown-item:hover {
+	color: #16181b;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+   .navbar-toggler{
+   outline: none !important;
+   }
+   .navbar-tog{
+   color: #ff7300;
+   }
+   .megamenu-li {
+   position: static;
+   }
+   .megamenu , .cLoginMenu {
+   position: absolute;
+   width: 100%;
+   left: 0;
+   right: 0;
+   padding: 15px;
+   background-color:rgba(33, 42, 50, 0.98);
+   border-top: none !important;
+   }
+   .cLoginMenu {
+   width: 260px;
+   margin-left: -154px;
+   margin-top: 8px;
+   }
+   .cLoginMenu ul {
+   margin:0;
+   }
+   .megamenu h6{
+   margin-left: 21px;
+   }
+   .megamenu i{
+   width: 20px;
+   }
+   .cHighlightedRow { display: flex; }
+   .cSectionBelowHighlight { margin-top: 0; }
+   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 { float: left; }
+   a.navbar-brand {
+   width: 100px;
+   padding: 10px 0;
+   }
+   .cMenuPositionRelative {
+   position: relative;
+   width:320px;
+   }
+   .cMenuMargin {
+   margin-right:50px;
+   float:right;
+   }
+   .cUserLogin.dropdown-toggle::after ,  .cUserLogin.dropdown-toggle {
+   content: none;
+   width: 53px;
+   height: auto;
+   margin-top: 3px;
+   }
+   .dropdown-menu.megamenu.sm-menu.border-top {
+   margin-top: 0px;
+   height:auto;
+   }
+   /* MEGAMENU STYLES */
+   .cSelected {width: 0; height: 0; 
+   border-style: solid; border-width: 10px 12px 0 12px; border-color: #212a32 transparent transparent transparent; 
+   line-height: 0px; _border-color: #212a32 #000000 #000000 #000000; _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000'); 
+   display: inline-block; float: left; 
+   -ms-transform: rotate(180deg); /* IE 9 */
+   transform: rotate(180deg);
+   margin-top:-24px;
+   }
+   .cSelected.cProducts { margin-left: 170px; }
+   .cSelected.cCustomers { margin-left: 225px; }
+   .cSelected.cPartners { margin-left: 300px; }
+   .cSelected.cCompany { margin-left: 512px; }
+   .cSelected.cSolutions { margin-left: 282px; }
+   .cSelected.cLearn { margin-right: 800px; float: right; }
+   .cSelected.cLearn.cMenuScroll { margin-right: 265px; float: right; }
+   .cSelected.cSupport { margin-right: 570px; float: right; background-image: none; background-color: transparent; }
+   .cSelected.cLoginMenuBlock { margin-left: 155px; }
+   .cSelected.cSupport.cMenuScroll { margin-right: 175px; float: right; background-image: none; background-color: transparent; }
+   /* section.cMenu .cSelected {
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 10px 12px 0 12px;
+   border-color: #ff7300 transparent transparent transparent;
+   line-height: 0px;
+   _border-color: #ff7300 #000000 #000000 #000000;
+   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+   display: inline-block;
+   float: left;
+   } */
+   a.dropdown-toggle , a.cSingleLink {
+   color: #000 !important;
+   position:relative;
+   /* border-top: 4px solid black; */
+   }
+   a.dropdown-toggle:hover , a.cSingleLink:hover {
+   color: #ff7300 !important;
+   /* color: #fff !important; */
+   }
+   a.dropdown-toggle::before , a.cSingleLink::before  {
+   content: '';
+   position: absolute;
+   width: 0px;
+   height: 5px;
+   left: 50%;
+   top:-1px;
+   background-color: #ff7300;
+   transition: all ease-in-out .2s;
+   }
+   a.dropdown-toggle:hover::before , a.cSingleLink:hover::before {
+   width: 100%;
+   left: 0;
+   }
+   .row.cInlineMenuRow {
+   width:100% !important;
+   }
+   .cActiveMenu a.dropdown-toggle {
+   color: #ef7011 !important;
+   }
+   /* a.dropdown-toggle:focus {
+   color: #000 !important;
+   } */
+   .dropdown-menu.megamenu h6 {
+   color: #a3a3a3;
+   margin-left: 0;
+   font-weight: 600;
+   /* border-bottom: 3px solid #ff7300; */
+   display: inline-block;
+   padding-bottom: 8px;
+   margin-bottom: 14px;
+   margin-top: 0;
+   padding-top: 0;
+   text-transform: uppercase;
+   letter-spacing: 0.15rem;
+   }
+   .megamenu .border-right {
+   border-right: 1px solid #4e6273 !important;
+   }
+   .megamenu a.nav-link.dropdown-item {
+   padding:0;
+   line-height:40px;
+   height:auto;
+   }
+   .cMenuInnerCol {
+   padding-left:0;
+   }
+   .navbar-light .navbar-nav .nav-link {
+   color:#ffffff;
+   }
+   .navbar-light .navbar-nav .nav-link:hover {
+   color: #ff7300 !important;
+   }
+   .megamenu .border-right {
+   border: none !important;
+   }
+   .ExpIcon img {
+   width: 24px;
+   }
+   .cMenuHighlightBox{
+   width:100%;
+   display:inline-block;
+   background-color: transparent;
+   }
+   .cMenuHighlightBox a {
+   /* min-height:200px; */
+   /* border : 1px solid #d7e2de; */
+   display:inline-block;
+   width:100%;
+   padding:0;
+   background: transparent;
+   border:1px solid transparent;
+   }
+   .cMenuHighlightBox a:hover {
+   /* min-height:200px; */
+   /* border : 1px solid #d7e2de; */
+   display:inline-block;
+   width:100%;
+   /* padding:1.5rem; */
+   }
+   .cMenuHighlightBox img {
+   border:1px solid transparent;
+   }
+   .cMenuHighlightBox a:hover img {
+   border:1px solid #ff7300;
+   }
+   .cMenuHighlightBox.cCompamy a {
+   min-height:200px;
+   /* border : 1px solid #d7e2de; */
+   display:inline-block;
+   width:100%;
+   padding:1.5rem;
+   background: #d7e2de;
+   border:1px solid transparent;
+   }
+   .cMenuHighlightBox.cCompamy a:hover {
+   min-height:200px;
+   /* border : 1px solid #d7e2de; */
+   display:inline-block;
+   width:100%;
+   padding:1.5rem;
+   border:1px solid #ff7300;
+   background:#d7e2de;
+   }
+   .cMenuHighlightBox.cCompamy  img {
+   width:50px; 
+   /* display:inline-block;
+   float :left; */
+   /* /* filter: invert(100%); */
+   }
+   .cMenuHighlightBox.cNewsblock a {
+   min-height:auto;
+   }
+   .cMenuHighlightBox  img {
+   /* width:50px; */
+   /* display:inline-block;
+   float :left; */
+   /* filter: invert(100%); */
+   }
+   .cMenuHighlightBox h3 {
+   font-size: 1rem;
+   margin-bottom:0.5rem;
+   color:#212a32;
+   }
+   .cMenuHighlightBox a:hover h3 {
+   color:#d7e2de;
+   }
+   .cMenuHighlightBox  span {
+   border-radius: 3px;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 20px;
+   letter-spacing: .5px;
+   text-transform: uppercase;
+   display: inline-block;
+   margin-bottom: 0px;
+   padding: 6px 18px;
+   background-color: #465867;
+   color: #d7e2de;
+   }
+   .cMenuHighlightBox a:hover span {
+   background-color: #d7e2de;
+   color: #212a32;
+   }
+   .inlinebox {
+   padding:0;
+   margin-bottom:0 !important;
+   }
+   .inlineboxNews {
+   margin-bottom:0 !important;
+   }
+   .navbar-collapse {
+   margin-top: -5px;
+   }
+   .cMobileSearchForm {
+   display:none;
+   }
+   a.cContactButton , a.cSupportLoginButton {
+   border-radius: 3px;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 20px;
+   color: #fff !important;
+   letter-spacing: .5px;
+   text-transform: uppercase;
+   display: inline-block;
+   padding: 6px 18px;
+   background-color: #ff7300;
+   margin-top: 18px;
+   margin-right:20px;
+   }
+   a.cContactButton:hover , a.cSupportLoginButton:hover {
+   color:#fff !important;
+   text-decoration:none !important;
+   background:#000 !important;
+   }
+
+
+   a.cContactButton {
+      position: relative;
+top: auto;
+   }
+
+
+   /* SEARCH */
+   .Exp-serach { position: absolute; width: 0%; min-width: 50px; height: 50px; float: right; overflow: hidden; -webkit-transition: width 0.3s; -moz-transition: width 0.3s; transition: width 0.3s; -webkit-backface-visibility: hidden; right:0; bottom:7px; }
+   .ExpInput { background: #fff none repeat scroll 0 0; border: medium none; font-size: 20px; color: #444; height: 36px; margin: 0; outline: medium none; padding: 0 0 0 20px; position: absolute; right: 0; top: 13px; z-index: 10; width:300px !important; font-size: 1rem; line-height: 1.6rem; color:#292929; }
+   input[type="search"].ExpInput { -webkit-appearance: none; -webkit-border-radius: 0px; }
+   .ExpIcon, .Expbtn  { width: 36px; height: 36px; display: block; position: absolute; right: 0; top: 13px; padding: 0; margin: 0; line-height: 50px; text-align: center; cursor: pointer; }
+   .Expbtn { background: #fff; /* IE needs this */ -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */ filter: alpha(opacity=0); /* IE 5-7 */ opacity: 0; color: transparent; color:red; border: none; outline: none; z-index: -1; }
+   .ExpIcon { z-index: 90; font-size: 22px; font-family: 'icomoon'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; line-height: 46px; }
+   .ExpIcon:before { content: ""; }
+   .Exp-serach.Exp-serach-open, .no-js .Exp-serach { width: 100%; }
+   .Exp-serach.Exp-serach-open .ExpIcon, .no-js .Exp-serach .ExpIcon { background: #cccccc; color: #fff; z-index: 11; }
+   .Exp-serach.Exp-serach-open .Expbtn, .no-js .Exp-serach .Expbtn { }
+   .Exp-serach.Exp-serach-open .ExpInput { border:1px solid #cccccc; }
+   @media screen and (max-width: 1130px) {
+   .navbar-light .navbar-nav .nav-link {
+   /* padding-left:3px;
+   padding-right:3px; */
+   }
+   .cMenuPositionRelative {
+   width:auto;
+   }
+   .navbar-nav {
+   margin-right:0px !important;
+   }
+   }
+   @media screen and (max-width: 1025px) {
+   .Exp-serach { bottom: 10px; }
+   .ExpIcon, .Expbtn { height: 46px; top: 5px; right: 7px; }
+   .Exp-serach.Exp-serach-open .ExpIcon, .no-js .Exp-serach .ExpIcon { right: 0; top: 0; padding: 5px 5px 0; }
+   .cWSO2MobileNav , #sm_menu_ham , .sm_menu_outer.accordion {display:block;}
+   .cWSO2DeskNav {display:none;}
+   }
+   @media screen and (max-width: 1025px) {
+   .cDesktopSearch {
+   display:none !important;
+   }
+   .cMobileSearchForm {
+   display:block;
+   }
+   .close span {
+	position: absolute;
+	color: #fff !important;
+	font-size: 43px;
+	padding: 0 0 0 15px;
+	margin-top: 0;
+	right: 12px;
+	top: -36px;
+}
+   .navbar-brand {
+   padding:0px;
+   }
+   .navbar-light .navbar-nav .nav-link {
+   padding-left:5px;
+   padding-right:5px;
+   }
+   .cMenuPositionRelative {
+   width:auto !important;
+   }
+   .navbar-nav.mr-auto.mt-2.mt-lg-0.float-md-right {
+   float: left !important;
+   }
+   .cMenuPositionRelative {
+   display: inline-block;
+   width: 100% !important;
+   }
+   .cMenuMargin {
+   float:left !important;
+   }
+   .navbar-light .navbar-nav .nav-link {
+   /* background:#212a32; */
+   border-bottom:1px solid #3a4854;
+   font-size: 18px;
+   font-weight: 600;
+   letter-spacing: 0.1rem;
+   }
+   ul.navbar-nav {
+   margin:0 !important;
+   width:100% !important;
+   }
+   .dropdown-toggle::after {
+   display: inline-block;
+   margin-left: .255em;
+   vertical-align: .255em;
+   content: "";
+   border-top: .3em solid;
+   border-right: .3em solid transparent;
+   border-bottom: 0;
+   border-left: .3em solid transparent;
+   font-size: 50px;
+   float: right;
+   margin-top: 14px;
+   }
+   .cSelected.cProducts { margin-left: 0px; }
+   .cSelected.cCustomers { margin-left: 0px; }
+   .cSelected.cPartners { margin-left: 0px; }
+   .cSelected.cCompany { margin-left: 0px; }
+   .cSelected.cSolutions { margin-left: 0px; }
+   .cSelected.cLearn { margin-left: 0px; left;}
+   .cSelected.cLearn.cMenuScroll { margin-right:0px; float: left; }
+   .cSelected.cSupport { margin-right: 570px; left; }
+   .cSelected.cSupport.cMenuScroll { margin-right: 613px; float: left; }
+   .cSelected.cLearn { margin-right: 0px; }
+   .cSelected.cLoginMenuBlock { margin-left: 0px; }
+   .cLoginMenu {
+   display: block;
+   width: 100%;
+   margin: 0;
+   margin-top: -2px;
+   }
+   .cMobileSearch {
+   width:100%;
+   padding: 10px;
+   border:1px solid #ff7300;
+   }
+   a.cLoginLink {
+   margin-top:0;
+   }
+   }
+
+</style> 
+<nav class="cWSO2DeskNav navbar navbar-expand-lg navbar-light sticky-top"> 
+ <div class="container"> <a class="navbar-brand" href="/"><img src="//wso2.cachefly.net/wso2/sites/all/2020-theme/images/wso2-logo.svg" alt="WSO2 Logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile_nav" aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+  <div class="collapse navbar-collapse" id="mobile_nav"> <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-md-right">
+         <li>test</li>
+         </ul> --> 
+   <ul class="navbar-nav  mr-auto mt-2 mt-lg-0 float-md-right"> <!-- <li class="nav-item">
+            </li> --> 
+    <li class="nav-item dropdown megamenu-li dmenu"> <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a> 
+     <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01"> 
+      <div class="container"> 
+       <div class="row cInlineMenuRow"> 
+        <div class="col-md-12"> 
+         <div class="cSelected cProducts"></div> 
+        </div> 
+        <div class="col-sm-12 col-lg-4 border-right cMegamenuCol mb-4"> 
+         <h6>Products</h6> 
+         <div class="row"> 
+          <div class="col-sm-12 col-lg-5 border-right mb-4 cMenuInnerCol"> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/api-management">API Manager</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/integration">Enterprise Integrator</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/identity-and-access-management">Identity Server</a> 
+          </div> 
+          <div class="col-sm-12 col-lg-4"> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/financial/open-banking/">Open Banking</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/healthcare/">Open Healthcare</a> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 border-right cMegamenuCol mb-4"> 
+         <h6>Cloud</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/api-management/cloud">API Cloud</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/integration/cloud/">Integration Cloud</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/identity-and-access-management/cloud">Identity Cloud</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/digital-assets-governance/">Digital Assets Governance</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-2 cMegamenuCol mb-4"> 
+         <h6>Projects</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://ballerina.io/" target="_blank">Ballerina</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 cMegamenuCol mb-4 cAdvert"> 
+         <div class=" cMenuHighlightBox"> <a href="https://wso2.com/blogs/thesource/securing-spas-best-practices/"> <img src="//wso2.cachefly.net/wso2/sites/all/images/2020/securing-spas-best-practices.jpg"> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="nav-item dropdown megamenu-li dmenu"> <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a> 
+     <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01"> 
+      <div class="container"> 
+       <div class="row cInlineMenuRow"> 
+        <div class="col-md-12"> 
+         <div class="cSelected cSolutions"></div> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 border-right cMegamenuCol mb-4"> 
+         <h6>By Industry</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/healthcare/">Healthcare</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/financial/open-banking/">Finance</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/higher-education/">Education</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 border-right cMegamenuCol mb-4"> 
+         <h6>By Technology</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/api-management/">API Management</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/integration/streaming-integrator/">Streaming Integration</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/products/enterprise-service-bus/">Enterprise Service Bus</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/integration/micro-integrator/">Micro Integrator</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/ciam/">CIAM</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/iot/">IoT</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 cMegamenuCol"> 
+         <h6>By Initiative</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/digital-assets-governance/">Digital Assets Governance</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/strategic-consulting/">Strategic Consulting</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/cloud/">Cloud</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/mule-anypoint-migration/">Mule Anypoint Migration</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/regulatory-compliance/gdpr/">GDPR</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 cMegamenuCol mb-4 cAdvert"> 
+         <div class=" cMenuHighlightBox"> <a href="https://wso2.com/whitepapers/governance-for-enterprise-digital-assets/"> <img src="https://wso2.cachefly.net/wso2/sites/all/images/2020/governance-for-enterprise-digital-assets.png"> <!-- <div class="row">
+                                 <div class="col-sm-12 col-md-12 col-lg-12 inlinebox"><img src="//wso2.cachefly.net/wso2/sites/all/2020-theme/library-2020/video-1.svg"></div>
+                                 <div class="col-sm-12 col-md-12 col-lg-12 inlinebox">
+                                    <h3>What’s New With WSO2 Open Banking? </h3>
+                                 </div>
+                                 <div class="col-sm-12 col-md-12 col-lg-12 inlinebox"><span>Watch webinar ></span></div>
+                                 </div> --> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="nav-item dropdown megamenu-li dmenu"> <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a> 
+     <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01"> 
+      <div class="container"> 
+       <div class="row cInlineMenuRow"> 
+        <div class="col-md-12"> 
+         <div class="cSelected cLearn"></div> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 border-right cMegamenuCol mb-4"> 
+         <h6>Events</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/events/webinars">Upcoming Webinars</a> <!-- <a class="cMenuLinkTracking nav-link dropdown-item" href="/events/workshops/" target="_blank">Workshops</a> --> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/summits-2020">Summits</a> <!-- <a class="cMenuLinkTracking nav-link dropdown-item" href="/events/conferences">Conferences</a> --> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/events/">All Events</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 border-right cMegamenuCol mb-4"> 
+         <h6>Learn</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://docs.wso2.com/" target="_blank">Documentation</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/whitepapers/">White Papers</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="http://blog.wso2.com/" target="_blank">Blogs</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/about/customers/">Case Studies</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/library/articles/">Articles</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/library/on-demand-webinars/">On-Demand Webinars</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/training">Training and Certification</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/library/">All Resources</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 border-right cMegamenuCol mb-4"> 
+         <h6>Reference Implementations</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/ciam/">CIAM</a> <!-- <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/healthcare/">Healthcare</a> </li> --> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/higher-education/">Higher Education</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/solutions/regulatory-compliance/gdpr/">GDPR</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/iot/">IoT</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 cMegamenuCol"> 
+         <h6>Agility</h6> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/architecture/">Architecture for Agility</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/methodology/">Methodology for Agility</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="nav-item dropdown megamenu-li dmenu"> <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Company</a> 
+     <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01"> 
+      <div class="container"> 
+       <div class="row cInlineMenuRow"> 
+        <div class="col-md-12"> 
+         <div class="cSelected cCompany"></div> 
+        </div> 
+        <div class="col-sm-12 col-lg-2 border-right cMegamenuCol mb-4"> 
+        </div> 
+        <div class="col-sm-12 col-lg-2 border-right cMegamenuCol mb-2"> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/about">About</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/about/team">Team</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/careers">Careers</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-2 border-right cMegamenuCol mb-2"> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/community">Community</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/research">Research</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/about/news/">News</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 cMegamenuCol mb-4 cAdvert"> 
+         <div class=" cMenuHighlightBox "> <a href="//wso2.com/careers/"> <img src="//wso2.cachefly.net/wso2/sites/all/images/wso2-carrers-smbanner.png"> </a> 
+         </div> 
+        </div> 
+        <div class="col-sm-12 col-lg-3 cMegamenuCol mb-4 cAdvert"> 
+         <div class=" cMenuHighlightBox"> <a href="https://wso2.com/about/news/wso2-promotes-three-executives-to-support-next-level-of-global-growth/"> <img src="//wso2.cachefly.net/wso2/sites/all/2020-theme-november/images/22-01.png"> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> </li> 
+    <li class="nav-item dropdown megamenu-li dmenu"> <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a> 
+     <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01"> 
+      <div class="container"> 
+       <div class="row cInlineMenuRow"> 
+        <div class="col-md-12"> 
+         <div class="cSelected cSupport"></div> 
+        </div> 
+        <div class="col-sm-12 col-lg-4 border-right cMegamenuCol mb-4"> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/subscription">Subscription</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/subscription/#license">Licensing</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/subscription/#updates">Updates</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/subscription/#support">Support</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/subscription/#managed">Managed Services</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-4 border-right cMegamenuCol mb-4"> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/consulting">Consulting</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/consulting/#strategy">Strategy</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/consulting/#architecture">Architecture</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/consulting/#implementation">Implementation</a> <a class="cMenuLinkTracking nav-link dropdown-item" href="https://wso2.com/consulting/#training">Training</a> 
+        </div> 
+        <div class="col-sm-12 col-lg-4 cMegamenuCol"> <a class="cMenuLinkTracking cSupportPortalButton cSupportLoginButton" href="https://support.wso2.com/jira/secure/Dashboard.jspa" target="_blank">Login to Support Portal</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div></li> 
+    <li class="nav-item"> <a class="cMenuLinkTracking nav-link cSingleLink" href="/about/customers">Customers </a> </li> 
+    <li class="nav-item"> <a class="cMenuLinkTracking nav-link cSingleLink" href="/partners"> Partners</a> </li> 
+   </ul> 
+   <div class="cMenuPositionRelative"> 
+    <ul class="navbar-nav navbar-light cMenuMargin"> 
+     <li class="nav-item"> <a class="cMenuLinkTracking  cContactButton" href="/contact/">Contact </a> </li> 
+     <li class="nav-item dmenu dropdown "> <a class="cMenuLinkTracking nav-link cUserLogin dropdown-toggle imagelink cLoginLink" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="https://wso2.cachefly.net/wso2/sites/all/2020-theme/images/wso2-menu-login-icon.svg" class="cMenuIcons lazyloaded" alt="WSO2"> </a> <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Services
+         </a> --> 
+      <div class="dropdown-menu sm-menu cLoginMenu" aria-labelledby="navbarDropdown"> 
+       <div class="cSelected cLoginMenuBlock"></div> 
+       <ul class="nav flex-column cSubmenu "> 
+        <li class="nav-item"><a class="profile nav-link" href="https://wso2.com/user/register" id="iMainMenu-Register">Register</a></li> 
+        <li class="nav-item"><a class="profile nav-link" href="https://wso2.com/user?destination=" id="iMainMenu-Login">Login</a></li> 
+       </ul> 
+      </div> </li> 
+    </ul> 
+    <div id="Exp-serach" class="Exp-serach cDesktopSearch"> 
+     <form class="search-form" method="POST" class="search-form" action="/search/resources/" id="search-top"> 
+      <input class="ExpInput " onkeyup="buttonUp();" placeholder="" onblur="monkey();" type="text" value="" name="key" id="hkey1-top"> 
+      <input class="Expbtn" type="submit" value=""> <span class="ExpIcon"><img src="https://wso2.cachefly.net/wso2/sites/all/2020-theme/images/wso2-menu-search-icon.svg" class="cMenuIcons" alt="WSO2"></span> 
+     </form> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</nav> 
+<script>
+   $(document).ready(function () {
+   $('.navbar-light .dmenu').hover(function () {
+   $(this).find('.sm-menu').first().stop(true, true).fadeIn(100);
+   // $(this).find('.sm-menu').parent(".dmenu").addClass('cActiveMenu');
+   
+   }, function () {
+   $(this).find('.sm-menu').first().stop(true, true).fadeOut(100);
+   // $(this).find('.sm-menu').parent(".dmenu").removeClass('cActiveMenu');
+   });
+   }); 
+   
+   
+   // $(document).ready(function() {
+   // $(".dmenu").hover(function (){
+   //     $('.dmenu').parent(".dmenu").removeClass('cActiveMenu')
+   // };
+   
+   // });
+   
+   
+   
+   
+   
+   
+   
+   // $(document).ready(function() {
+   // $(".megamenu").on("click", function(e) {
+   // e.stopPropagation();
+   // });
+   // });
+   
+   // $(document).ready(function() {
+   //  $('.dropdown').click(false);
+   // $(".dmenu").on("click", function(e) {
+   
+    
+   // });
+   // });
+   
+   
+   
+   
+   $(document).ready(function () {
+   function buttonUp() {
+       var valux = $('.ExpInput').val();
+       valux = $.trim(valux).length;
+       if (valux !== 0) {
+           $('.Expbtn').css('z-index', '99');
+       } else {
+           $('.ExpInput').val('');
+           $('.Expbtn').css('z-index', '-999');
+       }
+   }
+   });
+   
+   $(document).ready(function () {
+   var submitIcon = $('.ExpIcon');
+   var submitInput = $('.ExpInput');
+   var searchBox = $('.Exp-serach');
+   var isOpen = false;
+   
+   $(document).mouseup(function () {
+       if (isOpen == true) {
+           submitInput.val('');
+           $('.Expbtn').css('z-index', '-999');
+           submitIcon.click();
+       }
+   });
+   
+   submitIcon.mouseup(function () {
+       return false;
+   });
+   
+   searchBox.mouseup(function () {
+       return false;
+   });
+   
+   submitIcon.click(function () {
+       if (isOpen == false) {
+           searchBox.addClass('Exp-serach-open');
+           isOpen = true;
+       } else {
+           searchBox.removeClass('Exp-serach-open');
+           isOpen = false;
+       }
+   });
+   
+   });
+</script> <!-- _______________________________________________________ MOBILE ____________________________________________________________________________________________________________________ --> 
+<style>
+   .cWSO2MobileNav .back {
+   color: #212a32;
+   background:#ffffff;
+   }
+   .cWSO2MobileNav header {
+   height: 60px;
+   background-color: #ffffff;
+   position: fixed;
+   width: 100%;
+   top: 0px;
+   padding: 10px 0px;
+   z-index: 99;
+   }
+   .cWSO2MobileNav header .logo-port {
+   padding-left: 15px;
+   width: 40%;
+   }
+   .cWSO2MobileNav header .logo-port img {
+   height: 30px;
+   /* width: 100px; */
+   }
+   /* MINI */
+   body.mmactive {
+   overflow: hidden;
+   }
+   .mobile_menu {
+   /* display: none; */
+   position: relative;
+   }
+   .sm_menu_outer.active .mobile_menu {
+   display: block;
+   }
+   .sm_menu_outer {
+   height: calc(100vh - 60px);
+   overflow-y: scroll;
+   overflow-x: hidden;
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   z-index: -9;
+   width: 100%;
+   opacity: 0;
+   background-color: #212a32;
+   -webkit-transition: opacity 0.2s;
+   -moz-transition: opacity 0.2s;
+   transition: opacity 0.2s;
+   top:52px;
+   }
+   .sm_menu_outer.active {
+   opacity: 1;
+   z-index: 999;
+   }
+   .sm_menu_outer .mobile_menu a {
+   color: #ffffff;
+   display: block;
+   padding: 20px 15px;
+   /* text-transform: uppercase; */
+   text-decoration: none;
+   }
+   /*Sub Menu anim */
+   .sm_menu_outer .mobile_menu li {
+   list-style-type: none;
+   border-bottom: 0.5px solid rgba(0, 0, 0, 0);
+   border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #d7e2de 20%, #d7e2de 50%, #2a2a2a 80%, rgba(0, 0, 0, 0) 100%) 0 0 1 0;
+   color: #ffffff;
+   }
+   /*Hamburger Animation */
+   #sm_menu_ham {
+   cursor: pointer;
+   float: right;
+   height: 25px;
+   position: fixed;
+   right: 5px;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -webkit-transition: all 0.5s ease-in-out 0s;
+   -moz-transition: all 0.5s ease-in-out 0s;
+   -o-transition: all 0.5s ease-in-out 0s;
+   transition: all 0.5s ease-in-out 0s;
+   width: 30px;
+   top: 15px;
+   right: 15px;
+   z-index: 9999;
+   }
+   #sm_menu_ham span {
+   background-color: #212a32;
+   border-radius: 5px;
+   display: block;
+   height: 2px;
+   left: 0;
+   opacity: 1;
+   position: absolute;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+   -webkit-transition: all 0.25s ease-in-out 0s;
+   -moz-transition: all 0.25s ease-in-out 0s;
+   -o-transition: all 0.25s ease-in-out 0s;
+   transition: all 0.25s ease-in-out 0s;
+   width: 30px;
+   }
+   #sm_menu_ham span:nth-child(1) {
+   top: 0;
+   }
+   #sm_menu_ham span:nth-child(2),
+   #sm_menu_ham span:nth-child(3) {
+   top: 10px;
+   }
+   #sm_menu_ham span:nth-child(4) {
+   top: 20px;
+   }
+   #sm_menu_ham.open span:nth-child(1) {
+   left: 50%;
+   top: 18px;
+   width: 0;
+   }
+   #sm_menu_ham.open span:nth-child(2) {
+   -webkit-transform: rotate(45deg);
+   -moz-transform: rotate(45deg);
+   transform: rotate(45deg);
+   }
+   #sm_menu_ham.open span:nth-child(3) {
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   }
+   #sm_menu_ham.open span:nth-child(4) {
+   left: 50%;
+   top: 18px;
+   width: 0;
+   }
+   .sm_menu_outer.accordion .mobile_menu .submenu, 
+   .sm_menu_outer.accordion .mobile_menu li.hasChild ul.submenu {
+   display: none;
+   }
+   .sm_menu_outer.accordion .mobile_menu .hasChild > .submenu li {
+   padding-left: 20px;
+   }
+   .sm_menu_outer.accordion .mobile_menu li.active > .submenu {
+   right: auto;
+   }
+   .sm_menu_outer.accordion .mobile_menu li.hasChild > a {
+   position: relative;
+   }
+   .sm_menu_outer.accordion .mobile_menu li.hasChild > a::before {
+   position: absolute;
+   content: '';
+   background: url("//wso2.cachefly.net/wso2/sites/all/2020-theme-november/images/mobile-menu/next.png") no-repeat scroll 50% center / 60% auto;
+   right: 10px;
+   top: 20px;
+   width: 30px;
+   height: 25px;
+   transition: all 0.19s ease;
+   }
+   .sm_menu_outer.accordion .mobile_menu li.hasChild.active > a::before {
+   transform: rotate(89deg);
+   transition: all 0.19s ease;
+   }
+   .cSubmenuBlock h6 {
+   color: #a3a3a3;
+   margin-left: 0;
+   font-weight: 600;
+   /* border-bottom: 3px solid #ff7300; */
+   display: inline-block;
+   padding-bottom: 8px;
+   margin-bottom: 14px;
+   margin-top:20px !important;
+   margin-top: 0;
+   padding-top: 0;
+   text-transform: uppercase;
+   letter-spacing: 0.15rem;
+   }
+   .submenu , .mobile_menu {
+   margin-left:0;
+   }
+   .submenu  {
+   background:#35424d;
+   padding-top: 20px;
+   padding-bottom:20px;
+   }
+   .cMobileInput {
+   position: absolute;
+   z-index: 999999;
+   right: 0;
+   height: 46px;
+   width: 60px;
+   background: url("//wso2.cachefly.net/wso2/sites/all/2020-theme/images/wso2-menu-search-icon.svg");
+   background-color: transparent;
+   border: none;
+   background-size: 30px;
+   background-position: center;
+   background-repeat: no-repeat;
+   }
+   .sm_menu_outer a.cContactButton {
+   margin: 0;
+   border-radius: 0;
+   }
+   @media (min-width: 1024px) {
+   /* #sm_menu_ham,
+   .sm_menu_outer {
+   display: none;
+   } */
+   }
+</style> 
+<script>
+   !function(s){var e={hamburgerId:"sm_menu_ham",wrapperClass:"sm_menu_outer",submenuClass:"submenu",menuStyle:"slide",onMenuLoad:function(){return!0},onMenuToggle:function(){return!0}};s.fn.simpleMobileMenu=function(t){if(0===this.length)return this;var n={},i=s(this),a=function(){n.hamburger=s("<div/>",{id:n.settings.hamburgerId,html:"<span></span><span></span><span></span><span></span>"}),n.smmOuter=s("<div/>",{class:n.settings.wrapperClass+" "+n.styleClass}),i.appendTo(n.smmOuter),n.hamburger.add(n.smmOuter).appendTo(s("body"))},l=function(){n.smmOuter.find("ul."+n.settings.submenuClass).each(function(){var e=s(this),t=e.closest("li"),i=t.find("> a"),a=s("<li/>",{class:"back",html:"<a href='#'>"+i.text()+"</a>"});t.addClass("hasChild"),"slide"===n.settings.menuStyle.toLowerCase()&&a.prependTo(e)})};n.settings=s.extend({},e,t),n.styleClass="slide"===n.settings.menuStyle.toLowerCase()?"slide":"accordion",a(),l(),"function"==typeof n.settings.onMenuLoad&&n.settings.onMenuLoad(i),n.hamburger.click(function(e){s("#"+n.settings.hamburgerId).toggleClass("open"),s("."+n.settings.wrapperClass).toggleClass("active").find("li.active").removeClass("active"),s("body").toggleClass("mmactive"),"accordion"===n.settings.menuStyle.toLowerCase()&&s("."+n.settings.wrapperClass).find("ul."+n.settings.submenuClass).hide(),"function"==typeof n.settings.onMenuToggle&&n.settings.onMenuToggle(i,s("#"+n.settings.hamburgerId).hasClass("open"))}),n.smmOuter.filter(".slide").find("li.hasChild > a").click(function(e){s("."+n.settings.wrapperClass).scrollTop(0),s(this).parent().addClass("active").siblings().removeClass("active")}),n.smmOuter.filter(".accordion").find("li.hasChild > a").click(function(e){e.preventDefault();var t=s(this),i=s(this).parent(),a=i.siblings(".active");i.find("> ."+n.settings.submenuClass).slideToggle(function(){if(s(this).is(":visible")){var e=t[0].offsetTop;s("."+n.settings.wrapperClass).stop().animate({scrollTop:e},300)}}),a.find("ul."+n.settings.submenuClass).slideUp(function(){s(this).find(".hasChild").removeClass("active")}),i.toggleClass("active").siblings().removeClass("active")}),n.smmOuter.find("li.back a").click(function(e){e.preventDefault(),s(this).closest("ul."+n.settings.submenuClass).parent().removeClass("active")})}}(jQuery);
+</script> 
+<div class="cWSO2MobileNav"> 
+ <header> 
+  <div class="logo-port">
+   <a href="/"><img src="//wso2.cachefly.net/wso2/sites/all/2020-theme/images/wso2-logo.svg"></a>
+  </div> 
+ </header> 
+ <ul class="mobile_menu"> 
+  <li> 
+   <form class="search-form cMobileSearchForm" method="POST" class="" action="/search/resources/" id="search-top"> 
+    <input class="cMobileSearch" onkeyup="buttonUp();" placeholder="Search" onblur="monkey();" type="text" value="" name="key" id="hkey-top"> 
+    <input class="cMobileInput" type="submit" value=""> <!-- <span class="ExpIcon"><img src="https://wso2.cachefly.net/wso2/sites/all/2020-theme/images/wso2-menu-search-icon.svg" class="cMenuIcons" alt="WSO2"/></span> --> 
+   </form> </li> 
+  <li> <a>Products</a> 
+   <ul class="submenu cSubmenuBlock"> 
+    <li> <h6>Products</h6> </li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/api-management">API Manager</a></li> 
+    <li><a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/integration">Enterprise Integrator</a></li> 
+    <li><a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/identity-and-access-management">Identity Server</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/financial/open-banking/">Open Banking</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/healthcare/">Open Healthcare</a></li> 
+    <li> <h6>Cloud</h6> </li> 
+    <li><a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/api-management/cloud">API Cloud</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/integration/cloud/">Integration Cloud</a></li> 
+    <li><a class="cMenuLinkTrcMenuLinkTrackingMobile acking nav-link dropdown-item" href="https://wso2.com/identity-and-access-management/cloud">Identity Cloud</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/digital-assets-governance/">Digital Assets Governance</a></li> 
+    <li> <h6>Projects</h6> </li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://ballerina.io/" target="_blank">Ballerina</a></li> 
+    <div class="col-sm-12 col-lg-3 cMegamenuCol mb-4 cAdvert"> 
+     <div class=" cMenuHighlightBox"> <a href="https://wso2.com/blogs/thesource/securing-spas-best-practices/"> <img src="//wso2.cachefly.net/wso2/sites/all/images/2020/securing-spas-best-practices.jpg"> <!-- <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 inlinebox"><img src="//wso2.cachefly.net/wso2/sites/all/2020-theme/library-2020/article-1.svg"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 inlinebox">
+                           <h3>Deploying WSO2 API Manager in a Multi-DC Environment </h3>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 inlinebox"><span>Read Article ></span></div>
+                        </div> --> </a> 
+     </div> 
+    </div> 
+   </ul> </li> 
+  <li> <a>Solutions</a> 
+   <ul class="submenu cSubmenuBlock"> 
+    <li> <h6>By Industry</h6> </li> 
+    <li> <a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/solutions/healthcare/">Healthcare</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/solutions/financial/open-banking/">Finance</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/higher-education/">Education</a></li> 
+    <li> <h6>By Technology</h6> </li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/api-management/">API Management</a> </li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/integration/streaming-integrator/">Streaming Integration</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/products/enterprise-service-bus/">Enterprise Service Bus</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/integration/micro-integrator/">Micro Integrator</a></li> 
+    <li><a class="cMenuLinkTrackingMobile  nav-link dropdown-item" href="https://wso2.com/solutions/ciam/">CIAM</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/iot/">IoT</a></li> 
+    <li> <h6>By Initiative</h6> </li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/digital-assets-governance/">Digital Assets Governance</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/strategic-consulting/">Strategic Consulting</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/cloud/">Cloud</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/mule-anypoint-migration/">Mule Anypoint Migration</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/regulatory-compliance/gdpr/">GDPR</a></li> 
+    <div class="col-sm-12 col-lg-3 cMegamenuCol mb-4 cAdvert"> 
+     <div class=" cMenuHighlightBox"> <a href="https://wso2.com/whitepapers/governance-for-enterprise-digital-assets/"> <img src="https://wso2.cachefly.net/wso2/sites/all/images/2020/governance-for-enterprise-digital-assets.png"> <!-- <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 inlinebox"><img src="//wso2.cachefly.net/wso2/sites/all/2020-theme/library-2020/video-1.svg"></div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 inlinebox">
+                           <h3>What’s New With WSO2 Open Banking? </h3>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 inlinebox"><span>Watch webinar ></span></div>
+                        </div> --> </a> 
+     </div> 
+    </div> 
+   </ul> </li> 
+  <li> <a>Resources</a> 
+   <ul class="submenu cSubmenuBlock"> 
+    <li> <h6>Events</h6> </li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/events/webinars">Upcoming Webinars</a></li> <!-- <li>  <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="/events/workshops/" target="_blank">Workshops</a></li> --> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/summits-2020">Summits</a></li> <!-- <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="/events/conferences">Conferences</a></li> --> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/events/">All Events</a></li> 
+    <li> <h6>Learn</h6> </li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://docs.wso2.com/" target="_blank">Documentation</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/whitepapers/">White Papers</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="http://blog.wso2.com/" target="_blank">Blogs</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/about/customers/">Case Studies</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/library/articles/">Articles</a></li> 
+    <li><a class="cMenuLinkcMenuLinkTrackingMobileTracking nav-link dropdown-item" href="/library/on-demand-webinars/">On-Demand Webinars</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/training">Training and Certification</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/library/">All Resources</a></li> 
+    <li> <h6>Reference Implementations</h6> </li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/ciam/">CIAM</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/higher-education/">Higher Education</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/solutions/regulatory-compliance/gdpr/">GDPR</a></li> 
+    <li> <h6>Agility</h6> </li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="/architecture/">Architecture for Agility</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="/methodology/">Methodology for Agility</a></li> 
+   </ul> </li> 
+  <li> <a>Company</a> 
+   <ul class="submenu cSubmenuBlock"> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/about">About</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/about/team">Team</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/careers">Careers</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/community">Community</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/research">Research</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/about/news/">News</a></li> 
+    <div class="col-sm-12 col-lg-3 cMegamenuCol mb-4 cAdvert"> 
+     <div class=" cMenuHighlightBox "> <a href="//wso2.com/careers/"> <img src="//wso2.cachefly.net/wso2/sites/all/images/wso2-carrers-smbanner.png"> </a> 
+     </div> 
+     <div class=" cMenuHighlightBox"> <a href="https://wso2.com/about/news/wso2-promotes-three-executives-to-support-next-level-of-global-growth/"> <img src="//wso2.cachefly.net/wso2/sites/all/2020-theme-november/images/22-01.png"> </a> 
+     </div> 
+    </div> 
+   </ul> </li> 
+  <li> <a>Support</a> 
+   <ul class="submenu cSubmenuBlock"> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/subscription">Subscription</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/subscription/#license">Licensing</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/subscription/#updates">Updates</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/subscription/#support">Support</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/subscription/#managed">Managed Services</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/consulting">Consulting</a></li> 
+    <li> <a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/consulting/#strategy">Strategy</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/consulting/#architecture">Architecture</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/consulting/#implementation">Implementation</a></li> 
+    <li><a class="cMenuLinkTrackingMobile nav-link dropdown-item" href="https://wso2.com/consulting/#training">Training</a></li> 
+    <li><a class="cMenuLinkTrackingMobile cSupportPortalButton cSupportLoginButton" href="https://support.wso2.com/jira/secure/Dashboard.jspa" target="_blank">Login to Support Portal</a></li> 
+   </ul> </li> 
+  <li> <a class="cMenuLinkTrackingMobile nav-link " href="/about/customers">Customers </a> </li> 
+  <li> <a class="cMenuLinkTrackingMobile nav-link " href="/partners"> Partners</a> </li> 
+  <li> <a class="cMenuLinkTrackingMobile  cContactButton" href="/contact/">Contact </a> </li> 
+  <li> <a>Profile</a> 
+   <ul class="submenu cSubmenuBlock"> 
+    <li class="nav-item"><a class="profile nav-link" href="https://wso2.com/user/register" id="iMainMenu-Register">Register</a></li> 
+    <li class="nav-item"><a class="profile nav-link" href="https://wso2.com/user?destination=" id="iMainMenu-Login">Login</a></li> 
+   </ul> </li> 
+ </ul> 
+</div> 
+<script>
+   $(document).ready(function() {
+       $(".mobile_menu").simpleMobileMenu({
+           onMenuLoad: function(menu) {
+               console.log(menu)
+               console.log("menu loaded")
+           },
+           onMenuToggle: function(menu, opened) {
+               console.log(opened)
+           },
+           "menuStyle": "accordion"
+       });
+   })
+</script> 
+<section class=" cHomepageHeader cDesktopHeader"> 
+ <div class="container"> 
+  <div class="row"> 
+   <div class="col-sm-12 col-md-8 col-lg-8 cIntroContent"> 
+    <h1>Next-generation technologies to future-proof your business</h1> <a id="iHOMEMainCTA" class="cVideoLink video-btn cButton" data-toggle="modal" data-src="https://www.youtube.com/embed/f_LGM_z0jMc" data-target="#WSO2-Intro">Learn More </a> 
+   </div> 
+   <div class="col-sm-12 col-md-4 col-lg-4 cIntroContent"></div> 
+  </div> 
+ </div> 
+</section> <!-- <section class="cWhiteBG cHomepageHeader cDesktopHeader">
+        <div class="bg-video-wrap">
+          <video src="https://wso2.cachefly.net/wso2/sites/all/2020-theme-november/images/intro-opt.mp4" loop muted autoplay>   
+          </video>
+          <div class="overlay">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 cIntroContent">
+                  <h1>Next-generation technologies to future-proof your business</h1>        
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 cIntroContent"></div>
+                <div class="col-sm-12 col-md-4 col-lg-4 cIntroContent" style="text-align:center;">
+                  <a class="cVideoLink video-btn cButton" data-toggle="modal" data-src="https://www.youtube.com/embed/f_LGM_z0jMc" data-target="#WSO2-Intro">Learn More </a>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 cIntroContent"></div>
+              </div>
+            </div>   
+          </div>
+        </div>   
+      </section> --> <!-- <section class="cWhiteBG cHomepageHeader cMobileHeader">
+     
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 cIntroContent">
+                  <h1>Next-generation technologies to future-proof your business</h1>        
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 cIntroContent"></div>
+                <div class="col-sm-12 col-md-4 col-lg-4 cIntroContent" style="text-align:center;">
+                  <a class="cVideoLink video-btn cButton" id="iHomeMainCTA" data-toggle="modal" data-src="https://www.youtube.com/embed/f_LGM_z0jMc" data-target="#WSO2-Intro">Learn More </a>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 cIntroContent"></div>
+              </div>
+         
+      </section> --> 
+<section class="cDarkGreyBG cAnalystReports"> 
+ <div class="container"> 
+  <div class="row cHighlightedRow"> 
+   <div class="col-sm-12 col-md-12 col-lg-12"> 
+    <div class="cHighlighted cCitations"> 
+     <div class="col-sm-12 col-md-12 col-lg-4"> <a id="iHOME-Forrester-APIM-CTA" href="https://wso2.com/resources/analyst-reports/the-forrester-wave-api-management-solutions-q3-2020/?utm_source=wso2.com%2Fhome_page&amp;utm_medium=banner&amp;utm_campaign=forrester_wave_2020"> 
+       <div class="cFrorresterAPIM"> 
+        <div class="cReport"> 
+         <h3>WSO2 API MANAGER named</h3> 
+         <h2>A Leader</h2> 
+         <h4>in The Forrester Wave<span class="cSuper">TM</span>: API Management Solutions, Q3 2020</h4> 
+        </div> 
+        <div class="cCTA">
+         Learn More &gt;
+        </div> 
+        <div>
+         <img class="cAnalystLogo" src="//wso2.cachefly.net/wso2/sites/all/forrester-cdn/images/forrester-logo-black.svg" alt="Forrester">
+        </div> 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-12 col-md-12 col-lg-4"> <a id="iHOME-Forrester-IS-CTA" href="https://wso2.com/resources/analyst-reports/kuppingercole-leadership-compass-ciam-platforms/"> 
+       <div class="cKuppingercoleCIAM"> 
+        <div class="cReport"> 
+         <h3>WSO2 IDENTITY SERVER named</h3> 
+         <h2>An Overall Leader</h2> 
+         <h4>in The KuppingerCole Leadership Compass: CIAM Platforms, 2020</h4> 
+        </div> 
+        <div class="cCTA">
+         Learn More &gt;
+        </div> 
+        <div>
+         <img class="cAnalystLogo" src="//wso2.cachefly.net/wso2/sites/all/2020-theme-november/images/kuppingercole-logo-black.svg" alt="Kuppingercole">
+        </div> 
+       </div> </a> 
+     </div> 
+     <div class="col-sm-12 col-md-12 col-lg-4"> <a id="iHOME-Forrester-IS2-CTA" href="https://wso2.com/resources/analyst-reports/the-forrester-wave-customer-identity-and-access-management-q4-2020/"> 
+       <div class="cFrorresterCIAM"> 
+        <div class="cReport"> 
+         <h3>WSO2 IDENTITY SERVER named</h3> 
+         <h2>A Strong Performer</h2> 
+         <h4>in The Forrester Wave<span class="cSuper">TM</span>: Customer Identity and Access Management, Q4 2020</h4> 
+        </div> 
+        <div class="cCTA">
+         Learn More &gt;
+        </div> 
+        <div>
+         <img class="cAnalystLogo" src="//wso2.cachefly.net/wso2/sites/all/forrester-cdn/images/forrester-logo-black.svg" alt="Forrester">
+        </div> 
+       </div> </a> 
+     </div> 
+     <div class="clearfix"></div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</section> 
+<section class="cDarkGreyBG cProductsSolutions"> 
+ <div class="container"> 
+  <div class="row"> 
+   <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card cProductCard"> 
+     <div class="cCardIcon"> 
+      <svg class="card-img-top" viewbox="0 0 190.9 75" xmlns="http://www.w3.org/2000/svg">
+       <g fill="none" stroke-miterlimit="10">
+        <circle cx="25.9" cy="37.5" r="24.9" stroke="#d7e2de" stroke-width="2.1" />
+        <circle cx="164.9" cy="37.5" r="24.9" stroke="#d7e2de" stroke-width="2.1" />
+        <g stroke="#ff7300">
+         <path d="M50.8 40.1l32.6-.1c1 0 1.8-.6 2.2-1.4l7-14.8c.5-1 2-1 2.4.1l8.9 21.7c.4 1.1 2 1.2 2.5.1l3.4-6.6c.4-.8 1.3-1.4 2.2-1.4h28" stroke-width="2.5" />
+         <circle cx="95.4" cy="37.5" r="36" stroke-width="3" />
+        </g>
+       </g>
+      </svg> 
+     </div> 
+     <div class="card-body"> 
+      <h5 class="card-title">Harness the full power of your APIs to optimize business performance. </h5> 
+      <p class="card-text">API Management</p> <a id="iHOME-APIM-CTA" href="/api-management" class="cButton">GET STARTED &gt;</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card cProductCard"> 
+     <div class="cCardIcon"> 
+      <svg class="card-img-top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 191.9 75.1" xml:space="preserve">
+       <style>.st6{fill:none;stroke:#d7e2de;stroke-width:2;stroke-miterlimit:10}</style><path d="M67.3 40.6l17.2-.1c.9 0 1.6-.5 2-1.3L92.7 26c.4-.9 1.8-.9 2.1.1l7.9 19.3c.4 1 1.8 1 2.2.1l3-5.8c.4-.7 1.2-1.2 2-1.2H130" fill="none" stroke="#ff7300" stroke-width="2.5" stroke-miterlimit="10" /><path class="st6" d="M55 43.2l5.8-.6.4-7.9-5.8-1.1c-.4-2.6-1.2-5-2.4-7.2l4.1-4.2-4.8-6.3-5.3 2.9c-1.9-1.6-4-2.9-6.3-3.9l.4-5.9-7.7-1.7-2.2 5.7c-2.5 0-5 .4-7.3 1.1l-3.6-4.9-7 3.6 2 5.9a24.8 24.8 0 00-4.8 5.4l-6-1.5-3 7.3 5.4 3.3a25.4 25.4 0 00-.3 7.1L1.2 43l2.4 7.5 6.3-1c1.2 2.1 2.7 4 4.4 5.6l-2.5 5.7 6.6 4.2 4.1-4.7c2.2.8 4.6 1.4 7.1 1.5l1.7 5.9 7.8-1 .1-6.1c2.4-.8 4.6-2 6.5-3.4l4.9 3.3 5.3-5.8-3.8-4.7c1.4-2 2.3-4.4 2.9-6.8z" /><circle class="st6" cx="31.2" cy="37.5" r="13.9" /><path class="st6" d="M184.8 42.9l5.8-.7.3-7.9-5.8-1.1c-.4-2.5-1.3-4.9-2.4-7.1l4-4.3-4.9-6.2-5.2 3a23 23 0 00-6.4-3.8l.3-5.9-7.7-1.6-2.1 5.7c-2.5 0-4.9.4-7.2 1.2l-3.6-4.9-7 3.7 2.1 5.9a26.8 26.8 0 00-4.7 5.4l-6-1.4-2.9 7.3 5.5 3.2a25.5 25.5 0 00-.1 7.1l-5.6 2.8 2.4 7.5 6.3-1.1c1.2 2.1 2.7 4 4.4 5.6l-2.5 5.7 6.7 4.2 4.1-4.8c2.2.8 4.6 1.3 7.1 1.5l1.7 5.9 7.8-1.1v-6.1c2.4-.8 4.5-2 6.5-3.5l5 3.3 5.3-5.9-3.8-4.6c1.1-2.2 2-4.5 2.6-7z" /><circle class="st6" cx="160.9" cy="37.5" r="13.9" /><path d="M114.9 59.9l6 3.5 5.8-7.3-4.8-5.2c1.4-2.7 2.3-5.6 2.7-8.5l6.9-1.2-.2-9.4-7.1-.9a28 28 0 00-3.4-8.2l4.5-5.4-6.2-7-6.1 4a27 27 0 00-7.7-4V3.1L96 1.7l-2.2 7.1a30 30 0 00-8.4 1.8l-4.7-5.7-8 4.9 2.9 7c-.9.9-1.8 1.8-2.6 2.9-1 1.2-1.8 2.5-2.6 3.8l-7.3-1.3-3 8.9 6.7 3.4c-.3 2.8-.2 5.7.3 8.5l-6.4 3.7 3.4 8.7 7.3-1.7c1.5 2.4 3.5 4.5 5.7 6.4l-2.5 6.8 8.2 4.5 4.4-5.8c2.8.9 5.8 1.3 8.7 1.3l2.4 6.7 9.2-1.9-.4-7.1a29 29 0 007.8-4.7z" fill="none" stroke="#ff7300" stroke-width="2.8" stroke-miterlimit="10" />
+      </svg> 
+     </div> 
+     <div class="card-body"> 
+      <h5 class="card-title">Speed application development with the fastest integration runtime available in the market.</h5> 
+      <p class="card-text">Enterprise Integration</p> <a id="iHOME-EI-CTA" href="/integration" class="cButton">GET STARTED &gt;</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card cProductCard"> 
+     <div class="cCardIcon"> 
+      <svg class="card-img-top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 190.8 74" xml:space="preserve">
+       <style>.st0{fill:#d7e2de}.st11{fill:none;stroke:#d7e2de;stroke-width:2;stroke-miterlimit:10}</style><path class="st0" d="M40.3 36.2c.8-1.8 2.8-7.1.3-8.5-2.9-1.7-4.1 5.3-4.3 6.7-.4 2.4-.5 7.2 3.1 7.4 3.3.1 4.7-4.6 5-7.1.1-.6-.8-.6-.9-.1-.6 1.6-1.1 3.8-2.5 4.9-4 3.2-3.6-4.4-3.2-6.1l.6-2.3c.1-.5-.3.4.4-1.4.7-1.7 1.9-1 2 .6.1 1.6-.7 4.8-1.1 5.8-.1.1.5.4.6.1z" /><path class="st0" d="M44.7 32.1c.9-4.1-1.5-10.7-6.9-8.5-6 2.5-5.5 25.6-15.1 19.4-.5-.3-1 .5-.5.8 3.2 1.9 6.7.4 8.6-2.7 1.4-2.2 1.9-4.9 2.6-7.4.4-1.6.8-3.2 1.4-4.7 2.1-5.4 7-7.3 9.1-1.3.3 1.4.3 2.8.2 4.2.1.4.5.5.6.2z" /><path class="st0" d="M47.8 50.7c-3.6 1.4-7.9 2.4-11.6.6-5.3-2.6-5.1-8.5-3.9-13.5.1-.4-.4-.5-.5-.1-1.7 4.8-1.3 10.9 3.5 13.8 3.7 2.3 8.9 1.6 12.5-.8z" /><path class="st0" d="M39.2 44.7c9.2 3.7 10.7-15.2 8.6-20.2a8.3 8.3 0 00-8.4-5.2c-4.7.4-7.2 4.2-9 8.1-.1.2.2.3.3.1 2.7-7.5 14.4-10.3 16.7-.9 1.6 6.2.1 17.4-8.2 17.8v.3zM29.3 31.1l-1.9 5.2c-.7 2.1-1.9 4-4.5 3.2-.9-.3-1.3 1.2-.4 1.4 5.6 1.3 6.2-6 6.8-9.8z" /><path class="st0" d="M49.1 21.5c3.2 6.3 3.3 13.1.4 19.6-2.2 5-11.3 11.3-13.4 1.3a22 22 0 012-12.1c.2-.5-.5-.9-.7-.4-1.9 4.3-4.9 11.5-2.1 16.1 2.1 3.4 6.4 4 9.8 2.3 8.8-4.4 10.4-20.1 4.8-27.3-.4-.5-1 .1-.8.5zM48.3 19.5c-3.2-4.5-9.7-5.2-14.4-2.7-6.4 3.3-8 11.7-9.3 18.1 0 .1.1.1.1 0 1.7-4.8 2.8-10.1 6.2-14 5-5.9 11.3-4.6 17.2-1.1.1.1.3-.1.2-.3zM43.8 56.3c-5.8-.2-14.2-2.5-15.7-9-.1-.3-.4-.4-.7-.4-1.9.6-3.9.7-5.8.2-.9-.1-1 1.1-.2 1.2 1.1.1 3.7-.4 4.6 0 1.3.5.7.4 1.6 1.7.9 1.2 1.6 2.3 2.9 3.2 3.8 2.8 8.7 3.7 13.3 3.1 0 .1 0 0 0 0zM37.4 58.4c-2.6-.6-5.1-.9-7.4-2.2a20.8 20.8 0 01-6.1-5.7c-.6-.8-1.9 0-1.3.8 3.1 4.3 9.4 8 14.8 7.1.1.1.1 0 0 0z" /><path d="M73.4 39H81c1 0 2-.6 2.4-1.6L91 21.3c.5-1.1 2.1-1.1 2.6.1l9.7 23.6a1.5 1.5 0 002.7.1l3.7-7.1c.5-.9 1.4-1.5 2.4-1.5h5.5" fill="none" stroke="#ff7300" stroke-width="2.5" stroke-miterlimit="10" /><g>
+        <path class="st11" d="M137.6 33h32.3v21.5h-32.3zM164.5 33v-6.7c0-5.9-4.8-10.7-10.7-10.7S143 20.4 143 26.3V33h21.5z" />
+       </g><circle class="st11" cx="37" cy="37" r="36" /><circle class="st11" cx="153.8" cy="37" r="36" />
+      </svg> 
+     </div> 
+     <div class="card-body"> 
+      <h5 class="card-title">Effectively build API-driven CIAM solutions that delight customers.</h5> 
+      <p class="card-text">Identity &amp; Access Management</p> <a id="iHOME-IS-CTA" href="/identity-and-access-management" class="cButton">GET STARTED &gt;</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card cProductCard"> 
+     <div class="cCardIcon"> 
+      <svg class="card-img-top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 221.7 74.2" xml:space="preserve">
+       <style>.st366{fill:none;stroke:#ff7300;stroke-width:2.25;stroke-miterlimit:10}</style><circle cx="37.1" cy="37.1" r="36" fill="none" stroke="#d7e2de" stroke-width="2.3" stroke-miterlimit="10" /><path class="st366" d="M15.5 29.8l22-11.8 21.2 11.8M58.7 52H15.5M22.4 29.8V52M30.1 29.8V52M37.8 29.8V52M45.5 29.8V52M53.2 29.8V52" /><circle cx="188.8" cy="37.1" r="32" fill="none" stroke="#d7e2de" stroke-width="1.8" stroke-miterlimit="10" /><path d="M53.2 42l34.1-.2a5 5 0 004.6-3l14.4-30.5c1-2.1 4.1-2.1 4.9.1L129.5 53c.9 2.2 4 2.4 5.2.2l7-13.5a5.3 5.3 0 014.6-2.8l10.5.1" fill="none" stroke="#ff7300" stroke-width="2.5" stroke-miterlimit="10" />
+      </svg> 
+     </div> 
+     <div class="card-body"> 
+      <h5 class="card-title">Speed regulatory compliance, reduce outcome risk, and facilitate API-led digital initiatives.</h5> 
+      <p class="card-text">Open Banking</p> <a id="iHOME-OB-CTA" href="/solutions/financial/open-banking/" class="cButton">GET STARTED &gt;</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card cProductCard"> 
+     <div class="cCardIcon"> 
+      <svg class="card-img-top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 221.7 74.2" xml:space="preserve">
+       <style></style><g fill="none" stroke-miterlimit="10">
+        <circle cx="37.1" cy="37.1" r="36" stroke="#d7e2de" stroke-width="2.3" />
+        <path stroke="#ff7300" stroke-width="2" d="M52.9 30.1h-8.7v-8.7H30.1v8.7h-8.7v14.1h8.7v8.7h14.1v-8.7h8.7z" />
+        <circle cx="188.8" cy="37.1" r="32" stroke="#d7e2de" stroke-width="1.8" />
+        <path d="M53.2 37.4l32.9-.2a5 5 0 004.5-2.9L104.4 3c1-2.1 3.9-2 4.8.1l17.6 43a2.7 2.7 0 005 .2l6.8-13a5 5 0 014.5-2.7l14.1.1" stroke="#ff7300" stroke-width="2.5" />
+       </g>
+      </svg> 
+     </div> 
+     <div class="card-body"> 
+      <h5 class="card-title">Fast-track API-driven compliance, healthcare interoperability, and digital business innovation.</h5> 
+      <p class="card-text">Open Healthcare</p> <a id="iHOME-OH-CTA" href="/solutions/healthcare/" class="cButton">GET STARTED &gt;</a> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="col-sm-12 col-md-6 col-lg-4"> 
+    <div class="card cProductCard"> 
+     <div class="cCardIcon"> 
+      <svg class="card-img-top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 221.7 75" xml:space="preserve">
+       <style></style><path d="M133.4 42.8l-61.9.1c-.6 0-1.4-.5-1.6-1.1l-6.2-15c-.2-.6-.7-.6-.9 0L51.6 51.6c-.3.6-.7.6-.9 0l-7.9-19.2c-.2-.6-.7-.6-.9 0l-4.2 9.4c-.3.6-1 1.1-1.6 1.1H0" fill="none" stroke="#d7e2de" stroke-width="1.8" stroke-miterlimit="10" /><path d="M115.1 43.1l16.6-.1c1.4 0 2.6-.8 3.2-2.1l10-21.2a1.8 1.8 0 013.4.1L161 50.9c.6 1.6 2.8 1.7 3.6.2l4.9-9.4a3.6 3.6 0 013.2-1.9h48.9" fill="none" stroke="#ff7300" stroke-width="2.5" stroke-miterlimit="10" /><circle cx="150" cy="37.5" r="36" fill="none" stroke="#ff7300" stroke-width="3" stroke-miterlimit="10" />
+      </svg> 
+     </div> 
+     <div class="card-body"> 
+      <h5 class="card-title">Streamline your business objectives and rapidly achieve key results.</h5> 
+      <p class="card-text">Strategic Consulting</p> <a id="iHOME-SC-CTA" href="/strategic-consulting/" class="cButton">GET STARTED &gt;</a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</section> 
+<section class="cWhiteBG cCustomers"> 
+ <div class="container"> 
+  <div class="row"> 
+   <div class="col-sm-12 col-md-1 col-lg-1"></div> 
+   <div class="col-sm-12 col-md-12 col-lg-10"> 
+    <h3> Today, hundreds of the world’s largest corporations, leading universities, and governments rely on our open-source, cloud-native, and uniquely extensible products and industry solutions. Together, we execute in excess of 6 trillion transactions, expose more than 200,000 APIs, and manage over 100 million identities every single year. </h3> <a href="https://wso2.com/about/customers"> 
+     <div class="cCustomerLogos"> 
+      <img class="cCustomersDesktop" src="//wso2.cachefly.net/wso2/sites/all/2020-theme-november/images/customer-logos-homepage.png" alt="WSO2 Customers"> 
+      <img class="cCustomersMobile" src="//wso2.cachefly.net/wso2/sites/all/2020-theme-november/images/customer-logos-homepage-mobile.png" alt="WSO2 Customers"> 
+     </div> </a> 
+   </div> 
+   <div class="col-sm-12 col-md-1 col-lg-1"></div> 
+   <div class="col-sm-12 col-md-12 col-lg-12"> 
+    <svg class="cQuoteOpenDesktop" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 1382.1 69" xml:space="preserve">
+     <style>.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#465867;stroke:#465867;stroke-width:1.1316;stroke-miterlimit:10}.st2{fill:#ffc808}</style><path fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#465867" stroke-width="1.1" stroke-miterlimit="10" d="M68.5 34.5h1245.1" /><circle class="st1" cx="34.5" cy="34.5" r="33.9" /><path class="st2" d="M33.2 49.2H17.5V37.1c0-4.4.9-8 2.8-10.5 1.8-2.6 5-4.8 9.5-6.8l3.4 6.4a15.4 15.4 0 00-5.7 3.9 8.2 8.2 0 00-1.8 4.6h7.5v14.5zm18.3 0H35.8V37.1c0-4.4.9-8 2.8-10.5 1.8-2.6 5-4.8 9.5-6.8l3.4 6.4a15.4 15.4 0 00-5.7 3.9 8.2 8.2 0 00-1.8 4.6h7.5v14.5z" /><g>
+      <circle class="st1" cx="1347.6" cy="34.5" r="33.9" />
+      <path class="st2" d="M1348.9 19.8h15.7v12.1c0 4.4-.9 8-2.8 10.5-1.8 2.6-5 4.8-9.5 6.8l-3.4-6.4c2.8-1.3 4.7-2.6 5.7-3.9a8.2 8.2 0 001.8-4.6h-7.5V19.8zm-18.3 0h15.7v12.1c0 4.4-.9 8-2.8 10.5-1.8 2.6-5 4.8-9.5 6.8l-3.4-6.4c2.8-1.3 4.7-2.6 5.7-3.9a8.2 8.2 0 001.8-4.6h-7.5V19.8z" />
+     </g>
+    </svg> 
+    <svg class="cQuoteOpenMobile" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 69 69">
+     <circle cx="34.5" cy="34.5" r="33.9" fill-rule="evenodd" clip-rule="evenodd" fill="#465867" stroke="#465867" stroke-width="1.1" stroke-miterlimit="10" /><path d="M33.2 49.2H17.5V37.1c0-4.4.9-8 2.8-10.5 1.8-2.6 5-4.8 9.5-6.8l3.4 6.4a15.4 15.4 0 00-5.7 3.9 8.2 8.2 0 00-1.8 4.6h7.5v14.5zm18.3 0H35.8V37.1c0-4.4.9-8 2.8-10.5 1.8-2.6 5-4.8 9.5-6.8l3.4 6.4a15.4 15.4 0 00-5.7 3.9 8.2 8.2 0 00-1.8 4.6h7.5v14.5z" fill="#ffc808" />
+    </svg> 
+   </div> 
+   <div class="col-sm-12 col-md-1 col-lg-1"></div> 
+   <div class="col-sm-12 col-md-12 col-lg-10"> 
+    <div class="cCustomerQuote"> 
+     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel"> 
+      <ol class="carousel-indicators"> 
+       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">x</li> 
+       <li data-target="#carouselExampleIndicators" data-slide-to="1">x</li> <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2">x</li> --> 
+      </ol> 
+      <div class="carousel-inner"> 
+       <div class="carousel-item active"> 
+        <p>We were able to successfully launch the platform with limited remote trial support. Since then, we have had excellent support from the WSO2 team through both query support and incident troubleshooting and patching.</p> 
+        <p class="cName">Samuel Purchase</p> 
+        <p class="cTitle">CIO</p> 
+        <p class="cCompany">Qantas IT</p> 
+       </div> 
+       <div class="carousel-item"> 
+        <p>We believe that reliability and faster time to market are the key success factors. WSO2’s lightweight, highly configurable, and stable products - which are incidentally also easy to learn - have made a major contribution to the project’s success. Finally, the team at WSO2 was quick to respond to any queries and support issues.</p> 
+        <p class="cName">Soksophay Lim</p> 
+        <p class="cTitle">Principal Engineer – API Management Platform</p> 
+        <p class="cCompany">Cellcard</p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-sm-12 col-md-1 col-lg-1"></div> 
+   </div> 
+  </div> 
+ </div>
+</section> 
+<div class="modal fade" id="WSO2-Intro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
+ <div class="modal-dialog" role="document"> 
+  <div class="modal-content"> 
+   <div class="modal-body"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button> <!-- 16:9 aspect ratio --> 
+    <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe> 
+    </div> 
+   </div> 
+  </div> 
+ </div> 
+</div> 
+<div class="region region-footer"> 
+ <div id="block-block-1" class="block block-block"> 
+  <div class="content"> 
+   <style>
+    .cFooter { border-top: solid 1px #ccc; padding: 3rem 0 0; }
+    .cFooter .row { padding: 0; background-color: #fff; }
+    .cFooter ul { list-style: none; margin: 0 0 1.25rem; padding: 0; text-align: left; }
+    .cFooter ul li { padding-left: 0; text-align: left; }
+    .cFooter h5 { font-weight: 800; margin-bottom: 0.25rem; }
+    .cFooter ul li a, .cFooter ul li a:visited, .cFooter ul li a:active { color: #292929; }
+    .cFooter ul li a:hover { color: #ff7300 !important; text-decoration: underline !important; }
+    .cFooter .cFooterLinks { padding: 1rem 0; margin-top: 1rem; border-top: solid 1px #ff7300; }
+    .cFooter .cFooterLinks ul { margin: 0; }
+    .cFooter .cFooterLinks ul li a { color: #292929; }
+    .cFooter .cFooterLinks ul li a:visited { color: #292929; }
+    .cFooter .cFooterLinks ul li a:active { color: #292929; }
+    .cFooter .cFooterLinks ul li { position: relative; display: inline-block; padding: 0 10px; font-size: .85rem; color: #666; }
+    .cFooter .cFooterLinks ul li.cLeft { border-left: solid 1px #999; padding-left: 20px; }
+    .cFooter .cFooterLinks ul li.cCopyright { padding-left: 0px; padding-right: 20px; }
+    .cFooter a.cSignupNewsletterButton { display: block; border: solid 1px #ff7300; color: #ff7300; background-color: #fff; font-weight: 400; font-size: 1.1rem; letter-spacing: 1px; padding: 10px 25px; text-decoration: none; text-align: center; border-radius: 3px !important; }
+    .cFooter a.cSignupNewsletterButton:hover { color: #222 !important; display: block; border: solid 1px #222 !important; font-weight: 400; font-size: 1.1rem; letter-spacing: 1px; padding: 10px 25px; text-decoration: none; text-align: center; }
+    .cFooterRight { float: right; display: inline-block; padding-top: 0; }
+    ul.cSocialMediaIconList li { display: inline-block; position: relative; padding: 0 10px 0 0; text-align: left; }
+    ul.cSocialMediaIconList .cSVGMenuIcons { height: 22px; margin-top: 0em; fill: #595b5f; }
+    ul.cSocialMediaIconList .cSVGMenuIcons:hover { fill: #ff7300; }
+    ul.cSocialMediaIconList .cSVGMenuIcons.cYoutube { height: 30px; }
+    ul.cSocialMediaIconList .cSVGMenuIcons.cTwitter { height: 19px; }
+    .cFooter .cSocialMedia { margin-top: 2rem; background-color: #fff; width: auto; }
+    .cFooter .cSocialMedia h4 { font-weight: 300; margin-bottom: 1rem; }
+
+    .cFooterCol a {
+	font-size: 0.85rem;
+	line-height: 0.5rem;
+}
+
+.cFooterCol li {
+    margin-bottom: 0;
+}
+    
+    
+    @media screen and (max-width: 1200px) {
+
+    }
+    @media screen and (max-width: 992px) {
+      .cFooter .cFooterLinks ul li { position: relative; display: block; padding: 0 0px; font-size: .85rem; color: #777; }
+      .cFooter .cFooterLinks ul li.cLeft { border-left: 0; padding-left: 0; }
+      .cFooterRight { float: left; display: inline-block; padding-top: 1rem; }
+      .cFooter .cFooterLinks ul li.cCopyright { color: #000; }      
+      ul.cSocialMediaIconList { margin-bottom: 0; }
+      ul.cSocialMediaIconList li { margin-bottom: 0; }
+      ul.cSocialMediaIconList .cSVGMenuIcons { height: 20px; }
+      ul.cSocialMediaIconList .cSVGMenuIcons.cYoutube { height: 28px; }
+      ul.cSocialMediaIconList .cSVGMenuIcons.cTwitter { height: 17px; }
+      .cFooter a.cSignupNewsletterButton { font-weight: 400; font-size: .95rem; letter-spacing: 1px; padding: 7px 25px; text-decoration: none; }
+    }
+    @media screen and (max-width: 768px) {
+      .col-sm-6 { max-width: 25%; }
+      .cFooter .cSocialMedia { margin-top: 1rem; }
+      .cFooter .cSocialMedia h4 { margin-bottom: .5rem; }
+    }
+    @media screen and (max-width: 572px) {
+      .col-sm-6 { max-width: 50%; }
+    }
+</style> 
+   <section class="cFooter cWhiteBG"> 
+    <div class="container"> 
+     <div class="row"> 
+      <div class="col-sm-6 col-md-2 col-lg-2 cFooterCol"> 
+       <h5>Products</h5> 
+       <ul> 
+        <li><a href="https://wso2.com/api-management" class="cFooterLinkTracking">API Manager</a></li> 
+        <li><a href="https://wso2.com/integration" class="cFooterLinkTracking">Enterprise Integrator</a></li> 
+        <li><a href="https://wso2.com/identity-and-access-management" class="cFooterLinkTracking">Identity Server</a></li> <!-- <li class="cHrli"><hr></li> --> 
+        <li><a href="https://wso2.com/solutions/financial/open-banking/" class="cFooterLinkTracking">Open Banking</a></li> 
+        <li><a href="https://wso2.com/solutions/healthcare/" class="cFooterLinkTracking">Open Healthcare</a></li> 
+       </ul> 
+       <h5>Projects</h5> 
+       <ul> 
+        <li><a href="https://ballerina.io/" target="_blank" class="cFooterLinkTracking">Ballerina</a></li> 
+       </ul> 
+       <h5>Cloud</h5> 
+       <ul> 
+        <li><a href="https://wso2.com/api-management/cloud" class="cFooterLinkTracking">API Cloud</a></li> 
+        <li><a href="https://wso2.com/integration/cloud" class="cFooterLinkTracking">Integration Cloud</a></li> 
+        <li><a href="https://wso2.com/identity-and-access-management/cloud" class="cFooterLinkTracking">Identity Cloud</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/digital-assets-governance/">Digital Assets Governance</a></li> 
+       </ul> 
+      </div> 
+      <div class="col-sm-6 col-md-2 col-lg-2 cFooterCol"> 
+       <h5>Solutions</h5> 
+       <ul> 
+        <li> <a class="cFooterLinkTracking" href="https://wso2.com/solutions/healthcare/">Healthcare</a> </li> 
+        <li> <a class="cFooterLinkTracking" href="https://wso2.com/solutions/financial/open-banking/">Finance</a> </li> 
+        <li> <a class="cFooterLinkTracking" href="/solutions/ciam/">CIAM</a> </li> 
+        <li> <a class="cFooterLinkTracking" href="/solutions/higher-education/">Education</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/api-management/">API Management</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/integration/streaming-integrator/">Streaming Integration</a></li> 
+        <li><a class="cFooterLinkTracking" href="/products/enterprise-service-bus/">Enterprise Service Bus</a></li> 
+        <li><a class="cFooterLinkTracking" href="/integration/micro-integrator/">Micro Integrator</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/iot/">IoT</a></li> 
+        <li><a class="cFooterLinkTracking" href="/solutions/digital-assets-governance/">Digital Assets Governance</a></li> 
+        <li><a class="cFooterLinkTracking" href="/strategic-consulting/">Strategic Consulting</a></li> 
+        <li><a class="cFooterLinkTracking" href="/cloud/">Cloud</a></li> 
+        <li><a class="cFooterLinkTracking" href="/solutions/mule-anypoint-migration/">Mule Anypoint Migration</a></li> 
+        <li><a class="cFooterLinkTracking" href="/solutions/regulatory-compliance/gdpr/">GDPR</a></li> 
+       </ul> 
+      </div> 
+      <div class="col-sm-6 col-md-2 col-lg-2 cFooterCol"> 
+       <h5>Company</h5> 
+       <ul> 
+        <li> <a class="cFooterLinkTracking" href="/about">About</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/about/team">Team</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/careers">Careers</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/community">Community</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/research">Research</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/about/news/">News</a></li> 
+       </ul> 
+       <h5>Support</h5> 
+       <ul> 
+        <li><a class="cFooterLinkTracking" href="/subscription">Subscription</a></li> 
+        <li><a class="cFooterLinkTracking" href="/subscription/#license">Licensing</a></li> 
+        <li><a class="cFooterLinkTracking" href="/subscription/#updates">Updates</a></li> 
+        <li><a class="cFooterLinkTracking" href="/subscription/#support">Support</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/subscription/#managed">Managed Services</a></li> 
+        <li><a class="cFooterLinkTracking" href="/consulting">Consulting</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/consulting/#strategy">Strategy</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/consulting/#architecture">Architecture</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/consulting/#implementation">Implementation</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/consulting/#training">Training</a></li> 
+       </ul> 
+      </div> 
+      <div class="col-sm-6 col-md-2 col-lg-2 cFooterCol"> 
+       <h5>Learn</h5> 
+       <ul> 
+        <li><a class="cFooterLinkTracking" href="/events/webinars">Upcoming Webinars</a></li> <!-- <li> <a class="cFooterLinkTracking" href="/events/workshops/" target="_blank">Workshops</a></li> --> 
+        <li> <a class="cFooterLinkTracking" href="/events/summits">Summits</a></li> <!-- <li><a class="cFooterLinkTracking" href="/events/conferences">Conferences</a></li> --> 
+        <li> <a class="cFooterLinkTracking" href="/events/">All Events</a></li> 
+        <li> <a class="cFooterLinkTracking" href="https://docs.wso2.com/" target="_blank">Documentation</a></li> 
+        <li><a class="cFooterLinkTracking" href="/whitepapers/">White Papers</a></li> 
+        <li><a class="cFooterLinkTracking" href="http://blog.wso2.com/" target="_blank">Blogs</a></li> 
+        <li><a class="cFooterLinkTracking" href="/about/customers/">Case Studies</a></li> 
+        <li><a class="cFooterLinkTracking" href="/library/articles/">Articles</a></li> 
+        <li><a class="cFooterLinkTracking" href="/training">Training and Certification</a></li> 
+        <li><a class="cFooterLinkTracking" href="/library/">All Resources</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/solutions/ciam/">CIAM</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/solutions/regulatory-compliance/gdpr/">GDPR</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/iot/">IoT</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/architecture/">Architecture for Agility</a></li> 
+        <li> <a class="cFooterLinkTracking" href="/methodology/">Methodology for Agility</a></li> 
+       </ul> 
+      </div> 
+      <div class="col-sm-12 col-md-2 col-lg-4"> 
+       <div class="cFooterRight"> <a href="https://wso2.com/newsletter" class="cFooterLinkTracking cSignupNewsletterButton">SIGN UP FOR OUR NEWSLETTER</a> 
+        <div class="clearfix"></div> 
+        <div class="cSocialMedia"> 
+         <h4>Follow us</h4> 
+         <ul class="cSocialMediaIconList"> 
+          <li> <a href="https://www.facebook.com/WSO2Inc/" target="_blank" class="cFooterLinkTracking cSocialMediaIcon" rel="noopener noreferrer external nofollow"> 
+            <svg version="1.1" class="cSVGMenuIcons" id="iFooterSVGTracking_fb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"> <path d="M80.318,215.866h43.272V107.453h30.206L157,71.199h-33.41c0,0,0-13.555,0-20.701 c0-8.522,1.73-11.936,10.005-11.936c6.653,0,23.405,0,23.405,0V0.917c0,0-24.67,0-29.942,0c-32.222,0-46.74,14.17-46.74,41.336 c0,23.635,0,28.946,0,28.946H57.784v36.725h22.534V215.866z"></path> 
+            </svg> </a> </li> 
+          <li> <a href="https://twitter.com/wso2" target="_blank" class="cFooterLinkTracking cSocialMediaIcon" rel="noopener noreferrer external nofollow"> 
+            <svg class="cSVGMenuIcons cTwitter" version="1.1" id="iFooterSVGTracking_twitter" xmlns="http://wwwa.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 217.796 177.016" enable-background="new 0 0 217.796 177.016" xml:space="preserve"> <path d="M0,156.928c19.764,12.661,43.248,20.091,68.477,20.091c82.971,0,129.816-70.094,127.012-132.928 c8.729-6.308,16.308-14.167,22.307-23.156c-8.027,3.589-16.634,5.972-25.661,7.055c9.196-5.513,16.288-14.259,19.615-24.735 c-8.653,5.13-18.204,8.849-28.352,10.877c-8.167-8.709-19.773-14.129-32.632-14.129c-28.856,0-50.022,26.903-43.542,54.881 C70.117,53.015,37.168,35.25,15.147,8.142C3.467,28.28,9.097,54.557,28.987,67.845c-7.326-0.271-14.241-2.261-20.259-5.579 c-0.477,20.688,14.385,40.051,35.841,44.341c-6.274,1.737-13.171,2.102-20.156,0.803c5.653,17.756,22.184,30.632,41.719,31.015 C47.363,153.161,23.722,159.75,0,156.928z"></path> 
+            </svg> </a> </li> 
+          <li> <a href="https://www.linkedin.com/company/wso2" target="_blank" class="cFooterLinkTracking cSocialMediaIcon" rel="noopener noreferrer external nofollow"> 
+            <svg version="1.1" id="iFooterSVGTracking_linkedin" class="cSVGMenuIcons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"> <rect x="4.267" y="71.146" width="44.034" height="142.273"></rect> <path d="M26.033,52.494c14.434,0,26.115-11.773,26.115-26.252C52.148,11.744,40.467,0,26.033,0 C11.686,0,0,11.744,0,26.242C0,40.721,11.686,52.494,26.033,52.494z"></path> <path d="M118.703,138.751c0-20.015,9.193-31.963,26.846-31.963c16.17,0,23.984,11.442,23.984,31.963 c0,20.491,0,74.669,0,74.669h43.832c0,0,0-51.979,0-90.062c0-38.131-21.619-56.57-51.783-56.57 c-30.182,0-42.879,23.517-42.879,23.517V71.146H76.444V213.42h42.259C118.703,213.42,118.703,160.645,118.703,138.751z"></path> 
+            </svg> </a> </li> 
+          <li> <a href="https://www.youtube.com/user/WSO2TechFlicks" target="_blank" class="cFooterLinkTracking cSocialMediaIcon" rel="noopener noreferrer external nofollow"> 
+            <svg xmlns="http://www.w3.org/2000/svg" id="iFooterSVGTracking_youtube" class="cSVGMenuIcons cYoutube" viewbox="0 0 40.1 49.7">
+             <g>
+              <path d="M33 34c-.5 0-.7 0-1 .2-.2.2-.2.4-.2 1v1.2h2v-1.1c0-.5 0-1-.2-1.1-.2-.3-.4-.3-.7-.3zM24.8 33.9l-.4.2c-.3 0-.3.2-.5.5V42c.2.2.4.2.4.5l.7.2c.2 0 .5 0 .7-.2.2-.3.2-.5.2-1v-6c0-.5 0-.7-.2-1-.2-.6-.4-.6-.9-.6z" />
+              <path d="M38.2 24.7c-1.8-1.8-18-2.1-18-2.1s-16 0-18.1 2C0 26.4 0 35.8 0 36c0 0 0 9.4 2 11.5 2 1.8 18 2 18 2s16 .1 18-1.9c2.1-2 2.1-11.5 2.1-11.5 0-.2 0-9.7-2-11.5zm-26 5.5H9.5V44H6.6V30.2H4.2V28h8.1v2.2zm7.6 13.6h-2.2v-1.4a6 6 0 01-1.4 1.2c-.4.2-.9.4-1.3.4-.5 0-1-.2-1.2-.4-.2-.5-.4-1-.4-1.6V32h2.3v9c0 .3 0 .5.2.8 0 .2.2.2.4.2s.5 0 .7-.2l.7-.7v-9h2.3v11.7zm8.4-2.2c0 .9-.3 1.6-.5 2a2 2 0 01-1.6.7c-.4 0-.9 0-1.1-.3-.4-.2-.7-.4-.9-.9v1h-2.3l.1-16.3h2.3V33c.2-.5.6-.7.9-.9.4-.2.6-.2 1-.2.8 0 1.4.2 1.7.7.4.4.6 1.3.6 2.2v6.8h-.2zm8.1-3.4h-4.5v2.3c0 .6 0 1 .2 1.3.2.2.5.5.9.5.5 0 .7 0 1-.2l.1-1.4v-.5h2.5v.7c0 1.2-.2 2-.9 2.7-.7.7-1.4 1-2.7 1-1.1 0-1.8-.3-2.5-1s-.9-1.6-.9-2.7v-5.4c0-1.1.3-1.8 1-2.5.6-.7 1.5-.9 2.4-.9 1.2 0 1.8.3 2.5 1 .7.6 1 1.3 1 2.4l-.1 2.7zM33 17.7h-2.7v-1.4c-.5.5-1 1-1.6 1.1-.4.3-1.1.5-1.6.5-.6 0-1-.2-1.3-.7-.2-.2-.2-.9-.2-1.6v-11h2.7v10c0 .1 0 .4.2.6 0 .2.2.2.4.2.3 0 .5 0 .7-.2l1-.7V4.6h2.7v13H33zM22.2 5.2c-.7-.6-1.6-.9-2.7-.9s-2 .3-3 1c-.6.6-1 1.3-1 2.4v6.8c0 1 .4 2 1 2.7.7.7 1.6.9 2.7.9 1.2 0 2-.2 2.7-.9.7-.7 1.2-1.6 1.2-2.7V7.7c.2-.9 0-1.8-.9-2.5zm-1.6 9.5c0 .5 0 .7-.2 1l-1 .1c-.4 0-.6 0-.8-.2-.3-.2-.3-.4-.3-.9V7.5c0-.2 0-.5.3-.7.2-.2.5-.2.7-.2.4 0 .7 0 .9.2.2.2.2.5.2.7v7.2h.2zM8.7 0H5.5l3.6 10.6v7h3v-7.2L15.4 0h-3l-1.8 7h-.2z" />
+             </g>
+            </svg> </a> </li> 
+         </ul> 
+        </div> <a style="display: inline-block;margin-top: 15px;line-height: 25px;" href="https://wso2.com/security" class="cUppercase cMore">LEARN ABOUT SECURITY AT WSO2 &gt;</a> 
+       </div> 
+      </div> 
+      <div class="clearfix"></div> 
+      <div class="col-sm-12 col-md-12 col-lg-12"> 
+       <div class="cFooterLinks"> 
+        <ul> 
+         <li class="cCopyright">©2021 WSO2</li> 
+         <li class="cLeft"><a href="https://wso2.com/terms-of-use" id="iFooterTxtTracking_Mobile_Legal" class="cFooterLinkTracking">Legal</a></li> 
+         <li><a href="https://wso2.com/privacy-policy" id="iFooterTxtTracking_Mobile_Privacy" class="cFooterLinkTracking">Privacy</a></li> 
+         <li><a href="https://wso2.com/california-privacy#opt-out" id="iFooterTxtTracking_Privacy" class="cFooterLinkTracking">Do Not Sell My Personal Information</a></li> 
+         <li><a href="https://wso2.com/cookie-policy" id="iFooterTxtTracking_Mobile_Privacy" class="cFooterLinkTracking">Cookie Policy</a></li> 
+         <li><a href="https://wso2.com/modern-slavery-statement" id="iFooterTxtTracking_Mobile_modern_slavery_statement" class="cFooterLinkTracking">Modern Slavery Statement</a></li> 
+         <li><a href="/cdn-cgi/l/email-protection#a3cbd6cec2cd8ed1c6d0d3cccdd0c6e3d4d0cc918dc0ccce" id="iFooterTxtTracking_Mobile_Report" class="cFooterLinkTracking">Report a Problem With This Page</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </section> 
+   <div class="pd_frame" style="display: none;"></div> 
+   <style>
+    .row.cWSO2ConBanner {       
+/*        background-image: url("//b.content.wso2.com/sites/all/images/wso2.comStrip-bg.png");*/
+        background-attachment: fixed;
+        background-size: 100%;
+        transition: all 0.5s ease-in-out 0s;
+        padding: 7em 0;
+        box-shadow: 0 0 44px rgba(0, 0, 0, 0.5) inset;
+        margin-bottom: 0;
+        margin-top: 0;
+        opacity: 0.9;
+        padding: 0;
+        bottom: -200px;
+        top: auto;
+        transition: all 0.5s ease-in-out 0s;
+        width: 100%;
+        z-index: 999999;
+        /*         filter: grayscale(100%);*/
+        text-align: center;
+        position: fixed;
+    }
+    .row.cWSO2ConBanner:hover {
+        /*         filter: grayscale(0%);*/
+        transition: all 0.5s ease-in-out 0s;
+    }
+    .row.cWSO2ConBanner.cOpenBanner {
+        bottom: 0;
+    }
+    .row.cWSO2ConBanner.cOpenBanner:hover {
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+    .row.cWSO2ConBanner img {
+        transition: all 0.5s ease-in-out 0s;
+        margin: 16px 0;
+    }
+    .row.cWSO2ConBanner.cOpenBanner .cWSO2ConBanner-Container  {
+        height: auto;
+    }
+    .cCloseBanner {
+        color: #ffffff;
+        display: inline-block;
+        height: 23px;
+        position: absolute;
+        right: 15px;
+        top: 10%;
+    }
+    .cCloseBanner img {
+        height: 30px !important;
+    }
+    .row.cWSO2ConBanner.cOpenBanner.cHIDE {
+        bottom: -300px !important;
+    }
+    #iMainFooter16bottom.cFixdspacer {
+        margin-bottom: 86px;
+    }
+    #iMainFooter16bottom.cFixdspacer.cFixdspacerRemove {
+        margin-bottom: 0;
+    }
+    #scroll-top {
+        bottom:140px;
+    }
+</style> <!--WSO2 con interrupter start--> <!--    <div class="row cWSO2ConBanner" >
+        <a class="cCloseBanner"><img src="http://b.content.wso2.com/sites/all/images/close-button.svg"/></a>
+        <a href="" target="_blank" id="cHomePageHackathonBanner">
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <img src="//b.content.wso2.com/sites/all/images/wso2.comStrip-main.svg"/>
+                </div>
+        </a>
+    </div>--> <!--<div class="row cWSO2ConBanner" >
+        <a class="cCloseBanner"><img src="http://b.content.wso2.com/sites/all/images/close-button.svg"/></a>
+        <a href="" target="_blank" id="cHomePageHackathonBanner">
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <img src="//b.content.wso2.com/sites/all/images/Interruptor-eu-17.jpg"/>
+                </div>
+        </a>
+    </div>--> 
+   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+   <script>
+
+//        $(window).scroll(function () {
+//            if ($(this).scrollTop() > 100) {
+//                $('.cWSO2ConBanner').addClass('cOpenBanner');
+//                $('#iMainFooter16bottom').addClass('cFixdspacer');
+//
+//            }
+//
+//        });
+//
+//        $(document).ready(function () {
+//            $(".cCloseBanner").click(function () {
+//                $(".cWSO2ConBanner").toggleClass('cHIDE');
+//                $('#iMainFooter16bottom').addClass('cFixdspacerRemove');
+//
+//
+//            });
+//        });
+
+</script> 
+   <style>
+    .row.cWSO2ConBanner {
+       background-color: #000000;
+/*        background-image: url("//b.content.wso2.com/sites/all/images/wso2con-us18-wso2com-bg.png");*/
+        background-attachment: fixed;
+        background-size: 100%;
+        transition: all 0.5s ease-in-out 0s;
+        padding: 7em 0;
+        box-shadow: 0 0 44px rgba(0, 0, 0, 0.5) inset;
+        margin-bottom: 0;
+        margin-top: 0;
+        opacity: 0.9;
+        padding: 0;
+        bottom: -200px;
+        top: auto;
+        transition: all 0.5s ease-in-out 0s;
+        width: 100%;
+        z-index: 999999;
+        /*         filter: grayscale(100%);*/
+        text-align: center;
+        position: fixed;
+    }
+</style> <!--BANNER DC--> <!--    <style>
+        .row.DC-int { background-color: #041328; transition: all 0.5s ease-in-out 0s; padding: 7em 0; box-shadow: 0 0 44px rgba(0, 0, 0, 0.5) inset; margin-bottom: 0; margin-top: 0; opacity:1; padding: 0; bottom: -200px; top: auto; transition: all 0.5s ease-in-out 0s; width: 100%; z-index: 999999; text-align: center; position: fixed; }
+        .row.DC-int { background-image: url("//b.content.wso2.com/sites/all//2017-d7-theme/home-page-2017/images/banner-dc.png"); background-position: center; height: 100px; background-size: 100%; background-repeat: no-repeat; }
+        .row.DC-int:hover { transition: all 0.5s ease-in-out 0s; }
+        .row.DC-int.cOpenBanner { bottom: 0; }
+        .row.DC-int.cOpenBanner:hover { opacity: 1; filter: grayscale(0%); }
+        .row.DC-int img { transition: all 0.5s ease-in-out 0s; }
+        .row.DC-int.cOpenBanner .DC-int-Container  { height: auto; }
+        .cCloseBanner { color: #ffffff; display: inline-block; height: 23px; position: absolute; right: 15px; top: 30px; }
+        .cCloseBanner img { height: 30px !important; }
+        .row.DC-int.cOpenBanner.cHIDE { bottom: -300px !important; }
+        #iMainFooter16bottom.cFixdspacer { margin-bottom: 100px; }
+        #iMainFooter16bottom.cFixdspacer.cFixdspacerRemove { margin-bottom: 0; }
+        #scroll-top { bottom:140px; }
+        .cBanner-int { display: inline-block; height: 100px; width: 100%; }
+    </style>
+
+    <div class="row DC-int">
+        <a class="cCloseBanner"><img src="//b.content.wso2.com/sites/all/images/close-button.svg"/></a>        
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <a href="https://wso2.com/questionnaire-dc?utm_source=WSO2.com&utm_medium=banner&utm_campaign=WSO2_Events_Questionnaire_DC_VA_MD&utm_term=WSO2_Events_Questionnaire_DC_VA_MD&utm_content=WSO2_Events_Questionnaire_DC_VA_MD" target="_blank" id="iDC-Interrupter" class="cBanner-int"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.DC-int').addClass('cOpenBanner');
+                $('#iMainFooter16bottom').addClass('cFixdspacer');
+            }
+        });
+        $(document).ready(function () {
+            $(".cCloseBanner").click(function () {
+                $(".DC-int").toggleClass('cHIDE');
+                $('#iMainFooter16bottom').addClass('cFixdspacerRemove');
+            });
+        });
+    </script>--> <!--WSO2 con interrupter end--> <!--GDPR Interrupter--> 
+   <style>
+    .cGDPR {
+        width: 271px;
+        display: inline-block;
+        background-color: #ffffff;
+        position: fixed;
+        left: 0;
+        bottom: 68px;
+        border: 1px solid #ececec;
+        box-shadow: 8px 0px 20px rgba(0, 0, 0, 0.5);
+        opacity: 1;
+
+    }
+    .cGDPR.cGDPR_Hide {
+        opacity: 0;
+        left: -275px;
+        /*        bottom: -500px;*/
+        transition: all 0.8s ease 0s;
+    }
+    a.cGDPR_Close , a.cGDPR_Close:hover {
+        width: 100%;
+        background: #ff4c00;
+        display: inline-block;
+        text-align: center;
+        padding: 15px;
+        line-height: 0;
+        font-size: 14px;
+        font-weight: 800;
+        text-align: center;
+        color: #ffffff !important;
+        border:none !important;
+        margin-top: 20px;
+    }
+    a.cGDPR_Close:hover {
+        background: #fd7024;
+    }
+    .cGDPR_MSG {
+        float: left;
+        display: inline-block;
+        padding: 20px;
+        width: 100%;;
+    }
+    .cGDPR_Close img {
+        width: 100%;
+    }
+    .cGDPR_MSG p {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        display: inline-block;
+        width: 100%;
+    }
+    #scroll-top {
+        bottom: 165px;
+    }
+
+</style> 
+   <div class="cGDPR"> 
+    <div class="cGDPR_MSG"> 
+     <p>This website uses cookies so that we can provide you with the best user experience. Read our <a target="_blank" href="https://wso2.com/cookie-policy">Cookie Policy</a> to find out more.</p> 
+     <p>If you wish to disable cookies you can do so from your browser. </p> <a class="cGDPR_Close">I Understand </a> 
+    </div> 
+   </div> 
+   <script>
+    $('.cGDPR_Close').click(function () {
+        $('.cGDPR').addClass('cGDPR_Hide');
+        setCookie('gdpr_accepted', '1', 730);
+    });
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+</script> 
+   <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script> 
+   <script type="text/javascript">
+    ttd_dom_ready( function() {
+        if (typeof TTDUniversalPixelApi === 'function') {
+            var universalPixelApi = new TTDUniversalPixelApi();
+            universalPixelApi.init("38z9n4f", ["zfa77wg"], "https://insight.adsrvr.org/track/up");
+        }
+    });
+</script> 
+  </div> 
+ </div> 
+</div> 
+<script>
+(function(d,b,a,s,e){ var t = b.createElement(a),
+  fs = b.getElementsByTagName(a)[0]; t.async=1; t.id=e; t.src=s;
+  fs.parentNode.insertBefore(t, fs); })
+(window,document,'script','https://tag.demandbase.com/b32a0399.min.js','demandbase_js_lib');  
+</script>  
+<script>
+   /*TEXT FADE*/
+   $(window).scroll(function (e) {
+
+       var r = $(window).scrollTop(),
+               t = $(".container-hero").height();
+
+       // if container hero is less than window.scrollTop
+       t > r && (
+               $(".Fade .wrapper").css({
+           top: .8 * r
+       }),
+               $(".Fade .wrapper").css({
+           opacity: (580 - r) / 450
+       })
+               );
+   });
+
+
+</script> 
+<script>
+   $(document).ready(function () {
+       $('.collapse.in').prev('.panel-heading').addClass('active');
+       $('#accordion, #bs-collapse')
+               .on('show.bs.collapse', function (a) {
+                   $(a.target).prev('.panel-heading').addClass('active');
+               })
+               .on('hide.bs.collapse', function (a) {
+                   $(a.target).prev('.panel-heading').removeClass('active');
+               });
+   });
+
+
+   $('ul.nav li.dropdown').hover(function () {
+       $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+   }, function () {
+       $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+   });
+
+   $('#H-DWorld-click').click(function () {
+
+       $('html,body').animate({
+           scrollTop: $("#H-DWorld").offset().top},
+       'slow');
+   });
+
+   $('.VideoR-one').click(function () {
+
+       var videos = ["","v5HXZQz9odM", "RzL9aiARf8w", "Tu3Di_v2MdQ","PWhx8ZVTZCU","S4ejs7iq-b8","pFPFfybwhIg","Tf0y1pa0f3o"];
+
+       var video_div = $(this).attr('id');
+       var video_div = video_div.split("_");
+       var vcode = video_div[1];
+
+       $("#video_"+vcode).html('<iframe width="100%" src="https://www.youtube.com/embed/' + videos[vcode] + '?autoplay=1&wmode=transparent&VQ=HD1080" frameborder="0" allowfullscreen wmode="Opaque"></iframe>');
+       $("#video_"+vcode).show();
+   });
+
+
+   $(document).ready(function () {
+
+       $(window).scroll(function () {
+           var y = $(this).scrollTop();
+           if (y > 650) {
+               $('.popup').css("left", "0px")
+               $('.arrow').hide();
+           } else {
+               $('.popup').css("left", "-380px");
+               $('.arrow').show();
+           }
+       });
+
+       $('.close').click(function () {
+           $('.popup').hide();
+       });
+
+   });
+
+   $('#myCarousel').carousel({
+       interval: 2000
+   });
+   $('#myCarousel').on('slid.bs.carousel', function () {
+   });
+
+   $(function () {
+       // this will get the full URL at the address bar
+       var url = window.location.href;
+
+       // passes on every "a" tag
+       $(".cMainMenu a").each(function () {
+           // checks if its the same on the address bar
+           if (url == (this.href)) {
+               $(this).closest("li").addClass("cSelected");
+           }
+       });
+   });
+
+   $(document).ready(function () {
+       $('#carousel-example-generic').carousel('pause');
+   });
+
+   $('.carousel').carousel({
+  interval: 6000
+})
+
+// HOME BANNER
+</script> 
+<script>
+      $(document).ready(function(){var o;$(".video-btn").click(function(){o=$(this).data("src")}),console.log(o),$("#WSO2-Intro").on("shown.bs.modal",function(n){$("#video").attr("src",o+"?autoplay=1&amp;modestbranding=1&amp;showinfo=0")}),$("#WSO2-Intro").on("hide.bs.modal",function(n){$("#video").attr("src",o)}),$(".close").click(function(){$("#iDownloads").addClass("cHidesection")}),$("#cDownloadButton").click(function(){$("#iDownloads").removeClass("cHidesection")}),$(".cTtyitnow").click(function(){$("#iDownloads").removeClass("cHidesection")})});
+   </script>
+</body>
+</doc>
